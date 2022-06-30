@@ -1,0 +1,22 @@
+name: markdown_viewer_example
+description: Demonstrates how to use the markdown_viewer package.
+publish_to: none
+
+environment:
+  sdk: '>=2.17.5 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  markdown_viewer:
+    path: ../
+
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
