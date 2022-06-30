@@ -91,7 +91,7 @@ packages:
     source: git
     version: "6.0.0-dev"
   markdown_viewer:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       path: ".."
       relative: true

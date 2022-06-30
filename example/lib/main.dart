@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:markdown_viewer/markdown_viewer.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,10 +26,17 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const markdown = '''
+# Heading 1
+## Heading 2
+Hello **world**!
+''';
+
     return Scaffold(
       appBar: AppBar(title: const Text('MarkdownViewer Demo')),
-      body: const Center(
-        child: Text('Home'),
+      body: const Padding(
+        padding: EdgeInsets.all(20),
+        child: MarkdownViewer(markdown),
       ),
     );
   }

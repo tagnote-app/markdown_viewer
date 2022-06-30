@@ -60,6 +60,7 @@ class TestCaseBuilder implements NodeVisitor {
     parent.children.addAll(_mergeTextSpans(last.children));
   }
 
+  /// Merges the [textSpans] which are adjacent and have the same attributes.
   List<TextSpan> _mergeTextSpans(List<TextSpan> textSpans) {
     final result = <TextSpan>[];
 

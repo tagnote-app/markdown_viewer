@@ -9,12 +9,12 @@ dependencies:
   flutter:
     sdk: flutter
 
+  markdown_viewer:
+    path: ../
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
-  markdown_viewer:
-    path: ../
 
   flutter_lints: ^2.0.0
 
