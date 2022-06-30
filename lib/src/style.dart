@@ -27,34 +27,39 @@ class MarkdownStyle {
 
   MarkdownStyle.fromTheme(
     ThemeData theme, [
-    MarkdownStyle? withStyleSheet,
-  ])  : paragraph = theme.textTheme.bodyText2,
-        blockquote = theme.textTheme.bodyText2,
-        htmlBlock = theme.textTheme.bodyText2,
-        list = theme.textTheme.bodyText2,
-        listItem = null,
-        table = null,
-        tableHead = const TextStyle(fontWeight: FontWeight.w600),
-        tableBody = theme.textTheme.bodyText2,
-        headline1 = theme.textTheme.headline5,
-        headline2 = theme.textTheme.headline6,
-        headline3 = theme.textTheme.bodyText1,
-        headline4 = theme.textTheme.bodyText1,
-        headline5 = theme.textTheme.bodyText1,
-        headline6 = theme.textTheme.bodyText1,
-        emphasis = const TextStyle(fontStyle: FontStyle.italic),
-        strongEmphasis = const TextStyle(fontWeight: FontWeight.w700),
-        link = TextStyle(color: theme.colorScheme.primary),
-        inlineHtml = theme.textTheme.bodyText2!.copyWith(
-          backgroundColor: theme.cardTheme.color ?? theme.cardColor,
-          fontFamily: 'monospace',
-        ),
-        codeBlock = null,
-        inlineCode = theme.textTheme.bodyText2!.copyWith(
-          backgroundColor: theme.cardTheme.color ?? theme.cardColor,
-          fontFamily: 'monospace',
-          fontSize: theme.textTheme.bodyText2!.fontSize! * 0.85,
-        );
+    MarkdownStyle? withStyle,
+  ])  : paragraph = withStyle?.paragraph ?? theme.textTheme.bodyText2,
+        blockquote = withStyle?.blockquote ?? theme.textTheme.bodyText2,
+        htmlBlock = withStyle?.htmlBlock ?? theme.textTheme.bodyText2,
+        list = withStyle?.list ?? theme.textTheme.bodyText2,
+        listItem = withStyle?.listItem,
+        table = withStyle?.table,
+        tableHead = withStyle?.tableHead ??
+            const TextStyle(fontWeight: FontWeight.w600),
+        tableBody = withStyle?.tableBody ?? theme.textTheme.bodyText2,
+        headline1 = withStyle?.headline1 ?? theme.textTheme.headline5,
+        headline2 = withStyle?.headline2 ?? theme.textTheme.headline6,
+        headline3 = withStyle?.headline3 ?? theme.textTheme.bodyText1,
+        headline4 = withStyle?.headline4 ?? theme.textTheme.bodyText1,
+        headline5 = withStyle?.headline5 ?? theme.textTheme.bodyText1,
+        headline6 = withStyle?.headline6 ?? theme.textTheme.bodyText1,
+        emphasis =
+            withStyle?.emphasis ?? const TextStyle(fontStyle: FontStyle.italic),
+        strongEmphasis = withStyle?.strongEmphasis ??
+            const TextStyle(fontWeight: FontWeight.w700),
+        link = withStyle?.link ?? TextStyle(color: theme.colorScheme.primary),
+        inlineHtml = withStyle?.inlineHtml ??
+            theme.textTheme.bodyText2!.copyWith(
+              backgroundColor: theme.cardTheme.color ?? theme.cardColor,
+              fontFamily: 'monospace',
+            ),
+        codeBlock = withStyle?.codeBlock,
+        inlineCode = withStyle?.inlineCode ??
+            theme.textTheme.bodyText2!.copyWith(
+              backgroundColor: theme.cardTheme.color ?? theme.cardColor,
+              fontFamily: 'monospace',
+              fontSize: theme.textTheme.bodyText2!.fontSize! * 0.85,
+            );
 
   final TextStyle? paragraph;
   final TextStyle? blockquote;
