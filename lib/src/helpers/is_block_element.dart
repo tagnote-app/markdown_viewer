@@ -1,0 +1,18 @@
+bool isBlockElement(String type) => [
+      'paragraph',
+      'atxHeading',
+      'setextHeading',
+      'htmlBlock',
+      'bulletList',
+      'orderedList',
+      'listItem',
+      'thematicBreak',
+      'blockquote',
+      'fencedBlockquote',
+      'indentedCodeBlock',
+      'fencedCodeBlock',
+      'table',
+      'tableRow',
+      'tableHead',
+      'tableBody',
+    ].contains(type);

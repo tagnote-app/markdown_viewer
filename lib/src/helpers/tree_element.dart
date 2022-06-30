@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:markdown/markdown.dart' as md;
 
-import 'constants.dart';
+import 'is_block_element.dart';
 
 class TreeElement {
   TreeElement.root()
@@ -12,7 +12,7 @@ class TreeElement {
 
   TreeElement.fromAstElement(md.Element element, {this.style})
       : type = element.type,
-        isBlock = markdownBlockTypes.contains(element.type),
+        isBlock = isBlockElement(element.type),
         attributes = element.attributes;
 
   bool get isRoot => type.isEmpty;

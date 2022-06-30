@@ -4,21 +4,21 @@ import 'package:markdown/markdown.dart' as md;
 
 import 'helpers/create_link.dart';
 import 'helpers/merge_inline_children.dart';
+import 'helpers/tree_element.dart';
 import 'helpers/trim_text.dart';
-import 'style_sheet.dart';
-import 'tree_element.dart';
+import 'style.dart';
 
 class MarkdownBuilder implements md.NodeVisitor {
   MarkdownBuilder({
-    MarkdownStyleSheet? styleSheet,
+    required MarkdownStyle styleSheet,
     this.selectable = false,
-  }) : _styleSheet = styleSheet ?? MarkdownStyleSheet();
+  }) : _styleSheet = styleSheet;
 
   final bool selectable;
 
   final _tree = <TreeElement>[];
 
-  final MarkdownStyleSheet _styleSheet;
+  final MarkdownStyle _styleSheet;
 
   final _linkHandlers = <GestureRecognizer>[];
 
