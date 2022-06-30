@@ -1,0 +1,148 @@
+[
+  {
+    "description": "https://github.github.com/gfm/#example-198",
+    "markdown": "| foo | bar |\n| --- | --- |\n| baz | bim |\n",
+    "textSpans": [
+      {
+        "text": "| foo | bar | | --- | --- | | baz | bim |",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      }
+    ]
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-199",
+    "markdown": "| abc | defghi |\n:-: | -----------:\nbar | baz\n",
+    "textSpans": [
+      {
+        "text": "| abc | defghi | :-: | -----------: bar | baz",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      }
+    ]
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-200",
+    "markdown": "| f\\|oo  |\n| ------ |\n| b `\\|` az |\n| b **\\|** im |\n",
+    "textSpans": [
+      {
+        "text": "| f|oo  | | ------ | | b ",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      },
+      {
+        "text": "\\|",
+        "fontFamily": "monospace",
+        "fontWeight": 400,
+        "fontSize": 11.9,
+        "color": "Color(0xdd000000)"
+      },
+      {
+        "text": " az | | b ",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      },
+      {
+        "text": "|",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 700,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      },
+      {
+        "text": " im |",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      }
+    ]
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-201",
+    "markdown": "| abc | def |\n| --- | --- |\n| bar | baz |\n> bar\n",
+    "textSpans": [
+      {
+        "text": "| abc | def | | --- | --- | | bar | baz |",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      },
+      {
+        "text": "bar",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      }
+    ]
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-202",
+    "markdown": "| abc | def |\n| --- | --- |\n| bar | baz |\nbar\n\nbar\n",
+    "textSpans": [
+      {
+        "text": "| abc | def | | --- | --- | | bar | baz | bar",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      },
+      {
+        "text": "bar",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      }
+    ]
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-203",
+    "markdown": "| abc | def |\n| --- |\n| bar |\n",
+    "textSpans": [
+      {
+        "text": "| abc | def | | --- | | bar |",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      }
+    ]
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-204",
+    "markdown": "| abc | def |\n| --- | --- |\n| bar |\n| bar | baz | boo |\n",
+    "textSpans": [
+      {
+        "text": "| abc | def | | --- | --- | | bar | | bar | baz | boo |",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      }
+    ]
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-205",
+    "markdown": "| abc | def |\n| --- | --- |\n",
+    "textSpans": [
+      {
+        "text": "| abc | def | | --- | --- |",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      }
+    ]
+  }
+]

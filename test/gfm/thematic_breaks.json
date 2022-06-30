@@ -1,0 +1,234 @@
+[
+  {
+    "description": "https://github.github.com/gfm/#example-13",
+    "markdown": "***\n---\n___\n",
+    "textSpans": []
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-14",
+    "markdown": "+++\n",
+    "textSpans": [
+      {
+        "text": "+++",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      }
+    ]
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-15",
+    "markdown": "===\n",
+    "textSpans": [
+      {
+        "text": "===",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      }
+    ]
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-16",
+    "markdown": "--\n**\n__\n",
+    "textSpans": [
+      {
+        "text": "-- ** __",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      }
+    ]
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-17",
+    "markdown": " ***\n  ***\n   ***\n",
+    "textSpans": []
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-18",
+    "markdown": "    ***\n",
+    "textSpans": [
+      {
+        "text": "*** ",
+        "fontFamily": "monospace",
+        "fontSize": 11.9
+      }
+    ]
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-19",
+    "markdown": "Foo\n    ***\n",
+    "textSpans": [
+      {
+        "text": "Foo ***",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      }
+    ]
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-20",
+    "markdown": "_____________________________________\n",
+    "textSpans": []
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-21",
+    "markdown": " - - -\n",
+    "textSpans": []
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-22",
+    "markdown": " **  * ** * ** * **\n",
+    "textSpans": []
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-23",
+    "markdown": "-     -      -      -\n",
+    "textSpans": []
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-24",
+    "markdown": "- - - -    \n",
+    "textSpans": []
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-25",
+    "markdown": "_ _ _ _ a\n\na------\n\n---a---\n",
+    "textSpans": [
+      {
+        "text": "_ _ _ _ a",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      },
+      {
+        "text": "a------",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      },
+      {
+        "text": "---a---",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      }
+    ]
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-26",
+    "markdown": " *-*\n",
+    "textSpans": [
+      {
+        "text": "-",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "fontStyle": "italic",
+        "color": "Color(0xdd000000)"
+      }
+    ]
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-27",
+    "markdown": "- foo\n***\n- bar\n",
+    "textSpans": [
+      {
+        "text": "foo",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      },
+      {
+        "text": "bar",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      }
+    ]
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-28",
+    "markdown": "Foo\n***\nbar\n",
+    "textSpans": [
+      {
+        "text": "Foo",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      },
+      {
+        "text": "bar",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      }
+    ]
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-29",
+    "markdown": "Foo\n---\nbar\n",
+    "textSpans": [
+      {
+        "text": "Foo",
+        "fontFamily": ".SF UI Display",
+        "fontWeight": 500,
+        "fontSize": 20.0,
+        "color": "Color(0xdd000000)"
+      },
+      {
+        "text": "bar",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      }
+    ]
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-30",
+    "markdown": "* Foo\n* * *\n* Bar\n",
+    "textSpans": [
+      {
+        "text": "Foo",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      },
+      {
+        "text": "Bar",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      }
+    ]
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-31",
+    "markdown": "- Foo\n- * * *\n",
+    "textSpans": [
+      {
+        "text": "Foo",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      }
+    ]
+  }
+]

@@ -1,0 +1,331 @@
+[
+  {
+    "description": "https://github.github.com/gfm/#example-632",
+    "markdown": "<a><bab><c2c>\n",
+    "textSpans": [
+      {
+        "text": "<a><bab><c2c>",
+        "fontFamily": "monospace",
+        "fontWeight": 400,
+        "fontSize": 11.9,
+        "color": "Color(0xdd000000)"
+      }
+    ]
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-633",
+    "markdown": "<a/><b2/>\n",
+    "textSpans": [
+      {
+        "text": "<a/><b2/>",
+        "fontFamily": "monospace",
+        "fontWeight": 400,
+        "fontSize": 11.9,
+        "color": "Color(0xdd000000)"
+      }
+    ]
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-634",
+    "markdown": "<a  /><b2\ndata=\"foo\" >\n",
+    "textSpans": [
+      {
+        "text": "<a  /><b2 data=\"foo\" >",
+        "fontFamily": "monospace",
+        "fontWeight": 400,
+        "fontSize": 11.9,
+        "color": "Color(0xdd000000)"
+      }
+    ]
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-635",
+    "markdown": "<a foo=\"bar\" bam = 'baz <em>\"</em>'\n_boolean zoop:33=zoop:33 />\n",
+    "textSpans": [
+      {
+        "text": "<a foo=\"bar\" bam = 'baz <em>\"</em>' _boolean zoop:33=zoop:33 />",
+        "fontFamily": "monospace",
+        "fontWeight": 400,
+        "fontSize": 11.9,
+        "color": "Color(0xdd000000)"
+      }
+    ]
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-636",
+    "markdown": "Foo <responsive-image src=\"foo.jpg\" />\n",
+    "textSpans": [
+      {
+        "text": "Foo ",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      },
+      {
+        "text": "<responsive-image src=\"foo.jpg\" />",
+        "fontFamily": "monospace",
+        "fontWeight": 400,
+        "fontSize": 11.9,
+        "color": "Color(0xdd000000)"
+      }
+    ]
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-637",
+    "markdown": "<33> <__>\n",
+    "textSpans": [
+      {
+        "text": "<33> <__>",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      }
+    ]
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-638",
+    "markdown": "<a h*#ref=\"hi\">\n",
+    "textSpans": [
+      {
+        "text": "<a h*#ref=\"hi\">",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      }
+    ]
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-639",
+    "markdown": "<a href=\"hi'> <a href=hi'>\n",
+    "textSpans": [
+      {
+        "text": "<a href=\"hi'> <a href=hi'>",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      }
+    ]
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-640",
+    "markdown": "< a><\nfoo><bar/ >\n<foo bar=baz\nbim!bop />\n",
+    "textSpans": [
+      {
+        "text": "< a>< foo><bar/ > <foo bar=baz bim!bop />",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      }
+    ]
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-641",
+    "markdown": "<a href='bar'title=title>\n",
+    "textSpans": [
+      {
+        "text": "<a href='bar'title=title>",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      }
+    ]
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-642",
+    "markdown": "</a></foo >\n",
+    "textSpans": [
+      {
+        "text": "</a></foo >",
+        "fontFamily": "monospace",
+        "fontWeight": 400,
+        "fontSize": 11.9,
+        "color": "Color(0xdd000000)"
+      }
+    ]
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-643",
+    "markdown": "</a href=\"foo\">\n",
+    "textSpans": [
+      {
+        "text": "</a href=\"foo\">",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      }
+    ]
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-644",
+    "markdown": "foo <!-- this is a\ncomment - with hyphen -->\n",
+    "textSpans": [
+      {
+        "text": "foo ",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      },
+      {
+        "text": "<!-- this is a comment - with hyphen -->",
+        "fontFamily": "monospace",
+        "fontWeight": 400,
+        "fontSize": 11.9,
+        "color": "Color(0xdd000000)"
+      }
+    ]
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-645",
+    "markdown": "foo <!-- not a comment -- two hyphens -->\n",
+    "textSpans": [
+      {
+        "text": "foo <!-- not a comment -- two hyphens -->",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      }
+    ]
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-646",
+    "markdown": "foo <!--> foo -->\n\nfoo <!-- foo--->\n",
+    "textSpans": [
+      {
+        "text": "foo <!--> foo -->",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      },
+      {
+        "text": "foo <!-- foo--->",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      }
+    ]
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-647",
+    "markdown": "foo <?php echo $a; ?>\n",
+    "textSpans": [
+      {
+        "text": "foo ",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      },
+      {
+        "text": "<?php echo $a; ?>",
+        "fontFamily": "monospace",
+        "fontWeight": 400,
+        "fontSize": 11.9,
+        "color": "Color(0xdd000000)"
+      }
+    ]
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-648",
+    "markdown": "foo <!ELEMENT br EMPTY>\n",
+    "textSpans": [
+      {
+        "text": "foo ",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      },
+      {
+        "text": "<!ELEMENT br EMPTY>",
+        "fontFamily": "monospace",
+        "fontWeight": 400,
+        "fontSize": 11.9,
+        "color": "Color(0xdd000000)"
+      }
+    ]
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-649",
+    "markdown": "foo <![CDATA[>&<]]>\n",
+    "textSpans": [
+      {
+        "text": "foo ",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      },
+      {
+        "text": "<![CDATA[>&<]]>",
+        "fontFamily": "monospace",
+        "fontWeight": 400,
+        "fontSize": 11.9,
+        "color": "Color(0xdd000000)"
+      }
+    ]
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-650",
+    "markdown": "foo <a href=\"&ouml;\">\n",
+    "textSpans": [
+      {
+        "text": "foo ",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      },
+      {
+        "text": "<a href=\"&ouml;\">",
+        "fontFamily": "monospace",
+        "fontWeight": 400,
+        "fontSize": 11.9,
+        "color": "Color(0xdd000000)"
+      }
+    ]
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-651",
+    "markdown": "foo <a href=\"\\*\">\n",
+    "textSpans": [
+      {
+        "text": "foo ",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      },
+      {
+        "text": "<a href=\"\\*\">",
+        "fontFamily": "monospace",
+        "fontWeight": 400,
+        "fontSize": 11.9,
+        "color": "Color(0xdd000000)"
+      }
+    ]
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-652",
+    "markdown": "<a href=\"\\\"\">\n",
+    "textSpans": [
+      {
+        "text": "<a href=\"\"\">",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      }
+    ]
+  }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "description": "https://github.github.com/gfm/#example-671",
+    "markdown": "hello $.;'there\n",
+    "textSpans": [
+      {
+        "text": "hello $.;'there",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      }
+    ]
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-672",
+    "markdown": "Foo χρῆν\n",
+    "textSpans": [
+      {
+        "text": "Foo χρῆν",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      }
+    ]
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-673",
+    "markdown": "Multiple     spaces\n",
+    "textSpans": [
+      {
+        "text": "Multiple     spaces",
+        "fontFamily": ".SF UI Text",
+        "fontWeight": 400,
+        "fontSize": 14.0,
+        "color": "Color(0xdd000000)"
+      }
+    ]
+  }
+]
