@@ -71,18 +71,24 @@ class MarkdownBuilder implements md.NodeVisitor {
 
   @override
   void visitElementAfter(md.Element element) {
-    final last = _tree.removeLast();
+    final current = _tree.removeLast();
     final parent = _tree.last;
 
-    if (last.isBlock) {
-      parent.children.add(Wrap(
-        children: mergeInlineChildren(
-          last.children,
-          richTextBuilder: _buildRichText,
-        ),
-      ));
+    if (current.isBlock) {
+      if (current.children.isNotEmpty) {
+        parent.children.add(Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: mergeInlineChildren(
+            current.children,
+            richTextBuilder: _buildRichText,
+          ),
+        ));
+      } else {
+        parent.children.add(const SizedBox.shrink());
+      }
     } else {
-      parent.children.addAll(last.children);
+      parent.children.addAll(current.children);
     }
   }
 

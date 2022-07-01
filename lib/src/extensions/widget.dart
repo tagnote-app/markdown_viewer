@@ -5,25 +5,41 @@ extension WidgetExtensions on Widget {
     final type = runtimeType.toString();
     final self = this;
 
-    if (self is MultiChildRenderObjectWidget) {
+    if (self is Column || self is Wrap) {
+      return {
+        'type': type,
+        'children': (self as MultiChildRenderObjectWidget)
+            .children
+            .map((e) => e.toMap())
+            .toList(),
+      };
+    } else if (self is RichText) {
       Map<String, dynamic>? spanChild;
-      if (self is RichText) {
-        final text = self.text;
-        if (text is TextSpan) {
-          spanChild = text.toMap();
-        }
+      final text = self.text;
+      if (text is TextSpan) {
+        spanChild = text.toMap();
       }
 
-      final children = [];
-
-      for (final item in self.children) {
-        children.add(item.toMap());
-      }
-
+      final children = self.children.map((e) => e.toMap()).toList();
       return {
         'type': type,
         if (children.isNotEmpty) 'children': children,
         if (spanChild != null) 'span': spanChild,
+      };
+    } else if (self is SingleChildRenderObjectWidget) {
+      return {
+        'type': type,
+        'child': self.child?.toMap(),
+      };
+    } else if (self is Text) {
+      return {
+        'type': type,
+        'data': self.data,
+      };
+    } else if (self is Expanded) {
+      return {
+        'type': type,
+        'child': self.child.toMap(),
       };
     } else {
       return {

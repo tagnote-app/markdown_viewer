@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:markdown/markdown.dart' as md;
 
+import '../extensions/extensions.dart';
 import 'is_block_element.dart';
 
 class TreeElement {
@@ -28,7 +29,7 @@ class TreeElement {
     return {
       'type': type,
       'attributes': attributes,
-      'children': children,
+      'children': children.map((e) => e.toMap()).toList(),
       'style': style,
     };
   }
@@ -36,5 +37,9 @@ class TreeElement {
   @override
   String toString() {
     return toMap().toString();
+  }
+
+  String toPrettyString() {
+    return toMap().toPrettyString();
   }
 }

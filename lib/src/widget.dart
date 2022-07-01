@@ -27,6 +27,10 @@ class _MarkdownViewerState extends State<MarkdownViewer> {
   Widget build(BuildContext context) {
     _parseMarkdown();
 
+    if (_children.length == 1) {
+      return _children.single;
+    }
+
     return Column(
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.start,

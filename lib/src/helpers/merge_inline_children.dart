@@ -10,47 +10,54 @@ List<Widget> mergeInlineChildren(
       richTextBuilder,
   TextAlign? textAlign,
 }) {
-  final List<Widget> mergedTexts = <Widget>[];
+  final mergedTexts = <Widget>[];
   for (final Widget child in children) {
-    if (mergedTexts.isNotEmpty &&
-        mergedTexts.last is RichText &&
-        child is RichText) {
-      final RichText previous = mergedTexts.removeLast() as RichText;
-      final TextSpan previousTextSpan = previous.text as TextSpan;
-      final List<TextSpan> children = previousTextSpan.children != null
-          ? previousTextSpan.children!
-              .map((InlineSpan span) => span is! TextSpan
-                  ? TextSpan(children: <InlineSpan>[span])
-                  : span)
-              .toList()
-          : <TextSpan>[previousTextSpan];
-      children.add(child.text as TextSpan);
-      final TextSpan? mergedSpan = _mergeSimilarTextSpans(children);
-      mergedTexts.add(richTextBuilder(
-        mergedSpan,
-        textAlign: textAlign,
-      ));
-    } else if (mergedTexts.isNotEmpty &&
-        mergedTexts.last is SelectableText &&
-        child is SelectableText) {
-      final SelectableText previous =
-          mergedTexts.removeLast() as SelectableText;
-      final TextSpan previousTextSpan = previous.textSpan!;
-      final List<TextSpan> children = previousTextSpan.children != null
-          ? List<TextSpan>.from(previousTextSpan.children!)
-          : <TextSpan>[previousTextSpan];
-      if (child.textSpan != null) {
-        children.add(child.textSpan!);
-      }
-      final TextSpan? mergedSpan = _mergeSimilarTextSpans(children);
-      mergedTexts.add(
-        richTextBuilder(
+    if (mergedTexts.isNotEmpty && mergedTexts.last is Wrap) {
+      final wrap = mergedTexts.last as Wrap;
+      final mergeGroup = wrap.children;
+
+      if (mergeGroup.last is RichText && child is RichText) {
+        final previous = mergeGroup.removeLast() as RichText;
+        final previousTextSpan = previous.text as TextSpan;
+        final children = previousTextSpan.children != null
+            ? previousTextSpan.children!
+                .map((InlineSpan span) => span is! TextSpan
+                    ? TextSpan(children: <InlineSpan>[span])
+                    : span)
+                .toList()
+            : <TextSpan>[previousTextSpan];
+        children.add(child.text as TextSpan);
+        final mergedSpan = _mergeSimilarTextSpans(children);
+        mergeGroup.add(richTextBuilder(
           mergedSpan,
           textAlign: textAlign,
-        ),
-      );
+        ));
+      } else if (mergeGroup.last is SelectableText && child is SelectableText) {
+        final previous = mergeGroup.removeLast() as SelectableText;
+        final previousTextSpan = previous.textSpan!;
+        final children = previousTextSpan.children != null
+            ? List<TextSpan>.from(previousTextSpan.children!)
+            : <TextSpan>[previousTextSpan];
+        if (child.textSpan != null) {
+          children.add(child.textSpan!);
+        }
+        final mergedSpan = _mergeSimilarTextSpans(children);
+        mergeGroup.add(
+          richTextBuilder(
+            mergedSpan,
+            textAlign: textAlign,
+          ),
+        );
+      }
     } else {
-      mergedTexts.add(child);
+      if (child is RichText || child is SelectableText) {
+        // Enclose all inline widgets in a `Wrap` widget.
+        mergedTexts.add(Wrap(
+          children: [child],
+        ));
+      } else {
+        mergedTexts.add(child);
+      }
     }
   }
   return mergedTexts;
