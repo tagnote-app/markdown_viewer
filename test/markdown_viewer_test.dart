@@ -44,6 +44,7 @@ void _testFile(String path) {
           textDirection: TextDirection.ltr,
           child: MarkdownViewer(
             data,
+            onTapLink: (_, __, ___) {},
             styleSheet: MarkdownStyle.fromTheme(
               themeData,
               link: const TextStyle(color: Color(0xff2196f3)),

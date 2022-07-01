@@ -2,7 +2,6 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:markdown/markdown.dart' as md;
 
-import 'helpers/create_link.dart';
 import 'helpers/merge_inline_children.dart';
 import 'helpers/tree_element.dart';
 import 'helpers/trim_text.dart';
@@ -11,12 +10,17 @@ import 'style.dart';
 class MarkdownBuilder implements md.NodeVisitor {
   MarkdownBuilder({
     required MarkdownStyle styleSheet,
+    MarkdownTapLinkCallback? onTapLink,
     this.selectable = false,
-  }) : _styleSheet = styleSheet;
+  })  : _styleSheet = styleSheet,
+        _onTapLink = onTapLink;
 
   final bool selectable;
 
   final _tree = <TreeElement>[];
+
+  /// Called when the user taps a link.
+  final MarkdownTapLinkCallback? _onTapLink;
 
   final MarkdownStyle _styleSheet;
 
@@ -38,8 +42,8 @@ class MarkdownBuilder implements md.NodeVisitor {
   bool visitElementBefore(md.Element element) {
     final parent = _tree.last;
 
-    if (element.type == 'link') {
-      _linkHandlers.add(createLink(element));
+    if (element.type == 'link' && _onTapLink != null) {
+      _addLinkHandler(element);
     }
 
     _tree.add(TreeElement.fromAstElement(
@@ -82,6 +86,17 @@ class MarkdownBuilder implements md.NodeVisitor {
     }
   }
 
+  void _addLinkHandler(md.Element element) {
+    _linkHandlers.add(TapGestureRecognizer()
+      ..onTap = () {
+        _onTapLink!(
+          element.textContent,
+          element.attributes['destination'],
+          element.attributes['title'],
+        );
+      });
+  }
+
   Widget _buildRichText(TextSpan? text, {TextAlign? textAlign}) {
     if (selectable) {
       return SelectableText.rich(
@@ -97,3 +112,7 @@ class MarkdownBuilder implements md.NodeVisitor {
     }
   }
 }
+
+/// Callback when the user taps a link.
+typedef MarkdownTapLinkCallback = void Function(
+    String text, String? href, String? title);
