@@ -25,41 +25,61 @@ class MarkdownStyle {
     this.inlineCode,
   });
 
+  /// Creates a [MarkdownStyle] from the [TextStyle]s in the provided [theme].
+  /// Also it allows to set individual [TextStyle]s which will be merged into
+  /// the [TextStyle]s generated from [theme].
   MarkdownStyle.fromTheme(
-    ThemeData theme, [
-    MarkdownStyle? withStyle,
-  ])  : paragraph = withStyle?.paragraph ?? theme.textTheme.bodyText2,
-        blockquote = withStyle?.blockquote ?? theme.textTheme.bodyText2,
-        htmlBlock = withStyle?.htmlBlock ?? theme.textTheme.bodyText2,
-        list = withStyle?.list ?? theme.textTheme.bodyText2,
-        listItem = withStyle?.listItem,
-        table = withStyle?.table,
-        tableHead = withStyle?.tableHead ??
-            const TextStyle(fontWeight: FontWeight.w600),
-        tableBody = withStyle?.tableBody ?? theme.textTheme.bodyText2,
-        headline1 = withStyle?.headline1 ?? theme.textTheme.headline5,
-        headline2 = withStyle?.headline2 ?? theme.textTheme.headline6,
-        headline3 = withStyle?.headline3 ?? theme.textTheme.bodyText1,
-        headline4 = withStyle?.headline4 ?? theme.textTheme.bodyText1,
-        headline5 = withStyle?.headline5 ?? theme.textTheme.bodyText1,
-        headline6 = withStyle?.headline6 ?? theme.textTheme.bodyText1,
-        emphasis =
-            withStyle?.emphasis ?? const TextStyle(fontStyle: FontStyle.italic),
-        strongEmphasis = withStyle?.strongEmphasis ??
-            const TextStyle(fontWeight: FontWeight.w700),
-        link = withStyle?.link ?? TextStyle(color: theme.colorScheme.primary),
-        inlineHtml = withStyle?.inlineHtml ??
-            theme.textTheme.bodyText2!.copyWith(
+    ThemeData theme, {
+    TextStyle? paragraph,
+    TextStyle? blockquote,
+    TextStyle? htmlBlock,
+    TextStyle? list,
+    this.listItem,
+    this.table,
+    TextStyle? tableHead,
+    TextStyle? tableBody,
+    TextStyle? headline1,
+    TextStyle? headline2,
+    TextStyle? headline3,
+    TextStyle? headline4,
+    TextStyle? headline5,
+    TextStyle? headline6,
+    TextStyle? emphasis,
+    TextStyle? strongEmphasis,
+    TextStyle? link,
+    TextStyle? inlineHtml,
+    this.codeBlock,
+    TextStyle? inlineCode,
+  })  : paragraph = theme.textTheme.bodyText2?.merge(paragraph),
+        blockquote = theme.textTheme.bodyText2?.merge(blockquote),
+        htmlBlock = theme.textTheme.bodyText2?.merge(htmlBlock),
+        list = theme.textTheme.bodyText2?.merge(list),
+        tableHead =
+            const TextStyle(fontWeight: FontWeight.w600).merge(tableHead),
+        tableBody = theme.textTheme.bodyText2?.merge(tableBody),
+        headline1 = theme.textTheme.headline5?.merge(headline1),
+        headline2 = theme.textTheme.headline6?.merge(headline2),
+        headline3 = theme.textTheme.bodyText1?.merge(headline3),
+        headline4 = theme.textTheme.bodyText1?.merge(headline4),
+        headline5 = theme.textTheme.bodyText1?.merge(headline5),
+        headline6 = theme.textTheme.bodyText1?.merge(headline6),
+        emphasis = const TextStyle(fontStyle: FontStyle.italic).merge(emphasis),
+        strongEmphasis =
+            const TextStyle(fontWeight: FontWeight.w700).merge(strongEmphasis),
+        link = TextStyle(color: theme.colorScheme.primary).merge(link),
+        inlineHtml = theme.textTheme.bodyText2!
+            .copyWith(
               backgroundColor: theme.cardTheme.color ?? theme.cardColor,
               fontFamily: 'monospace',
-            ),
-        codeBlock = withStyle?.codeBlock,
-        inlineCode = withStyle?.inlineCode ??
-            theme.textTheme.bodyText2!.copyWith(
+            )
+            .merge(inlineHtml),
+        inlineCode = theme.textTheme.bodyText2!
+            .copyWith(
               backgroundColor: theme.cardTheme.color ?? theme.cardColor,
               fontFamily: 'monospace',
               fontSize: theme.textTheme.bodyText2!.fontSize! * 0.85,
-            );
+            )
+            .merge(inlineCode);
 
   final TextStyle? paragraph;
   final TextStyle? blockquote;

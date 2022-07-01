@@ -46,9 +46,7 @@ void _testFile(String path) {
             data,
             styleSheet: MarkdownStyle.fromTheme(
               themeData,
-              MarkdownStyle(
-                link: const TextStyle(color: Color(0xff2196f3)),
-              ),
+              link: const TextStyle(color: Color(0xff2196f3)),
             ),
           ),
         ),
