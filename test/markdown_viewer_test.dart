@@ -91,7 +91,7 @@ void _testFile(String path) {
           for (var i = 0; i < widget.children.length; i++) {
             loopTest(
               children[i],
-              (expectedElement as ExpectedBlock).children[i],
+              (expectedElement as ExpectedBlock).children![i],
             );
           }
         } else if (widget is TextSpan) {

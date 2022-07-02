@@ -43,22 +43,25 @@ class ExpectedBlock extends ExpectedElement {
   factory ExpectedBlock.formJson(Map<String, dynamic> json) {
     return ExpectedBlock(
       type: json['type'],
-      children: List<ExpectedElement>.from(
-        List<Map<String, dynamic>>.from(json['children']).map(
-          (e) => e['type'] == 'TextSpan'
-              ? ExpectedInline.formJson(e)
-              : ExpectedBlock.formJson(e),
-        ),
-      ),
+      children: json['children'] == null
+          ? null
+          : List<ExpectedElement>.from(
+              List<Map<String, dynamic>>.from(json['children']).map(
+                (e) => e['type'] == 'TextSpan'
+                    ? ExpectedInline.formJson(e)
+                    : ExpectedBlock.formJson(e),
+              ),
+            ),
     );
   }
 
-  List<ExpectedElement> children;
+  List<ExpectedElement>? children;
 
   @override
   Map<String, dynamic> toMap() => {
         'type': type,
-        'children': children.map((e) => e.toMap()).toList(),
+        if (children != null)
+          'children': children!.map((e) => e.toMap()).toList(),
       };
 }
 
