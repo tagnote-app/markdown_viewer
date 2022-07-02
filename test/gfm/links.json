@@ -790,8 +790,7 @@
     "markdown": "[![moon](moon.jpg)](/uri)\n",
     "expected": [
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       }
     ]
   },
@@ -891,8 +890,7 @@
     "markdown": "![[[foo](uri1)](uri2)](uri3)\n",
     "expected": [
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       }
     ]
   },
@@ -1198,8 +1196,7 @@
     "markdown": "[![moon](moon.jpg)][ref]\n\n[ref]: /uri\n",
     "expected": [
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       }
     ]
   },

@@ -4,8 +4,7 @@
     "markdown": "![foo](/url \"title\")\n",
     "expected": [
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       }
     ]
   },
@@ -14,8 +13,7 @@
     "markdown": "![foo *bar*]\n\n[foo *bar*]: train.jpg \"train & tracks\"\n",
     "expected": [
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       }
     ]
   },
@@ -24,8 +22,7 @@
     "markdown": "![foo ![bar](/url)](/url2)\n",
     "expected": [
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       }
     ]
   },
@@ -34,8 +31,7 @@
     "markdown": "![foo [bar](/url)](/url2)\n",
     "expected": [
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       }
     ]
   },
@@ -44,8 +40,7 @@
     "markdown": "![foo *bar*][]\n\n[foo *bar*]: train.jpg \"train & tracks\"\n",
     "expected": [
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       }
     ]
   },
@@ -54,8 +49,7 @@
     "markdown": "![foo *bar*][foobar]\n\n[FOOBAR]: train.jpg \"train & tracks\"\n",
     "expected": [
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       }
     ]
   },
@@ -64,8 +58,7 @@
     "markdown": "![foo](train.jpg)\n",
     "expected": [
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       }
     ]
   },
@@ -93,8 +86,7 @@
     "markdown": "![foo](<url>)\n",
     "expected": [
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       }
     ]
   },
@@ -103,8 +95,7 @@
     "markdown": "![](/url)\n",
     "expected": [
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       }
     ]
   },
@@ -113,8 +104,7 @@
     "markdown": "![foo][bar]\n\n[bar]: /url\n",
     "expected": [
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       }
     ]
   },
@@ -123,8 +113,7 @@
     "markdown": "![foo][bar]\n\n[BAR]: /url\n",
     "expected": [
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       }
     ]
   },
@@ -133,8 +122,7 @@
     "markdown": "![foo][]\n\n[foo]: /url \"title\"\n",
     "expected": [
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       }
     ]
   },
@@ -143,8 +131,7 @@
     "markdown": "![*foo* bar][]\n\n[*foo* bar]: /url \"title\"\n",
     "expected": [
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       }
     ]
   },
@@ -153,8 +140,7 @@
     "markdown": "![Foo][]\n\n[foo]: /url \"title\"\n",
     "expected": [
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       }
     ]
   },
@@ -182,8 +168,7 @@
     "markdown": "![foo]\n\n[foo]: /url \"title\"\n",
     "expected": [
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       }
     ]
   },
@@ -192,8 +177,7 @@
     "markdown": "![*foo* bar]\n\n[*foo* bar]: /url \"title\"\n",
     "expected": [
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       }
     ]
   },
@@ -234,8 +218,7 @@
     "markdown": "![Foo]\n\n[foo]: /url \"title\"\n",
     "expected": [
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       }
     ]
   },

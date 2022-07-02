@@ -258,8 +258,7 @@
         ]
       },
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       }
     ]
   },

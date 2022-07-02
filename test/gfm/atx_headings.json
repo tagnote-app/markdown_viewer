@@ -460,8 +460,7 @@
     "markdown": "****\n## foo\n****\n",
     "expected": [
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       },
       {
         "type": "Column",
@@ -477,8 +476,7 @@
         ]
       },
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       }
     ]
   },
@@ -532,16 +530,13 @@
     "markdown": "## \n#\n### ###\n",
     "expected": [
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       },
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       },
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       }
     ]
   }

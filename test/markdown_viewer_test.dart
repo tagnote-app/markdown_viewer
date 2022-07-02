@@ -25,6 +25,7 @@ void _testDirectory(String name) {
     if (![
       'emphasis_and_strong_emphasis.json',
       'atx_headings.json',
+      'setext_headings.json',
     ].contains(entry.path.split('/').last)) {
       continue;
     }
@@ -59,21 +60,26 @@ void _testFile(String path) {
         ),
       );
 
-      final rootColumn = tester.firstWidget(find.byType(Column));
+      final allWidgets = tester.allWidgets;
+      expect(allWidgets.elementAt(0).runtimeType, Directionality);
+      expect(allWidgets.elementAt(1).runtimeType, MarkdownViewer);
+      expect(allWidgets.elementAt(2).runtimeType, Column);
+
+      final rootColumn = allWidgets.elementAt(2);
 
       void loopTest(widget, ExpectedElement expectedElement) {
         expect(widget.runtimeType.toString(), expectedElement.type);
         if (widget is Column) {
           expect(expectedElement.runtimeType, ExpectedBlock);
 
-          // First child of a Column should be either a Column or a Wrap.
-          final firstChild = widget.children.first;
           final children = [];
-          if (firstChild is Column) {
-            children.addAll(widget.children);
-          } else {
-            expect(firstChild.runtimeType, Wrap);
-            final wrapChildren = (firstChild as Wrap).children;
+
+          // If the first child of current Widget is a Wrap, this Widget has
+          // only inline children.
+          if (widget.children.first is Wrap) {
+            // A Widget could have only one Wrap child.
+            expect(widget.children.length, 1);
+            final wrapChildren = (widget.children.first as Wrap).children;
             if (wrapChildren.isEmpty) {
               return;
             }
@@ -86,6 +92,8 @@ void _testFile(String path) {
             } else {
               children.addAll(textSpan.children!);
             }
+          } else {
+            children.addAll(widget.children);
           }
 
           for (var i = 0; i < widget.children.length; i++) {
@@ -111,6 +119,16 @@ void _testFile(String path) {
             },
             expectedTextSpan.toMap()..remove('type'),
           );
+        }
+        // If current widget has no child.
+        else if (widget is SizedBox) {
+          expect({
+            'height': widget.height,
+            'width': widget.width,
+          }, {
+            'height': 0.0,
+            'width': 0.0,
+          });
         }
       }
 

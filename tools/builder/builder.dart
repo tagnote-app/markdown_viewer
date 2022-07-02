@@ -72,10 +72,16 @@ class TestCaseBuilder implements NodeVisitor {
       if (current.type == 'blockquote') {
         _isInBlockquote = false;
       }
-      parent.children.add({
-        'type': 'Column',
-        'children': _mergeTextSpans(current.children),
-      });
+      if (current.children.isNotEmpty) {
+        parent.children.add({
+          'type': 'Column',
+          'children': _mergeTextSpans(current.children),
+        });
+      } else {
+        parent.children.add({
+          'type': 'SizedBox',
+        });
+      }
     } else {
       parent.children.addAll(current.children);
     }

@@ -26,6 +26,12 @@ extension WidgetExtensions on Widget {
         if (children.isNotEmpty) 'children': children,
         if (spanChild != null) 'span': spanChild,
       };
+    } else if (self is SizedBox) {
+      return {
+        'type': type,
+        'height': self.height,
+        'width': self.width,
+      };
     } else if (self is SingleChildRenderObjectWidget) {
       return {
         'type': type,

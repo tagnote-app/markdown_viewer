@@ -1099,8 +1099,7 @@
         "type": "Column",
         "children": [
           {
-            "type": "Column",
-            "children": []
+            "type": "SizedBox"
           }
         ]
       },
@@ -1140,8 +1139,7 @@
             ]
           },
           {
-            "type": "Column",
-            "children": []
+            "type": "SizedBox"
           },
           {
             "type": "Column",
@@ -1181,8 +1179,7 @@
             ]
           },
           {
-            "type": "Column",
-            "children": []
+            "type": "SizedBox"
           },
           {
             "type": "Column",
@@ -1222,8 +1219,7 @@
             ]
           },
           {
-            "type": "Column",
-            "children": []
+            "type": "SizedBox"
           },
           {
             "type": "Column",
@@ -1250,8 +1246,7 @@
         "type": "Column",
         "children": [
           {
-            "type": "Column",
-            "children": []
+            "type": "SizedBox"
           }
         ]
       }

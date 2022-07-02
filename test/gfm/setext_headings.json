@@ -198,8 +198,7 @@
         ]
       },
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       }
     ]
   },
@@ -272,8 +271,7 @@
         ]
       },
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       }
     ]
   },
@@ -396,8 +394,7 @@
         ]
       },
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       }
     ]
   },
@@ -448,8 +445,7 @@
         ]
       },
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       }
     ]
   },
@@ -477,8 +473,7 @@
     "markdown": "---\nFoo\n---\nBar\n---\nBaz\n",
     "expected": [
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       },
       {
         "type": "Column",
@@ -545,12 +540,10 @@
     "markdown": "---\n---\n",
     "expected": [
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       },
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       }
     ]
   },
@@ -577,8 +570,7 @@
         ]
       },
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       }
     ]
   },
@@ -598,8 +590,7 @@
         ]
       },
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       }
     ]
   },
@@ -626,8 +617,7 @@
         ]
       },
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       }
     ]
   },
@@ -713,8 +703,7 @@
         ]
       },
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       },
       {
         "type": "Column",
@@ -749,8 +738,7 @@
         ]
       },
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       },
       {
         "type": "Column",

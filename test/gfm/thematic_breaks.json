@@ -4,16 +4,13 @@
     "markdown": "***\n---\n___\n",
     "expected": [
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       },
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       },
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       }
     ]
   },
@@ -79,16 +76,13 @@
     "markdown": " ***\n  ***\n   ***\n",
     "expected": [
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       },
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       },
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       }
     ]
   },
@@ -133,8 +127,7 @@
     "markdown": "_____________________________________\n",
     "expected": [
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       }
     ]
   },
@@ -143,8 +136,7 @@
     "markdown": " - - -\n",
     "expected": [
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       }
     ]
   },
@@ -153,8 +145,7 @@
     "markdown": " **  * ** * ** * **\n",
     "expected": [
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       }
     ]
   },
@@ -163,8 +154,7 @@
     "markdown": "-     -      -      -\n",
     "expected": [
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       }
     ]
   },
@@ -173,8 +163,7 @@
     "markdown": "- - - -    \n",
     "expected": [
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       }
     ]
   },
@@ -266,8 +255,7 @@
         ]
       },
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       },
       {
         "type": "Column",
@@ -307,8 +295,7 @@
         ]
       },
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       },
       {
         "type": "Column",
@@ -380,8 +367,7 @@
         ]
       },
       {
-        "type": "Column",
-        "children": []
+        "type": "SizedBox"
       },
       {
         "type": "Column",
@@ -427,8 +413,7 @@
             "type": "Column",
             "children": [
               {
-                "type": "Column",
-                "children": []
+                "type": "SizedBox"
               }
             ]
           }

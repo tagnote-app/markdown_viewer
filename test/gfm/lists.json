@@ -902,8 +902,7 @@
             ]
           },
           {
-            "type": "Column",
-            "children": []
+            "type": "SizedBox"
           },
           {
             "type": "Column",
