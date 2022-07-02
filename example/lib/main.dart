@@ -26,17 +26,21 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const markdown = '''
-# Heading 1
-## Heading 2
-Hello **world**!
+    const markdown = r'''
+    var m = 2;
 ''';
 
     return Scaffold(
       appBar: AppBar(title: const Text('MarkdownViewer Demo')),
-      body: const Padding(
-        padding: EdgeInsets.all(20),
-        child: MarkdownViewer(markdown),
+      body: Padding(
+        padding: const EdgeInsets.all(20),
+        child: MarkdownViewer(
+          markdown,
+          onTapLink: (text, href, title) {
+            print({text, href, title});
+          },
+          styleSheet: MarkdownStyle.fromTheme(Theme.of(context)),
+        ),
       ),
     );
   }
