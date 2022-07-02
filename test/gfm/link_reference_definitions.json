@@ -549,22 +549,28 @@
         ]
       },
       {
-        "type": "Column",
-        "children": [
-          {
+        "type": "DecoratedBox",
+        "child": {
+          "type": "Padding",
+          "child": {
             "type": "Column",
             "children": [
               {
-                "type": "TextSpan",
-                "text": "bar",
-                "fontFamily": ".SF UI Text",
-                "fontWeight": 400,
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "type": "Column",
+                "children": [
+                  {
+                    "type": "TextSpan",
+                    "text": "bar",
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": 400,
+                    "fontSize": 14.0,
+                    "color": "Color(0xff666666)"
+                  }
+                ]
               }
             ]
           }
-        ]
+        }
       }
     ]
   },
@@ -702,7 +708,13 @@
         ]
       },
       {
-        "type": "SizedBox"
+        "type": "DecoratedBox",
+        "child": {
+          "type": "Padding",
+          "child": {
+            "type": "SizedBox"
+          }
+        }
       }
     ]
   },

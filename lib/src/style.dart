@@ -23,18 +23,20 @@ class MarkdownStyle {
     this.htmlBlock,
     this.inlineCode,
     this.codeBlock,
+    this.blockquoteDecoration = const BoxDecoration(),
+    this.blockquotePadding = EdgeInsets.zero,
   });
 
   /// Creates a [MarkdownStyle] from the [TextStyle]s in the provided [theme].
   /// Also it allows to set individual [TextStyle]s which will be merged into
   /// the [TextStyle]s generated from [theme].
-  MarkdownStyle.fromTheme(
+  factory MarkdownStyle.fromTheme(
     ThemeData theme, {
     TextStyle? paragraph,
     TextStyle? blockquote,
     TextStyle? list,
-    this.listItem,
-    this.table,
+    TextStyle? listItem,
+    TextStyle? table,
     TextStyle? tableHead,
     TextStyle? tableBody,
     TextStyle? headline1,
@@ -50,26 +52,37 @@ class MarkdownStyle {
     TextStyle? htmlBlock,
     TextStyle? inlineCode,
     TextStyle? codeBlock,
-  })  : paragraph = theme.textTheme.bodyText2?.merge(paragraph),
-        blockquote = theme.textTheme.bodyText2?.merge(blockquote),
-        list = theme.textTheme.bodyText2?.merge(list),
-        tableHead =
-            const TextStyle(fontWeight: FontWeight.w600).merge(tableHead),
-        tableBody = theme.textTheme.bodyText2?.merge(tableBody),
-        headline1 = theme.textTheme.headline5?.merge(headline1),
-        headline2 = theme.textTheme.headline6?.merge(headline2),
-        headline3 = theme.textTheme.subtitle1?.merge(headline3),
-        headline4 = theme.textTheme.bodyText1?.merge(headline4),
-        headline5 = theme.textTheme.bodyText1?.merge(headline5),
-        headline6 = theme.textTheme.bodyText1?.merge(headline6),
-        emphasis = const TextStyle(fontStyle: FontStyle.italic).merge(emphasis),
-        strongEmphasis =
-            const TextStyle(fontWeight: FontWeight.w700).merge(strongEmphasis),
-        link = TextStyle(color: theme.colorScheme.primary).merge(link),
-        inlineHtml = _generateCodeStyle(theme, true)?.merge(inlineHtml),
-        htmlBlock = _generateCodeStyle(theme, false)?.merge(htmlBlock),
-        inlineCode = _generateCodeStyle(theme, true)?.merge(inlineCode),
-        codeBlock = _generateCodeStyle(theme, false)?.merge(codeBlock);
+    BoxDecoration? blockquoteDecoration,
+    EdgeInsets? blockquotePadding,
+  }) {
+    return MarkdownStyle(
+      paragraph: theme.textTheme.bodyText2?.merge(paragraph),
+      blockquote: theme.textTheme.bodyText2?.merge(blockquote),
+      list: theme.textTheme.bodyText2?.merge(list),
+      tableHead: const TextStyle(fontWeight: FontWeight.w600).merge(tableHead),
+      tableBody: theme.textTheme.bodyText2?.merge(tableBody),
+      headline1: theme.textTheme.headline5?.merge(headline1),
+      headline2: theme.textTheme.headline6?.merge(headline2),
+      headline3: theme.textTheme.subtitle1?.merge(headline3),
+      headline4: theme.textTheme.bodyText1?.merge(headline4),
+      headline5: theme.textTheme.bodyText1?.merge(headline5),
+      headline6: theme.textTheme.bodyText1?.merge(headline6),
+      emphasis: const TextStyle(fontStyle: FontStyle.italic).merge(emphasis),
+      strongEmphasis:
+          const TextStyle(fontWeight: FontWeight.w700).merge(strongEmphasis),
+      link: TextStyle(color: theme.colorScheme.primary).merge(link),
+      inlineHtml: _generateCodeStyle(theme, true)?.merge(inlineHtml),
+      htmlBlock: _generateCodeStyle(theme, false)?.merge(htmlBlock),
+      inlineCode: _generateCodeStyle(theme, true)?.merge(inlineCode),
+      codeBlock: _generateCodeStyle(theme, false)?.merge(codeBlock),
+      blockquoteDecoration: blockquoteDecoration ??
+          BoxDecoration(
+            color: theme.colorScheme.primary.withAlpha(100),
+            borderRadius: BorderRadius.circular(2.0),
+          ),
+      blockquotePadding: blockquotePadding ?? const EdgeInsets.all(8),
+    );
+  }
 
   final TextStyle? paragraph;
   final TextStyle? blockquote;
@@ -91,6 +104,8 @@ class MarkdownStyle {
   final TextStyle? htmlBlock;
   final TextStyle? inlineCode;
   final TextStyle? codeBlock;
+  final BoxDecoration blockquoteDecoration;
+  final EdgeInsets blockquotePadding;
 
   /// Generates a [TextStyle].
   TextStyle style(md.Element element, TextStyle? parentStyle) {
@@ -98,10 +113,6 @@ class MarkdownStyle {
     TextStyle? style;
 
     switch (type) {
-      case 'paragraph':
-        style = paragraph;
-        break;
-
       case 'blockquote':
       case 'fencedBlockquote':
         style = blockquote;
@@ -172,10 +183,16 @@ class MarkdownStyle {
         break;
     }
 
-    style ??= const TextStyle();
+    const emptyStyle = TextStyle();
+    style ??= emptyStyle;
 
     if (parentStyle != null) {
       style = parentStyle.merge(style);
+    }
+
+    // Make sure to use TextStyle inherit from ancestors to overwite paragraph.
+    if (type == 'paragraph' || paragraph != null) {
+      style = paragraph!.merge(style);
     }
 
     return style;

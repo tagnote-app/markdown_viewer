@@ -23,9 +23,36 @@ void _testDirectory(String name) {
 
   for (final entry in entries) {
     if (![
-      'emphasis_and_strong_emphasis.json',
       'atx_headings.json',
       'setext_headings.json',
+      'emphasis_and_strong_emphasis.json',
+      'paragraphs.json',
+      'block_quotes.json',
+      //'fenced_code_blocks.json',
+      //'indented_code_blocks.json',
+      // 'autolinks.json',
+      // 'autolinks_extension_.json',
+      // 'backslash_escapes.json',
+      // 'blank_lines.json',
+      // 'code_spans.json',
+      // 'disallowed_raw_html_extension_.json',
+      // 'entity_and_numeric_character_references.json',
+      // 'hard_line_breaks.json',
+      // 'html_blocks.json',
+      // 'images.json',
+      // 'inlines.json',
+      // 'link_reference_definitions.json',
+      // 'links.json',
+      // 'list_items.json',
+      // 'lists.json',
+      // 'precedence.json',
+      // 'raw_html.json',
+      // 'soft_line_breaks.json',
+      // 'strikethrough_extension_.json',
+      // 'tables_extension_.json',
+      // 'tabs.json',
+      // 'textual_content.json',
+      // 'thematic_breaks.json',
     ].contains(entry.path.split('/').last)) {
       continue;
     }
@@ -55,6 +82,7 @@ void _testFile(String path) {
             styleSheet: MarkdownStyle.fromTheme(
               themeData,
               link: const TextStyle(color: Color(0xff2196f3)),
+              blockquote: const TextStyle(color: Color(0xff666666)),
             ),
           ),
         ),
@@ -63,9 +91,15 @@ void _testFile(String path) {
       final allWidgets = tester.allWidgets;
       expect(allWidgets.elementAt(0).runtimeType, Directionality);
       expect(allWidgets.elementAt(1).runtimeType, MarkdownViewer);
-      expect(allWidgets.elementAt(2).runtimeType, Column);
+      //  The immediate child of MarkdownViewer
+      final firstChild = allWidgets.elementAt(2);
 
-      final rootColumn = allWidgets.elementAt(2);
+      // For example,
+      // https://github.github.com/gfm/#example-217
+      if (firstChild is SizedBox) {
+        _expectBlankBox(allWidgets.elementAt(2) as SizedBox);
+        return;
+      }
 
       void loopTest(widget, ExpectedElement expectedElement) {
         expect(widget.runtimeType.toString(), expectedElement.type);
@@ -119,30 +153,47 @@ void _testFile(String path) {
             },
             expectedTextSpan.toMap()..remove('type'),
           );
-        }
-        // If current widget has no child.
-        else if (widget is SizedBox) {
-          expect({
-            'height': widget.height,
-            'width': widget.width,
-          }, {
-            'height': 0.0,
-            'width': 0.0,
-          });
+        } else if (widget is SingleChildRenderObjectWidget) {
+          expect(
+            (expectedElement as ExpectedBlock).hasMultiChild,
+            false,
+            reason: '${expectedElement.toMap()} should not have children',
+          );
+
+          if (widget.child != null) {
+            return loopTest(
+              widget.child,
+              expectedElement.child!,
+            );
+          }
+
+          if (widget is SizedBox) {
+            _expectBlankBox(widget);
+          }
         }
       }
 
       // The root Column is the Column from MarkdownBuilder if the built result
-      // has only one Column, otherwise the root Column is the Column from
+      // has only one child, otherwise the root Column is the Column from
       // MarkdownViwer widget, so it needs to add one more layer on top of
       // expected.
       loopTest(
-          rootColumn,
+          firstChild,
           expected.length == 1
               ? expected.single
               : ExpectedBlock(type: 'Column', children: expected));
     });
   }
+}
+
+void _expectBlankBox(SizedBox widget) {
+  expect({
+    'height': widget.height,
+    'width': widget.width,
+  }, {
+    'height': 0.0,
+    'width': 0.0,
+  });
 }
 
 /// Markdown test folder.

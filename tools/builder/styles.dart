@@ -48,9 +48,6 @@ Map<String, dynamic> generateStyle(
   String? color = parentStyle['color'];
 
   switch (element.type) {
-    case 'paragraph':
-    case 'blockquote':
-    case 'fencedBlockquote':
     case 'bulletList':
     case 'orderedList':
     case 'table':
@@ -58,6 +55,25 @@ Map<String, dynamic> generateStyle(
       fontWeight = _theme['bodyText2']!['fontWeight'] as int;
       fontSize = _theme['bodyText2']!['fontSize'] as double;
       color = _theme['bodyText2']!['color'] as String;
+      break;
+
+    case 'paragraph':
+      // Only assign styles to paragraph when it does not inherit styles from
+      // ancestors.
+      if (color == null && fontFamily == null && fontSize == null) {
+        fontFamily = _theme['bodyText2']!['fontFamily'] as String;
+        fontWeight = _theme['bodyText2']!['fontWeight'] as int;
+        fontSize = _theme['bodyText2']!['fontSize'] as double;
+        color = _theme['bodyText2']!['color'] as String;
+      }
+      break;
+
+    case 'blockquote':
+    case 'fencedBlockquote':
+      fontFamily = _theme['bodyText2']!['fontFamily'] as String;
+      fontWeight = _theme['bodyText2']!['fontWeight'] as int;
+      fontSize = _theme['bodyText2']!['fontSize'] as double;
+      color = 'Color(0xff666666)';
       break;
 
     case 'indentedCodeBlock':
