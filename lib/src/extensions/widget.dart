@@ -56,6 +56,14 @@ extension TextSpanExtensions on TextSpan {
     final map = <String, dynamic>{
       'type': runtimeType.toString(),
       if (text != null) 'text': text,
+      if (style != null)
+        'style': {
+          "fontFamily": style!.fontFamily,
+          "fontWeight": style!.fontWeight.toString(),
+          "fontStyle": style!.fontStyle.toString(),
+          "fontSize": style!.fontSize,
+          "color": style!.color.toString(),
+        },
     };
 
     if (children != null && children!.isNotEmpty) {

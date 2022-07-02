@@ -99,6 +99,8 @@ class ExpectedInline extends ExpectedElement {
         'fontStyle': fontStyle,
         'fontWeight': fontWeight,
         'fontFamily': fontFamily,
+        'color': color,
+        'isLink': isLink,
       };
 }
 

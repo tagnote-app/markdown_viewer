@@ -59,7 +59,7 @@ class MarkdownStyle {
         tableBody = theme.textTheme.bodyText2?.merge(tableBody),
         headline1 = theme.textTheme.headline5?.merge(headline1),
         headline2 = theme.textTheme.headline6?.merge(headline2),
-        headline3 = theme.textTheme.bodyText1?.merge(headline3),
+        headline3 = theme.textTheme.subtitle1?.merge(headline3),
         headline4 = theme.textTheme.bodyText1?.merge(headline4),
         headline5 = theme.textTheme.bodyText1?.merge(headline5),
         headline6 = theme.textTheme.bodyText1?.merge(headline6),

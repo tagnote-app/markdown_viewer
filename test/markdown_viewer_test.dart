@@ -24,7 +24,7 @@ void _testDirectory(String name) {
   for (final entry in entries) {
     if (![
       'emphasis_and_strong_emphasis.json',
-      //'atx_headings.json',
+      'atx_headings.json',
     ].contains(entry.path.split('/').last)) {
       continue;
     }
@@ -97,22 +97,32 @@ void _testFile(String path) {
         } else if (widget is TextSpan) {
           final expectedTextSpan = expectedElement as ExpectedInline;
 
-          expect(widget.toPlainText(), expectedTextSpan.text);
           expect(widget.style, isNotNull);
-          expect(widget.style!.fontStyle, expectedTextSpan.fontStyle);
-          expect(widget.style!.fontWeight, expectedTextSpan.fontWeight);
-          expect(widget.style!.fontFamily, expectedTextSpan.fontFamily);
-          if (widget.style!.color != null) {
-            expect(widget.style!.color.toString(), expectedTextSpan.color);
-          }
-          if (expectedTextSpan.isLink) {
-            expect(widget.recognizer, isNotNull);
-            expect(widget.recognizer is GestureRecognizer, isTrue);
-          }
+          expect(
+            {
+              'text': widget.toPlainText(),
+              'fontStyle': widget.style!.fontStyle,
+              'fontWeight': widget.style!.fontWeight,
+              'fontFamily': widget.style!.fontFamily,
+              if (widget.style!.color != null)
+                'color': widget.style!.color.toString(),
+              'isLink': widget.recognizer != null &&
+                  widget.recognizer is GestureRecognizer,
+            },
+            expectedTextSpan.toMap()..remove('type'),
+          );
         }
       }
 
-      loopTest(rootColumn, expected.first);
+      // The root Column is the Column from MarkdownBuilder if the built result
+      // has only one Column, otherwise the root Column is the Column from
+      // MarkdownViwer widget, so it needs to add one more layer on top of
+      // expected.
+      loopTest(
+          rootColumn,
+          expected.length == 1
+              ? expected.single
+              : ExpectedBlock(type: 'Column', children: expected));
     });
   }
 }
