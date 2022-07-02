@@ -4,15 +4,11 @@
     "markdown": "~~Hi~~ Hello, world!\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "~~Hi~~ Hello, world!",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "~~Hi~~ Hello, world!"
           }
         ]
       }
@@ -23,28 +19,20 @@
     "markdown": "This ~~has a\n\nnew paragraph~~.\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "This ~~has a",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "This ~~has a"
           }
         ]
       },
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "new paragraph~~.",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "new paragraph~~."
           }
         ]
       }

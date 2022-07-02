@@ -4,15 +4,11 @@
     "markdown": "<a><bab><c2c>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<a><bab><c2c>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "inlineHtml",
+            "text": "<a><bab><c2c>"
           }
         ]
       }
@@ -23,15 +19,11 @@
     "markdown": "<a/><b2/>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<a/><b2/>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "inlineHtml",
+            "text": "<a/><b2/>"
           }
         ]
       }
@@ -42,15 +34,11 @@
     "markdown": "<a  /><b2\ndata=\"foo\" >\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<a  /><b2 data=\"foo\" >",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "inlineHtml",
+            "text": "<a  /><b2 data=\"foo\" >"
           }
         ]
       }
@@ -61,15 +49,11 @@
     "markdown": "<a foo=\"bar\" bam = 'baz <em>\"</em>'\n_boolean zoop:33=zoop:33 />\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<a foo=\"bar\" bam = 'baz <em>\"</em>' _boolean zoop:33=zoop:33 />",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "inlineHtml",
+            "text": "<a foo=\"bar\" bam = 'baz <em>\"</em>' _boolean zoop:33=zoop:33 />"
           }
         ]
       }
@@ -80,23 +64,15 @@
     "markdown": "Foo <responsive-image src=\"foo.jpg\" />\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "Foo ",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "Foo "
           },
           {
-            "type": "TextSpan",
-            "text": "<responsive-image src=\"foo.jpg\" />",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "inlineHtml",
+            "text": "<responsive-image src=\"foo.jpg\" />"
           }
         ]
       }
@@ -107,15 +83,11 @@
     "markdown": "<33> <__>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<33> <__>",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<33> <__>"
           }
         ]
       }
@@ -126,15 +98,11 @@
     "markdown": "<a h*#ref=\"hi\">\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<a h*#ref=\"hi\">",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<a h*#ref=\"hi\">"
           }
         ]
       }
@@ -145,15 +113,11 @@
     "markdown": "<a href=\"hi'> <a href=hi'>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<a href=\"hi'> <a href=hi'>",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<a href=\"hi'> <a href=hi'>"
           }
         ]
       }
@@ -164,15 +128,11 @@
     "markdown": "< a><\nfoo><bar/ >\n<foo bar=baz\nbim!bop />\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "< a>< foo><bar/ > <foo bar=baz bim!bop />",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "< a>< foo><bar/ > <foo bar=baz bim!bop />"
           }
         ]
       }
@@ -183,15 +143,11 @@
     "markdown": "<a href='bar'title=title>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<a href='bar'title=title>",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<a href='bar'title=title>"
           }
         ]
       }
@@ -202,15 +158,11 @@
     "markdown": "</a></foo >\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "</a></foo >",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "inlineHtml",
+            "text": "</a></foo >"
           }
         ]
       }
@@ -221,15 +173,11 @@
     "markdown": "</a href=\"foo\">\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "</a href=\"foo\">",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "</a href=\"foo\">"
           }
         ]
       }
@@ -240,23 +188,15 @@
     "markdown": "foo <!-- this is a\ncomment - with hyphen -->\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "foo ",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "foo "
           },
           {
-            "type": "TextSpan",
-            "text": "<!-- this is a comment - with hyphen -->",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "inlineHtml",
+            "text": "<!-- this is a comment - with hyphen -->"
           }
         ]
       }
@@ -267,15 +207,11 @@
     "markdown": "foo <!-- not a comment -- two hyphens -->\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "foo <!-- not a comment -- two hyphens -->",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "foo <!-- not a comment -- two hyphens -->"
           }
         ]
       }
@@ -286,28 +222,20 @@
     "markdown": "foo <!--> foo -->\n\nfoo <!-- foo--->\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "foo <!--> foo -->",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "foo <!--> foo -->"
           }
         ]
       },
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "foo <!-- foo--->",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "foo <!-- foo--->"
           }
         ]
       }
@@ -318,23 +246,15 @@
     "markdown": "foo <?php echo $a; ?>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "foo ",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "foo "
           },
           {
-            "type": "TextSpan",
-            "text": "<?php echo $a; ?>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "inlineHtml",
+            "text": "<?php echo $a; ?>"
           }
         ]
       }
@@ -345,23 +265,15 @@
     "markdown": "foo <!ELEMENT br EMPTY>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "foo ",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "foo "
           },
           {
-            "type": "TextSpan",
-            "text": "<!ELEMENT br EMPTY>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "inlineHtml",
+            "text": "<!ELEMENT br EMPTY>"
           }
         ]
       }
@@ -372,23 +284,15 @@
     "markdown": "foo <![CDATA[>&<]]>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "foo ",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "foo "
           },
           {
-            "type": "TextSpan",
-            "text": "<![CDATA[>&<]]>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "inlineHtml",
+            "text": "<![CDATA[>&<]]>"
           }
         ]
       }
@@ -399,23 +303,15 @@
     "markdown": "foo <a href=\"&ouml;\">\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "foo ",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "foo "
           },
           {
-            "type": "TextSpan",
-            "text": "<a href=\"&ouml;\">",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "inlineHtml",
+            "text": "<a href=\"&ouml;\">"
           }
         ]
       }
@@ -426,23 +322,15 @@
     "markdown": "foo <a href=\"\\*\">\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "foo ",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "foo "
           },
           {
-            "type": "TextSpan",
-            "text": "<a href=\"\\*\">",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "inlineHtml",
+            "text": "<a href=\"\\*\">"
           }
         ]
       }
@@ -453,15 +341,11 @@
     "markdown": "<a href=\"\\\"\">\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<a href=\"\"\">",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<a href=\"\"\">"
           }
         ]
       }

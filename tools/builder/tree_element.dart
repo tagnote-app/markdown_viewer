@@ -7,16 +7,14 @@ typedef TextSpan = Map<String, dynamic>;
 class TreeElement {
   TreeElement.root()
       : type = '',
-        style = const {},
         isBlock = false;
 
-  TreeElement.fromAstElement(Element element, {required this.style})
-      : type = element.type,
+  TreeElement.fromAstElement(Element element)
+      : type = _transformType(element.type, element.attributes['level']),
         isBlock = isBlockElement(element.type);
 
   final String type;
   final bool isBlock;
-  final Map<String, dynamic> style;
 
   bool get isRoot => type.isEmpty;
 
@@ -33,4 +31,42 @@ class TreeElement {
   String toString() {
     return toMap().toString();
   }
+}
+
+String _transformType(String type, [String? level]) {
+  switch (type) {
+    case 'atxHeading':
+    case 'setextHeading':
+      return {
+        "1": 'headline1',
+        "2": 'headline2',
+        "3": 'headline3',
+        "4": 'headline4',
+        "5": 'headline5',
+        "6": 'headline6',
+      }[level!]!;
+
+    case 'link':
+    case 'autolink':
+    case 'extendedAutolink':
+      return 'link';
+
+    case 'fencedBlockquote':
+      return 'blockquote';
+
+    case 'indentedCodeBlock':
+    case 'fencedCodeBlock':
+      return 'codeBlock';
+
+    case 'codeSpan':
+      return 'inlineCode';
+
+    case 'rawHtml':
+      return 'inlineHtml';
+
+    case 'backslashEscape':
+      return 'text';
+  }
+
+  return type;
 }

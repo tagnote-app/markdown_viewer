@@ -4,23 +4,15 @@
     "markdown": "`hi`lo`\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "hi",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "inlineCode",
+            "text": "hi"
           },
           {
-            "type": "TextSpan",
-            "text": "lo`",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "lo`"
           }
         ]
       }

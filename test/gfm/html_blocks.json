@@ -4,58 +4,37 @@
     "markdown": "<table><tr><td>\n<pre>\n**Hello**,\n\n_world_.\n</pre>\n</td></tr></table>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<table><tr><td> <pre> **Hello**,",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<table><tr><td> <pre> **Hello**,"
           }
         ]
       },
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "world",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "fontStyle": "italic",
-            "color": "Color(0xdd000000)"
+            "type": "emphasis",
+            "text": "world"
           },
           {
-            "type": "TextSpan",
-            "text": ". ",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": ". "
           },
           {
-            "type": "TextSpan",
-            "text": "</pre>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "inlineHtml",
+            "text": "</pre>"
           }
         ]
       },
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "</td></tr></table>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "</td></tr></table>"
           }
         ]
       }
@@ -66,28 +45,20 @@
     "markdown": "<table>\n  <tr>\n    <td>\n           hi\n    </td>\n  </tr>\n</table>\n\nokay.\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<table>   <tr>     <td>            hi     </td>   </tr> </table>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<table>   <tr>     <td>            hi     </td>   </tr> </table>"
           }
         ]
       },
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "okay.",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "okay."
           }
         ]
       }
@@ -98,15 +69,11 @@
     "markdown": " <div>\n  *hello*\n         <foo><a>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": " <div>   *hello*          <foo><a>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": " <div>   *hello*          <foo><a>"
           }
         ]
       }
@@ -117,15 +84,11 @@
     "markdown": "</div>\n*foo*\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "</div> *foo*",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "</div> *foo*"
           }
         ]
       }
@@ -136,42 +99,29 @@
     "markdown": "<DIV CLASS=\"foo\">\n\n*Markdown*\n\n</DIV>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<DIV CLASS=\"foo\">",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<DIV CLASS=\"foo\">"
           }
         ]
       },
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "Markdown",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "fontStyle": "italic",
-            "color": "Color(0xdd000000)"
+            "type": "emphasis",
+            "text": "Markdown"
           }
         ]
       },
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "</DIV>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "</DIV>"
           }
         ]
       }
@@ -182,15 +132,11 @@
     "markdown": "<div id=\"foo\"\n  class=\"bar\">\n</div>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<div id=\"foo\"   class=\"bar\"> </div>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<div id=\"foo\"   class=\"bar\"> </div>"
           }
         ]
       }
@@ -201,15 +147,11 @@
     "markdown": "<div id=\"foo\" class=\"bar\n  baz\">\n</div>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<div id=\"foo\" class=\"bar   baz\"> </div>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<div id=\"foo\" class=\"bar   baz\"> </div>"
           }
         ]
       }
@@ -220,29 +162,20 @@
     "markdown": "<div>\n*foo*\n\n*bar*\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<div> *foo*",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<div> *foo*"
           }
         ]
       },
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "bar",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "fontStyle": "italic",
-            "color": "Color(0xdd000000)"
+            "type": "emphasis",
+            "text": "bar"
           }
         ]
       }
@@ -253,15 +186,11 @@
     "markdown": "<div id=\"foo\"\n*hi*\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<div id=\"foo\" *hi*",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<div id=\"foo\" *hi*"
           }
         ]
       }
@@ -272,15 +201,11 @@
     "markdown": "<div class\nfoo\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<div class foo",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<div class foo"
           }
         ]
       }
@@ -291,15 +216,11 @@
     "markdown": "<div *???-&&&-<---\n*foo*\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<div *???-&&&-<--- *foo*",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<div *???-&&&-<--- *foo*"
           }
         ]
       }
@@ -310,15 +231,11 @@
     "markdown": "<div><a href=\"bar\">*foo*</a></div>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<div><a href=\"bar\">*foo*</a></div>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<div><a href=\"bar\">*foo*</a></div>"
           }
         ]
       }
@@ -329,15 +246,11 @@
     "markdown": "<table><tr><td>\nfoo\n</td></tr></table>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<table><tr><td> foo </td></tr></table>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<table><tr><td> foo </td></tr></table>"
           }
         ]
       }
@@ -348,15 +261,11 @@
     "markdown": "<div></div>\n``` c\nint x = 33;\n```\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<div></div> ``` c int x = 33; ```",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<div></div> ``` c int x = 33; ```"
           }
         ]
       }
@@ -367,15 +276,11 @@
     "markdown": "<a href=\"foo\">\n*bar*\n</a>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<a href=\"foo\"> *bar* </a>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<a href=\"foo\"> *bar* </a>"
           }
         ]
       }
@@ -386,15 +291,11 @@
     "markdown": "<Warning>\n*bar*\n</Warning>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<Warning> *bar* </Warning>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<Warning> *bar* </Warning>"
           }
         ]
       }
@@ -405,15 +306,11 @@
     "markdown": "<i class=\"foo\">\n*bar*\n</i>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<i class=\"foo\"> *bar* </i>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<i class=\"foo\"> *bar* </i>"
           }
         ]
       }
@@ -424,15 +321,11 @@
     "markdown": "</ins>\n*bar*\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "</ins> *bar*",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "</ins> *bar*"
           }
         ]
       }
@@ -443,15 +336,11 @@
     "markdown": "<del>\n*foo*\n</del>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<del> *foo* </del>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<del> *foo* </del>"
           }
         ]
       }
@@ -462,42 +351,29 @@
     "markdown": "<del>\n\n*foo*\n\n</del>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<del>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<del>"
           }
         ]
       },
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "foo",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "fontStyle": "italic",
-            "color": "Color(0xdd000000)"
+            "type": "emphasis",
+            "text": "foo"
           }
         ]
       },
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "</del>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "</del>"
           }
         ]
       }
@@ -508,32 +384,19 @@
     "markdown": "<del>*foo*</del>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<del>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "inlineHtml",
+            "text": "<del>"
           },
           {
-            "type": "TextSpan",
-            "text": "foo",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "fontStyle": "italic",
-            "color": "Color(0xdd000000)"
+            "type": "emphasis",
+            "text": "foo"
           },
           {
-            "type": "TextSpan",
-            "text": "</del>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "inlineHtml",
+            "text": "</del>"
           }
         ]
       }
@@ -544,28 +407,20 @@
     "markdown": "<pre language=\"haskell\"><code>\nimport Text.HTML.TagSoup\n\nmain :: IO ()\nmain = print $ parseTags tags\n</code></pre>\nokay\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<pre language=\"haskell\"><code> import Text.HTML.TagSoup  main :: IO () main = print $ parseTags tags </code></pre>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<pre language=\"haskell\"><code> import Text.HTML.TagSoup  main :: IO () main = print $ parseTags tags </code></pre>"
           }
         ]
       },
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "okay",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "okay"
           }
         ]
       }
@@ -576,28 +431,20 @@
     "markdown": "<script type=\"text/javascript\">\n// JavaScript example\n\ndocument.getElementById(\"demo\").innerHTML = \"Hello JavaScript!\";\n</script>\nokay\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<script type=\"text/javascript\"> // JavaScript example  document.getElementById(\"demo\").innerHTML = \"Hello JavaScript!\"; </script>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<script type=\"text/javascript\"> // JavaScript example  document.getElementById(\"demo\").innerHTML = \"Hello JavaScript!\"; </script>"
           }
         ]
       },
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "okay",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "okay"
           }
         ]
       }
@@ -608,28 +455,20 @@
     "markdown": "<style\n  type=\"text/css\">\nh1 {color:red;}\n\np {color:blue;}\n</style>\nokay\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<style   type=\"text/css\"> h1 {color:red;}  p {color:blue;} </style>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<style   type=\"text/css\"> h1 {color:red;}  p {color:blue;} </style>"
           }
         ]
       },
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "okay",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "okay"
           }
         ]
       }
@@ -640,15 +479,11 @@
     "markdown": "<style\n  type=\"text/css\">\n\nfoo\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<style   type=\"text/css\">  foo",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<style   type=\"text/css\">  foo"
           }
         ]
       }
@@ -659,39 +494,25 @@
     "markdown": "> <div>\n> foo\n\nbar\n",
     "expected": [
       {
-        "type": "DecoratedBox",
-        "child": {
-          "type": "Padding",
-          "child": {
-            "type": "Column",
+        "type": "blockquote",
+        "children": [
+          {
+            "type": "htmlBlock",
             "children": [
               {
-                "type": "Column",
-                "children": [
-                  {
-                    "type": "TextSpan",
-                    "text": "<div>\nfoo",
-                    "fontFamily": "monospace",
-                    "fontWeight": 400,
-                    "fontSize": 11.9,
-                    "color": "Color(0xdd000000)"
-                  }
-                ]
+                "type": "text",
+                "text": "<div>\nfoo"
               }
             ]
           }
-        }
+        ]
       },
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "bar",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "bar"
           }
         ]
       }
@@ -702,38 +523,22 @@
     "markdown": "- <div>\n- foo\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "bulletList",
         "children": [
           {
-            "type": "Column",
+            "type": "listItem",
             "children": [
               {
-                "type": "Column",
+                "type": "htmlBlock",
                 "children": [
                   {
-                    "type": "TextSpan",
-                    "text": "<div>",
-                    "fontFamily": "monospace",
-                    "fontWeight": 400,
-                    "fontSize": 11.9,
-                    "color": "Color(0xdd000000)"
+                    "type": "text",
+                    "text": "<div>"
                   }
                 ]
               }
-            ]
-          },
-          {
-            "type": "Column",
-            "children": [
-              {
-                "type": "TextSpan",
-                "text": "foo",
-                "fontFamily": ".SF UI Text",
-                "fontWeight": 400,
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
-              }
-            ]
+            ],
+            "text": "nullnull"
           }
         ]
       }
@@ -744,29 +549,20 @@
     "markdown": "<style>p{color:red;}</style>\n*foo*\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<style>p{color:red;}</style>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<style>p{color:red;}</style>"
           }
         ]
       },
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "foo",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "fontStyle": "italic",
-            "color": "Color(0xdd000000)"
+            "type": "emphasis",
+            "text": "foo"
           }
         ]
       }
@@ -777,29 +573,20 @@
     "markdown": "<!-- foo -->*bar*\n*baz*\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<!-- foo -->*bar*",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<!-- foo -->*bar*"
           }
         ]
       },
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "baz",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "fontStyle": "italic",
-            "color": "Color(0xdd000000)"
+            "type": "emphasis",
+            "text": "baz"
           }
         ]
       }
@@ -810,15 +597,11 @@
     "markdown": "<script>\nfoo\n</script>1. *bar*\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<script> foo </script>1. *bar*",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<script> foo </script>1. *bar*"
           }
         ]
       }
@@ -829,28 +612,20 @@
     "markdown": "<!-- Foo\n\nbar\n   baz -->\nokay\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<!-- Foo  bar    baz -->",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<!-- Foo  bar    baz -->"
           }
         ]
       },
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "okay",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "okay"
           }
         ]
       }
@@ -861,28 +636,20 @@
     "markdown": "<?php\n\n  echo '>';\n\n?>\nokay\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<?php    echo '>';  ?>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<?php    echo '>';  ?>"
           }
         ]
       },
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "okay",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "okay"
           }
         ]
       }
@@ -893,15 +660,11 @@
     "markdown": "<!DOCTYPE html>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<!DOCTYPE html>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<!DOCTYPE html>"
           }
         ]
       }
@@ -912,28 +675,20 @@
     "markdown": "<![CDATA[\nfunction matchwo(a,b)\n{\n  if (a < b && a < 0) then {\n    return 1;\n\n  } else {\n\n    return 0;\n  }\n}\n]]>\nokay\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<![CDATA[ function matchwo(a,b) {   if (a < b && a < 0) then {     return 1;    } else {      return 0;   } } ]]>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<![CDATA[ function matchwo(a,b) {   if (a < b && a < 0) then {     return 1;    } else {      return 0;   } } ]]>"
           }
         ]
       },
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "okay",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "okay"
           }
         ]
       }
@@ -944,28 +699,20 @@
     "markdown": "  <!-- foo -->\n\n    <!-- foo -->\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "  <!-- foo -->",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "  <!-- foo -->"
           }
         ]
       },
       {
-        "type": "Column",
+        "type": "codeBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<!-- foo --> ",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<!-- foo --> "
           }
         ]
       }
@@ -976,28 +723,20 @@
     "markdown": "  <div>\n\n    <div>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "  <div>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "  <div>"
           }
         ]
       },
       {
-        "type": "Column",
+        "type": "codeBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<div> ",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<div> "
           }
         ]
       }
@@ -1008,28 +747,20 @@
     "markdown": "Foo\n<div>\nbar\n</div>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "Foo",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "Foo"
           }
         ]
       },
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<div> bar </div>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<div> bar </div>"
           }
         ]
       }
@@ -1040,15 +771,11 @@
     "markdown": "<div>\nbar\n</div>\n*foo*\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<div> bar </div> *foo*",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<div> bar </div> *foo*"
           }
         ]
       }
@@ -1059,31 +786,19 @@
     "markdown": "Foo\n<a href=\"bar\">\nbaz\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "Foo ",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "Foo "
           },
           {
-            "type": "TextSpan",
-            "text": "<a href=\"bar\">",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "inlineHtml",
+            "text": "<a href=\"bar\">"
           },
           {
-            "type": "TextSpan",
-            "text": " baz",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": " baz"
           }
         ]
       }
@@ -1094,50 +809,33 @@
     "markdown": "<div>\n\n*Emphasized* text.\n\n</div>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<div>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<div>"
           }
         ]
       },
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "Emphasized",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "fontStyle": "italic",
-            "color": "Color(0xdd000000)"
+            "type": "emphasis",
+            "text": "Emphasized"
           },
           {
-            "type": "TextSpan",
-            "text": " text.",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": " text."
           }
         ]
       },
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "</div>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "</div>"
           }
         ]
       }
@@ -1148,15 +846,11 @@
     "markdown": "<div>\n*Emphasized* text.\n</div>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<div> *Emphasized* text. </div>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<div> *Emphasized* text. </div>"
           }
         ]
       }
@@ -1167,15 +861,11 @@
     "markdown": "<table>\n\n<tr>\n\n<td>\nHi\n</td>\n\n</tr>\n\n</table>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<table> <tr> <td> Hi </td> </tr> </table>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<table> <tr> <td> Hi </td> </tr> </table>"
           }
         ]
       }
@@ -1186,41 +876,29 @@
     "markdown": "<table>\n\n  <tr>\n\n    <td>\n      Hi\n    </td>\n\n  </tr>\n\n</table>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<table>   <tr>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<table>   <tr>"
           }
         ]
       },
       {
-        "type": "Column",
+        "type": "codeBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<td>   Hi </td> ",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<td>   Hi </td> "
           }
         ]
       },
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "  </tr> </table>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "  </tr> </table>"
           }
         ]
       }

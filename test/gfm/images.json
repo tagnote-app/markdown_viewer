@@ -4,7 +4,7 @@
     "markdown": "![foo](/url \"title\")\n",
     "expected": [
       {
-        "type": "SizedBox"
+        "type": "paragraph"
       }
     ]
   },
@@ -13,7 +13,7 @@
     "markdown": "![foo *bar*]\n\n[foo *bar*]: train.jpg \"train & tracks\"\n",
     "expected": [
       {
-        "type": "SizedBox"
+        "type": "paragraph"
       }
     ]
   },
@@ -22,7 +22,7 @@
     "markdown": "![foo ![bar](/url)](/url2)\n",
     "expected": [
       {
-        "type": "SizedBox"
+        "type": "paragraph"
       }
     ]
   },
@@ -31,7 +31,7 @@
     "markdown": "![foo [bar](/url)](/url2)\n",
     "expected": [
       {
-        "type": "SizedBox"
+        "type": "paragraph"
       }
     ]
   },
@@ -40,7 +40,7 @@
     "markdown": "![foo *bar*][]\n\n[foo *bar*]: train.jpg \"train & tracks\"\n",
     "expected": [
       {
-        "type": "SizedBox"
+        "type": "paragraph"
       }
     ]
   },
@@ -49,7 +49,7 @@
     "markdown": "![foo *bar*][foobar]\n\n[FOOBAR]: train.jpg \"train & tracks\"\n",
     "expected": [
       {
-        "type": "SizedBox"
+        "type": "paragraph"
       }
     ]
   },
@@ -58,7 +58,7 @@
     "markdown": "![foo](train.jpg)\n",
     "expected": [
       {
-        "type": "SizedBox"
+        "type": "paragraph"
       }
     ]
   },
@@ -67,15 +67,11 @@
     "markdown": "My ![foo bar](/path/to/train.jpg  \"title\"   )\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "My ",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "My "
           }
         ]
       }
@@ -86,7 +82,7 @@
     "markdown": "![foo](<url>)\n",
     "expected": [
       {
-        "type": "SizedBox"
+        "type": "paragraph"
       }
     ]
   },
@@ -95,7 +91,7 @@
     "markdown": "![](/url)\n",
     "expected": [
       {
-        "type": "SizedBox"
+        "type": "paragraph"
       }
     ]
   },
@@ -104,7 +100,7 @@
     "markdown": "![foo][bar]\n\n[bar]: /url\n",
     "expected": [
       {
-        "type": "SizedBox"
+        "type": "paragraph"
       }
     ]
   },
@@ -113,7 +109,7 @@
     "markdown": "![foo][bar]\n\n[BAR]: /url\n",
     "expected": [
       {
-        "type": "SizedBox"
+        "type": "paragraph"
       }
     ]
   },
@@ -122,7 +118,7 @@
     "markdown": "![foo][]\n\n[foo]: /url \"title\"\n",
     "expected": [
       {
-        "type": "SizedBox"
+        "type": "paragraph"
       }
     ]
   },
@@ -131,7 +127,7 @@
     "markdown": "![*foo* bar][]\n\n[*foo* bar]: /url \"title\"\n",
     "expected": [
       {
-        "type": "SizedBox"
+        "type": "paragraph"
       }
     ]
   },
@@ -140,7 +136,7 @@
     "markdown": "![Foo][]\n\n[foo]: /url \"title\"\n",
     "expected": [
       {
-        "type": "SizedBox"
+        "type": "paragraph"
       }
     ]
   },
@@ -149,15 +145,11 @@
     "markdown": "![foo] \n[]\n\n[foo]: /url \"title\"\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": " []",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": " []"
           }
         ]
       }
@@ -168,7 +160,7 @@
     "markdown": "![foo]\n\n[foo]: /url \"title\"\n",
     "expected": [
       {
-        "type": "SizedBox"
+        "type": "paragraph"
       }
     ]
   },
@@ -177,7 +169,7 @@
     "markdown": "![*foo* bar]\n\n[*foo* bar]: /url \"title\"\n",
     "expected": [
       {
-        "type": "SizedBox"
+        "type": "paragraph"
       }
     ]
   },
@@ -186,28 +178,20 @@
     "markdown": "![[foo]]\n\n[[foo]]: /url \"title\"\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "![[foo]]",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "![[foo]]"
           }
         ]
       },
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "[[foo]]: /url \"title\"",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "[[foo]]: /url \"title\""
           }
         ]
       }
@@ -218,7 +202,7 @@
     "markdown": "![Foo]\n\n[foo]: /url \"title\"\n",
     "expected": [
       {
-        "type": "SizedBox"
+        "type": "paragraph"
       }
     ]
   },
@@ -227,15 +211,11 @@
     "markdown": "!\\[foo]\n\n[foo]: /url \"title\"\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "![foo]",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "![foo]"
           }
         ]
       }
@@ -246,23 +226,15 @@
     "markdown": "\\![foo]\n\n[foo]: /url \"title\"\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "!",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "!"
           },
           {
-            "type": "TextSpan",
+            "type": "link",
             "text": "foo",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xff2196f3)",
             "isLink": true
           }
         ]

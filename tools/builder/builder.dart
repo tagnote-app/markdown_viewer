@@ -1,6 +1,5 @@
 import 'package:markdown/markdown.dart';
 
-import 'styles.dart';
 import 'tree_element.dart';
 
 class TestCaseBuilder implements NodeVisitor {
@@ -31,7 +30,6 @@ class TestCaseBuilder implements NodeVisitor {
     ].contains(element.type)) {
       return false;
     }
-    final parent = _tree.last;
 
     if (element.type == 'link') {
       _links.add(true);
@@ -41,7 +39,6 @@ class TestCaseBuilder implements NodeVisitor {
 
     _tree.add(TreeElement.fromAstElement(
       element,
-      style: generateStyle(element, parent.style),
     ));
 
     return true;
@@ -57,9 +54,8 @@ class TestCaseBuilder implements NodeVisitor {
     }
 
     parent.children.add({
-      'type': 'TextSpan',
+      'type': parent.isBlock ? 'text' : parent.type,
       'text': textContent,
-      ...parent.style,
       if (_links.isNotEmpty) "isLink": _links.removeLast(),
     });
   }
@@ -70,38 +66,18 @@ class TestCaseBuilder implements NodeVisitor {
     final parent = _tree.last;
 
     if (current.isBlock) {
-      Map<String, dynamic> blockChild;
-
-      if (current.children.isNotEmpty) {
-        blockChild = {
-          'type': 'Column',
-          'children': _mergeTextSpans(current.children),
-        };
-      } else {
-        blockChild = {
-          'type': 'SizedBox',
-        };
-      }
-
-      if (current.type == 'blockquote') {
-        _isInBlockquote = false;
-        blockChild = {
-          'type': 'DecoratedBox',
-          'child': {
-            'type': 'Padding',
-            'child': blockChild,
-          }
-        };
-      }
-
-      parent.children.add(blockChild);
+      parent.children.add({
+        'type': current.type,
+        if (current.children.isNotEmpty)
+          'children': _mergeInlines(current.children)
+      });
     } else {
       parent.children.addAll(current.children);
     }
   }
 
   /// Merges the [textSpans] which are adjacent and have the same attributes.
-  List<TextSpan> _mergeTextSpans(List<TextSpan> textSpans) {
+  List<TextSpan> _mergeInlines(List<TextSpan> textSpans) {
     final result = <TextSpan>[];
 
     for (final textSpan in textSpans) {
@@ -109,7 +85,7 @@ class TestCaseBuilder implements NodeVisitor {
         result.add(textSpan);
       } else {
         final last = result.last;
-        if (haveSameAttributes(last, textSpan)) {
+        if (last['type'] == textSpan['type']) {
           result.last['text'] = '${result.last['text']}${textSpan['text']}';
         } else {
           result.add(textSpan);

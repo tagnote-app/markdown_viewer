@@ -4,15 +4,11 @@
     "markdown": "| foo | bar |\n| --- | --- |\n| baz | bim |\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "| foo | bar | | --- | --- | | baz | bim |",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "| foo | bar | | --- | --- | | baz | bim |"
           }
         ]
       }
@@ -23,15 +19,11 @@
     "markdown": "| abc | defghi |\n:-: | -----------:\nbar | baz\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "| abc | defghi | :-: | -----------: bar | baz",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "| abc | defghi | :-: | -----------: bar | baz"
           }
         ]
       }
@@ -42,47 +34,19 @@
     "markdown": "| f\\|oo  |\n| ------ |\n| b `\\|` az |\n| b **\\|** im |\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "| f|oo  | | ------ | | b ",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "| f|oo  | | ------ | | b "
           },
           {
-            "type": "TextSpan",
-            "text": "\\|",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "inlineCode",
+            "text": "\\|"
           },
           {
-            "type": "TextSpan",
-            "text": " az | | b ",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
-          },
-          {
-            "type": "TextSpan",
-            "text": "|",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 700,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
-          },
-          {
-            "type": "TextSpan",
-            "text": " im |",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": " az | | b | im |"
           }
         ]
       }
@@ -93,41 +57,27 @@
     "markdown": "| abc | def |\n| --- | --- |\n| bar | baz |\n> bar\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "| abc | def | | --- | --- | | bar | baz |",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "| abc | def | | --- | --- | | bar | baz |"
           }
         ]
       },
       {
-        "type": "DecoratedBox",
-        "child": {
-          "type": "Padding",
-          "child": {
-            "type": "Column",
+        "type": "blockquote",
+        "children": [
+          {
+            "type": "paragraph",
             "children": [
               {
-                "type": "Column",
-                "children": [
-                  {
-                    "type": "TextSpan",
-                    "text": "bar",
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": 400,
-                    "fontSize": 14.0,
-                    "color": "Color(0xff666666)"
-                  }
-                ]
+                "type": "text",
+                "text": "bar"
               }
             ]
           }
-        }
+        ]
       }
     ]
   },
@@ -136,28 +86,20 @@
     "markdown": "| abc | def |\n| --- | --- |\n| bar | baz |\nbar\n\nbar\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "| abc | def | | --- | --- | | bar | baz | bar",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "| abc | def | | --- | --- | | bar | baz | bar"
           }
         ]
       },
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "bar",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "bar"
           }
         ]
       }
@@ -168,15 +110,11 @@
     "markdown": "| abc | def |\n| --- |\n| bar |\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "| abc | def | | --- | | bar |",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "| abc | def | | --- | | bar |"
           }
         ]
       }
@@ -187,15 +125,11 @@
     "markdown": "| abc | def |\n| --- | --- |\n| bar |\n| bar | baz | boo |\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "| abc | def | | --- | --- | | bar | | bar | baz | boo |",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "| abc | def | | --- | --- | | bar | | bar | baz | boo |"
           }
         ]
       }
@@ -206,15 +140,11 @@
     "markdown": "| abc | def |\n| --- | --- |\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "| abc | def | | --- | --- |",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "| abc | def | | --- | --- |"
           }
         ]
       }

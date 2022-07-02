@@ -4,76 +4,44 @@
     "markdown": "<strong> <title> <style> <em>\n\n<blockquote>\n  <xmp> is disallowed.  <XMP> is also disallowed.\n</blockquote>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<strong>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "inlineHtml",
+            "text": "<strong>"
           },
           {
-            "type": "TextSpan",
-            "text": " ",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": " "
           },
           {
-            "type": "TextSpan",
-            "text": "<title>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "inlineHtml",
+            "text": "<title>"
           },
           {
-            "type": "TextSpan",
-            "text": " ",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": " "
           },
           {
-            "type": "TextSpan",
-            "text": "<style>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "inlineHtml",
+            "text": "<style>"
           },
           {
-            "type": "TextSpan",
-            "text": " ",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": " "
           },
           {
-            "type": "TextSpan",
-            "text": "<em>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "inlineHtml",
+            "text": "<em>"
           }
         ]
       },
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<blockquote>   <xmp> is disallowed.  <XMP> is also disallowed. </blockquote>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<blockquote>   <xmp> is disallowed.  <XMP> is also disallowed. </blockquote>"
           }
         ]
       }

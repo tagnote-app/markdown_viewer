@@ -4,15 +4,11 @@
     "markdown": "foo  \nbaz\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "foobaz",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "foobaz"
           }
         ]
       }
@@ -23,15 +19,11 @@
     "markdown": "foo\\\nbaz\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "foobaz",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "foobaz"
           }
         ]
       }
@@ -42,15 +34,11 @@
     "markdown": "foo       \nbaz\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "foobaz",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "foobaz"
           }
         ]
       }
@@ -61,15 +49,11 @@
     "markdown": "foo  \n     bar\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "foobar",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "foobar"
           }
         ]
       }
@@ -80,15 +64,11 @@
     "markdown": "foo\\\n     bar\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "foobar",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "foobar"
           }
         ]
       }
@@ -99,16 +79,11 @@
     "markdown": "*foo  \nbar*\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "foobar",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "fontStyle": "italic",
-            "color": "Color(0xdd000000)"
+            "type": "emphasis",
+            "text": "foobar"
           }
         ]
       }
@@ -119,16 +94,11 @@
     "markdown": "*foo\\\nbar*\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "foobar",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "fontStyle": "italic",
-            "color": "Color(0xdd000000)"
+            "type": "emphasis",
+            "text": "foobar"
           }
         ]
       }
@@ -139,15 +109,11 @@
     "markdown": "`code  \nspan`\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "code   span",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "inlineCode",
+            "text": "code   span"
           }
         ]
       }
@@ -158,15 +124,11 @@
     "markdown": "`code\\\nspan`\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "code\\ span",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "inlineCode",
+            "text": "code\\ span"
           }
         ]
       }
@@ -177,15 +139,11 @@
     "markdown": "<a href=\"foo  \nbar\">\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<a href=\"foo   bar\">",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "inlineHtml",
+            "text": "<a href=\"foo   bar\">"
           }
         ]
       }
@@ -196,15 +154,11 @@
     "markdown": "<a href=\"foo\\\nbar\">\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<a href=\"foo\\ bar\">",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "inlineHtml",
+            "text": "<a href=\"foo\\ bar\">"
           }
         ]
       }
@@ -215,15 +169,11 @@
     "markdown": "foo\\\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "foo\\",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "foo\\"
           }
         ]
       }
@@ -234,15 +184,11 @@
     "markdown": "foo  \n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "foo",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "foo"
           }
         ]
       }
@@ -253,15 +199,11 @@
     "markdown": "### foo\\\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "headline3",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "foo\\",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 16.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "foo\\"
           }
         ]
       }
@@ -272,15 +214,11 @@
     "markdown": "### foo  \n",
     "expected": [
       {
-        "type": "Column",
+        "type": "headline3",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "foo",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 16.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "foo"
           }
         ]
       }

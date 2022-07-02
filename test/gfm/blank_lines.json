@@ -4,28 +4,20 @@
     "markdown": "  \n\naaa\n  \n\n# aaa\n\n  \n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "aaa",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "aaa"
           }
         ]
       },
       {
-        "type": "Column",
+        "type": "headline1",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "aaa",
-            "fontFamily": ".SF UI Display",
-            "fontWeight": 400,
-            "fontSize": 24.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "aaa"
           }
         ]
       }

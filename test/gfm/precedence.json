@@ -4,33 +4,17 @@
     "markdown": "- `one\n- two`\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "bulletList",
         "children": [
           {
-            "type": "Column",
+            "type": "listItem",
             "children": [
               {
-                "type": "TextSpan",
-                "text": "`one",
-                "fontFamily": ".SF UI Text",
-                "fontWeight": 400,
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "type": "text",
+                "text": "`one"
               }
-            ]
-          },
-          {
-            "type": "Column",
-            "children": [
-              {
-                "type": "TextSpan",
-                "text": "two`",
-                "fontFamily": ".SF UI Text",
-                "fontWeight": 400,
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
-              }
-            ]
+            ],
+            "text": "nullnull"
           }
         ]
       }

@@ -4,15 +4,11 @@
     "markdown": "<http://foo.bar.baz>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "http://foo.bar.baz",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xff2196f3)"
+            "type": "link",
+            "text": "http://foo.bar.baz"
           }
         ]
       }
@@ -23,15 +19,11 @@
     "markdown": "<http://foo.bar.baz/test?q=hello&id=22&boolean>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "http://foo.bar.baz/test?q=hello&id=22&boolean",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xff2196f3)"
+            "type": "link",
+            "text": "http://foo.bar.baz/test?q=hello&id=22&boolean"
           }
         ]
       }
@@ -42,15 +34,11 @@
     "markdown": "<irc://foo.bar:2233/baz>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "irc://foo.bar:2233/baz",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xff2196f3)"
+            "type": "link",
+            "text": "irc://foo.bar:2233/baz"
           }
         ]
       }
@@ -61,15 +49,11 @@
     "markdown": "<MAILTO:FOO@BAR.BAZ>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "MAILTO:FOO@BAR.BAZ",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xff2196f3)"
+            "type": "link",
+            "text": "MAILTO:FOO@BAR.BAZ"
           }
         ]
       }
@@ -80,15 +64,11 @@
     "markdown": "<a+b+c:d>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "a+b+c:d",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xff2196f3)"
+            "type": "link",
+            "text": "a+b+c:d"
           }
         ]
       }
@@ -99,15 +79,11 @@
     "markdown": "<made-up-scheme://foo,bar>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "made-up-scheme://foo,bar",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xff2196f3)"
+            "type": "link",
+            "text": "made-up-scheme://foo,bar"
           }
         ]
       }
@@ -118,15 +94,11 @@
     "markdown": "<http://../>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "http://../",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xff2196f3)"
+            "type": "link",
+            "text": "http://../"
           }
         ]
       }
@@ -137,15 +109,11 @@
     "markdown": "<localhost:5001/foo>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "localhost:5001/foo",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xff2196f3)"
+            "type": "link",
+            "text": "localhost:5001/foo"
           }
         ]
       }
@@ -156,15 +124,11 @@
     "markdown": "<http://foo.bar/baz bim>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<http://foo.bar/baz bim>",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<http://foo.bar/baz bim>"
           }
         ]
       }
@@ -175,15 +139,11 @@
     "markdown": "<http://example.com/\\[\\>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "http://example.com/\\[\\",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xff2196f3)"
+            "type": "link",
+            "text": "http://example.com/\\[\\"
           }
         ]
       }
@@ -194,15 +154,11 @@
     "markdown": "<foo@bar.example.com>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "foo@bar.example.com",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xff2196f3)"
+            "type": "link",
+            "text": "foo@bar.example.com"
           }
         ]
       }
@@ -213,15 +169,11 @@
     "markdown": "<foo+special@Bar.baz-bar0.com>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "foo+special@Bar.baz-bar0.com",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xff2196f3)"
+            "type": "link",
+            "text": "foo+special@Bar.baz-bar0.com"
           }
         ]
       }
@@ -232,15 +184,11 @@
     "markdown": "<foo\\+@bar.example.com>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<foo+@bar.example.com>",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<foo+@bar.example.com>"
           }
         ]
       }
@@ -251,15 +199,11 @@
     "markdown": "<>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<>",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<>"
           }
         ]
       }
@@ -270,15 +214,11 @@
     "markdown": "< http://foo.bar >\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "< http://foo.bar >",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "< http://foo.bar >"
           }
         ]
       }
@@ -289,15 +229,11 @@
     "markdown": "<m:abc>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<m:abc>",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<m:abc>"
           }
         ]
       }
@@ -308,15 +244,11 @@
     "markdown": "<foo.bar.baz>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<foo.bar.baz>",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<foo.bar.baz>"
           }
         ]
       }
@@ -327,15 +259,11 @@
     "markdown": "http://example.com\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "http://example.com",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "http://example.com"
           }
         ]
       }
@@ -346,15 +274,11 @@
     "markdown": "foo@bar.example.com\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "foo@bar.example.com",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "foo@bar.example.com"
           }
         ]
       }

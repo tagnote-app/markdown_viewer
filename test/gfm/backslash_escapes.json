@@ -4,15 +4,11 @@
     "markdown": "\\!\\\"\\#\\$\\%\\&\\'\\(\\)\\*\\+\\,\\-\\.\\/\\:\\;\\<\\=\\>\\?\\@\\[\\\\\\]\\^\\_\\`\\{\\|\\}\\~\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
           }
         ]
       }
@@ -23,15 +19,11 @@
     "markdown": "\\\t\\A\\a\\ \\3\\φ\\«\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "\\\t\\A\\a\\ \\3\\φ\\«",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "\\\t\\A\\a\\ \\3\\φ\\«"
           }
         ]
       }
@@ -42,15 +34,11 @@
     "markdown": "\\*not emphasized*\n\\<br/> not a tag\n\\[not a link](/foo)\n\\`not code`\n1\\. not a list\n\\* not a list\n\\# not a heading\n\\[foo]: /url \"not a reference\"\n\\&ouml; not a character entity\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "*not emphasized* <br/> not a tag [not a link](/foo) `not code` 1. not a list * not a list # not a heading [foo]: /url \"not a reference\" &ouml; not a character entity",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "*not emphasized* <br/> not a tag [not a link](/foo) `not code` 1. not a list * not a list # not a heading [foo]: /url \"not a reference\" &ouml; not a character entity"
           }
         ]
       }
@@ -61,24 +49,15 @@
     "markdown": "\\\\*emphasis*\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "\\",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "\\"
           },
           {
-            "type": "TextSpan",
-            "text": "emphasis",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "fontStyle": "italic",
-            "color": "Color(0xdd000000)"
+            "type": "emphasis",
+            "text": "emphasis"
           }
         ]
       }
@@ -89,15 +68,11 @@
     "markdown": "foo\\\nbar\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "foobar",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "foobar"
           }
         ]
       }
@@ -108,15 +83,11 @@
     "markdown": "`` \\[\\` ``\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "\\[\\`",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "inlineCode",
+            "text": "\\[\\`"
           }
         ]
       }
@@ -127,15 +98,11 @@
     "markdown": "    \\[\\]\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "codeBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "\\[\\] ",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "\\[\\] "
           }
         ]
       }
@@ -146,15 +113,11 @@
     "markdown": "~~~\n\\[\\]\n~~~\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "codeBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "\\[\\] ",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "\\[\\] "
           }
         ]
       }
@@ -165,15 +128,11 @@
     "markdown": "<http://example.com?find=\\*>\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "http://example.com?find=\\*",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xff2196f3)"
+            "type": "link",
+            "text": "http://example.com?find=\\*"
           }
         ]
       }
@@ -184,15 +143,11 @@
     "markdown": "<a href=\"/bar\\/)\">\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "htmlBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<a href=\"/bar\\/)\">",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "<a href=\"/bar\\/)\">"
           }
         ]
       }
@@ -203,15 +158,11 @@
     "markdown": "[foo](/bar\\* \"ti\\*tle\")\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
+            "type": "link",
             "text": "foo",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xff2196f3)",
             "isLink": true
           }
         ]
@@ -223,15 +174,11 @@
     "markdown": "[foo]\n\n[foo]: /bar\\* \"ti\\*tle\"\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "paragraph",
         "children": [
           {
-            "type": "TextSpan",
+            "type": "link",
             "text": "foo",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xff2196f3)",
             "isLink": true
           }
         ]
@@ -243,15 +190,11 @@
     "markdown": "``` foo\\+bar\nfoo\n```\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "codeBlock",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "foo ",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "text",
+            "text": "foo "
           }
         ]
       }
