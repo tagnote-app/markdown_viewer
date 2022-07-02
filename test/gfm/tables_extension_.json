@@ -46,7 +46,15 @@
           },
           {
             "type": "text",
-            "text": " az | | b | im |"
+            "text": " az | | b "
+          },
+          {
+            "type": "strongEmphasis",
+            "text": "|"
+          },
+          {
+            "type": "text",
+            "text": " im |"
           }
         ]
       }

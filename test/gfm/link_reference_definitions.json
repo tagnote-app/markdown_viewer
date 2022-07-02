@@ -40,12 +40,8 @@
         "children": [
           {
             "type": "link",
-            "text": "Foo*bar",
+            "text": "Foo*bar]",
             "isLink": true
-          },
-          {
-            "type": "text",
-            "text": "]"
           }
         ]
       }

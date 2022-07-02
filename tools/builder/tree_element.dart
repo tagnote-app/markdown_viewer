@@ -9,8 +9,12 @@ class TreeElement {
       : type = '',
         isBlock = false;
 
-  TreeElement.fromAstElement(Element element)
-      : type = _transformType(element.type, element.attributes['level']),
+  TreeElement.fromAstElement(Element element, TreeElement parent)
+      : type = _transformType(
+          element.type,
+          parent: parent,
+          level: element.attributes['level'],
+        ),
         isBlock = isBlockElement(element.type);
 
   final String type;
@@ -33,7 +37,11 @@ class TreeElement {
   }
 }
 
-String _transformType(String type, [String? level]) {
+String _transformType(
+  String type, {
+  required TreeElement parent,
+  String? level,
+}) {
   switch (type) {
     case 'atxHeading':
     case 'setextHeading':
@@ -65,7 +73,7 @@ String _transformType(String type, [String? level]) {
       return 'inlineHtml';
 
     case 'backslashEscape':
-      return 'text';
+      return parent.isBlock ? 'text' : parent.type;
   }
 
   return type;

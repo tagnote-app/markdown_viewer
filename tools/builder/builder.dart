@@ -37,9 +37,7 @@ class TestCaseBuilder implements NodeVisitor {
       _isInBlockquote = true;
     }
 
-    _tree.add(TreeElement.fromAstElement(
-      element,
-    ));
+    _tree.add(TreeElement.fromAstElement(element, _tree.last));
 
     return true;
   }
@@ -61,7 +59,7 @@ class TestCaseBuilder implements NodeVisitor {
   }
 
   @override
-  void visitElementAfter(Element element) {
+  void visitElementAfter(_) {
     final current = _tree.removeLast();
     final parent = _tree.last;
 

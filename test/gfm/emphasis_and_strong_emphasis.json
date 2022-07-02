@@ -1509,7 +1509,11 @@
         "children": [
           {
             "type": "text",
-            "text": "foo *"
+            "text": "foo "
+          },
+          {
+            "type": "emphasis",
+            "text": "*"
           }
         ]
       }
@@ -1558,7 +1562,11 @@
         "children": [
           {
             "type": "text",
-            "text": "foo *"
+            "text": "foo "
+          },
+          {
+            "type": "strongEmphasis",
+            "text": "*"
           }
         ]
       }
@@ -1721,7 +1729,11 @@
         "children": [
           {
             "type": "text",
-            "text": "foo _"
+            "text": "foo "
+          },
+          {
+            "type": "emphasis",
+            "text": "_"
           }
         ]
       }
@@ -1770,7 +1782,11 @@
         "children": [
           {
             "type": "text",
-            "text": "foo _"
+            "text": "foo "
+          },
+          {
+            "type": "strongEmphasis",
+            "text": "_"
           }
         ]
       }

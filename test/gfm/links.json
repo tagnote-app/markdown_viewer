@@ -538,16 +538,8 @@
         "children": [
           {
             "type": "link",
-            "text": "link ",
+            "text": "link [bar",
             "isLink": true
-          },
-          {
-            "type": "text",
-            "text": "["
-          },
-          {
-            "type": "link",
-            "text": "bar"
           }
         ]
       }
@@ -812,16 +804,8 @@
         "children": [
           {
             "type": "link",
-            "text": "link ",
+            "text": "link [bar",
             "isLink": true
-          },
-          {
-            "type": "text",
-            "text": "["
-          },
-          {
-            "type": "link",
-            "text": "bar"
           }
         ]
       }
@@ -1243,12 +1227,8 @@
         "children": [
           {
             "type": "link",
-            "text": "bar",
+            "text": "bar\\",
             "isLink": true
-          },
-          {
-            "type": "text",
-            "text": "\\"
           }
         ]
       }
