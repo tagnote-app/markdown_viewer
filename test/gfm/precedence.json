@@ -2,13 +2,37 @@
   {
     "description": "https://github.github.com/gfm/#example-12",
     "markdown": "- `one\n- two`\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "`onetwo`",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xdd000000)"
+        "type": "Column",
+        "children": [
+          {
+            "type": "Column",
+            "children": [
+              {
+                "type": "TextSpan",
+                "text": "`one",
+                "fontFamily": ".SF UI Text",
+                "fontWeight": 400,
+                "fontSize": 14.0,
+                "color": "Color(0xdd000000)"
+              }
+            ]
+          },
+          {
+            "type": "Column",
+            "children": [
+              {
+                "type": "TextSpan",
+                "text": "two`",
+                "fontFamily": ".SF UI Text",
+                "fontWeight": 400,
+                "fontSize": 14.0,
+                "color": "Color(0xdd000000)"
+              }
+            ]
+          }
+        ]
       }
     ]
   }

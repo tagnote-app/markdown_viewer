@@ -24,6 +24,7 @@ void _testDirectory(String name) {
   for (final entry in entries) {
     if (![
       'emphasis_and_strong_emphasis.json',
+      //'atx_headings.json',
     ].contains(entry.path.split('/').last)) {
       continue;
     }
@@ -37,6 +38,11 @@ void _testFile(String path) {
   final mapList = List<Map<String, dynamic>>.from(jsonDecode(json));
   for (final map in mapList) {
     final testCase = TestCase.formJson(map);
+    final expected = testCase.expected;
+    if (expected.isEmpty) {
+      continue;
+    }
+
     testWidgets(testCase.description, (WidgetTester tester) async {
       final data = testCase.markdown;
       await tester.pumpWidget(
@@ -53,49 +59,60 @@ void _testFile(String path) {
         ),
       );
 
-      final richTextFinder = find.byType(RichText);
-      expect(richTextFinder, findsOneWidget);
+      final rootColumn = tester.firstWidget(find.byType(Column));
 
-      final richText = richTextFinder.evaluate().first.widget as RichText;
-      final expectedTextSpans = testCase.textSpans;
-      if (expectedTextSpans.isEmpty) {
-        return;
-      }
-      expect(richText, isNotNull);
+      void loopTest(widget, ExpectedElement expectedElement) {
+        expect(widget.runtimeType.toString(), expectedElement.type);
+        if (widget is Column) {
+          expect(expectedElement.runtimeType, ExpectedBlock);
 
-      List<TextSpan> textSpans;
-      if (expectedTextSpans.length == 1) {
-        textSpans = [richText.text as TextSpan];
-      } else {
-        final parentTextSpan = richText.text as TextSpan;
+          // First child of a Column should be either a Column or a Wrap.
+          final firstChild = widget.children.first;
+          final children = [];
+          if (firstChild is Column) {
+            children.addAll(widget.children);
+          } else {
+            expect(firstChild.runtimeType, Wrap);
+            final wrapChildren = (firstChild as Wrap).children;
+            if (wrapChildren.isEmpty) {
+              return;
+            }
+            final richText = wrapChildren.first;
+            expect(richText.runtimeType, RichText);
 
-        expect(parentTextSpan, isNotNull);
-        expect(
-          parentTextSpan.children,
-          isNotNull,
-        );
-        expect(parentTextSpan.children!.length, expectedTextSpans.length);
+            final textSpan = (richText as RichText).text as TextSpan;
+            if (textSpan.children == null) {
+              children.add(textSpan);
+            } else {
+              children.addAll(textSpan.children!);
+            }
+          }
 
-        textSpans = List<TextSpan>.from(parentTextSpan.children!);
-      }
+          for (var i = 0; i < widget.children.length; i++) {
+            loopTest(
+              children[i],
+              (expectedElement as ExpectedBlock).children[i],
+            );
+          }
+        } else if (widget is TextSpan) {
+          final expectedTextSpan = expectedElement as ExpectedInline;
 
-      for (var i = 0; i < textSpans.length; i++) {
-        final textSpan = textSpans[i];
-        final expectedTextSpan = expectedTextSpans[i];
-
-        expect(textSpan.toPlainText(), expectedTextSpan.text);
-        expect(textSpan.style, isNotNull);
-        expect(textSpan.style!.fontStyle, expectedTextSpan.fontStyle);
-        expect(textSpan.style!.fontWeight, expectedTextSpan.fontWeight);
-        expect(textSpan.style!.fontFamily, expectedTextSpan.fontFamily);
-        if (textSpan.style!.color != null) {
-          expect(textSpan.style!.color.toString(), expectedTextSpan.color);
+          expect(widget.toPlainText(), expectedTextSpan.text);
+          expect(widget.style, isNotNull);
+          expect(widget.style!.fontStyle, expectedTextSpan.fontStyle);
+          expect(widget.style!.fontWeight, expectedTextSpan.fontWeight);
+          expect(widget.style!.fontFamily, expectedTextSpan.fontFamily);
+          if (widget.style!.color != null) {
+            expect(widget.style!.color.toString(), expectedTextSpan.color);
+          }
+          if (expectedTextSpan.isLink) {
+            expect(widget.recognizer, isNotNull);
+            expect(widget.recognizer is GestureRecognizer, isTrue);
+          }
         }
-        if (expectedTextSpan.isLink) {
-          expect(textSpan.recognizer, isNotNull);
-          expect(textSpan.recognizer is GestureRecognizer, isTrue);
-        }
       }
+
+      loopTest(rootColumn, expected.first);
     });
   }
 }

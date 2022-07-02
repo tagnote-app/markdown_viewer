@@ -2,130 +2,202 @@
   {
     "description": "https://github.github.com/gfm/#example-189",
     "markdown": "aaa\n\nbbb\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "aaa",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xdd000000)"
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "aaa",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xdd000000)"
+          }
+        ]
       },
       {
-        "text": "bbb",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xdd000000)"
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "bbb",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xdd000000)"
+          }
+        ]
       }
     ]
   },
   {
     "description": "https://github.github.com/gfm/#example-190",
     "markdown": "aaa\nbbb\n\nccc\nddd\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "aaa bbb",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xdd000000)"
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "aaa bbb",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xdd000000)"
+          }
+        ]
       },
       {
-        "text": "ccc ddd",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xdd000000)"
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "ccc ddd",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xdd000000)"
+          }
+        ]
       }
     ]
   },
   {
     "description": "https://github.github.com/gfm/#example-191",
     "markdown": "aaa\n\n\nbbb\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "aaa",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xdd000000)"
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "aaa",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xdd000000)"
+          }
+        ]
       },
       {
-        "text": "bbb",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xdd000000)"
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "bbb",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xdd000000)"
+          }
+        ]
       }
     ]
   },
   {
     "description": "https://github.github.com/gfm/#example-192",
     "markdown": "  aaa\n bbb\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "aaa bbb",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xdd000000)"
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "aaa bbb",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xdd000000)"
+          }
+        ]
       }
     ]
   },
   {
     "description": "https://github.github.com/gfm/#example-193",
     "markdown": "aaa\n             bbb\n                                       ccc\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "aaa bbb ccc",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xdd000000)"
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "aaa bbb ccc",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xdd000000)"
+          }
+        ]
       }
     ]
   },
   {
     "description": "https://github.github.com/gfm/#example-194",
     "markdown": "   aaa\nbbb\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "aaa bbb",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xdd000000)"
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "aaa bbb",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xdd000000)"
+          }
+        ]
       }
     ]
   },
   {
     "description": "https://github.github.com/gfm/#example-195",
     "markdown": "    aaa\nbbb\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "aaa ",
-        "fontFamily": "monospace",
-        "fontSize": 11.9
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "aaa ",
+            "fontFamily": "monospace",
+            "fontSize": 11.9
+          }
+        ]
       },
       {
-        "text": "bbb",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xdd000000)"
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "bbb",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xdd000000)"
+          }
+        ]
       }
     ]
   },
   {
     "description": "https://github.github.com/gfm/#example-196",
     "markdown": "aaa     \nbbb     \n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "aaabbb",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xdd000000)"
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "aaabbb",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xdd000000)"
+          }
+        ]
       }
     ]
   }

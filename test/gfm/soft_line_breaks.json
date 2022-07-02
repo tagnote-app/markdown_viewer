@@ -2,26 +2,38 @@
   {
     "description": "https://github.github.com/gfm/#example-669",
     "markdown": "foo\nbaz\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "foo baz",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xdd000000)"
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "foo baz",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xdd000000)"
+          }
+        ]
       }
     ]
   },
   {
     "description": "https://github.github.com/gfm/#example-670",
     "markdown": "foo \n baz\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "foo baz",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xdd000000)"
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "foo baz",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xdd000000)"
+          }
+        ]
       }
     ]
   }

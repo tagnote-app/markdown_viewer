@@ -2,164 +2,315 @@
   {
     "description": "https://github.github.com/gfm/#example-77",
     "markdown": "    a simple\n      indented code block\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "a simple   indented code block ",
-        "fontFamily": "monospace",
-        "fontSize": 11.9
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "a simple   indented code block ",
+            "fontFamily": "monospace",
+            "fontSize": 11.9
+          }
+        ]
       }
     ]
   },
   {
     "description": "https://github.github.com/gfm/#example-78",
     "markdown": "  - foo\n\n    bar\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "foobar",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xdd000000)"
+        "type": "Column",
+        "children": [
+          {
+            "type": "Column",
+            "children": [
+              {
+                "type": "Column",
+                "children": [
+                  {
+                    "type": "TextSpan",
+                    "text": "foo",
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": 400,
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                ]
+              },
+              {
+                "type": "Column",
+                "children": [
+                  {
+                    "type": "TextSpan",
+                    "text": "bar",
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": 400,
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
   {
     "description": "https://github.github.com/gfm/#example-79",
     "markdown": "1.  foo\n\n    - bar\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "foobar",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xdd000000)"
+        "type": "Column",
+        "children": [
+          {
+            "type": "Column",
+            "children": [
+              {
+                "type": "Column",
+                "children": [
+                  {
+                    "type": "TextSpan",
+                    "text": "foo",
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": 400,
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                ]
+              },
+              {
+                "type": "Column",
+                "children": [
+                  {
+                    "type": "Column",
+                    "children": [
+                      {
+                        "type": "TextSpan",
+                        "text": "bar",
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": 400,
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
   {
     "description": "https://github.github.com/gfm/#example-80",
     "markdown": "    <a/>\n    *hi*\n\n    - one\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "<a/> *hi*  - one ",
-        "fontFamily": "monospace",
-        "fontSize": 11.9
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "<a/> *hi*  - one ",
+            "fontFamily": "monospace",
+            "fontSize": 11.9
+          }
+        ]
       }
     ]
   },
   {
     "description": "https://github.github.com/gfm/#example-81",
     "markdown": "    chunk1\n\n    chunk2\n  \n \n \n    chunk3\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "chunk1  chunk2    chunk3 ",
-        "fontFamily": "monospace",
-        "fontSize": 11.9
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "chunk1  chunk2    chunk3 ",
+            "fontFamily": "monospace",
+            "fontSize": 11.9
+          }
+        ]
       }
     ]
   },
   {
     "description": "https://github.github.com/gfm/#example-82",
     "markdown": "    chunk1\n      \n      chunk2\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "chunk1      chunk2 ",
-        "fontFamily": "monospace",
-        "fontSize": 11.9
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "chunk1      chunk2 ",
+            "fontFamily": "monospace",
+            "fontSize": 11.9
+          }
+        ]
       }
     ]
   },
   {
     "description": "https://github.github.com/gfm/#example-83",
     "markdown": "Foo\n    bar\n\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "Foo bar",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xdd000000)"
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "Foo bar",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xdd000000)"
+          }
+        ]
       }
     ]
   },
   {
     "description": "https://github.github.com/gfm/#example-84",
     "markdown": "    foo\nbar\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "foo ",
-        "fontFamily": "monospace",
-        "fontSize": 11.9
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "foo ",
+            "fontFamily": "monospace",
+            "fontSize": 11.9
+          }
+        ]
       },
       {
-        "text": "bar",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xdd000000)"
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "bar",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xdd000000)"
+          }
+        ]
       }
     ]
   },
   {
     "description": "https://github.github.com/gfm/#example-85",
     "markdown": "# Heading\n    foo\nHeading\n------\n    foo\n----\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "Heading",
-        "fontFamily": ".SF UI Display",
-        "fontWeight": 400,
-        "fontSize": 24.0,
-        "color": "Color(0xdd000000)"
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "Heading",
+            "fontFamily": ".SF UI Display",
+            "fontWeight": 400,
+            "fontSize": 24.0,
+            "color": "Color(0xdd000000)"
+          }
+        ]
       },
       {
-        "text": "foo ",
-        "fontFamily": "monospace",
-        "fontSize": 11.9
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "foo ",
+            "fontFamily": "monospace",
+            "fontSize": 11.9
+          }
+        ]
       },
       {
-        "text": "Heading",
-        "fontFamily": ".SF UI Display",
-        "fontWeight": 500,
-        "fontSize": 20.0,
-        "color": "Color(0xdd000000)"
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "Heading",
+            "fontFamily": ".SF UI Display",
+            "fontWeight": 500,
+            "fontSize": 20.0,
+            "color": "Color(0xdd000000)"
+          }
+        ]
       },
       {
-        "text": "foo ",
-        "fontFamily": "monospace",
-        "fontSize": 11.9
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "foo ",
+            "fontFamily": "monospace",
+            "fontSize": 11.9
+          }
+        ]
+      },
+      {
+        "type": "Column",
+        "children": []
       }
     ]
   },
   {
     "description": "https://github.github.com/gfm/#example-86",
     "markdown": "        foo\n    bar\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "    foo bar ",
-        "fontFamily": "monospace",
-        "fontSize": 11.9
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "    foo bar ",
+            "fontFamily": "monospace",
+            "fontSize": 11.9
+          }
+        ]
       }
     ]
   },
   {
     "description": "https://github.github.com/gfm/#example-87",
     "markdown": "\n    \n    foo\n    \n\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "foo ",
-        "fontFamily": "monospace",
-        "fontSize": 11.9
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "foo ",
+            "fontFamily": "monospace",
+            "fontSize": 11.9
+          }
+        ]
       }
     ]
   },
   {
     "description": "https://github.github.com/gfm/#example-88",
     "markdown": "    foo  \n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "foo   ",
-        "fontFamily": "monospace",
-        "fontSize": 11.9
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "foo   ",
+            "fontFamily": "monospace",
+            "fontSize": 11.9
+          }
+        ]
       }
     ]
   }

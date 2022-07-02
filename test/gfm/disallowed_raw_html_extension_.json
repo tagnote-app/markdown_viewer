@@ -2,62 +2,80 @@
   {
     "description": "https://github.github.com/gfm/#example-653",
     "markdown": "<strong> <title> <style> <em>\n\n<blockquote>\n  <xmp> is disallowed.  <XMP> is also disallowed.\n</blockquote>\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "<strong>",
-        "fontFamily": "monospace",
-        "fontWeight": 400,
-        "fontSize": 11.9,
-        "color": "Color(0xdd000000)"
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "<strong>",
+            "fontFamily": "monospace",
+            "fontWeight": 400,
+            "fontSize": 11.9,
+            "color": "Color(0xdd000000)"
+          },
+          {
+            "type": "TextSpan",
+            "text": " ",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xdd000000)"
+          },
+          {
+            "type": "TextSpan",
+            "text": "<title>",
+            "fontFamily": "monospace",
+            "fontWeight": 400,
+            "fontSize": 11.9,
+            "color": "Color(0xdd000000)"
+          },
+          {
+            "type": "TextSpan",
+            "text": " ",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xdd000000)"
+          },
+          {
+            "type": "TextSpan",
+            "text": "<style>",
+            "fontFamily": "monospace",
+            "fontWeight": 400,
+            "fontSize": 11.9,
+            "color": "Color(0xdd000000)"
+          },
+          {
+            "type": "TextSpan",
+            "text": " ",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xdd000000)"
+          },
+          {
+            "type": "TextSpan",
+            "text": "<em>",
+            "fontFamily": "monospace",
+            "fontWeight": 400,
+            "fontSize": 11.9,
+            "color": "Color(0xdd000000)"
+          }
+        ]
       },
       {
-        "text": " ",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xdd000000)"
-      },
-      {
-        "text": "<title>",
-        "fontFamily": "monospace",
-        "fontWeight": 400,
-        "fontSize": 11.9,
-        "color": "Color(0xdd000000)"
-      },
-      {
-        "text": " ",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xdd000000)"
-      },
-      {
-        "text": "<style>",
-        "fontFamily": "monospace",
-        "fontWeight": 400,
-        "fontSize": 11.9,
-        "color": "Color(0xdd000000)"
-      },
-      {
-        "text": " ",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xdd000000)"
-      },
-      {
-        "text": "<em>",
-        "fontFamily": "monospace",
-        "fontWeight": 400,
-        "fontSize": 11.9,
-        "color": "Color(0xdd000000)"
-      },
-      {
-        "text": "<blockquote>   <xmp> is disallowed.  <XMP> is also disallowed. </blockquote>",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xdd000000)"
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "<blockquote>   <xmp> is disallowed.  <XMP> is also disallowed. </blockquote>",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xdd000000)"
+          }
+        ]
       }
     ]
   }

@@ -2,483 +2,710 @@
   {
     "description": "https://github.github.com/gfm/#example-161",
     "markdown": "[foo]: /url \"title\"\n\n[foo]\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "foo",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xff2196f3)",
-        "isLink": true
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "foo",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xff2196f3)",
+            "isLink": true
+          }
+        ]
       }
     ]
   },
   {
     "description": "https://github.github.com/gfm/#example-162",
     "markdown": "   [foo]: \n      /url  \n           'the title'  \n\n[foo]\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "foo",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xff2196f3)",
-        "isLink": true
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "foo",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xff2196f3)",
+            "isLink": true
+          }
+        ]
       }
     ]
   },
   {
     "description": "https://github.github.com/gfm/#example-163",
     "markdown": "[Foo*bar\\]]:my_(url) 'title (with parens)'\n\n[Foo*bar\\]]\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "Foo",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xff2196f3)",
-        "isLink": true
-      },
-      {
-        "text": "*bar]",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xff2196f3)"
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "Foo",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xff2196f3)",
+            "isLink": true
+          },
+          {
+            "type": "TextSpan",
+            "text": "*bar]",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xff2196f3)"
+          }
+        ]
       }
     ]
   },
   {
     "description": "https://github.github.com/gfm/#example-164",
     "markdown": "[Foo bar]:\n<my url>\n'title'\n\n[Foo bar]\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "Foo bar",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xff2196f3)",
-        "isLink": true
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "Foo bar",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xff2196f3)",
+            "isLink": true
+          }
+        ]
       }
     ]
   },
   {
     "description": "https://github.github.com/gfm/#example-165",
     "markdown": "[foo]: /url '\ntitle\nline1\nline2\n'\n\n[foo]\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "foo",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xff2196f3)",
-        "isLink": true
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "foo",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xff2196f3)",
+            "isLink": true
+          }
+        ]
       }
     ]
   },
   {
     "description": "https://github.github.com/gfm/#example-166",
     "markdown": "[foo]: /url 'title\n\nwith blank line'\n\n[foo]\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "[foo]: /url 'title",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xdd000000)"
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "[foo]: /url 'title",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xdd000000)"
+          }
+        ]
       },
       {
-        "text": "with blank line'",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xdd000000)"
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "with blank line'",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xdd000000)"
+          }
+        ]
       },
       {
-        "text": "[foo]",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xdd000000)"
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "[foo]",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xdd000000)"
+          }
+        ]
       }
     ]
   },
   {
     "description": "https://github.github.com/gfm/#example-167",
     "markdown": "[foo]:\n/url\n\n[foo]\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "foo",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xff2196f3)",
-        "isLink": true
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "foo",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xff2196f3)",
+            "isLink": true
+          }
+        ]
       }
     ]
   },
   {
     "description": "https://github.github.com/gfm/#example-168",
     "markdown": "[foo]:\n\n[foo]\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "[foo]:",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xdd000000)"
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "[foo]:",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xdd000000)"
+          }
+        ]
       },
       {
-        "text": "[foo]",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xdd000000)"
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "[foo]",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xdd000000)"
+          }
+        ]
       }
     ]
   },
   {
     "description": "https://github.github.com/gfm/#example-169",
     "markdown": "[foo]: <>\n\n[foo]\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "foo",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xff2196f3)",
-        "isLink": true
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "foo",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xff2196f3)",
+            "isLink": true
+          }
+        ]
       }
     ]
   },
   {
     "description": "https://github.github.com/gfm/#example-170",
     "markdown": "[foo]: <bar>(baz)\n\n[foo]\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "[foo]: ",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xdd000000)"
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "[foo]: ",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xdd000000)"
+          },
+          {
+            "type": "TextSpan",
+            "text": "<bar>",
+            "fontFamily": "monospace",
+            "fontWeight": 400,
+            "fontSize": 11.9,
+            "color": "Color(0xdd000000)"
+          },
+          {
+            "type": "TextSpan",
+            "text": "(baz)",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xdd000000)"
+          }
+        ]
       },
       {
-        "text": "<bar>",
-        "fontFamily": "monospace",
-        "fontWeight": 400,
-        "fontSize": 11.9,
-        "color": "Color(0xdd000000)"
-      },
-      {
-        "text": "(baz)",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xdd000000)"
-      },
-      {
-        "text": "[foo]",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xdd000000)"
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "[foo]",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xdd000000)"
+          }
+        ]
       }
     ]
   },
   {
     "description": "https://github.github.com/gfm/#example-171",
     "markdown": "[foo]: /url\\bar\\*baz \"foo\\\"bar\\baz\"\n\n[foo]\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "foo",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xff2196f3)",
-        "isLink": true
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "foo",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xff2196f3)",
+            "isLink": true
+          }
+        ]
       }
     ]
   },
   {
     "description": "https://github.github.com/gfm/#example-172",
     "markdown": "[foo]\n\n[foo]: url\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "foo",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xff2196f3)",
-        "isLink": true
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "foo",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xff2196f3)",
+            "isLink": true
+          }
+        ]
       }
     ]
   },
   {
     "description": "https://github.github.com/gfm/#example-173",
     "markdown": "[foo]\n\n[foo]: first\n[foo]: second\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "foo",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xff2196f3)",
-        "isLink": true
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "foo",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xff2196f3)",
+            "isLink": true
+          }
+        ]
       }
     ]
   },
   {
     "description": "https://github.github.com/gfm/#example-174",
     "markdown": "[FOO]: /url\n\n[Foo]\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "Foo",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xff2196f3)",
-        "isLink": true
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "Foo",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xff2196f3)",
+            "isLink": true
+          }
+        ]
       }
     ]
   },
   {
     "description": "https://github.github.com/gfm/#example-175",
     "markdown": "[ΑΓΩ]: /φου\n\n[αγω]\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "αγω",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xff2196f3)",
-        "isLink": true
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "αγω",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xff2196f3)",
+            "isLink": true
+          }
+        ]
       }
     ]
   },
   {
     "description": "https://github.github.com/gfm/#example-176",
     "markdown": "[foo]: /url\n",
-    "textSpans": []
+    "expected": []
   },
   {
     "description": "https://github.github.com/gfm/#example-177",
     "markdown": "[\nfoo\n]: /url\nbar\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "bar",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xdd000000)"
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "bar",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xdd000000)"
+          }
+        ]
       }
     ]
   },
   {
     "description": "https://github.github.com/gfm/#example-178",
     "markdown": "[foo]: /url \"title\" ok\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "[foo]: /url \"title\" ok",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xdd000000)"
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "[foo]: /url \"title\" ok",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xdd000000)"
+          }
+        ]
       }
     ]
   },
   {
     "description": "https://github.github.com/gfm/#example-179",
     "markdown": "[foo]: /url\n\"title\" ok\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "\"title\" ok",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xdd000000)"
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "\"title\" ok",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xdd000000)"
+          }
+        ]
       }
     ]
   },
   {
     "description": "https://github.github.com/gfm/#example-180",
     "markdown": "    [foo]: /url \"title\"\n\n[foo]\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "[foo]: /url \"title\" ",
-        "fontFamily": "monospace",
-        "fontSize": 11.9
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "[foo]: /url \"title\" ",
+            "fontFamily": "monospace",
+            "fontSize": 11.9
+          }
+        ]
       },
       {
-        "text": "[foo]",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xdd000000)"
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "[foo]",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xdd000000)"
+          }
+        ]
       }
     ]
   },
   {
     "description": "https://github.github.com/gfm/#example-181",
     "markdown": "```\n[foo]: /url\n```\n\n[foo]\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "[foo]: /url ",
-        "fontFamily": "monospace",
-        "fontSize": 11.9
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "[foo]: /url ",
+            "fontFamily": "monospace",
+            "fontSize": 11.9
+          }
+        ]
       },
       {
-        "text": "[foo]",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xdd000000)"
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "[foo]",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xdd000000)"
+          }
+        ]
       }
     ]
   },
   {
     "description": "https://github.github.com/gfm/#example-182",
     "markdown": "Foo\n[bar]: /baz\n\n[bar]\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "Foo [bar]: /baz",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xdd000000)"
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "Foo [bar]: /baz",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xdd000000)"
+          }
+        ]
       },
       {
-        "text": "[bar]",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xdd000000)"
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "[bar]",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xdd000000)"
+          }
+        ]
       }
     ]
   },
   {
     "description": "https://github.github.com/gfm/#example-183",
     "markdown": "# [Foo]\n[foo]: /url\n> bar\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "Foo",
-        "fontFamily": ".SF UI Display",
-        "fontWeight": 400,
-        "fontSize": 24.0,
-        "color": "Color(0xff2196f3)",
-        "isLink": true
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "Foo",
+            "fontFamily": ".SF UI Display",
+            "fontWeight": 400,
+            "fontSize": 24.0,
+            "color": "Color(0xff2196f3)",
+            "isLink": true
+          }
+        ]
       },
       {
-        "text": "bar",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xdd000000)"
+        "type": "Column",
+        "children": [
+          {
+            "type": "Column",
+            "children": [
+              {
+                "type": "TextSpan",
+                "text": "bar",
+                "fontFamily": ".SF UI Text",
+                "fontWeight": 400,
+                "fontSize": 14.0,
+                "color": "Color(0xdd000000)"
+              }
+            ]
+          }
+        ]
       }
     ]
   },
   {
     "description": "https://github.github.com/gfm/#example-184",
     "markdown": "[foo]: /url\nbar\n===\n[foo]\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "bar",
-        "fontFamily": ".SF UI Display",
-        "fontWeight": 400,
-        "fontSize": 24.0,
-        "color": "Color(0xdd000000)"
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "bar",
+            "fontFamily": ".SF UI Display",
+            "fontWeight": 400,
+            "fontSize": 24.0,
+            "color": "Color(0xdd000000)"
+          }
+        ]
       },
       {
-        "text": "foo",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xff2196f3)",
-        "isLink": true
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "foo",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xff2196f3)",
+            "isLink": true
+          }
+        ]
       }
     ]
   },
   {
     "description": "https://github.github.com/gfm/#example-185",
     "markdown": "[foo]: /url\n===\n[foo]\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "=== ",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xdd000000)"
-      },
-      {
-        "text": "foo",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xff2196f3)",
-        "isLink": true
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "=== ",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xdd000000)"
+          },
+          {
+            "type": "TextSpan",
+            "text": "foo",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xff2196f3)",
+            "isLink": true
+          }
+        ]
       }
     ]
   },
   {
     "description": "https://github.github.com/gfm/#example-186",
     "markdown": "[foo]: /foo-url \"foo\"\n[bar]: /bar-url\n  \"bar\"\n[baz]: /baz-url\n\n[foo],\n[bar],\n[baz]\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "foo",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xff2196f3)",
-        "isLink": true
-      },
-      {
-        "text": ", ",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xdd000000)"
-      },
-      {
-        "text": "bar",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xff2196f3)",
-        "isLink": true
-      },
-      {
-        "text": ", ",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xdd000000)"
-      },
-      {
-        "text": "baz",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xff2196f3)",
-        "isLink": true
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "foo",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xff2196f3)",
+            "isLink": true
+          },
+          {
+            "type": "TextSpan",
+            "text": ", ",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xdd000000)"
+          },
+          {
+            "type": "TextSpan",
+            "text": "bar",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xff2196f3)",
+            "isLink": true
+          },
+          {
+            "type": "TextSpan",
+            "text": ", ",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xdd000000)"
+          },
+          {
+            "type": "TextSpan",
+            "text": "baz",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xff2196f3)",
+            "isLink": true
+          }
+        ]
       }
     ]
   },
   {
     "description": "https://github.github.com/gfm/#example-187",
     "markdown": "[foo]\n\n> [foo]: /url\n",
-    "textSpans": [
+    "expected": [
       {
-        "text": "foo",
-        "fontFamily": ".SF UI Text",
-        "fontWeight": 400,
-        "fontSize": 14.0,
-        "color": "Color(0xff2196f3)",
-        "isLink": true
+        "type": "Column",
+        "children": [
+          {
+            "type": "TextSpan",
+            "text": "foo",
+            "fontFamily": ".SF UI Text",
+            "fontWeight": 400,
+            "fontSize": 14.0,
+            "color": "Color(0xff2196f3)",
+            "isLink": true
+          }
+        ]
+      },
+      {
+        "type": "Column",
+        "children": []
       }
     ]
   },
   {
     "description": "https://github.github.com/gfm/#example-188",
     "markdown": "[foo]: /url\n",
-    "textSpans": []
+    "expected": []
   }
 ]

@@ -34,7 +34,7 @@ void generateTestCases(String flavorName) {
     testCases[sectionName]!.add({
       'description': '$url/#example-${item['example']}',
       'markdown': markdown,
-      "textSpans": _renderTextSpans(markdown),
+      "expected": _renderTestCase(markdown),
     });
   }
 
@@ -50,7 +50,7 @@ String _fileNameFromSection(String section) =>
     '${section.toLowerCase().replaceAll(RegExp(r'[ \)\(]+'), '_')}.json';
 
 /// Renders Markdown String to expected data.
-List<Map<String, dynamic>> _renderTextSpans(String markdown) {
+List<Map<String, dynamic>> _renderTestCase(String markdown) {
   final nodes = Document().parseLines(markdown);
   return TestCaseBuilder().build(nodes);
 }
