@@ -5,7 +5,6 @@ class MarkdownStyle {
   MarkdownStyle({
     this.paragraph,
     this.blockquote,
-    this.htmlBlock,
     this.list,
     this.listItem,
     this.table,
@@ -21,8 +20,9 @@ class MarkdownStyle {
     this.strongEmphasis,
     this.link,
     this.inlineHtml,
-    this.codeBlock,
+    this.htmlBlock,
     this.inlineCode,
+    this.codeBlock,
   });
 
   /// Creates a [MarkdownStyle] from the [TextStyle]s in the provided [theme].
@@ -32,7 +32,6 @@ class MarkdownStyle {
     ThemeData theme, {
     TextStyle? paragraph,
     TextStyle? blockquote,
-    TextStyle? htmlBlock,
     TextStyle? list,
     this.listItem,
     this.table,
@@ -48,18 +47,18 @@ class MarkdownStyle {
     TextStyle? strongEmphasis,
     TextStyle? link,
     TextStyle? inlineHtml,
-    this.codeBlock,
+    TextStyle? htmlBlock,
     TextStyle? inlineCode,
+    TextStyle? codeBlock,
   })  : paragraph = theme.textTheme.bodyText2?.merge(paragraph),
         blockquote = theme.textTheme.bodyText2?.merge(blockquote),
-        htmlBlock = theme.textTheme.bodyText2?.merge(htmlBlock),
         list = theme.textTheme.bodyText2?.merge(list),
         tableHead =
             const TextStyle(fontWeight: FontWeight.w600).merge(tableHead),
         tableBody = theme.textTheme.bodyText2?.merge(tableBody),
         headline1 = theme.textTheme.headline5?.merge(headline1),
         headline2 = theme.textTheme.headline6?.merge(headline2),
-        headline3 = theme.textTheme.bodyText1?.merge(headline3),
+        headline3 = theme.textTheme.subtitle1?.merge(headline3),
         headline4 = theme.textTheme.bodyText1?.merge(headline4),
         headline5 = theme.textTheme.bodyText1?.merge(headline5),
         headline6 = theme.textTheme.bodyText1?.merge(headline6),
@@ -67,23 +66,13 @@ class MarkdownStyle {
         strongEmphasis =
             const TextStyle(fontWeight: FontWeight.w700).merge(strongEmphasis),
         link = TextStyle(color: theme.colorScheme.primary).merge(link),
-        inlineHtml = theme.textTheme.bodyText2!
-            .copyWith(
-              backgroundColor: theme.cardTheme.color ?? theme.cardColor,
-              fontFamily: 'monospace',
-            )
-            .merge(inlineHtml),
-        inlineCode = theme.textTheme.bodyText2!
-            .copyWith(
-              backgroundColor: theme.cardTheme.color ?? theme.cardColor,
-              fontFamily: 'monospace',
-              fontSize: theme.textTheme.bodyText2!.fontSize! * 0.85,
-            )
-            .merge(inlineCode);
+        inlineHtml = _generateCodeStyle(theme, true)?.merge(inlineHtml),
+        htmlBlock = _generateCodeStyle(theme, false)?.merge(htmlBlock),
+        inlineCode = _generateCodeStyle(theme, true)?.merge(inlineCode),
+        codeBlock = _generateCodeStyle(theme, false)?.merge(codeBlock);
 
   final TextStyle? paragraph;
   final TextStyle? blockquote;
-  final TextStyle? htmlBlock;
   final TextStyle? list;
   final TextStyle? listItem;
   final TextStyle? table;
@@ -99,8 +88,9 @@ class MarkdownStyle {
   final TextStyle? strongEmphasis;
   final TextStyle? link;
   final TextStyle? inlineHtml;
-  final TextStyle? codeBlock;
+  final TextStyle? htmlBlock;
   final TextStyle? inlineCode;
+  final TextStyle? codeBlock;
 
   /// Generates a [TextStyle].
   TextStyle style(md.Element element, TextStyle? parentStyle) {
@@ -190,4 +180,17 @@ class MarkdownStyle {
 
     return style;
   }
+}
+
+TextStyle? _generateCodeStyle(ThemeData theme, bool withBackground) {
+  final style = theme.textTheme.bodyText2?.copyWith(
+    fontFamily: 'monospace',
+    fontSize: theme.textTheme.bodyText2!.fontSize! * 0.85,
+  );
+  if (!withBackground) {
+    return style;
+  }
+  return style?.copyWith(
+    backgroundColor: theme.cardTheme.color ?? theme.cardColor,
+  );
 }

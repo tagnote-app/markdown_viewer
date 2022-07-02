@@ -1,7 +1,3 @@
-String formatText(String text) {
-  return text.replaceAll('\n', ' ');
-}
-
 bool isBlockElement(String type) => _blockTypes.contains(type);
 
 const _blockTypes = [

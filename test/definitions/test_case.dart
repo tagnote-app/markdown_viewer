@@ -4,38 +4,81 @@ class TestCase {
   const TestCase({
     required this.description,
     required this.markdown,
-    required this.textSpans,
+    required this.expected,
   });
 
   factory TestCase.formJson(Map<String, dynamic> json) {
-    final textSpans = List<Map<String, dynamic>>.from(json['textSpans'])
-        .map((item) => TestCaseTextSpan.formJson(item))
+    final expected = List<Map<String, dynamic>>.from(json['expected'])
+        .map((item) => ExpectedBlock.formJson(item))
         .toList();
 
     return TestCase(
       description: json['description'],
       markdown: json['markdown'],
-      textSpans: textSpans,
+      expected: expected,
     );
   }
 
   final String description;
   final String markdown;
-  final List<TestCaseTextSpan> textSpans;
+  final List<ExpectedElement> expected;
 }
 
-class TestCaseTextSpan {
-  const TestCaseTextSpan({
+abstract class ExpectedElement {
+  const ExpectedElement({
+    required this.type,
+  });
+
+  final String type;
+
+  Map<String, dynamic> toMap();
+}
+
+class ExpectedBlock extends ExpectedElement {
+  ExpectedBlock({
+    required String type,
+    required this.children,
+  }) : super(type: type);
+
+  factory ExpectedBlock.formJson(Map<String, dynamic> json) {
+    return ExpectedBlock(
+      type: json['type'],
+      children: json['children'] == null
+          ? null
+          : List<ExpectedElement>.from(
+              List<Map<String, dynamic>>.from(json['children']).map(
+                (e) => e['type'] == 'TextSpan'
+                    ? ExpectedInline.formJson(e)
+                    : ExpectedBlock.formJson(e),
+              ),
+            ),
+    );
+  }
+
+  List<ExpectedElement>? children;
+
+  @override
+  Map<String, dynamic> toMap() => {
+        'type': type,
+        if (children != null)
+          'children': children!.map((e) => e.toMap()).toList(),
+      };
+}
+
+class ExpectedInline extends ExpectedElement {
+  const ExpectedInline({
+    required String type,
     required this.fontStyle,
     required this.fontWeight,
     required this.fontFamily,
     required this.text,
     required this.color,
     required this.isLink,
-  });
+  }) : super(type: type);
 
-  factory TestCaseTextSpan.formJson(Map<String, dynamic> json) {
-    return TestCaseTextSpan(
+  factory ExpectedInline.formJson(Map<String, dynamic> json) {
+    return ExpectedInline(
+      type: json['type'],
       fontStyle: _fontStyleFromString(json['fontStyle']),
       fontWeight: _fontWeightFromInt(json['fontWeight']),
       fontFamily: json['fontFamily'],
@@ -52,11 +95,15 @@ class TestCaseTextSpan {
   final String text;
   final bool isLink;
 
+  @override
   Map<String, dynamic> toMap() => {
+        'type': type,
         'text': text,
         'fontStyle': fontStyle,
         'fontWeight': fontWeight,
         'fontFamily': fontFamily,
+        'color': color,
+        'isLink': isLink,
       };
 }
 

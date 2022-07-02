@@ -26,6 +26,12 @@ extension WidgetExtensions on Widget {
         if (children.isNotEmpty) 'children': children,
         if (spanChild != null) 'span': spanChild,
       };
+    } else if (self is SizedBox) {
+      return {
+        'type': type,
+        'height': self.height,
+        'width': self.width,
+      };
     } else if (self is SingleChildRenderObjectWidget) {
       return {
         'type': type,
@@ -56,6 +62,14 @@ extension TextSpanExtensions on TextSpan {
     final map = <String, dynamic>{
       'type': runtimeType.toString(),
       if (text != null) 'text': text,
+      if (style != null)
+        'style': {
+          "fontFamily": style!.fontFamily,
+          "fontWeight": style!.fontWeight.toString(),
+          "fontStyle": style!.fontStyle.toString(),
+          "fontSize": style!.fontSize,
+          "color": style!.color.toString(),
+        },
     };
 
     if (children != null && children!.isNotEmpty) {

@@ -24,6 +24,8 @@ void _testDirectory(String name) {
   for (final entry in entries) {
     if (![
       'emphasis_and_strong_emphasis.json',
+      'atx_headings.json',
+      'setext_headings.json',
     ].contains(entry.path.split('/').last)) {
       continue;
     }
@@ -37,6 +39,11 @@ void _testFile(String path) {
   final mapList = List<Map<String, dynamic>>.from(jsonDecode(json));
   for (final map in mapList) {
     final testCase = TestCase.formJson(map);
+    final expected = testCase.expected;
+    if (expected.isEmpty) {
+      continue;
+    }
+
     testWidgets(testCase.description, (WidgetTester tester) async {
       final data = testCase.markdown;
       await tester.pumpWidget(
@@ -53,49 +60,87 @@ void _testFile(String path) {
         ),
       );
 
-      final richTextFinder = find.byType(RichText);
-      expect(richTextFinder, findsOneWidget);
+      final allWidgets = tester.allWidgets;
+      expect(allWidgets.elementAt(0).runtimeType, Directionality);
+      expect(allWidgets.elementAt(1).runtimeType, MarkdownViewer);
+      expect(allWidgets.elementAt(2).runtimeType, Column);
 
-      final richText = richTextFinder.evaluate().first.widget as RichText;
-      final expectedTextSpans = testCase.textSpans;
-      if (expectedTextSpans.isEmpty) {
-        return;
-      }
-      expect(richText, isNotNull);
+      final rootColumn = allWidgets.elementAt(2);
 
-      List<TextSpan> textSpans;
-      if (expectedTextSpans.length == 1) {
-        textSpans = [richText.text as TextSpan];
-      } else {
-        final parentTextSpan = richText.text as TextSpan;
+      void loopTest(widget, ExpectedElement expectedElement) {
+        expect(widget.runtimeType.toString(), expectedElement.type);
+        if (widget is Column) {
+          expect(expectedElement.runtimeType, ExpectedBlock);
 
-        expect(parentTextSpan, isNotNull);
-        expect(
-          parentTextSpan.children,
-          isNotNull,
-        );
-        expect(parentTextSpan.children!.length, expectedTextSpans.length);
+          final children = [];
 
-        textSpans = List<TextSpan>.from(parentTextSpan.children!);
-      }
+          // If the first child of current Widget is a Wrap, this Widget has
+          // only inline children.
+          if (widget.children.first is Wrap) {
+            // A Widget could have only one Wrap child.
+            expect(widget.children.length, 1);
+            final wrapChildren = (widget.children.first as Wrap).children;
+            if (wrapChildren.isEmpty) {
+              return;
+            }
+            final richText = wrapChildren.first;
+            expect(richText.runtimeType, RichText);
 
-      for (var i = 0; i < textSpans.length; i++) {
-        final textSpan = textSpans[i];
-        final expectedTextSpan = expectedTextSpans[i];
+            final textSpan = (richText as RichText).text as TextSpan;
+            if (textSpan.children == null) {
+              children.add(textSpan);
+            } else {
+              children.addAll(textSpan.children!);
+            }
+          } else {
+            children.addAll(widget.children);
+          }
 
-        expect(textSpan.toPlainText(), expectedTextSpan.text);
-        expect(textSpan.style, isNotNull);
-        expect(textSpan.style!.fontStyle, expectedTextSpan.fontStyle);
-        expect(textSpan.style!.fontWeight, expectedTextSpan.fontWeight);
-        expect(textSpan.style!.fontFamily, expectedTextSpan.fontFamily);
-        if (textSpan.style!.color != null) {
-          expect(textSpan.style!.color.toString(), expectedTextSpan.color);
+          for (var i = 0; i < widget.children.length; i++) {
+            loopTest(
+              children[i],
+              (expectedElement as ExpectedBlock).children![i],
+            );
+          }
+        } else if (widget is TextSpan) {
+          final expectedTextSpan = expectedElement as ExpectedInline;
+
+          expect(widget.style, isNotNull);
+          expect(
+            {
+              'text': widget.toPlainText(),
+              'fontStyle': widget.style!.fontStyle,
+              'fontWeight': widget.style!.fontWeight,
+              'fontFamily': widget.style!.fontFamily,
+              if (widget.style!.color != null)
+                'color': widget.style!.color.toString(),
+              'isLink': widget.recognizer != null &&
+                  widget.recognizer is GestureRecognizer,
+            },
+            expectedTextSpan.toMap()..remove('type'),
+          );
         }
-        if (expectedTextSpan.isLink) {
-          expect(textSpan.recognizer, isNotNull);
-          expect(textSpan.recognizer is GestureRecognizer, isTrue);
+        // If current widget has no child.
+        else if (widget is SizedBox) {
+          expect({
+            'height': widget.height,
+            'width': widget.width,
+          }, {
+            'height': 0.0,
+            'width': 0.0,
+          });
         }
       }
+
+      // The root Column is the Column from MarkdownBuilder if the built result
+      // has only one Column, otherwise the root Column is the Column from
+      // MarkdownViwer widget, so it needs to add one more layer on top of
+      // expected.
+      loopTest(
+          rootColumn,
+          expected.length == 1
+              ? expected.single
+              : ExpectedBlock(type: 'Column', children: expected));
     });
   }
 }

@@ -19,6 +19,8 @@ class MarkdownBuilder implements md.NodeVisitor {
 
   final _tree = <TreeElement>[];
 
+  bool _isInBlockquote = false;
+
   /// Called when the user taps a link.
   final MarkdownTapLinkCallback? _onTapLink;
 
@@ -29,12 +31,14 @@ class MarkdownBuilder implements md.NodeVisitor {
   List<Widget> build(List<md.Node> nodes) {
     _tree.clear();
     _tree.add(TreeElement.root());
+    _isInBlockquote = false;
 
     for (final md.Node node in nodes) {
       assert(_tree.length == 1);
       node.accept(this);
     }
 
+    assert(!_isInBlockquote);
     return _tree.single.children;
   }
 
@@ -44,6 +48,8 @@ class MarkdownBuilder implements md.NodeVisitor {
 
     if (element.type == 'link' && _onTapLink != null) {
       _addLinkHandler(element);
+    } else if (element.type == 'blockquote') {
+      _isInBlockquote = true;
     }
 
     _tree.add(TreeElement.fromAstElement(
@@ -57,10 +63,14 @@ class MarkdownBuilder implements md.NodeVisitor {
   @override
   void visitText(md.Text text) {
     final parent = _tree.last;
+    var textContent = text.textContent;
+    if (!_isInBlockquote) {
+      textContent = trimText(text.textContent);
+    }
 
     final child = _buildRichText(
       TextSpan(
-        text: trimText(text.textContent),
+        text: textContent,
         style: parent.style,
         recognizer: _linkHandlers.isEmpty ? null : _linkHandlers.removeLast(),
       ),
@@ -75,6 +85,9 @@ class MarkdownBuilder implements md.NodeVisitor {
     final parent = _tree.last;
 
     if (current.isBlock) {
+      if (current.type == 'blockquote') {
+        _isInBlockquote = false;
+      }
       if (current.children.isNotEmpty) {
         parent.children.add(Column(
           mainAxisAlignment: MainAxisAlignment.start,
