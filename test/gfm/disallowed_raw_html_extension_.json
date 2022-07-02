@@ -70,9 +70,9 @@
           {
             "type": "TextSpan",
             "text": "<blockquote>   <xmp> is disallowed.  <XMP> is also disallowed. </blockquote>",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]

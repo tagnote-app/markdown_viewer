@@ -10,7 +10,9 @@
             "type": "TextSpan",
             "text": "a simple   indented code block ",
             "fontFamily": "monospace",
-            "fontSize": 11.9
+            "fontWeight": 400,
+            "fontSize": 11.9,
+            "color": "Color(0xdd000000)"
           }
         ]
       }
@@ -116,7 +118,9 @@
             "type": "TextSpan",
             "text": "<a/> *hi*  - one ",
             "fontFamily": "monospace",
-            "fontSize": 11.9
+            "fontWeight": 400,
+            "fontSize": 11.9,
+            "color": "Color(0xdd000000)"
           }
         ]
       }
@@ -133,7 +137,9 @@
             "type": "TextSpan",
             "text": "chunk1  chunk2    chunk3 ",
             "fontFamily": "monospace",
-            "fontSize": 11.9
+            "fontWeight": 400,
+            "fontSize": 11.9,
+            "color": "Color(0xdd000000)"
           }
         ]
       }
@@ -150,7 +156,9 @@
             "type": "TextSpan",
             "text": "chunk1      chunk2 ",
             "fontFamily": "monospace",
-            "fontSize": 11.9
+            "fontWeight": 400,
+            "fontSize": 11.9,
+            "color": "Color(0xdd000000)"
           }
         ]
       }
@@ -186,7 +194,9 @@
             "type": "TextSpan",
             "text": "foo ",
             "fontFamily": "monospace",
-            "fontSize": 11.9
+            "fontWeight": 400,
+            "fontSize": 11.9,
+            "color": "Color(0xdd000000)"
           }
         ]
       },
@@ -229,7 +239,9 @@
             "type": "TextSpan",
             "text": "foo ",
             "fontFamily": "monospace",
-            "fontSize": 11.9
+            "fontWeight": 400,
+            "fontSize": 11.9,
+            "color": "Color(0xdd000000)"
           }
         ]
       },
@@ -253,7 +265,9 @@
             "type": "TextSpan",
             "text": "foo ",
             "fontFamily": "monospace",
-            "fontSize": 11.9
+            "fontWeight": 400,
+            "fontSize": 11.9,
+            "color": "Color(0xdd000000)"
           }
         ]
       },
@@ -273,7 +287,9 @@
             "type": "TextSpan",
             "text": "    foo bar ",
             "fontFamily": "monospace",
-            "fontSize": 11.9
+            "fontWeight": 400,
+            "fontSize": 11.9,
+            "color": "Color(0xdd000000)"
           }
         ]
       }
@@ -290,7 +306,9 @@
             "type": "TextSpan",
             "text": "foo ",
             "fontFamily": "monospace",
-            "fontSize": 11.9
+            "fontWeight": 400,
+            "fontSize": 11.9,
+            "color": "Color(0xdd000000)"
           }
         ]
       }
@@ -307,7 +325,9 @@
             "type": "TextSpan",
             "text": "foo   ",
             "fontFamily": "monospace",
-            "fontSize": 11.9
+            "fontWeight": 400,
+            "fontSize": 11.9,
+            "color": "Color(0xdd000000)"
           }
         ]
       }

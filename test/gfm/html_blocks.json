@@ -9,9 +9,9 @@
           {
             "type": "TextSpan",
             "text": "<table><tr><td> <pre> **Hello**,",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]
@@ -52,9 +52,9 @@
           {
             "type": "TextSpan",
             "text": "</td></tr></table>",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]
@@ -71,9 +71,9 @@
           {
             "type": "TextSpan",
             "text": "<table>   <tr>     <td>            hi     </td>   </tr> </table>",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]
@@ -103,9 +103,9 @@
           {
             "type": "TextSpan",
             "text": " <div>   *hello*          <foo><a>",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]
@@ -122,9 +122,9 @@
           {
             "type": "TextSpan",
             "text": "</div> *foo*",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]
@@ -141,9 +141,9 @@
           {
             "type": "TextSpan",
             "text": "<DIV CLASS=\"foo\">",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]
@@ -168,9 +168,9 @@
           {
             "type": "TextSpan",
             "text": "</DIV>",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]
@@ -187,9 +187,9 @@
           {
             "type": "TextSpan",
             "text": "<div id=\"foo\"   class=\"bar\"> </div>",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]
@@ -206,9 +206,9 @@
           {
             "type": "TextSpan",
             "text": "<div id=\"foo\" class=\"bar   baz\"> </div>",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]
@@ -225,9 +225,9 @@
           {
             "type": "TextSpan",
             "text": "<div> *foo*",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]
@@ -258,9 +258,9 @@
           {
             "type": "TextSpan",
             "text": "<div id=\"foo\" *hi*",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]
@@ -277,9 +277,9 @@
           {
             "type": "TextSpan",
             "text": "<div class foo",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]
@@ -296,9 +296,9 @@
           {
             "type": "TextSpan",
             "text": "<div *???-&&&-<--- *foo*",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]
@@ -315,9 +315,9 @@
           {
             "type": "TextSpan",
             "text": "<div><a href=\"bar\">*foo*</a></div>",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]
@@ -334,9 +334,9 @@
           {
             "type": "TextSpan",
             "text": "<table><tr><td> foo </td></tr></table>",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]
@@ -353,9 +353,9 @@
           {
             "type": "TextSpan",
             "text": "<div></div> ``` c int x = 33; ```",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]
@@ -372,9 +372,9 @@
           {
             "type": "TextSpan",
             "text": "<a href=\"foo\"> *bar* </a>",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]
@@ -391,9 +391,9 @@
           {
             "type": "TextSpan",
             "text": "<Warning> *bar* </Warning>",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]
@@ -410,9 +410,9 @@
           {
             "type": "TextSpan",
             "text": "<i class=\"foo\"> *bar* </i>",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]
@@ -429,9 +429,9 @@
           {
             "type": "TextSpan",
             "text": "</ins> *bar*",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]
@@ -448,9 +448,9 @@
           {
             "type": "TextSpan",
             "text": "<del> *foo* </del>",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]
@@ -467,9 +467,9 @@
           {
             "type": "TextSpan",
             "text": "<del>",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]
@@ -494,9 +494,9 @@
           {
             "type": "TextSpan",
             "text": "</del>",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]
@@ -549,9 +549,9 @@
           {
             "type": "TextSpan",
             "text": "<pre language=\"haskell\"><code> import Text.HTML.TagSoup  main :: IO () main = print $ parseTags tags </code></pre>",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]
@@ -581,9 +581,9 @@
           {
             "type": "TextSpan",
             "text": "<script type=\"text/javascript\"> // JavaScript example  document.getElementById(\"demo\").innerHTML = \"Hello JavaScript!\"; </script>",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]
@@ -613,9 +613,9 @@
           {
             "type": "TextSpan",
             "text": "<style   type=\"text/css\"> h1 {color:red;}  p {color:blue;} </style>",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]
@@ -645,9 +645,9 @@
           {
             "type": "TextSpan",
             "text": "<style   type=\"text/css\">  foo",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]
@@ -667,9 +667,9 @@
               {
                 "type": "TextSpan",
                 "text": "<div>\nfoo",
-                "fontFamily": ".SF UI Text",
+                "fontFamily": "monospace",
                 "fontWeight": 400,
-                "fontSize": 14.0,
+                "fontSize": 11.9,
                 "color": "Color(0xdd000000)"
               }
             ]
@@ -707,9 +707,9 @@
                   {
                     "type": "TextSpan",
                     "text": "<div>",
-                    "fontFamily": ".SF UI Text",
+                    "fontFamily": "monospace",
                     "fontWeight": 400,
-                    "fontSize": 14.0,
+                    "fontSize": 11.9,
                     "color": "Color(0xdd000000)"
                   }
                 ]
@@ -743,9 +743,9 @@
           {
             "type": "TextSpan",
             "text": "<style>p{color:red;}</style>",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]
@@ -776,9 +776,9 @@
           {
             "type": "TextSpan",
             "text": "<!-- foo -->*bar*",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]
@@ -809,9 +809,9 @@
           {
             "type": "TextSpan",
             "text": "<script> foo </script>1. *bar*",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]
@@ -828,9 +828,9 @@
           {
             "type": "TextSpan",
             "text": "<!-- Foo  bar    baz -->",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]
@@ -860,9 +860,9 @@
           {
             "type": "TextSpan",
             "text": "<?php    echo '>';  ?>",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]
@@ -892,9 +892,9 @@
           {
             "type": "TextSpan",
             "text": "<!DOCTYPE html>",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]
@@ -911,9 +911,9 @@
           {
             "type": "TextSpan",
             "text": "<![CDATA[ function matchwo(a,b) {   if (a < b && a < 0) then {     return 1;    } else {      return 0;   } } ]]>",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]
@@ -943,9 +943,9 @@
           {
             "type": "TextSpan",
             "text": "  <!-- foo -->",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]
@@ -957,7 +957,9 @@
             "type": "TextSpan",
             "text": "<!-- foo --> ",
             "fontFamily": "monospace",
-            "fontSize": 11.9
+            "fontWeight": 400,
+            "fontSize": 11.9,
+            "color": "Color(0xdd000000)"
           }
         ]
       }
@@ -973,9 +975,9 @@
           {
             "type": "TextSpan",
             "text": "  <div>",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]
@@ -987,7 +989,9 @@
             "type": "TextSpan",
             "text": "<div> ",
             "fontFamily": "monospace",
-            "fontSize": 11.9
+            "fontWeight": 400,
+            "fontSize": 11.9,
+            "color": "Color(0xdd000000)"
           }
         ]
       }
@@ -1016,9 +1020,9 @@
           {
             "type": "TextSpan",
             "text": "<div> bar </div>",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]
@@ -1035,9 +1039,9 @@
           {
             "type": "TextSpan",
             "text": "<div> bar </div> *foo*",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]
@@ -1089,9 +1093,9 @@
           {
             "type": "TextSpan",
             "text": "<div>",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]
@@ -1124,9 +1128,9 @@
           {
             "type": "TextSpan",
             "text": "</div>",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]
@@ -1143,9 +1147,9 @@
           {
             "type": "TextSpan",
             "text": "<div> *Emphasized* text. </div>",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]
@@ -1162,9 +1166,9 @@
           {
             "type": "TextSpan",
             "text": "<table> <tr> <td> Hi </td> </tr> </table>",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]
@@ -1181,9 +1185,9 @@
           {
             "type": "TextSpan",
             "text": "<table>   <tr>",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]
@@ -1195,7 +1199,9 @@
             "type": "TextSpan",
             "text": "<td>   Hi </td> ",
             "fontFamily": "monospace",
-            "fontSize": 11.9
+            "fontWeight": 400,
+            "fontSize": 11.9,
+            "color": "Color(0xdd000000)"
           }
         ]
       },
@@ -1205,9 +1211,9 @@
           {
             "type": "TextSpan",
             "text": "  </tr> </table>",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]

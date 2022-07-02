@@ -399,9 +399,9 @@
           {
             "type": "TextSpan",
             "text": "<!-- -->",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]
@@ -503,9 +503,9 @@
           {
             "type": "TextSpan",
             "text": "<!-- -->",
-            "fontFamily": ".SF UI Text",
+            "fontFamily": "monospace",
             "fontWeight": 400,
-            "fontSize": 14.0,
+            "fontSize": 11.9,
             "color": "Color(0xdd000000)"
           }
         ]
@@ -517,7 +517,9 @@
             "type": "TextSpan",
             "text": "code ",
             "fontFamily": "monospace",
-            "fontSize": 11.9
+            "fontWeight": 400,
+            "fontSize": 11.9,
+            "color": "Color(0xdd000000)"
           }
         ]
       }
@@ -805,7 +807,9 @@
             "type": "TextSpan",
             "text": "3. c ",
             "fontFamily": "monospace",
-            "fontSize": 11.9
+            "fontWeight": 400,
+            "fontSize": 11.9,
+            "color": "Color(0xdd000000)"
           }
         ]
       }

@@ -121,7 +121,9 @@
             "type": "TextSpan",
             "text": "> # Foo > bar > baz ",
             "fontFamily": "monospace",
-            "fontSize": 11.9
+            "fontWeight": 400,
+            "fontSize": 11.9,
+            "color": "Color(0xdd000000)"
           }
         ]
       }
@@ -291,7 +293,9 @@
             "type": "TextSpan",
             "text": "bar ",
             "fontFamily": "monospace",
-            "fontSize": 11.9
+            "fontWeight": 400,
+            "fontSize": 11.9,
+            "color": "Color(0xdd000000)"
           }
         ]
       }

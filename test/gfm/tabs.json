@@ -10,7 +10,9 @@
             "type": "TextSpan",
             "text": "foo\tbaz\t\tbim ",
             "fontFamily": "monospace",
-            "fontSize": 11.9
+            "fontWeight": 400,
+            "fontSize": 11.9,
+            "color": "Color(0xdd000000)"
           }
         ]
       }
@@ -27,7 +29,9 @@
             "type": "TextSpan",
             "text": "foo\tbaz\t\tbim ",
             "fontFamily": "monospace",
-            "fontSize": 11.9
+            "fontWeight": 400,
+            "fontSize": 11.9,
+            "color": "Color(0xdd000000)"
           }
         ]
       }
@@ -44,7 +48,9 @@
             "type": "TextSpan",
             "text": "a\ta ὐ\ta ",
             "fontFamily": "monospace",
-            "fontSize": 11.9
+            "fontWeight": 400,
+            "fontSize": 11.9,
+            "color": "Color(0xdd000000)"
           }
         ]
       }
@@ -198,7 +204,9 @@
             "type": "TextSpan",
             "text": "foo bar ",
             "fontFamily": "monospace",
-            "fontSize": 11.9
+            "fontWeight": 400,
+            "fontSize": 11.9,
+            "color": "Color(0xdd000000)"
           }
         ]
       }

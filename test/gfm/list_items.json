@@ -23,7 +23,9 @@
             "type": "TextSpan",
             "text": "indented code ",
             "fontFamily": "monospace",
-            "fontSize": 11.9
+            "fontWeight": 400,
+            "fontSize": 11.9,
+            "color": "Color(0xdd000000)"
           }
         ]
       },
@@ -215,7 +217,9 @@
             "type": "TextSpan",
             "text": " two ",
             "fontFamily": "monospace",
-            "fontSize": 11.9
+            "fontWeight": 400,
+            "fontSize": 11.9,
+            "color": "Color(0xdd000000)"
           }
         ]
       }
@@ -756,7 +760,9 @@
             "type": "TextSpan",
             "text": "indented code ",
             "fontFamily": "monospace",
-            "fontSize": 11.9
+            "fontWeight": 400,
+            "fontSize": 11.9,
+            "color": "Color(0xdd000000)"
           }
         ]
       },
@@ -780,7 +786,9 @@
             "type": "TextSpan",
             "text": "more code ",
             "fontFamily": "monospace",
-            "fontSize": 11.9
+            "fontWeight": 400,
+            "fontSize": 11.9,
+            "color": "Color(0xdd000000)"
           }
         ]
       }
@@ -1475,7 +1483,9 @@
             "type": "TextSpan",
             "text": "1.  A paragraph     with two lines.          indented code      > A block quote. ",
             "fontFamily": "monospace",
-            "fontSize": 11.9
+            "fontWeight": 400,
+            "fontSize": 11.9,
+            "color": "Color(0xdd000000)"
           }
         ]
       }

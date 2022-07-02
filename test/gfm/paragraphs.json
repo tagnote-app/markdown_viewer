@@ -163,7 +163,9 @@
             "type": "TextSpan",
             "text": "aaa ",
             "fontFamily": "monospace",
-            "fontSize": 11.9
+            "fontWeight": 400,
+            "fontSize": 11.9,
+            "color": "Color(0xdd000000)"
           }
         ]
       },

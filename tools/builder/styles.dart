@@ -51,13 +51,21 @@ Map<String, dynamic> generateStyle(
     case 'paragraph':
     case 'blockquote':
     case 'fencedBlockquote':
-    case 'htmlBlock':
     case 'bulletList':
     case 'orderedList':
     case 'table':
       fontFamily = _theme['bodyText2']!['fontFamily'] as String;
       fontWeight = _theme['bodyText2']!['fontWeight'] as int;
       fontSize = _theme['bodyText2']!['fontSize'] as double;
+      color = _theme['bodyText2']!['color'] as String;
+      break;
+
+    case 'indentedCodeBlock':
+    case 'fencedCodeBlock':
+    case 'htmlBlock':
+      fontFamily = 'monospace';
+      fontWeight = _theme['bodyText2']!['fontWeight'] as int;
+      fontSize = (_theme['bodyText2']!['fontSize'] as double) * 0.85;
       color = _theme['bodyText2']!['color'] as String;
       break;
 
@@ -96,8 +104,6 @@ Map<String, dynamic> generateStyle(
       color = 'Color(0xff2196f3)';
       break;
 
-    case 'indentedCodeBlock':
-    case 'fencedCodeBlock':
     case 'codeSpan':
     case 'rawHtml':
       fontFamily = 'monospace';
