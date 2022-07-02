@@ -30,22 +30,28 @@
         ]
       },
       {
-        "type": "Column",
-        "children": [
-          {
+        "type": "DecoratedBox",
+        "child": {
+          "type": "Padding",
+          "child": {
             "type": "Column",
             "children": [
               {
-                "type": "TextSpan",
-                "text": "A block quote.",
-                "fontFamily": ".SF UI Text",
-                "fontWeight": 400,
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "type": "Column",
+                "children": [
+                  {
+                    "type": "TextSpan",
+                    "text": "A block quote.",
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": 400,
+                    "fontSize": 14.0,
+                    "color": "Color(0xff666666)"
+                  }
+                ]
               }
             ]
           }
-        ]
+        }
       }
     ]
   },
@@ -86,22 +92,28 @@
                 ]
               },
               {
-                "type": "Column",
-                "children": [
-                  {
+                "type": "DecoratedBox",
+                "child": {
+                  "type": "Padding",
+                  "child": {
                     "type": "Column",
                     "children": [
                       {
-                        "type": "TextSpan",
-                        "text": "A block quote.",
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": 400,
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
+                        "type": "Column",
+                        "children": [
+                          {
+                            "type": "TextSpan",
+                            "text": "A block quote.",
+                            "fontFamily": ".SF UI Text",
+                            "fontWeight": 400,
+                            "fontSize": 14.0,
+                            "color": "Color(0xff666666)"
+                          }
+                        ]
                       }
                     ]
                   }
-                ]
+                }
               }
             ]
           }
@@ -272,27 +284,98 @@
     "markdown": "   > > 1.  one\n>>\n>>     two\n",
     "expected": [
       {
-        "type": "Column",
-        "children": [
-          {
+        "type": "DecoratedBox",
+        "child": {
+          "type": "Padding",
+          "child": {
             "type": "Column",
             "children": [
               {
-                "type": "Column",
-                "children": [
-                  {
+                "type": "DecoratedBox",
+                "child": {
+                  "type": "Padding",
+                  "child": {
                     "type": "Column",
                     "children": [
                       {
                         "type": "Column",
                         "children": [
                           {
-                            "type": "TextSpan",
-                            "text": "one",
-                            "fontFamily": ".SF UI Text",
-                            "fontWeight": 400,
-                            "fontSize": 14.0,
-                            "color": "Color(0xdd000000)"
+                            "type": "Column",
+                            "children": [
+                              {
+                                "type": "Column",
+                                "children": [
+                                  {
+                                    "type": "TextSpan",
+                                    "text": "one",
+                                    "fontFamily": ".SF UI Text",
+                                    "fontWeight": 400,
+                                    "fontSize": 14.0,
+                                    "color": "Color(0xdd000000)"
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "Column",
+                                "children": [
+                                  {
+                                    "type": "TextSpan",
+                                    "text": "two",
+                                    "fontFamily": ".SF UI Text",
+                                    "fontWeight": 400,
+                                    "fontSize": 14.0,
+                                    "color": "Color(0xdd000000)"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "description": "https://github.github.com/gfm/#example-238",
+    "markdown": ">>- one\n>>\n  >  > two\n",
+    "expected": [
+      {
+        "type": "DecoratedBox",
+        "child": {
+          "type": "Padding",
+          "child": {
+            "type": "Column",
+            "children": [
+              {
+                "type": "DecoratedBox",
+                "child": {
+                  "type": "Padding",
+                  "child": {
+                    "type": "Column",
+                    "children": [
+                      {
+                        "type": "Column",
+                        "children": [
+                          {
+                            "type": "Column",
+                            "children": [
+                              {
+                                "type": "TextSpan",
+                                "text": "one",
+                                "fontFamily": ".SF UI Text",
+                                "fontWeight": 400,
+                                "fontSize": 14.0,
+                                "color": "Color(0xdd000000)"
+                              }
+                            ]
                           }
                         ]
                       },
@@ -305,64 +388,17 @@
                             "fontFamily": ".SF UI Text",
                             "fontWeight": 400,
                             "fontSize": 14.0,
-                            "color": "Color(0xdd000000)"
+                            "color": "Color(0xff666666)"
                           }
                         ]
                       }
                     ]
                   }
-                ]
+                }
               }
             ]
           }
-        ]
-      }
-    ]
-  },
-  {
-    "description": "https://github.github.com/gfm/#example-238",
-    "markdown": ">>- one\n>>\n  >  > two\n",
-    "expected": [
-      {
-        "type": "Column",
-        "children": [
-          {
-            "type": "Column",
-            "children": [
-              {
-                "type": "Column",
-                "children": [
-                  {
-                    "type": "Column",
-                    "children": [
-                      {
-                        "type": "TextSpan",
-                        "text": "one",
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": 400,
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "Column",
-                "children": [
-                  {
-                    "type": "TextSpan",
-                    "text": "two",
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": 400,
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        }
       }
     ]
   },
@@ -490,22 +526,28 @@
                 ]
               },
               {
-                "type": "Column",
-                "children": [
-                  {
+                "type": "DecoratedBox",
+                "child": {
+                  "type": "Padding",
+                  "child": {
                     "type": "Column",
                     "children": [
                       {
-                        "type": "TextSpan",
-                        "text": "bam",
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": 400,
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
+                        "type": "Column",
+                        "children": [
+                          {
+                            "type": "TextSpan",
+                            "text": "bam",
+                            "fontFamily": ".SF UI Text",
+                            "fontWeight": 400,
+                            "fontSize": 14.0,
+                            "color": "Color(0xff666666)"
+                          }
+                        ]
                       }
                     ]
                   }
-                ]
+                }
               }
             ]
           }
@@ -1329,22 +1371,28 @@
                 ]
               },
               {
-                "type": "Column",
-                "children": [
-                  {
+                "type": "DecoratedBox",
+                "child": {
+                  "type": "Padding",
+                  "child": {
                     "type": "Column",
                     "children": [
                       {
-                        "type": "TextSpan",
-                        "text": "A block quote.",
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": 400,
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
+                        "type": "Column",
+                        "children": [
+                          {
+                            "type": "TextSpan",
+                            "text": "A block quote.",
+                            "fontFamily": ".SF UI Text",
+                            "fontWeight": 400,
+                            "fontSize": 14.0,
+                            "color": "Color(0xff666666)"
+                          }
+                        ]
                       }
                     ]
                   }
-                ]
+                }
               }
             ]
           }
@@ -1389,22 +1437,28 @@
                 ]
               },
               {
-                "type": "Column",
-                "children": [
-                  {
+                "type": "DecoratedBox",
+                "child": {
+                  "type": "Padding",
+                  "child": {
                     "type": "Column",
                     "children": [
                       {
-                        "type": "TextSpan",
-                        "text": "A block quote.",
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": 400,
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
+                        "type": "Column",
+                        "children": [
+                          {
+                            "type": "TextSpan",
+                            "text": "A block quote.",
+                            "fontFamily": ".SF UI Text",
+                            "fontWeight": 400,
+                            "fontSize": 14.0,
+                            "color": "Color(0xff666666)"
+                          }
+                        ]
                       }
                     ]
                   }
-                ]
+                }
               }
             ]
           }
@@ -1449,22 +1503,28 @@
                 ]
               },
               {
-                "type": "Column",
-                "children": [
-                  {
+                "type": "DecoratedBox",
+                "child": {
+                  "type": "Padding",
+                  "child": {
                     "type": "Column",
                     "children": [
                       {
-                        "type": "TextSpan",
-                        "text": "A block quote.",
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": 400,
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
+                        "type": "Column",
+                        "children": [
+                          {
+                            "type": "TextSpan",
+                            "text": "A block quote.",
+                            "fontFamily": ".SF UI Text",
+                            "fontWeight": 400,
+                            "fontSize": 14.0,
+                            "color": "Color(0xff666666)"
+                          }
+                        ]
                       }
                     ]
                   }
-                ]
+                }
               }
             ]
           }
@@ -1528,22 +1588,28 @@
                 ]
               },
               {
-                "type": "Column",
-                "children": [
-                  {
+                "type": "DecoratedBox",
+                "child": {
+                  "type": "Padding",
+                  "child": {
                     "type": "Column",
                     "children": [
                       {
-                        "type": "TextSpan",
-                        "text": "A block quote.",
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": 400,
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
+                        "type": "Column",
+                        "children": [
+                          {
+                            "type": "TextSpan",
+                            "text": "A block quote.",
+                            "fontFamily": ".SF UI Text",
+                            "fontWeight": 400,
+                            "fontSize": 14.0,
+                            "color": "Color(0xff666666)"
+                          }
+                        ]
                       }
                     ]
                   }
-                ]
+                }
               }
             ]
           }
@@ -1580,9 +1646,10 @@
     "markdown": "> 1. > Blockquote\ncontinued here.\n",
     "expected": [
       {
-        "type": "Column",
-        "children": [
-          {
+        "type": "DecoratedBox",
+        "child": {
+          "type": "Padding",
+          "child": {
             "type": "Column",
             "children": [
               {
@@ -1592,17 +1659,28 @@
                     "type": "Column",
                     "children": [
                       {
-                        "type": "Column",
-                        "children": [
-                          {
-                            "type": "TextSpan",
-                            "text": "Blockquote\ncontinued here.",
-                            "fontFamily": ".SF UI Text",
-                            "fontWeight": 400,
-                            "fontSize": 14.0,
-                            "color": "Color(0xdd000000)"
+                        "type": "DecoratedBox",
+                        "child": {
+                          "type": "Padding",
+                          "child": {
+                            "type": "Column",
+                            "children": [
+                              {
+                                "type": "Column",
+                                "children": [
+                                  {
+                                    "type": "TextSpan",
+                                    "text": "Blockquote\ncontinued here.",
+                                    "fontFamily": ".SF UI Text",
+                                    "fontWeight": 400,
+                                    "fontSize": 14.0,
+                                    "color": "Color(0xff666666)"
+                                  }
+                                ]
+                              }
+                            ]
                           }
-                        ]
+                        }
                       }
                     ]
                   }
@@ -1610,7 +1688,7 @@
               }
             ]
           }
-        ]
+        }
       }
     ]
   },
@@ -1619,9 +1697,10 @@
     "markdown": "> 1. > Blockquote\n> continued here.\n",
     "expected": [
       {
-        "type": "Column",
-        "children": [
-          {
+        "type": "DecoratedBox",
+        "child": {
+          "type": "Padding",
+          "child": {
             "type": "Column",
             "children": [
               {
@@ -1631,17 +1710,28 @@
                     "type": "Column",
                     "children": [
                       {
-                        "type": "Column",
-                        "children": [
-                          {
-                            "type": "TextSpan",
-                            "text": "Blockquote\ncontinued here.",
-                            "fontFamily": ".SF UI Text",
-                            "fontWeight": 400,
-                            "fontSize": 14.0,
-                            "color": "Color(0xdd000000)"
+                        "type": "DecoratedBox",
+                        "child": {
+                          "type": "Padding",
+                          "child": {
+                            "type": "Column",
+                            "children": [
+                              {
+                                "type": "Column",
+                                "children": [
+                                  {
+                                    "type": "TextSpan",
+                                    "text": "Blockquote\ncontinued here.",
+                                    "fontFamily": ".SF UI Text",
+                                    "fontWeight": 400,
+                                    "fontSize": 14.0,
+                                    "color": "Color(0xff666666)"
+                                  }
+                                ]
+                              }
+                            ]
                           }
-                        ]
+                        }
                       }
                     ]
                   }
@@ -1649,7 +1739,7 @@
               }
             ]
           }
-        ]
+        }
       }
     ]
   },

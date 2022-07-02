@@ -1220,22 +1220,28 @@
                 "color": "Color(0xdd000000)"
               },
               {
-                "type": "Column",
-                "children": [
-                  {
+                "type": "DecoratedBox",
+                "child": {
+                  "type": "Padding",
+                  "child": {
                     "type": "Column",
                     "children": [
                       {
-                        "type": "TextSpan",
-                        "text": "b",
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": 400,
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
+                        "type": "Column",
+                        "children": [
+                          {
+                            "type": "TextSpan",
+                            "text": "b",
+                            "fontFamily": ".SF UI Text",
+                            "fontWeight": 400,
+                            "fontSize": 14.0,
+                            "color": "Color(0xff666666)"
+                          }
+                        ]
                       }
                     ]
                   }
-                ]
+                }
               }
             ]
           },
@@ -1275,22 +1281,28 @@
                 "color": "Color(0xdd000000)"
               },
               {
-                "type": "Column",
-                "children": [
-                  {
+                "type": "DecoratedBox",
+                "child": {
+                  "type": "Padding",
+                  "child": {
                     "type": "Column",
                     "children": [
                       {
-                        "type": "TextSpan",
-                        "text": "b",
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": 400,
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
+                        "type": "Column",
+                        "children": [
+                          {
+                            "type": "TextSpan",
+                            "text": "b",
+                            "fontFamily": ".SF UI Text",
+                            "fontWeight": 400,
+                            "fontSize": 14.0,
+                            "color": "Color(0xff666666)"
+                          }
+                        ]
                       }
                     ]
                   }
-                ]
+                }
               },
               {
                 "type": "Column",

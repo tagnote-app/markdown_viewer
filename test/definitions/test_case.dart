@@ -37,31 +37,43 @@ abstract class ExpectedElement {
 class ExpectedBlock extends ExpectedElement {
   ExpectedBlock({
     required String type,
-    required this.children,
+    this.children,
+    this.child,
   }) : super(type: type);
 
   factory ExpectedBlock.formJson(Map<String, dynamic> json) {
+    ExpectedElement createChild(Map<String, dynamic> data) {
+      return data['type'] == 'TextSpan'
+          ? ExpectedInline.formJson(data)
+          : ExpectedBlock.formJson(data);
+    }
+
     return ExpectedBlock(
       type: json['type'],
       children: json['children'] == null
           ? null
           : List<ExpectedElement>.from(
               List<Map<String, dynamic>>.from(json['children']).map(
-                (e) => e['type'] == 'TextSpan'
-                    ? ExpectedInline.formJson(e)
-                    : ExpectedBlock.formJson(e),
+                createChild,
               ),
             ),
+      child: json['child'] == null ? null : createChild(json['child']),
     );
   }
 
   List<ExpectedElement>? children;
+  ExpectedElement? child;
+
+  bool get hasSingleChild => child != null && children == null;
+  bool get hasMultiChild => child == null && children != null;
+  bool get hasNoChild => child == null && children == null;
 
   @override
   Map<String, dynamic> toMap() => {
         'type': type,
         if (children != null)
           'children': children!.map((e) => e.toMap()).toList(),
+        if (child != null) 'child': child!.toMap(),
       };
 }
 

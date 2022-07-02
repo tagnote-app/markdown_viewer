@@ -68,20 +68,33 @@ class TestCaseBuilder implements NodeVisitor {
   void visitElementAfter(Element element) {
     final current = _tree.removeLast();
     final parent = _tree.last;
+
     if (current.isBlock) {
-      if (current.type == 'blockquote') {
-        _isInBlockquote = false;
-      }
+      Map<String, dynamic> blockChild;
+
       if (current.children.isNotEmpty) {
-        parent.children.add({
+        blockChild = {
           'type': 'Column',
           'children': _mergeTextSpans(current.children),
-        });
+        };
       } else {
-        parent.children.add({
+        blockChild = {
           'type': 'SizedBox',
-        });
+        };
       }
+
+      if (current.type == 'blockquote') {
+        _isInBlockquote = false;
+        blockChild = {
+          'type': 'DecoratedBox',
+          'child': {
+            'type': 'Padding',
+            'child': blockChild,
+          }
+        };
+      }
+
+      parent.children.add(blockChild);
     } else {
       parent.children.addAll(current.children);
     }
