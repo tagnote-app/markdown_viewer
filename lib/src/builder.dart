@@ -85,21 +85,38 @@ class MarkdownBuilder implements md.NodeVisitor {
     final parent = _tree.last;
 
     if (current.isBlock) {
-      if (current.type == 'blockquote') {
-        _isInBlockquote = false;
-      }
+      Widget blockChild;
+
       if (current.children.isNotEmpty) {
-        parent.children.add(Column(
+        blockChild = Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: mergeInlineChildren(
             current.children,
             richTextBuilder: _buildRichText,
           ),
-        ));
+        );
       } else {
-        parent.children.add(const SizedBox.shrink());
+        blockChild = const SizedBox.shrink();
       }
+
+      if (current.type == 'blockquote') {
+        _isInBlockquote = false;
+        if (_styleSheet.blockquotePadding != null) {
+          blockChild = Padding(
+            padding: _styleSheet.blockquotePadding!,
+            child: blockChild,
+          );
+        }
+        if (_styleSheet.blockquoteDecoration != null) {
+          blockChild = DecoratedBox(
+            decoration: _styleSheet.blockquoteDecoration!,
+            child: blockChild,
+          );
+        }
+      }
+
+      parent.children.add(blockChild);
     } else {
       parent.children.addAll(current.children);
     }
