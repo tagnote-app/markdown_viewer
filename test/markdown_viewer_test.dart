@@ -23,9 +23,36 @@ void _testDirectory(String name) {
 
   for (final entry in entries) {
     if (![
-      'emphasis_and_strong_emphasis.json',
       'atx_headings.json',
       'setext_headings.json',
+      'emphasis_and_strong_emphasis.json',
+      'paragraphs.json',
+      'block_quotes.json',
+      'fenced_code_blocks.json',
+      'indented_code_blocks.json',
+      // 'autolinks.json',
+      // 'autolinks_extension_.json',
+      // 'backslash_escapes.json',
+      // 'blank_lines.json',
+      // 'code_spans.json',
+      // 'disallowed_raw_html_extension_.json',
+      // 'entity_and_numeric_character_references.json',
+      // 'hard_line_breaks.json',
+      // 'html_blocks.json',
+      // 'images.json',
+      // 'inlines.json',
+      // 'link_reference_definitions.json',
+      // 'links.json',
+      // 'list_items.json',
+      // 'lists.json',
+      // 'precedence.json',
+      // 'raw_html.json',
+      // 'soft_line_breaks.json',
+      // 'strikethrough_extension_.json',
+      // 'tables_extension_.json',
+      // 'tabs.json',
+      // 'textual_content.json',
+      // 'thematic_breaks.json',
     ].contains(entry.path.split('/').last)) {
       continue;
     }
@@ -63,8 +90,15 @@ void _testFile(String path) {
       final allWidgets = tester.allWidgets;
       expect(allWidgets.elementAt(0).runtimeType, Directionality);
       expect(allWidgets.elementAt(1).runtimeType, MarkdownViewer);
-      expect(allWidgets.elementAt(2).runtimeType, Column);
 
+      // For example,
+      // https://github.github.com/gfm/#example-217
+      if (allWidgets.elementAt(2) is SizedBox) {
+        _expectBlankBox(allWidgets.elementAt(2) as SizedBox);
+        return;
+      }
+
+      expect(allWidgets.elementAt(2).runtimeType, Column);
       final rootColumn = allWidgets.elementAt(2);
 
       void loopTest(widget, ExpectedElement expectedElement) {
@@ -122,13 +156,7 @@ void _testFile(String path) {
         }
         // If current widget has no child.
         else if (widget is SizedBox) {
-          expect({
-            'height': widget.height,
-            'width': widget.width,
-          }, {
-            'height': 0.0,
-            'width': 0.0,
-          });
+          _expectBlankBox(widget);
         }
       }
 
@@ -143,6 +171,16 @@ void _testFile(String path) {
               : ExpectedBlock(type: 'Column', children: expected));
     });
   }
+}
+
+void _expectBlankBox(SizedBox widget) {
+  expect({
+    'height': widget.height,
+    'width': widget.width,
+  }, {
+    'height': 0.0,
+    'width': 0.0,
+  });
 }
 
 /// Markdown test folder.
