@@ -23,8 +23,8 @@ class MarkdownStyle {
     this.htmlBlock,
     this.inlineCode,
     this.codeBlock,
-    this.blockquoteDecoration,
-    this.blockquotePadding,
+    this.blockquoteDecoration = const BoxDecoration(),
+    this.blockquotePadding = EdgeInsets.zero,
   });
 
   /// Creates a [MarkdownStyle] from the [TextStyle]s in the provided [theme].
@@ -104,8 +104,8 @@ class MarkdownStyle {
   final TextStyle? htmlBlock;
   final TextStyle? inlineCode;
   final TextStyle? codeBlock;
-  final BoxDecoration? blockquoteDecoration;
-  final EdgeInsets? blockquotePadding;
+  final BoxDecoration blockquoteDecoration;
+  final EdgeInsets blockquotePadding;
 
   /// Generates a [TextStyle].
   TextStyle style(md.Element element, TextStyle? parentStyle) {
