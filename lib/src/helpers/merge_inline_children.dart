@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 // https://github.com/flutter/packages/blob/main/packages/flutter_markdown/lib/src/builder.dart#L666
 
 /// Merges adjacent [TextSpan] children
+// TODO(Zhiguang): Simplify this function, it is impossible that a inline
+// widget is adjacent to a block widget. So only need to check the first child
+// to determine if need to iterate the children.
 List<Widget> mergeInlineChildren(
   List<Widget> children, {
   required Widget Function(TextSpan? span, {TextAlign? textAlign})
