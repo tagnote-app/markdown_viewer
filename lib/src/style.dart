@@ -23,9 +23,15 @@ class MarkdownStyle {
     this.htmlBlock,
     this.inlineCode,
     this.codeBlock,
-    this.blockquoteDecoration = const BoxDecoration(),
-    this.blockquotePadding = EdgeInsets.zero,
-  });
+    BoxDecoration? blockquoteDecoration,
+    EdgeInsets? blockquotePadding,
+    double? blockSpacing,
+  })  : blockSpacing = blockSpacing ?? 8.0,
+        blockquotePadding = blockquotePadding ?? const EdgeInsets.all(8),
+        blockquoteDecoration = blockquoteDecoration ??
+            BoxDecoration(
+                color: Colors.grey.shade200,
+                borderRadius: BorderRadius.circular(2.0));
 
   /// Creates a [MarkdownStyle] from the [TextStyle]s in the provided [theme].
   /// Also it allows to set individual [TextStyle]s which will be merged into
@@ -54,6 +60,7 @@ class MarkdownStyle {
     TextStyle? codeBlock,
     BoxDecoration? blockquoteDecoration,
     EdgeInsets? blockquotePadding,
+    double? blockSpacing,
   }) {
     return MarkdownStyle(
       paragraph: theme.textTheme.bodyText2?.merge(paragraph),
@@ -75,12 +82,9 @@ class MarkdownStyle {
       htmlBlock: _generateCodeStyle(theme, false)?.merge(htmlBlock),
       inlineCode: _generateCodeStyle(theme, true)?.merge(inlineCode),
       codeBlock: _generateCodeStyle(theme, false)?.merge(codeBlock),
-      blockquoteDecoration: blockquoteDecoration ??
-          BoxDecoration(
-            color: theme.colorScheme.primary.withAlpha(100),
-            borderRadius: BorderRadius.circular(2.0),
-          ),
-      blockquotePadding: blockquotePadding ?? const EdgeInsets.all(8),
+      blockquoteDecoration: blockquoteDecoration,
+      blockquotePadding: blockquotePadding,
+      blockSpacing: blockSpacing,
     );
   }
 
@@ -106,6 +110,9 @@ class MarkdownStyle {
   final TextStyle? codeBlock;
   final BoxDecoration blockquoteDecoration;
   final EdgeInsets blockquotePadding;
+
+  /// The vertical space between two block elements.
+  final double blockSpacing;
 
   /// Generates a [TextStyle].
   TextStyle style(md.Element element, TextStyle? parentStyle) {
