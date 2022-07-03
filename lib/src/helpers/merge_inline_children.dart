@@ -1,85 +1,63 @@
 import 'package:flutter/material.dart';
 
-// The code in this file is from
-// https://github.com/flutter/packages/blob/main/packages/flutter_markdown/lib/src/builder.dart#L666
-
-/// Merges adjacent [TextSpan] children
-// TODO(Zhiguang): Simplify this function, it is impossible that a inline
-// widget is adjacent to a block widget. So only need to check the first child
-// to determine if need to iterate the children.
 List<Widget> mergeInlineChildren(
   List<Widget> children, {
-  required Widget Function(TextSpan? span, {TextAlign? textAlign})
-      richTextBuilder,
-  TextAlign? textAlign,
+  required Widget Function(TextSpan span) richTextBuilder,
 }) {
-  final mergedTexts = <Widget>[];
-  for (final Widget child in children) {
-    if (mergedTexts.isNotEmpty && mergedTexts.last is Wrap) {
-      final wrap = mergedTexts.last as Wrap;
-      final mergeGroup = wrap.children;
+  if (children.isEmpty) {
+    return children;
+  }
 
-      if (mergeGroup.last is RichText && child is RichText) {
-        final previous = mergeGroup.removeLast() as RichText;
-        final previousTextSpan = previous.text as TextSpan;
-        final children = previousTextSpan.children != null
-            ? previousTextSpan.children!
-                .map((InlineSpan span) => span is! TextSpan
-                    ? TextSpan(children: <InlineSpan>[span])
-                    : span)
-                .toList()
-            : <TextSpan>[previousTextSpan];
+  final mergedWidgets = <Widget>[];
+
+  for (final child in children) {
+    if (mergedWidgets.isNotEmpty && mergedWidgets.last is Wrap) {
+      final wrap = mergedWidgets.last as Wrap;
+      final wrapChildren = wrap.children;
+      final previous = wrapChildren.removeLast();
+
+      final previousTextSpan = previous is SelectableText
+          ? previous.textSpan!
+          : (previous as RichText).text as TextSpan;
+      final children = previousTextSpan.children != null
+          ? List<TextSpan>.from(previousTextSpan.children!)
+          : [previousTextSpan];
+
+      if (child is RichText) {
         children.add(child.text as TextSpan);
-        final mergedSpan = _mergeSimilarTextSpans(children);
-        mergeGroup.add(richTextBuilder(
-          mergedSpan,
-          textAlign: textAlign,
-        ));
-      } else if (mergeGroup.last is SelectableText && child is SelectableText) {
-        final previous = mergeGroup.removeLast() as SelectableText;
-        final previousTextSpan = previous.textSpan!;
-        final children = previousTextSpan.children != null
-            ? List<TextSpan>.from(previousTextSpan.children!)
-            : <TextSpan>[previousTextSpan];
-        if (child.textSpan != null) {
-          children.add(child.textSpan!);
-        }
-        final mergedSpan = _mergeSimilarTextSpans(children);
-        mergeGroup.add(
-          richTextBuilder(
-            mergedSpan,
-            textAlign: textAlign,
-          ),
-        );
+      } else if (child is SelectableText && child.textSpan != null) {
+        children.add(child.textSpan!);
       }
+
+      final mergedSpan = _mergeSimilarTextSpans(children);
+      wrapChildren.add(richTextBuilder(mergedSpan));
+    } else if (child is RichText || child is SelectableText) {
+      // Enclose all inline widgets in a `Wrap` widget.
+      mergedWidgets.add(Wrap(
+        children: [child],
+      ));
     } else {
-      if (child is RichText || child is SelectableText) {
-        // Enclose all inline widgets in a `Wrap` widget.
-        mergedTexts.add(Wrap(
-          children: [child],
-        ));
-      } else {
-        mergedTexts.add(child);
-      }
+      mergedWidgets.add(child);
     }
   }
-  return mergedTexts;
+
+  return mergedWidgets;
 }
 
 /// Combine text spans with equivalent properties into a single span.
-TextSpan? _mergeSimilarTextSpans(List<TextSpan>? textSpans) {
+TextSpan _mergeSimilarTextSpans(List<TextSpan>? textSpans) {
   if (textSpans == null || textSpans.length < 2) {
     return TextSpan(children: textSpans);
   }
 
-  final List<TextSpan> mergedSpans = <TextSpan>[textSpans.first];
+  final mergedSpans = <TextSpan>[textSpans.first];
 
-  for (int index = 1; index < textSpans.length; index++) {
-    final TextSpan nextChild = textSpans[index];
+  for (var index = 1; index < textSpans.length; index++) {
+    final nextChild = textSpans[index];
     if (nextChild.recognizer == mergedSpans.last.recognizer &&
         nextChild.semanticsLabel == mergedSpans.last.semanticsLabel &&
         nextChild.style == mergedSpans.last.style) {
-      final TextSpan previous = mergedSpans.removeLast();
+      final previous = mergedSpans.removeLast();
       mergedSpans.add(TextSpan(
         text: previous.toPlainText() + nextChild.toPlainText(),
         recognizer: previous.recognizer,

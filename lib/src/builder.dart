@@ -87,17 +87,15 @@ class MarkdownBuilder implements md.NodeVisitor {
     if (current.isBlock) {
       Widget blockChild;
 
-      if (current.children.length > 1) {
+      if (current.children.isNotEmpty) {
         blockChild = Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: mergeInlineChildren(
             current.children,
-            richTextBuilder: _buildRichText,
+            richTextBuilder: (span) => _buildRichText(span),
           ),
         );
-      } else if (current.children.length == 1) {
-        blockChild = current.children.single;
       } else {
         blockChild = const SizedBox.shrink();
       }
