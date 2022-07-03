@@ -76,23 +76,23 @@ class TestCaseBuilder implements NodeVisitor {
 
   /// Merges the [nodes] which are adjacent and have the same types.
   List<Map<String, dynamic>> _mergeInlines(List<Map<String, dynamic>> nodes) {
-    final result = <Map<String, dynamic>>[];
+    if (nodes.isEmpty) {
+      return nodes;
+    }
+    final result = <Map<String, dynamic>>[nodes.first];
 
-    for (final node in nodes) {
-      if (result.isEmpty) {
-        result.add(node);
+    for (var i = 1; i < nodes.length; i++) {
+      final node = nodes[i];
+      final last = result.last;
+
+      if (node['inline'] != null &&
+          node['inline'] != 'link' &&
+          last['inline'] == node['inline']) {
+        (result.last['children'] as List).add(node);
+      } else if (last['text'] != null && node['text'] != null) {
+        result.last['text'] = '${result.last['text']}${node['text']}';
       } else {
-        final last = result.last;
-
-        if (node['inline'] != null &&
-            node['inline'] != 'link' &&
-            last['inline'] == node['inline']) {
-          (result.last['children'] as List).add(node);
-        } else if (last['text'] != null && node['text'] != null) {
-          result.last['text'] = '${result.last['text']}${node['text']}';
-        } else {
-          result.add(node);
-        }
+        result.add(node);
       }
     }
 
