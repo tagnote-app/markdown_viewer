@@ -1,13 +1,13 @@
 [
   {
-    "description": "https://github.github.com/gfm/#example-671",
+    "description": "Textual content, https://github.github.com/gfm/#example-671",
     "markdown": "hello $.;'there\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "hello $.;'there"
           }
         ]
@@ -15,14 +15,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-672",
+    "description": "Textual content, https://github.github.com/gfm/#example-672",
     "markdown": "Foo χρῆν\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "Foo χρῆν"
           }
         ]
@@ -30,14 +30,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-673",
+    "description": "Textual content, https://github.github.com/gfm/#example-673",
     "markdown": "Multiple     spaces\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "Multiple     spaces"
           }
         ]

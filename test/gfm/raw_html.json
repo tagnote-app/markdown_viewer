@@ -1,13 +1,13 @@
 [
   {
-    "description": "https://github.github.com/gfm/#example-632",
+    "description": "Raw HTML, https://github.github.com/gfm/#example-632",
     "markdown": "<a><bab><c2c>\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "inlineHtml",
+            "inline": "inlineHtml",
             "text": "<a><bab><c2c>"
           }
         ]
@@ -15,14 +15,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-633",
+    "description": "Raw HTML, https://github.github.com/gfm/#example-633",
     "markdown": "<a/><b2/>\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "inlineHtml",
+            "inline": "inlineHtml",
             "text": "<a/><b2/>"
           }
         ]
@@ -30,14 +30,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-634",
+    "description": "Raw HTML, https://github.github.com/gfm/#example-634",
     "markdown": "<a  /><b2\ndata=\"foo\" >\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "inlineHtml",
+            "inline": "inlineHtml",
             "text": "<a  /><b2 data=\"foo\" >"
           }
         ]
@@ -45,14 +45,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-635",
+    "description": "Raw HTML, https://github.github.com/gfm/#example-635",
     "markdown": "<a foo=\"bar\" bam = 'baz <em>\"</em>'\n_boolean zoop:33=zoop:33 />\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "inlineHtml",
+            "inline": "inlineHtml",
             "text": "<a foo=\"bar\" bam = 'baz <em>\"</em>' _boolean zoop:33=zoop:33 />"
           }
         ]
@@ -60,18 +60,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-636",
+    "description": "Raw HTML, https://github.github.com/gfm/#example-636",
     "markdown": "Foo <responsive-image src=\"foo.jpg\" />\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "Foo "
           },
           {
-            "type": "inlineHtml",
+            "inline": "inlineHtml",
             "text": "<responsive-image src=\"foo.jpg\" />"
           }
         ]
@@ -79,14 +79,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-637",
+    "description": "Raw HTML, https://github.github.com/gfm/#example-637",
     "markdown": "<33> <__>\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "<33> <__>"
           }
         ]
@@ -94,14 +94,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-638",
+    "description": "Raw HTML, https://github.github.com/gfm/#example-638",
     "markdown": "<a h*#ref=\"hi\">\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "<a h*#ref=\"hi\">"
           }
         ]
@@ -109,14 +109,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-639",
+    "description": "Raw HTML, https://github.github.com/gfm/#example-639",
     "markdown": "<a href=\"hi'> <a href=hi'>\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "<a href=\"hi'> <a href=hi'>"
           }
         ]
@@ -124,14 +124,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-640",
+    "description": "Raw HTML, https://github.github.com/gfm/#example-640",
     "markdown": "< a><\nfoo><bar/ >\n<foo bar=baz\nbim!bop />\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "< a>< foo><bar/ > <foo bar=baz bim!bop />"
           }
         ]
@@ -139,14 +139,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-641",
+    "description": "Raw HTML, https://github.github.com/gfm/#example-641",
     "markdown": "<a href='bar'title=title>\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "<a href='bar'title=title>"
           }
         ]
@@ -154,14 +154,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-642",
+    "description": "Raw HTML, https://github.github.com/gfm/#example-642",
     "markdown": "</a></foo >\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "inlineHtml",
+            "inline": "inlineHtml",
             "text": "</a></foo >"
           }
         ]
@@ -169,14 +169,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-643",
+    "description": "Raw HTML, https://github.github.com/gfm/#example-643",
     "markdown": "</a href=\"foo\">\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "</a href=\"foo\">"
           }
         ]
@@ -184,18 +184,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-644",
+    "description": "Raw HTML, https://github.github.com/gfm/#example-644",
     "markdown": "foo <!-- this is a\ncomment - with hyphen -->\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo "
           },
           {
-            "type": "inlineHtml",
+            "inline": "inlineHtml",
             "text": "<!-- this is a comment - with hyphen -->"
           }
         ]
@@ -203,14 +203,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-645",
+    "description": "Raw HTML, https://github.github.com/gfm/#example-645",
     "markdown": "foo <!-- not a comment -- two hyphens -->\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo <!-- not a comment -- two hyphens -->"
           }
         ]
@@ -218,23 +218,23 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-646",
+    "description": "Raw HTML, https://github.github.com/gfm/#example-646",
     "markdown": "foo <!--> foo -->\n\nfoo <!-- foo--->\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo <!--> foo -->"
           }
         ]
       },
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo <!-- foo--->"
           }
         ]
@@ -242,18 +242,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-647",
+    "description": "Raw HTML, https://github.github.com/gfm/#example-647",
     "markdown": "foo <?php echo $a; ?>\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo "
           },
           {
-            "type": "inlineHtml",
+            "inline": "inlineHtml",
             "text": "<?php echo $a; ?>"
           }
         ]
@@ -261,18 +261,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-648",
+    "description": "Raw HTML, https://github.github.com/gfm/#example-648",
     "markdown": "foo <!ELEMENT br EMPTY>\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo "
           },
           {
-            "type": "inlineHtml",
+            "inline": "inlineHtml",
             "text": "<!ELEMENT br EMPTY>"
           }
         ]
@@ -280,18 +280,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-649",
+    "description": "Raw HTML, https://github.github.com/gfm/#example-649",
     "markdown": "foo <![CDATA[>&<]]>\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo "
           },
           {
-            "type": "inlineHtml",
+            "inline": "inlineHtml",
             "text": "<![CDATA[>&<]]>"
           }
         ]
@@ -299,18 +299,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-650",
+    "description": "Raw HTML, https://github.github.com/gfm/#example-650",
     "markdown": "foo <a href=\"&ouml;\">\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo "
           },
           {
-            "type": "inlineHtml",
+            "inline": "inlineHtml",
             "text": "<a href=\"&ouml;\">"
           }
         ]
@@ -318,18 +318,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-651",
+    "description": "Raw HTML, https://github.github.com/gfm/#example-651",
     "markdown": "foo <a href=\"\\*\">\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo "
           },
           {
-            "type": "inlineHtml",
+            "inline": "inlineHtml",
             "text": "<a href=\"\\*\">"
           }
         ]
@@ -337,14 +337,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-652",
+    "description": "Raw HTML, https://github.github.com/gfm/#example-652",
     "markdown": "<a href=\"\\\"\">\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "<a href=\"\"\">"
           }
         ]

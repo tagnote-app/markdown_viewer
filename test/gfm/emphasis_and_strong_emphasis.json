@@ -1,13 +1,13 @@
 [
   {
-    "description": "https://github.github.com/gfm/#example-360",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-360",
     "markdown": "*foo bar*\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "foo bar"
           }
         ]
@@ -15,14 +15,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-361",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-361",
     "markdown": "a * foo bar*\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "a * foo bar*"
           }
         ]
@@ -30,14 +30,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-362",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-362",
     "markdown": "a*\"foo\"*\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "a*\"foo\"*"
           }
         ]
@@ -45,14 +45,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-363",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-363",
     "markdown": "* a *\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "* a *"
           }
         ]
@@ -60,18 +60,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-364",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-364",
     "markdown": "foo*bar*\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo"
           },
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "bar"
           }
         ]
@@ -79,22 +79,22 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-365",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-365",
     "markdown": "5*6*78\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "5"
           },
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "6"
           },
           {
-            "type": "text",
+            "inline": "text",
             "text": "78"
           }
         ]
@@ -102,14 +102,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-366",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-366",
     "markdown": "_foo bar_\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "foo bar"
           }
         ]
@@ -117,14 +117,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-367",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-367",
     "markdown": "_ foo bar_\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "_ foo bar_"
           }
         ]
@@ -132,14 +132,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-368",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-368",
     "markdown": "a_\"foo\"_\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "a_\"foo\"_"
           }
         ]
@@ -147,14 +147,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-369",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-369",
     "markdown": "foo_bar_\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo_bar_"
           }
         ]
@@ -162,14 +162,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-370",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-370",
     "markdown": "5_6_78\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "5_6_78"
           }
         ]
@@ -177,14 +177,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-371",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-371",
     "markdown": "пристаням_стремятся_\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "пристаням_стремятся_"
           }
         ]
@@ -192,14 +192,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-372",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-372",
     "markdown": "aa_\"bb\"_cc\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "aa_\"bb\"_cc"
           }
         ]
@@ -207,18 +207,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-373",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-373",
     "markdown": "foo-_(bar)_\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo-"
           },
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "(bar)"
           }
         ]
@@ -226,14 +226,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-374",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-374",
     "markdown": "_foo*\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "_foo*"
           }
         ]
@@ -241,14 +241,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-375",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-375",
     "markdown": "*foo bar *\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "*foo bar *"
           }
         ]
@@ -256,14 +256,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-376",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-376",
     "markdown": "*foo bar\n*\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "*foo bar *"
           }
         ]
@@ -271,14 +271,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-377",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-377",
     "markdown": "*(*foo)\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "*(*foo)"
           }
         ]
@@ -286,14 +286,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-378",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-378",
     "markdown": "*(*foo*)*\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "(foo)"
           }
         ]
@@ -301,18 +301,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-379",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-379",
     "markdown": "*foo*bar\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "foo"
           },
           {
-            "type": "text",
+            "inline": "text",
             "text": "bar"
           }
         ]
@@ -320,14 +320,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-380",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-380",
     "markdown": "_foo bar _\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "_foo bar _"
           }
         ]
@@ -335,14 +335,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-381",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-381",
     "markdown": "_(_foo)\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "_(_foo)"
           }
         ]
@@ -350,14 +350,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-382",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-382",
     "markdown": "_(_foo_)_\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "(foo)"
           }
         ]
@@ -365,14 +365,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-383",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-383",
     "markdown": "_foo_bar\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "_foo_bar"
           }
         ]
@@ -380,14 +380,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-384",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-384",
     "markdown": "_пристаням_стремятся\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "_пристаням_стремятся"
           }
         ]
@@ -395,14 +395,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-385",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-385",
     "markdown": "_foo_bar_baz_\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "foo_bar_baz"
           }
         ]
@@ -410,18 +410,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-386",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-386",
     "markdown": "_(bar)_.\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "(bar)"
           },
           {
-            "type": "text",
+            "inline": "text",
             "text": "."
           }
         ]
@@ -429,14 +429,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-387",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-387",
     "markdown": "**foo bar**\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "foo bar"
           }
         ]
@@ -444,14 +444,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-388",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-388",
     "markdown": "** foo bar**\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "** foo bar**"
           }
         ]
@@ -459,14 +459,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-389",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-389",
     "markdown": "a**\"foo\"**\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "a**\"foo\"**"
           }
         ]
@@ -474,18 +474,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-390",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-390",
     "markdown": "foo**bar**\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo"
           },
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "bar"
           }
         ]
@@ -493,14 +493,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-391",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-391",
     "markdown": "__foo bar__\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "foo bar"
           }
         ]
@@ -508,14 +508,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-392",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-392",
     "markdown": "__ foo bar__\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "__ foo bar__"
           }
         ]
@@ -523,14 +523,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-393",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-393",
     "markdown": "__\nfoo bar__\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "__ foo bar__"
           }
         ]
@@ -538,14 +538,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-394",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-394",
     "markdown": "a__\"foo\"__\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "a__\"foo\"__"
           }
         ]
@@ -553,14 +553,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-395",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-395",
     "markdown": "foo__bar__\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo__bar__"
           }
         ]
@@ -568,14 +568,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-396",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-396",
     "markdown": "5__6__78\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "5__6__78"
           }
         ]
@@ -583,14 +583,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-397",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-397",
     "markdown": "пристаням__стремятся__\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "пристаням__стремятся__"
           }
         ]
@@ -598,14 +598,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-398",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-398",
     "markdown": "__foo, __bar__, baz__\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "foo, bar, baz"
           }
         ]
@@ -613,18 +613,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-399",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-399",
     "markdown": "foo-__(bar)__\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo-"
           },
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "(bar)"
           }
         ]
@@ -632,14 +632,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-400",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-400",
     "markdown": "**foo bar **\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "**foo bar **"
           }
         ]
@@ -647,14 +647,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-401",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-401",
     "markdown": "**(**foo)\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "**(**foo)"
           }
         ]
@@ -662,22 +662,22 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-402",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-402",
     "markdown": "*(**foo**)*\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "("
           },
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "foo"
           },
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": ")"
           }
         ]
@@ -685,30 +685,30 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-403",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-403",
     "markdown": "**Gomphocarpus (*Gomphocarpus physocarpus*, syn.\n*Asclepias physocarpa*)**\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "Gomphocarpus ("
           },
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "Gomphocarpus physocarpus"
           },
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": ", syn. "
           },
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "Asclepias physocarpa"
           },
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": ")"
           }
         ]
@@ -716,22 +716,22 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-404",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-404",
     "markdown": "**foo \"*bar*\" foo**\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "foo \""
           },
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "bar"
           },
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "\" foo"
           }
         ]
@@ -739,18 +739,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-405",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-405",
     "markdown": "**foo**bar\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "foo"
           },
           {
-            "type": "text",
+            "inline": "text",
             "text": "bar"
           }
         ]
@@ -758,14 +758,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-406",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-406",
     "markdown": "__foo bar __\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "__foo bar __"
           }
         ]
@@ -773,14 +773,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-407",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-407",
     "markdown": "__(__foo)\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "__(__foo)"
           }
         ]
@@ -788,22 +788,22 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-408",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-408",
     "markdown": "_(__foo__)_\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "("
           },
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "foo"
           },
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": ")"
           }
         ]
@@ -811,14 +811,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-409",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-409",
     "markdown": "__foo__bar\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "__foo__bar"
           }
         ]
@@ -826,14 +826,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-410",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-410",
     "markdown": "__пристаням__стремятся\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "__пристаням__стремятся"
           }
         ]
@@ -841,14 +841,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-411",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-411",
     "markdown": "__foo__bar__baz__\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "foo__bar__baz"
           }
         ]
@@ -856,18 +856,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-412",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-412",
     "markdown": "__(bar)__.\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "(bar)"
           },
           {
-            "type": "text",
+            "inline": "text",
             "text": "."
           }
         ]
@@ -875,18 +875,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-413",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-413",
     "markdown": "*foo [bar](/url)*\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "foo "
           },
           {
-            "type": "link",
+            "inline": "link",
             "text": "bar",
             "isLink": true
           }
@@ -895,14 +895,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-414",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-414",
     "markdown": "*foo\nbar*\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "foo bar"
           }
         ]
@@ -910,22 +910,22 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-415",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-415",
     "markdown": "_foo __bar__ baz_\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "foo "
           },
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "bar"
           },
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": " baz"
           }
         ]
@@ -933,14 +933,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-416",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-416",
     "markdown": "_foo _bar_ baz_\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "foo bar baz"
           }
         ]
@@ -948,14 +948,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-417",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-417",
     "markdown": "__foo_ bar_\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "foo bar"
           }
         ]
@@ -963,14 +963,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-418",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-418",
     "markdown": "*foo *bar**\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "foo bar"
           }
         ]
@@ -978,22 +978,22 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-419",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-419",
     "markdown": "*foo **bar** baz*\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "foo "
           },
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "bar"
           },
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": " baz"
           }
         ]
@@ -1001,22 +1001,22 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-420",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-420",
     "markdown": "*foo**bar**baz*\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "foo"
           },
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "bar"
           },
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "baz"
           }
         ]
@@ -1024,14 +1024,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-421",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-421",
     "markdown": "*foo**bar*\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "foo**bar"
           }
         ]
@@ -1039,18 +1039,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-422",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-422",
     "markdown": "***foo** bar*\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "foo"
           },
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": " bar"
           }
         ]
@@ -1058,18 +1058,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-423",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-423",
     "markdown": "*foo **bar***\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "foo "
           },
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "bar"
           }
         ]
@@ -1077,18 +1077,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-424",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-424",
     "markdown": "*foo**bar***\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "foo"
           },
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "bar"
           }
         ]
@@ -1096,22 +1096,22 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-425",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-425",
     "markdown": "foo***bar***baz\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo"
           },
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "bar"
           },
           {
-            "type": "text",
+            "inline": "text",
             "text": "baz"
           }
         ]
@@ -1119,22 +1119,22 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-426",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-426",
     "markdown": "foo******bar*********baz\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo"
           },
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "bar"
           },
           {
-            "type": "text",
+            "inline": "text",
             "text": "***baz"
           }
         ]
@@ -1142,30 +1142,30 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-427",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-427",
     "markdown": "*foo **bar *baz* bim** bop*\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "foo "
           },
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "bar "
           },
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "baz"
           },
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": " bim"
           },
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": " bop"
           }
         ]
@@ -1173,14 +1173,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-428",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-428",
     "markdown": "*foo [*bar*](/url)*\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "foo bar"
           }
         ]
@@ -1188,14 +1188,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-429",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-429",
     "markdown": "** is not an empty emphasis\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "** is not an empty emphasis"
           }
         ]
@@ -1203,14 +1203,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-430",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-430",
     "markdown": "**** is not an empty strong emphasis\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "**** is not an empty strong emphasis"
           }
         ]
@@ -1218,18 +1218,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-431",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-431",
     "markdown": "**foo [bar](/url)**\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "foo "
           },
           {
-            "type": "link",
+            "inline": "link",
             "text": "bar",
             "isLink": true
           }
@@ -1238,14 +1238,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-432",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-432",
     "markdown": "**foo\nbar**\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "foo bar"
           }
         ]
@@ -1253,22 +1253,22 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-433",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-433",
     "markdown": "__foo _bar_ baz__\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "foo "
           },
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "bar"
           },
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": " baz"
           }
         ]
@@ -1276,14 +1276,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-434",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-434",
     "markdown": "__foo __bar__ baz__\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "foo bar baz"
           }
         ]
@@ -1291,14 +1291,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-435",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-435",
     "markdown": "____foo__ bar__\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "foo bar"
           }
         ]
@@ -1306,14 +1306,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-436",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-436",
     "markdown": "**foo **bar****\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "foo bar"
           }
         ]
@@ -1321,22 +1321,22 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-437",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-437",
     "markdown": "**foo *bar* baz**\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "foo "
           },
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "bar"
           },
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": " baz"
           }
         ]
@@ -1344,22 +1344,22 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-438",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-438",
     "markdown": "**foo*bar*baz**\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "foo"
           },
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "bar"
           },
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "baz"
           }
         ]
@@ -1367,18 +1367,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-439",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-439",
     "markdown": "***foo* bar**\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "foo"
           },
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": " bar"
           }
         ]
@@ -1386,18 +1386,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-440",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-440",
     "markdown": "**foo *bar***\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "foo "
           },
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "bar"
           }
         ]
@@ -1405,30 +1405,30 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-441",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-441",
     "markdown": "**foo *bar **baz**\nbim* bop**\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "foo "
           },
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "bar "
           },
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "baz"
           },
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": " bim"
           },
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": " bop"
           }
         ]
@@ -1436,18 +1436,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-442",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-442",
     "markdown": "**foo [*bar*](/url)**\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "foo "
           },
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "bar",
             "isLink": true
           }
@@ -1456,14 +1456,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-443",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-443",
     "markdown": "__ is not an empty emphasis\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "__ is not an empty emphasis"
           }
         ]
@@ -1471,14 +1471,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-444",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-444",
     "markdown": "____ is not an empty strong emphasis\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "____ is not an empty strong emphasis"
           }
         ]
@@ -1486,14 +1486,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-445",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-445",
     "markdown": "foo ***\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo ***"
           }
         ]
@@ -1501,18 +1501,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-446",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-446",
     "markdown": "foo *\\**\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo "
           },
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "*"
           }
         ]
@@ -1520,18 +1520,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-447",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-447",
     "markdown": "foo *_*\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo "
           },
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "_"
           }
         ]
@@ -1539,14 +1539,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-448",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-448",
     "markdown": "foo *****\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo *****"
           }
         ]
@@ -1554,18 +1554,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-449",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-449",
     "markdown": "foo **\\***\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo "
           },
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "*"
           }
         ]
@@ -1573,18 +1573,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-450",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-450",
     "markdown": "foo **_**\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo "
           },
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "_"
           }
         ]
@@ -1592,18 +1592,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-451",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-451",
     "markdown": "**foo*\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "*"
           },
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "foo"
           }
         ]
@@ -1611,18 +1611,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-452",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-452",
     "markdown": "*foo**\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "foo"
           },
           {
-            "type": "text",
+            "inline": "text",
             "text": "*"
           }
         ]
@@ -1630,18 +1630,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-453",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-453",
     "markdown": "***foo**\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "*"
           },
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "foo"
           }
         ]
@@ -1649,18 +1649,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-454",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-454",
     "markdown": "****foo*\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "***"
           },
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "foo"
           }
         ]
@@ -1668,18 +1668,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-455",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-455",
     "markdown": "**foo***\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "foo"
           },
           {
-            "type": "text",
+            "inline": "text",
             "text": "*"
           }
         ]
@@ -1687,18 +1687,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-456",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-456",
     "markdown": "*foo****\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "foo"
           },
           {
-            "type": "text",
+            "inline": "text",
             "text": "***"
           }
         ]
@@ -1706,14 +1706,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-457",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-457",
     "markdown": "foo ___\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo ___"
           }
         ]
@@ -1721,18 +1721,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-458",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-458",
     "markdown": "foo _\\__\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo "
           },
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "_"
           }
         ]
@@ -1740,18 +1740,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-459",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-459",
     "markdown": "foo _*_\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo "
           },
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "*"
           }
         ]
@@ -1759,14 +1759,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-460",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-460",
     "markdown": "foo _____\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo _____"
           }
         ]
@@ -1774,18 +1774,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-461",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-461",
     "markdown": "foo __\\___\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo "
           },
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "_"
           }
         ]
@@ -1793,18 +1793,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-462",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-462",
     "markdown": "foo __*__\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo "
           },
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "*"
           }
         ]
@@ -1812,18 +1812,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-463",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-463",
     "markdown": "__foo_\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "_"
           },
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "foo"
           }
         ]
@@ -1831,18 +1831,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-464",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-464",
     "markdown": "_foo__\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "foo"
           },
           {
-            "type": "text",
+            "inline": "text",
             "text": "_"
           }
         ]
@@ -1850,18 +1850,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-465",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-465",
     "markdown": "___foo__\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "_"
           },
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "foo"
           }
         ]
@@ -1869,18 +1869,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-466",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-466",
     "markdown": "____foo_\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "___"
           },
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "foo"
           }
         ]
@@ -1888,18 +1888,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-467",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-467",
     "markdown": "__foo___\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "foo"
           },
           {
-            "type": "text",
+            "inline": "text",
             "text": "_"
           }
         ]
@@ -1907,18 +1907,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-468",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-468",
     "markdown": "_foo____\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "foo"
           },
           {
-            "type": "text",
+            "inline": "text",
             "text": "___"
           }
         ]
@@ -1926,14 +1926,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-469",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-469",
     "markdown": "**foo**\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "foo"
           }
         ]
@@ -1941,14 +1941,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-470",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-470",
     "markdown": "*_foo_*\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "foo"
           }
         ]
@@ -1956,14 +1956,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-471",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-471",
     "markdown": "__foo__\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "foo"
           }
         ]
@@ -1971,14 +1971,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-472",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-472",
     "markdown": "_*foo*_\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "foo"
           }
         ]
@@ -1986,14 +1986,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-473",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-473",
     "markdown": "****foo****\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "foo"
           }
         ]
@@ -2001,14 +2001,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-474",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-474",
     "markdown": "____foo____\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "foo"
           }
         ]
@@ -2016,14 +2016,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-475",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-475",
     "markdown": "******foo******\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "foo"
           }
         ]
@@ -2031,14 +2031,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-476",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-476",
     "markdown": "***foo***\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "foo"
           }
         ]
@@ -2046,14 +2046,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-477",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-477",
     "markdown": "_____foo_____\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "foo"
           }
         ]
@@ -2061,18 +2061,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-478",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-478",
     "markdown": "*foo _bar* baz_\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "foo _bar"
           },
           {
-            "type": "text",
+            "inline": "text",
             "text": " baz_"
           }
         ]
@@ -2080,22 +2080,22 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-479",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-479",
     "markdown": "*foo __bar *baz bim__ bam*\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "foo "
           },
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "bar *baz bim"
           },
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": " bam"
           }
         ]
@@ -2103,18 +2103,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-480",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-480",
     "markdown": "**foo **bar baz**\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "**foo "
           },
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "bar baz"
           }
         ]
@@ -2122,18 +2122,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-481",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-481",
     "markdown": "*foo *bar baz*\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "*foo "
           },
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "bar baz"
           }
         ]
@@ -2141,18 +2141,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-482",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-482",
     "markdown": "*[bar*](/url)\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "*"
           },
           {
-            "type": "link",
+            "inline": "link",
             "text": "bar*",
             "isLink": true
           }
@@ -2161,18 +2161,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-483",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-483",
     "markdown": "_foo [bar_](/url)\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "_foo "
           },
           {
-            "type": "link",
+            "inline": "link",
             "text": "bar_",
             "isLink": true
           }
@@ -2181,18 +2181,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-484",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-484",
     "markdown": "*<img src=\"foo\" title=\"*\"/>\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "*"
           },
           {
-            "type": "inlineHtml",
+            "inline": "inlineHtml",
             "text": "<img src=\"foo\" title=\"*\"/>"
           }
         ]
@@ -2200,18 +2200,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-485",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-485",
     "markdown": "**<a href=\"**\">\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "**"
           },
           {
-            "type": "inlineHtml",
+            "inline": "inlineHtml",
             "text": "<a href=\"**\">"
           }
         ]
@@ -2219,18 +2219,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-486",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-486",
     "markdown": "__<a href=\"__\">\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "__"
           },
           {
-            "type": "inlineHtml",
+            "inline": "inlineHtml",
             "text": "<a href=\"__\">"
           }
         ]
@@ -2238,18 +2238,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-487",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-487",
     "markdown": "*a `*`*\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "a "
           },
           {
-            "type": "inlineCode",
+            "inline": "inlineCode",
             "text": "*"
           }
         ]
@@ -2257,18 +2257,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-488",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-488",
     "markdown": "_a `_`_\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "a "
           },
           {
-            "type": "inlineCode",
+            "inline": "inlineCode",
             "text": "_"
           }
         ]
@@ -2276,18 +2276,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-489",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-489",
     "markdown": "**a<http://foo.bar/?q=**>\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "**a"
           },
           {
-            "type": "link",
+            "inline": "link",
             "text": "http://foo.bar/?q=**"
           }
         ]
@@ -2295,18 +2295,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-490",
+    "description": "Emphasis and strong emphasis, https://github.github.com/gfm/#example-490",
     "markdown": "__a<http://foo.bar/?q=__>\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "__a"
           },
           {
-            "type": "link",
+            "inline": "link",
             "text": "http://foo.bar/?q=__"
           }
         ]

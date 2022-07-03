@@ -1,100 +1,76 @@
 [
   {
-    "description": "https://github.github.com/gfm/#example-206",
+    "description": "Block quotes, https://github.github.com/gfm/#example-206",
     "markdown": "> # Foo\n> bar\n> baz\n",
     "expected": [
       {
-        "type": "blockquote",
+        "block": "blockquote",
         "children": [
           {
-            "type": "headline1",
+            "block": "headline1",
             "children": [
               {
-                "type": "text",
+                "inline": "text",
                 "text": "Foo"
               }
-            ]
-          },
-          {
-            "type": "paragraph",
-            "children": [
-              {
-                "type": "text",
-                "text": "bar\nbaz"
-              }
-            ]
+            ],
+            "text": "nullnull"
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-207",
+    "description": "Block quotes, https://github.github.com/gfm/#example-207",
     "markdown": "># Foo\n>bar\n> baz\n",
     "expected": [
       {
-        "type": "blockquote",
+        "block": "blockquote",
         "children": [
           {
-            "type": "headline1",
+            "block": "headline1",
             "children": [
               {
-                "type": "text",
+                "inline": "text",
                 "text": "Foo"
               }
-            ]
-          },
-          {
-            "type": "paragraph",
-            "children": [
-              {
-                "type": "text",
-                "text": "bar\nbaz"
-              }
-            ]
+            ],
+            "text": "nullnull"
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-208",
+    "description": "Block quotes, https://github.github.com/gfm/#example-208",
     "markdown": "   > # Foo\n   > bar\n > baz\n",
     "expected": [
       {
-        "type": "blockquote",
+        "block": "blockquote",
         "children": [
           {
-            "type": "headline1",
+            "block": "headline1",
             "children": [
               {
-                "type": "text",
+                "inline": "text",
                 "text": "Foo"
               }
-            ]
-          },
-          {
-            "type": "paragraph",
-            "children": [
-              {
-                "type": "text",
-                "text": "bar\nbaz"
-              }
-            ]
+            ],
+            "text": "nullnull"
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-209",
+    "description": "Block quotes, https://github.github.com/gfm/#example-209",
     "markdown": "    > # Foo\n    > bar\n    > baz\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "> # Foo > bar > baz "
           }
         ]
@@ -102,46 +78,38 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-210",
+    "description": "Block quotes, https://github.github.com/gfm/#example-210",
     "markdown": "> # Foo\n> bar\nbaz\n",
     "expected": [
       {
-        "type": "blockquote",
+        "block": "blockquote",
         "children": [
           {
-            "type": "headline1",
+            "block": "headline1",
             "children": [
               {
-                "type": "text",
+                "inline": "text",
                 "text": "Foo"
               }
-            ]
-          },
-          {
-            "type": "paragraph",
-            "children": [
-              {
-                "type": "text",
-                "text": "bar\nbaz"
-              }
-            ]
+            ],
+            "text": "nullnull"
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-211",
+    "description": "Block quotes, https://github.github.com/gfm/#example-211",
     "markdown": "> bar\nbaz\n> foo\n",
     "expected": [
       {
-        "type": "blockquote",
+        "block": "blockquote",
         "children": [
           {
-            "type": "paragraph",
+            "block": "paragraph",
             "children": [
               {
-                "type": "text",
+                "inline": "text",
                 "text": "bar\nbaz\nfoo"
               }
             ]
@@ -151,17 +119,17 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-212",
+    "description": "Block quotes, https://github.github.com/gfm/#example-212",
     "markdown": "> foo\n---\n",
     "expected": [
       {
-        "type": "blockquote",
+        "block": "blockquote",
         "children": [
           {
-            "type": "paragraph",
+            "block": "paragraph",
             "children": [
               {
-                "type": "text",
+                "inline": "text",
                 "text": "foo"
               }
             ]
@@ -169,25 +137,25 @@
         ]
       },
       {
-        "type": "thematicBreak"
+        "block": "thematicBreak"
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-213",
+    "description": "Block quotes, https://github.github.com/gfm/#example-213",
     "markdown": "> - foo\n- bar\n",
     "expected": [
       {
-        "type": "blockquote",
+        "block": "blockquote",
         "children": [
           {
-            "type": "bulletList",
+            "block": "bulletList",
             "children": [
               {
-                "type": "listItem",
+                "block": "listItem",
                 "children": [
                   {
-                    "type": "text",
+                    "inline": "text",
                     "text": "foo"
                   }
                 ]
@@ -197,13 +165,13 @@
         ]
       },
       {
-        "type": "bulletList",
+        "block": "bulletList",
         "children": [
           {
-            "type": "listItem",
+            "block": "listItem",
             "children": [
               {
-                "type": "text",
+                "inline": "text",
                 "text": "bar"
               }
             ]
@@ -213,17 +181,17 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-214",
+    "description": "Block quotes, https://github.github.com/gfm/#example-214",
     "markdown": ">     foo\n    bar\n",
     "expected": [
       {
-        "type": "blockquote",
+        "block": "blockquote",
         "children": [
           {
-            "type": "codeBlock",
+            "block": "codeBlock",
             "children": [
               {
-                "type": "text",
+                "inline": "text",
                 "text": "foo\n"
               }
             ]
@@ -231,10 +199,10 @@
         ]
       },
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "bar\n"
           }
         ]
@@ -242,43 +210,43 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-215",
+    "description": "Block quotes, https://github.github.com/gfm/#example-215",
     "markdown": "> ```\nfoo\n```\n",
     "expected": [
       {
-        "type": "blockquote",
+        "block": "blockquote",
         "children": [
           {
-            "type": "codeBlock"
+            "block": "codeBlock"
           }
         ]
       },
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo"
           }
         ]
       },
       {
-        "type": "codeBlock"
+        "block": "codeBlock"
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-216",
+    "description": "Block quotes, https://github.github.com/gfm/#example-216",
     "markdown": "> foo\n    - bar\n",
     "expected": [
       {
-        "type": "blockquote",
+        "block": "blockquote",
         "children": [
           {
-            "type": "paragraph",
+            "block": "paragraph",
             "children": [
               {
-                "type": "text",
+                "inline": "text",
                 "text": "foo\n- bar"
               }
             ]
@@ -288,35 +256,35 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-217",
+    "description": "Block quotes, https://github.github.com/gfm/#example-217",
     "markdown": ">\n",
     "expected": [
       {
-        "type": "blockquote"
+        "block": "blockquote"
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-218",
+    "description": "Block quotes, https://github.github.com/gfm/#example-218",
     "markdown": ">\n>  \n> \n",
     "expected": [
       {
-        "type": "blockquote"
+        "block": "blockquote"
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-219",
+    "description": "Block quotes, https://github.github.com/gfm/#example-219",
     "markdown": ">\n> foo\n>  \n",
     "expected": [
       {
-        "type": "blockquote",
+        "block": "blockquote",
         "children": [
           {
-            "type": "paragraph",
+            "block": "paragraph",
             "children": [
               {
-                "type": "text",
+                "inline": "text",
                 "text": "foo"
               }
             ]
@@ -326,17 +294,17 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-220",
+    "description": "Block quotes, https://github.github.com/gfm/#example-220",
     "markdown": "> foo\n\n> bar\n",
     "expected": [
       {
-        "type": "blockquote",
+        "block": "blockquote",
         "children": [
           {
-            "type": "paragraph",
+            "block": "paragraph",
             "children": [
               {
-                "type": "text",
+                "inline": "text",
                 "text": "foo"
               }
             ]
@@ -344,13 +312,13 @@
         ]
       },
       {
-        "type": "blockquote",
+        "block": "blockquote",
         "children": [
           {
-            "type": "paragraph",
+            "block": "paragraph",
             "children": [
               {
-                "type": "text",
+                "inline": "text",
                 "text": "bar"
               }
             ]
@@ -360,17 +328,17 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-221",
+    "description": "Block quotes, https://github.github.com/gfm/#example-221",
     "markdown": "> foo\n> bar\n",
     "expected": [
       {
-        "type": "blockquote",
+        "block": "blockquote",
         "children": [
           {
-            "type": "paragraph",
+            "block": "paragraph",
             "children": [
               {
-                "type": "text",
+                "inline": "text",
                 "text": "foo\nbar"
               }
             ]
@@ -380,17 +348,17 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-222",
+    "description": "Block quotes, https://github.github.com/gfm/#example-222",
     "markdown": "> foo\n>\n> bar\n",
     "expected": [
       {
-        "type": "blockquote",
+        "block": "blockquote",
         "children": [
           {
-            "type": "paragraph",
+            "block": "paragraph",
             "children": [
               {
-                "type": "text",
+                "inline": "text",
                 "text": "foo"
               }
             ],
@@ -401,26 +369,26 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-223",
+    "description": "Block quotes, https://github.github.com/gfm/#example-223",
     "markdown": "foo\n> bar\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo"
           }
         ]
       },
       {
-        "type": "blockquote",
+        "block": "blockquote",
         "children": [
           {
-            "type": "paragraph",
+            "block": "paragraph",
             "children": [
               {
-                "type": "text",
+                "inline": "text",
                 "text": "bar"
               }
             ]
@@ -430,17 +398,17 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-224",
+    "description": "Block quotes, https://github.github.com/gfm/#example-224",
     "markdown": "> aaa\n***\n> bbb\n",
     "expected": [
       {
-        "type": "blockquote",
+        "block": "blockquote",
         "children": [
           {
-            "type": "paragraph",
+            "block": "paragraph",
             "children": [
               {
-                "type": "text",
+                "inline": "text",
                 "text": "aaa"
               }
             ]
@@ -448,16 +416,16 @@
         ]
       },
       {
-        "type": "thematicBreak"
+        "block": "thematicBreak"
       },
       {
-        "type": "blockquote",
+        "block": "blockquote",
         "children": [
           {
-            "type": "paragraph",
+            "block": "paragraph",
             "children": [
               {
-                "type": "text",
+                "inline": "text",
                 "text": "bbb"
               }
             ]
@@ -467,17 +435,17 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-225",
+    "description": "Block quotes, https://github.github.com/gfm/#example-225",
     "markdown": "> bar\nbaz\n",
     "expected": [
       {
-        "type": "blockquote",
+        "block": "blockquote",
         "children": [
           {
-            "type": "paragraph",
+            "block": "paragraph",
             "children": [
               {
-                "type": "text",
+                "inline": "text",
                 "text": "bar\nbaz"
               }
             ]
@@ -487,17 +455,17 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-226",
+    "description": "Block quotes, https://github.github.com/gfm/#example-226",
     "markdown": "> bar\n\nbaz\n",
     "expected": [
       {
-        "type": "blockquote",
+        "block": "blockquote",
         "children": [
           {
-            "type": "paragraph",
+            "block": "paragraph",
             "children": [
               {
-                "type": "text",
+                "inline": "text",
                 "text": "bar"
               }
             ]
@@ -505,10 +473,10 @@
         ]
       },
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "baz"
           }
         ]
@@ -516,17 +484,17 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-227",
+    "description": "Block quotes, https://github.github.com/gfm/#example-227",
     "markdown": "> bar\n>\nbaz\n",
     "expected": [
       {
-        "type": "blockquote",
+        "block": "blockquote",
         "children": [
           {
-            "type": "paragraph",
+            "block": "paragraph",
             "children": [
               {
-                "type": "text",
+                "inline": "text",
                 "text": "bar"
               }
             ]
@@ -534,10 +502,10 @@
         ]
       },
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "baz"
           }
         ]
@@ -545,23 +513,23 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-228",
+    "description": "Block quotes, https://github.github.com/gfm/#example-228",
     "markdown": "> > > foo\nbar\n",
     "expected": [
       {
-        "type": "blockquote",
+        "block": "blockquote",
         "children": [
           {
-            "type": "blockquote",
+            "block": "blockquote",
             "children": [
               {
-                "type": "blockquote",
+                "block": "blockquote",
                 "children": [
                   {
-                    "type": "paragraph",
+                    "block": "paragraph",
                     "children": [
                       {
-                        "type": "text",
+                        "inline": "text",
                         "text": "foo\nbar"
                       }
                     ]
@@ -575,23 +543,23 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-229",
+    "description": "Block quotes, https://github.github.com/gfm/#example-229",
     "markdown": ">>> foo\n> bar\n>>baz\n",
     "expected": [
       {
-        "type": "blockquote",
+        "block": "blockquote",
         "children": [
           {
-            "type": "blockquote",
+            "block": "blockquote",
             "children": [
               {
-                "type": "blockquote",
+                "block": "blockquote",
                 "children": [
                   {
-                    "type": "paragraph",
+                    "block": "paragraph",
                     "children": [
                       {
-                        "type": "text",
+                        "inline": "text",
                         "text": "foo\nbar\nbaz"
                       }
                     ]
@@ -605,17 +573,17 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-230",
+    "description": "Block quotes, https://github.github.com/gfm/#example-230",
     "markdown": ">     code\n\n>    not code\n",
     "expected": [
       {
-        "type": "blockquote",
+        "block": "blockquote",
         "children": [
           {
-            "type": "codeBlock",
+            "block": "codeBlock",
             "children": [
               {
-                "type": "text",
+                "inline": "text",
                 "text": "code\n"
               }
             ]
@@ -623,13 +591,13 @@
         ]
       },
       {
-        "type": "blockquote",
+        "block": "blockquote",
         "children": [
           {
-            "type": "paragraph",
+            "block": "paragraph",
             "children": [
               {
-                "type": "text",
+                "inline": "text",
                 "text": "not code"
               }
             ]

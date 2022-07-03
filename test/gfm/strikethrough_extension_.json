@@ -1,13 +1,13 @@
 [
   {
-    "description": "https://github.github.com/gfm/#example-491",
+    "description": "Strikethrough (extension), https://github.github.com/gfm/#example-491",
     "markdown": "~~Hi~~ Hello, world!\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "~~Hi~~ Hello, world!"
           }
         ]
@@ -15,23 +15,23 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-492",
+    "description": "Strikethrough (extension), https://github.github.com/gfm/#example-492",
     "markdown": "This ~~has a\n\nnew paragraph~~.\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "This ~~has a"
           }
         ]
       },
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "new paragraph~~."
           }
         ]

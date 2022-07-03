@@ -1,13 +1,13 @@
 [
   {
-    "description": "https://github.github.com/gfm/#example-338",
+    "description": "Code spans, https://github.github.com/gfm/#example-338",
     "markdown": "`foo`\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "inlineCode",
+            "inline": "inlineCode",
             "text": "foo"
           }
         ]
@@ -15,14 +15,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-339",
+    "description": "Code spans, https://github.github.com/gfm/#example-339",
     "markdown": "`` foo ` bar ``\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "inlineCode",
+            "inline": "inlineCode",
             "text": "foo ` bar"
           }
         ]
@@ -30,14 +30,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-340",
+    "description": "Code spans, https://github.github.com/gfm/#example-340",
     "markdown": "` `` `\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "inlineCode",
+            "inline": "inlineCode",
             "text": "``"
           }
         ]
@@ -45,14 +45,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-341",
+    "description": "Code spans, https://github.github.com/gfm/#example-341",
     "markdown": "`  ``  `\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "inlineCode",
+            "inline": "inlineCode",
             "text": " `` "
           }
         ]
@@ -60,14 +60,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-342",
+    "description": "Code spans, https://github.github.com/gfm/#example-342",
     "markdown": "` a`\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "inlineCode",
+            "inline": "inlineCode",
             "text": " a"
           }
         ]
@@ -75,14 +75,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-343",
+    "description": "Code spans, https://github.github.com/gfm/#example-343",
     "markdown": "` b `\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "inlineCode",
+            "inline": "inlineCode",
             "text": " b "
           }
         ]
@@ -90,22 +90,22 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-344",
+    "description": "Code spans, https://github.github.com/gfm/#example-344",
     "markdown": "` `\n`  `\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "inlineCode",
+            "inline": "inlineCode",
             "text": " "
           },
           {
-            "type": "text",
+            "inline": "text",
             "text": " "
           },
           {
-            "type": "inlineCode",
+            "inline": "inlineCode",
             "text": "  "
           }
         ]
@@ -113,14 +113,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-345",
+    "description": "Code spans, https://github.github.com/gfm/#example-345",
     "markdown": "``\nfoo\nbar  \nbaz\n``\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "inlineCode",
+            "inline": "inlineCode",
             "text": "foo bar   baz"
           }
         ]
@@ -128,14 +128,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-346",
+    "description": "Code spans, https://github.github.com/gfm/#example-346",
     "markdown": "``\nfoo \n``\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "inlineCode",
+            "inline": "inlineCode",
             "text": "foo "
           }
         ]
@@ -143,14 +143,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-347",
+    "description": "Code spans, https://github.github.com/gfm/#example-347",
     "markdown": "`foo   bar \nbaz`\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "inlineCode",
+            "inline": "inlineCode",
             "text": "foo   bar  baz"
           }
         ]
@@ -158,18 +158,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-348",
+    "description": "Code spans, https://github.github.com/gfm/#example-348",
     "markdown": "`foo\\`bar`\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "inlineCode",
+            "inline": "inlineCode",
             "text": "foo\\"
           },
           {
-            "type": "text",
+            "inline": "text",
             "text": "bar`"
           }
         ]
@@ -177,14 +177,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-349",
+    "description": "Code spans, https://github.github.com/gfm/#example-349",
     "markdown": "``foo`bar``\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "inlineCode",
+            "inline": "inlineCode",
             "text": "foo`bar"
           }
         ]
@@ -192,14 +192,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-350",
+    "description": "Code spans, https://github.github.com/gfm/#example-350",
     "markdown": "` foo `` bar `\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "inlineCode",
+            "inline": "inlineCode",
             "text": "foo `` bar"
           }
         ]
@@ -207,18 +207,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-351",
+    "description": "Code spans, https://github.github.com/gfm/#example-351",
     "markdown": "*foo`*`\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "*foo"
           },
           {
-            "type": "inlineCode",
+            "inline": "inlineCode",
             "text": "*"
           }
         ]
@@ -226,22 +226,22 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-352",
+    "description": "Code spans, https://github.github.com/gfm/#example-352",
     "markdown": "[not a `link](/foo`)\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "[not a "
           },
           {
-            "type": "inlineCode",
+            "inline": "inlineCode",
             "text": "link](/foo"
           },
           {
-            "type": "text",
+            "inline": "text",
             "text": ")"
           }
         ]
@@ -249,18 +249,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-353",
+    "description": "Code spans, https://github.github.com/gfm/#example-353",
     "markdown": "`<a href=\"`\">`\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "inlineCode",
+            "inline": "inlineCode",
             "text": "<a href=\""
           },
           {
-            "type": "text",
+            "inline": "text",
             "text": "\">`"
           }
         ]
@@ -268,18 +268,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-354",
+    "description": "Code spans, https://github.github.com/gfm/#example-354",
     "markdown": "<a href=\"`\">`\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "inlineHtml",
+            "inline": "inlineHtml",
             "text": "<a href=\"`\">"
           },
           {
-            "type": "text",
+            "inline": "text",
             "text": "`"
           }
         ]
@@ -287,18 +287,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-355",
+    "description": "Code spans, https://github.github.com/gfm/#example-355",
     "markdown": "`<http://foo.bar.`baz>`\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "inlineCode",
+            "inline": "inlineCode",
             "text": "<http://foo.bar."
           },
           {
-            "type": "text",
+            "inline": "text",
             "text": "baz>`"
           }
         ]
@@ -306,18 +306,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-356",
+    "description": "Code spans, https://github.github.com/gfm/#example-356",
     "markdown": "<http://foo.bar.`baz>`\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "link",
+            "inline": "link",
             "text": "http://foo.bar.`baz"
           },
           {
-            "type": "text",
+            "inline": "text",
             "text": "`"
           }
         ]
@@ -325,14 +325,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-357",
+    "description": "Code spans, https://github.github.com/gfm/#example-357",
     "markdown": "```foo``\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "```foo``"
           }
         ]
@@ -340,14 +340,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-358",
+    "description": "Code spans, https://github.github.com/gfm/#example-358",
     "markdown": "`foo\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "`foo"
           }
         ]
@@ -355,18 +355,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-359",
+    "description": "Code spans, https://github.github.com/gfm/#example-359",
     "markdown": "`foo``bar``\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "`foo"
           },
           {
-            "type": "inlineCode",
+            "inline": "inlineCode",
             "text": "bar"
           }
         ]

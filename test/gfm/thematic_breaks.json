@@ -1,28 +1,28 @@
 [
   {
-    "description": "https://github.github.com/gfm/#example-13",
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-13",
     "markdown": "***\n---\n___\n",
     "expected": [
       {
-        "type": "thematicBreak"
+        "block": "thematicBreak"
       },
       {
-        "type": "thematicBreak"
+        "block": "thematicBreak"
       },
       {
-        "type": "thematicBreak"
+        "block": "thematicBreak"
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-14",
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-14",
     "markdown": "+++\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "+++"
           }
         ]
@@ -30,14 +30,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-15",
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-15",
     "markdown": "===\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "==="
           }
         ]
@@ -45,14 +45,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-16",
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-16",
     "markdown": "--\n**\n__\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "-- ** __"
           }
         ]
@@ -60,29 +60,29 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-17",
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-17",
     "markdown": " ***\n  ***\n   ***\n",
     "expected": [
       {
-        "type": "thematicBreak"
+        "block": "thematicBreak"
       },
       {
-        "type": "thematicBreak"
+        "block": "thematicBreak"
       },
       {
-        "type": "thematicBreak"
+        "block": "thematicBreak"
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-18",
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-18",
     "markdown": "    ***\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "*** "
           }
         ]
@@ -90,14 +90,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-19",
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-19",
     "markdown": "Foo\n    ***\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "Foo ***"
           }
         ]
@@ -105,77 +105,77 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-20",
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-20",
     "markdown": "_____________________________________\n",
     "expected": [
       {
-        "type": "thematicBreak"
+        "block": "thematicBreak"
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-21",
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-21",
     "markdown": " - - -\n",
     "expected": [
       {
-        "type": "thematicBreak"
+        "block": "thematicBreak"
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-22",
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-22",
     "markdown": " **  * ** * ** * **\n",
     "expected": [
       {
-        "type": "thematicBreak"
+        "block": "thematicBreak"
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-23",
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-23",
     "markdown": "-     -      -      -\n",
     "expected": [
       {
-        "type": "thematicBreak"
+        "block": "thematicBreak"
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-24",
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-24",
     "markdown": "- - - -    \n",
     "expected": [
       {
-        "type": "thematicBreak"
+        "block": "thematicBreak"
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-25",
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-25",
     "markdown": "_ _ _ _ a\n\na------\n\n---a---\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "_ _ _ _ a"
           }
         ]
       },
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "a------"
           }
         ]
       },
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "---a---"
           }
         ]
@@ -183,14 +183,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-26",
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-26",
     "markdown": " *-*\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "-"
           }
         ]
@@ -198,17 +198,17 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-27",
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-27",
     "markdown": "- foo\n***\n- bar\n",
     "expected": [
       {
-        "type": "bulletList",
+        "block": "bulletList",
         "children": [
           {
-            "type": "listItem",
+            "block": "listItem",
             "children": [
               {
-                "type": "text",
+                "inline": "text",
                 "text": "foo"
               }
             ]
@@ -216,16 +216,16 @@
         ]
       },
       {
-        "type": "thematicBreak"
+        "block": "thematicBreak"
       },
       {
-        "type": "bulletList",
+        "block": "bulletList",
         "children": [
           {
-            "type": "listItem",
+            "block": "listItem",
             "children": [
               {
-                "type": "text",
+                "inline": "text",
                 "text": "bar"
               }
             ]
@@ -235,26 +235,26 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-28",
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-28",
     "markdown": "Foo\n***\nbar\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "Foo"
           }
         ]
       },
       {
-        "type": "thematicBreak"
+        "block": "thematicBreak"
       },
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "bar"
           }
         ]
@@ -262,23 +262,23 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-29",
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-29",
     "markdown": "Foo\n---\nbar\n",
     "expected": [
       {
-        "type": "headline2",
+        "block": "headline2",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "Foo"
           }
         ]
       },
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "bar"
           }
         ]
@@ -286,17 +286,17 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-30",
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-30",
     "markdown": "* Foo\n* * *\n* Bar\n",
     "expected": [
       {
-        "type": "bulletList",
+        "block": "bulletList",
         "children": [
           {
-            "type": "listItem",
+            "block": "listItem",
             "children": [
               {
-                "type": "text",
+                "inline": "text",
                 "text": "Foo"
               }
             ]
@@ -304,16 +304,16 @@
         ]
       },
       {
-        "type": "thematicBreak"
+        "block": "thematicBreak"
       },
       {
-        "type": "bulletList",
+        "block": "bulletList",
         "children": [
           {
-            "type": "listItem",
+            "block": "listItem",
             "children": [
               {
-                "type": "text",
+                "inline": "text",
                 "text": "Bar"
               }
             ]
@@ -323,17 +323,17 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-31",
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-31",
     "markdown": "- Foo\n- * * *\n",
     "expected": [
       {
-        "type": "bulletList",
+        "block": "bulletList",
         "children": [
           {
-            "type": "listItem",
+            "block": "listItem",
             "children": [
               {
-                "type": "text",
+                "inline": "text",
                 "text": "Foo"
               }
             ],

@@ -1,13 +1,13 @@
 [
   {
-    "description": "https://github.github.com/gfm/#example-161",
+    "description": "Link reference definitions, https://github.github.com/gfm/#example-161",
     "markdown": "[foo]: /url \"title\"\n\n[foo]\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "link",
+            "inline": "link",
             "text": "foo",
             "isLink": true
           }
@@ -16,14 +16,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-162",
+    "description": "Link reference definitions, https://github.github.com/gfm/#example-162",
     "markdown": "   [foo]: \n      /url  \n           'the title'  \n\n[foo]\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "link",
+            "inline": "link",
             "text": "foo",
             "isLink": true
           }
@@ -32,14 +32,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-163",
+    "description": "Link reference definitions, https://github.github.com/gfm/#example-163",
     "markdown": "[Foo*bar\\]]:my_(url) 'title (with parens)'\n\n[Foo*bar\\]]\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "link",
+            "inline": "link",
             "text": "Foo*bar]",
             "isLink": true
           }
@@ -48,14 +48,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-164",
+    "description": "Link reference definitions, https://github.github.com/gfm/#example-164",
     "markdown": "[Foo bar]:\n<my url>\n'title'\n\n[Foo bar]\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "link",
+            "inline": "link",
             "text": "Foo bar",
             "isLink": true
           }
@@ -64,14 +64,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-165",
+    "description": "Link reference definitions, https://github.github.com/gfm/#example-165",
     "markdown": "[foo]: /url '\ntitle\nline1\nline2\n'\n\n[foo]\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "link",
+            "inline": "link",
             "text": "foo",
             "isLink": true
           }
@@ -80,32 +80,32 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-166",
+    "description": "Link reference definitions, https://github.github.com/gfm/#example-166",
     "markdown": "[foo]: /url 'title\n\nwith blank line'\n\n[foo]\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "[foo]: /url 'title"
           }
         ]
       },
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "with blank line'"
           }
         ]
       },
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "[foo]"
           }
         ]
@@ -113,14 +113,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-167",
+    "description": "Link reference definitions, https://github.github.com/gfm/#example-167",
     "markdown": "[foo]:\n/url\n\n[foo]\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "link",
+            "inline": "link",
             "text": "foo",
             "isLink": true
           }
@@ -129,23 +129,23 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-168",
+    "description": "Link reference definitions, https://github.github.com/gfm/#example-168",
     "markdown": "[foo]:\n\n[foo]\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "[foo]:"
           }
         ]
       },
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "[foo]"
           }
         ]
@@ -153,14 +153,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-169",
+    "description": "Link reference definitions, https://github.github.com/gfm/#example-169",
     "markdown": "[foo]: <>\n\n[foo]\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "link",
+            "inline": "link",
             "text": "foo",
             "isLink": true
           }
@@ -169,31 +169,31 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-170",
+    "description": "Link reference definitions, https://github.github.com/gfm/#example-170",
     "markdown": "[foo]: <bar>(baz)\n\n[foo]\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "[foo]: "
           },
           {
-            "type": "inlineHtml",
+            "inline": "inlineHtml",
             "text": "<bar>"
           },
           {
-            "type": "text",
+            "inline": "text",
             "text": "(baz)"
           }
         ]
       },
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "[foo]"
           }
         ]
@@ -201,14 +201,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-171",
+    "description": "Link reference definitions, https://github.github.com/gfm/#example-171",
     "markdown": "[foo]: /url\\bar\\*baz \"foo\\\"bar\\baz\"\n\n[foo]\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "link",
+            "inline": "link",
             "text": "foo",
             "isLink": true
           }
@@ -217,14 +217,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-172",
+    "description": "Link reference definitions, https://github.github.com/gfm/#example-172",
     "markdown": "[foo]\n\n[foo]: url\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "link",
+            "inline": "link",
             "text": "foo",
             "isLink": true
           }
@@ -233,14 +233,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-173",
+    "description": "Link reference definitions, https://github.github.com/gfm/#example-173",
     "markdown": "[foo]\n\n[foo]: first\n[foo]: second\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "link",
+            "inline": "link",
             "text": "foo",
             "isLink": true
           }
@@ -249,14 +249,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-174",
+    "description": "Link reference definitions, https://github.github.com/gfm/#example-174",
     "markdown": "[FOO]: /url\n\n[Foo]\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "link",
+            "inline": "link",
             "text": "Foo",
             "isLink": true
           }
@@ -265,14 +265,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-175",
+    "description": "Link reference definitions, https://github.github.com/gfm/#example-175",
     "markdown": "[ΑΓΩ]: /φου\n\n[αγω]\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "link",
+            "inline": "link",
             "text": "αγω",
             "isLink": true
           }
@@ -281,19 +281,19 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-176",
+    "description": "Link reference definitions, https://github.github.com/gfm/#example-176",
     "markdown": "[foo]: /url\n",
     "expected": []
   },
   {
-    "description": "https://github.github.com/gfm/#example-177",
+    "description": "Link reference definitions, https://github.github.com/gfm/#example-177",
     "markdown": "[\nfoo\n]: /url\nbar\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "bar"
           }
         ]
@@ -301,14 +301,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-178",
+    "description": "Link reference definitions, https://github.github.com/gfm/#example-178",
     "markdown": "[foo]: /url \"title\" ok\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "[foo]: /url \"title\" ok"
           }
         ]
@@ -316,14 +316,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-179",
+    "description": "Link reference definitions, https://github.github.com/gfm/#example-179",
     "markdown": "[foo]: /url\n\"title\" ok\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "\"title\" ok"
           }
         ]
@@ -331,23 +331,23 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-180",
+    "description": "Link reference definitions, https://github.github.com/gfm/#example-180",
     "markdown": "    [foo]: /url \"title\"\n\n[foo]\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "[foo]: /url \"title\" "
           }
         ]
       },
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "[foo]"
           }
         ]
@@ -355,23 +355,23 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-181",
+    "description": "Link reference definitions, https://github.github.com/gfm/#example-181",
     "markdown": "```\n[foo]: /url\n```\n\n[foo]\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "[foo]: /url "
           }
         ]
       },
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "[foo]"
           }
         ]
@@ -379,23 +379,23 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-182",
+    "description": "Link reference definitions, https://github.github.com/gfm/#example-182",
     "markdown": "Foo\n[bar]: /baz\n\n[bar]\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "Foo [bar]: /baz"
           }
         ]
       },
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "[bar]"
           }
         ]
@@ -403,27 +403,27 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-183",
+    "description": "Link reference definitions, https://github.github.com/gfm/#example-183",
     "markdown": "# [Foo]\n[foo]: /url\n> bar\n",
     "expected": [
       {
-        "type": "headline1",
+        "block": "headline1",
         "children": [
           {
-            "type": "link",
+            "inline": "link",
             "text": "Foo",
             "isLink": true
           }
         ]
       },
       {
-        "type": "blockquote",
+        "block": "blockquote",
         "children": [
           {
-            "type": "paragraph",
+            "block": "paragraph",
             "children": [
               {
-                "type": "text",
+                "inline": "text",
                 "text": "bar"
               }
             ]
@@ -433,23 +433,23 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-184",
+    "description": "Link reference definitions, https://github.github.com/gfm/#example-184",
     "markdown": "[foo]: /url\nbar\n===\n[foo]\n",
     "expected": [
       {
-        "type": "headline1",
+        "block": "headline1",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "bar"
           }
         ]
       },
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "link",
+            "inline": "link",
             "text": "foo",
             "isLink": true
           }
@@ -458,18 +458,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-185",
+    "description": "Link reference definitions, https://github.github.com/gfm/#example-185",
     "markdown": "[foo]: /url\n===\n[foo]\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "=== "
           },
           {
-            "type": "link",
+            "inline": "link",
             "text": "foo",
             "isLink": true
           }
@@ -478,32 +478,32 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-186",
+    "description": "Link reference definitions, https://github.github.com/gfm/#example-186",
     "markdown": "[foo]: /foo-url \"foo\"\n[bar]: /bar-url\n  \"bar\"\n[baz]: /baz-url\n\n[foo],\n[bar],\n[baz]\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "link",
+            "inline": "link",
             "text": "foo",
             "isLink": true
           },
           {
-            "type": "text",
+            "inline": "text",
             "text": ", "
           },
           {
-            "type": "link",
+            "inline": "link",
             "text": "bar",
             "isLink": true
           },
           {
-            "type": "text",
+            "inline": "text",
             "text": ", "
           },
           {
-            "type": "link",
+            "inline": "link",
             "text": "baz",
             "isLink": true
           }
@@ -512,26 +512,26 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-187",
+    "description": "Link reference definitions, https://github.github.com/gfm/#example-187",
     "markdown": "[foo]\n\n> [foo]: /url\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "link",
+            "inline": "link",
             "text": "foo",
             "isLink": true
           }
         ]
       },
       {
-        "type": "blockquote"
+        "block": "blockquote"
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-188",
+    "description": "Link reference definitions, https://github.github.com/gfm/#example-188",
     "markdown": "[foo]: /url\n",
     "expected": []
   }

@@ -1,17 +1,17 @@
 [
   {
-    "description": "https://github.github.com/gfm/#example-307",
+    "description": "Inlines, https://github.github.com/gfm/#example-307",
     "markdown": "`hi`lo`\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "inlineCode",
+            "inline": "inlineCode",
             "text": "hi"
           },
           {
-            "type": "text",
+            "inline": "text",
             "text": "lo`"
           }
         ]

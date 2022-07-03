@@ -1,58 +1,58 @@
 [
   {
-    "description": "https://github.github.com/gfm/#example-32",
+    "description": "ATX headings, https://github.github.com/gfm/#example-32",
     "markdown": "# foo\n## foo\n### foo\n#### foo\n##### foo\n###### foo\n",
     "expected": [
       {
-        "type": "headline1",
+        "block": "headline1",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo"
           }
         ]
       },
       {
-        "type": "headline2",
+        "block": "headline2",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo"
           }
         ]
       },
       {
-        "type": "headline3",
+        "block": "headline3",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo"
           }
         ]
       },
       {
-        "type": "headline4",
+        "block": "headline4",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo"
           }
         ]
       },
       {
-        "type": "headline5",
+        "block": "headline5",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo"
           }
         ]
       },
       {
-        "type": "headline6",
+        "block": "headline6",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo"
           }
         ]
@@ -60,14 +60,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-33",
+    "description": "ATX headings, https://github.github.com/gfm/#example-33",
     "markdown": "####### foo\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "####### foo"
           }
         ]
@@ -75,23 +75,23 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-34",
+    "description": "ATX headings, https://github.github.com/gfm/#example-34",
     "markdown": "#5 bolt\n\n#hashtag\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "#5 bolt"
           }
         ]
       },
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "#hashtag"
           }
         ]
@@ -99,14 +99,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-35",
+    "description": "ATX headings, https://github.github.com/gfm/#example-35",
     "markdown": "\\## foo\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "## foo"
           }
         ]
@@ -114,22 +114,22 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-36",
+    "description": "ATX headings, https://github.github.com/gfm/#example-36",
     "markdown": "# foo *bar* \\*baz\\*\n",
     "expected": [
       {
-        "type": "headline1",
+        "block": "headline1",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo "
           },
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "bar"
           },
           {
-            "type": "text",
+            "inline": "text",
             "text": " *baz*"
           }
         ]
@@ -137,14 +137,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-37",
+    "description": "ATX headings, https://github.github.com/gfm/#example-37",
     "markdown": "#                  foo                     \n",
     "expected": [
       {
-        "type": "headline1",
+        "block": "headline1",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo"
           }
         ]
@@ -152,32 +152,32 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-38",
+    "description": "ATX headings, https://github.github.com/gfm/#example-38",
     "markdown": " ### foo\n  ## foo\n   # foo\n",
     "expected": [
       {
-        "type": "headline3",
+        "block": "headline3",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo"
           }
         ]
       },
       {
-        "type": "headline2",
+        "block": "headline2",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo"
           }
         ]
       },
       {
-        "type": "headline1",
+        "block": "headline1",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo"
           }
         ]
@@ -185,14 +185,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-39",
+    "description": "ATX headings, https://github.github.com/gfm/#example-39",
     "markdown": "    # foo\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "# foo "
           }
         ]
@@ -200,14 +200,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-40",
+    "description": "ATX headings, https://github.github.com/gfm/#example-40",
     "markdown": "foo\n    # bar\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo # bar"
           }
         ]
@@ -215,23 +215,23 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-41",
+    "description": "ATX headings, https://github.github.com/gfm/#example-41",
     "markdown": "## foo ##\n  ###   bar    ###\n",
     "expected": [
       {
-        "type": "headline2",
+        "block": "headline2",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo"
           }
         ]
       },
       {
-        "type": "headline3",
+        "block": "headline3",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "bar"
           }
         ]
@@ -239,23 +239,23 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-42",
+    "description": "ATX headings, https://github.github.com/gfm/#example-42",
     "markdown": "# foo ##################################\n##### foo ##\n",
     "expected": [
       {
-        "type": "headline1",
+        "block": "headline1",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo"
           }
         ]
       },
       {
-        "type": "headline5",
+        "block": "headline5",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo"
           }
         ]
@@ -263,14 +263,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-43",
+    "description": "ATX headings, https://github.github.com/gfm/#example-43",
     "markdown": "### foo ###     \n",
     "expected": [
       {
-        "type": "headline3",
+        "block": "headline3",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo"
           }
         ]
@@ -278,14 +278,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-44",
+    "description": "ATX headings, https://github.github.com/gfm/#example-44",
     "markdown": "### foo ### b\n",
     "expected": [
       {
-        "type": "headline3",
+        "block": "headline3",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo ### b"
           }
         ]
@@ -293,14 +293,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-45",
+    "description": "ATX headings, https://github.github.com/gfm/#example-45",
     "markdown": "# foo#\n",
     "expected": [
       {
-        "type": "headline1",
+        "block": "headline1",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo#"
           }
         ]
@@ -308,32 +308,32 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-46",
+    "description": "ATX headings, https://github.github.com/gfm/#example-46",
     "markdown": "### foo \\###\n## foo #\\##\n# foo \\#\n",
     "expected": [
       {
-        "type": "headline3",
+        "block": "headline3",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo ###"
           }
         ]
       },
       {
-        "type": "headline2",
+        "block": "headline2",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo ###"
           }
         ]
       },
       {
-        "type": "headline1",
+        "block": "headline1",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo #"
           }
         ]
@@ -341,53 +341,53 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-47",
+    "description": "ATX headings, https://github.github.com/gfm/#example-47",
     "markdown": "****\n## foo\n****\n",
     "expected": [
       {
-        "type": "thematicBreak"
+        "block": "thematicBreak"
       },
       {
-        "type": "headline2",
+        "block": "headline2",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo"
           }
         ]
       },
       {
-        "type": "thematicBreak"
+        "block": "thematicBreak"
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-48",
+    "description": "ATX headings, https://github.github.com/gfm/#example-48",
     "markdown": "Foo bar\n# baz\nBar foo\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "Foo bar"
           }
         ]
       },
       {
-        "type": "headline1",
+        "block": "headline1",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "baz"
           }
         ]
       },
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "Bar foo"
           }
         ]
@@ -395,17 +395,17 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-49",
+    "description": "ATX headings, https://github.github.com/gfm/#example-49",
     "markdown": "## \n#\n### ###\n",
     "expected": [
       {
-        "type": "headline2"
+        "block": "headline2"
       },
       {
-        "type": "headline1"
+        "block": "headline1"
       },
       {
-        "type": "headline3"
+        "block": "headline3"
       }
     ]
   }

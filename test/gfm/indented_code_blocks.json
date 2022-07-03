@@ -1,13 +1,13 @@
 [
   {
-    "description": "https://github.github.com/gfm/#example-77",
+    "description": "Indented code blocks, https://github.github.com/gfm/#example-77",
     "markdown": "    a simple\n      indented code block\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "a simple   indented code block "
           }
         ]
@@ -15,20 +15,20 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-78",
+    "description": "Indented code blocks, https://github.github.com/gfm/#example-78",
     "markdown": "  - foo\n\n    bar\n",
     "expected": [
       {
-        "type": "bulletList",
+        "block": "bulletList",
         "children": [
           {
-            "type": "listItem",
+            "block": "listItem",
             "children": [
               {
-                "type": "paragraph",
+                "block": "paragraph",
                 "children": [
                   {
-                    "type": "text",
+                    "inline": "text",
                     "text": "foo"
                   }
                 ],
@@ -41,37 +41,24 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-79",
+    "description": "Indented code blocks, https://github.github.com/gfm/#example-79",
     "markdown": "1.  foo\n\n    - bar\n",
     "expected": [
       {
-        "type": "orderedList",
+        "block": "orderedList",
         "children": [
           {
-            "type": "listItem",
+            "block": "listItem",
             "children": [
               {
-                "type": "paragraph",
+                "block": "paragraph",
                 "children": [
                   {
-                    "type": "text",
+                    "inline": "text",
                     "text": "foo"
                   }
-                ]
-              },
-              {
-                "type": "bulletList",
-                "children": [
-                  {
-                    "type": "listItem",
-                    "children": [
-                      {
-                        "type": "text",
-                        "text": "bar"
-                      }
-                    ]
-                  }
-                ]
+                ],
+                "text": "nullnull"
               }
             ]
           }
@@ -80,14 +67,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-80",
+    "description": "Indented code blocks, https://github.github.com/gfm/#example-80",
     "markdown": "    <a/>\n    *hi*\n\n    - one\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "<a/> *hi*  - one "
           }
         ]
@@ -95,14 +82,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-81",
+    "description": "Indented code blocks, https://github.github.com/gfm/#example-81",
     "markdown": "    chunk1\n\n    chunk2\n  \n \n \n    chunk3\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "chunk1  chunk2    chunk3 "
           }
         ]
@@ -110,14 +97,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-82",
+    "description": "Indented code blocks, https://github.github.com/gfm/#example-82",
     "markdown": "    chunk1\n      \n      chunk2\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "chunk1      chunk2 "
           }
         ]
@@ -125,14 +112,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-83",
+    "description": "Indented code blocks, https://github.github.com/gfm/#example-83",
     "markdown": "Foo\n    bar\n\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "Foo bar"
           }
         ]
@@ -140,23 +127,23 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-84",
+    "description": "Indented code blocks, https://github.github.com/gfm/#example-84",
     "markdown": "    foo\nbar\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo "
           }
         ]
       },
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "bar"
           }
         ]
@@ -164,59 +151,59 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-85",
+    "description": "Indented code blocks, https://github.github.com/gfm/#example-85",
     "markdown": "# Heading\n    foo\nHeading\n------\n    foo\n----\n",
     "expected": [
       {
-        "type": "headline1",
+        "block": "headline1",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "Heading"
           }
         ]
       },
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo "
           }
         ]
       },
       {
-        "type": "headline2",
+        "block": "headline2",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "Heading"
           }
         ]
       },
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo "
           }
         ]
       },
       {
-        "type": "thematicBreak"
+        "block": "thematicBreak"
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-86",
+    "description": "Indented code blocks, https://github.github.com/gfm/#example-86",
     "markdown": "        foo\n    bar\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "    foo bar "
           }
         ]
@@ -224,14 +211,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-87",
+    "description": "Indented code blocks, https://github.github.com/gfm/#example-87",
     "markdown": "\n    \n    foo\n    \n\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo "
           }
         ]
@@ -239,14 +226,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-88",
+    "description": "Indented code blocks, https://github.github.com/gfm/#example-88",
     "markdown": "    foo  \n",
     "expected": [
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo   "
           }
         ]

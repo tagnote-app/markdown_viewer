@@ -1,13 +1,13 @@
 [
   {
-    "description": "https://github.github.com/gfm/#example-621",
+    "description": "Autolinks (extension), https://github.github.com/gfm/#example-621",
     "markdown": "www.commonmark.org\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "www.commonmark.org"
           }
         ]
@@ -15,14 +15,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-622",
+    "description": "Autolinks (extension), https://github.github.com/gfm/#example-622",
     "markdown": "Visit www.commonmark.org/help for more information.\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "Visit www.commonmark.org/help for more information."
           }
         ]
@@ -30,23 +30,23 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-623",
+    "description": "Autolinks (extension), https://github.github.com/gfm/#example-623",
     "markdown": "Visit www.commonmark.org.\n\nVisit www.commonmark.org/a.b.\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "Visit www.commonmark.org."
           }
         ]
       },
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "Visit www.commonmark.org/a.b."
           }
         ]
@@ -54,41 +54,41 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-624",
+    "description": "Autolinks (extension), https://github.github.com/gfm/#example-624",
     "markdown": "www.google.com/search?q=Markup+(business)\n\nwww.google.com/search?q=Markup+(business)))\n\n(www.google.com/search?q=Markup+(business))\n\n(www.google.com/search?q=Markup+(business)\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "www.google.com/search?q=Markup+(business)"
           }
         ]
       },
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "www.google.com/search?q=Markup+(business)))"
           }
         ]
       },
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "(www.google.com/search?q=Markup+(business))"
           }
         ]
       },
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "(www.google.com/search?q=Markup+(business)"
           }
         ]
@@ -96,14 +96,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-625",
+    "description": "Autolinks (extension), https://github.github.com/gfm/#example-625",
     "markdown": "www.google.com/search?q=(business))+ok\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "www.google.com/search?q=(business))+ok"
           }
         ]
@@ -111,23 +111,23 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-626",
+    "description": "Autolinks (extension), https://github.github.com/gfm/#example-626",
     "markdown": "www.google.com/search?q=commonmark&hl=en\n\nwww.google.com/search?q=commonmark&hl;\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "www.google.com/search?q=commonmark&hl=en"
           }
         ]
       },
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "www.google.com/search?q=commonmark&hl;"
           }
         ]
@@ -135,14 +135,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-627",
+    "description": "Autolinks (extension), https://github.github.com/gfm/#example-627",
     "markdown": "www.commonmark.org/he<lp\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "www.commonmark.org/he<lp"
           }
         ]
@@ -150,32 +150,32 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-628",
+    "description": "Autolinks (extension), https://github.github.com/gfm/#example-628",
     "markdown": "http://commonmark.org\n\n(Visit https://encrypted.google.com/search?q=Markup+(business))\n\nAnonymous FTP is available at ftp://foo.bar.baz.\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "http://commonmark.org"
           }
         ]
       },
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "(Visit https://encrypted.google.com/search?q=Markup+(business))"
           }
         ]
       },
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "Anonymous FTP is available at ftp://foo.bar.baz."
           }
         ]
@@ -183,14 +183,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-629",
+    "description": "Autolinks (extension), https://github.github.com/gfm/#example-629",
     "markdown": "foo@bar.baz\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo@bar.baz"
           }
         ]
@@ -198,14 +198,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-630",
+    "description": "Autolinks (extension), https://github.github.com/gfm/#example-630",
     "markdown": "hello@mail+xyz.example isn't valid, but hello+xyz@mail.example is.\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "hello@mail+xyz.example isn't valid, but hello+xyz@mail.example is."
           }
         ]
@@ -213,41 +213,41 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-631",
+    "description": "Autolinks (extension), https://github.github.com/gfm/#example-631",
     "markdown": "a.b-c_d@a.b\n\na.b-c_d@a.b.\n\na.b-c_d@a.b-\n\na.b-c_d@a.b_\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "a.b-c_d@a.b"
           }
         ]
       },
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "a.b-c_d@a.b."
           }
         ]
       },
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "a.b-c_d@a.b-"
           }
         ]
       },
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "a.b-c_d@a.b_"
           }
         ]

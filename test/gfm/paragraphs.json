@@ -1,22 +1,22 @@
 [
   {
-    "description": "https://github.github.com/gfm/#example-189",
+    "description": "Paragraphs, https://github.github.com/gfm/#example-189",
     "markdown": "aaa\n\nbbb\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "aaa"
           }
         ]
       },
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "bbb"
           }
         ]
@@ -24,23 +24,23 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-190",
+    "description": "Paragraphs, https://github.github.com/gfm/#example-190",
     "markdown": "aaa\nbbb\n\nccc\nddd\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "aaa bbb"
           }
         ]
       },
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "ccc ddd"
           }
         ]
@@ -48,23 +48,23 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-191",
+    "description": "Paragraphs, https://github.github.com/gfm/#example-191",
     "markdown": "aaa\n\n\nbbb\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "aaa"
           }
         ]
       },
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "bbb"
           }
         ]
@@ -72,14 +72,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-192",
+    "description": "Paragraphs, https://github.github.com/gfm/#example-192",
     "markdown": "  aaa\n bbb\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "aaa bbb"
           }
         ]
@@ -87,14 +87,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-193",
+    "description": "Paragraphs, https://github.github.com/gfm/#example-193",
     "markdown": "aaa\n             bbb\n                                       ccc\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "aaa bbb ccc"
           }
         ]
@@ -102,14 +102,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-194",
+    "description": "Paragraphs, https://github.github.com/gfm/#example-194",
     "markdown": "   aaa\nbbb\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "aaa bbb"
           }
         ]
@@ -117,23 +117,23 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-195",
+    "description": "Paragraphs, https://github.github.com/gfm/#example-195",
     "markdown": "    aaa\nbbb\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "aaa "
           }
         ]
       },
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "bbb"
           }
         ]
@@ -141,14 +141,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-196",
+    "description": "Paragraphs, https://github.github.com/gfm/#example-196",
     "markdown": "aaa     \nbbb     \n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "aaabbb"
           }
         ]

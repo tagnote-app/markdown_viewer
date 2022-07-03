@@ -1,13 +1,13 @@
 [
   {
-    "description": "https://github.github.com/gfm/#example-198",
+    "description": "Tables (extension), https://github.github.com/gfm/#example-198",
     "markdown": "| foo | bar |\n| --- | --- |\n| baz | bim |\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "| foo | bar | | --- | --- | | baz | bim |"
           }
         ]
@@ -15,14 +15,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-199",
+    "description": "Tables (extension), https://github.github.com/gfm/#example-199",
     "markdown": "| abc | defghi |\n:-: | -----------:\nbar | baz\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "| abc | defghi | :-: | -----------: bar | baz"
           }
         ]
@@ -30,30 +30,30 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-200",
+    "description": "Tables (extension), https://github.github.com/gfm/#example-200",
     "markdown": "| f\\|oo  |\n| ------ |\n| b `\\|` az |\n| b **\\|** im |\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "| f|oo  | | ------ | | b "
           },
           {
-            "type": "inlineCode",
+            "inline": "inlineCode",
             "text": "\\|"
           },
           {
-            "type": "text",
+            "inline": "text",
             "text": " az | | b "
           },
           {
-            "type": "strongEmphasis",
+            "inline": "strongEmphasis",
             "text": "|"
           },
           {
-            "type": "text",
+            "inline": "text",
             "text": " im |"
           }
         ]
@@ -61,26 +61,26 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-201",
+    "description": "Tables (extension), https://github.github.com/gfm/#example-201",
     "markdown": "| abc | def |\n| --- | --- |\n| bar | baz |\n> bar\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "| abc | def | | --- | --- | | bar | baz |"
           }
         ]
       },
       {
-        "type": "blockquote",
+        "block": "blockquote",
         "children": [
           {
-            "type": "paragraph",
+            "block": "paragraph",
             "children": [
               {
-                "type": "text",
+                "inline": "text",
                 "text": "bar"
               }
             ]
@@ -90,23 +90,23 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-202",
+    "description": "Tables (extension), https://github.github.com/gfm/#example-202",
     "markdown": "| abc | def |\n| --- | --- |\n| bar | baz |\nbar\n\nbar\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "| abc | def | | --- | --- | | bar | baz | bar"
           }
         ]
       },
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "bar"
           }
         ]
@@ -114,14 +114,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-203",
+    "description": "Tables (extension), https://github.github.com/gfm/#example-203",
     "markdown": "| abc | def |\n| --- |\n| bar |\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "| abc | def | | --- | | bar |"
           }
         ]
@@ -129,14 +129,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-204",
+    "description": "Tables (extension), https://github.github.com/gfm/#example-204",
     "markdown": "| abc | def |\n| --- | --- |\n| bar |\n| bar | baz | boo |\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "| abc | def | | --- | --- | | bar | | bar | baz | boo |"
           }
         ]
@@ -144,14 +144,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-205",
+    "description": "Tables (extension), https://github.github.com/gfm/#example-205",
     "markdown": "| abc | def |\n| --- | --- |\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "| abc | def | | --- | --- |"
           }
         ]

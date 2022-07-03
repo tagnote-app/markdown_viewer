@@ -1,13 +1,13 @@
 [
   {
-    "description": "https://github.github.com/gfm/#example-321",
+    "description": "Entity and numeric character references, https://github.github.com/gfm/#example-321",
     "markdown": "&nbsp; &amp; &copy; &AElig; &Dcaron;\n&frac34; &HilbertSpace; &DifferentialD;\n&ClockwiseContourIntegral; &ngE;\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "&nbsp; &amp; &copy; &AElig; &Dcaron; &frac34; &HilbertSpace; &DifferentialD; &ClockwiseContourIntegral; &ngE;"
           }
         ]
@@ -15,14 +15,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-322",
+    "description": "Entity and numeric character references, https://github.github.com/gfm/#example-322",
     "markdown": "&#35; &#1234; &#992; &#0;\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "&#35; &#1234; &#992; &#0;"
           }
         ]
@@ -30,14 +30,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-323",
+    "description": "Entity and numeric character references, https://github.github.com/gfm/#example-323",
     "markdown": "&#X22; &#XD06; &#xcab;\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "&#X22; &#XD06; &#xcab;"
           }
         ]
@@ -45,14 +45,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-324",
+    "description": "Entity and numeric character references, https://github.github.com/gfm/#example-324",
     "markdown": "&nbsp &x; &#; &#x;\n&#987654321;\n&#abcdef0;\n&ThisIsNotDefined; &hi?;\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "&nbsp &x; &#; &#x; &#987654321; &#abcdef0; &ThisIsNotDefined; &hi?;"
           }
         ]
@@ -60,14 +60,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-325",
+    "description": "Entity and numeric character references, https://github.github.com/gfm/#example-325",
     "markdown": "&copy\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "&copy"
           }
         ]
@@ -75,14 +75,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-326",
+    "description": "Entity and numeric character references, https://github.github.com/gfm/#example-326",
     "markdown": "&MadeUpEntity;\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "&MadeUpEntity;"
           }
         ]
@@ -90,14 +90,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-327",
+    "description": "Entity and numeric character references, https://github.github.com/gfm/#example-327",
     "markdown": "<a href=\"&ouml;&ouml;.html\">\n",
     "expected": [
       {
-        "type": "htmlBlock",
+        "block": "htmlBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "<a href=\"&ouml;&ouml;.html\">"
           }
         ]
@@ -105,14 +105,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-328",
+    "description": "Entity and numeric character references, https://github.github.com/gfm/#example-328",
     "markdown": "[foo](/f&ouml;&ouml; \"f&ouml;&ouml;\")\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "link",
+            "inline": "link",
             "text": "foo",
             "isLink": true
           }
@@ -121,14 +121,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-329",
+    "description": "Entity and numeric character references, https://github.github.com/gfm/#example-329",
     "markdown": "[foo]\n\n[foo]: /f&ouml;&ouml; \"f&ouml;&ouml;\"\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "link",
+            "inline": "link",
             "text": "foo",
             "isLink": true
           }
@@ -137,14 +137,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-330",
+    "description": "Entity and numeric character references, https://github.github.com/gfm/#example-330",
     "markdown": "``` f&ouml;&ouml;\nfoo\n```\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo "
           }
         ]
@@ -152,14 +152,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-331",
+    "description": "Entity and numeric character references, https://github.github.com/gfm/#example-331",
     "markdown": "`f&ouml;&ouml;`\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "inlineCode",
+            "inline": "inlineCode",
             "text": "f&ouml;&ouml;"
           }
         ]
@@ -167,14 +167,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-332",
+    "description": "Entity and numeric character references, https://github.github.com/gfm/#example-332",
     "markdown": "    f&ouml;f&ouml;\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "f&ouml;f&ouml; "
           }
         ]
@@ -182,18 +182,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-333",
+    "description": "Entity and numeric character references, https://github.github.com/gfm/#example-333",
     "markdown": "&#42;foo&#42;\n*foo*\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "&#42;foo&#42; "
           },
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "foo"
           }
         ]
@@ -201,26 +201,26 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-334",
+    "description": "Entity and numeric character references, https://github.github.com/gfm/#example-334",
     "markdown": "&#42; foo\n\n* foo\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "&#42; foo"
           }
         ]
       },
       {
-        "type": "bulletList",
+        "block": "bulletList",
         "children": [
           {
-            "type": "listItem",
+            "block": "listItem",
             "children": [
               {
-                "type": "text",
+                "inline": "text",
                 "text": "foo"
               }
             ]
@@ -230,14 +230,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-335",
+    "description": "Entity and numeric character references, https://github.github.com/gfm/#example-335",
     "markdown": "foo&#10;&#10;bar\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo&#10;&#10;bar"
           }
         ]
@@ -245,14 +245,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-336",
+    "description": "Entity and numeric character references, https://github.github.com/gfm/#example-336",
     "markdown": "&#9;foo\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "&#9;foo"
           }
         ]
@@ -260,14 +260,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-337",
+    "description": "Entity and numeric character references, https://github.github.com/gfm/#example-337",
     "markdown": "[a](url &quot;tit&quot;)\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "[a](url &quot;tit&quot;)"
           }
         ]

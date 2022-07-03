@@ -1,16 +1,16 @@
 [
   {
-    "description": "https://github.github.com/gfm/#example-12",
+    "description": "Precedence, https://github.github.com/gfm/#example-12",
     "markdown": "- `one\n- two`\n",
     "expected": [
       {
-        "type": "bulletList",
+        "block": "bulletList",
         "children": [
           {
-            "type": "listItem",
+            "block": "listItem",
             "children": [
               {
-                "type": "text",
+                "inline": "text",
                 "text": "`one"
               }
             ],

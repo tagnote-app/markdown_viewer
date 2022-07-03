@@ -9,7 +9,7 @@ class TestCaseBuilder implements NodeVisitor {
   final _links = <bool>[];
   bool _isInBlockquote = false;
 
-  List<TextSpan> build(List<Node> nodes) {
+  List<InlineNode> build(List<Node> nodes) {
     _tree.clear();
     _tree.add(TreeElement.root());
     _isInBlockquote = false;
@@ -52,7 +52,7 @@ class TestCaseBuilder implements NodeVisitor {
     }
 
     parent.children.add({
-      'type': parent.isBlock ? 'text' : parent.type,
+      'inline': parent.isBlock ? 'text' : parent.type,
       'text': textContent,
       if (_links.isNotEmpty) "isLink": _links.removeLast(),
     });
@@ -65,7 +65,7 @@ class TestCaseBuilder implements NodeVisitor {
 
     if (current.isBlock) {
       parent.children.add({
-        'type': current.type,
+        'block': current.type,
         if (current.children.isNotEmpty)
           'children': _mergeInlines(current.children)
       });
@@ -74,22 +74,24 @@ class TestCaseBuilder implements NodeVisitor {
     }
   }
 
-  /// Merges the [textSpans] which are adjacent and have the same attributes.
-  List<TextSpan> _mergeInlines(List<TextSpan> textSpans) {
-    final result = <TextSpan>[];
+  /// Merges the [inlines] which are adjacent and have the same types.
+  List<InlineNode> _mergeInlines(List<InlineNode> inlines) {
+    final result = <InlineNode>[];
 
-    for (final textSpan in textSpans) {
+    for (final inline in inlines) {
       if (result.isEmpty) {
-        result.add(textSpan);
+        result.add(inline);
       } else {
         final last = result.last;
-        if (last['type'] == textSpan['type']) {
-          result.last['text'] = '${result.last['text']}${textSpan['text']}';
+        if (last['inline'] == inline['inline']) {
+          result.last['text'] = '${result.last['text']}${inline['text']}';
         } else {
-          result.add(textSpan);
+          result.add(inline);
         }
       }
     }
     return result;
   }
 }
+
+typedef InlineNode = Map<String, dynamic>;

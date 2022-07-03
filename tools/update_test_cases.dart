@@ -32,7 +32,7 @@ void generateTestCases(String flavorName) {
     final markdown = item['markdown'] as String;
     testCases[sectionName] ??= <Map<String, dynamic>>[];
     testCases[sectionName]!.add({
-      'description': '$url/#example-${item['example']}',
+      'description': '$sectionName, $url/#example-${item['example']}',
       'markdown': markdown,
       "expected": _renderTestCase(markdown),
     });

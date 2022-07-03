@@ -1,13 +1,13 @@
 [
   {
-    "description": "https://github.github.com/gfm/#example-89",
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-89",
     "markdown": "```\n<\n >\n```\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "<  > "
           }
         ]
@@ -15,14 +15,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-90",
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-90",
     "markdown": "~~~\n<\n >\n~~~\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "<  > "
           }
         ]
@@ -30,14 +30,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-91",
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-91",
     "markdown": "``\nfoo\n``\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "inlineCode",
+            "inline": "inlineCode",
             "text": "foo"
           }
         ]
@@ -45,14 +45,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-92",
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-92",
     "markdown": "```\naaa\n~~~\n```\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "aaa ~~~ "
           }
         ]
@@ -60,14 +60,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-93",
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-93",
     "markdown": "~~~\naaa\n```\n~~~\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "aaa ``` "
           }
         ]
@@ -75,14 +75,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-94",
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-94",
     "markdown": "````\naaa\n```\n``````\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "aaa ``` "
           }
         ]
@@ -90,14 +90,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-95",
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-95",
     "markdown": "~~~~\naaa\n~~~\n~~~~\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "aaa ~~~ "
           }
         ]
@@ -105,23 +105,23 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-96",
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-96",
     "markdown": "```\n",
     "expected": [
       {
-        "type": "codeBlock"
+        "block": "codeBlock"
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-97",
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-97",
     "markdown": "`````\n\n```\naaa\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": " ``` aaa "
           }
         ]
@@ -129,17 +129,17 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-98",
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-98",
     "markdown": "> ```\n> aaa\n\nbbb\n",
     "expected": [
       {
-        "type": "blockquote",
+        "block": "blockquote",
         "children": [
           {
-            "type": "codeBlock",
+            "block": "codeBlock",
             "children": [
               {
-                "type": "text",
+                "inline": "text",
                 "text": "aaa\n"
               }
             ]
@@ -147,10 +147,10 @@
         ]
       },
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "bbb"
           }
         ]
@@ -158,14 +158,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-99",
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-99",
     "markdown": "```\n\n  \n```\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "    "
           }
         ]
@@ -173,23 +173,23 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-100",
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-100",
     "markdown": "```\n```\n",
     "expected": [
       {
-        "type": "codeBlock"
+        "block": "codeBlock"
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-101",
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-101",
     "markdown": " ```\n aaa\naaa\n```\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "aaa aaa "
           }
         ]
@@ -197,14 +197,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-102",
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-102",
     "markdown": "  ```\naaa\n  aaa\naaa\n  ```\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "aaa aaa aaa "
           }
         ]
@@ -212,14 +212,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-103",
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-103",
     "markdown": "   ```\n   aaa\n    aaa\n  aaa\n   ```\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "aaa  aaa aaa "
           }
         ]
@@ -227,14 +227,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-104",
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-104",
     "markdown": "    ```\n    aaa\n    ```\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "``` aaa ``` "
           }
         ]
@@ -242,14 +242,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-105",
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-105",
     "markdown": "```\naaa\n  ```\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "aaa "
           }
         ]
@@ -257,14 +257,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-106",
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-106",
     "markdown": "   ```\naaa\n  ```\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "aaa "
           }
         ]
@@ -272,14 +272,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-107",
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-107",
     "markdown": "```\naaa\n    ```\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "aaa     ``` "
           }
         ]
@@ -287,18 +287,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-108",
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-108",
     "markdown": "``` ```\naaa\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "inlineCode",
+            "inline": "inlineCode",
             "text": " "
           },
           {
-            "type": "text",
+            "inline": "text",
             "text": " aaa"
           }
         ]
@@ -306,14 +306,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-109",
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-109",
     "markdown": "~~~~~~\naaa\n~~~ ~~\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "aaa ~~~ ~~ "
           }
         ]
@@ -321,32 +321,32 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-110",
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-110",
     "markdown": "foo\n```\nbar\n```\nbaz\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo"
           }
         ]
       },
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "bar "
           }
         ]
       },
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "baz"
           }
         ]
@@ -354,32 +354,32 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-111",
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-111",
     "markdown": "foo\n---\n~~~\nbar\n~~~\n# baz\n",
     "expected": [
       {
-        "type": "headline2",
+        "block": "headline2",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo"
           }
         ]
       },
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "bar "
           }
         ]
       },
       {
-        "type": "headline1",
+        "block": "headline1",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "baz"
           }
         ]
@@ -387,14 +387,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-112",
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-112",
     "markdown": "```ruby\ndef foo(x)\n  return 3\nend\n```\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "def foo(x)   return 3 end "
           }
         ]
@@ -402,14 +402,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-113",
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-113",
     "markdown": "~~~~    ruby startline=3 $%@#$\ndef foo(x)\n  return 3\nend\n~~~~~~~\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "def foo(x)   return 3 end "
           }
         ]
@@ -417,27 +417,27 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-114",
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-114",
     "markdown": "````;\n````\n",
     "expected": [
       {
-        "type": "codeBlock"
+        "block": "codeBlock"
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-115",
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-115",
     "markdown": "``` aa ```\nfoo\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "inlineCode",
+            "inline": "inlineCode",
             "text": "aa"
           },
           {
-            "type": "text",
+            "inline": "text",
             "text": " foo"
           }
         ]
@@ -445,14 +445,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-116",
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-116",
     "markdown": "~~~ aa ``` ~~~\nfoo\n~~~\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo "
           }
         ]
@@ -460,14 +460,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-117",
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-117",
     "markdown": "```\n``` aaa\n```\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "``` aaa "
           }
         ]

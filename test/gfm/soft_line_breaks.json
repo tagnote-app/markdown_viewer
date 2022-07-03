@@ -1,13 +1,13 @@
 [
   {
-    "description": "https://github.github.com/gfm/#example-669",
+    "description": "Soft line breaks, https://github.github.com/gfm/#example-669",
     "markdown": "foo\nbaz\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo baz"
           }
         ]
@@ -15,14 +15,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-670",
+    "description": "Soft line breaks, https://github.github.com/gfm/#example-670",
     "markdown": "foo \n baz\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo baz"
           }
         ]

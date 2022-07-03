@@ -1,13 +1,13 @@
 [
   {
-    "description": "https://github.github.com/gfm/#example-308",
+    "description": "Backslash escapes, https://github.github.com/gfm/#example-308",
     "markdown": "\\!\\\"\\#\\$\\%\\&\\'\\(\\)\\*\\+\\,\\-\\.\\/\\:\\;\\<\\=\\>\\?\\@\\[\\\\\\]\\^\\_\\`\\{\\|\\}\\~\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
           }
         ]
@@ -15,14 +15,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-309",
+    "description": "Backslash escapes, https://github.github.com/gfm/#example-309",
     "markdown": "\\\t\\A\\a\\ \\3\\φ\\«\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "\\\t\\A\\a\\ \\3\\φ\\«"
           }
         ]
@@ -30,14 +30,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-310",
+    "description": "Backslash escapes, https://github.github.com/gfm/#example-310",
     "markdown": "\\*not emphasized*\n\\<br/> not a tag\n\\[not a link](/foo)\n\\`not code`\n1\\. not a list\n\\* not a list\n\\# not a heading\n\\[foo]: /url \"not a reference\"\n\\&ouml; not a character entity\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "*not emphasized* <br/> not a tag [not a link](/foo) `not code` 1. not a list * not a list # not a heading [foo]: /url \"not a reference\" &ouml; not a character entity"
           }
         ]
@@ -45,18 +45,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-311",
+    "description": "Backslash escapes, https://github.github.com/gfm/#example-311",
     "markdown": "\\\\*emphasis*\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "\\"
           },
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "emphasis"
           }
         ]
@@ -64,14 +64,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-312",
+    "description": "Backslash escapes, https://github.github.com/gfm/#example-312",
     "markdown": "foo\\\nbar\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foobar"
           }
         ]
@@ -79,14 +79,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-313",
+    "description": "Backslash escapes, https://github.github.com/gfm/#example-313",
     "markdown": "`` \\[\\` ``\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "inlineCode",
+            "inline": "inlineCode",
             "text": "\\[\\`"
           }
         ]
@@ -94,14 +94,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-314",
+    "description": "Backslash escapes, https://github.github.com/gfm/#example-314",
     "markdown": "    \\[\\]\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "\\[\\] "
           }
         ]
@@ -109,14 +109,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-315",
+    "description": "Backslash escapes, https://github.github.com/gfm/#example-315",
     "markdown": "~~~\n\\[\\]\n~~~\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "\\[\\] "
           }
         ]
@@ -124,14 +124,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-316",
+    "description": "Backslash escapes, https://github.github.com/gfm/#example-316",
     "markdown": "<http://example.com?find=\\*>\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "link",
+            "inline": "link",
             "text": "http://example.com?find=\\*"
           }
         ]
@@ -139,14 +139,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-317",
+    "description": "Backslash escapes, https://github.github.com/gfm/#example-317",
     "markdown": "<a href=\"/bar\\/)\">\n",
     "expected": [
       {
-        "type": "htmlBlock",
+        "block": "htmlBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "<a href=\"/bar\\/)\">"
           }
         ]
@@ -154,14 +154,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-318",
+    "description": "Backslash escapes, https://github.github.com/gfm/#example-318",
     "markdown": "[foo](/bar\\* \"ti\\*tle\")\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "link",
+            "inline": "link",
             "text": "foo",
             "isLink": true
           }
@@ -170,14 +170,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-319",
+    "description": "Backslash escapes, https://github.github.com/gfm/#example-319",
     "markdown": "[foo]\n\n[foo]: /bar\\* \"ti\\*tle\"\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "link",
+            "inline": "link",
             "text": "foo",
             "isLink": true
           }
@@ -186,14 +186,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-320",
+    "description": "Backslash escapes, https://github.github.com/gfm/#example-320",
     "markdown": "``` foo\\+bar\nfoo\n```\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo "
           }
         ]

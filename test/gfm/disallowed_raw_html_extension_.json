@@ -1,46 +1,46 @@
 [
   {
-    "description": "https://github.github.com/gfm/#example-653",
+    "description": "Disallowed Raw HTML (extension), https://github.github.com/gfm/#example-653",
     "markdown": "<strong> <title> <style> <em>\n\n<blockquote>\n  <xmp> is disallowed.  <XMP> is also disallowed.\n</blockquote>\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "inlineHtml",
+            "inline": "inlineHtml",
             "text": "<strong>"
           },
           {
-            "type": "text",
+            "inline": "text",
             "text": " "
           },
           {
-            "type": "inlineHtml",
+            "inline": "inlineHtml",
             "text": "<title>"
           },
           {
-            "type": "text",
+            "inline": "text",
             "text": " "
           },
           {
-            "type": "inlineHtml",
+            "inline": "inlineHtml",
             "text": "<style>"
           },
           {
-            "type": "text",
+            "inline": "text",
             "text": " "
           },
           {
-            "type": "inlineHtml",
+            "inline": "inlineHtml",
             "text": "<em>"
           }
         ]
       },
       {
-        "type": "htmlBlock",
+        "block": "htmlBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "<blockquote>   <xmp> is disallowed.  <XMP> is also disallowed. </blockquote>"
           }
         ]

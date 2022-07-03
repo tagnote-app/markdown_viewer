@@ -1,22 +1,22 @@
 [
   {
-    "description": "https://github.github.com/gfm/#example-197",
+    "description": "Blank lines, https://github.github.com/gfm/#example-197",
     "markdown": "  \n\naaa\n  \n\n# aaa\n\n  \n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "aaa"
           }
         ]
       },
       {
-        "type": "headline1",
+        "block": "headline1",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "aaa"
           }
         ]

@@ -1,30 +1,30 @@
 [
   {
-    "description": "https://github.github.com/gfm/#example-50",
+    "description": "Setext headings, https://github.github.com/gfm/#example-50",
     "markdown": "Foo *bar*\n=========\n\nFoo *bar*\n---------\n",
     "expected": [
       {
-        "type": "headline1",
+        "block": "headline1",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "Foo "
           },
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "bar"
           }
         ]
       },
       {
-        "type": "headline2",
+        "block": "headline2",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "Foo "
           },
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "bar"
           }
         ]
@@ -32,18 +32,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-51",
+    "description": "Setext headings, https://github.github.com/gfm/#example-51",
     "markdown": "Foo *bar\nbaz*\n====\n",
     "expected": [
       {
-        "type": "headline1",
+        "block": "headline1",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "Foo "
           },
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "bar baz"
           }
         ]
@@ -51,18 +51,18 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-52",
+    "description": "Setext headings, https://github.github.com/gfm/#example-52",
     "markdown": "  Foo *bar\nbaz*\t\n====\n",
     "expected": [
       {
-        "type": "headline1",
+        "block": "headline1",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "Foo "
           },
           {
-            "type": "emphasis",
+            "inline": "emphasis",
             "text": "bar baz"
           }
         ]
@@ -70,23 +70,23 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-53",
+    "description": "Setext headings, https://github.github.com/gfm/#example-53",
     "markdown": "Foo\n-------------------------\n\nFoo\n=\n",
     "expected": [
       {
-        "type": "headline2",
+        "block": "headline2",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "Foo"
           }
         ]
       },
       {
-        "type": "headline1",
+        "block": "headline1",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "Foo"
           }
         ]
@@ -94,32 +94,32 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-54",
+    "description": "Setext headings, https://github.github.com/gfm/#example-54",
     "markdown": "   Foo\n---\n\n  Foo\n-----\n\n  Foo\n  ===\n",
     "expected": [
       {
-        "type": "headline2",
+        "block": "headline2",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "Foo"
           }
         ]
       },
       {
-        "type": "headline2",
+        "block": "headline2",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "Foo"
           }
         ]
       },
       {
-        "type": "headline1",
+        "block": "headline1",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "Foo"
           }
         ]
@@ -127,32 +127,32 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-55",
+    "description": "Setext headings, https://github.github.com/gfm/#example-55",
     "markdown": "    Foo\n    ---\n\n    Foo\n---\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "Foo ---  Foo "
           }
         ]
       },
       {
-        "type": "thematicBreak"
+        "block": "thematicBreak"
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-56",
+    "description": "Setext headings, https://github.github.com/gfm/#example-56",
     "markdown": "Foo\n   ----      \n",
     "expected": [
       {
-        "type": "headline2",
+        "block": "headline2",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "Foo"
           }
         ]
@@ -160,14 +160,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-57",
+    "description": "Setext headings, https://github.github.com/gfm/#example-57",
     "markdown": "Foo\n    ---\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "Foo ---"
           }
         ]
@@ -175,41 +175,41 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-58",
+    "description": "Setext headings, https://github.github.com/gfm/#example-58",
     "markdown": "Foo\n= =\n\nFoo\n--- -\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "Foo = ="
           }
         ]
       },
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "Foo"
           }
         ]
       },
       {
-        "type": "thematicBreak"
+        "block": "thematicBreak"
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-59",
+    "description": "Setext headings, https://github.github.com/gfm/#example-59",
     "markdown": "Foo  \n-----\n",
     "expected": [
       {
-        "type": "headline2",
+        "block": "headline2",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "Foo"
           }
         ]
@@ -217,14 +217,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-60",
+    "description": "Setext headings, https://github.github.com/gfm/#example-60",
     "markdown": "Foo\\\n----\n",
     "expected": [
       {
-        "type": "headline2",
+        "block": "headline2",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "Foo\\"
           }
         ]
@@ -232,41 +232,41 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-61",
+    "description": "Setext headings, https://github.github.com/gfm/#example-61",
     "markdown": "`Foo\n----\n`\n\n<a title=\"a lot\n---\nof dashes\"/>\n",
     "expected": [
       {
-        "type": "headline2",
+        "block": "headline2",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "`Foo"
           }
         ]
       },
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "`"
           }
         ]
       },
       {
-        "type": "headline2",
+        "block": "headline2",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "<a title=\"a lot"
           }
         ]
       },
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "of dashes\"/>"
           }
         ]
@@ -274,17 +274,17 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-62",
+    "description": "Setext headings, https://github.github.com/gfm/#example-62",
     "markdown": "> Foo\n---\n",
     "expected": [
       {
-        "type": "blockquote",
+        "block": "blockquote",
         "children": [
           {
-            "type": "paragraph",
+            "block": "paragraph",
             "children": [
               {
-                "type": "text",
+                "inline": "text",
                 "text": "Foo"
               }
             ]
@@ -292,22 +292,22 @@
         ]
       },
       {
-        "type": "thematicBreak"
+        "block": "thematicBreak"
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-63",
+    "description": "Setext headings, https://github.github.com/gfm/#example-63",
     "markdown": "> foo\nbar\n===\n",
     "expected": [
       {
-        "type": "blockquote",
+        "block": "blockquote",
         "children": [
           {
-            "type": "paragraph",
+            "block": "paragraph",
             "children": [
               {
-                "type": "text",
+                "inline": "text",
                 "text": "foo\nbar\n==="
               }
             ]
@@ -317,17 +317,17 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-64",
+    "description": "Setext headings, https://github.github.com/gfm/#example-64",
     "markdown": "- Foo\n---\n",
     "expected": [
       {
-        "type": "bulletList",
+        "block": "bulletList",
         "children": [
           {
-            "type": "listItem",
+            "block": "listItem",
             "children": [
               {
-                "type": "text",
+                "inline": "text",
                 "text": "Foo"
               }
             ]
@@ -335,19 +335,19 @@
         ]
       },
       {
-        "type": "thematicBreak"
+        "block": "thematicBreak"
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-65",
+    "description": "Setext headings, https://github.github.com/gfm/#example-65",
     "markdown": "Foo\nBar\n---\n",
     "expected": [
       {
-        "type": "headline2",
+        "block": "headline2",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "Foo Bar"
           }
         ]
@@ -355,35 +355,35 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-66",
+    "description": "Setext headings, https://github.github.com/gfm/#example-66",
     "markdown": "---\nFoo\n---\nBar\n---\nBaz\n",
     "expected": [
       {
-        "type": "thematicBreak"
+        "block": "thematicBreak"
       },
       {
-        "type": "headline2",
+        "block": "headline2",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "Foo"
           }
         ]
       },
       {
-        "type": "headline2",
+        "block": "headline2",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "Bar"
           }
         ]
       },
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "Baz"
           }
         ]
@@ -391,14 +391,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-67",
+    "description": "Setext headings, https://github.github.com/gfm/#example-67",
     "markdown": "\n====\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "===="
           }
         ]
@@ -406,29 +406,29 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-68",
+    "description": "Setext headings, https://github.github.com/gfm/#example-68",
     "markdown": "---\n---\n",
     "expected": [
       {
-        "type": "thematicBreak"
+        "block": "thematicBreak"
       },
       {
-        "type": "thematicBreak"
+        "block": "thematicBreak"
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-69",
+    "description": "Setext headings, https://github.github.com/gfm/#example-69",
     "markdown": "- foo\n-----\n",
     "expected": [
       {
-        "type": "bulletList",
+        "block": "bulletList",
         "children": [
           {
-            "type": "listItem",
+            "block": "listItem",
             "children": [
               {
-                "type": "text",
+                "inline": "text",
                 "text": "foo"
               }
             ]
@@ -436,40 +436,40 @@
         ]
       },
       {
-        "type": "thematicBreak"
+        "block": "thematicBreak"
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-70",
+    "description": "Setext headings, https://github.github.com/gfm/#example-70",
     "markdown": "    foo\n---\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "block": "codeBlock",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "foo "
           }
         ]
       },
       {
-        "type": "thematicBreak"
+        "block": "thematicBreak"
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-71",
+    "description": "Setext headings, https://github.github.com/gfm/#example-71",
     "markdown": "> foo\n-----\n",
     "expected": [
       {
-        "type": "blockquote",
+        "block": "blockquote",
         "children": [
           {
-            "type": "paragraph",
+            "block": "paragraph",
             "children": [
               {
-                "type": "text",
+                "inline": "text",
                 "text": "foo"
               }
             ]
@@ -477,19 +477,19 @@
         ]
       },
       {
-        "type": "thematicBreak"
+        "block": "thematicBreak"
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-72",
+    "description": "Setext headings, https://github.github.com/gfm/#example-72",
     "markdown": "\\> foo\n------\n",
     "expected": [
       {
-        "type": "headline2",
+        "block": "headline2",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "> foo"
           }
         ]
@@ -497,32 +497,32 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-73",
+    "description": "Setext headings, https://github.github.com/gfm/#example-73",
     "markdown": "Foo\n\nbar\n---\nbaz\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "Foo"
           }
         ]
       },
       {
-        "type": "headline2",
+        "block": "headline2",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "bar"
           }
         ]
       },
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "baz"
           }
         ]
@@ -530,26 +530,26 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-74",
+    "description": "Setext headings, https://github.github.com/gfm/#example-74",
     "markdown": "Foo\nbar\n\n---\n\nbaz\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "Foo bar"
           }
         ]
       },
       {
-        "type": "thematicBreak"
+        "block": "thematicBreak"
       },
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "baz"
           }
         ]
@@ -557,26 +557,26 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-75",
+    "description": "Setext headings, https://github.github.com/gfm/#example-75",
     "markdown": "Foo\nbar\n* * *\nbaz\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "Foo bar"
           }
         ]
       },
       {
-        "type": "thematicBreak"
+        "block": "thematicBreak"
       },
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "baz"
           }
         ]
@@ -584,14 +584,14 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-76",
+    "description": "Setext headings, https://github.github.com/gfm/#example-76",
     "markdown": "Foo\nbar\n\\---\nbaz\n",
     "expected": [
       {
-        "type": "paragraph",
+        "block": "paragraph",
         "children": [
           {
-            "type": "text",
+            "inline": "text",
             "text": "Foo bar --- baz"
           }
         ]

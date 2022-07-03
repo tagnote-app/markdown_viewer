@@ -2,8 +2,6 @@ import 'package:markdown/markdown.dart';
 
 import 'helpers.dart';
 
-typedef TextSpan = Map<String, dynamic>;
-
 class TreeElement {
   TreeElement.root()
       : type = '',
