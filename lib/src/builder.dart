@@ -87,7 +87,7 @@ class MarkdownBuilder implements md.NodeVisitor {
     if (current.isBlock) {
       Widget blockChild;
 
-      if (current.children.isNotEmpty) {
+      if (current.children.length > 1) {
         blockChild = Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -96,6 +96,8 @@ class MarkdownBuilder implements md.NodeVisitor {
             richTextBuilder: _buildRichText,
           ),
         );
+      } else if (current.children.length == 1) {
+        blockChild = current.children.single;
       } else {
         blockChild = const SizedBox.shrink();
       }
@@ -112,6 +114,9 @@ class MarkdownBuilder implements md.NodeVisitor {
         );
       }
 
+      if (parent.children.isNotEmpty) {
+        parent.children.add(SizedBox(height: _styleSheet.blockSpacing));
+      }
       parent.children.add(blockChild);
     } else {
       parent.children.addAll(current.children);
