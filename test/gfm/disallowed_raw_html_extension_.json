@@ -8,31 +8,44 @@
         "children": [
           {
             "inline": "inlineHtml",
-            "text": "<strong>"
+            "children": [
+              {
+                "text": "<strong>"
+              }
+            ]
           },
           {
-            "inline": "text",
             "text": " "
           },
           {
             "inline": "inlineHtml",
-            "text": "<title>"
+            "children": [
+              {
+                "text": "<title>"
+              }
+            ]
           },
           {
-            "inline": "text",
             "text": " "
           },
           {
             "inline": "inlineHtml",
-            "text": "<style>"
+            "children": [
+              {
+                "text": "<style>"
+              }
+            ]
           },
           {
-            "inline": "text",
             "text": " "
           },
           {
             "inline": "inlineHtml",
-            "text": "<em>"
+            "children": [
+              {
+                "text": "<em>"
+              }
+            ]
           }
         ]
       },
@@ -40,7 +53,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "<blockquote>   <xmp> is disallowed.  <XMP> is also disallowed. </blockquote>"
           }
         ]

@@ -10,11 +10,17 @@
             "block": "headline1",
             "children": [
               {
-                "inline": "text",
                 "text": "Foo"
               }
-            ],
-            "text": "nullnull"
+            ]
+          },
+          {
+            "block": "paragraph",
+            "children": [
+              {
+                "text": "bar\nbaz"
+              }
+            ]
           }
         ]
       }
@@ -31,11 +37,17 @@
             "block": "headline1",
             "children": [
               {
-                "inline": "text",
                 "text": "Foo"
               }
-            ],
-            "text": "nullnull"
+            ]
+          },
+          {
+            "block": "paragraph",
+            "children": [
+              {
+                "text": "bar\nbaz"
+              }
+            ]
           }
         ]
       }
@@ -52,11 +64,17 @@
             "block": "headline1",
             "children": [
               {
-                "inline": "text",
                 "text": "Foo"
               }
-            ],
-            "text": "nullnull"
+            ]
+          },
+          {
+            "block": "paragraph",
+            "children": [
+              {
+                "text": "bar\nbaz"
+              }
+            ]
           }
         ]
       }
@@ -70,7 +88,6 @@
         "block": "codeBlock",
         "children": [
           {
-            "inline": "text",
             "text": "> # Foo > bar > baz "
           }
         ]
@@ -88,11 +105,17 @@
             "block": "headline1",
             "children": [
               {
-                "inline": "text",
                 "text": "Foo"
               }
-            ],
-            "text": "nullnull"
+            ]
+          },
+          {
+            "block": "paragraph",
+            "children": [
+              {
+                "text": "bar\nbaz"
+              }
+            ]
           }
         ]
       }
@@ -109,7 +132,6 @@
             "block": "paragraph",
             "children": [
               {
-                "inline": "text",
                 "text": "bar\nbaz\nfoo"
               }
             ]
@@ -129,7 +151,6 @@
             "block": "paragraph",
             "children": [
               {
-                "inline": "text",
                 "text": "foo"
               }
             ]
@@ -155,7 +176,6 @@
                 "block": "listItem",
                 "children": [
                   {
-                    "inline": "text",
                     "text": "foo"
                   }
                 ]
@@ -171,7 +191,6 @@
             "block": "listItem",
             "children": [
               {
-                "inline": "text",
                 "text": "bar"
               }
             ]
@@ -191,7 +210,6 @@
             "block": "codeBlock",
             "children": [
               {
-                "inline": "text",
                 "text": "foo\n"
               }
             ]
@@ -202,7 +220,6 @@
         "block": "codeBlock",
         "children": [
           {
-            "inline": "text",
             "text": "bar\n"
           }
         ]
@@ -225,7 +242,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "foo"
           }
         ]
@@ -246,7 +262,6 @@
             "block": "paragraph",
             "children": [
               {
-                "inline": "text",
                 "text": "foo\n- bar"
               }
             ]
@@ -284,7 +299,6 @@
             "block": "paragraph",
             "children": [
               {
-                "inline": "text",
                 "text": "foo"
               }
             ]
@@ -304,7 +318,6 @@
             "block": "paragraph",
             "children": [
               {
-                "inline": "text",
                 "text": "foo"
               }
             ]
@@ -318,7 +331,6 @@
             "block": "paragraph",
             "children": [
               {
-                "inline": "text",
                 "text": "bar"
               }
             ]
@@ -338,7 +350,6 @@
             "block": "paragraph",
             "children": [
               {
-                "inline": "text",
                 "text": "foo\nbar"
               }
             ]
@@ -358,11 +369,17 @@
             "block": "paragraph",
             "children": [
               {
-                "inline": "text",
                 "text": "foo"
               }
-            ],
-            "text": "nullnull"
+            ]
+          },
+          {
+            "block": "paragraph",
+            "children": [
+              {
+                "text": "bar"
+              }
+            ]
           }
         ]
       }
@@ -376,7 +393,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "foo"
           }
         ]
@@ -388,7 +404,6 @@
             "block": "paragraph",
             "children": [
               {
-                "inline": "text",
                 "text": "bar"
               }
             ]
@@ -408,7 +423,6 @@
             "block": "paragraph",
             "children": [
               {
-                "inline": "text",
                 "text": "aaa"
               }
             ]
@@ -425,7 +439,6 @@
             "block": "paragraph",
             "children": [
               {
-                "inline": "text",
                 "text": "bbb"
               }
             ]
@@ -445,7 +458,6 @@
             "block": "paragraph",
             "children": [
               {
-                "inline": "text",
                 "text": "bar\nbaz"
               }
             ]
@@ -465,7 +477,6 @@
             "block": "paragraph",
             "children": [
               {
-                "inline": "text",
                 "text": "bar"
               }
             ]
@@ -476,7 +487,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "baz"
           }
         ]
@@ -494,7 +504,6 @@
             "block": "paragraph",
             "children": [
               {
-                "inline": "text",
                 "text": "bar"
               }
             ]
@@ -505,7 +514,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "baz"
           }
         ]
@@ -529,7 +537,6 @@
                     "block": "paragraph",
                     "children": [
                       {
-                        "inline": "text",
                         "text": "foo\nbar"
                       }
                     ]
@@ -559,7 +566,6 @@
                     "block": "paragraph",
                     "children": [
                       {
-                        "inline": "text",
                         "text": "foo\nbar\nbaz"
                       }
                     ]
@@ -583,7 +589,6 @@
             "block": "codeBlock",
             "children": [
               {
-                "inline": "text",
                 "text": "code\n"
               }
             ]
@@ -597,7 +602,6 @@
             "block": "paragraph",
             "children": [
               {
-                "inline": "text",
                 "text": "not code"
               }
             ]

@@ -10,11 +10,17 @@
             "block": "listItem",
             "children": [
               {
-                "inline": "text",
                 "text": "foo"
               }
-            ],
-            "text": "nullnull"
+            ]
+          },
+          {
+            "block": "listItem",
+            "children": [
+              {
+                "text": "bar"
+              }
+            ]
           }
         ]
       },
@@ -25,7 +31,6 @@
             "block": "listItem",
             "children": [
               {
-                "inline": "text",
                 "text": "baz"
               }
             ]
@@ -45,11 +50,17 @@
             "block": "listItem",
             "children": [
               {
-                "inline": "text",
                 "text": "foo"
               }
-            ],
-            "text": "nullnull"
+            ]
+          },
+          {
+            "block": "listItem",
+            "children": [
+              {
+                "text": "bar"
+              }
+            ]
           }
         ]
       },
@@ -60,7 +71,6 @@
             "block": "listItem",
             "children": [
               {
-                "inline": "text",
                 "text": "baz"
               }
             ]
@@ -77,7 +87,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "Foo"
           }
         ]
@@ -89,11 +98,17 @@
             "block": "listItem",
             "children": [
               {
-                "inline": "text",
                 "text": "bar"
               }
-            ],
-            "text": "nullnull"
+            ]
+          },
+          {
+            "block": "listItem",
+            "children": [
+              {
+                "text": "baz"
+              }
+            ]
           }
         ]
       }
@@ -107,7 +122,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "The number of windows in my house is 14.  The number of doors is 6."
           }
         ]
@@ -122,7 +136,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "The number of windows in my house is"
           }
         ]
@@ -134,7 +147,6 @@
             "block": "listItem",
             "children": [
               {
-                "inline": "text",
                 "text": "The number of doors is 6."
               }
             ]
@@ -157,13 +169,37 @@
                 "block": "paragraph",
                 "children": [
                   {
-                    "inline": "text",
                     "text": "foo"
                   }
                 ]
               }
-            ],
-            "text": "nullnullnull"
+            ]
+          },
+          {
+            "block": "listItem",
+            "children": [
+              {
+                "block": "paragraph",
+                "children": [
+                  {
+                    "text": "bar"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "block": "listItem",
+            "children": [
+              {
+                "block": "paragraph",
+                "children": [
+                  {
+                    "text": "baz"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
@@ -180,7 +216,6 @@
             "block": "listItem",
             "children": [
               {
-                "inline": "text",
                 "text": "foo"
               },
               {
@@ -190,7 +225,6 @@
                     "block": "listItem",
                     "children": [
                       {
-                        "inline": "text",
                         "text": "bar"
                       },
                       {
@@ -203,11 +237,17 @@
                                 "block": "paragraph",
                                 "children": [
                                   {
-                                    "inline": "text",
                                     "text": "baz"
                                   }
-                                ],
-                                "text": "nullnull"
+                                ]
+                              },
+                              {
+                                "block": "paragraph",
+                                "children": [
+                                  {
+                                    "text": "bim"
+                                  }
+                                ]
                               }
                             ]
                           }
@@ -234,11 +274,17 @@
             "block": "listItem",
             "children": [
               {
-                "inline": "text",
                 "text": "foo"
               }
-            ],
-            "text": "nullnull"
+            ]
+          },
+          {
+            "block": "listItem",
+            "children": [
+              {
+                "text": "bar"
+              }
+            ]
           }
         ]
       },
@@ -246,7 +292,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "<!-- -->"
           }
         ]
@@ -258,11 +303,17 @@
             "block": "listItem",
             "children": [
               {
-                "inline": "text",
                 "text": "baz"
               }
-            ],
-            "text": "nullnull"
+            ]
+          },
+          {
+            "block": "listItem",
+            "children": [
+              {
+                "text": "bim"
+              }
+            ]
           }
         ]
       }
@@ -282,14 +333,32 @@
                 "block": "paragraph",
                 "children": [
                   {
-                    "inline": "text",
                     "text": "foo"
                   }
-                ],
-                "text": "nullnull"
+                ]
+              },
+              {
+                "block": "paragraph",
+                "children": [
+                  {
+                    "text": "notcode"
+                  }
+                ]
               }
-            ],
-            "text": "nullnull"
+            ]
+          },
+          {
+            "block": "listItem",
+            "children": [
+              {
+                "block": "paragraph",
+                "children": [
+                  {
+                    "text": "foo"
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -297,7 +366,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "<!-- -->"
           }
         ]
@@ -306,7 +374,6 @@
         "block": "codeBlock",
         "children": [
           {
-            "inline": "text",
             "text": "code "
           }
         ]
@@ -324,11 +391,57 @@
             "block": "listItem",
             "children": [
               {
-                "inline": "text",
                 "text": "a"
               }
-            ],
-            "text": "nullnullnullnullnullnullnull"
+            ]
+          },
+          {
+            "block": "listItem",
+            "children": [
+              {
+                "text": "b"
+              }
+            ]
+          },
+          {
+            "block": "listItem",
+            "children": [
+              {
+                "text": "c"
+              }
+            ]
+          },
+          {
+            "block": "listItem",
+            "children": [
+              {
+                "text": "d"
+              }
+            ]
+          },
+          {
+            "block": "listItem",
+            "children": [
+              {
+                "text": "e"
+              }
+            ]
+          },
+          {
+            "block": "listItem",
+            "children": [
+              {
+                "text": "f"
+              }
+            ]
+          },
+          {
+            "block": "listItem",
+            "children": [
+              {
+                "text": "g"
+              }
+            ]
           }
         ]
       }
@@ -348,13 +461,37 @@
                 "block": "paragraph",
                 "children": [
                   {
-                    "inline": "text",
                     "text": "a"
                   }
                 ]
               }
-            ],
-            "text": "nullnullnull"
+            ]
+          },
+          {
+            "block": "listItem",
+            "children": [
+              {
+                "block": "paragraph",
+                "children": [
+                  {
+                    "text": "b"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "block": "listItem",
+            "children": [
+              {
+                "block": "paragraph",
+                "children": [
+                  {
+                    "text": "c"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
@@ -371,11 +508,33 @@
             "block": "listItem",
             "children": [
               {
-                "inline": "text",
                 "text": "a"
               }
-            ],
-            "text": "nullnullnullnull"
+            ]
+          },
+          {
+            "block": "listItem",
+            "children": [
+              {
+                "text": "b"
+              }
+            ]
+          },
+          {
+            "block": "listItem",
+            "children": [
+              {
+                "text": "c"
+              }
+            ]
+          },
+          {
+            "block": "listItem",
+            "children": [
+              {
+                "text": "d - e"
+              }
+            ]
           }
         ]
       }
@@ -395,13 +554,24 @@
                 "block": "paragraph",
                 "children": [
                   {
-                    "inline": "text",
                     "text": "a"
                   }
                 ]
               }
-            ],
-            "text": "nullnull"
+            ]
+          },
+          {
+            "block": "listItem",
+            "children": [
+              {
+                "block": "paragraph",
+                "children": [
+                  {
+                    "text": "b"
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -409,7 +579,6 @@
         "block": "codeBlock",
         "children": [
           {
-            "inline": "text",
             "text": "3. c "
           }
         ]
@@ -430,13 +599,37 @@
                 "block": "paragraph",
                 "children": [
                   {
-                    "inline": "text",
                     "text": "a"
                   }
                 ]
               }
-            ],
-            "text": "nullnullnull"
+            ]
+          },
+          {
+            "block": "listItem",
+            "children": [
+              {
+                "block": "paragraph",
+                "children": [
+                  {
+                    "text": "b"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "block": "listItem",
+            "children": [
+              {
+                "block": "paragraph",
+                "children": [
+                  {
+                    "text": "c"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
@@ -456,13 +649,27 @@
                 "block": "paragraph",
                 "children": [
                   {
-                    "inline": "text",
                     "text": "a"
                   }
                 ]
               }
-            ],
-            "text": "nullnullnull"
+            ]
+          },
+          {
+            "block": "listItem"
+          },
+          {
+            "block": "listItem",
+            "children": [
+              {
+                "block": "paragraph",
+                "children": [
+                  {
+                    "text": "c"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
@@ -482,13 +689,45 @@
                 "block": "paragraph",
                 "children": [
                   {
-                    "inline": "text",
                     "text": "a"
                   }
                 ]
               }
-            ],
-            "text": "nullnullnull"
+            ]
+          },
+          {
+            "block": "listItem",
+            "children": [
+              {
+                "block": "paragraph",
+                "children": [
+                  {
+                    "text": "b"
+                  }
+                ]
+              },
+              {
+                "block": "paragraph",
+                "children": [
+                  {
+                    "text": "c"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "block": "listItem",
+            "children": [
+              {
+                "block": "paragraph",
+                "children": [
+                  {
+                    "text": "d"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
@@ -508,13 +747,37 @@
                 "block": "paragraph",
                 "children": [
                   {
-                    "inline": "text",
                     "text": "a"
                   }
                 ]
               }
-            ],
-            "text": "nullnullnull"
+            ]
+          },
+          {
+            "block": "listItem",
+            "children": [
+              {
+                "block": "paragraph",
+                "children": [
+                  {
+                    "text": "b"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "block": "listItem",
+            "children": [
+              {
+                "block": "paragraph",
+                "children": [
+                  {
+                    "text": "d"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
@@ -531,11 +794,30 @@
             "block": "listItem",
             "children": [
               {
-                "inline": "text",
                 "text": "a"
               }
-            ],
-            "text": "nullnullnull"
+            ]
+          },
+          {
+            "block": "listItem",
+            "children": [
+              {
+                "block": "codeBlock",
+                "children": [
+                  {
+                    "text": "b   "
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "block": "listItem",
+            "children": [
+              {
+                "text": "c"
+              }
+            ]
           }
         ]
       }
@@ -552,7 +834,6 @@
             "block": "listItem",
             "children": [
               {
-                "inline": "text",
                 "text": "a"
               },
               {
@@ -565,18 +846,31 @@
                         "block": "paragraph",
                         "children": [
                           {
-                            "inline": "text",
                             "text": "b"
                           }
-                        ],
-                        "text": "nullnull"
+                        ]
+                      },
+                      {
+                        "block": "paragraph",
+                        "children": [
+                          {
+                            "text": "c"
+                          }
+                        ]
                       }
                     ]
                   }
                 ]
               }
-            ],
-            "text": "nullnull"
+            ]
+          },
+          {
+            "block": "listItem",
+            "children": [
+              {
+                "text": "d"
+              }
+            ]
           }
         ]
       }
@@ -593,7 +887,6 @@
             "block": "listItem",
             "children": [
               {
-                "inline": "text",
                 "text": "a"
               },
               {
@@ -603,15 +896,21 @@
                     "block": "paragraph",
                     "children": [
                       {
-                        "inline": "text",
                         "text": "b"
                       }
                     ]
                   }
                 ]
               }
-            ],
-            "text": "nullnull"
+            ]
+          },
+          {
+            "block": "listItem",
+            "children": [
+              {
+                "text": "c"
+              }
+            ]
           }
         ]
       }
@@ -628,7 +927,6 @@
             "block": "listItem",
             "children": [
               {
-                "inline": "text",
                 "text": "a"
               },
               {
@@ -638,16 +936,29 @@
                     "block": "paragraph",
                     "children": [
                       {
-                        "inline": "text",
                         "text": "b"
                       }
                     ]
                   }
-                ],
-                "text": "nullnull"
+                ]
+              },
+              {
+                "block": "codeBlock",
+                "children": [
+                  {
+                    "text": "c\n"
+                  }
+                ]
               }
-            ],
-            "text": "nullnull"
+            ]
+          },
+          {
+            "block": "listItem",
+            "children": [
+              {
+                "text": "d"
+              }
+            ]
           }
         ]
       }
@@ -664,7 +975,6 @@
             "block": "listItem",
             "children": [
               {
-                "inline": "text",
                 "text": "a"
               }
             ]
@@ -684,7 +994,6 @@
             "block": "listItem",
             "children": [
               {
-                "inline": "text",
                 "text": "a"
               },
               {
@@ -694,7 +1003,6 @@
                     "block": "listItem",
                     "children": [
                       {
-                        "inline": "text",
                         "text": "b"
                       }
                     ]
@@ -721,11 +1029,17 @@
                 "block": "codeBlock",
                 "children": [
                   {
-                    "inline": "text",
                     "text": "foo "
                   }
-                ],
-                "text": "nullnull"
+                ]
+              },
+              {
+                "block": "paragraph",
+                "children": [
+                  {
+                    "text": "bar"
+                  }
+                ]
               }
             ]
           }
@@ -747,11 +1061,30 @@
                 "block": "paragraph",
                 "children": [
                   {
-                    "inline": "text",
                     "text": "foo"
                   }
-                ],
-                "text": "nullnullnull"
+                ]
+              },
+              {
+                "block": "bulletList",
+                "children": [
+                  {
+                    "block": "listItem",
+                    "children": [
+                      {
+                        "text": "bar"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "block": "paragraph",
+                "children": [
+                  {
+                    "text": "baz"
+                  }
+                ]
               }
             ]
           }
@@ -773,14 +1106,66 @@
                 "block": "paragraph",
                 "children": [
                   {
-                    "inline": "text",
                     "text": "a"
                   }
-                ],
-                "text": "nullnull"
+                ]
+              },
+              {
+                "block": "bulletList",
+                "children": [
+                  {
+                    "block": "listItem",
+                    "children": [
+                      {
+                        "text": "b"
+                      }
+                    ]
+                  },
+                  {
+                    "block": "listItem",
+                    "children": [
+                      {
+                        "text": "c"
+                      }
+                    ]
+                  }
+                ]
               }
-            ],
-            "text": "nullnull"
+            ]
+          },
+          {
+            "block": "listItem",
+            "children": [
+              {
+                "block": "paragraph",
+                "children": [
+                  {
+                    "text": "d"
+                  }
+                ]
+              },
+              {
+                "block": "bulletList",
+                "children": [
+                  {
+                    "block": "listItem",
+                    "children": [
+                      {
+                        "text": "e"
+                      }
+                    ]
+                  },
+                  {
+                    "block": "listItem",
+                    "children": [
+                      {
+                        "text": "f"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ]
       }

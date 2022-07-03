@@ -8,7 +8,11 @@
         "children": [
           {
             "inline": "emphasis",
-            "text": "foo bar"
+            "children": [
+              {
+                "text": "foo bar"
+              }
+            ]
           }
         ]
       }
@@ -22,7 +26,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "a * foo bar*"
           }
         ]
@@ -37,7 +40,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "a*\"foo\"*"
           }
         ]
@@ -52,7 +54,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "* a *"
           }
         ]
@@ -67,12 +68,15 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "foo"
           },
           {
             "inline": "emphasis",
-            "text": "bar"
+            "children": [
+              {
+                "text": "bar"
+              }
+            ]
           }
         ]
       }
@@ -86,15 +90,17 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "5"
           },
           {
             "inline": "emphasis",
-            "text": "6"
+            "children": [
+              {
+                "text": "6"
+              }
+            ]
           },
           {
-            "inline": "text",
             "text": "78"
           }
         ]
@@ -110,7 +116,11 @@
         "children": [
           {
             "inline": "emphasis",
-            "text": "foo bar"
+            "children": [
+              {
+                "text": "foo bar"
+              }
+            ]
           }
         ]
       }
@@ -124,7 +134,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "_ foo bar_"
           }
         ]
@@ -139,7 +148,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "a_\"foo\"_"
           }
         ]
@@ -154,7 +162,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "foo_bar_"
           }
         ]
@@ -169,7 +176,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "5_6_78"
           }
         ]
@@ -184,7 +190,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "пристаням_стремятся_"
           }
         ]
@@ -199,7 +204,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "aa_\"bb\"_cc"
           }
         ]
@@ -214,12 +218,15 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "foo-"
           },
           {
             "inline": "emphasis",
-            "text": "(bar)"
+            "children": [
+              {
+                "text": "(bar)"
+              }
+            ]
           }
         ]
       }
@@ -233,7 +240,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "_foo*"
           }
         ]
@@ -248,7 +254,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "*foo bar *"
           }
         ]
@@ -263,7 +268,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "*foo bar *"
           }
         ]
@@ -278,7 +282,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "*(*foo)"
           }
         ]
@@ -294,7 +297,22 @@
         "children": [
           {
             "inline": "emphasis",
-            "text": "(foo)"
+            "children": [
+              {
+                "text": "("
+              },
+              {
+                "inline": "emphasis",
+                "children": [
+                  {
+                    "text": "foo"
+                  }
+                ]
+              },
+              {
+                "text": ")"
+              }
+            ]
           }
         ]
       }
@@ -309,10 +327,13 @@
         "children": [
           {
             "inline": "emphasis",
-            "text": "foo"
+            "children": [
+              {
+                "text": "foo"
+              }
+            ]
           },
           {
-            "inline": "text",
             "text": "bar"
           }
         ]
@@ -327,7 +348,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "_foo bar _"
           }
         ]
@@ -342,7 +362,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "_(_foo)"
           }
         ]
@@ -358,7 +377,22 @@
         "children": [
           {
             "inline": "emphasis",
-            "text": "(foo)"
+            "children": [
+              {
+                "text": "("
+              },
+              {
+                "inline": "emphasis",
+                "children": [
+                  {
+                    "text": "foo"
+                  }
+                ]
+              },
+              {
+                "text": ")"
+              }
+            ]
           }
         ]
       }
@@ -372,7 +406,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "_foo_bar"
           }
         ]
@@ -387,7 +420,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "_пристаням_стремятся"
           }
         ]
@@ -403,7 +435,11 @@
         "children": [
           {
             "inline": "emphasis",
-            "text": "foo_bar_baz"
+            "children": [
+              {
+                "text": "foo_bar_baz"
+              }
+            ]
           }
         ]
       }
@@ -418,10 +454,13 @@
         "children": [
           {
             "inline": "emphasis",
-            "text": "(bar)"
+            "children": [
+              {
+                "text": "(bar)"
+              }
+            ]
           },
           {
-            "inline": "text",
             "text": "."
           }
         ]
@@ -437,7 +476,11 @@
         "children": [
           {
             "inline": "strongEmphasis",
-            "text": "foo bar"
+            "children": [
+              {
+                "text": "foo bar"
+              }
+            ]
           }
         ]
       }
@@ -451,7 +494,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "** foo bar**"
           }
         ]
@@ -466,7 +508,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "a**\"foo\"**"
           }
         ]
@@ -481,12 +522,15 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "foo"
           },
           {
             "inline": "strongEmphasis",
-            "text": "bar"
+            "children": [
+              {
+                "text": "bar"
+              }
+            ]
           }
         ]
       }
@@ -501,7 +545,11 @@
         "children": [
           {
             "inline": "strongEmphasis",
-            "text": "foo bar"
+            "children": [
+              {
+                "text": "foo bar"
+              }
+            ]
           }
         ]
       }
@@ -515,7 +563,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "__ foo bar__"
           }
         ]
@@ -530,7 +577,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "__ foo bar__"
           }
         ]
@@ -545,7 +591,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "a__\"foo\"__"
           }
         ]
@@ -560,7 +605,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "foo__bar__"
           }
         ]
@@ -575,7 +619,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "5__6__78"
           }
         ]
@@ -590,7 +633,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "пристаням__стремятся__"
           }
         ]
@@ -606,7 +648,22 @@
         "children": [
           {
             "inline": "strongEmphasis",
-            "text": "foo, bar, baz"
+            "children": [
+              {
+                "text": "foo, "
+              },
+              {
+                "inline": "strongEmphasis",
+                "children": [
+                  {
+                    "text": "bar"
+                  }
+                ]
+              },
+              {
+                "text": ", baz"
+              }
+            ]
           }
         ]
       }
@@ -620,12 +677,15 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "foo-"
           },
           {
             "inline": "strongEmphasis",
-            "text": "(bar)"
+            "children": [
+              {
+                "text": "(bar)"
+              }
+            ]
           }
         ]
       }
@@ -639,7 +699,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "**foo bar **"
           }
         ]
@@ -654,7 +713,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "**(**foo)"
           }
         ]
@@ -670,15 +728,22 @@
         "children": [
           {
             "inline": "emphasis",
-            "text": "("
-          },
-          {
-            "inline": "strongEmphasis",
-            "text": "foo"
-          },
-          {
-            "inline": "emphasis",
-            "text": ")"
+            "children": [
+              {
+                "text": "("
+              },
+              {
+                "inline": "strongEmphasis",
+                "children": [
+                  {
+                    "text": "foo"
+                  }
+                ]
+              },
+              {
+                "text": ")"
+              }
+            ]
           }
         ]
       }
@@ -693,23 +758,33 @@
         "children": [
           {
             "inline": "strongEmphasis",
-            "text": "Gomphocarpus ("
-          },
-          {
-            "inline": "emphasis",
-            "text": "Gomphocarpus physocarpus"
-          },
-          {
-            "inline": "strongEmphasis",
-            "text": ", syn. "
-          },
-          {
-            "inline": "emphasis",
-            "text": "Asclepias physocarpa"
-          },
-          {
-            "inline": "strongEmphasis",
-            "text": ")"
+            "children": [
+              {
+                "text": "Gomphocarpus ("
+              },
+              {
+                "inline": "emphasis",
+                "children": [
+                  {
+                    "text": "Gomphocarpus physocarpus"
+                  }
+                ]
+              },
+              {
+                "text": ", syn. "
+              },
+              {
+                "inline": "emphasis",
+                "children": [
+                  {
+                    "text": "Asclepias physocarpa"
+                  }
+                ]
+              },
+              {
+                "text": ")"
+              }
+            ]
           }
         ]
       }
@@ -724,15 +799,22 @@
         "children": [
           {
             "inline": "strongEmphasis",
-            "text": "foo \""
-          },
-          {
-            "inline": "emphasis",
-            "text": "bar"
-          },
-          {
-            "inline": "strongEmphasis",
-            "text": "\" foo"
+            "children": [
+              {
+                "text": "foo \""
+              },
+              {
+                "inline": "emphasis",
+                "children": [
+                  {
+                    "text": "bar"
+                  }
+                ]
+              },
+              {
+                "text": "\" foo"
+              }
+            ]
           }
         ]
       }
@@ -747,10 +829,13 @@
         "children": [
           {
             "inline": "strongEmphasis",
-            "text": "foo"
+            "children": [
+              {
+                "text": "foo"
+              }
+            ]
           },
           {
-            "inline": "text",
             "text": "bar"
           }
         ]
@@ -765,7 +850,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "__foo bar __"
           }
         ]
@@ -780,7 +864,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "__(__foo)"
           }
         ]
@@ -796,15 +879,22 @@
         "children": [
           {
             "inline": "emphasis",
-            "text": "("
-          },
-          {
-            "inline": "strongEmphasis",
-            "text": "foo"
-          },
-          {
-            "inline": "emphasis",
-            "text": ")"
+            "children": [
+              {
+                "text": "("
+              },
+              {
+                "inline": "strongEmphasis",
+                "children": [
+                  {
+                    "text": "foo"
+                  }
+                ]
+              },
+              {
+                "text": ")"
+              }
+            ]
           }
         ]
       }
@@ -818,7 +908,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "__foo__bar"
           }
         ]
@@ -833,7 +922,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "__пристаням__стремятся"
           }
         ]
@@ -849,7 +937,11 @@
         "children": [
           {
             "inline": "strongEmphasis",
-            "text": "foo__bar__baz"
+            "children": [
+              {
+                "text": "foo__bar__baz"
+              }
+            ]
           }
         ]
       }
@@ -864,10 +956,13 @@
         "children": [
           {
             "inline": "strongEmphasis",
-            "text": "(bar)"
+            "children": [
+              {
+                "text": "(bar)"
+              }
+            ]
           },
           {
-            "inline": "text",
             "text": "."
           }
         ]
@@ -883,12 +978,19 @@
         "children": [
           {
             "inline": "emphasis",
-            "text": "foo "
-          },
-          {
-            "inline": "link",
-            "text": "bar",
-            "isLink": true
+            "children": [
+              {
+                "text": "foo "
+              },
+              {
+                "inline": "link",
+                "children": [
+                  {
+                    "text": "bar"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
@@ -903,7 +1005,11 @@
         "children": [
           {
             "inline": "emphasis",
-            "text": "foo bar"
+            "children": [
+              {
+                "text": "foo bar"
+              }
+            ]
           }
         ]
       }
@@ -918,15 +1024,22 @@
         "children": [
           {
             "inline": "emphasis",
-            "text": "foo "
-          },
-          {
-            "inline": "strongEmphasis",
-            "text": "bar"
-          },
-          {
-            "inline": "emphasis",
-            "text": " baz"
+            "children": [
+              {
+                "text": "foo "
+              },
+              {
+                "inline": "strongEmphasis",
+                "children": [
+                  {
+                    "text": "bar"
+                  }
+                ]
+              },
+              {
+                "text": " baz"
+              }
+            ]
           }
         ]
       }
@@ -941,7 +1054,22 @@
         "children": [
           {
             "inline": "emphasis",
-            "text": "foo bar baz"
+            "children": [
+              {
+                "text": "foo "
+              },
+              {
+                "inline": "emphasis",
+                "children": [
+                  {
+                    "text": "bar"
+                  }
+                ]
+              },
+              {
+                "text": " baz"
+              }
+            ]
           }
         ]
       }
@@ -956,7 +1084,19 @@
         "children": [
           {
             "inline": "emphasis",
-            "text": "foo bar"
+            "children": [
+              {
+                "inline": "emphasis",
+                "children": [
+                  {
+                    "text": "foo"
+                  }
+                ]
+              },
+              {
+                "text": " bar"
+              }
+            ]
           }
         ]
       }
@@ -971,7 +1111,19 @@
         "children": [
           {
             "inline": "emphasis",
-            "text": "foo bar"
+            "children": [
+              {
+                "text": "foo "
+              },
+              {
+                "inline": "emphasis",
+                "children": [
+                  {
+                    "text": "bar"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
@@ -986,15 +1138,22 @@
         "children": [
           {
             "inline": "emphasis",
-            "text": "foo "
-          },
-          {
-            "inline": "strongEmphasis",
-            "text": "bar"
-          },
-          {
-            "inline": "emphasis",
-            "text": " baz"
+            "children": [
+              {
+                "text": "foo "
+              },
+              {
+                "inline": "strongEmphasis",
+                "children": [
+                  {
+                    "text": "bar"
+                  }
+                ]
+              },
+              {
+                "text": " baz"
+              }
+            ]
           }
         ]
       }
@@ -1009,15 +1168,22 @@
         "children": [
           {
             "inline": "emphasis",
-            "text": "foo"
-          },
-          {
-            "inline": "strongEmphasis",
-            "text": "bar"
-          },
-          {
-            "inline": "emphasis",
-            "text": "baz"
+            "children": [
+              {
+                "text": "foo"
+              },
+              {
+                "inline": "strongEmphasis",
+                "children": [
+                  {
+                    "text": "bar"
+                  }
+                ]
+              },
+              {
+                "text": "baz"
+              }
+            ]
           }
         ]
       }
@@ -1032,7 +1198,11 @@
         "children": [
           {
             "inline": "emphasis",
-            "text": "foo**bar"
+            "children": [
+              {
+                "text": "foo**bar"
+              }
+            ]
           }
         ]
       }
@@ -1046,12 +1216,20 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "strongEmphasis",
-            "text": "foo"
-          },
-          {
             "inline": "emphasis",
-            "text": " bar"
+            "children": [
+              {
+                "inline": "strongEmphasis",
+                "children": [
+                  {
+                    "text": "foo"
+                  }
+                ]
+              },
+              {
+                "text": " bar"
+              }
+            ]
           }
         ]
       }
@@ -1066,11 +1244,19 @@
         "children": [
           {
             "inline": "emphasis",
-            "text": "foo "
-          },
-          {
-            "inline": "strongEmphasis",
-            "text": "bar"
+            "children": [
+              {
+                "text": "foo "
+              },
+              {
+                "inline": "strongEmphasis",
+                "children": [
+                  {
+                    "text": "bar"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
@@ -1085,11 +1271,19 @@
         "children": [
           {
             "inline": "emphasis",
-            "text": "foo"
-          },
-          {
-            "inline": "strongEmphasis",
-            "text": "bar"
+            "children": [
+              {
+                "text": "foo"
+              },
+              {
+                "inline": "strongEmphasis",
+                "children": [
+                  {
+                    "text": "bar"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
@@ -1103,15 +1297,22 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "foo"
           },
           {
-            "inline": "strongEmphasis",
-            "text": "bar"
+            "inline": "emphasis",
+            "children": [
+              {
+                "inline": "strongEmphasis",
+                "children": [
+                  {
+                    "text": "bar"
+                  }
+                ]
+              }
+            ]
           },
           {
-            "inline": "text",
             "text": "baz"
           }
         ]
@@ -1126,15 +1327,27 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "foo"
           },
           {
             "inline": "strongEmphasis",
-            "text": "bar"
+            "children": [
+              {
+                "inline": "strongEmphasis",
+                "children": [
+                  {
+                    "inline": "strongEmphasis",
+                    "children": [
+                      {
+                        "text": "bar"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           },
           {
-            "inline": "text",
             "text": "***baz"
           }
         ]
@@ -1150,23 +1363,33 @@
         "children": [
           {
             "inline": "emphasis",
-            "text": "foo "
-          },
-          {
-            "inline": "strongEmphasis",
-            "text": "bar "
-          },
-          {
-            "inline": "emphasis",
-            "text": "baz"
-          },
-          {
-            "inline": "strongEmphasis",
-            "text": " bim"
-          },
-          {
-            "inline": "emphasis",
-            "text": " bop"
+            "children": [
+              {
+                "text": "foo "
+              },
+              {
+                "inline": "strongEmphasis",
+                "children": [
+                  {
+                    "text": "bar "
+                  },
+                  {
+                    "inline": "emphasis",
+                    "children": [
+                      {
+                        "text": "baz"
+                      }
+                    ]
+                  },
+                  {
+                    "text": " bim"
+                  }
+                ]
+              },
+              {
+                "text": " bop"
+              }
+            ]
           }
         ]
       }
@@ -1181,7 +1404,24 @@
         "children": [
           {
             "inline": "emphasis",
-            "text": "foo bar"
+            "children": [
+              {
+                "text": "foo "
+              },
+              {
+                "inline": "link",
+                "children": [
+                  {
+                    "inline": "emphasis",
+                    "children": [
+                      {
+                        "text": "bar"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
@@ -1195,7 +1435,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "** is not an empty emphasis"
           }
         ]
@@ -1210,7 +1449,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "**** is not an empty strong emphasis"
           }
         ]
@@ -1226,12 +1464,19 @@
         "children": [
           {
             "inline": "strongEmphasis",
-            "text": "foo "
-          },
-          {
-            "inline": "link",
-            "text": "bar",
-            "isLink": true
+            "children": [
+              {
+                "text": "foo "
+              },
+              {
+                "inline": "link",
+                "children": [
+                  {
+                    "text": "bar"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
@@ -1246,7 +1491,11 @@
         "children": [
           {
             "inline": "strongEmphasis",
-            "text": "foo bar"
+            "children": [
+              {
+                "text": "foo bar"
+              }
+            ]
           }
         ]
       }
@@ -1261,15 +1510,22 @@
         "children": [
           {
             "inline": "strongEmphasis",
-            "text": "foo "
-          },
-          {
-            "inline": "emphasis",
-            "text": "bar"
-          },
-          {
-            "inline": "strongEmphasis",
-            "text": " baz"
+            "children": [
+              {
+                "text": "foo "
+              },
+              {
+                "inline": "emphasis",
+                "children": [
+                  {
+                    "text": "bar"
+                  }
+                ]
+              },
+              {
+                "text": " baz"
+              }
+            ]
           }
         ]
       }
@@ -1284,7 +1540,22 @@
         "children": [
           {
             "inline": "strongEmphasis",
-            "text": "foo bar baz"
+            "children": [
+              {
+                "text": "foo "
+              },
+              {
+                "inline": "strongEmphasis",
+                "children": [
+                  {
+                    "text": "bar"
+                  }
+                ]
+              },
+              {
+                "text": " baz"
+              }
+            ]
           }
         ]
       }
@@ -1299,7 +1570,19 @@
         "children": [
           {
             "inline": "strongEmphasis",
-            "text": "foo bar"
+            "children": [
+              {
+                "inline": "strongEmphasis",
+                "children": [
+                  {
+                    "text": "foo"
+                  }
+                ]
+              },
+              {
+                "text": " bar"
+              }
+            ]
           }
         ]
       }
@@ -1314,7 +1597,19 @@
         "children": [
           {
             "inline": "strongEmphasis",
-            "text": "foo bar"
+            "children": [
+              {
+                "text": "foo "
+              },
+              {
+                "inline": "strongEmphasis",
+                "children": [
+                  {
+                    "text": "bar"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
@@ -1329,15 +1624,22 @@
         "children": [
           {
             "inline": "strongEmphasis",
-            "text": "foo "
-          },
-          {
-            "inline": "emphasis",
-            "text": "bar"
-          },
-          {
-            "inline": "strongEmphasis",
-            "text": " baz"
+            "children": [
+              {
+                "text": "foo "
+              },
+              {
+                "inline": "emphasis",
+                "children": [
+                  {
+                    "text": "bar"
+                  }
+                ]
+              },
+              {
+                "text": " baz"
+              }
+            ]
           }
         ]
       }
@@ -1352,15 +1654,22 @@
         "children": [
           {
             "inline": "strongEmphasis",
-            "text": "foo"
-          },
-          {
-            "inline": "emphasis",
-            "text": "bar"
-          },
-          {
-            "inline": "strongEmphasis",
-            "text": "baz"
+            "children": [
+              {
+                "text": "foo"
+              },
+              {
+                "inline": "emphasis",
+                "children": [
+                  {
+                    "text": "bar"
+                  }
+                ]
+              },
+              {
+                "text": "baz"
+              }
+            ]
           }
         ]
       }
@@ -1374,12 +1683,20 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "text": "foo"
-          },
-          {
             "inline": "strongEmphasis",
-            "text": " bar"
+            "children": [
+              {
+                "inline": "emphasis",
+                "children": [
+                  {
+                    "text": "foo"
+                  }
+                ]
+              },
+              {
+                "text": " bar"
+              }
+            ]
           }
         ]
       }
@@ -1394,11 +1711,19 @@
         "children": [
           {
             "inline": "strongEmphasis",
-            "text": "foo "
-          },
-          {
-            "inline": "emphasis",
-            "text": "bar"
+            "children": [
+              {
+                "text": "foo "
+              },
+              {
+                "inline": "emphasis",
+                "children": [
+                  {
+                    "text": "bar"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
@@ -1413,23 +1738,33 @@
         "children": [
           {
             "inline": "strongEmphasis",
-            "text": "foo "
-          },
-          {
-            "inline": "emphasis",
-            "text": "bar "
-          },
-          {
-            "inline": "strongEmphasis",
-            "text": "baz"
-          },
-          {
-            "inline": "emphasis",
-            "text": " bim"
-          },
-          {
-            "inline": "strongEmphasis",
-            "text": " bop"
+            "children": [
+              {
+                "text": "foo "
+              },
+              {
+                "inline": "emphasis",
+                "children": [
+                  {
+                    "text": "bar "
+                  },
+                  {
+                    "inline": "strongEmphasis",
+                    "children": [
+                      {
+                        "text": "baz"
+                      }
+                    ]
+                  },
+                  {
+                    "text": " bim"
+                  }
+                ]
+              },
+              {
+                "text": " bop"
+              }
+            ]
           }
         ]
       }
@@ -1444,12 +1779,24 @@
         "children": [
           {
             "inline": "strongEmphasis",
-            "text": "foo "
-          },
-          {
-            "inline": "emphasis",
-            "text": "bar",
-            "isLink": true
+            "children": [
+              {
+                "text": "foo "
+              },
+              {
+                "inline": "link",
+                "children": [
+                  {
+                    "inline": "emphasis",
+                    "children": [
+                      {
+                        "text": "bar"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
@@ -1463,7 +1810,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "__ is not an empty emphasis"
           }
         ]
@@ -1478,7 +1824,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "____ is not an empty strong emphasis"
           }
         ]
@@ -1493,7 +1838,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "foo ***"
           }
         ]
@@ -1508,12 +1852,15 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "foo "
           },
           {
             "inline": "emphasis",
-            "text": "*"
+            "children": [
+              {
+                "text": "*"
+              }
+            ]
           }
         ]
       }
@@ -1527,12 +1874,15 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "foo "
           },
           {
             "inline": "emphasis",
-            "text": "_"
+            "children": [
+              {
+                "text": "_"
+              }
+            ]
           }
         ]
       }
@@ -1546,7 +1896,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "foo *****"
           }
         ]
@@ -1561,12 +1910,15 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "foo "
           },
           {
             "inline": "strongEmphasis",
-            "text": "*"
+            "children": [
+              {
+                "text": "*"
+              }
+            ]
           }
         ]
       }
@@ -1580,12 +1932,15 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "foo "
           },
           {
             "inline": "strongEmphasis",
-            "text": "_"
+            "children": [
+              {
+                "text": "_"
+              }
+            ]
           }
         ]
       }
@@ -1599,12 +1954,15 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "*"
           },
           {
             "inline": "emphasis",
-            "text": "foo"
+            "children": [
+              {
+                "text": "foo"
+              }
+            ]
           }
         ]
       }
@@ -1619,10 +1977,13 @@
         "children": [
           {
             "inline": "emphasis",
-            "text": "foo"
+            "children": [
+              {
+                "text": "foo"
+              }
+            ]
           },
           {
-            "inline": "text",
             "text": "*"
           }
         ]
@@ -1637,12 +1998,15 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "*"
           },
           {
             "inline": "strongEmphasis",
-            "text": "foo"
+            "children": [
+              {
+                "text": "foo"
+              }
+            ]
           }
         ]
       }
@@ -1656,12 +2020,15 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "***"
           },
           {
             "inline": "emphasis",
-            "text": "foo"
+            "children": [
+              {
+                "text": "foo"
+              }
+            ]
           }
         ]
       }
@@ -1676,10 +2043,13 @@
         "children": [
           {
             "inline": "strongEmphasis",
-            "text": "foo"
+            "children": [
+              {
+                "text": "foo"
+              }
+            ]
           },
           {
-            "inline": "text",
             "text": "*"
           }
         ]
@@ -1695,10 +2065,13 @@
         "children": [
           {
             "inline": "emphasis",
-            "text": "foo"
+            "children": [
+              {
+                "text": "foo"
+              }
+            ]
           },
           {
-            "inline": "text",
             "text": "***"
           }
         ]
@@ -1713,7 +2086,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "foo ___"
           }
         ]
@@ -1728,12 +2100,15 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "foo "
           },
           {
             "inline": "emphasis",
-            "text": "_"
+            "children": [
+              {
+                "text": "_"
+              }
+            ]
           }
         ]
       }
@@ -1747,12 +2122,15 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "foo "
           },
           {
             "inline": "emphasis",
-            "text": "*"
+            "children": [
+              {
+                "text": "*"
+              }
+            ]
           }
         ]
       }
@@ -1766,7 +2144,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "foo _____"
           }
         ]
@@ -1781,12 +2158,15 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "foo "
           },
           {
             "inline": "strongEmphasis",
-            "text": "_"
+            "children": [
+              {
+                "text": "_"
+              }
+            ]
           }
         ]
       }
@@ -1800,12 +2180,15 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "foo "
           },
           {
             "inline": "strongEmphasis",
-            "text": "*"
+            "children": [
+              {
+                "text": "*"
+              }
+            ]
           }
         ]
       }
@@ -1819,12 +2202,15 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "_"
           },
           {
             "inline": "emphasis",
-            "text": "foo"
+            "children": [
+              {
+                "text": "foo"
+              }
+            ]
           }
         ]
       }
@@ -1839,10 +2225,13 @@
         "children": [
           {
             "inline": "emphasis",
-            "text": "foo"
+            "children": [
+              {
+                "text": "foo"
+              }
+            ]
           },
           {
-            "inline": "text",
             "text": "_"
           }
         ]
@@ -1857,12 +2246,15 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "_"
           },
           {
             "inline": "strongEmphasis",
-            "text": "foo"
+            "children": [
+              {
+                "text": "foo"
+              }
+            ]
           }
         ]
       }
@@ -1876,12 +2268,15 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "___"
           },
           {
             "inline": "emphasis",
-            "text": "foo"
+            "children": [
+              {
+                "text": "foo"
+              }
+            ]
           }
         ]
       }
@@ -1896,10 +2291,13 @@
         "children": [
           {
             "inline": "strongEmphasis",
-            "text": "foo"
+            "children": [
+              {
+                "text": "foo"
+              }
+            ]
           },
           {
-            "inline": "text",
             "text": "_"
           }
         ]
@@ -1915,10 +2313,13 @@
         "children": [
           {
             "inline": "emphasis",
-            "text": "foo"
+            "children": [
+              {
+                "text": "foo"
+              }
+            ]
           },
           {
-            "inline": "text",
             "text": "___"
           }
         ]
@@ -1934,7 +2335,11 @@
         "children": [
           {
             "inline": "strongEmphasis",
-            "text": "foo"
+            "children": [
+              {
+                "text": "foo"
+              }
+            ]
           }
         ]
       }
@@ -1949,7 +2354,16 @@
         "children": [
           {
             "inline": "emphasis",
-            "text": "foo"
+            "children": [
+              {
+                "inline": "emphasis",
+                "children": [
+                  {
+                    "text": "foo"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
@@ -1964,7 +2378,11 @@
         "children": [
           {
             "inline": "strongEmphasis",
-            "text": "foo"
+            "children": [
+              {
+                "text": "foo"
+              }
+            ]
           }
         ]
       }
@@ -1979,7 +2397,16 @@
         "children": [
           {
             "inline": "emphasis",
-            "text": "foo"
+            "children": [
+              {
+                "inline": "emphasis",
+                "children": [
+                  {
+                    "text": "foo"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
@@ -1994,7 +2421,16 @@
         "children": [
           {
             "inline": "strongEmphasis",
-            "text": "foo"
+            "children": [
+              {
+                "inline": "strongEmphasis",
+                "children": [
+                  {
+                    "text": "foo"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
@@ -2009,7 +2445,16 @@
         "children": [
           {
             "inline": "strongEmphasis",
-            "text": "foo"
+            "children": [
+              {
+                "inline": "strongEmphasis",
+                "children": [
+                  {
+                    "text": "foo"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
@@ -2024,7 +2469,21 @@
         "children": [
           {
             "inline": "strongEmphasis",
-            "text": "foo"
+            "children": [
+              {
+                "inline": "strongEmphasis",
+                "children": [
+                  {
+                    "inline": "strongEmphasis",
+                    "children": [
+                      {
+                        "text": "foo"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
@@ -2038,8 +2497,17 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "strongEmphasis",
-            "text": "foo"
+            "inline": "emphasis",
+            "children": [
+              {
+                "inline": "strongEmphasis",
+                "children": [
+                  {
+                    "text": "foo"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
@@ -2053,8 +2521,22 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "strongEmphasis",
-            "text": "foo"
+            "inline": "emphasis",
+            "children": [
+              {
+                "inline": "strongEmphasis",
+                "children": [
+                  {
+                    "inline": "strongEmphasis",
+                    "children": [
+                      {
+                        "text": "foo"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
@@ -2069,10 +2551,13 @@
         "children": [
           {
             "inline": "emphasis",
-            "text": "foo _bar"
+            "children": [
+              {
+                "text": "foo _bar"
+              }
+            ]
           },
           {
-            "inline": "text",
             "text": " baz_"
           }
         ]
@@ -2088,15 +2573,22 @@
         "children": [
           {
             "inline": "emphasis",
-            "text": "foo "
-          },
-          {
-            "inline": "strongEmphasis",
-            "text": "bar *baz bim"
-          },
-          {
-            "inline": "emphasis",
-            "text": " bam"
+            "children": [
+              {
+                "text": "foo "
+              },
+              {
+                "inline": "strongEmphasis",
+                "children": [
+                  {
+                    "text": "bar *baz bim"
+                  }
+                ]
+              },
+              {
+                "text": " bam"
+              }
+            ]
           }
         ]
       }
@@ -2110,12 +2602,15 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "**foo "
           },
           {
             "inline": "strongEmphasis",
-            "text": "bar baz"
+            "children": [
+              {
+                "text": "bar baz"
+              }
+            ]
           }
         ]
       }
@@ -2129,12 +2624,15 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "*foo "
           },
           {
             "inline": "emphasis",
-            "text": "bar baz"
+            "children": [
+              {
+                "text": "bar baz"
+              }
+            ]
           }
         ]
       }
@@ -2148,13 +2646,15 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "*"
           },
           {
             "inline": "link",
-            "text": "bar*",
-            "isLink": true
+            "children": [
+              {
+                "text": "bar*"
+              }
+            ]
           }
         ]
       }
@@ -2168,13 +2668,15 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "_foo "
           },
           {
             "inline": "link",
-            "text": "bar_",
-            "isLink": true
+            "children": [
+              {
+                "text": "bar_"
+              }
+            ]
           }
         ]
       }
@@ -2188,12 +2690,15 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "*"
           },
           {
             "inline": "inlineHtml",
-            "text": "<img src=\"foo\" title=\"*\"/>"
+            "children": [
+              {
+                "text": "<img src=\"foo\" title=\"*\"/>"
+              }
+            ]
           }
         ]
       }
@@ -2207,12 +2712,15 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "**"
           },
           {
             "inline": "inlineHtml",
-            "text": "<a href=\"**\">"
+            "children": [
+              {
+                "text": "<a href=\"**\">"
+              }
+            ]
           }
         ]
       }
@@ -2226,12 +2734,15 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "__"
           },
           {
             "inline": "inlineHtml",
-            "text": "<a href=\"__\">"
+            "children": [
+              {
+                "text": "<a href=\"__\">"
+              }
+            ]
           }
         ]
       }
@@ -2246,11 +2757,19 @@
         "children": [
           {
             "inline": "emphasis",
-            "text": "a "
-          },
-          {
-            "inline": "inlineCode",
-            "text": "*"
+            "children": [
+              {
+                "text": "a "
+              },
+              {
+                "inline": "inlineCode",
+                "children": [
+                  {
+                    "text": "*"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
@@ -2265,11 +2784,19 @@
         "children": [
           {
             "inline": "emphasis",
-            "text": "a "
-          },
-          {
-            "inline": "inlineCode",
-            "text": "_"
+            "children": [
+              {
+                "text": "a "
+              },
+              {
+                "inline": "inlineCode",
+                "children": [
+                  {
+                    "text": "_"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
@@ -2283,12 +2810,15 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "**a"
           },
           {
             "inline": "link",
-            "text": "http://foo.bar/?q=**"
+            "children": [
+              {
+                "text": "http://foo.bar/?q=**"
+              }
+            ]
           }
         ]
       }
@@ -2302,12 +2832,15 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "__a"
           },
           {
             "inline": "link",
-            "text": "http://foo.bar/?q=__"
+            "children": [
+              {
+                "text": "http://foo.bar/?q=__"
+              }
+            ]
           }
         ]
       }

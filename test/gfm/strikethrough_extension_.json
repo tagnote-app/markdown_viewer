@@ -7,7 +7,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "~~Hi~~ Hello, world!"
           }
         ]
@@ -22,7 +21,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "This ~~has a"
           }
         ]
@@ -31,7 +29,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "new paragraph~~."
           }
         ]

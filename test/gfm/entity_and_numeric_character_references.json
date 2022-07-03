@@ -7,7 +7,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "&nbsp; &amp; &copy; &AElig; &Dcaron; &frac34; &HilbertSpace; &DifferentialD; &ClockwiseContourIntegral; &ngE;"
           }
         ]
@@ -22,7 +21,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "&#35; &#1234; &#992; &#0;"
           }
         ]
@@ -37,7 +35,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "&#X22; &#XD06; &#xcab;"
           }
         ]
@@ -52,7 +49,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "&nbsp &x; &#; &#x; &#987654321; &#abcdef0; &ThisIsNotDefined; &hi?;"
           }
         ]
@@ -67,7 +63,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "&copy"
           }
         ]
@@ -82,7 +77,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "&MadeUpEntity;"
           }
         ]
@@ -97,7 +91,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "<a href=\"&ouml;&ouml;.html\">"
           }
         ]
@@ -113,8 +106,11 @@
         "children": [
           {
             "inline": "link",
-            "text": "foo",
-            "isLink": true
+            "children": [
+              {
+                "text": "foo"
+              }
+            ]
           }
         ]
       }
@@ -129,8 +125,11 @@
         "children": [
           {
             "inline": "link",
-            "text": "foo",
-            "isLink": true
+            "children": [
+              {
+                "text": "foo"
+              }
+            ]
           }
         ]
       }
@@ -144,7 +143,6 @@
         "block": "codeBlock",
         "children": [
           {
-            "inline": "text",
             "text": "foo "
           }
         ]
@@ -160,7 +158,11 @@
         "children": [
           {
             "inline": "inlineCode",
-            "text": "f&ouml;&ouml;"
+            "children": [
+              {
+                "text": "f&ouml;&ouml;"
+              }
+            ]
           }
         ]
       }
@@ -174,7 +176,6 @@
         "block": "codeBlock",
         "children": [
           {
-            "inline": "text",
             "text": "f&ouml;f&ouml; "
           }
         ]
@@ -189,12 +190,15 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "&#42;foo&#42; "
           },
           {
             "inline": "emphasis",
-            "text": "foo"
+            "children": [
+              {
+                "text": "foo"
+              }
+            ]
           }
         ]
       }
@@ -208,7 +212,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "&#42; foo"
           }
         ]
@@ -220,7 +223,6 @@
             "block": "listItem",
             "children": [
               {
-                "inline": "text",
                 "text": "foo"
               }
             ]
@@ -237,7 +239,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "foo&#10;&#10;bar"
           }
         ]
@@ -252,7 +253,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "&#9;foo"
           }
         ]
@@ -267,7 +267,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "[a](url &quot;tit&quot;)"
           }
         ]

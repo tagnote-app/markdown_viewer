@@ -9,7 +9,7 @@ class TestCaseBuilder implements NodeVisitor {
   final _links = <bool>[];
   bool _isInBlockquote = false;
 
-  List<InlineNode> build(List<Node> nodes) {
+  List<Map<String, dynamic>> build(List<Node> nodes) {
     _tree.clear();
     _tree.add(TreeElement.root());
     _isInBlockquote = false;
@@ -27,7 +27,13 @@ class TestCaseBuilder implements NodeVisitor {
   bool visitElementBefore(Element element) {
     if ([
       'linkReferenceDefinition',
+      'backslashEscape',
     ].contains(element.type)) {
+      if (element.type == 'backslashEscape') {
+        _tree.last.children.add({
+          'text': element.textContent,
+        });
+      }
       return false;
     }
 
@@ -52,9 +58,7 @@ class TestCaseBuilder implements NodeVisitor {
     }
 
     parent.children.add({
-      'inline': parent.isBlock ? 'text' : parent.type,
       'text': textContent,
-      if (_links.isNotEmpty) "isLink": _links.removeLast(),
     });
   }
 
@@ -63,35 +67,37 @@ class TestCaseBuilder implements NodeVisitor {
     final current = _tree.removeLast();
     final parent = _tree.last;
 
-    if (current.isBlock) {
-      parent.children.add({
-        'block': current.type,
-        if (current.children.isNotEmpty)
-          'children': _mergeInlines(current.children)
-      });
-    } else {
-      parent.children.addAll(current.children);
-    }
+    parent.children.add({
+      (current.isBlock ? 'block' : 'inline'): current.type,
+      if (current.children.isNotEmpty)
+        'children': _mergeInlines(current.children),
+    });
   }
 
-  /// Merges the [inlines] which are adjacent and have the same types.
-  List<InlineNode> _mergeInlines(List<InlineNode> inlines) {
-    final result = <InlineNode>[];
+  /// Merges the [nodes] which are adjacent and have the same types.
+  List<Map<String, dynamic>> _mergeInlines(List<Map<String, dynamic>> nodes) {
+    final result = <Map<String, dynamic>>[];
 
-    for (final inline in inlines) {
+    for (final node in nodes) {
       if (result.isEmpty) {
-        result.add(inline);
+        result.add(node);
       } else {
         final last = result.last;
-        if (last['inline'] == inline['inline']) {
-          result.last['text'] = '${result.last['text']}${inline['text']}';
+
+        if (node['inline'] != null &&
+            node['inline'] != 'link' &&
+            last['inline'] == node['inline']) {
+          (result.last['children'] as List).add(node);
+        } else if (last['text'] != null && node['text'] != null) {
+          result.last['text'] = '${result.last['text']}${node['text']}';
         } else {
-          result.add(inline);
+          result.add(node);
         }
       }
     }
+
     return result;
   }
 }
 
-typedef InlineNode = Map<String, dynamic>;
+// List<Map<String, dynamic>> _mergeText(List<Map<String, dynamic>> nodes) {}

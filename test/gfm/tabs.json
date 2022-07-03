@@ -7,7 +7,6 @@
         "block": "codeBlock",
         "children": [
           {
-            "inline": "text",
             "text": "foo\tbaz\t\tbim "
           }
         ]
@@ -22,7 +21,6 @@
         "block": "codeBlock",
         "children": [
           {
-            "inline": "text",
             "text": "foo\tbaz\t\tbim "
           }
         ]
@@ -37,7 +35,6 @@
         "block": "codeBlock",
         "children": [
           {
-            "inline": "text",
             "text": "a\ta ὐ\ta "
           }
         ]
@@ -58,11 +55,17 @@
                 "block": "paragraph",
                 "children": [
                   {
-                    "inline": "text",
                     "text": "foo"
                   }
-                ],
-                "text": "nullnull"
+                ]
+              },
+              {
+                "block": "paragraph",
+                "children": [
+                  {
+                    "text": "bar"
+                  }
+                ]
               }
             ]
           }
@@ -84,11 +87,17 @@
                 "block": "paragraph",
                 "children": [
                   {
-                    "inline": "text",
                     "text": "foo"
                   }
-                ],
-                "text": "nullnull"
+                ]
+              },
+              {
+                "block": "codeBlock",
+                "children": [
+                  {
+                    "text": "  bar "
+                  }
+                ]
               }
             ]
           }
@@ -107,7 +116,6 @@
             "block": "codeBlock",
             "children": [
               {
-                "inline": "text",
                 "text": "  foo\n"
               }
             ]
@@ -130,7 +138,6 @@
                 "block": "codeBlock",
                 "children": [
                   {
-                    "inline": "text",
                     "text": "  foo "
                   }
                 ]
@@ -149,7 +156,6 @@
         "block": "codeBlock",
         "children": [
           {
-            "inline": "text",
             "text": "foo bar "
           }
         ]
@@ -167,7 +173,6 @@
             "block": "listItem",
             "children": [
               {
-                "inline": "text",
                 "text": "foo"
               },
               {
@@ -177,7 +182,6 @@
                     "block": "listItem",
                     "children": [
                       {
-                        "inline": "text",
                         "text": "bar"
                       },
                       {
@@ -187,7 +191,6 @@
                             "block": "listItem",
                             "children": [
                               {
-                                "inline": "text",
                                 "text": "baz"
                               }
                             ]
@@ -212,7 +215,6 @@
         "block": "headline1",
         "children": [
           {
-            "inline": "text",
             "text": "Foo"
           }
         ]

@@ -7,7 +7,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "aaa"
           }
         ]
@@ -16,7 +15,6 @@
         "block": "headline1",
         "children": [
           {
-            "inline": "text",
             "text": "aaa"
           }
         ]

@@ -8,7 +8,11 @@
         "children": [
           {
             "inline": "inlineCode",
-            "text": "foo"
+            "children": [
+              {
+                "text": "foo"
+              }
+            ]
           }
         ]
       }
@@ -23,7 +27,11 @@
         "children": [
           {
             "inline": "inlineCode",
-            "text": "foo ` bar"
+            "children": [
+              {
+                "text": "foo ` bar"
+              }
+            ]
           }
         ]
       }
@@ -38,7 +46,11 @@
         "children": [
           {
             "inline": "inlineCode",
-            "text": "``"
+            "children": [
+              {
+                "text": "``"
+              }
+            ]
           }
         ]
       }
@@ -53,7 +65,11 @@
         "children": [
           {
             "inline": "inlineCode",
-            "text": " `` "
+            "children": [
+              {
+                "text": " `` "
+              }
+            ]
           }
         ]
       }
@@ -68,7 +84,11 @@
         "children": [
           {
             "inline": "inlineCode",
-            "text": " a"
+            "children": [
+              {
+                "text": " a"
+              }
+            ]
           }
         ]
       }
@@ -83,7 +103,11 @@
         "children": [
           {
             "inline": "inlineCode",
-            "text": " b "
+            "children": [
+              {
+                "text": " b "
+              }
+            ]
           }
         ]
       }
@@ -98,15 +122,22 @@
         "children": [
           {
             "inline": "inlineCode",
-            "text": " "
+            "children": [
+              {
+                "text": " "
+              }
+            ]
           },
           {
-            "inline": "text",
             "text": " "
           },
           {
             "inline": "inlineCode",
-            "text": "  "
+            "children": [
+              {
+                "text": "  "
+              }
+            ]
           }
         ]
       }
@@ -121,7 +152,11 @@
         "children": [
           {
             "inline": "inlineCode",
-            "text": "foo bar   baz"
+            "children": [
+              {
+                "text": "foo bar   baz"
+              }
+            ]
           }
         ]
       }
@@ -136,7 +171,11 @@
         "children": [
           {
             "inline": "inlineCode",
-            "text": "foo "
+            "children": [
+              {
+                "text": "foo "
+              }
+            ]
           }
         ]
       }
@@ -151,7 +190,11 @@
         "children": [
           {
             "inline": "inlineCode",
-            "text": "foo   bar  baz"
+            "children": [
+              {
+                "text": "foo   bar  baz"
+              }
+            ]
           }
         ]
       }
@@ -166,10 +209,13 @@
         "children": [
           {
             "inline": "inlineCode",
-            "text": "foo\\"
+            "children": [
+              {
+                "text": "foo\\"
+              }
+            ]
           },
           {
-            "inline": "text",
             "text": "bar`"
           }
         ]
@@ -185,7 +231,11 @@
         "children": [
           {
             "inline": "inlineCode",
-            "text": "foo`bar"
+            "children": [
+              {
+                "text": "foo`bar"
+              }
+            ]
           }
         ]
       }
@@ -200,7 +250,11 @@
         "children": [
           {
             "inline": "inlineCode",
-            "text": "foo `` bar"
+            "children": [
+              {
+                "text": "foo `` bar"
+              }
+            ]
           }
         ]
       }
@@ -214,12 +268,15 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "*foo"
           },
           {
             "inline": "inlineCode",
-            "text": "*"
+            "children": [
+              {
+                "text": "*"
+              }
+            ]
           }
         ]
       }
@@ -233,15 +290,17 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "[not a "
           },
           {
             "inline": "inlineCode",
-            "text": "link](/foo"
+            "children": [
+              {
+                "text": "link](/foo"
+              }
+            ]
           },
           {
-            "inline": "text",
             "text": ")"
           }
         ]
@@ -257,10 +316,13 @@
         "children": [
           {
             "inline": "inlineCode",
-            "text": "<a href=\""
+            "children": [
+              {
+                "text": "<a href=\""
+              }
+            ]
           },
           {
-            "inline": "text",
             "text": "\">`"
           }
         ]
@@ -276,10 +338,13 @@
         "children": [
           {
             "inline": "inlineHtml",
-            "text": "<a href=\"`\">"
+            "children": [
+              {
+                "text": "<a href=\"`\">"
+              }
+            ]
           },
           {
-            "inline": "text",
             "text": "`"
           }
         ]
@@ -295,10 +360,13 @@
         "children": [
           {
             "inline": "inlineCode",
-            "text": "<http://foo.bar."
+            "children": [
+              {
+                "text": "<http://foo.bar."
+              }
+            ]
           },
           {
-            "inline": "text",
             "text": "baz>`"
           }
         ]
@@ -314,10 +382,13 @@
         "children": [
           {
             "inline": "link",
-            "text": "http://foo.bar.`baz"
+            "children": [
+              {
+                "text": "http://foo.bar.`baz"
+              }
+            ]
           },
           {
-            "inline": "text",
             "text": "`"
           }
         ]
@@ -332,7 +403,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "```foo``"
           }
         ]
@@ -347,7 +417,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "`foo"
           }
         ]
@@ -362,12 +431,15 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "`foo"
           },
           {
             "inline": "inlineCode",
-            "text": "bar"
+            "children": [
+              {
+                "text": "bar"
+              }
+            ]
           }
         ]
       }

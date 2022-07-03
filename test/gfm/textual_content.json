@@ -7,7 +7,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "hello $.;'there"
           }
         ]
@@ -22,7 +21,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "Foo χρῆν"
           }
         ]
@@ -37,7 +35,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "Multiple     spaces"
           }
         ]

@@ -7,7 +7,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "foo baz"
           }
         ]
@@ -22,7 +21,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "foo baz"
           }
         ]

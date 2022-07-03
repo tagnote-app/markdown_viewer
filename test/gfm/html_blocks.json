@@ -7,7 +7,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "<table><tr><td> <pre> **Hello**,"
           }
         ]
@@ -17,15 +16,22 @@
         "children": [
           {
             "inline": "emphasis",
-            "text": "world"
+            "children": [
+              {
+                "text": "world"
+              }
+            ]
           },
           {
-            "inline": "text",
             "text": ". "
           },
           {
             "inline": "inlineHtml",
-            "text": "</pre>"
+            "children": [
+              {
+                "text": "</pre>"
+              }
+            ]
           }
         ]
       },
@@ -33,7 +39,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "</td></tr></table>"
           }
         ]
@@ -48,7 +53,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "<table>   <tr>     <td>            hi     </td>   </tr> </table>"
           }
         ]
@@ -57,7 +61,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "okay."
           }
         ]
@@ -72,7 +75,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": " <div>   *hello*          <foo><a>"
           }
         ]
@@ -87,7 +89,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "</div> *foo*"
           }
         ]
@@ -102,7 +103,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "<DIV CLASS=\"foo\">"
           }
         ]
@@ -112,7 +112,11 @@
         "children": [
           {
             "inline": "emphasis",
-            "text": "Markdown"
+            "children": [
+              {
+                "text": "Markdown"
+              }
+            ]
           }
         ]
       },
@@ -120,7 +124,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "</DIV>"
           }
         ]
@@ -135,7 +138,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "<div id=\"foo\"   class=\"bar\"> </div>"
           }
         ]
@@ -150,7 +152,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "<div id=\"foo\" class=\"bar   baz\"> </div>"
           }
         ]
@@ -165,7 +166,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "<div> *foo*"
           }
         ]
@@ -175,7 +175,11 @@
         "children": [
           {
             "inline": "emphasis",
-            "text": "bar"
+            "children": [
+              {
+                "text": "bar"
+              }
+            ]
           }
         ]
       }
@@ -189,7 +193,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "<div id=\"foo\" *hi*"
           }
         ]
@@ -204,7 +207,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "<div class foo"
           }
         ]
@@ -219,7 +221,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "<div *???-&&&-<--- *foo*"
           }
         ]
@@ -234,7 +235,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "<div><a href=\"bar\">*foo*</a></div>"
           }
         ]
@@ -249,7 +249,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "<table><tr><td> foo </td></tr></table>"
           }
         ]
@@ -264,7 +263,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "<div></div> ``` c int x = 33; ```"
           }
         ]
@@ -279,7 +277,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "<a href=\"foo\"> *bar* </a>"
           }
         ]
@@ -294,7 +291,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "<Warning> *bar* </Warning>"
           }
         ]
@@ -309,7 +305,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "<i class=\"foo\"> *bar* </i>"
           }
         ]
@@ -324,7 +319,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "</ins> *bar*"
           }
         ]
@@ -339,7 +333,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "<del> *foo* </del>"
           }
         ]
@@ -354,7 +347,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "<del>"
           }
         ]
@@ -364,7 +356,11 @@
         "children": [
           {
             "inline": "emphasis",
-            "text": "foo"
+            "children": [
+              {
+                "text": "foo"
+              }
+            ]
           }
         ]
       },
@@ -372,7 +368,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "</del>"
           }
         ]
@@ -388,15 +383,27 @@
         "children": [
           {
             "inline": "inlineHtml",
-            "text": "<del>"
+            "children": [
+              {
+                "text": "<del>"
+              }
+            ]
           },
           {
             "inline": "emphasis",
-            "text": "foo"
+            "children": [
+              {
+                "text": "foo"
+              }
+            ]
           },
           {
             "inline": "inlineHtml",
-            "text": "</del>"
+            "children": [
+              {
+                "text": "</del>"
+              }
+            ]
           }
         ]
       }
@@ -410,7 +417,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "<pre language=\"haskell\"><code> import Text.HTML.TagSoup  main :: IO () main = print $ parseTags tags </code></pre>"
           }
         ]
@@ -419,7 +425,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "okay"
           }
         ]
@@ -434,7 +439,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "<script type=\"text/javascript\"> // JavaScript example  document.getElementById(\"demo\").innerHTML = \"Hello JavaScript!\"; </script>"
           }
         ]
@@ -443,7 +447,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "okay"
           }
         ]
@@ -458,7 +461,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "<style   type=\"text/css\"> h1 {color:red;}  p {color:blue;} </style>"
           }
         ]
@@ -467,7 +469,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "okay"
           }
         ]
@@ -482,7 +483,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "<style   type=\"text/css\">  foo"
           }
         ]
@@ -500,7 +500,6 @@
             "block": "htmlBlock",
             "children": [
               {
-                "inline": "text",
                 "text": "<div>\nfoo"
               }
             ]
@@ -511,7 +510,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "bar"
           }
         ]
@@ -532,13 +530,19 @@
                 "block": "htmlBlock",
                 "children": [
                   {
-                    "inline": "text",
                     "text": "<div>"
                   }
                 ]
               }
-            ],
-            "text": "nullnull"
+            ]
+          },
+          {
+            "block": "listItem",
+            "children": [
+              {
+                "text": "foo"
+              }
+            ]
           }
         ]
       }
@@ -552,7 +556,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "<style>p{color:red;}</style>"
           }
         ]
@@ -562,7 +565,11 @@
         "children": [
           {
             "inline": "emphasis",
-            "text": "foo"
+            "children": [
+              {
+                "text": "foo"
+              }
+            ]
           }
         ]
       }
@@ -576,7 +583,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "<!-- foo -->*bar*"
           }
         ]
@@ -586,7 +592,11 @@
         "children": [
           {
             "inline": "emphasis",
-            "text": "baz"
+            "children": [
+              {
+                "text": "baz"
+              }
+            ]
           }
         ]
       }
@@ -600,7 +610,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "<script> foo </script>1. *bar*"
           }
         ]
@@ -615,7 +624,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "<!-- Foo  bar    baz -->"
           }
         ]
@@ -624,7 +632,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "okay"
           }
         ]
@@ -639,7 +646,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "<?php    echo '>';  ?>"
           }
         ]
@@ -648,7 +654,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "okay"
           }
         ]
@@ -663,7 +668,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "<!DOCTYPE html>"
           }
         ]
@@ -678,7 +682,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "<![CDATA[ function matchwo(a,b) {   if (a < b && a < 0) then {     return 1;    } else {      return 0;   } } ]]>"
           }
         ]
@@ -687,7 +690,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "okay"
           }
         ]
@@ -702,7 +704,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "  <!-- foo -->"
           }
         ]
@@ -711,7 +712,6 @@
         "block": "codeBlock",
         "children": [
           {
-            "inline": "text",
             "text": "<!-- foo --> "
           }
         ]
@@ -726,7 +726,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "  <div>"
           }
         ]
@@ -735,7 +734,6 @@
         "block": "codeBlock",
         "children": [
           {
-            "inline": "text",
             "text": "<div> "
           }
         ]
@@ -750,7 +748,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "Foo"
           }
         ]
@@ -759,7 +756,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "<div> bar </div>"
           }
         ]
@@ -774,7 +770,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "<div> bar </div> *foo*"
           }
         ]
@@ -789,15 +784,17 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "Foo "
           },
           {
             "inline": "inlineHtml",
-            "text": "<a href=\"bar\">"
+            "children": [
+              {
+                "text": "<a href=\"bar\">"
+              }
+            ]
           },
           {
-            "inline": "text",
             "text": " baz"
           }
         ]
@@ -812,7 +809,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "<div>"
           }
         ]
@@ -822,10 +818,13 @@
         "children": [
           {
             "inline": "emphasis",
-            "text": "Emphasized"
+            "children": [
+              {
+                "text": "Emphasized"
+              }
+            ]
           },
           {
-            "inline": "text",
             "text": " text."
           }
         ]
@@ -834,7 +833,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "</div>"
           }
         ]
@@ -849,7 +847,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "<div> *Emphasized* text. </div>"
           }
         ]
@@ -864,7 +861,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "<table> <tr> <td> Hi </td> </tr> </table>"
           }
         ]
@@ -879,7 +875,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "<table>   <tr>"
           }
         ]
@@ -888,7 +883,6 @@
         "block": "codeBlock",
         "children": [
           {
-            "inline": "text",
             "text": "<td>   Hi </td> "
           }
         ]
@@ -897,7 +891,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "  </tr> </table>"
           }
         ]

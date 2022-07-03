@@ -8,10 +8,13 @@
         "children": [
           {
             "inline": "inlineCode",
-            "text": "hi"
+            "children": [
+              {
+                "text": "hi"
+              }
+            ]
           },
           {
-            "inline": "text",
             "text": "lo`"
           }
         ]

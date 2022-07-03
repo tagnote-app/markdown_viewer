@@ -8,7 +8,27 @@
         "children": [
           {
             "inline": "inlineHtml",
-            "text": "<a><bab><c2c>"
+            "children": [
+              {
+                "text": "<a>"
+              },
+              {
+                "inline": "inlineHtml",
+                "children": [
+                  {
+                    "text": "<bab>"
+                  }
+                ]
+              },
+              {
+                "inline": "inlineHtml",
+                "children": [
+                  {
+                    "text": "<c2c>"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
@@ -23,7 +43,19 @@
         "children": [
           {
             "inline": "inlineHtml",
-            "text": "<a/><b2/>"
+            "children": [
+              {
+                "text": "<a/>"
+              },
+              {
+                "inline": "inlineHtml",
+                "children": [
+                  {
+                    "text": "<b2/>"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
@@ -38,7 +70,19 @@
         "children": [
           {
             "inline": "inlineHtml",
-            "text": "<a  /><b2 data=\"foo\" >"
+            "children": [
+              {
+                "text": "<a  />"
+              },
+              {
+                "inline": "inlineHtml",
+                "children": [
+                  {
+                    "text": "<b2 data=\"foo\" >"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
@@ -53,7 +97,11 @@
         "children": [
           {
             "inline": "inlineHtml",
-            "text": "<a foo=\"bar\" bam = 'baz <em>\"</em>' _boolean zoop:33=zoop:33 />"
+            "children": [
+              {
+                "text": "<a foo=\"bar\" bam = 'baz <em>\"</em>' _boolean zoop:33=zoop:33 />"
+              }
+            ]
           }
         ]
       }
@@ -67,12 +115,15 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "Foo "
           },
           {
             "inline": "inlineHtml",
-            "text": "<responsive-image src=\"foo.jpg\" />"
+            "children": [
+              {
+                "text": "<responsive-image src=\"foo.jpg\" />"
+              }
+            ]
           }
         ]
       }
@@ -86,7 +137,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "<33> <__>"
           }
         ]
@@ -101,7 +151,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "<a h*#ref=\"hi\">"
           }
         ]
@@ -116,7 +165,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "<a href=\"hi'> <a href=hi'>"
           }
         ]
@@ -131,7 +179,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "< a>< foo><bar/ > <foo bar=baz bim!bop />"
           }
         ]
@@ -146,7 +193,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "<a href='bar'title=title>"
           }
         ]
@@ -162,7 +208,19 @@
         "children": [
           {
             "inline": "inlineHtml",
-            "text": "</a></foo >"
+            "children": [
+              {
+                "text": "</a>"
+              },
+              {
+                "inline": "inlineHtml",
+                "children": [
+                  {
+                    "text": "</foo >"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
@@ -176,7 +234,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "</a href=\"foo\">"
           }
         ]
@@ -191,12 +248,15 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "foo "
           },
           {
             "inline": "inlineHtml",
-            "text": "<!-- this is a comment - with hyphen -->"
+            "children": [
+              {
+                "text": "<!-- this is a comment - with hyphen -->"
+              }
+            ]
           }
         ]
       }
@@ -210,7 +270,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "foo <!-- not a comment -- two hyphens -->"
           }
         ]
@@ -225,7 +284,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "foo <!--> foo -->"
           }
         ]
@@ -234,7 +292,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "foo <!-- foo--->"
           }
         ]
@@ -249,12 +306,15 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "foo "
           },
           {
             "inline": "inlineHtml",
-            "text": "<?php echo $a; ?>"
+            "children": [
+              {
+                "text": "<?php echo $a; ?>"
+              }
+            ]
           }
         ]
       }
@@ -268,12 +328,15 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "foo "
           },
           {
             "inline": "inlineHtml",
-            "text": "<!ELEMENT br EMPTY>"
+            "children": [
+              {
+                "text": "<!ELEMENT br EMPTY>"
+              }
+            ]
           }
         ]
       }
@@ -287,12 +350,15 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "foo "
           },
           {
             "inline": "inlineHtml",
-            "text": "<![CDATA[>&<]]>"
+            "children": [
+              {
+                "text": "<![CDATA[>&<]]>"
+              }
+            ]
           }
         ]
       }
@@ -306,12 +372,15 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "foo "
           },
           {
             "inline": "inlineHtml",
-            "text": "<a href=\"&ouml;\">"
+            "children": [
+              {
+                "text": "<a href=\"&ouml;\">"
+              }
+            ]
           }
         ]
       }
@@ -325,12 +394,15 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "foo "
           },
           {
             "inline": "inlineHtml",
-            "text": "<a href=\"\\*\">"
+            "children": [
+              {
+                "text": "<a href=\"\\*\">"
+              }
+            ]
           }
         ]
       }
@@ -344,7 +416,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "<a href=\"\"\">"
           }
         ]

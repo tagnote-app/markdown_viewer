@@ -22,7 +22,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "+++"
           }
         ]
@@ -37,7 +36,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "==="
           }
         ]
@@ -52,7 +50,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "-- ** __"
           }
         ]
@@ -82,7 +79,6 @@
         "block": "codeBlock",
         "children": [
           {
-            "inline": "text",
             "text": "*** "
           }
         ]
@@ -97,7 +93,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "Foo ***"
           }
         ]
@@ -157,7 +152,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "_ _ _ _ a"
           }
         ]
@@ -166,7 +160,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "a------"
           }
         ]
@@ -175,7 +168,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "---a---"
           }
         ]
@@ -191,7 +183,11 @@
         "children": [
           {
             "inline": "emphasis",
-            "text": "-"
+            "children": [
+              {
+                "text": "-"
+              }
+            ]
           }
         ]
       }
@@ -208,7 +204,6 @@
             "block": "listItem",
             "children": [
               {
-                "inline": "text",
                 "text": "foo"
               }
             ]
@@ -225,7 +220,6 @@
             "block": "listItem",
             "children": [
               {
-                "inline": "text",
                 "text": "bar"
               }
             ]
@@ -242,7 +236,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "Foo"
           }
         ]
@@ -254,7 +247,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "bar"
           }
         ]
@@ -269,7 +261,6 @@
         "block": "headline2",
         "children": [
           {
-            "inline": "text",
             "text": "Foo"
           }
         ]
@@ -278,7 +269,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "bar"
           }
         ]
@@ -296,7 +286,6 @@
             "block": "listItem",
             "children": [
               {
-                "inline": "text",
                 "text": "Foo"
               }
             ]
@@ -313,7 +302,6 @@
             "block": "listItem",
             "children": [
               {
-                "inline": "text",
                 "text": "Bar"
               }
             ]
@@ -333,11 +321,17 @@
             "block": "listItem",
             "children": [
               {
-                "inline": "text",
                 "text": "Foo"
               }
-            ],
-            "text": "nullnull"
+            ]
+          },
+          {
+            "block": "listItem",
+            "children": [
+              {
+                "block": "thematicBreak"
+              }
+            ]
           }
         ]
       }

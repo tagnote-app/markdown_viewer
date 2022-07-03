@@ -69,9 +69,6 @@ String _transformType(
 
     case 'rawHtml':
       return 'inlineHtml';
-
-    case 'backslashEscape':
-      return parent.isBlock ? 'text' : parent.type;
   }
 
   return type;

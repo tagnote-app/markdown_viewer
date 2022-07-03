@@ -7,7 +7,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
           }
         ]
@@ -22,7 +21,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "\\\t\\A\\a\\ \\3\\φ\\«"
           }
         ]
@@ -37,7 +35,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "*not emphasized* <br/> not a tag [not a link](/foo) `not code` 1. not a list * not a list # not a heading [foo]: /url \"not a reference\" &ouml; not a character entity"
           }
         ]
@@ -52,12 +49,15 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "\\"
           },
           {
             "inline": "emphasis",
-            "text": "emphasis"
+            "children": [
+              {
+                "text": "emphasis"
+              }
+            ]
           }
         ]
       }
@@ -71,8 +71,13 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
-            "text": "foobar"
+            "text": "foo"
+          },
+          {
+            "inline": "hardLineBreak"
+          },
+          {
+            "text": "bar"
           }
         ]
       }
@@ -87,7 +92,11 @@
         "children": [
           {
             "inline": "inlineCode",
-            "text": "\\[\\`"
+            "children": [
+              {
+                "text": "\\[\\`"
+              }
+            ]
           }
         ]
       }
@@ -101,7 +110,6 @@
         "block": "codeBlock",
         "children": [
           {
-            "inline": "text",
             "text": "\\[\\] "
           }
         ]
@@ -116,7 +124,6 @@
         "block": "codeBlock",
         "children": [
           {
-            "inline": "text",
             "text": "\\[\\] "
           }
         ]
@@ -132,7 +139,11 @@
         "children": [
           {
             "inline": "link",
-            "text": "http://example.com?find=\\*"
+            "children": [
+              {
+                "text": "http://example.com?find=\\*"
+              }
+            ]
           }
         ]
       }
@@ -146,7 +157,6 @@
         "block": "htmlBlock",
         "children": [
           {
-            "inline": "text",
             "text": "<a href=\"/bar\\/)\">"
           }
         ]
@@ -162,8 +172,11 @@
         "children": [
           {
             "inline": "link",
-            "text": "foo",
-            "isLink": true
+            "children": [
+              {
+                "text": "foo"
+              }
+            ]
           }
         ]
       }
@@ -178,8 +191,11 @@
         "children": [
           {
             "inline": "link",
-            "text": "foo",
-            "isLink": true
+            "children": [
+              {
+                "text": "foo"
+              }
+            ]
           }
         ]
       }
@@ -193,7 +209,6 @@
         "block": "codeBlock",
         "children": [
           {
-            "inline": "text",
             "text": "foo "
           }
         ]

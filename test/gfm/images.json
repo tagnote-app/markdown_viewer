@@ -4,7 +4,12 @@
     "markdown": "![foo](/url \"title\")\n",
     "expected": [
       {
-        "block": "paragraph"
+        "block": "paragraph",
+        "children": [
+          {
+            "inline": "image"
+          }
+        ]
       }
     ]
   },
@@ -13,7 +18,12 @@
     "markdown": "![foo *bar*]\n\n[foo *bar*]: train.jpg \"train & tracks\"\n",
     "expected": [
       {
-        "block": "paragraph"
+        "block": "paragraph",
+        "children": [
+          {
+            "inline": "image"
+          }
+        ]
       }
     ]
   },
@@ -22,7 +32,12 @@
     "markdown": "![foo ![bar](/url)](/url2)\n",
     "expected": [
       {
-        "block": "paragraph"
+        "block": "paragraph",
+        "children": [
+          {
+            "inline": "image"
+          }
+        ]
       }
     ]
   },
@@ -31,7 +46,12 @@
     "markdown": "![foo [bar](/url)](/url2)\n",
     "expected": [
       {
-        "block": "paragraph"
+        "block": "paragraph",
+        "children": [
+          {
+            "inline": "image"
+          }
+        ]
       }
     ]
   },
@@ -40,7 +60,12 @@
     "markdown": "![foo *bar*][]\n\n[foo *bar*]: train.jpg \"train & tracks\"\n",
     "expected": [
       {
-        "block": "paragraph"
+        "block": "paragraph",
+        "children": [
+          {
+            "inline": "image"
+          }
+        ]
       }
     ]
   },
@@ -49,7 +74,12 @@
     "markdown": "![foo *bar*][foobar]\n\n[FOOBAR]: train.jpg \"train & tracks\"\n",
     "expected": [
       {
-        "block": "paragraph"
+        "block": "paragraph",
+        "children": [
+          {
+            "inline": "image"
+          }
+        ]
       }
     ]
   },
@@ -58,7 +88,12 @@
     "markdown": "![foo](train.jpg)\n",
     "expected": [
       {
-        "block": "paragraph"
+        "block": "paragraph",
+        "children": [
+          {
+            "inline": "image"
+          }
+        ]
       }
     ]
   },
@@ -70,8 +105,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "My "
+          },
+          {
+            "inline": "image"
           }
         ]
       }
@@ -82,7 +119,12 @@
     "markdown": "![foo](<url>)\n",
     "expected": [
       {
-        "block": "paragraph"
+        "block": "paragraph",
+        "children": [
+          {
+            "inline": "image"
+          }
+        ]
       }
     ]
   },
@@ -91,7 +133,12 @@
     "markdown": "![](/url)\n",
     "expected": [
       {
-        "block": "paragraph"
+        "block": "paragraph",
+        "children": [
+          {
+            "inline": "image"
+          }
+        ]
       }
     ]
   },
@@ -100,7 +147,12 @@
     "markdown": "![foo][bar]\n\n[bar]: /url\n",
     "expected": [
       {
-        "block": "paragraph"
+        "block": "paragraph",
+        "children": [
+          {
+            "inline": "image"
+          }
+        ]
       }
     ]
   },
@@ -109,7 +161,12 @@
     "markdown": "![foo][bar]\n\n[BAR]: /url\n",
     "expected": [
       {
-        "block": "paragraph"
+        "block": "paragraph",
+        "children": [
+          {
+            "inline": "image"
+          }
+        ]
       }
     ]
   },
@@ -118,7 +175,12 @@
     "markdown": "![foo][]\n\n[foo]: /url \"title\"\n",
     "expected": [
       {
-        "block": "paragraph"
+        "block": "paragraph",
+        "children": [
+          {
+            "inline": "image"
+          }
+        ]
       }
     ]
   },
@@ -127,7 +189,12 @@
     "markdown": "![*foo* bar][]\n\n[*foo* bar]: /url \"title\"\n",
     "expected": [
       {
-        "block": "paragraph"
+        "block": "paragraph",
+        "children": [
+          {
+            "inline": "image"
+          }
+        ]
       }
     ]
   },
@@ -136,7 +203,12 @@
     "markdown": "![Foo][]\n\n[foo]: /url \"title\"\n",
     "expected": [
       {
-        "block": "paragraph"
+        "block": "paragraph",
+        "children": [
+          {
+            "inline": "image"
+          }
+        ]
       }
     ]
   },
@@ -148,7 +220,9 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
+            "inline": "image"
+          },
+          {
             "text": " []"
           }
         ]
@@ -160,7 +234,12 @@
     "markdown": "![foo]\n\n[foo]: /url \"title\"\n",
     "expected": [
       {
-        "block": "paragraph"
+        "block": "paragraph",
+        "children": [
+          {
+            "inline": "image"
+          }
+        ]
       }
     ]
   },
@@ -169,7 +248,12 @@
     "markdown": "![*foo* bar]\n\n[*foo* bar]: /url \"title\"\n",
     "expected": [
       {
-        "block": "paragraph"
+        "block": "paragraph",
+        "children": [
+          {
+            "inline": "image"
+          }
+        ]
       }
     ]
   },
@@ -181,7 +265,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "![[foo]]"
           }
         ]
@@ -190,7 +273,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "[[foo]]: /url \"title\""
           }
         ]
@@ -202,7 +284,12 @@
     "markdown": "![Foo]\n\n[foo]: /url \"title\"\n",
     "expected": [
       {
-        "block": "paragraph"
+        "block": "paragraph",
+        "children": [
+          {
+            "inline": "image"
+          }
+        ]
       }
     ]
   },
@@ -214,7 +301,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "![foo]"
           }
         ]
@@ -229,13 +315,15 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "!"
           },
           {
             "inline": "link",
-            "text": "foo",
-            "isLink": true
+            "children": [
+              {
+                "text": "foo"
+              }
+            ]
           }
         ]
       }

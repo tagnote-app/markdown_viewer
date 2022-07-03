@@ -8,8 +8,11 @@
         "children": [
           {
             "inline": "link",
-            "text": "foo",
-            "isLink": true
+            "children": [
+              {
+                "text": "foo"
+              }
+            ]
           }
         ]
       }
@@ -24,8 +27,11 @@
         "children": [
           {
             "inline": "link",
-            "text": "foo",
-            "isLink": true
+            "children": [
+              {
+                "text": "foo"
+              }
+            ]
           }
         ]
       }
@@ -40,8 +46,11 @@
         "children": [
           {
             "inline": "link",
-            "text": "Foo*bar]",
-            "isLink": true
+            "children": [
+              {
+                "text": "Foo*bar]"
+              }
+            ]
           }
         ]
       }
@@ -56,8 +65,11 @@
         "children": [
           {
             "inline": "link",
-            "text": "Foo bar",
-            "isLink": true
+            "children": [
+              {
+                "text": "Foo bar"
+              }
+            ]
           }
         ]
       }
@@ -72,8 +84,11 @@
         "children": [
           {
             "inline": "link",
-            "text": "foo",
-            "isLink": true
+            "children": [
+              {
+                "text": "foo"
+              }
+            ]
           }
         ]
       }
@@ -87,7 +102,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "[foo]: /url 'title"
           }
         ]
@@ -96,7 +110,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "with blank line'"
           }
         ]
@@ -105,7 +118,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "[foo]"
           }
         ]
@@ -121,8 +133,11 @@
         "children": [
           {
             "inline": "link",
-            "text": "foo",
-            "isLink": true
+            "children": [
+              {
+                "text": "foo"
+              }
+            ]
           }
         ]
       }
@@ -136,7 +151,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "[foo]:"
           }
         ]
@@ -145,7 +159,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "[foo]"
           }
         ]
@@ -161,8 +174,11 @@
         "children": [
           {
             "inline": "link",
-            "text": "foo",
-            "isLink": true
+            "children": [
+              {
+                "text": "foo"
+              }
+            ]
           }
         ]
       }
@@ -176,15 +192,17 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "[foo]: "
           },
           {
             "inline": "inlineHtml",
-            "text": "<bar>"
+            "children": [
+              {
+                "text": "<bar>"
+              }
+            ]
           },
           {
-            "inline": "text",
             "text": "(baz)"
           }
         ]
@@ -193,7 +211,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "[foo]"
           }
         ]
@@ -209,8 +226,11 @@
         "children": [
           {
             "inline": "link",
-            "text": "foo",
-            "isLink": true
+            "children": [
+              {
+                "text": "foo"
+              }
+            ]
           }
         ]
       }
@@ -225,8 +245,11 @@
         "children": [
           {
             "inline": "link",
-            "text": "foo",
-            "isLink": true
+            "children": [
+              {
+                "text": "foo"
+              }
+            ]
           }
         ]
       }
@@ -241,8 +264,11 @@
         "children": [
           {
             "inline": "link",
-            "text": "foo",
-            "isLink": true
+            "children": [
+              {
+                "text": "foo"
+              }
+            ]
           }
         ]
       }
@@ -257,8 +283,11 @@
         "children": [
           {
             "inline": "link",
-            "text": "Foo",
-            "isLink": true
+            "children": [
+              {
+                "text": "Foo"
+              }
+            ]
           }
         ]
       }
@@ -273,8 +302,11 @@
         "children": [
           {
             "inline": "link",
-            "text": "αγω",
-            "isLink": true
+            "children": [
+              {
+                "text": "αγω"
+              }
+            ]
           }
         ]
       }
@@ -293,7 +325,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "bar"
           }
         ]
@@ -308,7 +339,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "[foo]: /url \"title\" ok"
           }
         ]
@@ -323,7 +353,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "\"title\" ok"
           }
         ]
@@ -338,7 +367,6 @@
         "block": "codeBlock",
         "children": [
           {
-            "inline": "text",
             "text": "[foo]: /url \"title\" "
           }
         ]
@@ -347,7 +375,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "[foo]"
           }
         ]
@@ -362,7 +389,6 @@
         "block": "codeBlock",
         "children": [
           {
-            "inline": "text",
             "text": "[foo]: /url "
           }
         ]
@@ -371,7 +397,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "[foo]"
           }
         ]
@@ -386,7 +411,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "Foo [bar]: /baz"
           }
         ]
@@ -395,7 +419,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "[bar]"
           }
         ]
@@ -411,8 +434,11 @@
         "children": [
           {
             "inline": "link",
-            "text": "Foo",
-            "isLink": true
+            "children": [
+              {
+                "text": "Foo"
+              }
+            ]
           }
         ]
       },
@@ -423,7 +449,6 @@
             "block": "paragraph",
             "children": [
               {
-                "inline": "text",
                 "text": "bar"
               }
             ]
@@ -440,7 +465,6 @@
         "block": "headline1",
         "children": [
           {
-            "inline": "text",
             "text": "bar"
           }
         ]
@@ -450,8 +474,11 @@
         "children": [
           {
             "inline": "link",
-            "text": "foo",
-            "isLink": true
+            "children": [
+              {
+                "text": "foo"
+              }
+            ]
           }
         ]
       }
@@ -465,13 +492,15 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "=== "
           },
           {
             "inline": "link",
-            "text": "foo",
-            "isLink": true
+            "children": [
+              {
+                "text": "foo"
+              }
+            ]
           }
         ]
       }
@@ -486,26 +515,33 @@
         "children": [
           {
             "inline": "link",
-            "text": "foo",
-            "isLink": true
+            "children": [
+              {
+                "text": "foo"
+              }
+            ]
           },
           {
-            "inline": "text",
             "text": ", "
           },
           {
             "inline": "link",
-            "text": "bar",
-            "isLink": true
+            "children": [
+              {
+                "text": "bar"
+              }
+            ]
           },
           {
-            "inline": "text",
             "text": ", "
           },
           {
             "inline": "link",
-            "text": "baz",
-            "isLink": true
+            "children": [
+              {
+                "text": "baz"
+              }
+            ]
           }
         ]
       }
@@ -520,8 +556,11 @@
         "children": [
           {
             "inline": "link",
-            "text": "foo",
-            "isLink": true
+            "children": [
+              {
+                "text": "foo"
+              }
+            ]
           }
         ]
       },

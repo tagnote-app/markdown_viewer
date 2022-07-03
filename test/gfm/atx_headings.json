@@ -7,7 +7,6 @@
         "block": "headline1",
         "children": [
           {
-            "inline": "text",
             "text": "foo"
           }
         ]
@@ -16,7 +15,6 @@
         "block": "headline2",
         "children": [
           {
-            "inline": "text",
             "text": "foo"
           }
         ]
@@ -25,7 +23,6 @@
         "block": "headline3",
         "children": [
           {
-            "inline": "text",
             "text": "foo"
           }
         ]
@@ -34,7 +31,6 @@
         "block": "headline4",
         "children": [
           {
-            "inline": "text",
             "text": "foo"
           }
         ]
@@ -43,7 +39,6 @@
         "block": "headline5",
         "children": [
           {
-            "inline": "text",
             "text": "foo"
           }
         ]
@@ -52,7 +47,6 @@
         "block": "headline6",
         "children": [
           {
-            "inline": "text",
             "text": "foo"
           }
         ]
@@ -67,7 +61,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "####### foo"
           }
         ]
@@ -82,7 +75,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "#5 bolt"
           }
         ]
@@ -91,7 +83,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "#hashtag"
           }
         ]
@@ -106,7 +97,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "## foo"
           }
         ]
@@ -121,15 +111,17 @@
         "block": "headline1",
         "children": [
           {
-            "inline": "text",
             "text": "foo "
           },
           {
             "inline": "emphasis",
-            "text": "bar"
+            "children": [
+              {
+                "text": "bar"
+              }
+            ]
           },
           {
-            "inline": "text",
             "text": " *baz*"
           }
         ]
@@ -144,7 +136,6 @@
         "block": "headline1",
         "children": [
           {
-            "inline": "text",
             "text": "foo"
           }
         ]
@@ -159,7 +150,6 @@
         "block": "headline3",
         "children": [
           {
-            "inline": "text",
             "text": "foo"
           }
         ]
@@ -168,7 +158,6 @@
         "block": "headline2",
         "children": [
           {
-            "inline": "text",
             "text": "foo"
           }
         ]
@@ -177,7 +166,6 @@
         "block": "headline1",
         "children": [
           {
-            "inline": "text",
             "text": "foo"
           }
         ]
@@ -192,7 +180,6 @@
         "block": "codeBlock",
         "children": [
           {
-            "inline": "text",
             "text": "# foo "
           }
         ]
@@ -207,7 +194,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "foo # bar"
           }
         ]
@@ -222,7 +208,6 @@
         "block": "headline2",
         "children": [
           {
-            "inline": "text",
             "text": "foo"
           }
         ]
@@ -231,7 +216,6 @@
         "block": "headline3",
         "children": [
           {
-            "inline": "text",
             "text": "bar"
           }
         ]
@@ -246,7 +230,6 @@
         "block": "headline1",
         "children": [
           {
-            "inline": "text",
             "text": "foo"
           }
         ]
@@ -255,7 +238,6 @@
         "block": "headline5",
         "children": [
           {
-            "inline": "text",
             "text": "foo"
           }
         ]
@@ -270,7 +252,6 @@
         "block": "headline3",
         "children": [
           {
-            "inline": "text",
             "text": "foo"
           }
         ]
@@ -285,7 +266,6 @@
         "block": "headline3",
         "children": [
           {
-            "inline": "text",
             "text": "foo ### b"
           }
         ]
@@ -300,7 +280,6 @@
         "block": "headline1",
         "children": [
           {
-            "inline": "text",
             "text": "foo#"
           }
         ]
@@ -315,7 +294,6 @@
         "block": "headline3",
         "children": [
           {
-            "inline": "text",
             "text": "foo ###"
           }
         ]
@@ -324,7 +302,6 @@
         "block": "headline2",
         "children": [
           {
-            "inline": "text",
             "text": "foo ###"
           }
         ]
@@ -333,7 +310,6 @@
         "block": "headline1",
         "children": [
           {
-            "inline": "text",
             "text": "foo #"
           }
         ]
@@ -351,7 +327,6 @@
         "block": "headline2",
         "children": [
           {
-            "inline": "text",
             "text": "foo"
           }
         ]
@@ -369,7 +344,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "Foo bar"
           }
         ]
@@ -378,7 +352,6 @@
         "block": "headline1",
         "children": [
           {
-            "inline": "text",
             "text": "baz"
           }
         ]
@@ -387,7 +360,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "Bar foo"
           }
         ]

@@ -10,11 +10,17 @@
             "block": "listItem",
             "children": [
               {
-                "inline": "text",
                 "text": "`one"
               }
-            ],
-            "text": "nullnull"
+            ]
+          },
+          {
+            "block": "listItem",
+            "children": [
+              {
+                "text": "two`"
+              }
+            ]
           }
         ]
       }

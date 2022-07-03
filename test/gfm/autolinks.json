@@ -8,7 +8,11 @@
         "children": [
           {
             "inline": "link",
-            "text": "http://foo.bar.baz"
+            "children": [
+              {
+                "text": "http://foo.bar.baz"
+              }
+            ]
           }
         ]
       }
@@ -23,7 +27,11 @@
         "children": [
           {
             "inline": "link",
-            "text": "http://foo.bar.baz/test?q=hello&id=22&boolean"
+            "children": [
+              {
+                "text": "http://foo.bar.baz/test?q=hello&id=22&boolean"
+              }
+            ]
           }
         ]
       }
@@ -38,7 +46,11 @@
         "children": [
           {
             "inline": "link",
-            "text": "irc://foo.bar:2233/baz"
+            "children": [
+              {
+                "text": "irc://foo.bar:2233/baz"
+              }
+            ]
           }
         ]
       }
@@ -53,7 +65,11 @@
         "children": [
           {
             "inline": "link",
-            "text": "MAILTO:FOO@BAR.BAZ"
+            "children": [
+              {
+                "text": "MAILTO:FOO@BAR.BAZ"
+              }
+            ]
           }
         ]
       }
@@ -68,7 +84,11 @@
         "children": [
           {
             "inline": "link",
-            "text": "a+b+c:d"
+            "children": [
+              {
+                "text": "a+b+c:d"
+              }
+            ]
           }
         ]
       }
@@ -83,7 +103,11 @@
         "children": [
           {
             "inline": "link",
-            "text": "made-up-scheme://foo,bar"
+            "children": [
+              {
+                "text": "made-up-scheme://foo,bar"
+              }
+            ]
           }
         ]
       }
@@ -98,7 +122,11 @@
         "children": [
           {
             "inline": "link",
-            "text": "http://../"
+            "children": [
+              {
+                "text": "http://../"
+              }
+            ]
           }
         ]
       }
@@ -113,7 +141,11 @@
         "children": [
           {
             "inline": "link",
-            "text": "localhost:5001/foo"
+            "children": [
+              {
+                "text": "localhost:5001/foo"
+              }
+            ]
           }
         ]
       }
@@ -127,7 +159,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "<http://foo.bar/baz bim>"
           }
         ]
@@ -143,7 +174,11 @@
         "children": [
           {
             "inline": "link",
-            "text": "http://example.com/\\[\\"
+            "children": [
+              {
+                "text": "http://example.com/\\[\\"
+              }
+            ]
           }
         ]
       }
@@ -158,7 +193,11 @@
         "children": [
           {
             "inline": "link",
-            "text": "foo@bar.example.com"
+            "children": [
+              {
+                "text": "foo@bar.example.com"
+              }
+            ]
           }
         ]
       }
@@ -173,7 +212,11 @@
         "children": [
           {
             "inline": "link",
-            "text": "foo+special@Bar.baz-bar0.com"
+            "children": [
+              {
+                "text": "foo+special@Bar.baz-bar0.com"
+              }
+            ]
           }
         ]
       }
@@ -187,7 +230,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "<foo+@bar.example.com>"
           }
         ]
@@ -202,7 +244,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "<>"
           }
         ]
@@ -217,7 +258,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "< http://foo.bar >"
           }
         ]
@@ -232,7 +272,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "<m:abc>"
           }
         ]
@@ -247,7 +286,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "<foo.bar.baz>"
           }
         ]
@@ -262,7 +300,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "http://example.com"
           }
         ]
@@ -277,7 +314,6 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "text",
             "text": "foo@bar.example.com"
           }
         ]

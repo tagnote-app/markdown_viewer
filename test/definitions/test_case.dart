@@ -85,7 +85,6 @@ class ExpectedInline extends ExpectedElement {
     required this.fontFamily,
     required this.text,
     required this.color,
-    required this.isLink,
   }) : super(type: type);
 
   factory ExpectedInline.formJson(Map<String, dynamic> json) {
@@ -95,7 +94,6 @@ class ExpectedInline extends ExpectedElement {
       fontWeight: _fontWeightFromInt(json['fontWeight']),
       fontFamily: json['fontFamily'],
       color: json['color'],
-      isLink: json['isLink'] == true,
       text: json['text'],
     );
   }
@@ -105,7 +103,6 @@ class ExpectedInline extends ExpectedElement {
   final FontWeight? fontWeight;
   final String? color;
   final String text;
-  final bool isLink;
 
   @override
   Map<String, dynamic> toMap() => {
@@ -115,7 +112,6 @@ class ExpectedInline extends ExpectedElement {
         'fontWeight': fontWeight,
         'fontFamily': fontFamily,
         'color': color,
-        'isLink': isLink,
       };
 }
 
