@@ -4,10 +4,25 @@
     "markdown": "\\!\\\"\\#\\$\\%\\&\\'\\(\\)\\*\\+\\,\\-\\.\\/\\:\\;\\<\\=\\>\\?\\@\\[\\\\\\]\\^\\_\\`\\{\\|\\}\\~\n",
     "expected": [
       {
-        "block": "paragraph",
+        "type": "Column",
         "children": [
           {
-            "text": "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -18,10 +33,25 @@
     "markdown": "\\\t\\A\\a\\ \\3\\φ\\«\n",
     "expected": [
       {
-        "block": "paragraph",
+        "type": "Column",
         "children": [
           {
-            "text": "\\\t\\A\\a\\ \\3\\φ\\«"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "\\\t\\A\\a\\ \\3\\φ\\«",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -32,10 +62,25 @@
     "markdown": "\\*not emphasized*\n\\<br/> not a tag\n\\[not a link](/foo)\n\\`not code`\n1\\. not a list\n\\* not a list\n\\# not a heading\n\\[foo]: /url \"not a reference\"\n\\&ouml; not a character entity\n",
     "expected": [
       {
-        "block": "paragraph",
+        "type": "Column",
         "children": [
           {
-            "text": "*not emphasized* <br/> not a tag [not a link](/foo) `not code` 1. not a list * not a list # not a heading [foo]: /url \"not a reference\" &ouml; not a character entity"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "*not emphasized* <br/> not a tag [not a link](/foo) `not code` 1. not a list * not a list # not a heading [foo]: /url \"not a reference\" &ouml; not a character entity",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -46,16 +91,41 @@
     "markdown": "\\\\*emphasis*\n",
     "expected": [
       {
-        "block": "paragraph",
+        "type": "Column",
         "children": [
           {
-            "text": "\\"
-          },
-          {
-            "style": {
-              "fontStyle": "FontStyle.italic"
-            },
-            "text": "emphasis"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "children": [
+                    {
+                      "type": "TextSpan",
+                      "text": "\\",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Instance of 'Color'"
+                      }
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": "emphasis",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "fontStyle": "FontStyle.italic",
+                        "color": "Instance of 'Color'"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
           }
         ]
       }
@@ -66,10 +136,25 @@
     "markdown": "foo\\\nbar\n",
     "expected": [
       {
-        "block": "paragraph",
+        "type": "Column",
         "children": [
           {
-            "text": "foobar"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "foobar",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -80,15 +165,26 @@
     "markdown": "`` \\[\\` ``\n",
     "expected": [
       {
-        "block": "paragraph",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "\\[\\`"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "\\[\\`",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'",
+                    "backgroundColor": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -99,15 +195,25 @@
     "markdown": "    \\[\\]\n",
     "expected": [
       {
-        "block": "codeBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "color": ""
-            },
-            "text": "\\[\\] "
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "\\[\\] ",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -118,15 +224,25 @@
     "markdown": "~~~\n\\[\\]\n~~~\n",
     "expected": [
       {
-        "block": "codeBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "color": ""
-            },
-            "text": "\\[\\] "
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "\\[\\] ",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -137,13 +253,25 @@
     "markdown": "<http://example.com?find=\\*>\n",
     "expected": [
       {
-        "block": "paragraph",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "color": "Color(0xff2196f3)"
-            },
-            "text": "http://example.com?find=\\*"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "http://example.com?find=\\*",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -154,15 +282,25 @@
     "markdown": "<a href=\"/bar\\/)\">\n",
     "expected": [
       {
-        "block": "htmlBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "<a href=\"/bar\\/)\">"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<a href=\"/bar\\/)\">",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -173,14 +311,25 @@
     "markdown": "[foo](/bar\\* \"ti\\*tle\")\n",
     "expected": [
       {
-        "block": "paragraph",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "color": "Color(0xff2196f3)"
-            },
-            "text": "foo",
-            "isLink": true
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "foo",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -191,14 +340,25 @@
     "markdown": "[foo]\n\n[foo]: /bar\\* \"ti\\*tle\"\n",
     "expected": [
       {
-        "block": "paragraph",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "color": "Color(0xff2196f3)"
-            },
-            "text": "foo",
-            "isLink": true
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "foo",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -209,15 +369,25 @@
     "markdown": "``` foo\\+bar\nfoo\n```\n",
     "expected": [
       {
-        "block": "codeBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "color": ""
-            },
-            "text": "foo "
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "foo ",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }

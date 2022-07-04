@@ -4,50 +4,106 @@
     "markdown": "<table><tr><td>\n<pre>\n**Hello**,\n\n_world_.\n</pre>\n</td></tr></table>\n",
     "expected": [
       {
-        "block": "htmlBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "<table><tr><td> <pre> **Hello**,"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<table><tr><td> <pre> **Hello**,",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       },
       {
-        "block": "paragraph",
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontStyle": "FontStyle.italic"
-            },
-            "text": "world"
-          },
-          {
-            "text": ". "
-          },
-          {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "color": ""
-            },
-            "text": "</pre>"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "children": [
+                    {
+                      "type": "TextSpan",
+                      "text": "world",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "fontStyle": "FontStyle.italic",
+                        "color": "Instance of 'Color'"
+                      }
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": ". ",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Instance of 'Color'"
+                      }
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": "</pre>",
+                      "style": {
+                        "fontFamily": "monospace",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 11.9,
+                        "color": "Instance of 'Color'",
+                        "backgroundColor": "Instance of 'Color'"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
           }
         ]
       },
       {
-        "block": "htmlBlock",
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "</td></tr></table>"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "</td></tr></table>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -58,23 +114,52 @@
     "markdown": "<table>\n  <tr>\n    <td>\n           hi\n    </td>\n  </tr>\n</table>\n\nokay.\n",
     "expected": [
       {
-        "block": "htmlBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "<table>   <tr>     <td>            hi     </td>   </tr> </table>"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<table>   <tr>     <td>            hi     </td>   </tr> </table>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       },
       {
-        "block": "paragraph",
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "Column",
         "children": [
           {
-            "text": "okay."
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "okay.",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -85,15 +170,25 @@
     "markdown": " <div>\n  *hello*\n         <foo><a>\n",
     "expected": [
       {
-        "block": "htmlBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": " <div>   *hello*          <foo><a>"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": " <div>   *hello*          <foo><a>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -104,15 +199,25 @@
     "markdown": "</div>\n*foo*\n",
     "expected": [
       {
-        "block": "htmlBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "</div> *foo*"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "</div> *foo*",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -123,39 +228,80 @@
     "markdown": "<DIV CLASS=\"foo\">\n\n*Markdown*\n\n</DIV>\n",
     "expected": [
       {
-        "block": "htmlBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "<DIV CLASS=\"foo\">"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<DIV CLASS=\"foo\">",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       },
       {
-        "block": "paragraph",
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontStyle": "FontStyle.italic"
-            },
-            "text": "Markdown"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "Markdown",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "fontStyle": "FontStyle.italic",
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       },
       {
-        "block": "htmlBlock",
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "</DIV>"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "</DIV>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -166,15 +312,25 @@
     "markdown": "<div id=\"foo\"\n  class=\"bar\">\n</div>\n",
     "expected": [
       {
-        "block": "htmlBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "<div id=\"foo\"   class=\"bar\"> </div>"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<div id=\"foo\"   class=\"bar\"> </div>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -185,15 +341,25 @@
     "markdown": "<div id=\"foo\" class=\"bar\n  baz\">\n</div>\n",
     "expected": [
       {
-        "block": "htmlBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "<div id=\"foo\" class=\"bar   baz\"> </div>"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<div id=\"foo\" class=\"bar   baz\"> </div>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -204,26 +370,53 @@
     "markdown": "<div>\n*foo*\n\n*bar*\n",
     "expected": [
       {
-        "block": "htmlBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "<div> *foo*"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<div> *foo*",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       },
       {
-        "block": "paragraph",
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontStyle": "FontStyle.italic"
-            },
-            "text": "bar"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "bar",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "fontStyle": "FontStyle.italic",
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -234,15 +427,25 @@
     "markdown": "<div id=\"foo\"\n*hi*\n",
     "expected": [
       {
-        "block": "htmlBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "<div id=\"foo\" *hi*"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<div id=\"foo\" *hi*",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -253,15 +456,25 @@
     "markdown": "<div class\nfoo\n",
     "expected": [
       {
-        "block": "htmlBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "<div class foo"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<div class foo",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -272,15 +485,25 @@
     "markdown": "<div *???-&&&-<---\n*foo*\n",
     "expected": [
       {
-        "block": "htmlBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "<div *???-&&&-<--- *foo*"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<div *???-&&&-<--- *foo*",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -291,15 +514,25 @@
     "markdown": "<div><a href=\"bar\">*foo*</a></div>\n",
     "expected": [
       {
-        "block": "htmlBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "<div><a href=\"bar\">*foo*</a></div>"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<div><a href=\"bar\">*foo*</a></div>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -310,15 +543,25 @@
     "markdown": "<table><tr><td>\nfoo\n</td></tr></table>\n",
     "expected": [
       {
-        "block": "htmlBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "<table><tr><td> foo </td></tr></table>"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<table><tr><td> foo </td></tr></table>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -329,15 +572,25 @@
     "markdown": "<div></div>\n``` c\nint x = 33;\n```\n",
     "expected": [
       {
-        "block": "htmlBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "<div></div> ``` c int x = 33; ```"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<div></div> ``` c int x = 33; ```",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -348,15 +601,25 @@
     "markdown": "<a href=\"foo\">\n*bar*\n</a>\n",
     "expected": [
       {
-        "block": "htmlBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "<a href=\"foo\"> *bar* </a>"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<a href=\"foo\"> *bar* </a>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -367,15 +630,25 @@
     "markdown": "<Warning>\n*bar*\n</Warning>\n",
     "expected": [
       {
-        "block": "htmlBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "<Warning> *bar* </Warning>"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<Warning> *bar* </Warning>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -386,15 +659,25 @@
     "markdown": "<i class=\"foo\">\n*bar*\n</i>\n",
     "expected": [
       {
-        "block": "htmlBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "<i class=\"foo\"> *bar* </i>"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<i class=\"foo\"> *bar* </i>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -405,15 +688,25 @@
     "markdown": "</ins>\n*bar*\n",
     "expected": [
       {
-        "block": "htmlBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "</ins> *bar*"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "</ins> *bar*",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -424,15 +717,25 @@
     "markdown": "<del>\n*foo*\n</del>\n",
     "expected": [
       {
-        "block": "htmlBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "<del> *foo* </del>"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<del> *foo* </del>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -443,39 +746,80 @@
     "markdown": "<del>\n\n*foo*\n\n</del>\n",
     "expected": [
       {
-        "block": "htmlBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "<del>"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<del>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       },
       {
-        "block": "paragraph",
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontStyle": "FontStyle.italic"
-            },
-            "text": "foo"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "foo",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "fontStyle": "FontStyle.italic",
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       },
       {
-        "block": "htmlBlock",
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "</del>"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "</del>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -486,29 +830,53 @@
     "markdown": "<del>*foo*</del>\n",
     "expected": [
       {
-        "block": "paragraph",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "color": ""
-            },
-            "text": "<del>"
-          },
-          {
-            "style": {
-              "fontStyle": "FontStyle.italic"
-            },
-            "text": "foo"
-          },
-          {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "color": ""
-            },
-            "text": "</del>"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "children": [
+                    {
+                      "type": "TextSpan",
+                      "text": "<del>",
+                      "style": {
+                        "fontFamily": "monospace",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 11.9,
+                        "color": "Instance of 'Color'",
+                        "backgroundColor": "Instance of 'Color'"
+                      }
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": "foo",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "fontStyle": "FontStyle.italic",
+                        "color": "Instance of 'Color'"
+                      }
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": "</del>",
+                      "style": {
+                        "fontFamily": "monospace",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 11.9,
+                        "color": "Instance of 'Color'",
+                        "backgroundColor": "Instance of 'Color'"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
           }
         ]
       }
@@ -519,23 +887,52 @@
     "markdown": "<pre language=\"haskell\"><code>\nimport Text.HTML.TagSoup\n\nmain :: IO ()\nmain = print $ parseTags tags\n</code></pre>\nokay\n",
     "expected": [
       {
-        "block": "htmlBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "<pre language=\"haskell\"><code> import Text.HTML.TagSoup  main :: IO () main = print $ parseTags tags </code></pre>"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<pre language=\"haskell\"><code> import Text.HTML.TagSoup  main :: IO () main = print $ parseTags tags </code></pre>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       },
       {
-        "block": "paragraph",
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "Column",
         "children": [
           {
-            "text": "okay"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "okay",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -546,23 +943,52 @@
     "markdown": "<script type=\"text/javascript\">\n// JavaScript example\n\ndocument.getElementById(\"demo\").innerHTML = \"Hello JavaScript!\";\n</script>\nokay\n",
     "expected": [
       {
-        "block": "htmlBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "<script type=\"text/javascript\"> // JavaScript example  document.getElementById(\"demo\").innerHTML = \"Hello JavaScript!\"; </script>"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<script type=\"text/javascript\"> // JavaScript example  document.getElementById(\"demo\").innerHTML = \"Hello JavaScript!\"; </script>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       },
       {
-        "block": "paragraph",
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "Column",
         "children": [
           {
-            "text": "okay"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "okay",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -573,23 +999,52 @@
     "markdown": "<style\n  type=\"text/css\">\nh1 {color:red;}\n\np {color:blue;}\n</style>\nokay\n",
     "expected": [
       {
-        "block": "htmlBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "<style   type=\"text/css\"> h1 {color:red;}  p {color:blue;} </style>"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<style   type=\"text/css\"> h1 {color:red;}  p {color:blue;} </style>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       },
       {
-        "block": "paragraph",
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "Column",
         "children": [
           {
-            "text": "okay"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "okay",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -600,15 +1055,25 @@
     "markdown": "<style\n  type=\"text/css\">\n\nfoo\n",
     "expected": [
       {
-        "block": "htmlBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "<style   type=\"text/css\">  foo"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<style   type=\"text/css\">  foo",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -619,29 +1084,63 @@
     "markdown": "> <div>\n> foo\n\nbar\n",
     "expected": [
       {
-        "block": "blockquote",
-        "children": [
-          {
-            "block": "htmlBlock",
+        "type": "DecoratedBox",
+        "child": {
+          "type": "Padding",
+          "child": {
+            "type": "Column",
             "children": [
               {
-                "style": {
-                  "fontFamily": "monospace",
-                  "fontSize": 12.0,
-                  "color": "Color(0xff666666)",
-                  "backgroundColor": ""
-                },
-                "text": "<div>\nfoo"
+                "type": "Column",
+                "children": [
+                  {
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "<div>\nfoo",
+                          "style": {
+                            "fontFamily": "monospace",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 11.9,
+                            "color": "Instance of 'Color'"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }
-        ]
+        }
       },
       {
-        "block": "paragraph",
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "Column",
         "children": [
           {
-            "text": "bar"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "bar",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -652,31 +1151,60 @@
     "markdown": "- <div>\n- foo\n",
     "expected": [
       {
-        "block": "bulletList",
+        "type": "Column",
         "children": [
           {
-            "block": "listItem",
+            "type": "Column",
             "children": [
               {
-                "block": "htmlBlock",
+                "type": "Column",
                 "children": [
                   {
-                    "style": {
-                      "fontFamily": "monospace",
-                      "fontSize": 12.0,
-                      "backgroundColor": ""
-                    },
-                    "text": "<div>"
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "<div>",
+                          "style": {
+                            "fontFamily": "monospace",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 11.9,
+                            "color": "Instance of 'Color'"
+                          }
+                        }
+                      }
+                    ]
                   }
                 ]
               }
             ]
           },
           {
-            "block": "listItem",
+            "type": "SizedBox",
+            "height": 8.0
+          },
+          {
+            "type": "Column",
             "children": [
               {
-                "text": "foo"
+                "type": "Wrap",
+                "children": [
+                  {
+                    "type": "RichText",
+                    "text": {
+                      "type": "TextSpan",
+                      "text": "foo",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Instance of 'Color'"
+                      }
+                    }
+                  }
+                ]
               }
             ]
           }
@@ -689,26 +1217,53 @@
     "markdown": "<style>p{color:red;}</style>\n*foo*\n",
     "expected": [
       {
-        "block": "htmlBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "<style>p{color:red;}</style>"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<style>p{color:red;}</style>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       },
       {
-        "block": "paragraph",
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontStyle": "FontStyle.italic"
-            },
-            "text": "foo"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "foo",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "fontStyle": "FontStyle.italic",
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -719,26 +1274,53 @@
     "markdown": "<!-- foo -->*bar*\n*baz*\n",
     "expected": [
       {
-        "block": "htmlBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "<!-- foo -->*bar*"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<!-- foo -->*bar*",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       },
       {
-        "block": "paragraph",
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontStyle": "FontStyle.italic"
-            },
-            "text": "baz"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "baz",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "fontStyle": "FontStyle.italic",
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -749,15 +1331,25 @@
     "markdown": "<script>\nfoo\n</script>1. *bar*\n",
     "expected": [
       {
-        "block": "htmlBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "<script> foo </script>1. *bar*"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<script> foo </script>1. *bar*",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -768,23 +1360,52 @@
     "markdown": "<!-- Foo\n\nbar\n   baz -->\nokay\n",
     "expected": [
       {
-        "block": "htmlBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "<!-- Foo  bar    baz -->"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<!-- Foo  bar    baz -->",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       },
       {
-        "block": "paragraph",
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "Column",
         "children": [
           {
-            "text": "okay"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "okay",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -795,23 +1416,52 @@
     "markdown": "<?php\n\n  echo '>';\n\n?>\nokay\n",
     "expected": [
       {
-        "block": "htmlBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "<?php    echo '>';  ?>"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<?php    echo '>';  ?>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       },
       {
-        "block": "paragraph",
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "Column",
         "children": [
           {
-            "text": "okay"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "okay",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -822,15 +1472,25 @@
     "markdown": "<!DOCTYPE html>\n",
     "expected": [
       {
-        "block": "htmlBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "<!DOCTYPE html>"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<!DOCTYPE html>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -841,23 +1501,52 @@
     "markdown": "<![CDATA[\nfunction matchwo(a,b)\n{\n  if (a < b && a < 0) then {\n    return 1;\n\n  } else {\n\n    return 0;\n  }\n}\n]]>\nokay\n",
     "expected": [
       {
-        "block": "htmlBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "<![CDATA[ function matchwo(a,b) {   if (a < b && a < 0) then {     return 1;    } else {      return 0;   } } ]]>"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<![CDATA[ function matchwo(a,b) {   if (a < b && a < 0) then {     return 1;    } else {      return 0;   } } ]]>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       },
       {
-        "block": "paragraph",
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "Column",
         "children": [
           {
-            "text": "okay"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "okay",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -868,28 +1557,52 @@
     "markdown": "  <!-- foo -->\n\n    <!-- foo -->\n",
     "expected": [
       {
-        "block": "htmlBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "  <!-- foo -->"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "  <!-- foo -->",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       },
       {
-        "block": "codeBlock",
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "color": ""
-            },
-            "text": "<!-- foo --> "
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<!-- foo --> ",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -900,28 +1613,52 @@
     "markdown": "  <div>\n\n    <div>\n",
     "expected": [
       {
-        "block": "htmlBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "  <div>"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "  <div>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       },
       {
-        "block": "codeBlock",
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "color": ""
-            },
-            "text": "<div> "
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<div> ",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -932,23 +1669,52 @@
     "markdown": "Foo\n<div>\nbar\n</div>\n",
     "expected": [
       {
-        "block": "paragraph",
+        "type": "Column",
         "children": [
           {
-            "text": "Foo"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "Foo",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       },
       {
-        "block": "htmlBlock",
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "<div> bar </div>"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<div> bar </div>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -959,15 +1725,25 @@
     "markdown": "<div>\nbar\n</div>\n*foo*\n",
     "expected": [
       {
-        "block": "htmlBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "<div> bar </div> *foo*"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<div> bar </div> *foo*",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -978,21 +1754,51 @@
     "markdown": "Foo\n<a href=\"bar\">\nbaz\n",
     "expected": [
       {
-        "block": "paragraph",
+        "type": "Column",
         "children": [
           {
-            "text": "Foo "
-          },
-          {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "color": ""
-            },
-            "text": "<a href=\"bar\">"
-          },
-          {
-            "text": " baz"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "children": [
+                    {
+                      "type": "TextSpan",
+                      "text": "Foo ",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Instance of 'Color'"
+                      }
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": "<a href=\"bar\">",
+                      "style": {
+                        "fontFamily": "monospace",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 11.9,
+                        "color": "Instance of 'Color'",
+                        "backgroundColor": "Instance of 'Color'"
+                      }
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": " baz",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Instance of 'Color'"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
           }
         ]
       }
@@ -1003,42 +1809,95 @@
     "markdown": "<div>\n\n*Emphasized* text.\n\n</div>\n",
     "expected": [
       {
-        "block": "htmlBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "<div>"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<div>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       },
       {
-        "block": "paragraph",
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontStyle": "FontStyle.italic"
-            },
-            "text": "Emphasized"
-          },
-          {
-            "text": " text."
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "children": [
+                    {
+                      "type": "TextSpan",
+                      "text": "Emphasized",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "fontStyle": "FontStyle.italic",
+                        "color": "Instance of 'Color'"
+                      }
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": " text.",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Instance of 'Color'"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
           }
         ]
       },
       {
-        "block": "htmlBlock",
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "</div>"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "</div>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -1049,15 +1908,25 @@
     "markdown": "<div>\n*Emphasized* text.\n</div>\n",
     "expected": [
       {
-        "block": "htmlBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "<div> *Emphasized* text. </div>"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<div> *Emphasized* text. </div>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -1068,15 +1937,25 @@
     "markdown": "<table>\n\n<tr>\n\n<td>\nHi\n</td>\n\n</tr>\n\n</table>\n",
     "expected": [
       {
-        "block": "htmlBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "<table> <tr> <td> Hi </td> </tr> </table>"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<table> <tr> <td> Hi </td> </tr> </table>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -1087,41 +1966,79 @@
     "markdown": "<table>\n\n  <tr>\n\n    <td>\n      Hi\n    </td>\n\n  </tr>\n\n</table>\n",
     "expected": [
       {
-        "block": "htmlBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "<table>   <tr>"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<table>   <tr>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       },
       {
-        "block": "codeBlock",
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "color": ""
-            },
-            "text": "<td>   Hi </td> "
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<td>   Hi </td> ",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       },
       {
-        "block": "htmlBlock",
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "  </tr> </table>"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "  </tr> </table>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }

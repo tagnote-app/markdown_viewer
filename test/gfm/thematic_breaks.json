@@ -2,17 +2,56 @@
   {
     "description": "Thematic breaks, https://github.github.com/gfm/#example-13",
     "markdown": "***\n---\n___\n",
-    "expected": []
+    "expected": [
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
+      }
+    ]
   },
   {
     "description": "Thematic breaks, https://github.github.com/gfm/#example-14",
     "markdown": "+++\n",
     "expected": [
       {
-        "block": "paragraph",
+        "type": "Column",
         "children": [
           {
-            "text": "+++"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "+++",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -23,10 +62,25 @@
     "markdown": "===\n",
     "expected": [
       {
-        "block": "paragraph",
+        "type": "Column",
         "children": [
           {
-            "text": "==="
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "===",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -37,10 +91,25 @@
     "markdown": "--\n**\n__\n",
     "expected": [
       {
-        "block": "paragraph",
+        "type": "Column",
         "children": [
           {
-            "text": "-- ** __"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "-- ** __",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -49,22 +118,56 @@
   {
     "description": "Thematic breaks, https://github.github.com/gfm/#example-17",
     "markdown": " ***\n  ***\n   ***\n",
-    "expected": []
+    "expected": [
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
+      }
+    ]
   },
   {
     "description": "Thematic breaks, https://github.github.com/gfm/#example-18",
     "markdown": "    ***\n",
     "expected": [
       {
-        "block": "codeBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "color": ""
-            },
-            "text": "*** "
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "*** ",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -75,10 +178,25 @@
     "markdown": "Foo\n    ***\n",
     "expected": [
       {
-        "block": "paragraph",
+        "type": "Column",
         "children": [
           {
-            "text": "Foo ***"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "Foo ***",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -87,53 +205,136 @@
   {
     "description": "Thematic breaks, https://github.github.com/gfm/#example-20",
     "markdown": "_____________________________________\n",
-    "expected": []
+    "expected": [
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
+      }
+    ]
   },
   {
     "description": "Thematic breaks, https://github.github.com/gfm/#example-21",
     "markdown": " - - -\n",
-    "expected": []
+    "expected": [
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
+      }
+    ]
   },
   {
     "description": "Thematic breaks, https://github.github.com/gfm/#example-22",
     "markdown": " **  * ** * ** * **\n",
-    "expected": []
+    "expected": [
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
+      }
+    ]
   },
   {
     "description": "Thematic breaks, https://github.github.com/gfm/#example-23",
     "markdown": "-     -      -      -\n",
-    "expected": []
+    "expected": [
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
+      }
+    ]
   },
   {
     "description": "Thematic breaks, https://github.github.com/gfm/#example-24",
     "markdown": "- - - -    \n",
-    "expected": []
+    "expected": [
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
+      }
+    ]
   },
   {
     "description": "Thematic breaks, https://github.github.com/gfm/#example-25",
     "markdown": "_ _ _ _ a\n\na------\n\n---a---\n",
     "expected": [
       {
-        "block": "paragraph",
+        "type": "Column",
         "children": [
           {
-            "text": "_ _ _ _ a"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "_ _ _ _ a",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       },
       {
-        "block": "paragraph",
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "Column",
         "children": [
           {
-            "text": "a------"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "a------",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       },
       {
-        "block": "paragraph",
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "Column",
         "children": [
           {
-            "text": "---a---"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "---a---",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -144,13 +345,26 @@
     "markdown": " *-*\n",
     "expected": [
       {
-        "block": "paragraph",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontStyle": "FontStyle.italic"
-            },
-            "text": "-"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "-",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "fontStyle": "FontStyle.italic",
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -161,26 +375,69 @@
     "markdown": "- foo\n***\n- bar\n",
     "expected": [
       {
-        "block": "bulletList",
+        "type": "Column",
         "children": [
           {
-            "block": "listItem",
+            "type": "Column",
             "children": [
               {
-                "text": "foo"
+                "type": "Wrap",
+                "children": [
+                  {
+                    "type": "RichText",
+                    "text": {
+                      "type": "TextSpan",
+                      "text": "foo",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Instance of 'Color'"
+                      }
+                    }
+                  }
+                ]
               }
             ]
           }
         ]
       },
       {
-        "block": "bulletList",
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "Column",
         "children": [
           {
-            "block": "listItem",
+            "type": "Column",
             "children": [
               {
-                "text": "bar"
+                "type": "Wrap",
+                "children": [
+                  {
+                    "type": "RichText",
+                    "text": {
+                      "type": "TextSpan",
+                      "text": "bar",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Instance of 'Color'"
+                      }
+                    }
+                  }
+                ]
               }
             ]
           }
@@ -193,18 +450,61 @@
     "markdown": "Foo\n***\nbar\n",
     "expected": [
       {
-        "block": "paragraph",
+        "type": "Column",
         "children": [
           {
-            "text": "Foo"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "Foo",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       },
       {
-        "block": "paragraph",
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "Column",
         "children": [
           {
-            "text": "bar"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "bar",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -215,23 +515,52 @@
     "markdown": "Foo\n---\nbar\n",
     "expected": [
       {
-        "block": "headline2",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": ".SF UI Display",
-              "fontWeight": "FontWeight.w500",
-              "fontSize": 20.0
-            },
-            "text": "Foo"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "Foo",
+                  "style": {
+                    "fontFamily": ".SF UI Display",
+                    "fontWeight": "FontWeight.w500",
+                    "fontSize": 20.0,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       },
       {
-        "block": "paragraph",
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "Column",
         "children": [
           {
-            "text": "bar"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "bar",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -242,26 +571,69 @@
     "markdown": "* Foo\n* * *\n* Bar\n",
     "expected": [
       {
-        "block": "bulletList",
+        "type": "Column",
         "children": [
           {
-            "block": "listItem",
+            "type": "Column",
             "children": [
               {
-                "text": "Foo"
+                "type": "Wrap",
+                "children": [
+                  {
+                    "type": "RichText",
+                    "text": {
+                      "type": "TextSpan",
+                      "text": "Foo",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Instance of 'Color'"
+                      }
+                    }
+                  }
+                ]
               }
             ]
           }
         ]
       },
       {
-        "block": "bulletList",
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "Column",
         "children": [
           {
-            "block": "listItem",
+            "type": "Column",
             "children": [
               {
-                "text": "Bar"
+                "type": "Wrap",
+                "children": [
+                  {
+                    "type": "RichText",
+                    "text": {
+                      "type": "TextSpan",
+                      "text": "Bar",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Instance of 'Color'"
+                      }
+                    }
+                  }
+                ]
               }
             ]
           }
@@ -274,13 +646,42 @@
     "markdown": "- Foo\n- * * *\n",
     "expected": [
       {
-        "block": "bulletList",
+        "type": "Column",
         "children": [
           {
-            "block": "listItem",
+            "type": "Column",
             "children": [
               {
-                "text": "Foo"
+                "type": "Wrap",
+                "children": [
+                  {
+                    "type": "RichText",
+                    "text": {
+                      "type": "TextSpan",
+                      "text": "Foo",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Instance of 'Color'"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "SizedBox",
+            "height": 8.0
+          },
+          {
+            "type": "Column",
+            "children": [
+              {
+                "type": "SizedBox",
+                "height": 0.0,
+                "width": 0.0
               }
             ]
           }

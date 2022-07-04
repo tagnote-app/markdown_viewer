@@ -4,15 +4,25 @@
     "markdown": "```\n<\n >\n```\n",
     "expected": [
       {
-        "block": "codeBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "color": ""
-            },
-            "text": "<  > "
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<  > ",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -23,15 +33,25 @@
     "markdown": "~~~\n<\n >\n~~~\n",
     "expected": [
       {
-        "block": "codeBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "color": ""
-            },
-            "text": "<  > "
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<  > ",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -42,15 +62,26 @@
     "markdown": "``\nfoo\n``\n",
     "expected": [
       {
-        "block": "paragraph",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "foo"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "foo",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'",
+                    "backgroundColor": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -61,15 +92,25 @@
     "markdown": "```\naaa\n~~~\n```\n",
     "expected": [
       {
-        "block": "codeBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "color": ""
-            },
-            "text": "aaa ~~~ "
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "aaa ~~~ ",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -80,15 +121,25 @@
     "markdown": "~~~\naaa\n```\n~~~\n",
     "expected": [
       {
-        "block": "codeBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "color": ""
-            },
-            "text": "aaa ``` "
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "aaa ``` ",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -99,15 +150,25 @@
     "markdown": "````\naaa\n```\n``````\n",
     "expected": [
       {
-        "block": "codeBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "color": ""
-            },
-            "text": "aaa ``` "
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "aaa ``` ",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -118,15 +179,25 @@
     "markdown": "~~~~\naaa\n~~~\n~~~~\n",
     "expected": [
       {
-        "block": "codeBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "color": ""
-            },
-            "text": "aaa ~~~ "
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "aaa ~~~ ",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -135,22 +206,38 @@
   {
     "description": "Fenced code blocks, https://github.github.com/gfm/#example-96",
     "markdown": "```\n",
-    "expected": []
+    "expected": [
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
+      }
+    ]
   },
   {
     "description": "Fenced code blocks, https://github.github.com/gfm/#example-97",
     "markdown": "`````\n\n```\naaa\n",
     "expected": [
       {
-        "block": "codeBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "color": ""
-            },
-            "text": " ``` aaa "
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": " ``` aaa ",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -161,28 +248,63 @@
     "markdown": "> ```\n> aaa\n\nbbb\n",
     "expected": [
       {
-        "block": "blockquote",
-        "children": [
-          {
-            "block": "codeBlock",
+        "type": "DecoratedBox",
+        "child": {
+          "type": "Padding",
+          "child": {
+            "type": "Column",
             "children": [
               {
-                "style": {
-                  "fontFamily": "monospace",
-                  "fontSize": 12.0,
-                  "color": ""
-                },
-                "text": "aaa\n"
+                "type": "Column",
+                "children": [
+                  {
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "aaa\n",
+                          "style": {
+                            "fontFamily": "monospace",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 11.9,
+                            "color": "Instance of 'Color'"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }
-        ]
+        }
       },
       {
-        "block": "paragraph",
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "Column",
         "children": [
           {
-            "text": "bbb"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "bbb",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -193,15 +315,25 @@
     "markdown": "```\n\n  \n```\n",
     "expected": [
       {
-        "block": "codeBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "color": ""
-            },
-            "text": "    "
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "    ",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -210,22 +342,38 @@
   {
     "description": "Fenced code blocks, https://github.github.com/gfm/#example-100",
     "markdown": "```\n```\n",
-    "expected": []
+    "expected": [
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
+      }
+    ]
   },
   {
     "description": "Fenced code blocks, https://github.github.com/gfm/#example-101",
     "markdown": " ```\n aaa\naaa\n```\n",
     "expected": [
       {
-        "block": "codeBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "color": ""
-            },
-            "text": "aaa aaa "
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "aaa aaa ",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -236,15 +384,25 @@
     "markdown": "  ```\naaa\n  aaa\naaa\n  ```\n",
     "expected": [
       {
-        "block": "codeBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "color": ""
-            },
-            "text": "aaa aaa aaa "
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "aaa aaa aaa ",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -255,15 +413,25 @@
     "markdown": "   ```\n   aaa\n    aaa\n  aaa\n   ```\n",
     "expected": [
       {
-        "block": "codeBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "color": ""
-            },
-            "text": "aaa  aaa aaa "
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "aaa  aaa aaa ",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -274,15 +442,25 @@
     "markdown": "    ```\n    aaa\n    ```\n",
     "expected": [
       {
-        "block": "codeBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "color": ""
-            },
-            "text": "``` aaa ``` "
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "``` aaa ``` ",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -293,15 +471,25 @@
     "markdown": "```\naaa\n  ```\n",
     "expected": [
       {
-        "block": "codeBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "color": ""
-            },
-            "text": "aaa "
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "aaa ",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -312,15 +500,25 @@
     "markdown": "   ```\naaa\n  ```\n",
     "expected": [
       {
-        "block": "codeBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "color": ""
-            },
-            "text": "aaa "
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "aaa ",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -331,15 +529,25 @@
     "markdown": "```\naaa\n    ```\n",
     "expected": [
       {
-        "block": "codeBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "color": ""
-            },
-            "text": "aaa     ``` "
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "aaa     ``` ",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -350,18 +558,41 @@
     "markdown": "``` ```\naaa\n",
     "expected": [
       {
-        "block": "paragraph",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": " "
-          },
-          {
-            "text": " aaa"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "children": [
+                    {
+                      "type": "TextSpan",
+                      "text": " ",
+                      "style": {
+                        "fontFamily": "monospace",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 11.9,
+                        "color": "Instance of 'Color'",
+                        "backgroundColor": "Instance of 'Color'"
+                      }
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": " aaa",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Instance of 'Color'"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
           }
         ]
       }
@@ -372,15 +603,25 @@
     "markdown": "~~~~~~\naaa\n~~~ ~~\n",
     "expected": [
       {
-        "block": "codeBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "color": ""
-            },
-            "text": "aaa ~~~ ~~ "
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "aaa ~~~ ~~ ",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -391,31 +632,79 @@
     "markdown": "foo\n```\nbar\n```\nbaz\n",
     "expected": [
       {
-        "block": "paragraph",
+        "type": "Column",
         "children": [
           {
-            "text": "foo"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "foo",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       },
       {
-        "block": "codeBlock",
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "color": ""
-            },
-            "text": "bar "
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "bar ",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       },
       {
-        "block": "paragraph",
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "Column",
         "children": [
           {
-            "text": "baz"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "baz",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -426,40 +715,79 @@
     "markdown": "foo\n---\n~~~\nbar\n~~~\n# baz\n",
     "expected": [
       {
-        "block": "headline2",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": ".SF UI Display",
-              "fontWeight": "FontWeight.w500",
-              "fontSize": 20.0
-            },
-            "text": "foo"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "foo",
+                  "style": {
+                    "fontFamily": ".SF UI Display",
+                    "fontWeight": "FontWeight.w500",
+                    "fontSize": 20.0,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       },
       {
-        "block": "codeBlock",
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "color": ""
-            },
-            "text": "bar "
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "bar ",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       },
       {
-        "block": "headline1",
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": ".SF UI Display",
-              "fontSize": 24.0
-            },
-            "text": "baz"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "baz",
+                  "style": {
+                    "fontFamily": ".SF UI Display",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 24.0,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -470,15 +798,25 @@
     "markdown": "```ruby\ndef foo(x)\n  return 3\nend\n```\n",
     "expected": [
       {
-        "block": "codeBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "color": ""
-            },
-            "text": "def foo(x)   return 3 end "
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "def foo(x)   return 3 end ",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -489,15 +827,25 @@
     "markdown": "~~~~    ruby startline=3 $%@#$\ndef foo(x)\n  return 3\nend\n~~~~~~~\n",
     "expected": [
       {
-        "block": "codeBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "color": ""
-            },
-            "text": "def foo(x)   return 3 end "
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "def foo(x)   return 3 end ",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -506,25 +854,54 @@
   {
     "description": "Fenced code blocks, https://github.github.com/gfm/#example-114",
     "markdown": "````;\n````\n",
-    "expected": []
+    "expected": [
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
+      }
+    ]
   },
   {
     "description": "Fenced code blocks, https://github.github.com/gfm/#example-115",
     "markdown": "``` aa ```\nfoo\n",
     "expected": [
       {
-        "block": "paragraph",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "backgroundColor": ""
-            },
-            "text": "aa"
-          },
-          {
-            "text": " foo"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "children": [
+                    {
+                      "type": "TextSpan",
+                      "text": "aa",
+                      "style": {
+                        "fontFamily": "monospace",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 11.9,
+                        "color": "Instance of 'Color'",
+                        "backgroundColor": "Instance of 'Color'"
+                      }
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": " foo",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Instance of 'Color'"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
           }
         ]
       }
@@ -535,15 +912,25 @@
     "markdown": "~~~ aa ``` ~~~\nfoo\n~~~\n",
     "expected": [
       {
-        "block": "codeBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "color": ""
-            },
-            "text": "foo "
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "foo ",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -554,15 +941,25 @@
     "markdown": "```\n``` aaa\n```\n",
     "expected": [
       {
-        "block": "codeBlock",
+        "type": "Column",
         "children": [
           {
-            "style": {
-              "fontFamily": "monospace",
-              "fontSize": 12.0,
-              "color": ""
-            },
-            "text": "``` aaa "
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "``` aaa ",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }

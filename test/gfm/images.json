@@ -2,47 +2,104 @@
   {
     "description": "Images, https://github.github.com/gfm/#example-580",
     "markdown": "![foo](/url \"title\")\n",
-    "expected": []
+    "expected": [
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
+      }
+    ]
   },
   {
     "description": "Images, https://github.github.com/gfm/#example-581",
     "markdown": "![foo *bar*]\n\n[foo *bar*]: train.jpg \"train & tracks\"\n",
-    "expected": []
+    "expected": [
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
+      }
+    ]
   },
   {
     "description": "Images, https://github.github.com/gfm/#example-582",
     "markdown": "![foo ![bar](/url)](/url2)\n",
-    "expected": []
+    "expected": [
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
+      }
+    ]
   },
   {
     "description": "Images, https://github.github.com/gfm/#example-583",
     "markdown": "![foo [bar](/url)](/url2)\n",
-    "expected": []
+    "expected": [
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
+      }
+    ]
   },
   {
     "description": "Images, https://github.github.com/gfm/#example-584",
     "markdown": "![foo *bar*][]\n\n[foo *bar*]: train.jpg \"train & tracks\"\n",
-    "expected": []
+    "expected": [
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
+      }
+    ]
   },
   {
     "description": "Images, https://github.github.com/gfm/#example-585",
     "markdown": "![foo *bar*][foobar]\n\n[FOOBAR]: train.jpg \"train & tracks\"\n",
-    "expected": []
+    "expected": [
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
+      }
+    ]
   },
   {
     "description": "Images, https://github.github.com/gfm/#example-586",
     "markdown": "![foo](train.jpg)\n",
-    "expected": []
+    "expected": [
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
+      }
+    ]
   },
   {
     "description": "Images, https://github.github.com/gfm/#example-587",
     "markdown": "My ![foo bar](/path/to/train.jpg  \"title\"   )\n",
     "expected": [
       {
-        "block": "paragraph",
+        "type": "Column",
         "children": [
           {
-            "text": "My "
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "My ",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -51,47 +108,104 @@
   {
     "description": "Images, https://github.github.com/gfm/#example-588",
     "markdown": "![foo](<url>)\n",
-    "expected": []
+    "expected": [
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
+      }
+    ]
   },
   {
     "description": "Images, https://github.github.com/gfm/#example-589",
     "markdown": "![](/url)\n",
-    "expected": []
+    "expected": [
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
+      }
+    ]
   },
   {
     "description": "Images, https://github.github.com/gfm/#example-590",
     "markdown": "![foo][bar]\n\n[bar]: /url\n",
-    "expected": []
+    "expected": [
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
+      }
+    ]
   },
   {
     "description": "Images, https://github.github.com/gfm/#example-591",
     "markdown": "![foo][bar]\n\n[BAR]: /url\n",
-    "expected": []
+    "expected": [
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
+      }
+    ]
   },
   {
     "description": "Images, https://github.github.com/gfm/#example-592",
     "markdown": "![foo][]\n\n[foo]: /url \"title\"\n",
-    "expected": []
+    "expected": [
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
+      }
+    ]
   },
   {
     "description": "Images, https://github.github.com/gfm/#example-593",
     "markdown": "![*foo* bar][]\n\n[*foo* bar]: /url \"title\"\n",
-    "expected": []
+    "expected": [
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
+      }
+    ]
   },
   {
     "description": "Images, https://github.github.com/gfm/#example-594",
     "markdown": "![Foo][]\n\n[foo]: /url \"title\"\n",
-    "expected": []
+    "expected": [
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
+      }
+    ]
   },
   {
     "description": "Images, https://github.github.com/gfm/#example-595",
     "markdown": "![foo] \n[]\n\n[foo]: /url \"title\"\n",
     "expected": [
       {
-        "block": "paragraph",
+        "type": "Column",
         "children": [
           {
-            "text": " []"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": " []",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -100,30 +214,76 @@
   {
     "description": "Images, https://github.github.com/gfm/#example-596",
     "markdown": "![foo]\n\n[foo]: /url \"title\"\n",
-    "expected": []
+    "expected": [
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
+      }
+    ]
   },
   {
     "description": "Images, https://github.github.com/gfm/#example-597",
     "markdown": "![*foo* bar]\n\n[*foo* bar]: /url \"title\"\n",
-    "expected": []
+    "expected": [
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
+      }
+    ]
   },
   {
     "description": "Images, https://github.github.com/gfm/#example-598",
     "markdown": "![[foo]]\n\n[[foo]]: /url \"title\"\n",
     "expected": [
       {
-        "block": "paragraph",
+        "type": "Column",
         "children": [
           {
-            "text": "![[foo]]"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "![[foo]]",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       },
       {
-        "block": "paragraph",
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "Column",
         "children": [
           {
-            "text": "[[foo]]: /url \"title\""
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "[[foo]]: /url \"title\"",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -132,17 +292,38 @@
   {
     "description": "Images, https://github.github.com/gfm/#example-599",
     "markdown": "![Foo]\n\n[foo]: /url \"title\"\n",
-    "expected": []
+    "expected": [
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
+      }
+    ]
   },
   {
     "description": "Images, https://github.github.com/gfm/#example-600",
     "markdown": "!\\[foo]\n\n[foo]: /url \"title\"\n",
     "expected": [
       {
-        "block": "paragraph",
+        "type": "Column",
         "children": [
           {
-            "text": "![foo]"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "![foo]",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Instance of 'Color'"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
@@ -153,17 +334,40 @@
     "markdown": "\\![foo]\n\n[foo]: /url \"title\"\n",
     "expected": [
       {
-        "block": "paragraph",
+        "type": "Column",
         "children": [
           {
-            "text": "!"
-          },
-          {
-            "style": {
-              "color": "Color(0xff2196f3)"
-            },
-            "text": "foo",
-            "isLink": true
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "children": [
+                    {
+                      "type": "TextSpan",
+                      "text": "!",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Instance of 'Color'"
+                      }
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": "foo",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Instance of 'Color'"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
           }
         ]
       }

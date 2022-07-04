@@ -43,6 +43,22 @@ class MarkdownBuilder implements md.NodeVisitor {
 
   @override
   bool visitElementBefore(md.Element element) {
+    if ([
+      'blankLine',
+      'linkReferenceDefinition',
+      'backslashEscape',
+    ].contains(element.type)) {
+      if (element.type == 'backslashEscape') {
+        _tree.last.children.add(_buildRichText(
+          TextSpan(
+            text: element.textContent,
+            style: _tree.last.style,
+          ),
+        ));
+      }
+      return false;
+    }
+
     final parent = _tree.last;
 
     if (element.type == 'link' && _onTapLink != null) {
