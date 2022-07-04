@@ -49,12 +49,7 @@ class MarkdownBuilder implements md.NodeVisitor {
       'backslashEscape',
     ].contains(element.type)) {
       if (element.type == 'backslashEscape') {
-        _tree.last.children.add(_buildRichText(
-          TextSpan(
-            text: element.textContent,
-            style: _tree.last.style,
-          ),
-        ));
+        visitText(element.children.first as md.Text);
       }
       return false;
     }
@@ -87,7 +82,7 @@ class MarkdownBuilder implements md.NodeVisitor {
       TextSpan(
         text: textContent,
         style: parent.style,
-        recognizer: _linkHandlers.isEmpty ? null : _linkHandlers.removeLast(),
+        recognizer: _linkHandlers.isEmpty ? null : _linkHandlers.last,
       ),
     );
 
@@ -125,6 +120,8 @@ class MarkdownBuilder implements md.NodeVisitor {
             child: blockChild,
           ),
         );
+      } else if (current.type == 'link') {
+        _linkHandlers.removeLast();
       }
 
       if (parent.children.isNotEmpty) {
