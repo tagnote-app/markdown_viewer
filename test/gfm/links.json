@@ -19,7 +19,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -48,7 +49,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -77,7 +79,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -106,7 +109,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -164,7 +168,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -277,7 +282,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -390,7 +396,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -419,7 +426,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -448,7 +456,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -477,7 +486,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -506,7 +516,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -535,7 +546,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -562,7 +574,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -589,7 +602,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -618,7 +632,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -647,7 +662,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -676,7 +692,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -708,7 +725,8 @@
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     },
                     {
                       "type": "TextSpan",
@@ -718,7 +736,8 @@
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     },
                     {
                       "type": "TextSpan",
@@ -728,7 +747,8 @@
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     },
                     {
                       "type": "TextSpan",
@@ -738,7 +758,8 @@
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     },
                     {
                       "type": "TextSpan",
@@ -748,7 +769,8 @@
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     }
                   ]
                 }
@@ -779,7 +801,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -808,7 +831,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -866,7 +890,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -895,7 +920,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -953,7 +979,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -1024,7 +1051,8 @@
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     }
                   ]
                 }
@@ -1055,7 +1083,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -1087,7 +1116,8 @@
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     },
                     {
                       "type": "TextSpan",
@@ -1098,7 +1128,8 @@
                         "fontSize": 14.0,
                         "fontStyle": "FontStyle.italic",
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     },
                     {
                       "type": "TextSpan",
@@ -1109,7 +1140,8 @@
                         "fontSize": 14.0,
                         "fontStyle": "FontStyle.italic",
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     },
                     {
                       "type": "TextSpan",
@@ -1120,7 +1152,8 @@
                         "fontSize": 14.0,
                         "fontStyle": "FontStyle.italic",
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     },
                     {
                       "type": "TextSpan",
@@ -1132,7 +1165,8 @@
                         "fontStyle": "FontStyle.italic",
                         "color": "Instance of 'Color'",
                         "backgroundColor": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     }
                   ]
                 }
@@ -1187,7 +1221,8 @@
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     },
                     {
                       "type": "TextSpan",
@@ -1197,7 +1232,8 @@
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     }
                   ]
                 }
@@ -1253,7 +1289,8 @@
                         "fontSize": 14.0,
                         "fontStyle": "FontStyle.italic",
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     },
                     {
                       "type": "TextSpan",
@@ -1264,7 +1301,8 @@
                         "fontSize": 14.0,
                         "fontStyle": "FontStyle.italic",
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     },
                     {
                       "type": "TextSpan",
@@ -1274,7 +1312,8 @@
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     }
                   ]
                 }
@@ -1329,7 +1368,8 @@
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     }
                   ]
                 }
@@ -1360,7 +1400,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -1537,7 +1578,8 @@
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     }
                   ]
                 }
@@ -1568,7 +1610,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -1597,7 +1640,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -1626,7 +1670,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -1658,7 +1703,8 @@
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     },
                     {
                       "type": "TextSpan",
@@ -1669,7 +1715,8 @@
                         "fontSize": 14.0,
                         "fontStyle": "FontStyle.italic",
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     },
                     {
                       "type": "TextSpan",
@@ -1680,7 +1727,8 @@
                         "fontSize": 14.0,
                         "fontStyle": "FontStyle.italic",
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     },
                     {
                       "type": "TextSpan",
@@ -1691,7 +1739,8 @@
                         "fontSize": 14.0,
                         "fontStyle": "FontStyle.italic",
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     },
                     {
                       "type": "TextSpan",
@@ -1703,7 +1752,8 @@
                         "fontStyle": "FontStyle.italic",
                         "color": "Instance of 'Color'",
                         "backgroundColor": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     }
                   ]
                 }
@@ -1758,7 +1808,8 @@
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     },
                     {
                       "type": "TextSpan",
@@ -1768,7 +1819,8 @@
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     },
                     {
                       "type": "TextSpan",
@@ -1778,7 +1830,8 @@
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     }
                   ]
                 }
@@ -1834,7 +1887,8 @@
                         "fontSize": 14.0,
                         "fontStyle": "FontStyle.italic",
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     },
                     {
                       "type": "TextSpan",
@@ -1844,7 +1898,8 @@
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     },
                     {
                       "type": "TextSpan",
@@ -1854,7 +1909,8 @@
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     }
                   ]
                 }
@@ -1898,7 +1954,8 @@
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     }
                   ]
                 }
@@ -1929,7 +1986,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -2061,7 +2119,8 @@
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     }
                   ]
                 }
@@ -2092,7 +2151,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -2124,7 +2184,8 @@
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     },
                     {
                       "type": "TextSpan",
@@ -2134,7 +2195,8 @@
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     }
                   ]
                 }
@@ -2165,7 +2227,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -2207,7 +2270,8 @@
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     }
                   ]
                 }
@@ -2251,7 +2315,8 @@
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     }
                   ]
                 }
@@ -2282,7 +2347,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -2508,7 +2574,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -2537,7 +2604,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -2678,7 +2746,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -2711,7 +2780,8 @@
                         "fontSize": 14.0,
                         "fontStyle": "FontStyle.italic",
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     },
                     {
                       "type": "TextSpan",
@@ -2721,7 +2791,8 @@
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     }
                   ]
                 }
@@ -2752,7 +2823,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -2784,7 +2856,8 @@
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     },
                     {
                       "type": "TextSpan",
@@ -2794,7 +2867,8 @@
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     }
                   ]
                 }
@@ -2825,7 +2899,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -2858,7 +2933,8 @@
                         "fontSize": 14.0,
                         "fontStyle": "FontStyle.italic",
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     },
                     {
                       "type": "TextSpan",
@@ -2868,7 +2944,8 @@
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     }
                   ]
                 }
@@ -2913,7 +2990,8 @@
                         "fontSize": 14.0,
                         "fontStyle": "FontStyle.italic",
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     },
                     {
                       "type": "TextSpan",
@@ -2923,7 +3001,8 @@
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     },
                     {
                       "type": "TextSpan",
@@ -2933,7 +3012,8 @@
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     }
                   ]
                 }
@@ -2977,7 +3057,8 @@
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     }
                   ]
                 }
@@ -3008,7 +3089,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -3040,7 +3122,8 @@
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     },
                     {
                       "type": "TextSpan",
@@ -3050,7 +3133,8 @@
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     }
                   ]
                 }
@@ -3123,7 +3207,8 @@
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     }
                   ]
                 }
@@ -3154,7 +3239,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -3183,7 +3269,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -3212,7 +3299,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -3244,7 +3332,8 @@
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     },
                     {
                       "type": "TextSpan",
@@ -3254,7 +3343,8 @@
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     }
                   ]
                 }
@@ -3298,7 +3388,8 @@
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     }
                   ]
                 }
@@ -3332,7 +3423,8 @@
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     },
                     {
                       "type": "TextSpan",
@@ -3342,7 +3434,8 @@
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     }
                   ]
                 }
@@ -3386,7 +3479,8 @@
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     }
                   ]
                 }

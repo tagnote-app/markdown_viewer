@@ -3,6 +3,7 @@ import 'package:markdown/markdown.dart';
 class MarkdownBuilder {
   MarkdownBuilder({
     required this.styleSheet,
+    MarkdownTapLinkCallback? onTapLink,
   });
 
   final MarkdownStyle styleSheet;
@@ -23,3 +24,6 @@ class MarkdownStyle {
 class ThemeData {}
 
 final themeData = ThemeData();
+
+typedef MarkdownTapLinkCallback = void Function(
+    String text, String? href, String? title);

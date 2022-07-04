@@ -55,7 +55,8 @@ extension TextSpanExtensions on TextSpan {
       if (text != null) 'text': text,
       if (style != null) 'style': style!.toMap(),
       if (children != null && children!.isNotEmpty)
-        'children': children!.map((e) => (e as TextSpan).toMap()).toList()
+        'children': children!.map((e) => (e as TextSpan).toMap()).toList(),
+      if (recognizer != null) 'recognizer': recognizer.runtimeType.toString(),
     };
   }
 

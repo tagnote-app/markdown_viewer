@@ -98,3 +98,29 @@ bool isBlockElement(String type) => [
       'tableHead',
       'tableBody',
     ].contains(type);
+
+// == INLINE TYPES ==
+// link
+// image
+// autolink
+// hardLineBreak
+// emphasis
+// strongEmphasis
+// emoji
+// codeSpan
+// backslashEscape
+// extendedAutolink
+// rawHtml
+// tableBodyCell
+// tableHeadCell
+
+// linkReferenceDefinition
+// linkReferenceDefinitionLabel
+// linkReferenceDefinitionDestination
+// linkReferenceDefinitionTitle
+
+bool isLinkElement(String type) => [
+      'link',
+      'autolink',
+      'extendedAutolink',
+    ].contains(type);

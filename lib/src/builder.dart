@@ -56,7 +56,7 @@ class MarkdownBuilder implements md.NodeVisitor {
 
     final parent = _tree.last;
 
-    if (element.type == 'link' && _onTapLink != null) {
+    if (isLinkElement(element.type) && _onTapLink != null) {
       _addLinkHandler(element);
     } else if (element.type == 'blockquote') {
       _isInBlockquote = true;
@@ -120,7 +120,7 @@ class MarkdownBuilder implements md.NodeVisitor {
             child: blockChild,
           ),
         );
-      } else if (current.type == 'link') {
+      } else if (isLinkElement(current.type)) {
         _linkHandlers.removeLast();
       }
 

@@ -19,7 +19,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -48,7 +49,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -77,7 +79,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -106,7 +109,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -135,7 +139,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -164,7 +169,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -193,7 +199,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -222,7 +229,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -280,7 +288,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -309,7 +318,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -338,7 +348,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Instance of 'Color'"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]

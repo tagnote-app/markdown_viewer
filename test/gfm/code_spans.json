@@ -688,7 +688,8 @@
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     },
                     {
                       "type": "TextSpan",
@@ -698,7 +699,8 @@
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
                         "color": "Instance of 'Color'"
-                      }
+                      },
+                      "recognizer": "TapGestureRecognizer"
                     }
                   ]
                 }
