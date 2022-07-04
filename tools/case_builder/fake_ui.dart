@@ -217,12 +217,18 @@ class BlockWidget implements Widget {}
 class TextWidget implements Widget {}
 
 class TextTheme {
-  const TextTheme();
-  final TextStyle? bodyText2 = const TextStyle();
-  final TextStyle? headline5 = const TextStyle();
-  final TextStyle? headline6 = const TextStyle();
-  final TextStyle? subtitle1 = const TextStyle();
-  final TextStyle? bodyText1 = const TextStyle();
+  const TextTheme({
+    this.bodyText2,
+    this.headline5,
+    this.headline6,
+    this.subtitle1,
+    this.bodyText1,
+  });
+  final TextStyle? bodyText2;
+  final TextStyle? headline5;
+  final TextStyle? headline6;
+  final TextStyle? subtitle1;
+  final TextStyle? bodyText1;
 }
 
 class CardTheme {
@@ -233,7 +239,11 @@ class CardTheme {
 }
 
 class ThemeData {
-  final textTheme = const TextTheme();
+  ThemeData({
+    this.textTheme = const TextTheme(),
+  });
+
+  final TextTheme textTheme;
 }
 
 enum MainAxisAlignment {
@@ -251,4 +261,4 @@ enum TextAlign { left, right, center, justify, start, end }
 
 enum FontStyle { normal, italic }
 
-enum FontWeight { w600, w700 }
+enum FontWeight { w400, w500, w600, w700 }
