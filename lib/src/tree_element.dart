@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:markdown/markdown.dart' as md;
 
-import '../extensions/extensions.dart';
-import 'is_block_element.dart';
+import 'extensions.dart';
+import 'helpers.dart';
 
 class TreeElement {
   TreeElement.root()

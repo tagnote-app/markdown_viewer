@@ -75,3 +75,26 @@ TextSpan _mergeSimilarTextSpans(List<TextSpan>? textSpans) {
       ? mergedSpans.first
       : TextSpan(children: mergedSpans);
 }
+
+String trimText(String text) {
+  return text.replaceAll('\n', ' ');
+}
+
+bool isBlockElement(String type) => [
+      'paragraph',
+      'atxHeading',
+      'setextHeading',
+      'htmlBlock',
+      'bulletList',
+      'orderedList',
+      'listItem',
+      'thematicBreak',
+      'blockquote',
+      'fencedBlockquote',
+      'indentedCodeBlock',
+      'fencedCodeBlock',
+      'table',
+      'tableRow',
+      'tableHead',
+      'tableBody',
+    ].contains(type);

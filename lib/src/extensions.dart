@@ -1,4 +1,6 @@
-part of 'extensions.dart';
+import 'dart:convert';
+
+import 'package:flutter/material.dart';
 
 extension WidgetExtensions on Widget {
   Map<String, dynamic> toMap() {
@@ -79,3 +81,18 @@ extension WidgetsExtensions on List<Widget> {
 
   String toPrettyString() => toMap().toPrettyString();
 }
+
+extension MapExtensions on Map {
+  String toPrettyString() {
+    return _toPrettyString(this);
+  }
+}
+
+extension MapsExtensions on List<Map<String, dynamic>> {
+  String toPrettyString() {
+    return _toPrettyString(this);
+  }
+}
+
+String _toPrettyString(Object object) =>
+    const JsonEncoder.withIndent("  ").convert(object);

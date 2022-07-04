@@ -1,11 +1,10 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:markdown/markdown.dart' as md;
+import 'helpers.dart';
 
-import 'helpers/merge_inline_children.dart';
-import 'helpers/tree_element.dart';
-import 'helpers/trim_text.dart';
 import 'style.dart';
+import 'tree_element.dart';
 
 class MarkdownBuilder implements md.NodeVisitor {
   MarkdownBuilder({
