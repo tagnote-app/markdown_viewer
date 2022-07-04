@@ -2,56 +2,45 @@ part of 'extensions.dart';
 
 extension WidgetExtensions on Widget {
   Map<String, dynamic> toMap() {
-    final type = runtimeType.toString();
+    final type = runtimeType;
     final self = this;
+    final Map<String, dynamic> map = {
+      'type': type.toString(),
+    };
 
     if (self is Column || self is Wrap) {
-      return {
-        'type': type,
-        'children': (self as MultiChildRenderObjectWidget)
-            .children
-            .map((e) => e.toMap())
-            .toList(),
-      };
+      map.addAll({
+        if ((self as MultiChildRenderObjectWidget).children.isNotEmpty)
+          'children': self.children.map((e) => e.toMap()).toList(),
+      });
     } else if (self is RichText) {
-      Map<String, dynamic>? spanChild;
-      final text = self.text;
-      if (text is TextSpan) {
-        spanChild = text.toMap();
-      }
+      final text =
+          (self.text is TextSpan) ? (self.text as TextSpan).toMap() : null;
 
       final children = self.children.map((e) => e.toMap()).toList();
-      return {
-        'type': type,
+      map.addAll({
         if (children.isNotEmpty) 'children': children,
-        if (spanChild != null) 'span': spanChild,
-      };
+        if (text != null) 'text': text,
+      });
     } else if (self is SizedBox) {
-      return {
-        'type': type,
-        'height': self.height,
-        'width': self.width,
-      };
+      map.addAll({
+        if (self.height != null) 'height': self.height,
+        if (self.width != null) 'width': self.width,
+      });
     } else if (self is SingleChildRenderObjectWidget) {
-      return {
-        'type': type,
-        'child': self.child?.toMap(),
-      };
+      map.addAll({
+        if (self.child != null) 'child': self.child?.toMap(),
+      });
     } else if (self is Text) {
-      return {
-        'type': type,
+      map.addAll({
         'data': self.data,
-      };
+      });
     } else if (self is Expanded) {
-      return {
-        'type': type,
+      map.addAll({
         'child': self.child.toMap(),
-      };
-    } else {
-      return {
-        'type': type,
-      };
+      });
     }
+    return map;
   }
 
   String toPrettyString() => toMap().toPrettyString();
@@ -59,33 +48,30 @@ extension WidgetExtensions on Widget {
 
 extension TextSpanExtensions on TextSpan {
   Map<String, dynamic> toMap() {
-    final map = <String, dynamic>{
+    return {
       'type': runtimeType.toString(),
       if (text != null) 'text': text,
-      if (style != null)
-        'style': {
-          "fontFamily": style!.fontFamily,
-          "fontWeight": style!.fontWeight.toString(),
-          "fontStyle": style!.fontStyle.toString(),
-          "fontSize": style!.fontSize,
-          "color": style!.color.toString(),
-        },
+      if (style != null) 'style': style!.toMap(),
+      if (children != null && children!.isNotEmpty)
+        'children': children!.map((e) => (e as TextSpan).toMap()).toList()
     };
-
-    if (children != null && children!.isNotEmpty) {
-      final childMaps = <Map<String, dynamic>>[];
-      for (final item in children!) {
-        if (item is! TextSpan) {
-          continue;
-        }
-        childMaps.add(item.toMap());
-      }
-
-      map['children'] = childMaps;
-    }
-
-    return map;
   }
+
+  String toPrettyString() => toMap().toPrettyString();
+}
+
+extension TextStyleExtensions on TextStyle {
+  Map<String, dynamic> toMap() => {
+        if (fontFamily != null) 'fontFamily': fontFamily,
+        if (fontWeight != null) 'fontWeight': fontWeight.toString(),
+        if (fontSize != null) 'fontSize': fontSize,
+        if (fontStyle != null) 'fontStyle': fontStyle.toString(),
+        if (color != null) 'color': color.toString(),
+        if (backgroundColor != null)
+          'backgroundColor': backgroundColor.toString(),
+      };
+
+  String toPrettyString() => toMap().toPrettyString();
 }
 
 extension WidgetsExtensions on List<Widget> {
