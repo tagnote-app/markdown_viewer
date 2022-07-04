@@ -29,9 +29,7 @@ class MarkdownStyle {
   })  : blockSpacing = blockSpacing ?? 8.0,
         blockquotePadding = blockquotePadding ?? const EdgeInsets.all(8),
         blockquoteDecoration = blockquoteDecoration ??
-            BoxDecoration(
-                color: Colors.grey.shade200,
-                borderRadius: BorderRadius.circular(2.0));
+            const BoxDecoration(color: Color(0xffeeeeee));
 
   /// Creates a [MarkdownStyle] from the [TextStyle]s in the provided [theme].
   /// Also it allows to set individual [TextStyle]s which will be merged into
@@ -77,7 +75,7 @@ class MarkdownStyle {
       emphasis: const TextStyle(fontStyle: FontStyle.italic).merge(emphasis),
       strongEmphasis:
           const TextStyle(fontWeight: FontWeight.w700).merge(strongEmphasis),
-      link: TextStyle(color: theme.colorScheme.primary).merge(link),
+      link: const TextStyle(color: Color(0xff2196f3)).merge(link),
       inlineHtml: _generateCodeStyle(theme, true)?.merge(inlineHtml),
       htmlBlock: _generateCodeStyle(theme, false)?.merge(htmlBlock),
       inlineCode: _generateCodeStyle(theme, true)?.merge(inlineCode),
@@ -215,6 +213,6 @@ TextStyle? _generateCodeStyle(ThemeData theme, bool withBackground) {
     return style;
   }
   return style?.copyWith(
-    backgroundColor: theme.cardTheme.color ?? theme.cardColor,
+    backgroundColor: const Color(0xfff8f09e),
   );
 }
