@@ -98,6 +98,9 @@ abstract class Decoration {
 class Color {
   const Color(this.value);
   final int value;
+
+  @override
+  String toString() => 'Color(0x${value.toRadixString(16).padLeft(8, '0')})';
 }
 
 class BoxDecoration extends Decoration {
