@@ -18,7 +18,7 @@
                     "fontFamily": ".SF UI Text",
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
-                    "color": "Instance of 'Color'"
+                    "color": "Color(0xdd000000)"
                   }
                 }
               }
@@ -47,7 +47,7 @@
                     "fontFamily": ".SF UI Text",
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
-                    "color": "Instance of 'Color'"
+                    "color": "Color(0xdd000000)"
                   }
                 }
               }
@@ -79,7 +79,7 @@
                         "fontFamily": ".SF UI Text",
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
-                        "color": "Instance of 'Color'"
+                        "color": "Color(0xdd000000)"
                       }
                     },
                     {
@@ -89,8 +89,8 @@
                         "fontFamily": "monospace",
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 11.9,
-                        "color": "Instance of 'Color'",
-                        "backgroundColor": "Instance of 'Color'"
+                        "color": "Color(0xdd000000)",
+                        "backgroundColor": "Color(0xfff8f09e)"
                       }
                     },
                     {
@@ -100,7 +100,7 @@
                         "fontFamily": ".SF UI Text",
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
-                        "color": "Instance of 'Color'"
+                        "color": "Color(0xdd000000)"
                       }
                     },
                     {
@@ -110,7 +110,7 @@
                         "fontFamily": ".SF UI Text",
                         "fontWeight": "FontWeight.w700",
                         "fontSize": 14.0,
-                        "color": "Instance of 'Color'"
+                        "color": "Color(0xdd000000)"
                       }
                     },
                     {
@@ -120,7 +120,7 @@
                         "fontFamily": ".SF UI Text",
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
-                        "color": "Instance of 'Color'"
+                        "color": "Color(0xdd000000)"
                       }
                     }
                   ]
@@ -151,7 +151,7 @@
                     "fontFamily": ".SF UI Text",
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
-                    "color": "Instance of 'Color'"
+                    "color": "Color(0xdd000000)"
                   }
                 }
               }
@@ -185,7 +185,7 @@
                             "fontFamily": ".SF UI Text",
                             "fontWeight": "FontWeight.w400",
                             "fontSize": 14.0,
-                            "color": "Instance of 'Color'"
+                            "color": "Color(0xdd000000)"
                           }
                         }
                       }
@@ -218,7 +218,7 @@
                     "fontFamily": ".SF UI Text",
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
-                    "color": "Instance of 'Color'"
+                    "color": "Color(0xdd000000)"
                   }
                 }
               }
@@ -245,7 +245,7 @@
                     "fontFamily": ".SF UI Text",
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
-                    "color": "Instance of 'Color'"
+                    "color": "Color(0xdd000000)"
                   }
                 }
               }
@@ -274,7 +274,7 @@
                     "fontFamily": ".SF UI Text",
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
-                    "color": "Instance of 'Color'"
+                    "color": "Color(0xdd000000)"
                   }
                 }
               }
@@ -303,7 +303,7 @@
                     "fontFamily": ".SF UI Text",
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
-                    "color": "Instance of 'Color'"
+                    "color": "Color(0xdd000000)"
                   }
                 }
               }
@@ -332,7 +332,7 @@
                     "fontFamily": ".SF UI Text",
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
-                    "color": "Instance of 'Color'"
+                    "color": "Color(0xdd000000)"
                   }
                 }
               }

@@ -21,7 +21,7 @@
                         "fontFamily": ".SF UI Text",
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
-                        "color": "Instance of 'Color'"
+                        "color": "Color(0xdd000000)"
                       }
                     }
                   }
@@ -48,7 +48,7 @@
                         "fontFamily": ".SF UI Text",
                         "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
-                        "color": "Instance of 'Color'"
+                        "color": "Color(0xdd000000)"
                       }
                     }
                   }
