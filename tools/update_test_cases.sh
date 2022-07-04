@@ -1,6 +1,6 @@
 #!/bin/sh
 
-BUILDER_DIR="test_case_builder"
+BUILDER_DIR=".test_case_builder"
 SRC_DIR="lib/src"
 TEST_DIR="test"
 TOOLS_DIR="tools/case_builder"
