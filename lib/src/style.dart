@@ -198,7 +198,7 @@ class MarkdownStyle {
     }
 
     // Make sure to use TextStyle inherit from ancestors to overwite paragraph.
-    if (type == 'paragraph' || paragraph != null) {
+    if (type == 'paragraph' && paragraph != null) {
       style = paragraph!.merge(style);
     }
 
