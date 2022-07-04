@@ -7,6 +7,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "foo\tbaz\t\tbim "
           }
         ]
@@ -21,6 +26,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "foo\tbaz\t\tbim "
           }
         ]
@@ -35,6 +45,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "a\ta ὐ\ta "
           }
         ]
@@ -95,6 +110,11 @@
                 "block": "codeBlock",
                 "children": [
                   {
+                    "style": {
+                      "fontFamily": "monospace",
+                      "fontSize": 12.0,
+                      "color": ""
+                    },
                     "text": "  bar "
                   }
                 ]
@@ -116,6 +136,11 @@
             "block": "codeBlock",
             "children": [
               {
+                "style": {
+                  "fontFamily": "monospace",
+                  "fontSize": 12.0,
+                  "color": ""
+                },
                 "text": "  foo\n"
               }
             ]
@@ -138,6 +163,11 @@
                 "block": "codeBlock",
                 "children": [
                   {
+                    "style": {
+                      "fontFamily": "monospace",
+                      "fontSize": 12.0,
+                      "color": ""
+                    },
                     "text": "  foo "
                   }
                 ]
@@ -156,6 +186,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "foo bar "
           }
         ]
@@ -215,6 +250,10 @@
         "block": "headline1",
         "children": [
           {
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontSize": 24.0
+            },
             "text": "Foo"
           }
         ]
@@ -224,10 +263,6 @@
   {
     "description": "Tabs, https://github.github.com/gfm/#example-11",
     "markdown": "*\t*\t*\t\n",
-    "expected": [
-      {
-        "block": "thematicBreak"
-      }
-    ]
+    "expected": []
   }
 ]

@@ -91,6 +91,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "<a href=\"&ouml;&ouml;.html\">"
           }
         ]
@@ -105,12 +110,11 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "link",
-            "children": [
-              {
-                "text": "foo"
-              }
-            ]
+            "style": {
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "foo",
+            "isLink": true
           }
         ]
       }
@@ -124,12 +128,11 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "link",
-            "children": [
-              {
-                "text": "foo"
-              }
-            ]
+            "style": {
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "foo",
+            "isLink": true
           }
         ]
       }
@@ -143,6 +146,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "foo "
           }
         ]
@@ -157,12 +165,12 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "inlineCode",
-            "children": [
-              {
-                "text": "f&ouml;&ouml;"
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
+            "text": "f&ouml;&ouml;"
           }
         ]
       }
@@ -176,6 +184,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "f&ouml;f&ouml; "
           }
         ]
@@ -193,12 +206,10 @@
             "text": "&#42;foo&#42; "
           },
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "foo"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "foo"
           }
         ]
       }

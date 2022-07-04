@@ -2,100 +2,37 @@
   {
     "description": "Images, https://github.github.com/gfm/#example-580",
     "markdown": "![foo](/url \"title\")\n",
-    "expected": [
-      {
-        "block": "paragraph",
-        "children": [
-          {
-            "inline": "image"
-          }
-        ]
-      }
-    ]
+    "expected": []
   },
   {
     "description": "Images, https://github.github.com/gfm/#example-581",
     "markdown": "![foo *bar*]\n\n[foo *bar*]: train.jpg \"train & tracks\"\n",
-    "expected": [
-      {
-        "block": "paragraph",
-        "children": [
-          {
-            "inline": "image"
-          }
-        ]
-      }
-    ]
+    "expected": []
   },
   {
     "description": "Images, https://github.github.com/gfm/#example-582",
     "markdown": "![foo ![bar](/url)](/url2)\n",
-    "expected": [
-      {
-        "block": "paragraph",
-        "children": [
-          {
-            "inline": "image"
-          }
-        ]
-      }
-    ]
+    "expected": []
   },
   {
     "description": "Images, https://github.github.com/gfm/#example-583",
     "markdown": "![foo [bar](/url)](/url2)\n",
-    "expected": [
-      {
-        "block": "paragraph",
-        "children": [
-          {
-            "inline": "image"
-          }
-        ]
-      }
-    ]
+    "expected": []
   },
   {
     "description": "Images, https://github.github.com/gfm/#example-584",
     "markdown": "![foo *bar*][]\n\n[foo *bar*]: train.jpg \"train & tracks\"\n",
-    "expected": [
-      {
-        "block": "paragraph",
-        "children": [
-          {
-            "inline": "image"
-          }
-        ]
-      }
-    ]
+    "expected": []
   },
   {
     "description": "Images, https://github.github.com/gfm/#example-585",
     "markdown": "![foo *bar*][foobar]\n\n[FOOBAR]: train.jpg \"train & tracks\"\n",
-    "expected": [
-      {
-        "block": "paragraph",
-        "children": [
-          {
-            "inline": "image"
-          }
-        ]
-      }
-    ]
+    "expected": []
   },
   {
     "description": "Images, https://github.github.com/gfm/#example-586",
     "markdown": "![foo](train.jpg)\n",
-    "expected": [
-      {
-        "block": "paragraph",
-        "children": [
-          {
-            "inline": "image"
-          }
-        ]
-      }
-    ]
+    "expected": []
   },
   {
     "description": "Images, https://github.github.com/gfm/#example-587",
@@ -106,9 +43,6 @@
         "children": [
           {
             "text": "My "
-          },
-          {
-            "inline": "image"
           }
         ]
       }
@@ -117,100 +51,37 @@
   {
     "description": "Images, https://github.github.com/gfm/#example-588",
     "markdown": "![foo](<url>)\n",
-    "expected": [
-      {
-        "block": "paragraph",
-        "children": [
-          {
-            "inline": "image"
-          }
-        ]
-      }
-    ]
+    "expected": []
   },
   {
     "description": "Images, https://github.github.com/gfm/#example-589",
     "markdown": "![](/url)\n",
-    "expected": [
-      {
-        "block": "paragraph",
-        "children": [
-          {
-            "inline": "image"
-          }
-        ]
-      }
-    ]
+    "expected": []
   },
   {
     "description": "Images, https://github.github.com/gfm/#example-590",
     "markdown": "![foo][bar]\n\n[bar]: /url\n",
-    "expected": [
-      {
-        "block": "paragraph",
-        "children": [
-          {
-            "inline": "image"
-          }
-        ]
-      }
-    ]
+    "expected": []
   },
   {
     "description": "Images, https://github.github.com/gfm/#example-591",
     "markdown": "![foo][bar]\n\n[BAR]: /url\n",
-    "expected": [
-      {
-        "block": "paragraph",
-        "children": [
-          {
-            "inline": "image"
-          }
-        ]
-      }
-    ]
+    "expected": []
   },
   {
     "description": "Images, https://github.github.com/gfm/#example-592",
     "markdown": "![foo][]\n\n[foo]: /url \"title\"\n",
-    "expected": [
-      {
-        "block": "paragraph",
-        "children": [
-          {
-            "inline": "image"
-          }
-        ]
-      }
-    ]
+    "expected": []
   },
   {
     "description": "Images, https://github.github.com/gfm/#example-593",
     "markdown": "![*foo* bar][]\n\n[*foo* bar]: /url \"title\"\n",
-    "expected": [
-      {
-        "block": "paragraph",
-        "children": [
-          {
-            "inline": "image"
-          }
-        ]
-      }
-    ]
+    "expected": []
   },
   {
     "description": "Images, https://github.github.com/gfm/#example-594",
     "markdown": "![Foo][]\n\n[foo]: /url \"title\"\n",
-    "expected": [
-      {
-        "block": "paragraph",
-        "children": [
-          {
-            "inline": "image"
-          }
-        ]
-      }
-    ]
+    "expected": []
   },
   {
     "description": "Images, https://github.github.com/gfm/#example-595",
@@ -219,9 +90,6 @@
       {
         "block": "paragraph",
         "children": [
-          {
-            "inline": "image"
-          },
           {
             "text": " []"
           }
@@ -232,30 +100,12 @@
   {
     "description": "Images, https://github.github.com/gfm/#example-596",
     "markdown": "![foo]\n\n[foo]: /url \"title\"\n",
-    "expected": [
-      {
-        "block": "paragraph",
-        "children": [
-          {
-            "inline": "image"
-          }
-        ]
-      }
-    ]
+    "expected": []
   },
   {
     "description": "Images, https://github.github.com/gfm/#example-597",
     "markdown": "![*foo* bar]\n\n[*foo* bar]: /url \"title\"\n",
-    "expected": [
-      {
-        "block": "paragraph",
-        "children": [
-          {
-            "inline": "image"
-          }
-        ]
-      }
-    ]
+    "expected": []
   },
   {
     "description": "Images, https://github.github.com/gfm/#example-598",
@@ -282,16 +132,7 @@
   {
     "description": "Images, https://github.github.com/gfm/#example-599",
     "markdown": "![Foo]\n\n[foo]: /url \"title\"\n",
-    "expected": [
-      {
-        "block": "paragraph",
-        "children": [
-          {
-            "inline": "image"
-          }
-        ]
-      }
-    ]
+    "expected": []
   },
   {
     "description": "Images, https://github.github.com/gfm/#example-600",
@@ -318,12 +159,11 @@
             "text": "!"
           },
           {
-            "inline": "link",
-            "children": [
-              {
-                "text": "foo"
-              }
-            ]
+            "style": {
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "foo",
+            "isLink": true
           }
         ]
       }

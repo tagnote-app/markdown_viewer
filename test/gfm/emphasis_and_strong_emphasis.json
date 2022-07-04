@@ -7,12 +7,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "foo bar"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "foo bar"
           }
         ]
       }
@@ -71,12 +69,10 @@
             "text": "foo"
           },
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "bar"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "bar"
           }
         ]
       }
@@ -93,12 +89,10 @@
             "text": "5"
           },
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "6"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "6"
           },
           {
             "text": "78"
@@ -115,12 +109,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "foo bar"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "foo bar"
           }
         ]
       }
@@ -221,12 +213,10 @@
             "text": "foo-"
           },
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "(bar)"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "(bar)"
           }
         ]
       }
@@ -296,23 +286,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "("
-              },
-              {
-                "inline": "emphasis",
-                "children": [
-                  {
-                    "text": "foo"
-                  }
-                ]
-              },
-              {
-                "text": ")"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "(foo)"
           }
         ]
       }
@@ -326,12 +303,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "foo"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "foo"
           },
           {
             "text": "bar"
@@ -376,23 +351,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "("
-              },
-              {
-                "inline": "emphasis",
-                "children": [
-                  {
-                    "text": "foo"
-                  }
-                ]
-              },
-              {
-                "text": ")"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "(foo)"
           }
         ]
       }
@@ -434,12 +396,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "foo_bar_baz"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "foo_bar_baz"
           }
         ]
       }
@@ -453,12 +413,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "(bar)"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "(bar)"
           },
           {
             "text": "."
@@ -475,12 +433,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "strongEmphasis",
-            "children": [
-              {
-                "text": "foo bar"
-              }
-            ]
+            "style": {
+              "fontWeight": "FontWeight.w700"
+            },
+            "text": "foo bar"
           }
         ]
       }
@@ -525,12 +481,10 @@
             "text": "foo"
           },
           {
-            "inline": "strongEmphasis",
-            "children": [
-              {
-                "text": "bar"
-              }
-            ]
+            "style": {
+              "fontWeight": "FontWeight.w700"
+            },
+            "text": "bar"
           }
         ]
       }
@@ -544,12 +498,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "strongEmphasis",
-            "children": [
-              {
-                "text": "foo bar"
-              }
-            ]
+            "style": {
+              "fontWeight": "FontWeight.w700"
+            },
+            "text": "foo bar"
           }
         ]
       }
@@ -647,23 +599,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "strongEmphasis",
-            "children": [
-              {
-                "text": "foo, "
-              },
-              {
-                "inline": "strongEmphasis",
-                "children": [
-                  {
-                    "text": "bar"
-                  }
-                ]
-              },
-              {
-                "text": ", baz"
-              }
-            ]
+            "style": {
+              "fontWeight": "FontWeight.w700"
+            },
+            "text": "foo, bar, baz"
           }
         ]
       }
@@ -680,12 +619,10 @@
             "text": "foo-"
           },
           {
-            "inline": "strongEmphasis",
-            "children": [
-              {
-                "text": "(bar)"
-              }
-            ]
+            "style": {
+              "fontWeight": "FontWeight.w700"
+            },
+            "text": "(bar)"
           }
         ]
       }
@@ -727,23 +664,23 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "("
-              },
-              {
-                "inline": "strongEmphasis",
-                "children": [
-                  {
-                    "text": "foo"
-                  }
-                ]
-              },
-              {
-                "text": ")"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "("
+          },
+          {
+            "style": {
+              "fontWeight": "FontWeight.w700",
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "foo"
+          },
+          {
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": ")"
           }
         ]
       }
@@ -757,34 +694,36 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "strongEmphasis",
-            "children": [
-              {
-                "text": "Gomphocarpus ("
-              },
-              {
-                "inline": "emphasis",
-                "children": [
-                  {
-                    "text": "Gomphocarpus physocarpus"
-                  }
-                ]
-              },
-              {
-                "text": ", syn. "
-              },
-              {
-                "inline": "emphasis",
-                "children": [
-                  {
-                    "text": "Asclepias physocarpa"
-                  }
-                ]
-              },
-              {
-                "text": ")"
-              }
-            ]
+            "style": {
+              "fontWeight": "FontWeight.w700"
+            },
+            "text": "Gomphocarpus ("
+          },
+          {
+            "style": {
+              "fontWeight": "FontWeight.w700",
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "Gomphocarpus physocarpus"
+          },
+          {
+            "style": {
+              "fontWeight": "FontWeight.w700"
+            },
+            "text": ", syn. "
+          },
+          {
+            "style": {
+              "fontWeight": "FontWeight.w700",
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "Asclepias physocarpa"
+          },
+          {
+            "style": {
+              "fontWeight": "FontWeight.w700"
+            },
+            "text": ")"
           }
         ]
       }
@@ -798,23 +737,23 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "strongEmphasis",
-            "children": [
-              {
-                "text": "foo \""
-              },
-              {
-                "inline": "emphasis",
-                "children": [
-                  {
-                    "text": "bar"
-                  }
-                ]
-              },
-              {
-                "text": "\" foo"
-              }
-            ]
+            "style": {
+              "fontWeight": "FontWeight.w700"
+            },
+            "text": "foo \""
+          },
+          {
+            "style": {
+              "fontWeight": "FontWeight.w700",
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "bar"
+          },
+          {
+            "style": {
+              "fontWeight": "FontWeight.w700"
+            },
+            "text": "\" foo"
           }
         ]
       }
@@ -828,12 +767,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "strongEmphasis",
-            "children": [
-              {
-                "text": "foo"
-              }
-            ]
+            "style": {
+              "fontWeight": "FontWeight.w700"
+            },
+            "text": "foo"
           },
           {
             "text": "bar"
@@ -878,23 +815,23 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "("
-              },
-              {
-                "inline": "strongEmphasis",
-                "children": [
-                  {
-                    "text": "foo"
-                  }
-                ]
-              },
-              {
-                "text": ")"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "("
+          },
+          {
+            "style": {
+              "fontWeight": "FontWeight.w700",
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "foo"
+          },
+          {
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": ")"
           }
         ]
       }
@@ -936,12 +873,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "strongEmphasis",
-            "children": [
-              {
-                "text": "foo__bar__baz"
-              }
-            ]
+            "style": {
+              "fontWeight": "FontWeight.w700"
+            },
+            "text": "foo__bar__baz"
           }
         ]
       }
@@ -955,12 +890,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "strongEmphasis",
-            "children": [
-              {
-                "text": "(bar)"
-              }
-            ]
+            "style": {
+              "fontWeight": "FontWeight.w700"
+            },
+            "text": "(bar)"
           },
           {
             "text": "."
@@ -977,20 +910,18 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "foo "
-              },
-              {
-                "inline": "link",
-                "children": [
-                  {
-                    "text": "bar"
-                  }
-                ]
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "foo "
+          },
+          {
+            "style": {
+              "fontStyle": "FontStyle.italic",
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "bar",
+            "isLink": true
           }
         ]
       }
@@ -1004,12 +935,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "foo bar"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "foo bar"
           }
         ]
       }
@@ -1023,23 +952,23 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "foo "
-              },
-              {
-                "inline": "strongEmphasis",
-                "children": [
-                  {
-                    "text": "bar"
-                  }
-                ]
-              },
-              {
-                "text": " baz"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "foo "
+          },
+          {
+            "style": {
+              "fontWeight": "FontWeight.w700",
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "bar"
+          },
+          {
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": " baz"
           }
         ]
       }
@@ -1053,23 +982,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "foo "
-              },
-              {
-                "inline": "emphasis",
-                "children": [
-                  {
-                    "text": "bar"
-                  }
-                ]
-              },
-              {
-                "text": " baz"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "foo bar baz"
           }
         ]
       }
@@ -1083,20 +999,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "inline": "emphasis",
-                "children": [
-                  {
-                    "text": "foo"
-                  }
-                ]
-              },
-              {
-                "text": " bar"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "foo bar"
           }
         ]
       }
@@ -1110,20 +1016,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "foo "
-              },
-              {
-                "inline": "emphasis",
-                "children": [
-                  {
-                    "text": "bar"
-                  }
-                ]
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "foo bar"
           }
         ]
       }
@@ -1137,23 +1033,23 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "foo "
-              },
-              {
-                "inline": "strongEmphasis",
-                "children": [
-                  {
-                    "text": "bar"
-                  }
-                ]
-              },
-              {
-                "text": " baz"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "foo "
+          },
+          {
+            "style": {
+              "fontWeight": "FontWeight.w700",
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "bar"
+          },
+          {
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": " baz"
           }
         ]
       }
@@ -1167,23 +1063,23 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "foo"
-              },
-              {
-                "inline": "strongEmphasis",
-                "children": [
-                  {
-                    "text": "bar"
-                  }
-                ]
-              },
-              {
-                "text": "baz"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "foo"
+          },
+          {
+            "style": {
+              "fontWeight": "FontWeight.w700",
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "bar"
+          },
+          {
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "baz"
           }
         ]
       }
@@ -1197,12 +1093,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "foo**bar"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "foo**bar"
           }
         ]
       }
@@ -1216,20 +1110,17 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "inline": "strongEmphasis",
-                "children": [
-                  {
-                    "text": "foo"
-                  }
-                ]
-              },
-              {
-                "text": " bar"
-              }
-            ]
+            "style": {
+              "fontWeight": "FontWeight.w700",
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "foo"
+          },
+          {
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": " bar"
           }
         ]
       }
@@ -1243,20 +1134,17 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "foo "
-              },
-              {
-                "inline": "strongEmphasis",
-                "children": [
-                  {
-                    "text": "bar"
-                  }
-                ]
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "foo "
+          },
+          {
+            "style": {
+              "fontWeight": "FontWeight.w700",
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "bar"
           }
         ]
       }
@@ -1270,20 +1158,17 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "foo"
-              },
-              {
-                "inline": "strongEmphasis",
-                "children": [
-                  {
-                    "text": "bar"
-                  }
-                ]
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "foo"
+          },
+          {
+            "style": {
+              "fontWeight": "FontWeight.w700",
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "bar"
           }
         ]
       }
@@ -1300,17 +1185,11 @@
             "text": "foo"
           },
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "inline": "strongEmphasis",
-                "children": [
-                  {
-                    "text": "bar"
-                  }
-                ]
-              }
-            ]
+            "style": {
+              "fontWeight": "FontWeight.w700",
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "bar"
           },
           {
             "text": "baz"
@@ -1330,22 +1209,10 @@
             "text": "foo"
           },
           {
-            "inline": "strongEmphasis",
-            "children": [
-              {
-                "inline": "strongEmphasis",
-                "children": [
-                  {
-                    "inline": "strongEmphasis",
-                    "children": [
-                      {
-                        "text": "bar"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
+            "style": {
+              "fontWeight": "FontWeight.w700"
+            },
+            "text": "bar"
           },
           {
             "text": "***baz"
@@ -1362,34 +1229,23 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "foo "
-              },
-              {
-                "inline": "strongEmphasis",
-                "children": [
-                  {
-                    "text": "bar "
-                  },
-                  {
-                    "inline": "emphasis",
-                    "children": [
-                      {
-                        "text": "baz"
-                      }
-                    ]
-                  },
-                  {
-                    "text": " bim"
-                  }
-                ]
-              },
-              {
-                "text": " bop"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "foo "
+          },
+          {
+            "style": {
+              "fontWeight": "FontWeight.w700",
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "bar baz bim"
+          },
+          {
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": " bop"
           }
         ]
       }
@@ -1403,25 +1259,18 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "foo "
-              },
-              {
-                "inline": "link",
-                "children": [
-                  {
-                    "inline": "emphasis",
-                    "children": [
-                      {
-                        "text": "bar"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "foo "
+          },
+          {
+            "style": {
+              "fontStyle": "FontStyle.italic",
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "bar",
+            "isLink": true
           }
         ]
       }
@@ -1463,20 +1312,18 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "strongEmphasis",
-            "children": [
-              {
-                "text": "foo "
-              },
-              {
-                "inline": "link",
-                "children": [
-                  {
-                    "text": "bar"
-                  }
-                ]
-              }
-            ]
+            "style": {
+              "fontWeight": "FontWeight.w700"
+            },
+            "text": "foo "
+          },
+          {
+            "style": {
+              "fontWeight": "FontWeight.w700",
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "bar",
+            "isLink": true
           }
         ]
       }
@@ -1490,12 +1337,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "strongEmphasis",
-            "children": [
-              {
-                "text": "foo bar"
-              }
-            ]
+            "style": {
+              "fontWeight": "FontWeight.w700"
+            },
+            "text": "foo bar"
           }
         ]
       }
@@ -1509,23 +1354,23 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "strongEmphasis",
-            "children": [
-              {
-                "text": "foo "
-              },
-              {
-                "inline": "emphasis",
-                "children": [
-                  {
-                    "text": "bar"
-                  }
-                ]
-              },
-              {
-                "text": " baz"
-              }
-            ]
+            "style": {
+              "fontWeight": "FontWeight.w700"
+            },
+            "text": "foo "
+          },
+          {
+            "style": {
+              "fontWeight": "FontWeight.w700",
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "bar"
+          },
+          {
+            "style": {
+              "fontWeight": "FontWeight.w700"
+            },
+            "text": " baz"
           }
         ]
       }
@@ -1539,23 +1384,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "strongEmphasis",
-            "children": [
-              {
-                "text": "foo "
-              },
-              {
-                "inline": "strongEmphasis",
-                "children": [
-                  {
-                    "text": "bar"
-                  }
-                ]
-              },
-              {
-                "text": " baz"
-              }
-            ]
+            "style": {
+              "fontWeight": "FontWeight.w700"
+            },
+            "text": "foo bar baz"
           }
         ]
       }
@@ -1569,20 +1401,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "strongEmphasis",
-            "children": [
-              {
-                "inline": "strongEmphasis",
-                "children": [
-                  {
-                    "text": "foo"
-                  }
-                ]
-              },
-              {
-                "text": " bar"
-              }
-            ]
+            "style": {
+              "fontWeight": "FontWeight.w700"
+            },
+            "text": "foo bar"
           }
         ]
       }
@@ -1596,20 +1418,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "strongEmphasis",
-            "children": [
-              {
-                "text": "foo "
-              },
-              {
-                "inline": "strongEmphasis",
-                "children": [
-                  {
-                    "text": "bar"
-                  }
-                ]
-              }
-            ]
+            "style": {
+              "fontWeight": "FontWeight.w700"
+            },
+            "text": "foo bar"
           }
         ]
       }
@@ -1623,23 +1435,23 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "strongEmphasis",
-            "children": [
-              {
-                "text": "foo "
-              },
-              {
-                "inline": "emphasis",
-                "children": [
-                  {
-                    "text": "bar"
-                  }
-                ]
-              },
-              {
-                "text": " baz"
-              }
-            ]
+            "style": {
+              "fontWeight": "FontWeight.w700"
+            },
+            "text": "foo "
+          },
+          {
+            "style": {
+              "fontWeight": "FontWeight.w700",
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "bar"
+          },
+          {
+            "style": {
+              "fontWeight": "FontWeight.w700"
+            },
+            "text": " baz"
           }
         ]
       }
@@ -1653,23 +1465,23 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "strongEmphasis",
-            "children": [
-              {
-                "text": "foo"
-              },
-              {
-                "inline": "emphasis",
-                "children": [
-                  {
-                    "text": "bar"
-                  }
-                ]
-              },
-              {
-                "text": "baz"
-              }
-            ]
+            "style": {
+              "fontWeight": "FontWeight.w700"
+            },
+            "text": "foo"
+          },
+          {
+            "style": {
+              "fontWeight": "FontWeight.w700",
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "bar"
+          },
+          {
+            "style": {
+              "fontWeight": "FontWeight.w700"
+            },
+            "text": "baz"
           }
         ]
       }
@@ -1683,20 +1495,17 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "strongEmphasis",
-            "children": [
-              {
-                "inline": "emphasis",
-                "children": [
-                  {
-                    "text": "foo"
-                  }
-                ]
-              },
-              {
-                "text": " bar"
-              }
-            ]
+            "style": {
+              "fontWeight": "FontWeight.w700",
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "foo"
+          },
+          {
+            "style": {
+              "fontWeight": "FontWeight.w700"
+            },
+            "text": " bar"
           }
         ]
       }
@@ -1710,20 +1519,17 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "strongEmphasis",
-            "children": [
-              {
-                "text": "foo "
-              },
-              {
-                "inline": "emphasis",
-                "children": [
-                  {
-                    "text": "bar"
-                  }
-                ]
-              }
-            ]
+            "style": {
+              "fontWeight": "FontWeight.w700"
+            },
+            "text": "foo "
+          },
+          {
+            "style": {
+              "fontWeight": "FontWeight.w700",
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "bar"
           }
         ]
       }
@@ -1737,34 +1543,23 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "strongEmphasis",
-            "children": [
-              {
-                "text": "foo "
-              },
-              {
-                "inline": "emphasis",
-                "children": [
-                  {
-                    "text": "bar "
-                  },
-                  {
-                    "inline": "strongEmphasis",
-                    "children": [
-                      {
-                        "text": "baz"
-                      }
-                    ]
-                  },
-                  {
-                    "text": " bim"
-                  }
-                ]
-              },
-              {
-                "text": " bop"
-              }
-            ]
+            "style": {
+              "fontWeight": "FontWeight.w700"
+            },
+            "text": "foo "
+          },
+          {
+            "style": {
+              "fontWeight": "FontWeight.w700",
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "bar baz bim"
+          },
+          {
+            "style": {
+              "fontWeight": "FontWeight.w700"
+            },
+            "text": " bop"
           }
         ]
       }
@@ -1778,25 +1573,19 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "strongEmphasis",
-            "children": [
-              {
-                "text": "foo "
-              },
-              {
-                "inline": "link",
-                "children": [
-                  {
-                    "inline": "emphasis",
-                    "children": [
-                      {
-                        "text": "bar"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
+            "style": {
+              "fontWeight": "FontWeight.w700"
+            },
+            "text": "foo "
+          },
+          {
+            "style": {
+              "fontWeight": "FontWeight.w700",
+              "fontStyle": "FontStyle.italic",
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "bar",
+            "isLink": true
           }
         ]
       }
@@ -1852,15 +1641,7 @@
         "block": "paragraph",
         "children": [
           {
-            "text": "foo "
-          },
-          {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "*"
-              }
-            ]
+            "text": "foo *"
           }
         ]
       }
@@ -1877,12 +1658,10 @@
             "text": "foo "
           },
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "_"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "_"
           }
         ]
       }
@@ -1910,15 +1689,7 @@
         "block": "paragraph",
         "children": [
           {
-            "text": "foo "
-          },
-          {
-            "inline": "strongEmphasis",
-            "children": [
-              {
-                "text": "*"
-              }
-            ]
+            "text": "foo *"
           }
         ]
       }
@@ -1935,12 +1706,10 @@
             "text": "foo "
           },
           {
-            "inline": "strongEmphasis",
-            "children": [
-              {
-                "text": "_"
-              }
-            ]
+            "style": {
+              "fontWeight": "FontWeight.w700"
+            },
+            "text": "_"
           }
         ]
       }
@@ -1957,12 +1726,10 @@
             "text": "*"
           },
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "foo"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "foo"
           }
         ]
       }
@@ -1976,12 +1743,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "foo"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "foo"
           },
           {
             "text": "*"
@@ -2001,12 +1766,10 @@
             "text": "*"
           },
           {
-            "inline": "strongEmphasis",
-            "children": [
-              {
-                "text": "foo"
-              }
-            ]
+            "style": {
+              "fontWeight": "FontWeight.w700"
+            },
+            "text": "foo"
           }
         ]
       }
@@ -2023,12 +1786,10 @@
             "text": "***"
           },
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "foo"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "foo"
           }
         ]
       }
@@ -2042,12 +1803,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "strongEmphasis",
-            "children": [
-              {
-                "text": "foo"
-              }
-            ]
+            "style": {
+              "fontWeight": "FontWeight.w700"
+            },
+            "text": "foo"
           },
           {
             "text": "*"
@@ -2064,12 +1823,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "foo"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "foo"
           },
           {
             "text": "***"
@@ -2100,15 +1857,7 @@
         "block": "paragraph",
         "children": [
           {
-            "text": "foo "
-          },
-          {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "_"
-              }
-            ]
+            "text": "foo _"
           }
         ]
       }
@@ -2125,12 +1874,10 @@
             "text": "foo "
           },
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "*"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "*"
           }
         ]
       }
@@ -2158,15 +1905,7 @@
         "block": "paragraph",
         "children": [
           {
-            "text": "foo "
-          },
-          {
-            "inline": "strongEmphasis",
-            "children": [
-              {
-                "text": "_"
-              }
-            ]
+            "text": "foo _"
           }
         ]
       }
@@ -2183,12 +1922,10 @@
             "text": "foo "
           },
           {
-            "inline": "strongEmphasis",
-            "children": [
-              {
-                "text": "*"
-              }
-            ]
+            "style": {
+              "fontWeight": "FontWeight.w700"
+            },
+            "text": "*"
           }
         ]
       }
@@ -2205,12 +1942,10 @@
             "text": "_"
           },
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "foo"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "foo"
           }
         ]
       }
@@ -2224,12 +1959,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "foo"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "foo"
           },
           {
             "text": "_"
@@ -2249,12 +1982,10 @@
             "text": "_"
           },
           {
-            "inline": "strongEmphasis",
-            "children": [
-              {
-                "text": "foo"
-              }
-            ]
+            "style": {
+              "fontWeight": "FontWeight.w700"
+            },
+            "text": "foo"
           }
         ]
       }
@@ -2271,12 +2002,10 @@
             "text": "___"
           },
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "foo"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "foo"
           }
         ]
       }
@@ -2290,12 +2019,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "strongEmphasis",
-            "children": [
-              {
-                "text": "foo"
-              }
-            ]
+            "style": {
+              "fontWeight": "FontWeight.w700"
+            },
+            "text": "foo"
           },
           {
             "text": "_"
@@ -2312,12 +2039,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "foo"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "foo"
           },
           {
             "text": "___"
@@ -2334,12 +2059,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "strongEmphasis",
-            "children": [
-              {
-                "text": "foo"
-              }
-            ]
+            "style": {
+              "fontWeight": "FontWeight.w700"
+            },
+            "text": "foo"
           }
         ]
       }
@@ -2353,17 +2076,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "inline": "emphasis",
-                "children": [
-                  {
-                    "text": "foo"
-                  }
-                ]
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "foo"
           }
         ]
       }
@@ -2377,12 +2093,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "strongEmphasis",
-            "children": [
-              {
-                "text": "foo"
-              }
-            ]
+            "style": {
+              "fontWeight": "FontWeight.w700"
+            },
+            "text": "foo"
           }
         ]
       }
@@ -2396,17 +2110,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "inline": "emphasis",
-                "children": [
-                  {
-                    "text": "foo"
-                  }
-                ]
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "foo"
           }
         ]
       }
@@ -2420,17 +2127,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "strongEmphasis",
-            "children": [
-              {
-                "inline": "strongEmphasis",
-                "children": [
-                  {
-                    "text": "foo"
-                  }
-                ]
-              }
-            ]
+            "style": {
+              "fontWeight": "FontWeight.w700"
+            },
+            "text": "foo"
           }
         ]
       }
@@ -2444,17 +2144,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "strongEmphasis",
-            "children": [
-              {
-                "inline": "strongEmphasis",
-                "children": [
-                  {
-                    "text": "foo"
-                  }
-                ]
-              }
-            ]
+            "style": {
+              "fontWeight": "FontWeight.w700"
+            },
+            "text": "foo"
           }
         ]
       }
@@ -2468,22 +2161,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "strongEmphasis",
-            "children": [
-              {
-                "inline": "strongEmphasis",
-                "children": [
-                  {
-                    "inline": "strongEmphasis",
-                    "children": [
-                      {
-                        "text": "foo"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
+            "style": {
+              "fontWeight": "FontWeight.w700"
+            },
+            "text": "foo"
           }
         ]
       }
@@ -2497,17 +2178,11 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "inline": "strongEmphasis",
-                "children": [
-                  {
-                    "text": "foo"
-                  }
-                ]
-              }
-            ]
+            "style": {
+              "fontWeight": "FontWeight.w700",
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "foo"
           }
         ]
       }
@@ -2521,22 +2196,11 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "inline": "strongEmphasis",
-                "children": [
-                  {
-                    "inline": "strongEmphasis",
-                    "children": [
-                      {
-                        "text": "foo"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
+            "style": {
+              "fontWeight": "FontWeight.w700",
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "foo"
           }
         ]
       }
@@ -2550,12 +2214,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "foo _bar"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "foo _bar"
           },
           {
             "text": " baz_"
@@ -2572,23 +2234,23 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "foo "
-              },
-              {
-                "inline": "strongEmphasis",
-                "children": [
-                  {
-                    "text": "bar *baz bim"
-                  }
-                ]
-              },
-              {
-                "text": " bam"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "foo "
+          },
+          {
+            "style": {
+              "fontWeight": "FontWeight.w700",
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "bar *baz bim"
+          },
+          {
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": " bam"
           }
         ]
       }
@@ -2605,12 +2267,10 @@
             "text": "**foo "
           },
           {
-            "inline": "strongEmphasis",
-            "children": [
-              {
-                "text": "bar baz"
-              }
-            ]
+            "style": {
+              "fontWeight": "FontWeight.w700"
+            },
+            "text": "bar baz"
           }
         ]
       }
@@ -2627,12 +2287,10 @@
             "text": "*foo "
           },
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "bar baz"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "bar baz"
           }
         ]
       }
@@ -2649,12 +2307,11 @@
             "text": "*"
           },
           {
-            "inline": "link",
-            "children": [
-              {
-                "text": "bar*"
-              }
-            ]
+            "style": {
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "bar*",
+            "isLink": true
           }
         ]
       }
@@ -2671,12 +2328,11 @@
             "text": "_foo "
           },
           {
-            "inline": "link",
-            "children": [
-              {
-                "text": "bar_"
-              }
-            ]
+            "style": {
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "bar_",
+            "isLink": true
           }
         ]
       }
@@ -2693,12 +2349,12 @@
             "text": "*"
           },
           {
-            "inline": "inlineHtml",
-            "children": [
-              {
-                "text": "<img src=\"foo\" title=\"*\"/>"
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
+            "text": "<img src=\"foo\" title=\"*\"/>"
           }
         ]
       }
@@ -2715,12 +2371,12 @@
             "text": "**"
           },
           {
-            "inline": "inlineHtml",
-            "children": [
-              {
-                "text": "<a href=\"**\">"
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
+            "text": "<a href=\"**\">"
           }
         ]
       }
@@ -2737,12 +2393,12 @@
             "text": "__"
           },
           {
-            "inline": "inlineHtml",
-            "children": [
-              {
-                "text": "<a href=\"__\">"
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
+            "text": "<a href=\"__\">"
           }
         ]
       }
@@ -2756,20 +2412,19 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "a "
-              },
-              {
-                "inline": "inlineCode",
-                "children": [
-                  {
-                    "text": "*"
-                  }
-                ]
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "a "
+          },
+          {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "fontStyle": "FontStyle.italic",
+              "backgroundColor": ""
+            },
+            "text": "*"
           }
         ]
       }
@@ -2783,20 +2438,19 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "a "
-              },
-              {
-                "inline": "inlineCode",
-                "children": [
-                  {
-                    "text": "_"
-                  }
-                ]
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "a "
+          },
+          {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "fontStyle": "FontStyle.italic",
+              "backgroundColor": ""
+            },
+            "text": "_"
           }
         ]
       }
@@ -2813,12 +2467,10 @@
             "text": "**a"
           },
           {
-            "inline": "link",
-            "children": [
-              {
-                "text": "http://foo.bar/?q=**"
-              }
-            ]
+            "style": {
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "http://foo.bar/?q=**"
           }
         ]
       }
@@ -2835,12 +2487,10 @@
             "text": "__a"
           },
           {
-            "inline": "link",
-            "children": [
-              {
-                "text": "http://foo.bar/?q=__"
-              }
-            ]
+            "style": {
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "http://foo.bar/?q=__"
           }
         ]
       }

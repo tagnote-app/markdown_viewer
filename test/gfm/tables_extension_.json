@@ -38,26 +38,15 @@
             "text": "| f|oo  | | ------ | | b "
           },
           {
-            "inline": "inlineCode",
-            "children": [
-              {
-                "text": "\\|"
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
+            "text": "\\|"
           },
           {
-            "text": " az | | b "
-          },
-          {
-            "inline": "strongEmphasis",
-            "children": [
-              {
-                "text": "|"
-              }
-            ]
-          },
-          {
-            "text": " im |"
+            "text": " az | | b | im |"
           }
         ]
       }
@@ -82,6 +71,9 @@
             "block": "paragraph",
             "children": [
               {
+                "style": {
+                  "color": "Color(0xff666666)"
+                },
                 "text": "bar"
               }
             ]

@@ -52,12 +52,10 @@
             "text": "\\"
           },
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "emphasis"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "emphasis"
           }
         ]
       }
@@ -71,13 +69,7 @@
         "block": "paragraph",
         "children": [
           {
-            "text": "foo"
-          },
-          {
-            "inline": "hardLineBreak"
-          },
-          {
-            "text": "bar"
+            "text": "foobar"
           }
         ]
       }
@@ -91,12 +83,12 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "inlineCode",
-            "children": [
-              {
-                "text": "\\[\\`"
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
+            "text": "\\[\\`"
           }
         ]
       }
@@ -110,6 +102,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "\\[\\] "
           }
         ]
@@ -124,6 +121,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "\\[\\] "
           }
         ]
@@ -138,12 +140,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "link",
-            "children": [
-              {
-                "text": "http://example.com?find=\\*"
-              }
-            ]
+            "style": {
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "http://example.com?find=\\*"
           }
         ]
       }
@@ -157,6 +157,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "<a href=\"/bar\\/)\">"
           }
         ]
@@ -171,12 +176,11 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "link",
-            "children": [
-              {
-                "text": "foo"
-              }
-            ]
+            "style": {
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "foo",
+            "isLink": true
           }
         ]
       }
@@ -190,12 +194,11 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "link",
-            "children": [
-              {
-                "text": "foo"
-              }
-            ]
+            "style": {
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "foo",
+            "isLink": true
           }
         ]
       }
@@ -209,6 +212,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "foo "
           }
         ]

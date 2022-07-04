@@ -115,6 +115,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "aaa "
           }
         ]
@@ -137,13 +142,7 @@
         "block": "paragraph",
         "children": [
           {
-            "text": "aaa"
-          },
-          {
-            "inline": "hardLineBreak"
-          },
-          {
-            "text": "bbb"
+            "text": "aaabbb"
           }
         ]
       }

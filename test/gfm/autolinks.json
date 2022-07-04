@@ -7,12 +7,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "link",
-            "children": [
-              {
-                "text": "http://foo.bar.baz"
-              }
-            ]
+            "style": {
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "http://foo.bar.baz"
           }
         ]
       }
@@ -26,12 +24,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "link",
-            "children": [
-              {
-                "text": "http://foo.bar.baz/test?q=hello&id=22&boolean"
-              }
-            ]
+            "style": {
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "http://foo.bar.baz/test?q=hello&id=22&boolean"
           }
         ]
       }
@@ -45,12 +41,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "link",
-            "children": [
-              {
-                "text": "irc://foo.bar:2233/baz"
-              }
-            ]
+            "style": {
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "irc://foo.bar:2233/baz"
           }
         ]
       }
@@ -64,12 +58,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "link",
-            "children": [
-              {
-                "text": "MAILTO:FOO@BAR.BAZ"
-              }
-            ]
+            "style": {
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "MAILTO:FOO@BAR.BAZ"
           }
         ]
       }
@@ -83,12 +75,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "link",
-            "children": [
-              {
-                "text": "a+b+c:d"
-              }
-            ]
+            "style": {
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "a+b+c:d"
           }
         ]
       }
@@ -102,12 +92,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "link",
-            "children": [
-              {
-                "text": "made-up-scheme://foo,bar"
-              }
-            ]
+            "style": {
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "made-up-scheme://foo,bar"
           }
         ]
       }
@@ -121,12 +109,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "link",
-            "children": [
-              {
-                "text": "http://../"
-              }
-            ]
+            "style": {
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "http://../"
           }
         ]
       }
@@ -140,12 +126,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "link",
-            "children": [
-              {
-                "text": "localhost:5001/foo"
-              }
-            ]
+            "style": {
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "localhost:5001/foo"
           }
         ]
       }
@@ -173,12 +157,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "link",
-            "children": [
-              {
-                "text": "http://example.com/\\[\\"
-              }
-            ]
+            "style": {
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "http://example.com/\\[\\"
           }
         ]
       }
@@ -192,12 +174,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "link",
-            "children": [
-              {
-                "text": "foo@bar.example.com"
-              }
-            ]
+            "style": {
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "foo@bar.example.com"
           }
         ]
       }
@@ -211,12 +191,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "link",
-            "children": [
-              {
-                "text": "foo+special@Bar.baz-bar0.com"
-              }
-            ]
+            "style": {
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "foo+special@Bar.baz-bar0.com"
           }
         ]
       }

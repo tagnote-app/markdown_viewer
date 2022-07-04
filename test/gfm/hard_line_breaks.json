@@ -7,13 +7,7 @@
         "block": "paragraph",
         "children": [
           {
-            "text": "foo"
-          },
-          {
-            "inline": "hardLineBreak"
-          },
-          {
-            "text": "baz"
+            "text": "foobaz"
           }
         ]
       }
@@ -27,13 +21,7 @@
         "block": "paragraph",
         "children": [
           {
-            "text": "foo"
-          },
-          {
-            "inline": "hardLineBreak"
-          },
-          {
-            "text": "baz"
+            "text": "foobaz"
           }
         ]
       }
@@ -47,13 +35,7 @@
         "block": "paragraph",
         "children": [
           {
-            "text": "foo"
-          },
-          {
-            "inline": "hardLineBreak"
-          },
-          {
-            "text": "baz"
+            "text": "foobaz"
           }
         ]
       }
@@ -67,13 +49,7 @@
         "block": "paragraph",
         "children": [
           {
-            "text": "foo"
-          },
-          {
-            "inline": "hardLineBreak"
-          },
-          {
-            "text": "bar"
+            "text": "foobar"
           }
         ]
       }
@@ -87,13 +63,7 @@
         "block": "paragraph",
         "children": [
           {
-            "text": "foo"
-          },
-          {
-            "inline": "hardLineBreak"
-          },
-          {
-            "text": "bar"
+            "text": "foobar"
           }
         ]
       }
@@ -107,18 +77,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "foo"
-              },
-              {
-                "inline": "hardLineBreak"
-              },
-              {
-                "text": "bar"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "foobar"
           }
         ]
       }
@@ -132,18 +94,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "foo"
-              },
-              {
-                "inline": "hardLineBreak"
-              },
-              {
-                "text": "bar"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "foobar"
           }
         ]
       }
@@ -157,12 +111,12 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "inlineCode",
-            "children": [
-              {
-                "text": "code   span"
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
+            "text": "code   span"
           }
         ]
       }
@@ -176,12 +130,12 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "inlineCode",
-            "children": [
-              {
-                "text": "code\\ span"
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
+            "text": "code\\ span"
           }
         ]
       }
@@ -195,12 +149,12 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "inlineHtml",
-            "children": [
-              {
-                "text": "<a href=\"foo   bar\">"
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
+            "text": "<a href=\"foo   bar\">"
           }
         ]
       }
@@ -214,12 +168,12 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "inlineHtml",
-            "children": [
-              {
-                "text": "<a href=\"foo\\ bar\">"
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
+            "text": "<a href=\"foo\\ bar\">"
           }
         ]
       }
@@ -261,6 +215,9 @@
         "block": "headline3",
         "children": [
           {
+            "style": {
+              "fontSize": 16.0
+            },
             "text": "foo\\"
           }
         ]
@@ -275,6 +232,9 @@
         "block": "headline3",
         "children": [
           {
+            "style": {
+              "fontSize": 16.0
+            },
             "text": "foo"
           }
         ]

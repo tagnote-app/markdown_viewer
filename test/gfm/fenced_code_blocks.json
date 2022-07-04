@@ -7,6 +7,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "<  > "
           }
         ]
@@ -21,6 +26,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "<  > "
           }
         ]
@@ -35,12 +45,12 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "inlineCode",
-            "children": [
-              {
-                "text": "foo"
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
+            "text": "foo"
           }
         ]
       }
@@ -54,6 +64,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "aaa ~~~ "
           }
         ]
@@ -68,6 +83,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "aaa ``` "
           }
         ]
@@ -82,6 +102,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "aaa ``` "
           }
         ]
@@ -96,6 +121,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "aaa ~~~ "
           }
         ]
@@ -105,11 +135,7 @@
   {
     "description": "Fenced code blocks, https://github.github.com/gfm/#example-96",
     "markdown": "```\n",
-    "expected": [
-      {
-        "block": "codeBlock"
-      }
-    ]
+    "expected": []
   },
   {
     "description": "Fenced code blocks, https://github.github.com/gfm/#example-97",
@@ -119,6 +145,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": " ``` aaa "
           }
         ]
@@ -136,6 +167,11 @@
             "block": "codeBlock",
             "children": [
               {
+                "style": {
+                  "fontFamily": "monospace",
+                  "fontSize": 12.0,
+                  "color": ""
+                },
                 "text": "aaa\n"
               }
             ]
@@ -160,6 +196,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "    "
           }
         ]
@@ -169,11 +210,7 @@
   {
     "description": "Fenced code blocks, https://github.github.com/gfm/#example-100",
     "markdown": "```\n```\n",
-    "expected": [
-      {
-        "block": "codeBlock"
-      }
-    ]
+    "expected": []
   },
   {
     "description": "Fenced code blocks, https://github.github.com/gfm/#example-101",
@@ -183,6 +220,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "aaa aaa "
           }
         ]
@@ -197,6 +239,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "aaa aaa aaa "
           }
         ]
@@ -211,6 +258,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "aaa  aaa aaa "
           }
         ]
@@ -225,6 +277,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "``` aaa ``` "
           }
         ]
@@ -239,6 +296,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "aaa "
           }
         ]
@@ -253,6 +315,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "aaa "
           }
         ]
@@ -267,6 +334,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "aaa     ``` "
           }
         ]
@@ -281,12 +353,12 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "inlineCode",
-            "children": [
-              {
-                "text": " "
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
+            "text": " "
           },
           {
             "text": " aaa"
@@ -303,6 +375,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "aaa ~~~ ~~ "
           }
         ]
@@ -325,6 +402,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "bar "
           }
         ]
@@ -347,6 +429,11 @@
         "block": "headline2",
         "children": [
           {
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontWeight": "FontWeight.w500",
+              "fontSize": 20.0
+            },
             "text": "foo"
           }
         ]
@@ -355,6 +442,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "bar "
           }
         ]
@@ -363,6 +455,10 @@
         "block": "headline1",
         "children": [
           {
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontSize": 24.0
+            },
             "text": "baz"
           }
         ]
@@ -377,6 +473,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "def foo(x)   return 3 end "
           }
         ]
@@ -391,6 +492,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "def foo(x)   return 3 end "
           }
         ]
@@ -400,11 +506,7 @@
   {
     "description": "Fenced code blocks, https://github.github.com/gfm/#example-114",
     "markdown": "````;\n````\n",
-    "expected": [
-      {
-        "block": "codeBlock"
-      }
-    ]
+    "expected": []
   },
   {
     "description": "Fenced code blocks, https://github.github.com/gfm/#example-115",
@@ -414,12 +516,12 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "inlineCode",
-            "children": [
-              {
-                "text": "aa"
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
+            "text": "aa"
           },
           {
             "text": " foo"
@@ -436,6 +538,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "foo "
           }
         ]
@@ -450,6 +557,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "``` aaa "
           }
         ]

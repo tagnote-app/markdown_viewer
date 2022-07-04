@@ -7,6 +7,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "<table><tr><td> <pre> **Hello**,"
           }
         ]
@@ -15,23 +20,21 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "world"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "world"
           },
           {
             "text": ". "
           },
           {
-            "inline": "inlineHtml",
-            "children": [
-              {
-                "text": "</pre>"
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
+            "text": "</pre>"
           }
         ]
       },
@@ -39,6 +42,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "</td></tr></table>"
           }
         ]
@@ -53,6 +61,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "<table>   <tr>     <td>            hi     </td>   </tr> </table>"
           }
         ]
@@ -75,6 +88,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": " <div>   *hello*          <foo><a>"
           }
         ]
@@ -89,6 +107,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "</div> *foo*"
           }
         ]
@@ -103,6 +126,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "<DIV CLASS=\"foo\">"
           }
         ]
@@ -111,12 +139,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "Markdown"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "Markdown"
           }
         ]
       },
@@ -124,6 +150,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "</DIV>"
           }
         ]
@@ -138,6 +169,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "<div id=\"foo\"   class=\"bar\"> </div>"
           }
         ]
@@ -152,6 +188,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "<div id=\"foo\" class=\"bar   baz\"> </div>"
           }
         ]
@@ -166,6 +207,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "<div> *foo*"
           }
         ]
@@ -174,12 +220,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "bar"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "bar"
           }
         ]
       }
@@ -193,6 +237,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "<div id=\"foo\" *hi*"
           }
         ]
@@ -207,6 +256,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "<div class foo"
           }
         ]
@@ -221,6 +275,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "<div *???-&&&-<--- *foo*"
           }
         ]
@@ -235,6 +294,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "<div><a href=\"bar\">*foo*</a></div>"
           }
         ]
@@ -249,6 +313,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "<table><tr><td> foo </td></tr></table>"
           }
         ]
@@ -263,6 +332,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "<div></div> ``` c int x = 33; ```"
           }
         ]
@@ -277,6 +351,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "<a href=\"foo\"> *bar* </a>"
           }
         ]
@@ -291,6 +370,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "<Warning> *bar* </Warning>"
           }
         ]
@@ -305,6 +389,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "<i class=\"foo\"> *bar* </i>"
           }
         ]
@@ -319,6 +408,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "</ins> *bar*"
           }
         ]
@@ -333,6 +427,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "<del> *foo* </del>"
           }
         ]
@@ -347,6 +446,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "<del>"
           }
         ]
@@ -355,12 +459,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "foo"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "foo"
           }
         ]
       },
@@ -368,6 +470,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "</del>"
           }
         ]
@@ -382,28 +489,26 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "inlineHtml",
-            "children": [
-              {
-                "text": "<del>"
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
+            "text": "<del>"
           },
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "foo"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "foo"
           },
           {
-            "inline": "inlineHtml",
-            "children": [
-              {
-                "text": "</del>"
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
+            "text": "</del>"
           }
         ]
       }
@@ -417,6 +522,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "<pre language=\"haskell\"><code> import Text.HTML.TagSoup  main :: IO () main = print $ parseTags tags </code></pre>"
           }
         ]
@@ -439,6 +549,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "<script type=\"text/javascript\"> // JavaScript example  document.getElementById(\"demo\").innerHTML = \"Hello JavaScript!\"; </script>"
           }
         ]
@@ -461,6 +576,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "<style   type=\"text/css\"> h1 {color:red;}  p {color:blue;} </style>"
           }
         ]
@@ -483,6 +603,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "<style   type=\"text/css\">  foo"
           }
         ]
@@ -500,6 +625,12 @@
             "block": "htmlBlock",
             "children": [
               {
+                "style": {
+                  "fontFamily": "monospace",
+                  "fontSize": 12.0,
+                  "color": "Color(0xff666666)",
+                  "backgroundColor": ""
+                },
                 "text": "<div>\nfoo"
               }
             ]
@@ -530,6 +661,11 @@
                 "block": "htmlBlock",
                 "children": [
                   {
+                    "style": {
+                      "fontFamily": "monospace",
+                      "fontSize": 12.0,
+                      "backgroundColor": ""
+                    },
                     "text": "<div>"
                   }
                 ]
@@ -556,6 +692,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "<style>p{color:red;}</style>"
           }
         ]
@@ -564,12 +705,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "foo"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "foo"
           }
         ]
       }
@@ -583,6 +722,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "<!-- foo -->*bar*"
           }
         ]
@@ -591,12 +735,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "baz"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "baz"
           }
         ]
       }
@@ -610,6 +752,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "<script> foo </script>1. *bar*"
           }
         ]
@@ -624,6 +771,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "<!-- Foo  bar    baz -->"
           }
         ]
@@ -646,6 +798,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "<?php    echo '>';  ?>"
           }
         ]
@@ -668,6 +825,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "<!DOCTYPE html>"
           }
         ]
@@ -682,6 +844,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "<![CDATA[ function matchwo(a,b) {   if (a < b && a < 0) then {     return 1;    } else {      return 0;   } } ]]>"
           }
         ]
@@ -704,6 +871,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "  <!-- foo -->"
           }
         ]
@@ -712,6 +884,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "<!-- foo --> "
           }
         ]
@@ -726,6 +903,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "  <div>"
           }
         ]
@@ -734,6 +916,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "<div> "
           }
         ]
@@ -756,6 +943,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "<div> bar </div>"
           }
         ]
@@ -770,6 +962,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "<div> bar </div> *foo*"
           }
         ]
@@ -787,12 +984,12 @@
             "text": "Foo "
           },
           {
-            "inline": "inlineHtml",
-            "children": [
-              {
-                "text": "<a href=\"bar\">"
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
+            "text": "<a href=\"bar\">"
           },
           {
             "text": " baz"
@@ -809,6 +1006,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "<div>"
           }
         ]
@@ -817,12 +1019,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "Emphasized"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "Emphasized"
           },
           {
             "text": " text."
@@ -833,6 +1033,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "</div>"
           }
         ]
@@ -847,6 +1052,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "<div> *Emphasized* text. </div>"
           }
         ]
@@ -861,6 +1071,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "<table> <tr> <td> Hi </td> </tr> </table>"
           }
         ]
@@ -875,6 +1090,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "<table>   <tr>"
           }
         ]
@@ -883,6 +1103,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "<td>   Hi </td> "
           }
         ]
@@ -891,6 +1116,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "  </tr> </table>"
           }
         ]

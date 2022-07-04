@@ -7,15 +7,19 @@
         "block": "headline1",
         "children": [
           {
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontSize": 24.0
+            },
             "text": "Foo "
           },
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "bar"
-              }
-            ]
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontSize": 24.0,
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "bar"
           }
         ]
       },
@@ -23,15 +27,21 @@
         "block": "headline2",
         "children": [
           {
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontWeight": "FontWeight.w500",
+              "fontSize": 20.0
+            },
             "text": "Foo "
           },
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "bar"
-              }
-            ]
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontWeight": "FontWeight.w500",
+              "fontSize": 20.0,
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "bar"
           }
         ]
       }
@@ -45,15 +55,19 @@
         "block": "headline1",
         "children": [
           {
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontSize": 24.0
+            },
             "text": "Foo "
           },
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "bar baz"
-              }
-            ]
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontSize": 24.0,
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "bar baz"
           }
         ]
       }
@@ -67,15 +81,19 @@
         "block": "headline1",
         "children": [
           {
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontSize": 24.0
+            },
             "text": "Foo "
           },
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "bar baz"
-              }
-            ]
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontSize": 24.0,
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "bar baz"
           }
         ]
       }
@@ -89,6 +107,11 @@
         "block": "headline2",
         "children": [
           {
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontWeight": "FontWeight.w500",
+              "fontSize": 20.0
+            },
             "text": "Foo"
           }
         ]
@@ -97,6 +120,10 @@
         "block": "headline1",
         "children": [
           {
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontSize": 24.0
+            },
             "text": "Foo"
           }
         ]
@@ -111,6 +138,11 @@
         "block": "headline2",
         "children": [
           {
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontWeight": "FontWeight.w500",
+              "fontSize": 20.0
+            },
             "text": "Foo"
           }
         ]
@@ -119,6 +151,11 @@
         "block": "headline2",
         "children": [
           {
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontWeight": "FontWeight.w500",
+              "fontSize": 20.0
+            },
             "text": "Foo"
           }
         ]
@@ -127,6 +164,10 @@
         "block": "headline1",
         "children": [
           {
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontSize": 24.0
+            },
             "text": "Foo"
           }
         ]
@@ -141,12 +182,14 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "Foo ---  Foo "
           }
         ]
-      },
-      {
-        "block": "thematicBreak"
       }
     ]
   },
@@ -158,6 +201,11 @@
         "block": "headline2",
         "children": [
           {
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontWeight": "FontWeight.w500",
+              "fontSize": 20.0
+            },
             "text": "Foo"
           }
         ]
@@ -197,9 +245,6 @@
             "text": "Foo"
           }
         ]
-      },
-      {
-        "block": "thematicBreak"
       }
     ]
   },
@@ -211,6 +256,11 @@
         "block": "headline2",
         "children": [
           {
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontWeight": "FontWeight.w500",
+              "fontSize": 20.0
+            },
             "text": "Foo"
           }
         ]
@@ -225,6 +275,11 @@
         "block": "headline2",
         "children": [
           {
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontWeight": "FontWeight.w500",
+              "fontSize": 20.0
+            },
             "text": "Foo\\"
           }
         ]
@@ -239,6 +294,11 @@
         "block": "headline2",
         "children": [
           {
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontWeight": "FontWeight.w500",
+              "fontSize": 20.0
+            },
             "text": "`Foo"
           }
         ]
@@ -255,6 +315,11 @@
         "block": "headline2",
         "children": [
           {
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontWeight": "FontWeight.w500",
+              "fontSize": 20.0
+            },
             "text": "<a title=\"a lot"
           }
         ]
@@ -280,14 +345,14 @@
             "block": "paragraph",
             "children": [
               {
+                "style": {
+                  "color": "Color(0xff666666)"
+                },
                 "text": "Foo"
               }
             ]
           }
         ]
-      },
-      {
-        "block": "thematicBreak"
       }
     ]
   },
@@ -302,6 +367,9 @@
             "block": "paragraph",
             "children": [
               {
+                "style": {
+                  "color": "Color(0xff666666)"
+                },
                 "text": "foo\nbar\n==="
               }
             ]
@@ -326,9 +394,6 @@
             ]
           }
         ]
-      },
-      {
-        "block": "thematicBreak"
       }
     ]
   },
@@ -340,6 +405,11 @@
         "block": "headline2",
         "children": [
           {
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontWeight": "FontWeight.w500",
+              "fontSize": 20.0
+            },
             "text": "Foo Bar"
           }
         ]
@@ -351,12 +421,14 @@
     "markdown": "---\nFoo\n---\nBar\n---\nBaz\n",
     "expected": [
       {
-        "block": "thematicBreak"
-      },
-      {
         "block": "headline2",
         "children": [
           {
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontWeight": "FontWeight.w500",
+              "fontSize": 20.0
+            },
             "text": "Foo"
           }
         ]
@@ -365,6 +437,11 @@
         "block": "headline2",
         "children": [
           {
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontWeight": "FontWeight.w500",
+              "fontSize": 20.0
+            },
             "text": "Bar"
           }
         ]
@@ -396,14 +473,7 @@
   {
     "description": "Setext headings, https://github.github.com/gfm/#example-68",
     "markdown": "---\n---\n",
-    "expected": [
-      {
-        "block": "thematicBreak"
-      },
-      {
-        "block": "thematicBreak"
-      }
-    ]
+    "expected": []
   },
   {
     "description": "Setext headings, https://github.github.com/gfm/#example-69",
@@ -421,9 +491,6 @@
             ]
           }
         ]
-      },
-      {
-        "block": "thematicBreak"
       }
     ]
   },
@@ -435,12 +502,14 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "foo "
           }
         ]
-      },
-      {
-        "block": "thematicBreak"
       }
     ]
   },
@@ -455,14 +524,14 @@
             "block": "paragraph",
             "children": [
               {
+                "style": {
+                  "color": "Color(0xff666666)"
+                },
                 "text": "foo"
               }
             ]
           }
         ]
-      },
-      {
-        "block": "thematicBreak"
       }
     ]
   },
@@ -474,7 +543,15 @@
         "block": "headline2",
         "children": [
           {
-            "text": "> foo"
+            "text": ">"
+          },
+          {
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontWeight": "FontWeight.w500",
+              "fontSize": 20.0
+            },
+            "text": " foo"
           }
         ]
       }
@@ -496,6 +573,11 @@
         "block": "headline2",
         "children": [
           {
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontWeight": "FontWeight.w500",
+              "fontSize": 20.0
+            },
             "text": "bar"
           }
         ]
@@ -523,9 +605,6 @@
         ]
       },
       {
-        "block": "thematicBreak"
-      },
-      {
         "block": "paragraph",
         "children": [
           {
@@ -546,9 +625,6 @@
             "text": "Foo bar"
           }
         ]
-      },
-      {
-        "block": "thematicBreak"
       },
       {
         "block": "paragraph",

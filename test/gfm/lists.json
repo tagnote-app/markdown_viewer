@@ -292,6 +292,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "<!-- -->"
           }
         ]
@@ -366,6 +371,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "<!-- -->"
           }
         ]
@@ -374,6 +384,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "code "
           }
         ]
@@ -579,6 +594,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "3. c "
           }
         ]
@@ -654,9 +674,6 @@
                 ]
               }
             ]
-          },
-          {
-            "block": "listItem"
           },
           {
             "block": "listItem",
@@ -805,6 +822,11 @@
                 "block": "codeBlock",
                 "children": [
                   {
+                    "style": {
+                      "fontFamily": "monospace",
+                      "fontSize": 12.0,
+                      "color": ""
+                    },
                     "text": "b   "
                   }
                 ]
@@ -896,6 +918,9 @@
                     "block": "paragraph",
                     "children": [
                       {
+                        "style": {
+                          "color": "Color(0xff666666)"
+                        },
                         "text": "b"
                       }
                     ]
@@ -936,6 +961,9 @@
                     "block": "paragraph",
                     "children": [
                       {
+                        "style": {
+                          "color": "Color(0xff666666)"
+                        },
                         "text": "b"
                       }
                     ]
@@ -946,6 +974,11 @@
                 "block": "codeBlock",
                 "children": [
                   {
+                    "style": {
+                      "fontFamily": "monospace",
+                      "fontSize": 12.0,
+                      "color": ""
+                    },
                     "text": "c\n"
                   }
                 ]
@@ -1029,6 +1062,11 @@
                 "block": "codeBlock",
                 "children": [
                   {
+                    "style": {
+                      "fontFamily": "monospace",
+                      "fontSize": 12.0,
+                      "color": ""
+                    },
                     "text": "foo "
                   }
                 ]

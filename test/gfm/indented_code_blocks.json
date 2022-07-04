@@ -7,6 +7,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "a simple   indented code block "
           }
         ]
@@ -90,6 +95,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "<a/> *hi*  - one "
           }
         ]
@@ -104,6 +114,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "chunk1  chunk2    chunk3 "
           }
         ]
@@ -118,6 +133,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "chunk1      chunk2 "
           }
         ]
@@ -146,6 +166,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "foo "
           }
         ]
@@ -168,6 +193,10 @@
         "block": "headline1",
         "children": [
           {
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontSize": 24.0
+            },
             "text": "Heading"
           }
         ]
@@ -176,6 +205,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "foo "
           }
         ]
@@ -184,6 +218,11 @@
         "block": "headline2",
         "children": [
           {
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontWeight": "FontWeight.w500",
+              "fontSize": 20.0
+            },
             "text": "Heading"
           }
         ]
@@ -192,12 +231,14 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "foo "
           }
         ]
-      },
-      {
-        "block": "thematicBreak"
       }
     ]
   },
@@ -209,6 +250,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "    foo bar "
           }
         ]
@@ -223,6 +269,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "foo "
           }
         ]
@@ -237,6 +288,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "foo   "
           }
         ]

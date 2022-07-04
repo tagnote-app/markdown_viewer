@@ -7,28 +7,12 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "inlineHtml",
-            "children": [
-              {
-                "text": "<a>"
-              },
-              {
-                "inline": "inlineHtml",
-                "children": [
-                  {
-                    "text": "<bab>"
-                  }
-                ]
-              },
-              {
-                "inline": "inlineHtml",
-                "children": [
-                  {
-                    "text": "<c2c>"
-                  }
-                ]
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
+            "text": "<a><bab><c2c>"
           }
         ]
       }
@@ -42,20 +26,12 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "inlineHtml",
-            "children": [
-              {
-                "text": "<a/>"
-              },
-              {
-                "inline": "inlineHtml",
-                "children": [
-                  {
-                    "text": "<b2/>"
-                  }
-                ]
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
+            "text": "<a/><b2/>"
           }
         ]
       }
@@ -69,20 +45,12 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "inlineHtml",
-            "children": [
-              {
-                "text": "<a  />"
-              },
-              {
-                "inline": "inlineHtml",
-                "children": [
-                  {
-                    "text": "<b2 data=\"foo\" >"
-                  }
-                ]
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
+            "text": "<a  /><b2 data=\"foo\" >"
           }
         ]
       }
@@ -96,12 +64,12 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "inlineHtml",
-            "children": [
-              {
-                "text": "<a foo=\"bar\" bam = 'baz <em>\"</em>' _boolean zoop:33=zoop:33 />"
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
+            "text": "<a foo=\"bar\" bam = 'baz <em>\"</em>' _boolean zoop:33=zoop:33 />"
           }
         ]
       }
@@ -118,12 +86,12 @@
             "text": "Foo "
           },
           {
-            "inline": "inlineHtml",
-            "children": [
-              {
-                "text": "<responsive-image src=\"foo.jpg\" />"
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
+            "text": "<responsive-image src=\"foo.jpg\" />"
           }
         ]
       }
@@ -207,20 +175,12 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "inlineHtml",
-            "children": [
-              {
-                "text": "</a>"
-              },
-              {
-                "inline": "inlineHtml",
-                "children": [
-                  {
-                    "text": "</foo >"
-                  }
-                ]
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
+            "text": "</a></foo >"
           }
         ]
       }
@@ -251,12 +211,12 @@
             "text": "foo "
           },
           {
-            "inline": "inlineHtml",
-            "children": [
-              {
-                "text": "<!-- this is a comment - with hyphen -->"
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
+            "text": "<!-- this is a comment - with hyphen -->"
           }
         ]
       }
@@ -309,12 +269,12 @@
             "text": "foo "
           },
           {
-            "inline": "inlineHtml",
-            "children": [
-              {
-                "text": "<?php echo $a; ?>"
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
+            "text": "<?php echo $a; ?>"
           }
         ]
       }
@@ -331,12 +291,12 @@
             "text": "foo "
           },
           {
-            "inline": "inlineHtml",
-            "children": [
-              {
-                "text": "<!ELEMENT br EMPTY>"
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
+            "text": "<!ELEMENT br EMPTY>"
           }
         ]
       }
@@ -353,12 +313,12 @@
             "text": "foo "
           },
           {
-            "inline": "inlineHtml",
-            "children": [
-              {
-                "text": "<![CDATA[>&<]]>"
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
+            "text": "<![CDATA[>&<]]>"
           }
         ]
       }
@@ -375,12 +335,12 @@
             "text": "foo "
           },
           {
-            "inline": "inlineHtml",
-            "children": [
-              {
-                "text": "<a href=\"&ouml;\">"
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
+            "text": "<a href=\"&ouml;\">"
           }
         ]
       }
@@ -397,12 +357,12 @@
             "text": "foo "
           },
           {
-            "inline": "inlineHtml",
-            "children": [
-              {
-                "text": "<a href=\"\\*\">"
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
+            "text": "<a href=\"\\*\">"
           }
         ]
       }

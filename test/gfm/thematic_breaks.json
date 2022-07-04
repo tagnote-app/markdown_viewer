@@ -2,17 +2,7 @@
   {
     "description": "Thematic breaks, https://github.github.com/gfm/#example-13",
     "markdown": "***\n---\n___\n",
-    "expected": [
-      {
-        "block": "thematicBreak"
-      },
-      {
-        "block": "thematicBreak"
-      },
-      {
-        "block": "thematicBreak"
-      }
-    ]
+    "expected": []
   },
   {
     "description": "Thematic breaks, https://github.github.com/gfm/#example-14",
@@ -59,17 +49,7 @@
   {
     "description": "Thematic breaks, https://github.github.com/gfm/#example-17",
     "markdown": " ***\n  ***\n   ***\n",
-    "expected": [
-      {
-        "block": "thematicBreak"
-      },
-      {
-        "block": "thematicBreak"
-      },
-      {
-        "block": "thematicBreak"
-      }
-    ]
+    "expected": []
   },
   {
     "description": "Thematic breaks, https://github.github.com/gfm/#example-18",
@@ -79,6 +59,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "*** "
           }
         ]
@@ -102,47 +87,27 @@
   {
     "description": "Thematic breaks, https://github.github.com/gfm/#example-20",
     "markdown": "_____________________________________\n",
-    "expected": [
-      {
-        "block": "thematicBreak"
-      }
-    ]
+    "expected": []
   },
   {
     "description": "Thematic breaks, https://github.github.com/gfm/#example-21",
     "markdown": " - - -\n",
-    "expected": [
-      {
-        "block": "thematicBreak"
-      }
-    ]
+    "expected": []
   },
   {
     "description": "Thematic breaks, https://github.github.com/gfm/#example-22",
     "markdown": " **  * ** * ** * **\n",
-    "expected": [
-      {
-        "block": "thematicBreak"
-      }
-    ]
+    "expected": []
   },
   {
     "description": "Thematic breaks, https://github.github.com/gfm/#example-23",
     "markdown": "-     -      -      -\n",
-    "expected": [
-      {
-        "block": "thematicBreak"
-      }
-    ]
+    "expected": []
   },
   {
     "description": "Thematic breaks, https://github.github.com/gfm/#example-24",
     "markdown": "- - - -    \n",
-    "expected": [
-      {
-        "block": "thematicBreak"
-      }
-    ]
+    "expected": []
   },
   {
     "description": "Thematic breaks, https://github.github.com/gfm/#example-25",
@@ -182,12 +147,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "-"
-              }
-            ]
+            "style": {
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "-"
           }
         ]
       }
@@ -209,9 +172,6 @@
             ]
           }
         ]
-      },
-      {
-        "block": "thematicBreak"
       },
       {
         "block": "bulletList",
@@ -241,9 +201,6 @@
         ]
       },
       {
-        "block": "thematicBreak"
-      },
-      {
         "block": "paragraph",
         "children": [
           {
@@ -261,6 +218,11 @@
         "block": "headline2",
         "children": [
           {
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontWeight": "FontWeight.w500",
+              "fontSize": 20.0
+            },
             "text": "Foo"
           }
         ]
@@ -293,9 +255,6 @@
         ]
       },
       {
-        "block": "thematicBreak"
-      },
-      {
         "block": "bulletList",
         "children": [
           {
@@ -322,14 +281,6 @@
             "children": [
               {
                 "text": "Foo"
-              }
-            ]
-          },
-          {
-            "block": "listItem",
-            "children": [
-              {
-                "block": "thematicBreak"
               }
             ]
           }

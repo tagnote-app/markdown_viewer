@@ -7,12 +7,11 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "link",
-            "children": [
-              {
-                "text": "foo"
-              }
-            ]
+            "style": {
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "foo",
+            "isLink": true
           }
         ]
       }
@@ -26,12 +25,11 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "link",
-            "children": [
-              {
-                "text": "foo"
-              }
-            ]
+            "style": {
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "foo",
+            "isLink": true
           }
         ]
       }
@@ -45,12 +43,20 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "link",
-            "children": [
-              {
-                "text": "Foo*bar]"
-              }
-            ]
+            "style": {
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "Foo",
+            "isLink": true
+          },
+          {
+            "style": {
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "*bar"
+          },
+          {
+            "text": "]"
           }
         ]
       }
@@ -64,12 +70,11 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "link",
-            "children": [
-              {
-                "text": "Foo bar"
-              }
-            ]
+            "style": {
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "Foo bar",
+            "isLink": true
           }
         ]
       }
@@ -83,12 +88,11 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "link",
-            "children": [
-              {
-                "text": "foo"
-              }
-            ]
+            "style": {
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "foo",
+            "isLink": true
           }
         ]
       }
@@ -132,12 +136,11 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "link",
-            "children": [
-              {
-                "text": "foo"
-              }
-            ]
+            "style": {
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "foo",
+            "isLink": true
           }
         ]
       }
@@ -173,12 +176,11 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "link",
-            "children": [
-              {
-                "text": "foo"
-              }
-            ]
+            "style": {
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "foo",
+            "isLink": true
           }
         ]
       }
@@ -195,12 +197,12 @@
             "text": "[foo]: "
           },
           {
-            "inline": "inlineHtml",
-            "children": [
-              {
-                "text": "<bar>"
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
+            "text": "<bar>"
           },
           {
             "text": "(baz)"
@@ -225,12 +227,11 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "link",
-            "children": [
-              {
-                "text": "foo"
-              }
-            ]
+            "style": {
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "foo",
+            "isLink": true
           }
         ]
       }
@@ -244,12 +245,11 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "link",
-            "children": [
-              {
-                "text": "foo"
-              }
-            ]
+            "style": {
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "foo",
+            "isLink": true
           }
         ]
       }
@@ -263,12 +263,11 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "link",
-            "children": [
-              {
-                "text": "foo"
-              }
-            ]
+            "style": {
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "foo",
+            "isLink": true
           }
         ]
       }
@@ -282,12 +281,11 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "link",
-            "children": [
-              {
-                "text": "Foo"
-              }
-            ]
+            "style": {
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "Foo",
+            "isLink": true
           }
         ]
       }
@@ -301,12 +299,11 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "link",
-            "children": [
-              {
-                "text": "αγω"
-              }
-            ]
+            "style": {
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "αγω",
+            "isLink": true
           }
         ]
       }
@@ -367,6 +364,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "[foo]: /url \"title\" "
           }
         ]
@@ -389,6 +391,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "[foo]: /url "
           }
         ]
@@ -433,12 +440,13 @@
         "block": "headline1",
         "children": [
           {
-            "inline": "link",
-            "children": [
-              {
-                "text": "Foo"
-              }
-            ]
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontSize": 24.0,
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "Foo",
+            "isLink": true
           }
         ]
       },
@@ -449,6 +457,9 @@
             "block": "paragraph",
             "children": [
               {
+                "style": {
+                  "color": "Color(0xff666666)"
+                },
                 "text": "bar"
               }
             ]
@@ -465,6 +476,10 @@
         "block": "headline1",
         "children": [
           {
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontSize": 24.0
+            },
             "text": "bar"
           }
         ]
@@ -473,12 +488,11 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "link",
-            "children": [
-              {
-                "text": "foo"
-              }
-            ]
+            "style": {
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "foo",
+            "isLink": true
           }
         ]
       }
@@ -495,12 +509,11 @@
             "text": "=== "
           },
           {
-            "inline": "link",
-            "children": [
-              {
-                "text": "foo"
-              }
-            ]
+            "style": {
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "foo",
+            "isLink": true
           }
         ]
       }
@@ -514,34 +527,31 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "link",
-            "children": [
-              {
-                "text": "foo"
-              }
-            ]
+            "style": {
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "foo",
+            "isLink": true
           },
           {
             "text": ", "
           },
           {
-            "inline": "link",
-            "children": [
-              {
-                "text": "bar"
-              }
-            ]
+            "style": {
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "bar",
+            "isLink": true
           },
           {
             "text": ", "
           },
           {
-            "inline": "link",
-            "children": [
-              {
-                "text": "baz"
-              }
-            ]
+            "style": {
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "baz",
+            "isLink": true
           }
         ]
       }
@@ -555,17 +565,13 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "link",
-            "children": [
-              {
-                "text": "foo"
-              }
-            ]
+            "style": {
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "foo",
+            "isLink": true
           }
         ]
-      },
-      {
-        "block": "blockquote"
       }
     ]
   },

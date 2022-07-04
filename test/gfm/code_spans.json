@@ -7,12 +7,12 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "inlineCode",
-            "children": [
-              {
-                "text": "foo"
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
+            "text": "foo"
           }
         ]
       }
@@ -26,12 +26,12 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "inlineCode",
-            "children": [
-              {
-                "text": "foo ` bar"
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
+            "text": "foo ` bar"
           }
         ]
       }
@@ -45,12 +45,12 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "inlineCode",
-            "children": [
-              {
-                "text": "``"
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
+            "text": "``"
           }
         ]
       }
@@ -64,12 +64,12 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "inlineCode",
-            "children": [
-              {
-                "text": " `` "
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
+            "text": " `` "
           }
         ]
       }
@@ -83,12 +83,12 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "inlineCode",
-            "children": [
-              {
-                "text": " a"
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
+            "text": " a"
           }
         ]
       }
@@ -102,12 +102,12 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "inlineCode",
-            "children": [
-              {
-                "text": " b "
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
+            "text": " b "
           }
         ]
       }
@@ -121,23 +121,23 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "inlineCode",
-            "children": [
-              {
-                "text": " "
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
+            "text": " "
           },
           {
             "text": " "
           },
           {
-            "inline": "inlineCode",
-            "children": [
-              {
-                "text": "  "
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
+            "text": "  "
           }
         ]
       }
@@ -151,12 +151,12 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "inlineCode",
-            "children": [
-              {
-                "text": "foo bar   baz"
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
+            "text": "foo bar   baz"
           }
         ]
       }
@@ -170,12 +170,12 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "inlineCode",
-            "children": [
-              {
-                "text": "foo "
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
+            "text": "foo "
           }
         ]
       }
@@ -189,12 +189,12 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "inlineCode",
-            "children": [
-              {
-                "text": "foo   bar  baz"
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
+            "text": "foo   bar  baz"
           }
         ]
       }
@@ -208,12 +208,12 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "inlineCode",
-            "children": [
-              {
-                "text": "foo\\"
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
+            "text": "foo\\"
           },
           {
             "text": "bar`"
@@ -230,12 +230,12 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "inlineCode",
-            "children": [
-              {
-                "text": "foo`bar"
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
+            "text": "foo`bar"
           }
         ]
       }
@@ -249,12 +249,12 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "inlineCode",
-            "children": [
-              {
-                "text": "foo `` bar"
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
+            "text": "foo `` bar"
           }
         ]
       }
@@ -271,12 +271,12 @@
             "text": "*foo"
           },
           {
-            "inline": "inlineCode",
-            "children": [
-              {
-                "text": "*"
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
+            "text": "*"
           }
         ]
       }
@@ -293,12 +293,12 @@
             "text": "[not a "
           },
           {
-            "inline": "inlineCode",
-            "children": [
-              {
-                "text": "link](/foo"
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
+            "text": "link](/foo"
           },
           {
             "text": ")"
@@ -315,12 +315,12 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "inlineCode",
-            "children": [
-              {
-                "text": "<a href=\""
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
+            "text": "<a href=\""
           },
           {
             "text": "\">`"
@@ -337,12 +337,12 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "inlineHtml",
-            "children": [
-              {
-                "text": "<a href=\"`\">"
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
+            "text": "<a href=\"`\">"
           },
           {
             "text": "`"
@@ -359,12 +359,12 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "inlineCode",
-            "children": [
-              {
-                "text": "<http://foo.bar."
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
+            "text": "<http://foo.bar."
           },
           {
             "text": "baz>`"
@@ -381,12 +381,10 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "link",
-            "children": [
-              {
-                "text": "http://foo.bar.`baz"
-              }
-            ]
+            "style": {
+              "color": "Color(0xff2196f3)"
+            },
+            "text": "http://foo.bar.`baz"
           },
           {
             "text": "`"
@@ -434,12 +432,12 @@
             "text": "`foo"
           },
           {
-            "inline": "inlineCode",
-            "children": [
-              {
-                "text": "bar"
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
+            "text": "bar"
           }
         ]
       }

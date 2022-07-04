@@ -7,6 +7,10 @@
         "block": "headline1",
         "children": [
           {
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontSize": 24.0
+            },
             "text": "foo"
           }
         ]
@@ -15,6 +19,11 @@
         "block": "headline2",
         "children": [
           {
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontWeight": "FontWeight.w500",
+              "fontSize": 20.0
+            },
             "text": "foo"
           }
         ]
@@ -23,6 +32,9 @@
         "block": "headline3",
         "children": [
           {
+            "style": {
+              "fontSize": 16.0
+            },
             "text": "foo"
           }
         ]
@@ -31,6 +43,9 @@
         "block": "headline4",
         "children": [
           {
+            "style": {
+              "fontWeight": "FontWeight.w500"
+            },
             "text": "foo"
           }
         ]
@@ -39,6 +54,9 @@
         "block": "headline5",
         "children": [
           {
+            "style": {
+              "fontWeight": "FontWeight.w500"
+            },
             "text": "foo"
           }
         ]
@@ -47,6 +65,9 @@
         "block": "headline6",
         "children": [
           {
+            "style": {
+              "fontWeight": "FontWeight.w500"
+            },
             "text": "foo"
           }
         ]
@@ -111,18 +132,39 @@
         "block": "headline1",
         "children": [
           {
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontSize": 24.0
+            },
             "text": "foo "
           },
           {
-            "inline": "emphasis",
-            "children": [
-              {
-                "text": "bar"
-              }
-            ]
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontSize": 24.0,
+              "fontStyle": "FontStyle.italic"
+            },
+            "text": "bar"
           },
           {
-            "text": " *baz*"
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontSize": 24.0
+            },
+            "text": " "
+          },
+          {
+            "text": "*"
+          },
+          {
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontSize": 24.0
+            },
+            "text": "baz"
+          },
+          {
+            "text": "*"
           }
         ]
       }
@@ -136,6 +178,10 @@
         "block": "headline1",
         "children": [
           {
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontSize": 24.0
+            },
             "text": "foo"
           }
         ]
@@ -150,6 +196,9 @@
         "block": "headline3",
         "children": [
           {
+            "style": {
+              "fontSize": 16.0
+            },
             "text": "foo"
           }
         ]
@@ -158,6 +207,11 @@
         "block": "headline2",
         "children": [
           {
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontWeight": "FontWeight.w500",
+              "fontSize": 20.0
+            },
             "text": "foo"
           }
         ]
@@ -166,6 +220,10 @@
         "block": "headline1",
         "children": [
           {
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontSize": 24.0
+            },
             "text": "foo"
           }
         ]
@@ -180,6 +238,11 @@
         "block": "codeBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
             "text": "# foo "
           }
         ]
@@ -208,6 +271,11 @@
         "block": "headline2",
         "children": [
           {
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontWeight": "FontWeight.w500",
+              "fontSize": 20.0
+            },
             "text": "foo"
           }
         ]
@@ -216,6 +284,9 @@
         "block": "headline3",
         "children": [
           {
+            "style": {
+              "fontSize": 16.0
+            },
             "text": "bar"
           }
         ]
@@ -230,6 +301,10 @@
         "block": "headline1",
         "children": [
           {
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontSize": 24.0
+            },
             "text": "foo"
           }
         ]
@@ -238,6 +313,9 @@
         "block": "headline5",
         "children": [
           {
+            "style": {
+              "fontWeight": "FontWeight.w500"
+            },
             "text": "foo"
           }
         ]
@@ -252,6 +330,9 @@
         "block": "headline3",
         "children": [
           {
+            "style": {
+              "fontSize": 16.0
+            },
             "text": "foo"
           }
         ]
@@ -266,6 +347,9 @@
         "block": "headline3",
         "children": [
           {
+            "style": {
+              "fontSize": 16.0
+            },
             "text": "foo ### b"
           }
         ]
@@ -280,6 +364,10 @@
         "block": "headline1",
         "children": [
           {
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontSize": 24.0
+            },
             "text": "foo#"
           }
         ]
@@ -294,7 +382,19 @@
         "block": "headline3",
         "children": [
           {
-            "text": "foo ###"
+            "style": {
+              "fontSize": 16.0
+            },
+            "text": "foo "
+          },
+          {
+            "text": "#"
+          },
+          {
+            "style": {
+              "fontSize": 16.0
+            },
+            "text": "##"
           }
         ]
       },
@@ -302,7 +402,23 @@
         "block": "headline2",
         "children": [
           {
-            "text": "foo ###"
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontWeight": "FontWeight.w500",
+              "fontSize": 20.0
+            },
+            "text": "foo #"
+          },
+          {
+            "text": "#"
+          },
+          {
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontWeight": "FontWeight.w500",
+              "fontSize": 20.0
+            },
+            "text": "#"
           }
         ]
       },
@@ -310,7 +426,14 @@
         "block": "headline1",
         "children": [
           {
-            "text": "foo #"
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontSize": 24.0
+            },
+            "text": "foo "
+          },
+          {
+            "text": "#"
           }
         ]
       }
@@ -321,18 +444,17 @@
     "markdown": "****\n## foo\n****\n",
     "expected": [
       {
-        "block": "thematicBreak"
-      },
-      {
         "block": "headline2",
         "children": [
           {
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontWeight": "FontWeight.w500",
+              "fontSize": 20.0
+            },
             "text": "foo"
           }
         ]
-      },
-      {
-        "block": "thematicBreak"
       }
     ]
   },
@@ -352,6 +474,10 @@
         "block": "headline1",
         "children": [
           {
+            "style": {
+              "fontFamily": ".SF UI Display",
+              "fontSize": 24.0
+            },
             "text": "baz"
           }
         ]
@@ -369,16 +495,6 @@
   {
     "description": "ATX headings, https://github.github.com/gfm/#example-49",
     "markdown": "## \n#\n### ###\n",
-    "expected": [
-      {
-        "block": "headline2"
-      },
-      {
-        "block": "headline1"
-      },
-      {
-        "block": "headline3"
-      }
-    ]
+    "expected": []
   }
 ]

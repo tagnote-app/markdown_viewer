@@ -7,45 +7,45 @@
         "block": "paragraph",
         "children": [
           {
-            "inline": "inlineHtml",
-            "children": [
-              {
-                "text": "<strong>"
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
+            "text": "<strong>"
           },
           {
             "text": " "
           },
           {
-            "inline": "inlineHtml",
-            "children": [
-              {
-                "text": "<title>"
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
+            "text": "<title>"
           },
           {
             "text": " "
           },
           {
-            "inline": "inlineHtml",
-            "children": [
-              {
-                "text": "<style>"
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
+            "text": "<style>"
           },
           {
             "text": " "
           },
           {
-            "inline": "inlineHtml",
-            "children": [
-              {
-                "text": "<em>"
-              }
-            ]
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "color": ""
+            },
+            "text": "<em>"
           }
         ]
       },
@@ -53,6 +53,11 @@
         "block": "htmlBlock",
         "children": [
           {
+            "style": {
+              "fontFamily": "monospace",
+              "fontSize": 12.0,
+              "backgroundColor": ""
+            },
             "text": "<blockquote>   <xmp> is disallowed.  <XMP> is also disallowed. </blockquote>"
           }
         ]

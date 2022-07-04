@@ -52,5 +52,5 @@ String _fileNameFromSection(String section) =>
 /// Renders Markdown String to expected data.
 List<Map<String, dynamic>> _renderTestCase(String markdown) {
   final nodes = Document().parseLines(markdown);
-  return TestCaseBuilder().build(nodes);
+  return TestCaseBuilder().build(nodes).map((e) => e.toMap()).toList();
 }
