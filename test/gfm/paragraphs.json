@@ -324,7 +324,7 @@
                 "type": "RichText",
                 "text": {
                   "type": "TextSpan",
-                  "text": "aaabbb",
+                  "text": "aaa\nbbb",
                   "style": {
                     "fontFamily": ".SF UI Text",
                     "fontWeight": "FontWeight.w400",

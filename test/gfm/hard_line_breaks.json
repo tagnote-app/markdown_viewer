@@ -13,7 +13,7 @@
                 "type": "RichText",
                 "text": {
                   "type": "TextSpan",
-                  "text": "foobaz",
+                  "text": "foo\nbaz",
                   "style": {
                     "fontFamily": ".SF UI Text",
                     "fontWeight": "FontWeight.w400",
@@ -42,7 +42,7 @@
                 "type": "RichText",
                 "text": {
                   "type": "TextSpan",
-                  "text": "foobaz",
+                  "text": "foo\nbaz",
                   "style": {
                     "fontFamily": ".SF UI Text",
                     "fontWeight": "FontWeight.w400",
@@ -71,7 +71,7 @@
                 "type": "RichText",
                 "text": {
                   "type": "TextSpan",
-                  "text": "foobaz",
+                  "text": "foo\nbaz",
                   "style": {
                     "fontFamily": ".SF UI Text",
                     "fontWeight": "FontWeight.w400",
@@ -100,7 +100,7 @@
                 "type": "RichText",
                 "text": {
                   "type": "TextSpan",
-                  "text": "foobar",
+                  "text": "foo\nbar",
                   "style": {
                     "fontFamily": ".SF UI Text",
                     "fontWeight": "FontWeight.w400",
@@ -129,7 +129,7 @@
                 "type": "RichText",
                 "text": {
                   "type": "TextSpan",
-                  "text": "foobar",
+                  "text": "foo\nbar",
                   "style": {
                     "fontFamily": ".SF UI Text",
                     "fontWeight": "FontWeight.w400",
@@ -158,7 +158,7 @@
                 "type": "RichText",
                 "text": {
                   "type": "TextSpan",
-                  "text": "foobar",
+                  "text": "foo\nbar",
                   "style": {
                     "fontFamily": ".SF UI Text",
                     "fontWeight": "FontWeight.w400",
@@ -188,7 +188,7 @@
                 "type": "RichText",
                 "text": {
                   "type": "TextSpan",
-                  "text": "foobar",
+                  "text": "foo\nbar",
                   "style": {
                     "fontFamily": ".SF UI Text",
                     "fontWeight": "FontWeight.w400",

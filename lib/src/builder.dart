@@ -177,6 +177,13 @@ class MarkdownBuilder implements md.NodeVisitor {
       }
       parent.children.add(blockChild);
     } else {
+      if (type == 'hardLineBreak') {
+        current.children.add(_buildRichText(TextSpan(
+          text: '\n',
+          style: parent.style,
+        )));
+      }
+
       parent.children.addAll(current.children);
     }
   }
