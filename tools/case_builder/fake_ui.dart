@@ -25,6 +25,17 @@ class Column extends MultiChildRenderObjectWidget {
   final CrossAxisAlignment crossAxisAlignment;
 }
 
+class Row extends MultiChildRenderObjectWidget {
+  Row({
+    this.mainAxisAlignment = MainAxisAlignment.start,
+    this.crossAxisAlignment = CrossAxisAlignment.center,
+    List<Widget> children = const <Widget>[],
+  }) : super(children: children);
+
+  final MainAxisAlignment mainAxisAlignment;
+  final CrossAxisAlignment crossAxisAlignment;
+}
+
 class Wrap extends MultiChildRenderObjectWidget {
   const Wrap({
     List<Widget> children = const <Widget>[],

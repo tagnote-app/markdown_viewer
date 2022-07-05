@@ -10,7 +10,7 @@ extension WidgetExtensions on Widget {
       'type': type.toString(),
     };
 
-    if (self is Column || self is Wrap) {
+    if (self is Column || self is Row || self is Wrap) {
       map.addAll({
         if ((self as MultiChildRenderObjectWidget).children.isNotEmpty)
           'children': self.children.map((e) => e.toMap()).toList(),
