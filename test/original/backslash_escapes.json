@@ -1,5 +1,32 @@
 [
   {
-    "description": "Backslash in link text"
+    "description": "Backslash in link text",
+    "markdown": "[foo\\_bar](/url)\n",
+    "expected": [
+      {
+        "type": "Column",
+        "children": [
+          {
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "foo_bar",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xff2196f3)"
+                  },
+                  "recognizer": "TapGestureRecognizer"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 ]
