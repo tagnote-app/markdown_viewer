@@ -343,19 +343,78 @@
                     "type": "RichText",
                     "text": {
                       "type": "TextSpan",
-                      "children": [
-                        {
-                          "type": "TextSpan",
-                          "text": "foo",
-                          "style": {
-                            "fontFamily": ".SF UI Text",
-                            "fontWeight": "FontWeight.w400",
-                            "fontSize": 14.0,
-                            "color": "Color(0xdd000000)"
-                          }
-                        }
-                      ]
+                      "text": "foo",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      }
                     }
+                  }
+                ]
+              },
+              {
+                "type": "SizedBox",
+                "height": 8.0
+              },
+              {
+                "type": "Column",
+                "children": [
+                  {
+                    "type": "Column",
+                    "children": [
+                      {
+                        "type": "Wrap",
+                        "children": [
+                          {
+                            "type": "RichText",
+                            "text": {
+                              "type": "TextSpan",
+                              "text": "bar",
+                              "style": {
+                                "fontFamily": ".SF UI Text",
+                                "fontWeight": "FontWeight.w400",
+                                "fontSize": 14.0,
+                                "color": "Color(0xdd000000)"
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "SizedBox",
+                        "height": 8.0
+                      },
+                      {
+                        "type": "Column",
+                        "children": [
+                          {
+                            "type": "Column",
+                            "children": [
+                              {
+                                "type": "Wrap",
+                                "children": [
+                                  {
+                                    "type": "RichText",
+                                    "text": {
+                                      "type": "TextSpan",
+                                      "text": "baz",
+                                      "style": {
+                                        "fontFamily": ".SF UI Text",
+                                        "fontWeight": "FontWeight.w400",
+                                        "fontSize": 14.0,
+                                        "color": "Color(0xdd000000)"
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
                   }
                 ]
               }
