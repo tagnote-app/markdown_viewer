@@ -1,31 +1,55 @@
 [
   {
-    "description": "https://github.github.com/gfm/#example-197",
+    "description": "Blank lines, https://github.github.com/gfm/#example-197",
     "markdown": "  \n\naaa\n  \n\n# aaa\n\n  \n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "aaa",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "aaa",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "aaa",
-            "fontFamily": ".SF UI Display",
-            "fontWeight": 400,
-            "fontSize": 24.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "aaa",
+                  "style": {
+                    "fontFamily": ".SF UI Display",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 24.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }

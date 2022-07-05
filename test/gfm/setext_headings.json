@@ -1,380 +1,652 @@
 [
   {
-    "description": "https://github.github.com/gfm/#example-50",
+    "description": "Setext headings, https://github.github.com/gfm/#example-50",
     "markdown": "Foo *bar*\n=========\n\nFoo *bar*\n---------\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "Foo ",
-            "fontFamily": ".SF UI Display",
-            "fontWeight": 400,
-            "fontSize": 24.0,
-            "color": "Color(0xdd000000)"
-          },
-          {
-            "type": "TextSpan",
-            "text": "bar",
-            "fontFamily": ".SF UI Display",
-            "fontWeight": 400,
-            "fontSize": 24.0,
-            "fontStyle": "italic",
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "children": [
+                    {
+                      "type": "TextSpan",
+                      "text": "Foo ",
+                      "style": {
+                        "fontFamily": ".SF UI Display",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 24.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": "bar",
+                      "style": {
+                        "fontFamily": ".SF UI Display",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 24.0,
+                        "fontStyle": "FontStyle.italic",
+                        "color": "Color(0xdd000000)"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "Foo ",
-            "fontFamily": ".SF UI Display",
-            "fontWeight": 500,
-            "fontSize": 20.0,
-            "color": "Color(0xdd000000)"
-          },
-          {
-            "type": "TextSpan",
-            "text": "bar",
-            "fontFamily": ".SF UI Display",
-            "fontWeight": 500,
-            "fontSize": 20.0,
-            "fontStyle": "italic",
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "children": [
+                    {
+                      "type": "TextSpan",
+                      "text": "Foo ",
+                      "style": {
+                        "fontFamily": ".SF UI Display",
+                        "fontWeight": "FontWeight.w500",
+                        "fontSize": 20.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": "bar",
+                      "style": {
+                        "fontFamily": ".SF UI Display",
+                        "fontWeight": "FontWeight.w500",
+                        "fontSize": 20.0,
+                        "fontStyle": "FontStyle.italic",
+                        "color": "Color(0xdd000000)"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-51",
+    "description": "Setext headings, https://github.github.com/gfm/#example-51",
     "markdown": "Foo *bar\nbaz*\n====\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "Foo ",
-            "fontFamily": ".SF UI Display",
-            "fontWeight": 400,
-            "fontSize": 24.0,
-            "color": "Color(0xdd000000)"
-          },
-          {
-            "type": "TextSpan",
-            "text": "bar baz",
-            "fontFamily": ".SF UI Display",
-            "fontWeight": 400,
-            "fontSize": 24.0,
-            "fontStyle": "italic",
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "children": [
+                    {
+                      "type": "TextSpan",
+                      "text": "Foo ",
+                      "style": {
+                        "fontFamily": ".SF UI Display",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 24.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": "bar baz",
+                      "style": {
+                        "fontFamily": ".SF UI Display",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 24.0,
+                        "fontStyle": "FontStyle.italic",
+                        "color": "Color(0xdd000000)"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-52",
+    "description": "Setext headings, https://github.github.com/gfm/#example-52",
     "markdown": "  Foo *bar\nbaz*\t\n====\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "Foo ",
-            "fontFamily": ".SF UI Display",
-            "fontWeight": 400,
-            "fontSize": 24.0,
-            "color": "Color(0xdd000000)"
-          },
-          {
-            "type": "TextSpan",
-            "text": "bar baz",
-            "fontFamily": ".SF UI Display",
-            "fontWeight": 400,
-            "fontSize": 24.0,
-            "fontStyle": "italic",
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "children": [
+                    {
+                      "type": "TextSpan",
+                      "text": "Foo ",
+                      "style": {
+                        "fontFamily": ".SF UI Display",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 24.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": "bar baz",
+                      "style": {
+                        "fontFamily": ".SF UI Display",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 24.0,
+                        "fontStyle": "FontStyle.italic",
+                        "color": "Color(0xdd000000)"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-53",
+    "description": "Setext headings, https://github.github.com/gfm/#example-53",
     "markdown": "Foo\n-------------------------\n\nFoo\n=\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "Foo",
-            "fontFamily": ".SF UI Display",
-            "fontWeight": 500,
-            "fontSize": 20.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "Foo",
+                  "style": {
+                    "fontFamily": ".SF UI Display",
+                    "fontWeight": "FontWeight.w500",
+                    "fontSize": 20.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "Foo",
-            "fontFamily": ".SF UI Display",
-            "fontWeight": 400,
-            "fontSize": 24.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "Foo",
+                  "style": {
+                    "fontFamily": ".SF UI Display",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 24.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-54",
+    "description": "Setext headings, https://github.github.com/gfm/#example-54",
     "markdown": "   Foo\n---\n\n  Foo\n-----\n\n  Foo\n  ===\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "Foo",
-            "fontFamily": ".SF UI Display",
-            "fontWeight": 500,
-            "fontSize": 20.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "Foo",
+                  "style": {
+                    "fontFamily": ".SF UI Display",
+                    "fontWeight": "FontWeight.w500",
+                    "fontSize": 20.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "Foo",
-            "fontFamily": ".SF UI Display",
-            "fontWeight": 500,
-            "fontSize": 20.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "Foo",
+                  "style": {
+                    "fontFamily": ".SF UI Display",
+                    "fontWeight": "FontWeight.w500",
+                    "fontSize": 20.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "Foo",
-            "fontFamily": ".SF UI Display",
-            "fontWeight": 400,
-            "fontSize": 24.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "Foo",
+                  "style": {
+                    "fontFamily": ".SF UI Display",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 24.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-55",
+    "description": "Setext headings, https://github.github.com/gfm/#example-55",
     "markdown": "    Foo\n    ---\n\n    Foo\n---\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "Foo ---  Foo ",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "Foo ---  Foo ",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       },
       {
-        "type": "SizedBox"
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-56",
+    "description": "Setext headings, https://github.github.com/gfm/#example-56",
     "markdown": "Foo\n   ----      \n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "Foo",
-            "fontFamily": ".SF UI Display",
-            "fontWeight": 500,
-            "fontSize": 20.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "Foo",
+                  "style": {
+                    "fontFamily": ".SF UI Display",
+                    "fontWeight": "FontWeight.w500",
+                    "fontSize": 20.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-57",
+    "description": "Setext headings, https://github.github.com/gfm/#example-57",
     "markdown": "Foo\n    ---\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "Foo ---",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "Foo ---",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-58",
+    "description": "Setext headings, https://github.github.com/gfm/#example-58",
     "markdown": "Foo\n= =\n\nFoo\n--- -\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "Foo = =",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "Foo = =",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "Foo",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "Foo",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       },
       {
-        "type": "SizedBox"
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-59",
+    "description": "Setext headings, https://github.github.com/gfm/#example-59",
     "markdown": "Foo  \n-----\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "Foo",
-            "fontFamily": ".SF UI Display",
-            "fontWeight": 500,
-            "fontSize": 20.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "Foo",
+                  "style": {
+                    "fontFamily": ".SF UI Display",
+                    "fontWeight": "FontWeight.w500",
+                    "fontSize": 20.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-60",
+    "description": "Setext headings, https://github.github.com/gfm/#example-60",
     "markdown": "Foo\\\n----\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "Foo\\",
-            "fontFamily": ".SF UI Display",
-            "fontWeight": 500,
-            "fontSize": 20.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "Foo\\",
+                  "style": {
+                    "fontFamily": ".SF UI Display",
+                    "fontWeight": "FontWeight.w500",
+                    "fontSize": 20.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-61",
+    "description": "Setext headings, https://github.github.com/gfm/#example-61",
     "markdown": "`Foo\n----\n`\n\n<a title=\"a lot\n---\nof dashes\"/>\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "`Foo",
-            "fontFamily": ".SF UI Display",
-            "fontWeight": 500,
-            "fontSize": 20.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "`Foo",
+                  "style": {
+                    "fontFamily": ".SF UI Display",
+                    "fontWeight": "FontWeight.w500",
+                    "fontSize": 20.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "`",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "`",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<a title=\"a lot",
-            "fontFamily": ".SF UI Display",
-            "fontWeight": 500,
-            "fontSize": 20.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<a title=\"a lot",
+                  "style": {
+                    "fontFamily": ".SF UI Display",
+                    "fontWeight": "FontWeight.w500",
+                    "fontSize": 20.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "of dashes\"/>",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "of dashes\"/>",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-62",
+    "description": "Setext headings, https://github.github.com/gfm/#example-62",
     "markdown": "> Foo\n---\n",
     "expected": [
       {
@@ -388,12 +660,22 @@
                 "type": "Column",
                 "children": [
                   {
-                    "type": "TextSpan",
-                    "text": "Foo",
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": 400,
-                    "fontSize": 14.0,
-                    "color": "Color(0xff666666)"
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "Foo",
+                          "style": {
+                            "fontFamily": ".SF UI Text",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 14.0,
+                            "color": "Color(0xdd000000)"
+                          }
+                        }
+                      }
+                    ]
                   }
                 ]
               }
@@ -402,12 +684,18 @@
         }
       },
       {
-        "type": "SizedBox"
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-63",
+    "description": "Setext headings, https://github.github.com/gfm/#example-63",
     "markdown": "> foo\nbar\n===\n",
     "expected": [
       {
@@ -421,12 +709,22 @@
                 "type": "Column",
                 "children": [
                   {
-                    "type": "TextSpan",
-                    "text": "foo\nbar\n===",
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": 400,
-                    "fontSize": 14.0,
-                    "color": "Color(0xff666666)"
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "foo\nbar\n===",
+                          "style": {
+                            "fontFamily": ".SF UI Text",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 14.0,
+                            "color": "Color(0xdd000000)"
+                          }
+                        }
+                      }
+                    ]
                   }
                 ]
               }
@@ -437,7 +735,7 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-64",
+    "description": "Setext headings, https://github.github.com/gfm/#example-64",
     "markdown": "- Foo\n---\n",
     "expected": [
       {
@@ -447,122 +745,210 @@
             "type": "Column",
             "children": [
               {
-                "type": "TextSpan",
-                "text": "Foo",
-                "fontFamily": ".SF UI Text",
-                "fontWeight": 400,
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "type": "Wrap",
+                "children": [
+                  {
+                    "type": "RichText",
+                    "text": {
+                      "type": "TextSpan",
+                      "text": "Foo",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    }
+                  }
+                ]
               }
             ]
           }
         ]
       },
       {
-        "type": "SizedBox"
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-65",
+    "description": "Setext headings, https://github.github.com/gfm/#example-65",
     "markdown": "Foo\nBar\n---\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "Foo Bar",
-            "fontFamily": ".SF UI Display",
-            "fontWeight": 500,
-            "fontSize": 20.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "Foo Bar",
+                  "style": {
+                    "fontFamily": ".SF UI Display",
+                    "fontWeight": "FontWeight.w500",
+                    "fontSize": 20.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-66",
+    "description": "Setext headings, https://github.github.com/gfm/#example-66",
     "markdown": "---\nFoo\n---\nBar\n---\nBaz\n",
     "expected": [
       {
-        "type": "SizedBox"
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "Foo",
-            "fontFamily": ".SF UI Display",
-            "fontWeight": 500,
-            "fontSize": 20.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "Foo",
+                  "style": {
+                    "fontFamily": ".SF UI Display",
+                    "fontWeight": "FontWeight.w500",
+                    "fontSize": 20.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       },
       {
-        "type": "Column",
-        "children": [
-          {
-            "type": "TextSpan",
-            "text": "Bar",
-            "fontFamily": ".SF UI Display",
-            "fontWeight": 500,
-            "fontSize": 20.0,
-            "color": "Color(0xdd000000)"
-          }
-        ]
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "Baz",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "Bar",
+                  "style": {
+                    "fontFamily": ".SF UI Display",
+                    "fontWeight": "FontWeight.w500",
+                    "fontSize": 20.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "Column",
+        "children": [
+          {
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "Baz",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-67",
+    "description": "Setext headings, https://github.github.com/gfm/#example-67",
     "markdown": "\n====\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "====",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "====",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-68",
+    "description": "Setext headings, https://github.github.com/gfm/#example-68",
     "markdown": "---\n---\n",
     "expected": [
       {
-        "type": "SizedBox"
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
       },
       {
-        "type": "SizedBox"
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-69",
+    "description": "Setext headings, https://github.github.com/gfm/#example-69",
     "markdown": "- foo\n-----\n",
     "expected": [
       {
@@ -572,46 +958,78 @@
             "type": "Column",
             "children": [
               {
-                "type": "TextSpan",
-                "text": "foo",
-                "fontFamily": ".SF UI Text",
-                "fontWeight": 400,
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "type": "Wrap",
+                "children": [
+                  {
+                    "type": "RichText",
+                    "text": {
+                      "type": "TextSpan",
+                      "text": "foo",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    }
+                  }
+                ]
               }
             ]
           }
         ]
       },
       {
-        "type": "SizedBox"
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-70",
+    "description": "Setext headings, https://github.github.com/gfm/#example-70",
     "markdown": "    foo\n---\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "foo ",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "foo ",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       },
       {
-        "type": "SizedBox"
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-71",
+    "description": "Setext headings, https://github.github.com/gfm/#example-71",
     "markdown": "> foo\n-----\n",
     "expected": [
       {
@@ -625,12 +1043,22 @@
                 "type": "Column",
                 "children": [
                   {
-                    "type": "TextSpan",
-                    "text": "foo",
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": 400,
-                    "fontSize": 14.0,
-                    "color": "Color(0xff666666)"
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "foo",
+                          "style": {
+                            "fontFamily": ".SF UI Text",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 14.0,
+                            "color": "Color(0xdd000000)"
+                          }
+                        }
+                      }
+                    ]
                   }
                 ]
               }
@@ -639,158 +1067,282 @@
         }
       },
       {
-        "type": "SizedBox"
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-72",
+    "description": "Setext headings, https://github.github.com/gfm/#example-72",
     "markdown": "\\> foo\n------\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "> foo",
-            "fontFamily": ".SF UI Display",
-            "fontWeight": 500,
-            "fontSize": 20.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "> foo",
+                  "style": {
+                    "fontFamily": ".SF UI Display",
+                    "fontWeight": "FontWeight.w500",
+                    "fontSize": 20.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-73",
+    "description": "Setext headings, https://github.github.com/gfm/#example-73",
     "markdown": "Foo\n\nbar\n---\nbaz\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "Foo",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "Foo",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "bar",
-            "fontFamily": ".SF UI Display",
-            "fontWeight": 500,
-            "fontSize": 20.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "bar",
+                  "style": {
+                    "fontFamily": ".SF UI Display",
+                    "fontWeight": "FontWeight.w500",
+                    "fontSize": 20.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "baz",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "baz",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-74",
+    "description": "Setext headings, https://github.github.com/gfm/#example-74",
     "markdown": "Foo\nbar\n\n---\n\nbaz\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "Foo bar",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "Foo bar",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       },
       {
-        "type": "SizedBox"
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "baz",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "baz",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-75",
+    "description": "Setext headings, https://github.github.com/gfm/#example-75",
     "markdown": "Foo\nbar\n* * *\nbaz\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "Foo bar",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "Foo bar",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       },
       {
-        "type": "SizedBox"
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "baz",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "baz",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-76",
+    "description": "Setext headings, https://github.github.com/gfm/#example-76",
     "markdown": "Foo\nbar\n\\---\nbaz\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "Foo bar --- baz",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "Foo bar --- baz",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }

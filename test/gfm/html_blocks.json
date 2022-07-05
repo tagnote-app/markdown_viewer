@@ -1,661 +1,1086 @@
 [
   {
-    "description": "https://github.github.com/gfm/#example-118",
+    "description": "HTML blocks, https://github.github.com/gfm/#example-118",
     "markdown": "<table><tr><td>\n<pre>\n**Hello**,\n\n_world_.\n</pre>\n</td></tr></table>\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<table><tr><td> <pre> **Hello**,",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<table><tr><td> <pre> **Hello**,",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "world",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "fontStyle": "italic",
-            "color": "Color(0xdd000000)"
-          },
-          {
-            "type": "TextSpan",
-            "text": ". ",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
-          },
-          {
-            "type": "TextSpan",
-            "text": "</pre>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "children": [
+                    {
+                      "type": "TextSpan",
+                      "text": "world",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "fontStyle": "FontStyle.italic",
+                        "color": "Color(0xdd000000)"
+                      }
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": ". ",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": "</pre>",
+                      "style": {
+                        "fontFamily": "monospace",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 11.9,
+                        "color": "Color(0xdd000000)",
+                        "backgroundColor": "Color(0xfff8f09e)"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "</td></tr></table>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "</td></tr></table>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-119",
+    "description": "HTML blocks, https://github.github.com/gfm/#example-119",
     "markdown": "<table>\n  <tr>\n    <td>\n           hi\n    </td>\n  </tr>\n</table>\n\nokay.\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<table>   <tr>     <td>            hi     </td>   </tr> </table>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<table>   <tr>     <td>            hi     </td>   </tr> </table>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "okay.",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "okay.",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-120",
+    "description": "HTML blocks, https://github.github.com/gfm/#example-120",
     "markdown": " <div>\n  *hello*\n         <foo><a>\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": " <div>   *hello*          <foo><a>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": " <div>   *hello*          <foo><a>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-121",
+    "description": "HTML blocks, https://github.github.com/gfm/#example-121",
     "markdown": "</div>\n*foo*\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "</div> *foo*",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "</div> *foo*",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-122",
+    "description": "HTML blocks, https://github.github.com/gfm/#example-122",
     "markdown": "<DIV CLASS=\"foo\">\n\n*Markdown*\n\n</DIV>\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<DIV CLASS=\"foo\">",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<DIV CLASS=\"foo\">",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "Markdown",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "fontStyle": "italic",
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "Markdown",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "fontStyle": "FontStyle.italic",
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "</DIV>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "</DIV>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-123",
+    "description": "HTML blocks, https://github.github.com/gfm/#example-123",
     "markdown": "<div id=\"foo\"\n  class=\"bar\">\n</div>\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<div id=\"foo\"   class=\"bar\"> </div>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<div id=\"foo\"   class=\"bar\"> </div>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-124",
+    "description": "HTML blocks, https://github.github.com/gfm/#example-124",
     "markdown": "<div id=\"foo\" class=\"bar\n  baz\">\n</div>\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<div id=\"foo\" class=\"bar   baz\"> </div>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<div id=\"foo\" class=\"bar   baz\"> </div>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-125",
+    "description": "HTML blocks, https://github.github.com/gfm/#example-125",
     "markdown": "<div>\n*foo*\n\n*bar*\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<div> *foo*",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<div> *foo*",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "bar",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "fontStyle": "italic",
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "bar",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "fontStyle": "FontStyle.italic",
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-126",
+    "description": "HTML blocks, https://github.github.com/gfm/#example-126",
     "markdown": "<div id=\"foo\"\n*hi*\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<div id=\"foo\" *hi*",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<div id=\"foo\" *hi*",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-127",
+    "description": "HTML blocks, https://github.github.com/gfm/#example-127",
     "markdown": "<div class\nfoo\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<div class foo",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<div class foo",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-128",
+    "description": "HTML blocks, https://github.github.com/gfm/#example-128",
     "markdown": "<div *???-&&&-<---\n*foo*\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<div *???-&&&-<--- *foo*",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<div *???-&&&-<--- *foo*",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-129",
+    "description": "HTML blocks, https://github.github.com/gfm/#example-129",
     "markdown": "<div><a href=\"bar\">*foo*</a></div>\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<div><a href=\"bar\">*foo*</a></div>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<div><a href=\"bar\">*foo*</a></div>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-130",
+    "description": "HTML blocks, https://github.github.com/gfm/#example-130",
     "markdown": "<table><tr><td>\nfoo\n</td></tr></table>\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<table><tr><td> foo </td></tr></table>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<table><tr><td> foo </td></tr></table>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-131",
+    "description": "HTML blocks, https://github.github.com/gfm/#example-131",
     "markdown": "<div></div>\n``` c\nint x = 33;\n```\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<div></div> ``` c int x = 33; ```",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<div></div> ``` c int x = 33; ```",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-132",
+    "description": "HTML blocks, https://github.github.com/gfm/#example-132",
     "markdown": "<a href=\"foo\">\n*bar*\n</a>\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<a href=\"foo\"> *bar* </a>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<a href=\"foo\"> *bar* </a>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-133",
+    "description": "HTML blocks, https://github.github.com/gfm/#example-133",
     "markdown": "<Warning>\n*bar*\n</Warning>\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<Warning> *bar* </Warning>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<Warning> *bar* </Warning>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-134",
+    "description": "HTML blocks, https://github.github.com/gfm/#example-134",
     "markdown": "<i class=\"foo\">\n*bar*\n</i>\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<i class=\"foo\"> *bar* </i>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<i class=\"foo\"> *bar* </i>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-135",
+    "description": "HTML blocks, https://github.github.com/gfm/#example-135",
     "markdown": "</ins>\n*bar*\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "</ins> *bar*",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "</ins> *bar*",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-136",
+    "description": "HTML blocks, https://github.github.com/gfm/#example-136",
     "markdown": "<del>\n*foo*\n</del>\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<del> *foo* </del>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<del> *foo* </del>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-137",
+    "description": "HTML blocks, https://github.github.com/gfm/#example-137",
     "markdown": "<del>\n\n*foo*\n\n</del>\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<del>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<del>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "foo",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "fontStyle": "italic",
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "foo",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "fontStyle": "FontStyle.italic",
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "</del>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "</del>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-138",
+    "description": "HTML blocks, https://github.github.com/gfm/#example-138",
     "markdown": "<del>*foo*</del>\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<del>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
-          },
-          {
-            "type": "TextSpan",
-            "text": "foo",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "fontStyle": "italic",
-            "color": "Color(0xdd000000)"
-          },
-          {
-            "type": "TextSpan",
-            "text": "</del>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "children": [
+                    {
+                      "type": "TextSpan",
+                      "text": "<del>",
+                      "style": {
+                        "fontFamily": "monospace",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 11.9,
+                        "color": "Color(0xdd000000)",
+                        "backgroundColor": "Color(0xfff8f09e)"
+                      }
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": "foo",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "fontStyle": "FontStyle.italic",
+                        "color": "Color(0xdd000000)"
+                      }
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": "</del>",
+                      "style": {
+                        "fontFamily": "monospace",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 11.9,
+                        "color": "Color(0xdd000000)",
+                        "backgroundColor": "Color(0xfff8f09e)"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-139",
+    "description": "HTML blocks, https://github.github.com/gfm/#example-139",
     "markdown": "<pre language=\"haskell\"><code>\nimport Text.HTML.TagSoup\n\nmain :: IO ()\nmain = print $ parseTags tags\n</code></pre>\nokay\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<pre language=\"haskell\"><code> import Text.HTML.TagSoup  main :: IO () main = print $ parseTags tags </code></pre>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<pre language=\"haskell\"><code> import Text.HTML.TagSoup  main :: IO () main = print $ parseTags tags </code></pre>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "okay",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "okay",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-140",
+    "description": "HTML blocks, https://github.github.com/gfm/#example-140",
     "markdown": "<script type=\"text/javascript\">\n// JavaScript example\n\ndocument.getElementById(\"demo\").innerHTML = \"Hello JavaScript!\";\n</script>\nokay\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<script type=\"text/javascript\"> // JavaScript example  document.getElementById(\"demo\").innerHTML = \"Hello JavaScript!\"; </script>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<script type=\"text/javascript\"> // JavaScript example  document.getElementById(\"demo\").innerHTML = \"Hello JavaScript!\"; </script>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "okay",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "okay",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-141",
+    "description": "HTML blocks, https://github.github.com/gfm/#example-141",
     "markdown": "<style\n  type=\"text/css\">\nh1 {color:red;}\n\np {color:blue;}\n</style>\nokay\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<style   type=\"text/css\"> h1 {color:red;}  p {color:blue;} </style>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<style   type=\"text/css\"> h1 {color:red;}  p {color:blue;} </style>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "okay",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "okay",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-142",
+    "description": "HTML blocks, https://github.github.com/gfm/#example-142",
     "markdown": "<style\n  type=\"text/css\">\n\nfoo\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<style   type=\"text/css\">  foo",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<style   type=\"text/css\">  foo",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-143",
+    "description": "HTML blocks, https://github.github.com/gfm/#example-143",
     "markdown": "> <div>\n> foo\n\nbar\n",
     "expected": [
       {
@@ -669,12 +1094,22 @@
                 "type": "Column",
                 "children": [
                   {
-                    "type": "TextSpan",
-                    "text": "<div>\nfoo",
-                    "fontFamily": "monospace",
-                    "fontWeight": 400,
-                    "fontSize": 11.9,
-                    "color": "Color(0xdd000000)"
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "<div>\nfoo",
+                          "style": {
+                            "fontFamily": "monospace",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 11.9,
+                            "color": "Color(0xdd000000)"
+                          }
+                        }
+                      }
+                    ]
                   }
                 ]
               }
@@ -683,22 +1118,36 @@
         }
       },
       {
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "bar",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "bar",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-144",
+    "description": "HTML blocks, https://github.github.com/gfm/#example-144",
     "markdown": "- <div>\n- foo\n",
     "expected": [
       {
@@ -711,27 +1160,51 @@
                 "type": "Column",
                 "children": [
                   {
-                    "type": "TextSpan",
-                    "text": "<div>",
-                    "fontFamily": "monospace",
-                    "fontWeight": 400,
-                    "fontSize": 11.9,
-                    "color": "Color(0xdd000000)"
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "<div>",
+                          "style": {
+                            "fontFamily": "monospace",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 11.9,
+                            "color": "Color(0xdd000000)"
+                          }
+                        }
+                      }
+                    ]
                   }
                 ]
               }
             ]
           },
           {
+            "type": "SizedBox",
+            "height": 8.0
+          },
+          {
             "type": "Column",
             "children": [
               {
-                "type": "TextSpan",
-                "text": "foo",
-                "fontFamily": ".SF UI Text",
-                "fontWeight": 400,
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "type": "Wrap",
+                "children": [
+                  {
+                    "type": "RichText",
+                    "text": {
+                      "type": "TextSpan",
+                      "text": "foo",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    }
+                  }
+                ]
               }
             ]
           }
@@ -740,487 +1213,832 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-145",
+    "description": "HTML blocks, https://github.github.com/gfm/#example-145",
     "markdown": "<style>p{color:red;}</style>\n*foo*\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<style>p{color:red;}</style>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<style>p{color:red;}</style>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "foo",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "fontStyle": "italic",
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "foo",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "fontStyle": "FontStyle.italic",
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-146",
+    "description": "HTML blocks, https://github.github.com/gfm/#example-146",
     "markdown": "<!-- foo -->*bar*\n*baz*\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<!-- foo -->*bar*",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<!-- foo -->*bar*",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "baz",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "fontStyle": "italic",
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "baz",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "fontStyle": "FontStyle.italic",
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-147",
+    "description": "HTML blocks, https://github.github.com/gfm/#example-147",
     "markdown": "<script>\nfoo\n</script>1. *bar*\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<script> foo </script>1. *bar*",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<script> foo </script>1. *bar*",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-148",
+    "description": "HTML blocks, https://github.github.com/gfm/#example-148",
     "markdown": "<!-- Foo\n\nbar\n   baz -->\nokay\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<!-- Foo  bar    baz -->",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<!-- Foo  bar    baz -->",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "okay",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "okay",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-149",
+    "description": "HTML blocks, https://github.github.com/gfm/#example-149",
     "markdown": "<?php\n\n  echo '>';\n\n?>\nokay\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<?php    echo '>';  ?>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<?php    echo '>';  ?>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "okay",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "okay",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-150",
+    "description": "HTML blocks, https://github.github.com/gfm/#example-150",
     "markdown": "<!DOCTYPE html>\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<!DOCTYPE html>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<!DOCTYPE html>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-151",
+    "description": "HTML blocks, https://github.github.com/gfm/#example-151",
     "markdown": "<![CDATA[\nfunction matchwo(a,b)\n{\n  if (a < b && a < 0) then {\n    return 1;\n\n  } else {\n\n    return 0;\n  }\n}\n]]>\nokay\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<![CDATA[ function matchwo(a,b) {   if (a < b && a < 0) then {     return 1;    } else {      return 0;   } } ]]>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<![CDATA[ function matchwo(a,b) {   if (a < b && a < 0) then {     return 1;    } else {      return 0;   } } ]]>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "okay",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "okay",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-152",
+    "description": "HTML blocks, https://github.github.com/gfm/#example-152",
     "markdown": "  <!-- foo -->\n\n    <!-- foo -->\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "  <!-- foo -->",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "  <!-- foo -->",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<!-- foo --> ",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<!-- foo --> ",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-153",
+    "description": "HTML blocks, https://github.github.com/gfm/#example-153",
     "markdown": "  <div>\n\n    <div>\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "  <div>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "  <div>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<div> ",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<div> ",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-154",
+    "description": "HTML blocks, https://github.github.com/gfm/#example-154",
     "markdown": "Foo\n<div>\nbar\n</div>\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "Foo",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "Foo",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<div> bar </div>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<div> bar </div>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-155",
+    "description": "HTML blocks, https://github.github.com/gfm/#example-155",
     "markdown": "<div>\nbar\n</div>\n*foo*\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<div> bar </div> *foo*",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<div> bar </div> *foo*",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-156",
+    "description": "HTML blocks, https://github.github.com/gfm/#example-156",
     "markdown": "Foo\n<a href=\"bar\">\nbaz\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "Foo ",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
-          },
-          {
-            "type": "TextSpan",
-            "text": "<a href=\"bar\">",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
-          },
-          {
-            "type": "TextSpan",
-            "text": " baz",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "children": [
+                    {
+                      "type": "TextSpan",
+                      "text": "Foo ",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": "<a href=\"bar\">",
+                      "style": {
+                        "fontFamily": "monospace",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 11.9,
+                        "color": "Color(0xdd000000)",
+                        "backgroundColor": "Color(0xfff8f09e)"
+                      }
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": " baz",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-157",
+    "description": "HTML blocks, https://github.github.com/gfm/#example-157",
     "markdown": "<div>\n\n*Emphasized* text.\n\n</div>\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<div>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<div>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "Emphasized",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "fontStyle": "italic",
-            "color": "Color(0xdd000000)"
-          },
-          {
-            "type": "TextSpan",
-            "text": " text.",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "children": [
+                    {
+                      "type": "TextSpan",
+                      "text": "Emphasized",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "fontStyle": "FontStyle.italic",
+                        "color": "Color(0xdd000000)"
+                      }
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": " text.",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "</div>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "</div>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-158",
+    "description": "HTML blocks, https://github.github.com/gfm/#example-158",
     "markdown": "<div>\n*Emphasized* text.\n</div>\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<div> *Emphasized* text. </div>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<div> *Emphasized* text. </div>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-159",
+    "description": "HTML blocks, https://github.github.com/gfm/#example-159",
     "markdown": "<table>\n\n<tr>\n\n<td>\nHi\n</td>\n\n</tr>\n\n</table>\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<table> <tr> <td> Hi </td> </tr> </table>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<table> <tr> <td> Hi </td> </tr> </table>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-160",
+    "description": "HTML blocks, https://github.github.com/gfm/#example-160",
     "markdown": "<table>\n\n  <tr>\n\n    <td>\n      Hi\n    </td>\n\n  </tr>\n\n</table>\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<table>   <tr>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<table>   <tr>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "<td>   Hi </td> ",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "<td>   Hi </td> ",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "  </tr> </table>",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "  </tr> </table>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }

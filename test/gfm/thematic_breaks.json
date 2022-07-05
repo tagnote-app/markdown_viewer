@@ -1,241 +1,377 @@
 [
   {
-    "description": "https://github.github.com/gfm/#example-13",
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-13",
     "markdown": "***\n---\n___\n",
     "expected": [
       {
-        "type": "SizedBox"
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
       },
       {
-        "type": "SizedBox"
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
-        "type": "SizedBox"
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-14",
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-14",
     "markdown": "+++\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "+++",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "+++",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-15",
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-15",
     "markdown": "===\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "===",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "===",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-16",
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-16",
     "markdown": "--\n**\n__\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "-- ** __",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "-- ** __",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-17",
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-17",
     "markdown": " ***\n  ***\n   ***\n",
     "expected": [
       {
-        "type": "SizedBox"
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
       },
       {
-        "type": "SizedBox"
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
-        "type": "SizedBox"
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-18",
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-18",
     "markdown": "    ***\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "*** ",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "*** ",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-19",
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-19",
     "markdown": "Foo\n    ***\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "Foo ***",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "Foo ***",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-20",
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-20",
     "markdown": "_____________________________________\n",
     "expected": [
       {
-        "type": "SizedBox"
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-21",
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-21",
     "markdown": " - - -\n",
     "expected": [
       {
-        "type": "SizedBox"
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-22",
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-22",
     "markdown": " **  * ** * ** * **\n",
     "expected": [
       {
-        "type": "SizedBox"
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-23",
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-23",
     "markdown": "-     -      -      -\n",
     "expected": [
       {
-        "type": "SizedBox"
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-24",
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-24",
     "markdown": "- - - -    \n",
     "expected": [
       {
-        "type": "SizedBox"
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-25",
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-25",
     "markdown": "_ _ _ _ a\n\na------\n\n---a---\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "_ _ _ _ a",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "_ _ _ _ a",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "a------",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "a------",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "---a---",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "---a---",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-26",
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-26",
     "markdown": " *-*\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "-",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "fontStyle": "italic",
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "-",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "fontStyle": "FontStyle.italic",
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-27",
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-27",
     "markdown": "- foo\n***\n- bar\n",
     "expected": [
       {
@@ -245,19 +381,39 @@
             "type": "Column",
             "children": [
               {
-                "type": "TextSpan",
-                "text": "foo",
-                "fontFamily": ".SF UI Text",
-                "fontWeight": 400,
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "type": "Wrap",
+                "children": [
+                  {
+                    "type": "RichText",
+                    "text": {
+                      "type": "TextSpan",
+                      "text": "foo",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    }
+                  }
+                ]
               }
             ]
           }
         ]
       },
       {
-        "type": "SizedBox"
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
@@ -266,12 +422,22 @@
             "type": "Column",
             "children": [
               {
-                "type": "TextSpan",
-                "text": "bar",
-                "fontFamily": ".SF UI Text",
-                "fontWeight": 400,
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "type": "Wrap",
+                "children": [
+                  {
+                    "type": "RichText",
+                    "text": {
+                      "type": "TextSpan",
+                      "text": "bar",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    }
+                  }
+                ]
               }
             ]
           }
@@ -280,74 +446,128 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-28",
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-28",
     "markdown": "Foo\n***\nbar\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "Foo",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "Foo",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       },
       {
-        "type": "SizedBox"
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "bar",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "bar",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-29",
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-29",
     "markdown": "Foo\n---\nbar\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "Foo",
-            "fontFamily": ".SF UI Display",
-            "fontWeight": 500,
-            "fontSize": 20.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "Foo",
+                  "style": {
+                    "fontFamily": ".SF UI Display",
+                    "fontWeight": "FontWeight.w500",
+                    "fontSize": 20.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "bar",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "bar",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-30",
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-30",
     "markdown": "* Foo\n* * *\n* Bar\n",
     "expected": [
       {
@@ -357,19 +577,39 @@
             "type": "Column",
             "children": [
               {
-                "type": "TextSpan",
-                "text": "Foo",
-                "fontFamily": ".SF UI Text",
-                "fontWeight": 400,
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "type": "Wrap",
+                "children": [
+                  {
+                    "type": "RichText",
+                    "text": {
+                      "type": "TextSpan",
+                      "text": "Foo",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    }
+                  }
+                ]
               }
             ]
           }
         ]
       },
       {
-        "type": "SizedBox"
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "SizedBox",
+        "height": 0.0,
+        "width": 0.0
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
@@ -378,12 +618,22 @@
             "type": "Column",
             "children": [
               {
-                "type": "TextSpan",
-                "text": "Bar",
-                "fontFamily": ".SF UI Text",
-                "fontWeight": 400,
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "type": "Wrap",
+                "children": [
+                  {
+                    "type": "RichText",
+                    "text": {
+                      "type": "TextSpan",
+                      "text": "Bar",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    }
+                  }
+                ]
               }
             ]
           }
@@ -392,7 +642,7 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-31",
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-31",
     "markdown": "- Foo\n- * * *\n",
     "expected": [
       {
@@ -402,20 +652,36 @@
             "type": "Column",
             "children": [
               {
-                "type": "TextSpan",
-                "text": "Foo",
-                "fontFamily": ".SF UI Text",
-                "fontWeight": 400,
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "type": "Wrap",
+                "children": [
+                  {
+                    "type": "RichText",
+                    "text": {
+                      "type": "TextSpan",
+                      "text": "Foo",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    }
+                  }
+                ]
               }
             ]
+          },
+          {
+            "type": "SizedBox",
+            "height": 8.0
           },
           {
             "type": "Column",
             "children": [
               {
-                "type": "SizedBox"
+                "type": "SizedBox",
+                "height": 0.0,
+                "width": 0.0
               }
             ]
           }

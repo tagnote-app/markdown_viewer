@@ -1,26 +1,44 @@
 [
   {
-    "description": "https://github.github.com/gfm/#example-307",
+    "description": "Inlines, https://github.github.com/gfm/#example-307",
     "markdown": "`hi`lo`\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "hi",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
-          },
-          {
-            "type": "TextSpan",
-            "text": "lo`",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "children": [
+                    {
+                      "type": "TextSpan",
+                      "text": "hi",
+                      "style": {
+                        "fontFamily": "monospace",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 11.9,
+                        "color": "Color(0xdd000000)",
+                        "backgroundColor": "Color(0xfff8f09e)"
+                      }
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": "lo`",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
           }
         ]
       }

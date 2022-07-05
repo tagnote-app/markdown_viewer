@@ -1,11 +1,10 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:markdown/markdown.dart' as md;
+import 'helpers.dart';
 
-import 'helpers/merge_inline_children.dart';
-import 'helpers/tree_element.dart';
-import 'helpers/trim_text.dart';
 import 'style.dart';
+import 'tree_element.dart';
 
 class MarkdownBuilder implements md.NodeVisitor {
   MarkdownBuilder({
@@ -44,9 +43,20 @@ class MarkdownBuilder implements md.NodeVisitor {
 
   @override
   bool visitElementBefore(md.Element element) {
+    if ([
+      'blankLine',
+      'linkReferenceDefinition',
+      'backslashEscape',
+    ].contains(element.type)) {
+      if (element.type == 'backslashEscape') {
+        visitText(element.children.first as md.Text);
+      }
+      return false;
+    }
+
     final parent = _tree.last;
 
-    if (element.type == 'link' && _onTapLink != null) {
+    if (isLinkElement(element.type) && _onTapLink != null) {
       _addLinkHandler(element);
     } else if (element.type == 'blockquote') {
       _isInBlockquote = true;
@@ -72,7 +82,7 @@ class MarkdownBuilder implements md.NodeVisitor {
       TextSpan(
         text: textContent,
         style: parent.style,
-        recognizer: _linkHandlers.isEmpty ? null : _linkHandlers.removeLast(),
+        recognizer: _linkHandlers.isEmpty ? null : _linkHandlers.last,
       ),
     );
 
@@ -93,7 +103,7 @@ class MarkdownBuilder implements md.NodeVisitor {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: mergeInlineChildren(
             current.children,
-            richTextBuilder: _buildRichText,
+            richTextBuilder: (span) => _buildRichText(span),
           ),
         );
       } else {
@@ -110,8 +120,13 @@ class MarkdownBuilder implements md.NodeVisitor {
             child: blockChild,
           ),
         );
+      } else if (isLinkElement(current.type)) {
+        _linkHandlers.removeLast();
       }
 
+      if (parent.children.isNotEmpty) {
+        parent.children.add(SizedBox(height: _styleSheet.blockSpacing));
+      }
       parent.children.add(blockChild);
     } else {
       parent.children.addAll(current.children);

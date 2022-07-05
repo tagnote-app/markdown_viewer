@@ -1,33 +1,61 @@
 [
   {
-    "description": "https://github.github.com/gfm/#example-231",
+    "description": "List items, https://github.github.com/gfm/#example-231",
     "markdown": "A paragraph\nwith two lines.\n\n    indented code\n\n> A block quote.\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "A paragraph with two lines.",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "A paragraph with two lines.",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "indented code ",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "indented code ",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "DecoratedBox",
@@ -40,12 +68,22 @@
                 "type": "Column",
                 "children": [
                   {
-                    "type": "TextSpan",
-                    "text": "A block quote.",
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": 400,
-                    "fontSize": 14.0,
-                    "color": "Color(0xff666666)"
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "A block quote.",
+                          "style": {
+                            "fontFamily": ".SF UI Text",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 14.0,
+                            "color": "Color(0xdd000000)"
+                          }
+                        }
+                      }
+                    ]
                   }
                 ]
               }
@@ -56,7 +94,7 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-232",
+    "description": "List items, https://github.github.com/gfm/#example-232",
     "markdown": "1.  A paragraph\n    with two lines.\n\n        indented code\n\n    > A block quote.\n",
     "expected": [
       {
@@ -69,27 +107,55 @@
                 "type": "Column",
                 "children": [
                   {
-                    "type": "TextSpan",
-                    "text": "A paragraph with two lines.",
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": 400,
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "A paragraph with two lines.",
+                          "style": {
+                            "fontFamily": ".SF UI Text",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 14.0,
+                            "color": "Color(0xdd000000)"
+                          }
+                        }
+                      }
+                    ]
                   }
                 ]
+              },
+              {
+                "type": "SizedBox",
+                "height": 8.0
               },
               {
                 "type": "Column",
                 "children": [
                   {
-                    "type": "TextSpan",
-                    "text": "indented code ",
-                    "fontFamily": "monospace",
-                    "fontWeight": 400,
-                    "fontSize": 11.9,
-                    "color": "Color(0xdd000000)"
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "indented code ",
+                          "style": {
+                            "fontFamily": "monospace",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 11.9,
+                            "color": "Color(0xdd000000)"
+                          }
+                        }
+                      }
+                    ]
                   }
                 ]
+              },
+              {
+                "type": "SizedBox",
+                "height": 8.0
               },
               {
                 "type": "DecoratedBox",
@@ -102,12 +168,22 @@
                         "type": "Column",
                         "children": [
                           {
-                            "type": "TextSpan",
-                            "text": "A block quote.",
-                            "fontFamily": ".SF UI Text",
-                            "fontWeight": 400,
-                            "fontSize": 14.0,
-                            "color": "Color(0xff666666)"
+                            "type": "Wrap",
+                            "children": [
+                              {
+                                "type": "RichText",
+                                "text": {
+                                  "type": "TextSpan",
+                                  "text": "A block quote.",
+                                  "style": {
+                                    "fontFamily": ".SF UI Text",
+                                    "fontWeight": "FontWeight.w400",
+                                    "fontSize": 14.0,
+                                    "color": "Color(0xdd000000)"
+                                  }
+                                }
+                              }
+                            ]
                           }
                         ]
                       }
@@ -122,7 +198,7 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-233",
+    "description": "List items, https://github.github.com/gfm/#example-233",
     "markdown": "- one\n\n two\n",
     "expected": [
       {
@@ -132,34 +208,58 @@
             "type": "Column",
             "children": [
               {
-                "type": "TextSpan",
-                "text": "one",
-                "fontFamily": ".SF UI Text",
-                "fontWeight": 400,
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "type": "Wrap",
+                "children": [
+                  {
+                    "type": "RichText",
+                    "text": {
+                      "type": "TextSpan",
+                      "text": "one",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    }
+                  }
+                ]
               }
             ]
           }
         ]
       },
       {
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "two",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "two",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-234",
+    "description": "List items, https://github.github.com/gfm/#example-234",
     "markdown": "- one\n\n  two\n",
     "expected": [
       {
@@ -172,25 +272,49 @@
                 "type": "Column",
                 "children": [
                   {
-                    "type": "TextSpan",
-                    "text": "one",
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": 400,
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "one",
+                          "style": {
+                            "fontFamily": ".SF UI Text",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 14.0,
+                            "color": "Color(0xdd000000)"
+                          }
+                        }
+                      }
+                    ]
                   }
                 ]
+              },
+              {
+                "type": "SizedBox",
+                "height": 8.0
               },
               {
                 "type": "Column",
                 "children": [
                   {
-                    "type": "TextSpan",
-                    "text": "two",
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": 400,
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "two",
+                          "style": {
+                            "fontFamily": ".SF UI Text",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 14.0,
+                            "color": "Color(0xdd000000)"
+                          }
+                        }
+                      }
+                    ]
                   }
                 ]
               }
@@ -201,7 +325,7 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-235",
+    "description": "List items, https://github.github.com/gfm/#example-235",
     "markdown": " -    one\n\n     two\n",
     "expected": [
       {
@@ -211,34 +335,58 @@
             "type": "Column",
             "children": [
               {
-                "type": "TextSpan",
-                "text": "one",
-                "fontFamily": ".SF UI Text",
-                "fontWeight": 400,
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "type": "Wrap",
+                "children": [
+                  {
+                    "type": "RichText",
+                    "text": {
+                      "type": "TextSpan",
+                      "text": "one",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    }
+                  }
+                ]
               }
             ]
           }
         ]
       },
       {
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": " two ",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": " two ",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-236",
+    "description": "List items, https://github.github.com/gfm/#example-236",
     "markdown": " -    one\n\n      two\n",
     "expected": [
       {
@@ -251,25 +399,49 @@
                 "type": "Column",
                 "children": [
                   {
-                    "type": "TextSpan",
-                    "text": "one",
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": 400,
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "one",
+                          "style": {
+                            "fontFamily": ".SF UI Text",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 14.0,
+                            "color": "Color(0xdd000000)"
+                          }
+                        }
+                      }
+                    ]
                   }
                 ]
+              },
+              {
+                "type": "SizedBox",
+                "height": 8.0
               },
               {
                 "type": "Column",
                 "children": [
                   {
-                    "type": "TextSpan",
-                    "text": "two",
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": 400,
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "two",
+                          "style": {
+                            "fontFamily": ".SF UI Text",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 14.0,
+                            "color": "Color(0xdd000000)"
+                          }
+                        }
+                      }
+                    ]
                   }
                 ]
               }
@@ -280,7 +452,7 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-237",
+    "description": "List items, https://github.github.com/gfm/#example-237",
     "markdown": "   > > 1.  one\n>>\n>>     two\n",
     "expected": [
       {
@@ -307,25 +479,49 @@
                                 "type": "Column",
                                 "children": [
                                   {
-                                    "type": "TextSpan",
-                                    "text": "one",
-                                    "fontFamily": ".SF UI Text",
-                                    "fontWeight": 400,
-                                    "fontSize": 14.0,
-                                    "color": "Color(0xdd000000)"
+                                    "type": "Wrap",
+                                    "children": [
+                                      {
+                                        "type": "RichText",
+                                        "text": {
+                                          "type": "TextSpan",
+                                          "text": "one",
+                                          "style": {
+                                            "fontFamily": ".SF UI Text",
+                                            "fontWeight": "FontWeight.w400",
+                                            "fontSize": 14.0,
+                                            "color": "Color(0xdd000000)"
+                                          }
+                                        }
+                                      }
+                                    ]
                                   }
                                 ]
+                              },
+                              {
+                                "type": "SizedBox",
+                                "height": 8.0
                               },
                               {
                                 "type": "Column",
                                 "children": [
                                   {
-                                    "type": "TextSpan",
-                                    "text": "two",
-                                    "fontFamily": ".SF UI Text",
-                                    "fontWeight": 400,
-                                    "fontSize": 14.0,
-                                    "color": "Color(0xdd000000)"
+                                    "type": "Wrap",
+                                    "children": [
+                                      {
+                                        "type": "RichText",
+                                        "text": {
+                                          "type": "TextSpan",
+                                          "text": "two",
+                                          "style": {
+                                            "fontFamily": ".SF UI Text",
+                                            "fontWeight": "FontWeight.w400",
+                                            "fontSize": 14.0,
+                                            "color": "Color(0xdd000000)"
+                                          }
+                                        }
+                                      }
+                                    ]
                                   }
                                 ]
                               }
@@ -344,7 +540,7 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-238",
+    "description": "List items, https://github.github.com/gfm/#example-238",
     "markdown": ">>- one\n>>\n  >  > two\n",
     "expected": [
       {
@@ -368,27 +564,51 @@
                             "type": "Column",
                             "children": [
                               {
-                                "type": "TextSpan",
-                                "text": "one",
-                                "fontFamily": ".SF UI Text",
-                                "fontWeight": 400,
-                                "fontSize": 14.0,
-                                "color": "Color(0xdd000000)"
+                                "type": "Wrap",
+                                "children": [
+                                  {
+                                    "type": "RichText",
+                                    "text": {
+                                      "type": "TextSpan",
+                                      "text": "one",
+                                      "style": {
+                                        "fontFamily": ".SF UI Text",
+                                        "fontWeight": "FontWeight.w400",
+                                        "fontSize": 14.0,
+                                        "color": "Color(0xdd000000)"
+                                      }
+                                    }
+                                  }
+                                ]
                               }
                             ]
                           }
                         ]
                       },
                       {
+                        "type": "SizedBox",
+                        "height": 8.0
+                      },
+                      {
                         "type": "Column",
                         "children": [
                           {
-                            "type": "TextSpan",
-                            "text": "two",
-                            "fontFamily": ".SF UI Text",
-                            "fontWeight": 400,
-                            "fontSize": 14.0,
-                            "color": "Color(0xff666666)"
+                            "type": "Wrap",
+                            "children": [
+                              {
+                                "type": "RichText",
+                                "text": {
+                                  "type": "TextSpan",
+                                  "text": "two",
+                                  "style": {
+                                    "fontFamily": ".SF UI Text",
+                                    "fontWeight": "FontWeight.w400",
+                                    "fontSize": 14.0,
+                                    "color": "Color(0xdd000000)"
+                                  }
+                                }
+                              }
+                            ]
                           }
                         ]
                       }
@@ -403,39 +623,63 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-239",
+    "description": "List items, https://github.github.com/gfm/#example-239",
     "markdown": "-one\n\n2.two\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "-one",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "-one",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "2.two",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "2.two",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-240",
+    "description": "List items, https://github.github.com/gfm/#example-240",
     "markdown": "- foo\n\n\n  bar\n",
     "expected": [
       {
@@ -448,25 +692,49 @@
                 "type": "Column",
                 "children": [
                   {
-                    "type": "TextSpan",
-                    "text": "foo",
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": 400,
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "foo",
+                          "style": {
+                            "fontFamily": ".SF UI Text",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 14.0,
+                            "color": "Color(0xdd000000)"
+                          }
+                        }
+                      }
+                    ]
                   }
                 ]
+              },
+              {
+                "type": "SizedBox",
+                "height": 8.0
               },
               {
                 "type": "Column",
                 "children": [
                   {
-                    "type": "TextSpan",
-                    "text": "bar",
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": 400,
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "bar",
+                          "style": {
+                            "fontFamily": ".SF UI Text",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 14.0,
+                            "color": "Color(0xdd000000)"
+                          }
+                        }
+                      }
+                    ]
                   }
                 ]
               }
@@ -477,7 +745,7 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-241",
+    "description": "List items, https://github.github.com/gfm/#example-241",
     "markdown": "1.  foo\n\n    ```\n    bar\n    ```\n\n    baz\n\n    > bam\n",
     "expected": [
       {
@@ -490,40 +758,82 @@
                 "type": "Column",
                 "children": [
                   {
-                    "type": "TextSpan",
-                    "text": "foo",
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": 400,
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "foo",
+                          "style": {
+                            "fontFamily": ".SF UI Text",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 14.0,
+                            "color": "Color(0xdd000000)"
+                          }
+                        }
+                      }
+                    ]
                   }
                 ]
+              },
+              {
+                "type": "SizedBox",
+                "height": 8.0
               },
               {
                 "type": "Column",
                 "children": [
                   {
-                    "type": "TextSpan",
-                    "text": "bar ",
-                    "fontFamily": "monospace",
-                    "fontWeight": 400,
-                    "fontSize": 11.9,
-                    "color": "Color(0xdd000000)"
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "bar ",
+                          "style": {
+                            "fontFamily": "monospace",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 11.9,
+                            "color": "Color(0xdd000000)"
+                          }
+                        }
+                      }
+                    ]
                   }
                 ]
+              },
+              {
+                "type": "SizedBox",
+                "height": 8.0
               },
               {
                 "type": "Column",
                 "children": [
                   {
-                    "type": "TextSpan",
-                    "text": "baz",
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": 400,
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "baz",
+                          "style": {
+                            "fontFamily": ".SF UI Text",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 14.0,
+                            "color": "Color(0xdd000000)"
+                          }
+                        }
+                      }
+                    ]
                   }
                 ]
+              },
+              {
+                "type": "SizedBox",
+                "height": 8.0
               },
               {
                 "type": "DecoratedBox",
@@ -536,12 +846,22 @@
                         "type": "Column",
                         "children": [
                           {
-                            "type": "TextSpan",
-                            "text": "bam",
-                            "fontFamily": ".SF UI Text",
-                            "fontWeight": 400,
-                            "fontSize": 14.0,
-                            "color": "Color(0xff666666)"
+                            "type": "Wrap",
+                            "children": [
+                              {
+                                "type": "RichText",
+                                "text": {
+                                  "type": "TextSpan",
+                                  "text": "bam",
+                                  "style": {
+                                    "fontFamily": ".SF UI Text",
+                                    "fontWeight": "FontWeight.w400",
+                                    "fontSize": 14.0,
+                                    "color": "Color(0xdd000000)"
+                                  }
+                                }
+                              }
+                            ]
                           }
                         ]
                       }
@@ -556,7 +876,7 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-242",
+    "description": "List items, https://github.github.com/gfm/#example-242",
     "markdown": "- Foo\n\n      bar\n\n\n      baz\n",
     "expected": [
       {
@@ -569,25 +889,49 @@
                 "type": "Column",
                 "children": [
                   {
-                    "type": "TextSpan",
-                    "text": "Foo",
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": 400,
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "Foo",
+                          "style": {
+                            "fontFamily": ".SF UI Text",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 14.0,
+                            "color": "Color(0xdd000000)"
+                          }
+                        }
+                      }
+                    ]
                   }
                 ]
+              },
+              {
+                "type": "SizedBox",
+                "height": 8.0
               },
               {
                 "type": "Column",
                 "children": [
                   {
-                    "type": "TextSpan",
-                    "text": "bar   baz ",
-                    "fontFamily": "monospace",
-                    "fontWeight": 400,
-                    "fontSize": 11.9,
-                    "color": "Color(0xdd000000)"
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "bar   baz ",
+                          "style": {
+                            "fontFamily": "monospace",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 11.9,
+                            "color": "Color(0xdd000000)"
+                          }
+                        }
+                      }
+                    ]
                   }
                 ]
               }
@@ -598,7 +942,7 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-243",
+    "description": "List items, https://github.github.com/gfm/#example-243",
     "markdown": "123456789. ok\n",
     "expected": [
       {
@@ -608,12 +952,22 @@
             "type": "Column",
             "children": [
               {
-                "type": "TextSpan",
-                "text": "ok",
-                "fontFamily": ".SF UI Text",
-                "fontWeight": 400,
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "type": "Wrap",
+                "children": [
+                  {
+                    "type": "RichText",
+                    "text": {
+                      "type": "TextSpan",
+                      "text": "ok",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    }
+                  }
+                ]
               }
             ]
           }
@@ -622,26 +976,36 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-244",
+    "description": "List items, https://github.github.com/gfm/#example-244",
     "markdown": "1234567890. not ok\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "1234567890. not ok",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "1234567890. not ok",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-245",
+    "description": "List items, https://github.github.com/gfm/#example-245",
     "markdown": "0. ok\n",
     "expected": [
       {
@@ -651,12 +1015,22 @@
             "type": "Column",
             "children": [
               {
-                "type": "TextSpan",
-                "text": "ok",
-                "fontFamily": ".SF UI Text",
-                "fontWeight": 400,
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "type": "Wrap",
+                "children": [
+                  {
+                    "type": "RichText",
+                    "text": {
+                      "type": "TextSpan",
+                      "text": "ok",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    }
+                  }
+                ]
               }
             ]
           }
@@ -665,7 +1039,7 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-246",
+    "description": "List items, https://github.github.com/gfm/#example-246",
     "markdown": "003. ok\n",
     "expected": [
       {
@@ -675,12 +1049,22 @@
             "type": "Column",
             "children": [
               {
-                "type": "TextSpan",
-                "text": "ok",
-                "fontFamily": ".SF UI Text",
-                "fontWeight": 400,
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "type": "Wrap",
+                "children": [
+                  {
+                    "type": "RichText",
+                    "text": {
+                      "type": "TextSpan",
+                      "text": "ok",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    }
+                  }
+                ]
               }
             ]
           }
@@ -689,26 +1073,36 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-247",
+    "description": "List items, https://github.github.com/gfm/#example-247",
     "markdown": "-1. not ok\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "-1. not ok",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "-1. not ok",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-248",
+    "description": "List items, https://github.github.com/gfm/#example-248",
     "markdown": "- foo\n\n      bar\n",
     "expected": [
       {
@@ -721,25 +1115,49 @@
                 "type": "Column",
                 "children": [
                   {
-                    "type": "TextSpan",
-                    "text": "foo",
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": 400,
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "foo",
+                          "style": {
+                            "fontFamily": ".SF UI Text",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 14.0,
+                            "color": "Color(0xdd000000)"
+                          }
+                        }
+                      }
+                    ]
                   }
                 ]
+              },
+              {
+                "type": "SizedBox",
+                "height": 8.0
               },
               {
                 "type": "Column",
                 "children": [
                   {
-                    "type": "TextSpan",
-                    "text": "bar ",
-                    "fontFamily": "monospace",
-                    "fontWeight": 400,
-                    "fontSize": 11.9,
-                    "color": "Color(0xdd000000)"
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "bar ",
+                          "style": {
+                            "fontFamily": "monospace",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 11.9,
+                            "color": "Color(0xdd000000)"
+                          }
+                        }
+                      }
+                    ]
                   }
                 ]
               }
@@ -750,7 +1168,7 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-249",
+    "description": "List items, https://github.github.com/gfm/#example-249",
     "markdown": "  10.  foo\n\n           bar\n",
     "expected": [
       {
@@ -763,25 +1181,49 @@
                 "type": "Column",
                 "children": [
                   {
-                    "type": "TextSpan",
-                    "text": "foo",
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": 400,
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "foo",
+                          "style": {
+                            "fontFamily": ".SF UI Text",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 14.0,
+                            "color": "Color(0xdd000000)"
+                          }
+                        }
+                      }
+                    ]
                   }
                 ]
+              },
+              {
+                "type": "SizedBox",
+                "height": 8.0
               },
               {
                 "type": "Column",
                 "children": [
                   {
-                    "type": "TextSpan",
-                    "text": "bar ",
-                    "fontFamily": "monospace",
-                    "fontWeight": 400,
-                    "fontSize": 11.9,
-                    "color": "Color(0xdd000000)"
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "bar ",
+                          "style": {
+                            "fontFamily": "monospace",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 11.9,
+                            "color": "Color(0xdd000000)"
+                          }
+                        }
+                      }
+                    ]
                   }
                 ]
               }
@@ -792,52 +1234,90 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-250",
+    "description": "List items, https://github.github.com/gfm/#example-250",
     "markdown": "    indented code\n\nparagraph\n\n    more code\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "indented code ",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "indented code ",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "paragraph",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "paragraph",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "more code ",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "more code ",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-251",
+    "description": "List items, https://github.github.com/gfm/#example-251",
     "markdown": "1.     indented code\n\n   paragraph\n\n       more code\n",
     "expected": [
       {
@@ -850,38 +1330,76 @@
                 "type": "Column",
                 "children": [
                   {
-                    "type": "TextSpan",
-                    "text": "indented code ",
-                    "fontFamily": "monospace",
-                    "fontWeight": 400,
-                    "fontSize": 11.9,
-                    "color": "Color(0xdd000000)"
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "indented code ",
+                          "style": {
+                            "fontFamily": "monospace",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 11.9,
+                            "color": "Color(0xdd000000)"
+                          }
+                        }
+                      }
+                    ]
                   }
                 ]
+              },
+              {
+                "type": "SizedBox",
+                "height": 8.0
               },
               {
                 "type": "Column",
                 "children": [
                   {
-                    "type": "TextSpan",
-                    "text": "paragraph",
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": 400,
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "paragraph",
+                          "style": {
+                            "fontFamily": ".SF UI Text",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 14.0,
+                            "color": "Color(0xdd000000)"
+                          }
+                        }
+                      }
+                    ]
                   }
                 ]
+              },
+              {
+                "type": "SizedBox",
+                "height": 8.0
               },
               {
                 "type": "Column",
                 "children": [
                   {
-                    "type": "TextSpan",
-                    "text": "more code ",
-                    "fontFamily": "monospace",
-                    "fontWeight": 400,
-                    "fontSize": 11.9,
-                    "color": "Color(0xdd000000)"
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "more code ",
+                          "style": {
+                            "fontFamily": "monospace",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 11.9,
+                            "color": "Color(0xdd000000)"
+                          }
+                        }
+                      }
+                    ]
                   }
                 ]
               }
@@ -892,7 +1410,7 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-252",
+    "description": "List items, https://github.github.com/gfm/#example-252",
     "markdown": "1.      indented code\n\n   paragraph\n\n       more code\n",
     "expected": [
       {
@@ -905,38 +1423,76 @@
                 "type": "Column",
                 "children": [
                   {
-                    "type": "TextSpan",
-                    "text": " indented code ",
-                    "fontFamily": "monospace",
-                    "fontWeight": 400,
-                    "fontSize": 11.9,
-                    "color": "Color(0xdd000000)"
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": " indented code ",
+                          "style": {
+                            "fontFamily": "monospace",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 11.9,
+                            "color": "Color(0xdd000000)"
+                          }
+                        }
+                      }
+                    ]
                   }
                 ]
+              },
+              {
+                "type": "SizedBox",
+                "height": 8.0
               },
               {
                 "type": "Column",
                 "children": [
                   {
-                    "type": "TextSpan",
-                    "text": "paragraph",
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": 400,
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "paragraph",
+                          "style": {
+                            "fontFamily": ".SF UI Text",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 14.0,
+                            "color": "Color(0xdd000000)"
+                          }
+                        }
+                      }
+                    ]
                   }
                 ]
+              },
+              {
+                "type": "SizedBox",
+                "height": 8.0
               },
               {
                 "type": "Column",
                 "children": [
                   {
-                    "type": "TextSpan",
-                    "text": "more code ",
-                    "fontFamily": "monospace",
-                    "fontWeight": 400,
-                    "fontSize": 11.9,
-                    "color": "Color(0xdd000000)"
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "more code ",
+                          "style": {
+                            "fontFamily": "monospace",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 11.9,
+                            "color": "Color(0xdd000000)"
+                          }
+                        }
+                      }
+                    ]
                   }
                 ]
               }
@@ -947,39 +1503,63 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-253",
+    "description": "List items, https://github.github.com/gfm/#example-253",
     "markdown": "   foo\n\nbar\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "foo",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "foo",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "bar",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "bar",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-254",
+    "description": "List items, https://github.github.com/gfm/#example-254",
     "markdown": "-    foo\n\n  bar\n",
     "expected": [
       {
@@ -989,34 +1569,58 @@
             "type": "Column",
             "children": [
               {
-                "type": "TextSpan",
-                "text": "foo",
-                "fontFamily": ".SF UI Text",
-                "fontWeight": 400,
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "type": "Wrap",
+                "children": [
+                  {
+                    "type": "RichText",
+                    "text": {
+                      "type": "TextSpan",
+                      "text": "foo",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    }
+                  }
+                ]
               }
             ]
           }
         ]
       },
       {
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "bar",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "bar",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-255",
+    "description": "List items, https://github.github.com/gfm/#example-255",
     "markdown": "-  foo\n\n   bar\n",
     "expected": [
       {
@@ -1029,25 +1633,49 @@
                 "type": "Column",
                 "children": [
                   {
-                    "type": "TextSpan",
-                    "text": "foo",
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": 400,
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "foo",
+                          "style": {
+                            "fontFamily": ".SF UI Text",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 14.0,
+                            "color": "Color(0xdd000000)"
+                          }
+                        }
+                      }
+                    ]
                   }
                 ]
+              },
+              {
+                "type": "SizedBox",
+                "height": 8.0
               },
               {
                 "type": "Column",
                 "children": [
                   {
-                    "type": "TextSpan",
-                    "text": "bar",
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": 400,
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "bar",
+                          "style": {
+                            "fontFamily": ".SF UI Text",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 14.0,
+                            "color": "Color(0xdd000000)"
+                          }
+                        }
+                      }
+                    ]
                   }
                 ]
               }
@@ -1058,7 +1686,7 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-256",
+    "description": "List items, https://github.github.com/gfm/#example-256",
     "markdown": "-\n  foo\n-\n  ```\n  bar\n  ```\n-\n      baz\n",
     "expected": [
       {
@@ -1068,46 +1696,84 @@
             "type": "Column",
             "children": [
               {
-                "type": "TextSpan",
-                "text": "foo",
-                "fontFamily": ".SF UI Text",
-                "fontWeight": 400,
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
-              }
-            ]
-          },
-          {
-            "type": "Column",
-            "children": [
-              {
-                "type": "Column",
+                "type": "Wrap",
                 "children": [
                   {
-                    "type": "TextSpan",
-                    "text": "bar ",
-                    "fontFamily": "monospace",
-                    "fontWeight": 400,
-                    "fontSize": 11.9,
-                    "color": "Color(0xdd000000)"
+                    "type": "RichText",
+                    "text": {
+                      "type": "TextSpan",
+                      "text": "foo",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    }
                   }
                 ]
               }
             ]
           },
           {
+            "type": "SizedBox",
+            "height": 8.0
+          },
+          {
             "type": "Column",
             "children": [
               {
                 "type": "Column",
                 "children": [
                   {
-                    "type": "TextSpan",
-                    "text": "baz ",
-                    "fontFamily": "monospace",
-                    "fontWeight": 400,
-                    "fontSize": 11.9,
-                    "color": "Color(0xdd000000)"
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "bar ",
+                          "style": {
+                            "fontFamily": "monospace",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 11.9,
+                            "color": "Color(0xdd000000)"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "SizedBox",
+            "height": 8.0
+          },
+          {
+            "type": "Column",
+            "children": [
+              {
+                "type": "Column",
+                "children": [
+                  {
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "baz ",
+                          "style": {
+                            "fontFamily": "monospace",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 11.9,
+                            "color": "Color(0xdd000000)"
+                          }
+                        }
+                      }
+                    ]
                   }
                 ]
               }
@@ -1118,7 +1784,7 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-257",
+    "description": "List items, https://github.github.com/gfm/#example-257",
     "markdown": "-   \n  foo\n",
     "expected": [
       {
@@ -1128,12 +1794,22 @@
             "type": "Column",
             "children": [
               {
-                "type": "TextSpan",
-                "text": "foo",
-                "fontFamily": ".SF UI Text",
-                "fontWeight": 400,
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "type": "Wrap",
+                "children": [
+                  {
+                    "type": "RichText",
+                    "text": {
+                      "type": "TextSpan",
+                      "text": "foo",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    }
+                  }
+                ]
               }
             ]
           }
@@ -1142,34 +1818,50 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-258",
+    "description": "List items, https://github.github.com/gfm/#example-258",
     "markdown": "-\n\n  foo\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "SizedBox"
+            "type": "SizedBox",
+            "height": 0.0,
+            "width": 0.0
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "foo",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "foo",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-259",
+    "description": "List items, https://github.github.com/gfm/#example-259",
     "markdown": "- foo\n-\n- bar\n",
     "expected": [
       {
@@ -1179,28 +1871,58 @@
             "type": "Column",
             "children": [
               {
-                "type": "TextSpan",
-                "text": "foo",
-                "fontFamily": ".SF UI Text",
-                "fontWeight": 400,
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "type": "Wrap",
+                "children": [
+                  {
+                    "type": "RichText",
+                    "text": {
+                      "type": "TextSpan",
+                      "text": "foo",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    }
+                  }
+                ]
               }
             ]
           },
           {
-            "type": "SizedBox"
+            "type": "SizedBox",
+            "height": 8.0
+          },
+          {
+            "type": "SizedBox",
+            "height": 0.0,
+            "width": 0.0
+          },
+          {
+            "type": "SizedBox",
+            "height": 8.0
           },
           {
             "type": "Column",
             "children": [
               {
-                "type": "TextSpan",
-                "text": "bar",
-                "fontFamily": ".SF UI Text",
-                "fontWeight": 400,
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "type": "Wrap",
+                "children": [
+                  {
+                    "type": "RichText",
+                    "text": {
+                      "type": "TextSpan",
+                      "text": "bar",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    }
+                  }
+                ]
               }
             ]
           }
@@ -1209,7 +1931,7 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-260",
+    "description": "List items, https://github.github.com/gfm/#example-260",
     "markdown": "- foo\n-   \n- bar\n",
     "expected": [
       {
@@ -1219,28 +1941,58 @@
             "type": "Column",
             "children": [
               {
-                "type": "TextSpan",
-                "text": "foo",
-                "fontFamily": ".SF UI Text",
-                "fontWeight": 400,
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "type": "Wrap",
+                "children": [
+                  {
+                    "type": "RichText",
+                    "text": {
+                      "type": "TextSpan",
+                      "text": "foo",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    }
+                  }
+                ]
               }
             ]
           },
           {
-            "type": "SizedBox"
+            "type": "SizedBox",
+            "height": 8.0
+          },
+          {
+            "type": "SizedBox",
+            "height": 0.0,
+            "width": 0.0
+          },
+          {
+            "type": "SizedBox",
+            "height": 8.0
           },
           {
             "type": "Column",
             "children": [
               {
-                "type": "TextSpan",
-                "text": "bar",
-                "fontFamily": ".SF UI Text",
-                "fontWeight": 400,
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "type": "Wrap",
+                "children": [
+                  {
+                    "type": "RichText",
+                    "text": {
+                      "type": "TextSpan",
+                      "text": "bar",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    }
+                  }
+                ]
               }
             ]
           }
@@ -1249,7 +2001,7 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-261",
+    "description": "List items, https://github.github.com/gfm/#example-261",
     "markdown": "1. foo\n2.\n3. bar\n",
     "expected": [
       {
@@ -1259,28 +2011,58 @@
             "type": "Column",
             "children": [
               {
-                "type": "TextSpan",
-                "text": "foo",
-                "fontFamily": ".SF UI Text",
-                "fontWeight": 400,
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "type": "Wrap",
+                "children": [
+                  {
+                    "type": "RichText",
+                    "text": {
+                      "type": "TextSpan",
+                      "text": "foo",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    }
+                  }
+                ]
               }
             ]
           },
           {
-            "type": "SizedBox"
+            "type": "SizedBox",
+            "height": 8.0
+          },
+          {
+            "type": "SizedBox",
+            "height": 0.0,
+            "width": 0.0
+          },
+          {
+            "type": "SizedBox",
+            "height": 8.0
           },
           {
             "type": "Column",
             "children": [
               {
-                "type": "TextSpan",
-                "text": "bar",
-                "fontFamily": ".SF UI Text",
-                "fontWeight": 400,
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "type": "Wrap",
+                "children": [
+                  {
+                    "type": "RichText",
+                    "text": {
+                      "type": "TextSpan",
+                      "text": "bar",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    }
+                  }
+                ]
               }
             ]
           }
@@ -1289,53 +2071,79 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-262",
+    "description": "List items, https://github.github.com/gfm/#example-262",
     "markdown": "*\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "SizedBox"
+            "type": "SizedBox",
+            "height": 0.0,
+            "width": 0.0
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-263",
+    "description": "List items, https://github.github.com/gfm/#example-263",
     "markdown": "foo\n*\n\nfoo\n1.\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "foo *",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "foo *",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "foo 1.",
-            "fontFamily": ".SF UI Text",
-            "fontWeight": 400,
-            "fontSize": 14.0,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "foo 1.",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-264",
+    "description": "List items, https://github.github.com/gfm/#example-264",
     "markdown": " 1.  A paragraph\n     with two lines.\n\n         indented code\n\n     > A block quote.\n",
     "expected": [
       {
@@ -1348,27 +2156,55 @@
                 "type": "Column",
                 "children": [
                   {
-                    "type": "TextSpan",
-                    "text": "A paragraph with two lines.",
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": 400,
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "A paragraph with two lines.",
+                          "style": {
+                            "fontFamily": ".SF UI Text",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 14.0,
+                            "color": "Color(0xdd000000)"
+                          }
+                        }
+                      }
+                    ]
                   }
                 ]
+              },
+              {
+                "type": "SizedBox",
+                "height": 8.0
               },
               {
                 "type": "Column",
                 "children": [
                   {
-                    "type": "TextSpan",
-                    "text": "indented code ",
-                    "fontFamily": "monospace",
-                    "fontWeight": 400,
-                    "fontSize": 11.9,
-                    "color": "Color(0xdd000000)"
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "indented code ",
+                          "style": {
+                            "fontFamily": "monospace",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 11.9,
+                            "color": "Color(0xdd000000)"
+                          }
+                        }
+                      }
+                    ]
                   }
                 ]
+              },
+              {
+                "type": "SizedBox",
+                "height": 8.0
               },
               {
                 "type": "DecoratedBox",
@@ -1381,12 +2217,22 @@
                         "type": "Column",
                         "children": [
                           {
-                            "type": "TextSpan",
-                            "text": "A block quote.",
-                            "fontFamily": ".SF UI Text",
-                            "fontWeight": 400,
-                            "fontSize": 14.0,
-                            "color": "Color(0xff666666)"
+                            "type": "Wrap",
+                            "children": [
+                              {
+                                "type": "RichText",
+                                "text": {
+                                  "type": "TextSpan",
+                                  "text": "A block quote.",
+                                  "style": {
+                                    "fontFamily": ".SF UI Text",
+                                    "fontWeight": "FontWeight.w400",
+                                    "fontSize": 14.0,
+                                    "color": "Color(0xdd000000)"
+                                  }
+                                }
+                              }
+                            ]
                           }
                         ]
                       }
@@ -1401,7 +2247,7 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-265",
+    "description": "List items, https://github.github.com/gfm/#example-265",
     "markdown": "  1.  A paragraph\n      with two lines.\n\n          indented code\n\n      > A block quote.\n",
     "expected": [
       {
@@ -1414,27 +2260,55 @@
                 "type": "Column",
                 "children": [
                   {
-                    "type": "TextSpan",
-                    "text": "A paragraph with two lines.",
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": 400,
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "A paragraph with two lines.",
+                          "style": {
+                            "fontFamily": ".SF UI Text",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 14.0,
+                            "color": "Color(0xdd000000)"
+                          }
+                        }
+                      }
+                    ]
                   }
                 ]
+              },
+              {
+                "type": "SizedBox",
+                "height": 8.0
               },
               {
                 "type": "Column",
                 "children": [
                   {
-                    "type": "TextSpan",
-                    "text": "indented code ",
-                    "fontFamily": "monospace",
-                    "fontWeight": 400,
-                    "fontSize": 11.9,
-                    "color": "Color(0xdd000000)"
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "indented code ",
+                          "style": {
+                            "fontFamily": "monospace",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 11.9,
+                            "color": "Color(0xdd000000)"
+                          }
+                        }
+                      }
+                    ]
                   }
                 ]
+              },
+              {
+                "type": "SizedBox",
+                "height": 8.0
               },
               {
                 "type": "DecoratedBox",
@@ -1447,12 +2321,22 @@
                         "type": "Column",
                         "children": [
                           {
-                            "type": "TextSpan",
-                            "text": "A block quote.",
-                            "fontFamily": ".SF UI Text",
-                            "fontWeight": 400,
-                            "fontSize": 14.0,
-                            "color": "Color(0xff666666)"
+                            "type": "Wrap",
+                            "children": [
+                              {
+                                "type": "RichText",
+                                "text": {
+                                  "type": "TextSpan",
+                                  "text": "A block quote.",
+                                  "style": {
+                                    "fontFamily": ".SF UI Text",
+                                    "fontWeight": "FontWeight.w400",
+                                    "fontSize": 14.0,
+                                    "color": "Color(0xdd000000)"
+                                  }
+                                }
+                              }
+                            ]
                           }
                         ]
                       }
@@ -1467,7 +2351,7 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-266",
+    "description": "List items, https://github.github.com/gfm/#example-266",
     "markdown": "   1.  A paragraph\n       with two lines.\n\n           indented code\n\n       > A block quote.\n",
     "expected": [
       {
@@ -1480,27 +2364,55 @@
                 "type": "Column",
                 "children": [
                   {
-                    "type": "TextSpan",
-                    "text": "A paragraph with two lines.",
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": 400,
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "A paragraph with two lines.",
+                          "style": {
+                            "fontFamily": ".SF UI Text",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 14.0,
+                            "color": "Color(0xdd000000)"
+                          }
+                        }
+                      }
+                    ]
                   }
                 ]
+              },
+              {
+                "type": "SizedBox",
+                "height": 8.0
               },
               {
                 "type": "Column",
                 "children": [
                   {
-                    "type": "TextSpan",
-                    "text": "indented code ",
-                    "fontFamily": "monospace",
-                    "fontWeight": 400,
-                    "fontSize": 11.9,
-                    "color": "Color(0xdd000000)"
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "indented code ",
+                          "style": {
+                            "fontFamily": "monospace",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 11.9,
+                            "color": "Color(0xdd000000)"
+                          }
+                        }
+                      }
+                    ]
                   }
                 ]
+              },
+              {
+                "type": "SizedBox",
+                "height": 8.0
               },
               {
                 "type": "DecoratedBox",
@@ -1513,12 +2425,22 @@
                         "type": "Column",
                         "children": [
                           {
-                            "type": "TextSpan",
-                            "text": "A block quote.",
-                            "fontFamily": ".SF UI Text",
-                            "fontWeight": 400,
-                            "fontSize": 14.0,
-                            "color": "Color(0xff666666)"
+                            "type": "Wrap",
+                            "children": [
+                              {
+                                "type": "RichText",
+                                "text": {
+                                  "type": "TextSpan",
+                                  "text": "A block quote.",
+                                  "style": {
+                                    "fontFamily": ".SF UI Text",
+                                    "fontWeight": "FontWeight.w400",
+                                    "fontSize": 14.0,
+                                    "color": "Color(0xdd000000)"
+                                  }
+                                }
+                              }
+                            ]
                           }
                         ]
                       }
@@ -1533,26 +2455,36 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-267",
+    "description": "List items, https://github.github.com/gfm/#example-267",
     "markdown": "    1.  A paragraph\n        with two lines.\n\n            indented code\n\n        > A block quote.\n",
     "expected": [
       {
         "type": "Column",
         "children": [
           {
-            "type": "TextSpan",
-            "text": "1.  A paragraph     with two lines.          indented code      > A block quote. ",
-            "fontFamily": "monospace",
-            "fontWeight": 400,
-            "fontSize": 11.9,
-            "color": "Color(0xdd000000)"
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "text": {
+                  "type": "TextSpan",
+                  "text": "1.  A paragraph     with two lines.          indented code      > A block quote. ",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-268",
+    "description": "List items, https://github.github.com/gfm/#example-268",
     "markdown": "  1.  A paragraph\nwith two lines.\n\n          indented code\n\n      > A block quote.\n",
     "expected": [
       {
@@ -1565,27 +2497,55 @@
                 "type": "Column",
                 "children": [
                   {
-                    "type": "TextSpan",
-                    "text": "A paragraph with two lines.",
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": 400,
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "A paragraph with two lines.",
+                          "style": {
+                            "fontFamily": ".SF UI Text",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 14.0,
+                            "color": "Color(0xdd000000)"
+                          }
+                        }
+                      }
+                    ]
                   }
                 ]
+              },
+              {
+                "type": "SizedBox",
+                "height": 8.0
               },
               {
                 "type": "Column",
                 "children": [
                   {
-                    "type": "TextSpan",
-                    "text": "indented code ",
-                    "fontFamily": "monospace",
-                    "fontWeight": 400,
-                    "fontSize": 11.9,
-                    "color": "Color(0xdd000000)"
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "indented code ",
+                          "style": {
+                            "fontFamily": "monospace",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 11.9,
+                            "color": "Color(0xdd000000)"
+                          }
+                        }
+                      }
+                    ]
                   }
                 ]
+              },
+              {
+                "type": "SizedBox",
+                "height": 8.0
               },
               {
                 "type": "DecoratedBox",
@@ -1598,12 +2558,22 @@
                         "type": "Column",
                         "children": [
                           {
-                            "type": "TextSpan",
-                            "text": "A block quote.",
-                            "fontFamily": ".SF UI Text",
-                            "fontWeight": 400,
-                            "fontSize": 14.0,
-                            "color": "Color(0xff666666)"
+                            "type": "Wrap",
+                            "children": [
+                              {
+                                "type": "RichText",
+                                "text": {
+                                  "type": "TextSpan",
+                                  "text": "A block quote.",
+                                  "style": {
+                                    "fontFamily": ".SF UI Text",
+                                    "fontWeight": "FontWeight.w400",
+                                    "fontSize": 14.0,
+                                    "color": "Color(0xdd000000)"
+                                  }
+                                }
+                              }
+                            ]
                           }
                         ]
                       }
@@ -1618,7 +2588,7 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-269",
+    "description": "List items, https://github.github.com/gfm/#example-269",
     "markdown": "  1.  A paragraph\n    with two lines.\n",
     "expected": [
       {
@@ -1628,12 +2598,22 @@
             "type": "Column",
             "children": [
               {
-                "type": "TextSpan",
-                "text": "A paragraph with two lines.",
-                "fontFamily": ".SF UI Text",
-                "fontWeight": 400,
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "type": "Wrap",
+                "children": [
+                  {
+                    "type": "RichText",
+                    "text": {
+                      "type": "TextSpan",
+                      "text": "A paragraph with two lines.",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    }
+                  }
+                ]
               }
             ]
           }
@@ -1642,7 +2622,7 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-270",
+    "description": "List items, https://github.github.com/gfm/#example-270",
     "markdown": "> 1. > Blockquote\ncontinued here.\n",
     "expected": [
       {
@@ -1669,12 +2649,22 @@
                                 "type": "Column",
                                 "children": [
                                   {
-                                    "type": "TextSpan",
-                                    "text": "Blockquote\ncontinued here.",
-                                    "fontFamily": ".SF UI Text",
-                                    "fontWeight": 400,
-                                    "fontSize": 14.0,
-                                    "color": "Color(0xff666666)"
+                                    "type": "Wrap",
+                                    "children": [
+                                      {
+                                        "type": "RichText",
+                                        "text": {
+                                          "type": "TextSpan",
+                                          "text": "Blockquote\ncontinued here.",
+                                          "style": {
+                                            "fontFamily": ".SF UI Text",
+                                            "fontWeight": "FontWeight.w400",
+                                            "fontSize": 14.0,
+                                            "color": "Color(0xdd000000)"
+                                          }
+                                        }
+                                      }
+                                    ]
                                   }
                                 ]
                               }
@@ -1693,7 +2683,7 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-271",
+    "description": "List items, https://github.github.com/gfm/#example-271",
     "markdown": "> 1. > Blockquote\n> continued here.\n",
     "expected": [
       {
@@ -1720,12 +2710,22 @@
                                 "type": "Column",
                                 "children": [
                                   {
-                                    "type": "TextSpan",
-                                    "text": "Blockquote\ncontinued here.",
-                                    "fontFamily": ".SF UI Text",
-                                    "fontWeight": 400,
-                                    "fontSize": 14.0,
-                                    "color": "Color(0xff666666)"
+                                    "type": "Wrap",
+                                    "children": [
+                                      {
+                                        "type": "RichText",
+                                        "text": {
+                                          "type": "TextSpan",
+                                          "text": "Blockquote\ncontinued here.",
+                                          "style": {
+                                            "fontFamily": ".SF UI Text",
+                                            "fontWeight": "FontWeight.w400",
+                                            "fontSize": 14.0,
+                                            "color": "Color(0xdd000000)"
+                                          }
+                                        }
+                                      }
+                                    ]
                                   }
                                 ]
                               }
@@ -1744,7 +2744,7 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-272",
+    "description": "List items, https://github.github.com/gfm/#example-272",
     "markdown": "- foo\n  - bar\n    - baz\n      - boo\n",
     "expected": [
       {
@@ -1754,64 +2754,25 @@
             "type": "Column",
             "children": [
               {
-                "type": "TextSpan",
-                "text": "foo",
-                "fontFamily": ".SF UI Text",
-                "fontWeight": 400,
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
-              },
-              {
-                "type": "Column",
+                "type": "Wrap",
                 "children": [
                   {
-                    "type": "Column",
-                    "children": [
-                      {
-                        "type": "TextSpan",
-                        "text": "bar",
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": 400,
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
-                      },
-                      {
-                        "type": "Column",
-                        "children": [
-                          {
-                            "type": "Column",
-                            "children": [
-                              {
-                                "type": "TextSpan",
-                                "text": "baz",
-                                "fontFamily": ".SF UI Text",
-                                "fontWeight": 400,
-                                "fontSize": 14.0,
-                                "color": "Color(0xdd000000)"
-                              },
-                              {
-                                "type": "Column",
-                                "children": [
-                                  {
-                                    "type": "Column",
-                                    "children": [
-                                      {
-                                        "type": "TextSpan",
-                                        "text": "boo",
-                                        "fontFamily": ".SF UI Text",
-                                        "fontWeight": 400,
-                                        "fontSize": 14.0,
-                                        "color": "Color(0xdd000000)"
-                                      }
-                                    ]
-                                  }
-                                ]
-                              }
-                            ]
+                    "type": "RichText",
+                    "text": {
+                      "type": "TextSpan",
+                      "children": [
+                        {
+                          "type": "TextSpan",
+                          "text": "foo",
+                          "style": {
+                            "fontFamily": ".SF UI Text",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 14.0,
+                            "color": "Color(0xdd000000)"
                           }
-                        ]
-                      }
-                    ]
+                        }
+                      ]
+                    }
                   }
                 ]
               }
@@ -1822,7 +2783,7 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-273",
+    "description": "List items, https://github.github.com/gfm/#example-273",
     "markdown": "- foo\n - bar\n  - baz\n   - boo\n",
     "expected": [
       {
@@ -1832,91 +2793,101 @@
             "type": "Column",
             "children": [
               {
-                "type": "TextSpan",
-                "text": "foo",
-                "fontFamily": ".SF UI Text",
-                "fontWeight": 400,
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
-              }
-            ]
-          },
-          {
-            "type": "Column",
-            "children": [
-              {
-                "type": "TextSpan",
-                "text": "bar",
-                "fontFamily": ".SF UI Text",
-                "fontWeight": 400,
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
-              }
-            ]
-          },
-          {
-            "type": "Column",
-            "children": [
-              {
-                "type": "TextSpan",
-                "text": "baz",
-                "fontFamily": ".SF UI Text",
-                "fontWeight": 400,
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
-              }
-            ]
-          },
-          {
-            "type": "Column",
-            "children": [
-              {
-                "type": "TextSpan",
-                "text": "boo",
-                "fontFamily": ".SF UI Text",
-                "fontWeight": 400,
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "description": "https://github.github.com/gfm/#example-274",
-    "markdown": "10) foo\n    - bar\n",
-    "expected": [
-      {
-        "type": "Column",
-        "children": [
-          {
-            "type": "Column",
-            "children": [
-              {
-                "type": "TextSpan",
-                "text": "foo",
-                "fontFamily": ".SF UI Text",
-                "fontWeight": 400,
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
-              },
-              {
-                "type": "Column",
+                "type": "Wrap",
                 "children": [
                   {
-                    "type": "Column",
-                    "children": [
-                      {
-                        "type": "TextSpan",
-                        "text": "bar",
+                    "type": "RichText",
+                    "text": {
+                      "type": "TextSpan",
+                      "text": "foo",
+                      "style": {
                         "fontFamily": ".SF UI Text",
-                        "fontWeight": 400,
+                        "fontWeight": "FontWeight.w400",
                         "fontSize": 14.0,
                         "color": "Color(0xdd000000)"
                       }
-                    ]
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "SizedBox",
+            "height": 8.0
+          },
+          {
+            "type": "Column",
+            "children": [
+              {
+                "type": "Wrap",
+                "children": [
+                  {
+                    "type": "RichText",
+                    "text": {
+                      "type": "TextSpan",
+                      "text": "bar",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "SizedBox",
+            "height": 8.0
+          },
+          {
+            "type": "Column",
+            "children": [
+              {
+                "type": "Wrap",
+                "children": [
+                  {
+                    "type": "RichText",
+                    "text": {
+                      "type": "TextSpan",
+                      "text": "baz",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "SizedBox",
+            "height": 8.0
+          },
+          {
+            "type": "Column",
+            "children": [
+              {
+                "type": "Wrap",
+                "children": [
+                  {
+                    "type": "RichText",
+                    "text": {
+                      "type": "TextSpan",
+                      "text": "boo",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    }
                   }
                 ]
               }
@@ -1927,7 +2898,46 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-275",
+    "description": "List items, https://github.github.com/gfm/#example-274",
+    "markdown": "10) foo\n    - bar\n",
+    "expected": [
+      {
+        "type": "Column",
+        "children": [
+          {
+            "type": "Column",
+            "children": [
+              {
+                "type": "Wrap",
+                "children": [
+                  {
+                    "type": "RichText",
+                    "text": {
+                      "type": "TextSpan",
+                      "children": [
+                        {
+                          "type": "TextSpan",
+                          "text": "foo",
+                          "style": {
+                            "fontFamily": ".SF UI Text",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 14.0,
+                            "color": "Color(0xdd000000)"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "List items, https://github.github.com/gfm/#example-275",
     "markdown": "10) foo\n   - bar\n",
     "expected": [
       {
@@ -1937,16 +2947,30 @@
             "type": "Column",
             "children": [
               {
-                "type": "TextSpan",
-                "text": "foo",
-                "fontFamily": ".SF UI Text",
-                "fontWeight": 400,
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "type": "Wrap",
+                "children": [
+                  {
+                    "type": "RichText",
+                    "text": {
+                      "type": "TextSpan",
+                      "text": "foo",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    }
+                  }
+                ]
               }
             ]
           }
         ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
       },
       {
         "type": "Column",
@@ -1955,12 +2979,22 @@
             "type": "Column",
             "children": [
               {
-                "type": "TextSpan",
-                "text": "bar",
-                "fontFamily": ".SF UI Text",
-                "fontWeight": 400,
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "type": "Wrap",
+                "children": [
+                  {
+                    "type": "RichText",
+                    "text": {
+                      "type": "TextSpan",
+                      "text": "bar",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    }
+                  }
+                ]
               }
             ]
           }
@@ -1969,7 +3003,7 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-276",
+    "description": "List items, https://github.github.com/gfm/#example-276",
     "markdown": "- - foo\n",
     "expected": [
       {
@@ -1985,12 +3019,22 @@
                     "type": "Column",
                     "children": [
                       {
-                        "type": "TextSpan",
-                        "text": "foo",
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": 400,
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
+                        "type": "Wrap",
+                        "children": [
+                          {
+                            "type": "RichText",
+                            "text": {
+                              "type": "TextSpan",
+                              "text": "foo",
+                              "style": {
+                                "fontFamily": ".SF UI Text",
+                                "fontWeight": "FontWeight.w400",
+                                "fontSize": 14.0,
+                                "color": "Color(0xdd000000)"
+                              }
+                            }
+                          }
+                        ]
                       }
                     ]
                   }
@@ -2003,7 +3047,7 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-277",
+    "description": "List items, https://github.github.com/gfm/#example-277",
     "markdown": "1. - 2. foo\n",
     "expected": [
       {
@@ -2025,12 +3069,22 @@
                             "type": "Column",
                             "children": [
                               {
-                                "type": "TextSpan",
-                                "text": "foo",
-                                "fontFamily": ".SF UI Text",
-                                "fontWeight": 400,
-                                "fontSize": 14.0,
-                                "color": "Color(0xdd000000)"
+                                "type": "Wrap",
+                                "children": [
+                                  {
+                                    "type": "RichText",
+                                    "text": {
+                                      "type": "TextSpan",
+                                      "text": "foo",
+                                      "style": {
+                                        "fontFamily": ".SF UI Text",
+                                        "fontWeight": "FontWeight.w400",
+                                        "fontSize": 14.0,
+                                        "color": "Color(0xdd000000)"
+                                      }
+                                    }
+                                  }
+                                ]
                               }
                             ]
                           }
@@ -2047,7 +3101,7 @@
     ]
   },
   {
-    "description": "https://github.github.com/gfm/#example-278",
+    "description": "List items, https://github.github.com/gfm/#example-278",
     "markdown": "- # Foo\n- Bar\n  ---\n  baz\n",
     "expected": [
       {
@@ -2060,16 +3114,30 @@
                 "type": "Column",
                 "children": [
                   {
-                    "type": "TextSpan",
-                    "text": "Foo",
-                    "fontFamily": ".SF UI Display",
-                    "fontWeight": 400,
-                    "fontSize": 24.0,
-                    "color": "Color(0xdd000000)"
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "Foo",
+                          "style": {
+                            "fontFamily": ".SF UI Display",
+                            "fontWeight": "FontWeight.w400",
+                            "fontSize": 24.0,
+                            "color": "Color(0xdd000000)"
+                          }
+                        }
+                      }
+                    ]
                   }
                 ]
               }
             ]
+          },
+          {
+            "type": "SizedBox",
+            "height": 8.0
           },
           {
             "type": "Column",
@@ -2078,22 +3146,42 @@
                 "type": "Column",
                 "children": [
                   {
-                    "type": "TextSpan",
-                    "text": "Bar",
-                    "fontFamily": ".SF UI Display",
-                    "fontWeight": 500,
-                    "fontSize": 20.0,
-                    "color": "Color(0xdd000000)"
+                    "type": "Wrap",
+                    "children": [
+                      {
+                        "type": "RichText",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "Bar",
+                          "style": {
+                            "fontFamily": ".SF UI Display",
+                            "fontWeight": "FontWeight.w500",
+                            "fontSize": 20.0,
+                            "color": "Color(0xdd000000)"
+                          }
+                        }
+                      }
+                    ]
                   }
                 ]
               },
               {
-                "type": "TextSpan",
-                "text": "baz",
-                "fontFamily": ".SF UI Text",
-                "fontWeight": 400,
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "type": "Wrap",
+                "children": [
+                  {
+                    "type": "RichText",
+                    "text": {
+                      "type": "TextSpan",
+                      "text": "baz",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    }
+                  }
+                ]
               }
             ]
           }

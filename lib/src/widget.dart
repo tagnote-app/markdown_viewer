@@ -27,15 +27,20 @@ class _MarkdownViewerState extends State<MarkdownViewer> {
   Widget build(BuildContext context) {
     _parseMarkdown();
 
-    if (_children.length == 1) {
-      return _children.single;
+    Widget widget;
+    if (_children.length > 1) {
+      widget = Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: _children,
+      );
+    } else if (_children.length == 1) {
+      widget = _children.single;
+    } else {
+      widget = const SizedBox.shrink();
     }
 
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: _children,
-    );
+    return widget;
   }
 
   void _parseMarkdown() {

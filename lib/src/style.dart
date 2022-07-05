@@ -23,9 +23,13 @@ class MarkdownStyle {
     this.htmlBlock,
     this.inlineCode,
     this.codeBlock,
-    this.blockquoteDecoration = const BoxDecoration(),
-    this.blockquotePadding = EdgeInsets.zero,
-  });
+    BoxDecoration? blockquoteDecoration,
+    EdgeInsets? blockquotePadding,
+    double? blockSpacing,
+  })  : blockSpacing = blockSpacing ?? 8.0,
+        blockquotePadding = blockquotePadding ?? const EdgeInsets.all(8),
+        blockquoteDecoration = blockquoteDecoration ??
+            const BoxDecoration(color: Color(0xffeeeeee));
 
   /// Creates a [MarkdownStyle] from the [TextStyle]s in the provided [theme].
   /// Also it allows to set individual [TextStyle]s which will be merged into
@@ -54,6 +58,7 @@ class MarkdownStyle {
     TextStyle? codeBlock,
     BoxDecoration? blockquoteDecoration,
     EdgeInsets? blockquotePadding,
+    double? blockSpacing,
   }) {
     return MarkdownStyle(
       paragraph: theme.textTheme.bodyText2?.merge(paragraph),
@@ -70,17 +75,14 @@ class MarkdownStyle {
       emphasis: const TextStyle(fontStyle: FontStyle.italic).merge(emphasis),
       strongEmphasis:
           const TextStyle(fontWeight: FontWeight.w700).merge(strongEmphasis),
-      link: TextStyle(color: theme.colorScheme.primary).merge(link),
+      link: const TextStyle(color: Color(0xff2196f3)).merge(link),
       inlineHtml: _generateCodeStyle(theme, true)?.merge(inlineHtml),
       htmlBlock: _generateCodeStyle(theme, false)?.merge(htmlBlock),
       inlineCode: _generateCodeStyle(theme, true)?.merge(inlineCode),
       codeBlock: _generateCodeStyle(theme, false)?.merge(codeBlock),
-      blockquoteDecoration: blockquoteDecoration ??
-          BoxDecoration(
-            color: theme.colorScheme.primary.withAlpha(100),
-            borderRadius: BorderRadius.circular(2.0),
-          ),
-      blockquotePadding: blockquotePadding ?? const EdgeInsets.all(8),
+      blockquoteDecoration: blockquoteDecoration,
+      blockquotePadding: blockquotePadding,
+      blockSpacing: blockSpacing,
     );
   }
 
@@ -106,6 +108,9 @@ class MarkdownStyle {
   final TextStyle? codeBlock;
   final BoxDecoration blockquoteDecoration;
   final EdgeInsets blockquotePadding;
+
+  /// The vertical space between two block elements.
+  final double blockSpacing;
 
   /// Generates a [TextStyle].
   TextStyle style(md.Element element, TextStyle? parentStyle) {
@@ -191,7 +196,7 @@ class MarkdownStyle {
     }
 
     // Make sure to use TextStyle inherit from ancestors to overwite paragraph.
-    if (type == 'paragraph' || paragraph != null) {
+    if (type == 'paragraph' && paragraph != null) {
       style = paragraph!.merge(style);
     }
 
@@ -208,6 +213,6 @@ TextStyle? _generateCodeStyle(ThemeData theme, bool withBackground) {
     return style;
   }
   return style?.copyWith(
-    backgroundColor: theme.cardTheme.color ?? theme.cardColor,
+    backgroundColor: const Color(0xfff8f09e),
   );
 }

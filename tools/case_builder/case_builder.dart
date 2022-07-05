@@ -1,11 +1,16 @@
 import 'dart:convert';
 import 'dart:io';
-
 import 'package:markdown/markdown.dart';
 
-import 'builder/builder.dart';
+import 'dummy_builder.dart';
+
+const caseBuilderDisabled = true;
 
 void main() {
+  if (caseBuilderDisabled) {
+    return;
+  }
+
   // generateTestCases('common_mark');
   generateTestCases('gfm');
 }
@@ -32,7 +37,7 @@ void generateTestCases(String flavorName) {
     final markdown = item['markdown'] as String;
     testCases[sectionName] ??= <Map<String, dynamic>>[];
     testCases[sectionName]!.add({
-      'description': '$url/#example-${item['example']}',
+      'description': '$sectionName, $url/#example-${item['example']}',
       'markdown': markdown,
       "expected": _renderTestCase(markdown),
     });
@@ -52,5 +57,8 @@ String _fileNameFromSection(String section) =>
 /// Renders Markdown String to expected data.
 List<Map<String, dynamic>> _renderTestCase(String markdown) {
   final nodes = Document().parseLines(markdown);
-  return TestCaseBuilder().build(nodes);
+  return MarkdownBuilder(
+    styleSheet: MarkdownStyle.fromTheme(themeData),
+    onTapLink: (_, __, ___) {},
+  ).build(nodes).map((e) => e.toMap()).toList();
 }

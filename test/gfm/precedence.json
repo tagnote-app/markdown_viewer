@@ -1,6 +1,6 @@
 [
   {
-    "description": "https://github.github.com/gfm/#example-12",
+    "description": "Precedence, https://github.github.com/gfm/#example-12",
     "markdown": "- `one\n- two`\n",
     "expected": [
       {
@@ -10,25 +10,49 @@
             "type": "Column",
             "children": [
               {
-                "type": "TextSpan",
-                "text": "`one",
-                "fontFamily": ".SF UI Text",
-                "fontWeight": 400,
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "type": "Wrap",
+                "children": [
+                  {
+                    "type": "RichText",
+                    "text": {
+                      "type": "TextSpan",
+                      "text": "`one",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    }
+                  }
+                ]
               }
             ]
+          },
+          {
+            "type": "SizedBox",
+            "height": 8.0
           },
           {
             "type": "Column",
             "children": [
               {
-                "type": "TextSpan",
-                "text": "two`",
-                "fontFamily": ".SF UI Text",
-                "fontWeight": 400,
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "type": "Wrap",
+                "children": [
+                  {
+                    "type": "RichText",
+                    "text": {
+                      "type": "TextSpan",
+                      "text": "two`",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    }
+                  }
+                ]
               }
             ]
           }
