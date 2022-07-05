@@ -11,10 +11,12 @@ class MarkdownBuilder implements md.NodeVisitor {
     required MarkdownStyle styleSheet,
     MarkdownTapLinkCallback? onTapLink,
     MarkdownListItemMarkerBuilder? listItemMarkerBuilder,
+    MarkdownCheckboxBuilder? checkboxBuilder,
     this.selectable = false,
   })  : _styleSheet = styleSheet,
         _onTapLink = onTapLink,
-        _listItemMarkerBuilder = listItemMarkerBuilder;
+        _listItemMarkerBuilder = listItemMarkerBuilder,
+        _checkboxBuilder = checkboxBuilder;
 
   final bool selectable;
 
@@ -27,8 +29,9 @@ class MarkdownBuilder implements md.NodeVisitor {
   /// Called when the user taps a link.
   final MarkdownTapLinkCallback? _onTapLink;
 
-  /// Called when building a custom bullet.
   final MarkdownListItemMarkerBuilder? _listItemMarkerBuilder;
+
+  final MarkdownCheckboxBuilder? _checkboxBuilder;
 
   final MarkdownStyle _styleSheet;
 
@@ -133,10 +136,14 @@ class MarkdownBuilder implements md.NodeVisitor {
         assert(_listStrack.isNotEmpty);
         _listStrack.removeLast();
       } else if (type == 'listItem' && _listStrack.isNotEmpty) {
-        final itemMarker = _buildListItemMarker(
-          _listStrack.last,
-          current.attributes['number'],
-        );
+        final itemMarker = current.attributes['taskListItem'] == null
+            ? _buildListItemMarker(
+                _listStrack.last,
+                current.attributes['number'],
+              )
+            : _buildCheckbox(
+                current.attributes['taskListItem'] == 'checked',
+              );
 
         blockChild = Row(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -220,6 +227,21 @@ class MarkdownBuilder implements md.NodeVisitor {
       ),
     );
   }
+
+  Widget _buildCheckbox(bool checked) {
+    if (_checkboxBuilder != null) {
+      return _checkboxBuilder!(checked);
+    }
+
+    return Padding(
+      padding: _styleSheet.listItemMarkerPadding,
+      child: Icon(
+        checked ? Icons.check_box : Icons.check_box_outline_blank,
+        size: _styleSheet.checkbox.fontSize,
+        color: _styleSheet.checkbox.color,
+      ),
+    );
+  }
 }
 
 /// Callback when the user taps a link.
@@ -228,5 +250,7 @@ typedef MarkdownTapLinkCallback = void Function(
 
 typedef MarkdownListItemMarkerBuilder = Widget Function(
     ListType style, String? number);
+
+typedef MarkdownCheckboxBuilder = Widget Function(bool checked);
 
 enum ListType { ordered, unordered }

@@ -10,13 +10,17 @@ class MarkdownViewer extends StatefulWidget {
     this.styleSheet,
     this.onTapLink,
     this.listItemMarkerBuilder,
+    this.checkboxBuilder,
+    this.enableTaskList = false,
     Key? key,
   }) : super(key: key);
 
   final String data;
+  final bool enableTaskList;
   final MarkdownStyle? styleSheet;
   final MarkdownTapLinkCallback? onTapLink;
   final MarkdownListItemMarkerBuilder? listItemMarkerBuilder;
+  final MarkdownCheckboxBuilder? checkboxBuilder;
 
   @override
   State<MarkdownViewer> createState() => _MarkdownViewerState();
@@ -46,7 +50,8 @@ class _MarkdownViewerState extends State<MarkdownViewer> {
   }
 
   void _parseMarkdown() {
-    final md.Document document = md.Document();
+    final md.Document document =
+        md.Document(enableTaskList: widget.enableTaskList);
     final theme = Theme.of(context);
     final astNodes = document.parseLines(widget.data);
 
@@ -65,6 +70,7 @@ class _MarkdownViewerState extends State<MarkdownViewer> {
       styleSheet: styleSheet,
       onTapLink: widget.onTapLink,
       listItemMarkerBuilder: widget.listItemMarkerBuilder,
+      checkboxBuilder: widget.checkboxBuilder,
     );
     _children = builder.build(astNodes);
   }

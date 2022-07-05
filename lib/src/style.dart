@@ -30,6 +30,7 @@ class MarkdownStyle {
     double? blockSpacing,
     EdgeInsets? listItemMarkerPadding,
     double? listItemMinIndent,
+    TextStyle? checkbox,
   })  : blockSpacing = blockSpacing ?? 8.0,
         blockquotePadding = blockquotePadding ?? const EdgeInsets.all(8),
         blockquoteDecoration = blockquoteDecoration ??
@@ -41,7 +42,8 @@ class MarkdownStyle {
               ),
             ),
         listItemMarkerPadding = const EdgeInsets.only(right: 12.0),
-        listItemMinIndent = listItemMinIndent ?? 20.0;
+        listItemMinIndent = listItemMinIndent ?? 20.0,
+        checkbox = checkbox ?? const TextStyle(fontSize: 18.0);
 
   /// Creates a [MarkdownStyle] from the [TextStyle]s in the provided [theme].
   /// Also it allows to set individual [TextStyle]s which will be merged into
@@ -75,6 +77,7 @@ class MarkdownStyle {
     double? blockSpacing,
     EdgeInsets? listItemMarkerPadding,
     double? listItemMinIndent,
+    TextStyle? checkbox,
   }) {
     return MarkdownStyle(
       paragraph: theme.textTheme.bodyText2?.merge(paragraph),
@@ -103,6 +106,8 @@ class MarkdownStyle {
       blockSpacing: blockSpacing,
       listItemMarkerPadding: listItemMarkerPadding,
       listItemMinIndent: listItemMinIndent,
+      checkbox: const TextStyle(fontSize: 18.0, color: Color(0xff2196f3))
+          .merge(checkbox),
     );
   }
 
@@ -131,6 +136,7 @@ class MarkdownStyle {
   final BoxDecoration horizontalRuleDecoration;
   final EdgeInsets blockquotePadding;
   final EdgeInsets listItemMarkerPadding;
+  final TextStyle checkbox;
 
   /// The vertical space between two block elements.
   final double blockSpacing;
