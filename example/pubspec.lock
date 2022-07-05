@@ -86,7 +86,7 @@ packages:
     description:
       path: "."
       ref: refactor
-      resolved-ref: fe50fac68155448ba8a11f0b28cd1acfda5b30ca
+      resolved-ref: "04223d4ad58e0cd319e6b0a4a0718fa1fc6d435c"
       url: "git@github.com:chenzhiguang/dart-markdown.git"
     source: git
     version: "6.0.0-dev"
