@@ -13,41 +13,14 @@
                 "type": "RichText",
                 "text": {
                   "type": "TextSpan",
-                  "children": [
-                    {
-                      "type": "TextSpan",
-                      "text": "<a>",
-                      "style": {
-                        "fontFamily": "monospace",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 11.9,
-                        "color": "Color(0xdd000000)",
-                        "backgroundColor": "Color(0xfff8f09e)"
-                      }
-                    },
-                    {
-                      "type": "TextSpan",
-                      "text": "<bab>",
-                      "style": {
-                        "fontFamily": "monospace",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 11.9,
-                        "color": "Color(0xdd000000)",
-                        "backgroundColor": "Color(0xfff8f09e)"
-                      }
-                    },
-                    {
-                      "type": "TextSpan",
-                      "text": "<c2c>",
-                      "style": {
-                        "fontFamily": "monospace",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 11.9,
-                        "color": "Color(0xdd000000)",
-                        "backgroundColor": "Color(0xfff8f09e)"
-                      }
-                    }
-                  ]
+                  "text": "<a><bab><c2c>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)",
+                    "backgroundColor": "Color(0xfff8f09e)"
+                  }
                 }
               }
             ]
@@ -70,30 +43,14 @@
                 "type": "RichText",
                 "text": {
                   "type": "TextSpan",
-                  "children": [
-                    {
-                      "type": "TextSpan",
-                      "text": "<a/>",
-                      "style": {
-                        "fontFamily": "monospace",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 11.9,
-                        "color": "Color(0xdd000000)",
-                        "backgroundColor": "Color(0xfff8f09e)"
-                      }
-                    },
-                    {
-                      "type": "TextSpan",
-                      "text": "<b2/>",
-                      "style": {
-                        "fontFamily": "monospace",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 11.9,
-                        "color": "Color(0xdd000000)",
-                        "backgroundColor": "Color(0xfff8f09e)"
-                      }
-                    }
-                  ]
+                  "text": "<a/><b2/>",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)",
+                    "backgroundColor": "Color(0xfff8f09e)"
+                  }
                 }
               }
             ]
@@ -116,30 +73,14 @@
                 "type": "RichText",
                 "text": {
                   "type": "TextSpan",
-                  "children": [
-                    {
-                      "type": "TextSpan",
-                      "text": "<a  />",
-                      "style": {
-                        "fontFamily": "monospace",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 11.9,
-                        "color": "Color(0xdd000000)",
-                        "backgroundColor": "Color(0xfff8f09e)"
-                      }
-                    },
-                    {
-                      "type": "TextSpan",
-                      "text": "<b2 data=\"foo\" >",
-                      "style": {
-                        "fontFamily": "monospace",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 11.9,
-                        "color": "Color(0xdd000000)",
-                        "backgroundColor": "Color(0xfff8f09e)"
-                      }
-                    }
-                  ]
+                  "text": "<a  /><b2 data=\"foo\" >",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)",
+                    "backgroundColor": "Color(0xfff8f09e)"
+                  }
                 }
               }
             ]
@@ -382,30 +323,14 @@
                 "type": "RichText",
                 "text": {
                   "type": "TextSpan",
-                  "children": [
-                    {
-                      "type": "TextSpan",
-                      "text": "</a>",
-                      "style": {
-                        "fontFamily": "monospace",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 11.9,
-                        "color": "Color(0xdd000000)",
-                        "backgroundColor": "Color(0xfff8f09e)"
-                      }
-                    },
-                    {
-                      "type": "TextSpan",
-                      "text": "</foo >",
-                      "style": {
-                        "fontFamily": "monospace",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 11.9,
-                        "color": "Color(0xdd000000)",
-                        "backgroundColor": "Color(0xfff8f09e)"
-                      }
-                    }
-                  ]
+                  "text": "</a></foo >",
+                  "style": {
+                    "fontFamily": "monospace",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 11.9,
+                    "color": "Color(0xdd000000)",
+                    "backgroundColor": "Color(0xfff8f09e)"
+                  }
                 }
               }
             ]

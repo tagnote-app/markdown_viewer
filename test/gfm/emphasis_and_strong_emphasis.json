@@ -595,41 +595,14 @@
                 "type": "RichText",
                 "text": {
                   "type": "TextSpan",
-                  "children": [
-                    {
-                      "type": "TextSpan",
-                      "text": "(",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "fontStyle": "FontStyle.italic",
-                        "color": "Color(0xdd000000)"
-                      }
-                    },
-                    {
-                      "type": "TextSpan",
-                      "text": "foo",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "fontStyle": "FontStyle.italic",
-                        "color": "Color(0xdd000000)"
-                      }
-                    },
-                    {
-                      "type": "TextSpan",
-                      "text": ")",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "fontStyle": "FontStyle.italic",
-                        "color": "Color(0xdd000000)"
-                      }
-                    }
-                  ]
+                  "text": "(foo)",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "fontStyle": "FontStyle.italic",
+                    "color": "Color(0xdd000000)"
+                  }
                 }
               }
             ]
@@ -755,41 +728,14 @@
                 "type": "RichText",
                 "text": {
                   "type": "TextSpan",
-                  "children": [
-                    {
-                      "type": "TextSpan",
-                      "text": "(",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "fontStyle": "FontStyle.italic",
-                        "color": "Color(0xdd000000)"
-                      }
-                    },
-                    {
-                      "type": "TextSpan",
-                      "text": "foo",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "fontStyle": "FontStyle.italic",
-                        "color": "Color(0xdd000000)"
-                      }
-                    },
-                    {
-                      "type": "TextSpan",
-                      "text": ")",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "fontStyle": "FontStyle.italic",
-                        "color": "Color(0xdd000000)"
-                      }
-                    }
-                  ]
+                  "text": "(foo)",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "fontStyle": "FontStyle.italic",
+                    "color": "Color(0xdd000000)"
+                  }
                 }
               }
             ]
@@ -1279,38 +1225,13 @@
                 "type": "RichText",
                 "text": {
                   "type": "TextSpan",
-                  "children": [
-                    {
-                      "type": "TextSpan",
-                      "text": "foo, ",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w700",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
-                      }
-                    },
-                    {
-                      "type": "TextSpan",
-                      "text": "bar",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w700",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
-                      }
-                    },
-                    {
-                      "type": "TextSpan",
-                      "text": ", baz",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w700",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
-                      }
-                    }
-                  ]
+                  "text": "foo, bar, baz",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w700",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
                 }
               }
             ]
@@ -2047,41 +1968,14 @@
                 "type": "RichText",
                 "text": {
                   "type": "TextSpan",
-                  "children": [
-                    {
-                      "type": "TextSpan",
-                      "text": "foo ",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "fontStyle": "FontStyle.italic",
-                        "color": "Color(0xdd000000)"
-                      }
-                    },
-                    {
-                      "type": "TextSpan",
-                      "text": "bar",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "fontStyle": "FontStyle.italic",
-                        "color": "Color(0xdd000000)"
-                      }
-                    },
-                    {
-                      "type": "TextSpan",
-                      "text": " baz",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "fontStyle": "FontStyle.italic",
-                        "color": "Color(0xdd000000)"
-                      }
-                    }
-                  ]
+                  "text": "foo bar baz",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "fontStyle": "FontStyle.italic",
+                    "color": "Color(0xdd000000)"
+                  }
                 }
               }
             ]
@@ -2104,30 +1998,14 @@
                 "type": "RichText",
                 "text": {
                   "type": "TextSpan",
-                  "children": [
-                    {
-                      "type": "TextSpan",
-                      "text": "foo",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "fontStyle": "FontStyle.italic",
-                        "color": "Color(0xdd000000)"
-                      }
-                    },
-                    {
-                      "type": "TextSpan",
-                      "text": " bar",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "fontStyle": "FontStyle.italic",
-                        "color": "Color(0xdd000000)"
-                      }
-                    }
-                  ]
+                  "text": "foo bar",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "fontStyle": "FontStyle.italic",
+                    "color": "Color(0xdd000000)"
+                  }
                 }
               }
             ]
@@ -2150,30 +2028,14 @@
                 "type": "RichText",
                 "text": {
                   "type": "TextSpan",
-                  "children": [
-                    {
-                      "type": "TextSpan",
-                      "text": "foo ",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "fontStyle": "FontStyle.italic",
-                        "color": "Color(0xdd000000)"
-                      }
-                    },
-                    {
-                      "type": "TextSpan",
-                      "text": "bar",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "fontStyle": "FontStyle.italic",
-                        "color": "Color(0xdd000000)"
-                      }
-                    }
-                  ]
+                  "text": "foo bar",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "fontStyle": "FontStyle.italic",
+                    "color": "Color(0xdd000000)"
+                  }
                 }
               }
             ]
@@ -2601,29 +2463,7 @@
                     },
                     {
                       "type": "TextSpan",
-                      "text": "bar ",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w700",
-                        "fontSize": 14.0,
-                        "fontStyle": "FontStyle.italic",
-                        "color": "Color(0xdd000000)"
-                      }
-                    },
-                    {
-                      "type": "TextSpan",
-                      "text": "baz",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w700",
-                        "fontSize": 14.0,
-                        "fontStyle": "FontStyle.italic",
-                        "color": "Color(0xdd000000)"
-                      }
-                    },
-                    {
-                      "type": "TextSpan",
-                      "text": " bim",
+                      "text": "bar baz bim",
                       "style": {
                         "fontFamily": ".SF UI Text",
                         "fontWeight": "FontWeight.w700",
@@ -2900,38 +2740,13 @@
                 "type": "RichText",
                 "text": {
                   "type": "TextSpan",
-                  "children": [
-                    {
-                      "type": "TextSpan",
-                      "text": "foo ",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w700",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
-                      }
-                    },
-                    {
-                      "type": "TextSpan",
-                      "text": "bar",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w700",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
-                      }
-                    },
-                    {
-                      "type": "TextSpan",
-                      "text": " baz",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w700",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
-                      }
-                    }
-                  ]
+                  "text": "foo bar baz",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w700",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
                 }
               }
             ]
@@ -2954,28 +2769,13 @@
                 "type": "RichText",
                 "text": {
                   "type": "TextSpan",
-                  "children": [
-                    {
-                      "type": "TextSpan",
-                      "text": "foo",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w700",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
-                      }
-                    },
-                    {
-                      "type": "TextSpan",
-                      "text": " bar",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w700",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
-                      }
-                    }
-                  ]
+                  "text": "foo bar",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w700",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
                 }
               }
             ]
@@ -2998,28 +2798,13 @@
                 "type": "RichText",
                 "text": {
                   "type": "TextSpan",
-                  "children": [
-                    {
-                      "type": "TextSpan",
-                      "text": "foo ",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w700",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
-                      }
-                    },
-                    {
-                      "type": "TextSpan",
-                      "text": "bar",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w700",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
-                      }
-                    }
-                  ]
+                  "text": "foo bar",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w700",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
                 }
               }
             ]
@@ -3255,29 +3040,7 @@
                     },
                     {
                       "type": "TextSpan",
-                      "text": "bar ",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w700",
-                        "fontSize": 14.0,
-                        "fontStyle": "FontStyle.italic",
-                        "color": "Color(0xdd000000)"
-                      }
-                    },
-                    {
-                      "type": "TextSpan",
-                      "text": "baz",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w700",
-                        "fontSize": 14.0,
-                        "fontStyle": "FontStyle.italic",
-                        "color": "Color(0xdd000000)"
-                      }
-                    },
-                    {
-                      "type": "TextSpan",
-                      "text": " bim",
+                      "text": "bar baz bim",
                       "style": {
                         "fontFamily": ".SF UI Text",
                         "fontWeight": "FontWeight.w700",

@@ -213,6 +213,29 @@ class TextStyle {
   final double? fontSize;
   final Color? color;
   final Color? backgroundColor;
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+    if (other.runtimeType != runtimeType) return false;
+    return other is TextStyle &&
+        other.color == color &&
+        other.backgroundColor == backgroundColor &&
+        other.fontSize == fontSize &&
+        other.fontWeight == fontWeight &&
+        other.fontStyle == fontStyle &&
+        other.fontFamily == fontFamily;
+  }
+
+  @override
+  int get hashCode => Object.hash(
+        color,
+        backgroundColor,
+        fontSize,
+        fontWeight,
+        fontStyle,
+        fontFamily,
+      );
 }
 
 class BlockWidget implements Widget {}
