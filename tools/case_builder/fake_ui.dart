@@ -64,9 +64,15 @@ class SelectableText extends Widget {
 }
 
 class Text extends Widget {
-  const Text(this.data);
+  const Text(
+    this.data, {
+    this.textAlign,
+    this.style,
+  });
 
   final String? data;
+  final TextAlign? textAlign;
+  final TextStyle? style;
 }
 
 class Padding extends SingleChildRenderObjectWidget {
@@ -95,6 +101,12 @@ class EdgeInsets extends EdgeInsetsGeometry {
         right = value,
         top = value,
         bottom = value;
+  const EdgeInsets.only({
+    this.left = 0.0,
+    this.top = 0.0,
+    this.right = 0.0,
+    this.bottom = 0.0,
+  });
 
   final double left;
   final double top;
@@ -176,6 +188,32 @@ class SizedBox extends SingleChildRenderObjectWidget {
   final double? width;
 
   final double? height;
+}
+
+class ConstrainedBox extends SingleChildRenderObjectWidget {
+  const ConstrainedBox({
+    required this.constraints,
+    Widget? child,
+  });
+
+  final BoxConstraints constraints;
+}
+
+abstract class Constraints {
+  const Constraints();
+}
+
+class BoxConstraints extends Constraints {
+  const BoxConstraints({
+    this.minWidth = 0.0,
+    this.maxWidth = double.infinity,
+    this.minHeight = 0.0,
+    this.maxHeight = double.infinity,
+  });
+  final double minWidth;
+  final double maxWidth;
+  final double minHeight;
+  final double maxHeight;
 }
 
 class Expanded extends Widget {

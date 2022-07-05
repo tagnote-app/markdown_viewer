@@ -477,25 +477,41 @@
         "type": "Column",
         "children": [
           {
-            "type": "Column",
+            "type": "Row",
             "children": [
               {
-                "type": "Wrap",
-                "children": [
-                  {
-                    "type": "RichText",
-                    "text": {
-                      "type": "TextSpan",
-                      "text": "foo",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
-                      }
+                "type": "ConstrainedBox",
+                "constraints": {
+                  "type": "BoxConstraints",
+                  "minWidth": 20.0,
+                  "minHeight": 0.0
+                }
+              },
+              {
+                "type": "Expanded",
+                "child": {
+                  "type": "Column",
+                  "children": [
+                    {
+                      "type": "Wrap",
+                      "children": [
+                        {
+                          "type": "RichText",
+                          "text": {
+                            "type": "TextSpan",
+                            "text": "foo",
+                            "style": {
+                              "fontFamily": ".SF UI Text",
+                              "fontWeight": "FontWeight.w400",
+                              "fontSize": 14.0,
+                              "color": "Color(0xdd000000)"
+                            }
+                          }
+                        }
+                      ]
                     }
-                  }
-                ]
+                  ]
+                }
               }
             ]
           }
@@ -527,25 +543,41 @@
         "type": "Column",
         "children": [
           {
-            "type": "Column",
+            "type": "Row",
             "children": [
               {
-                "type": "Wrap",
-                "children": [
-                  {
-                    "type": "RichText",
-                    "text": {
-                      "type": "TextSpan",
-                      "text": "bar",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
-                      }
+                "type": "ConstrainedBox",
+                "constraints": {
+                  "type": "BoxConstraints",
+                  "minWidth": 20.0,
+                  "minHeight": 0.0
+                }
+              },
+              {
+                "type": "Expanded",
+                "child": {
+                  "type": "Column",
+                  "children": [
+                    {
+                      "type": "Wrap",
+                      "children": [
+                        {
+                          "type": "RichText",
+                          "text": {
+                            "type": "TextSpan",
+                            "text": "bar",
+                            "style": {
+                              "fontFamily": ".SF UI Text",
+                              "fontWeight": "FontWeight.w400",
+                              "fontSize": 14.0,
+                              "color": "Color(0xdd000000)"
+                            }
+                          }
+                        }
+                      ]
                     }
-                  }
-                ]
+                  ]
+                }
               }
             ]
           }
@@ -691,25 +723,41 @@
         "type": "Column",
         "children": [
           {
-            "type": "Column",
+            "type": "Row",
             "children": [
               {
-                "type": "Wrap",
-                "children": [
-                  {
-                    "type": "RichText",
-                    "text": {
-                      "type": "TextSpan",
-                      "text": "Foo",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
-                      }
+                "type": "ConstrainedBox",
+                "constraints": {
+                  "type": "BoxConstraints",
+                  "minWidth": 20.0,
+                  "minHeight": 0.0
+                }
+              },
+              {
+                "type": "Expanded",
+                "child": {
+                  "type": "Column",
+                  "children": [
+                    {
+                      "type": "Wrap",
+                      "children": [
+                        {
+                          "type": "RichText",
+                          "text": {
+                            "type": "TextSpan",
+                            "text": "Foo",
+                            "style": {
+                              "fontFamily": ".SF UI Text",
+                              "fontWeight": "FontWeight.w400",
+                              "fontSize": 14.0,
+                              "color": "Color(0xdd000000)"
+                            }
+                          }
+                        }
+                      ]
                     }
-                  }
-                ]
+                  ]
+                }
               }
             ]
           }
@@ -741,25 +789,41 @@
         "type": "Column",
         "children": [
           {
-            "type": "Column",
+            "type": "Row",
             "children": [
               {
-                "type": "Wrap",
-                "children": [
-                  {
-                    "type": "RichText",
-                    "text": {
-                      "type": "TextSpan",
-                      "text": "Bar",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
-                      }
+                "type": "ConstrainedBox",
+                "constraints": {
+                  "type": "BoxConstraints",
+                  "minWidth": 20.0,
+                  "minHeight": 0.0
+                }
+              },
+              {
+                "type": "Expanded",
+                "child": {
+                  "type": "Column",
+                  "children": [
+                    {
+                      "type": "Wrap",
+                      "children": [
+                        {
+                          "type": "RichText",
+                          "text": {
+                            "type": "TextSpan",
+                            "text": "Bar",
+                            "style": {
+                              "fontFamily": ".SF UI Text",
+                              "fontWeight": "FontWeight.w400",
+                              "fontSize": 14.0,
+                              "color": "Color(0xdd000000)"
+                            }
+                          }
+                        }
+                      ]
                     }
-                  }
-                ]
+                  ]
+                }
               }
             ]
           }
@@ -775,25 +839,41 @@
         "type": "Column",
         "children": [
           {
-            "type": "Column",
+            "type": "Row",
             "children": [
               {
-                "type": "Wrap",
-                "children": [
-                  {
-                    "type": "RichText",
-                    "text": {
-                      "type": "TextSpan",
-                      "text": "Foo",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
-                      }
+                "type": "ConstrainedBox",
+                "constraints": {
+                  "type": "BoxConstraints",
+                  "minWidth": 20.0,
+                  "minHeight": 0.0
+                }
+              },
+              {
+                "type": "Expanded",
+                "child": {
+                  "type": "Column",
+                  "children": [
+                    {
+                      "type": "Wrap",
+                      "children": [
+                        {
+                          "type": "RichText",
+                          "text": {
+                            "type": "TextSpan",
+                            "text": "Foo",
+                            "style": {
+                              "fontFamily": ".SF UI Text",
+                              "fontWeight": "FontWeight.w400",
+                              "fontSize": 14.0,
+                              "color": "Color(0xdd000000)"
+                            }
+                          }
+                        }
+                      ]
                     }
-                  }
-                ]
+                  ]
+                }
               }
             ]
           },
@@ -802,20 +882,36 @@
             "height": 8.0
           },
           {
-            "type": "Column",
+            "type": "Row",
             "children": [
               {
-                "type": "Container",
-                "decoration": {
-                  "type": "BoxDecoration",
-                  "border": {
-                    "type": "Border",
-                    "top": {
-                      "type": "BorderSide",
-                      "width": 5.0,
-                      "color": "Color(0xffcccccc)"
+                "type": "ConstrainedBox",
+                "constraints": {
+                  "type": "BoxConstraints",
+                  "minWidth": 20.0,
+                  "minHeight": 0.0
+                }
+              },
+              {
+                "type": "Expanded",
+                "child": {
+                  "type": "Column",
+                  "children": [
+                    {
+                      "type": "Container",
+                      "decoration": {
+                        "type": "BoxDecoration",
+                        "border": {
+                          "type": "Border",
+                          "top": {
+                            "type": "BorderSide",
+                            "width": 5.0,
+                            "color": "Color(0xffcccccc)"
+                          }
+                        }
+                      }
                     }
-                  }
+                  ]
                 }
               }
             ]

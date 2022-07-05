@@ -9,12 +9,14 @@ class MarkdownViewer extends StatefulWidget {
     this.data, {
     this.styleSheet,
     this.onTapLink,
+    this.listItemMarkerBuilder,
     Key? key,
   }) : super(key: key);
 
   final String data;
   final MarkdownStyle? styleSheet;
   final MarkdownTapLinkCallback? onTapLink;
+  final MarkdownListItemMarkerBuilder? listItemMarkerBuilder;
 
   @override
   State<MarkdownViewer> createState() => _MarkdownViewerState();
@@ -62,6 +64,7 @@ class _MarkdownViewerState extends State<MarkdownViewer> {
     final builder = MarkdownBuilder(
       styleSheet: styleSheet,
       onTapLink: widget.onTapLink,
+      listItemMarkerBuilder: widget.listItemMarkerBuilder,
     );
     _children = builder.build(astNodes);
   }

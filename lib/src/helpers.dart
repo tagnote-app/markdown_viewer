@@ -130,8 +130,7 @@ bool isBlockElement(String type) => [
 // linkReferenceDefinitionDestination
 // linkReferenceDefinitionTitle
 
-bool isLinkElement(String type) => [
-      'link',
-      'autolink',
-      'extendedAutolink',
-    ].contains(type);
+bool isLinkElement(String type) =>
+    ['link', 'autolink', 'extendedAutolink'].contains(type);
+
+bool isListElement(String type) => ['bulletList', 'orderedList'].contains(type);

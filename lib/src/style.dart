@@ -23,10 +23,13 @@ class MarkdownStyle {
     this.htmlBlock,
     this.inlineCode,
     this.codeBlock,
+    this.listItemMarker,
     BoxDecoration? blockquoteDecoration,
     BoxDecoration? horizontalRuleDecoration,
     EdgeInsets? blockquotePadding,
     double? blockSpacing,
+    EdgeInsets? listItemMarkerPadding,
+    double? listItemMinIndent,
   })  : blockSpacing = blockSpacing ?? 8.0,
         blockquotePadding = blockquotePadding ?? const EdgeInsets.all(8),
         blockquoteDecoration = blockquoteDecoration ??
@@ -36,7 +39,9 @@ class MarkdownStyle {
               border: Border(
                 top: BorderSide(width: 5.0, color: Color(0xffcccccc)),
               ),
-            );
+            ),
+        listItemMarkerPadding = const EdgeInsets.only(right: 12.0),
+        listItemMinIndent = listItemMinIndent ?? 20.0;
 
   /// Creates a [MarkdownStyle] from the [TextStyle]s in the provided [theme].
   /// Also it allows to set individual [TextStyle]s which will be merged into
@@ -63,10 +68,13 @@ class MarkdownStyle {
     TextStyle? htmlBlock,
     TextStyle? inlineCode,
     TextStyle? codeBlock,
+    TextStyle? listItemMarker,
     BoxDecoration? blockquoteDecoration,
     BoxDecoration? horizontalRuleDecoration,
     EdgeInsets? blockquotePadding,
     double? blockSpacing,
+    EdgeInsets? listItemMarkerPadding,
+    double? listItemMinIndent,
   }) {
     return MarkdownStyle(
       paragraph: theme.textTheme.bodyText2?.merge(paragraph),
@@ -88,10 +96,13 @@ class MarkdownStyle {
       htmlBlock: _generateCodeStyle(theme, false)?.merge(htmlBlock),
       inlineCode: _generateCodeStyle(theme, true)?.merge(inlineCode),
       codeBlock: _generateCodeStyle(theme, false)?.merge(codeBlock),
+      listItemMarker: listItemMarker,
       blockquoteDecoration: blockquoteDecoration,
       horizontalRuleDecoration: horizontalRuleDecoration,
       blockquotePadding: blockquotePadding,
       blockSpacing: blockSpacing,
+      listItemMarkerPadding: listItemMarkerPadding,
+      listItemMinIndent: listItemMinIndent,
     );
   }
 
@@ -115,12 +126,15 @@ class MarkdownStyle {
   final TextStyle? htmlBlock;
   final TextStyle? inlineCode;
   final TextStyle? codeBlock;
+  final TextStyle? listItemMarker;
   final BoxDecoration blockquoteDecoration;
   final BoxDecoration horizontalRuleDecoration;
   final EdgeInsets blockquotePadding;
+  final EdgeInsets listItemMarkerPadding;
 
   /// The vertical space between two block elements.
   final double blockSpacing;
+  final double listItemMinIndent;
 
   /// Generates a [TextStyle].
   TextStyle style(md.Element element, TextStyle? parentStyle) {
