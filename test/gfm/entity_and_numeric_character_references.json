@@ -438,6 +438,13 @@
                   "type": "BoxConstraints",
                   "minWidth": 20.0,
                   "minHeight": 0.0
+                },
+                "child": {
+                  "type": "Padding",
+                  "child": {
+                    "type": "Text",
+                    "data": "•"
+                  }
                 }
               },
               {

@@ -119,6 +119,7 @@ class MarkdownBuilder implements md.NodeVisitor {
         blockChild = Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
           children: mergeInlineChildren(
             current.children,
             richTextBuilder: (span) => _buildRichText(span),

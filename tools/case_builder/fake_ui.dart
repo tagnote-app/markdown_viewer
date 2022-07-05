@@ -20,11 +20,13 @@ class Column extends MultiChildRenderObjectWidget {
   Column({
     this.mainAxisAlignment = MainAxisAlignment.start,
     this.crossAxisAlignment = CrossAxisAlignment.center,
+    this.mainAxisSize = MainAxisSize.max,
     List<Widget> children = const <Widget>[],
   }) : super(children: children);
 
   final MainAxisAlignment mainAxisAlignment;
   final CrossAxisAlignment crossAxisAlignment;
+  final MainAxisSize mainAxisSize;
 }
 
 class Row extends MultiChildRenderObjectWidget {
@@ -196,7 +198,7 @@ class ConstrainedBox extends SingleChildRenderObjectWidget {
   const ConstrainedBox({
     required this.constraints,
     Widget? child,
-  });
+  }) : super(child: child);
 
   final BoxConstraints constraints;
 }
@@ -417,3 +419,5 @@ enum FontStyle { normal, italic }
 enum FontWeight { w400, w500, w600, w700 }
 
 enum BorderStyle { none, solid }
+
+enum MainAxisSize { min, max }
