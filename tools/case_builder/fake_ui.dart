@@ -1,3 +1,5 @@
+// ignore_for_file: constant_identifier_names
+
 abstract class Widget {
   const Widget();
 }
@@ -16,6 +18,17 @@ abstract class SingleChildRenderObjectWidget extends Widget {
 
 class Column extends MultiChildRenderObjectWidget {
   Column({
+    this.mainAxisAlignment = MainAxisAlignment.start,
+    this.crossAxisAlignment = CrossAxisAlignment.center,
+    List<Widget> children = const <Widget>[],
+  }) : super(children: children);
+
+  final MainAxisAlignment mainAxisAlignment;
+  final CrossAxisAlignment crossAxisAlignment;
+}
+
+class Row extends MultiChildRenderObjectWidget {
+  Row({
     this.mainAxisAlignment = MainAxisAlignment.start,
     this.crossAxisAlignment = CrossAxisAlignment.center,
     List<Widget> children = const <Widget>[],
@@ -53,9 +66,15 @@ class SelectableText extends Widget {
 }
 
 class Text extends Widget {
-  const Text(this.data);
+  const Text(
+    this.data, {
+    this.textAlign,
+    this.style,
+  });
 
   final String? data;
+  final TextAlign? textAlign;
+  final TextStyle? style;
 }
 
 class Padding extends SingleChildRenderObjectWidget {
@@ -84,6 +103,12 @@ class EdgeInsets extends EdgeInsetsGeometry {
         right = value,
         top = value,
         bottom = value;
+  const EdgeInsets.only({
+    this.left = 0.0,
+    this.top = 0.0,
+    this.right = 0.0,
+    this.bottom = 0.0,
+  });
 
   final double left;
   final double top;
@@ -167,12 +192,57 @@ class SizedBox extends SingleChildRenderObjectWidget {
   final double? height;
 }
 
+class ConstrainedBox extends SingleChildRenderObjectWidget {
+  const ConstrainedBox({
+    required this.constraints,
+    Widget? child,
+  });
+
+  final BoxConstraints constraints;
+}
+
+abstract class Constraints {
+  const Constraints();
+}
+
+class BoxConstraints extends Constraints {
+  const BoxConstraints({
+    this.minWidth = 0.0,
+    this.maxWidth = double.infinity,
+    this.minHeight = 0.0,
+    this.maxHeight = double.infinity,
+  });
+  final double minWidth;
+  final double maxWidth;
+  final double minHeight;
+  final double maxHeight;
+}
+
 class Expanded extends Widget {
   const Expanded({
     required this.child,
   });
 
   final Widget child;
+}
+
+class Icon extends Widget {
+  const Icon(
+    this.icon, {
+    this.size,
+    this.color,
+  });
+
+  // NOTE: The right type of icon should be IconData.
+  final String? icon;
+
+  final Color? color;
+  final double? size;
+}
+
+class Icons {
+  static const check_box = 'check_box';
+  static const check_box_outline_blank = 'check_box_outline_blank';
 }
 
 class Container extends Widget {

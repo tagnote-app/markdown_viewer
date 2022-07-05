@@ -10,7 +10,7 @@ extension WidgetExtensions on Widget {
       'type': type.toString(),
     };
 
-    if (self is Column || self is Wrap) {
+    if (self is Column || self is Row || self is Wrap) {
       map.addAll({
         if ((self as MultiChildRenderObjectWidget).children.isNotEmpty)
           'children': self.children.map((e) => e.toMap()).toList(),
@@ -28,6 +28,11 @@ extension WidgetExtensions on Widget {
       map.addAll({
         if (self.height != null) 'height': self.height,
         if (self.width != null) 'width': self.width,
+      });
+    } else if (self is ConstrainedBox) {
+      map.addAll({
+        'constraints': self.constraints.toMap(),
+        if (self.child != null) 'child': self.child?.toMap(),
       });
     } else if (self is Container) {
       map.addAll({
@@ -93,6 +98,20 @@ extension BorderExtensions on BoxBorder {
       'type': runtimeType.toString(),
       if (top.width > 0) 'top': top.toMap(),
       if (bottom.width > 0) 'bottom': bottom.toMap(),
+    };
+  }
+
+  String toPrettyString() => toMap().toPrettyString();
+}
+
+extension BoxConstraintsExtensions on BoxConstraints {
+  Map<String, dynamic> toMap() {
+    return {
+      'type': runtimeType.toString(),
+      if (minWidth != double.infinity) 'minWidth': minWidth,
+      if (minHeight != double.infinity) 'minHeight': minHeight,
+      if (maxHeight != double.infinity) 'maxWidth': maxWidth,
+      if (maxWidth != double.infinity) 'maxHeight': maxHeight,
     };
   }
 

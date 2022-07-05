@@ -1154,30 +1154,46 @@
         "type": "Column",
         "children": [
           {
-            "type": "Column",
+            "type": "Row",
             "children": [
               {
-                "type": "Column",
-                "children": [
-                  {
-                    "type": "Wrap",
-                    "children": [
-                      {
-                        "type": "RichText",
-                        "text": {
-                          "type": "TextSpan",
-                          "text": "<div>",
-                          "style": {
-                            "fontFamily": "monospace",
-                            "fontWeight": "FontWeight.w400",
-                            "fontSize": 11.9,
-                            "color": "Color(0xdd000000)"
-                          }
+                "type": "ConstrainedBox",
+                "constraints": {
+                  "type": "BoxConstraints",
+                  "minWidth": 20.0,
+                  "minHeight": 0.0
+                }
+              },
+              {
+                "type": "Expanded",
+                "child": {
+                  "type": "Column",
+                  "children": [
+                    {
+                      "type": "Column",
+                      "children": [
+                        {
+                          "type": "Wrap",
+                          "children": [
+                            {
+                              "type": "RichText",
+                              "text": {
+                                "type": "TextSpan",
+                                "text": "<div>",
+                                "style": {
+                                  "fontFamily": "monospace",
+                                  "fontWeight": "FontWeight.w400",
+                                  "fontSize": 11.9,
+                                  "color": "Color(0xdd000000)"
+                                }
+                              }
+                            }
+                          ]
                         }
-                      }
-                    ]
-                  }
-                ]
+                      ]
+                    }
+                  ]
+                }
               }
             ]
           },
@@ -1186,25 +1202,41 @@
             "height": 8.0
           },
           {
-            "type": "Column",
+            "type": "Row",
             "children": [
               {
-                "type": "Wrap",
-                "children": [
-                  {
-                    "type": "RichText",
-                    "text": {
-                      "type": "TextSpan",
-                      "text": "foo",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
-                      }
+                "type": "ConstrainedBox",
+                "constraints": {
+                  "type": "BoxConstraints",
+                  "minWidth": 20.0,
+                  "minHeight": 0.0
+                }
+              },
+              {
+                "type": "Expanded",
+                "child": {
+                  "type": "Column",
+                  "children": [
+                    {
+                      "type": "Wrap",
+                      "children": [
+                        {
+                          "type": "RichText",
+                          "text": {
+                            "type": "TextSpan",
+                            "text": "foo",
+                            "style": {
+                              "fontFamily": ".SF UI Text",
+                              "fontWeight": "FontWeight.w400",
+                              "fontSize": 14.0,
+                              "color": "Color(0xdd000000)"
+                            }
+                          }
+                        }
+                      ]
                     }
-                  }
-                ]
+                  ]
+                }
               }
             ]
           }

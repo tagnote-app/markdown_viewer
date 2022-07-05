@@ -9,12 +9,25 @@ List<Widget> mergeInlineChildren(
   }
 
   final mergedWidgets = <Widget>[];
+  var mergedTexts = <Widget>[];
+
+  // Enclose all text widgets in a `Wrap` widget.
+  void addWithWrap() {
+    if (mergedTexts.isEmpty) {
+      return;
+    }
+
+    mergedWidgets.add(Wrap(children: mergedTexts));
+    mergedTexts = <Widget>[];
+  }
 
   for (final child in children) {
-    if (mergedWidgets.isNotEmpty && mergedWidgets.last is Wrap) {
-      final wrap = mergedWidgets.last as Wrap;
-      final wrapChildren = wrap.children;
-      final previous = wrapChildren.removeLast();
+    if (child is RichText || child is SelectableText) {
+      if (mergedTexts.isEmpty) {
+        mergedTexts.add(child);
+        continue;
+      }
+      final previous = mergedTexts.removeLast();
 
       final previousTextSpan = previous is SelectableText
           ? previous.textSpan!
@@ -30,16 +43,14 @@ List<Widget> mergeInlineChildren(
       }
 
       final mergedSpan = _mergeSimilarTextSpans(children);
-      wrapChildren.add(richTextBuilder(mergedSpan));
-    } else if (child is RichText || child is SelectableText) {
-      // Enclose all inline widgets in a `Wrap` widget.
-      mergedWidgets.add(Wrap(
-        children: [child],
-      ));
+      mergedTexts.add(richTextBuilder(mergedSpan));
     } else {
+      addWithWrap();
       mergedWidgets.add(child);
     }
   }
+
+  addWithWrap();
 
   return mergedWidgets;
 }
@@ -119,8 +130,7 @@ bool isBlockElement(String type) => [
 // linkReferenceDefinitionDestination
 // linkReferenceDefinitionTitle
 
-bool isLinkElement(String type) => [
-      'link',
-      'autolink',
-      'extendedAutolink',
-    ].contains(type);
+bool isLinkElement(String type) =>
+    ['link', 'autolink', 'extendedAutolink'].contains(type);
+
+bool isListElement(String type) => ['bulletList', 'orderedList'].contains(type);
