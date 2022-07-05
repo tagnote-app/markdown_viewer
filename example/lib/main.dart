@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:flutter/material.dart';
 import 'package:markdown_viewer/markdown_viewer.dart';
 
@@ -27,8 +29,11 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const markdown = r'''
-    var m = 2;
+[foo\_bar](/url)
 ''';
+
+    // TODO: Fix the colors for codes
+    const code = TextStyle(fontFamily: 'monospace', fontSize: 12);
 
     return Scaffold(
       appBar: AppBar(title: const Text('MarkdownViewer Demo')),
@@ -39,7 +44,14 @@ class MyHomePage extends StatelessWidget {
           onTapLink: (text, href, title) {
             print({text, href, title});
           },
-          styleSheet: MarkdownStyle.fromTheme(Theme.of(context)),
+          styleSheet: MarkdownStyle.fromTheme(
+            Theme.of(context),
+            // blockquoteDecoration: BoxDecoration(color: Colors.blue),
+            //blockquotePadding: EdgeInsets.all(20),
+            link: const TextStyle(color: Color(0xff2196f3)),
+            blockquote: const TextStyle(color: Color(0xff666666)),
+            inlineHtml: code.copyWith(),
+          ),
         ),
       ),
     );
