@@ -1,3 +1,5 @@
+// ignore_for_file: constant_identifier_names
+
 abstract class Widget {
   const Widget();
 }
@@ -222,6 +224,25 @@ class Expanded extends Widget {
   });
 
   final Widget child;
+}
+
+class Icon extends Widget {
+  const Icon(
+    this.icon, {
+    this.size,
+    this.color,
+  });
+
+  // NOTE: The right type of icon should be IconData.
+  final String? icon;
+
+  final Color? color;
+  final double? size;
+}
+
+class Icons {
+  static const check_box = 'check_box';
+  static const check_box_outline_blank = 'check_box_outline_blank';
 }
 
 class Container extends Widget {
