@@ -399,9 +399,18 @@
     "markdown": "*\t*\t*\t\n",
     "expected": [
       {
-        "type": "SizedBox",
-        "height": 0.0,
-        "width": 0.0
+        "type": "Container",
+        "decoration": {
+          "type": "BoxDecoration",
+          "border": {
+            "type": "Border",
+            "top": {
+              "type": "BorderSide",
+              "width": 5.0,
+              "color": "Color(0xffcccccc)"
+            }
+          }
+        }
       }
     ]
   }

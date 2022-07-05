@@ -106,8 +106,53 @@ class Color {
 class BoxDecoration extends Decoration {
   const BoxDecoration({
     this.color,
+    this.border,
   });
+
   final Color? color;
+  final BoxBorder? border;
+}
+
+abstract class BoxBorder {
+  const BoxBorder();
+  BorderSide get top;
+  BorderSide get bottom;
+}
+
+class Border extends BoxBorder {
+  const Border({
+    this.top = BorderSide.none,
+    this.right = BorderSide.none,
+    this.bottom = BorderSide.none,
+    this.left = BorderSide.none,
+  });
+
+  @override
+  final BorderSide top;
+
+  @override
+  final BorderSide bottom;
+
+  final BorderSide right;
+
+  final BorderSide left;
+}
+
+class BorderSide {
+  const BorderSide({
+    this.color = const Color(0xFF000000),
+    this.width = 1.0,
+    this.style = BorderStyle.solid,
+  });
+
+  final Color color;
+  final double width;
+  final BorderStyle style;
+
+  static const BorderSide none = BorderSide(
+    width: 0.0,
+    style: BorderStyle.none,
+  );
 }
 
 class SizedBox extends SingleChildRenderObjectWidget {
@@ -128,6 +173,18 @@ class Expanded extends Widget {
   });
 
   final Widget child;
+}
+
+class Container extends Widget {
+  const Container({
+    this.child,
+    this.decoration,
+    this.border,
+  });
+
+  final BoxDecoration? decoration;
+  final Widget? child;
+  final BoxBorder? border;
 }
 
 class DecoratedBox extends SingleChildRenderObjectWidget {
@@ -288,3 +345,5 @@ enum TextAlign { left, right, center, justify, start, end }
 enum FontStyle { normal, italic }
 
 enum FontWeight { w400, w500, w600, w700 }
+
+enum BorderStyle { none, solid }

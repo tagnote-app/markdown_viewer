@@ -45,9 +45,19 @@ class _MarkdownViewerState extends State<MarkdownViewer> {
 
   void _parseMarkdown() {
     final md.Document document = md.Document();
+    final theme = Theme.of(context);
     final astNodes = document.parseLines(widget.data);
-    final styleSheet =
-        widget.styleSheet ?? MarkdownStyle.fromTheme(Theme.of(context));
+
+    // TODO(Zhiguang): merge custom stylesheet with the default.
+    final styleSheet = widget.styleSheet ??
+        MarkdownStyle.fromTheme(
+          theme,
+          horizontalRuleDecoration: BoxDecoration(
+            border: Border(
+              top: BorderSide(width: 5.0, color: theme.dividerColor),
+            ),
+          ),
+        );
 
     final builder = MarkdownBuilder(
       styleSheet: styleSheet,
