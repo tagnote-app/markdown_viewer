@@ -12,10 +12,12 @@ class MarkdownBuilder implements md.NodeVisitor {
     MarkdownTapLinkCallback? onTapLink,
     MarkdownListItemMarkerBuilder? listItemMarkerBuilder,
     MarkdownCheckboxBuilder? checkboxBuilder,
+    MarkdownHighlightBuilder? highlightBuilder,
     this.selectable = false,
   })  : _styleSheet = styleSheet,
         _onTapLink = onTapLink,
         _listItemMarkerBuilder = listItemMarkerBuilder,
+        _highlightBuilder = highlightBuilder,
         _checkboxBuilder = checkboxBuilder;
 
   final bool selectable;
@@ -32,6 +34,8 @@ class MarkdownBuilder implements md.NodeVisitor {
   final MarkdownListItemMarkerBuilder? _listItemMarkerBuilder;
 
   final MarkdownCheckboxBuilder? _checkboxBuilder;
+
+  final MarkdownHighlightBuilder? _highlightBuilder;
 
   final MarkdownStyle _styleSheet;
 
@@ -91,17 +95,37 @@ class MarkdownBuilder implements md.NodeVisitor {
   void visitText(md.Text text) {
     final parent = _tree.last;
     var textContent = text.textContent;
-    if (!_isInBlockquote) {
-      textContent = trimText(text.textContent);
-    }
 
-    final child = _buildRichText(
-      TextSpan(
-        text: textContent,
-        style: parent.style,
-        recognizer: _linkHandlers.isEmpty ? null : _linkHandlers.last,
-      ),
-    );
+    Widget child;
+    if (isCodeBlockElement(parent.type)) {
+      child = Scrollbar(
+        child: SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          padding: _styleSheet.codeblockPadding,
+          child: _buildRichText(
+            _highlightBuilder == null
+                ? TextSpan(
+                    text: text.text,
+                    style: parent.style,
+                  )
+                : _highlightBuilder!(text.text, parent.attributes['language'],
+                    parent.attributes['infoString']),
+          ),
+        ),
+      );
+    } else {
+      if (!_isInBlockquote) {
+        textContent = trimText(text.textContent);
+      }
+
+      child = _buildRichText(
+        TextSpan(
+          text: textContent,
+          style: parent.style,
+          recognizer: _linkHandlers.isEmpty ? null : _linkHandlers.last,
+        ),
+      );
+    }
 
     parent.children.add(child);
   }
@@ -167,6 +191,11 @@ class MarkdownBuilder implements md.NodeVisitor {
             padding: _styleSheet.blockquotePadding,
             child: blockChild,
           ),
+        );
+      } else if (isCodeBlockElement(type)) {
+        blockChild = DecoratedBox(
+          decoration: _styleSheet.codeblockDecoration,
+          child: blockChild,
         );
       } else if (isLinkElement(type)) {
         _linkHandlers.removeLast();
@@ -260,5 +289,8 @@ typedef MarkdownListItemMarkerBuilder = Widget Function(
     ListType style, String? number);
 
 typedef MarkdownCheckboxBuilder = Widget Function(bool checked);
+
+typedef MarkdownHighlightBuilder = TextSpan Function(
+    String text, String? language, String? infoString);
 
 enum ListType { ordered, unordered }

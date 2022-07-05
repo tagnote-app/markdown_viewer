@@ -134,3 +134,6 @@ bool isLinkElement(String type) =>
     ['link', 'autolink', 'extendedAutolink'].contains(type);
 
 bool isListElement(String type) => ['bulletList', 'orderedList'].contains(type);
+
+bool isCodeBlockElement(String type) =>
+    ['indentedCodeBlock', 'fencedCodeBlock'].contains(type);

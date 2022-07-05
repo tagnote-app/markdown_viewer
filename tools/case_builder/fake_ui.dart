@@ -228,6 +228,30 @@ class Expanded extends Widget {
   final Widget child;
 }
 
+class Scrollbar extends Widget {
+  const Scrollbar({
+    required this.child,
+  });
+
+  final Widget child;
+}
+
+class SingleChildScrollView extends Widget {
+  const SingleChildScrollView({
+    this.scrollDirection = Axis.vertical,
+    this.padding,
+    this.child,
+  });
+
+  final Widget? child;
+  final Axis scrollDirection;
+  final EdgeInsetsGeometry? padding;
+}
+
+class BorderRadiusGeometry {
+  const BorderRadiusGeometry();
+}
+
 class Icon extends Widget {
   const Icon(
     this.icon, {
@@ -421,3 +445,5 @@ enum FontWeight { w400, w500, w600, w700 }
 enum BorderStyle { none, solid }
 
 enum MainAxisSize { min, max }
+
+enum Axis { horizontal, vertical }

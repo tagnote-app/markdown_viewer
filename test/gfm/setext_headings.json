@@ -321,27 +321,88 @@
     "markdown": "    Foo\n    ---\n\n    Foo\n---\n",
     "expected": [
       {
-        "type": "Column",
-        "children": [
-          {
-            "type": "Wrap",
-            "children": [
-              {
-                "type": "RichText",
-                "text": {
-                  "type": "TextSpan",
-                  "text": "Foo ---  Foo ",
-                  "style": {
-                    "fontFamily": "monospace",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 11.9,
-                    "color": "Color(0xdd000000)"
+        "type": "DecoratedBox",
+        "child": {
+          "type": "Column",
+          "children": [
+            {
+              "type": "Scrollbar",
+              "child": {
+                "type": "SingleChildScrollView",
+                "child": {
+                  "type": "RichText",
+                  "text": {
+                    "type": "TextSpan",
+                    "text": "Foo\n",
+                    "style": {
+                      "fontFamily": "monospace",
+                      "fontWeight": "FontWeight.w400",
+                      "fontSize": 11.9,
+                      "color": "Color(0xdd000000)"
+                    }
                   }
                 }
               }
-            ]
-          }
-        ]
+            },
+            {
+              "type": "Scrollbar",
+              "child": {
+                "type": "SingleChildScrollView",
+                "child": {
+                  "type": "RichText",
+                  "text": {
+                    "type": "TextSpan",
+                    "text": "---\n",
+                    "style": {
+                      "fontFamily": "monospace",
+                      "fontWeight": "FontWeight.w400",
+                      "fontSize": 11.9,
+                      "color": "Color(0xdd000000)"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "Scrollbar",
+              "child": {
+                "type": "SingleChildScrollView",
+                "child": {
+                  "type": "RichText",
+                  "text": {
+                    "type": "TextSpan",
+                    "text": "\n",
+                    "style": {
+                      "fontFamily": "monospace",
+                      "fontWeight": "FontWeight.w400",
+                      "fontSize": 11.9,
+                      "color": "Color(0xdd000000)"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "Scrollbar",
+              "child": {
+                "type": "SingleChildScrollView",
+                "child": {
+                  "type": "RichText",
+                  "text": {
+                    "type": "TextSpan",
+                    "text": "Foo\n",
+                    "style": {
+                      "fontFamily": "monospace",
+                      "fontWeight": "FontWeight.w400",
+                      "fontSize": 11.9,
+                      "color": "Color(0xdd000000)"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
       },
       {
         "type": "SizedBox",
@@ -1113,27 +1174,31 @@
     "markdown": "    foo\n---\n",
     "expected": [
       {
-        "type": "Column",
-        "children": [
-          {
-            "type": "Wrap",
-            "children": [
-              {
-                "type": "RichText",
-                "text": {
-                  "type": "TextSpan",
-                  "text": "foo ",
-                  "style": {
-                    "fontFamily": "monospace",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 11.9,
-                    "color": "Color(0xdd000000)"
+        "type": "DecoratedBox",
+        "child": {
+          "type": "Column",
+          "children": [
+            {
+              "type": "Scrollbar",
+              "child": {
+                "type": "SingleChildScrollView",
+                "child": {
+                  "type": "RichText",
+                  "text": {
+                    "type": "TextSpan",
+                    "text": "foo\n",
+                    "style": {
+                      "fontFamily": "monospace",
+                      "fontWeight": "FontWeight.w400",
+                      "fontSize": 11.9,
+                      "color": "Color(0xdd000000)"
+                    }
                   }
                 }
               }
-            ]
-          }
-        ]
+            }
+          ]
+        }
       },
       {
         "type": "SizedBox",

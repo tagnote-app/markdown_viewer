@@ -31,27 +31,31 @@
         "height": 8.0
       },
       {
-        "type": "Column",
-        "children": [
-          {
-            "type": "Wrap",
-            "children": [
-              {
-                "type": "RichText",
-                "text": {
-                  "type": "TextSpan",
-                  "text": "indented code ",
-                  "style": {
-                    "fontFamily": "monospace",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 11.9,
-                    "color": "Color(0xdd000000)"
+        "type": "DecoratedBox",
+        "child": {
+          "type": "Column",
+          "children": [
+            {
+              "type": "Scrollbar",
+              "child": {
+                "type": "SingleChildScrollView",
+                "child": {
+                  "type": "RichText",
+                  "text": {
+                    "type": "TextSpan",
+                    "text": "indented code\n",
+                    "style": {
+                      "fontFamily": "monospace",
+                      "fontWeight": "FontWeight.w400",
+                      "fontSize": 11.9,
+                      "color": "Color(0xdd000000)"
+                    }
                   }
                 }
               }
-            ]
-          }
-        ]
+            }
+          ]
+        }
       },
       {
         "type": "SizedBox",
@@ -151,27 +155,31 @@
                       "height": 8.0
                     },
                     {
-                      "type": "Column",
-                      "children": [
-                        {
-                          "type": "Wrap",
-                          "children": [
-                            {
-                              "type": "RichText",
-                              "text": {
-                                "type": "TextSpan",
-                                "text": "indented code ",
-                                "style": {
-                                  "fontFamily": "monospace",
-                                  "fontWeight": "FontWeight.w400",
-                                  "fontSize": 11.9,
-                                  "color": "Color(0xdd000000)"
+                      "type": "DecoratedBox",
+                      "child": {
+                        "type": "Column",
+                        "children": [
+                          {
+                            "type": "Scrollbar",
+                            "child": {
+                              "type": "SingleChildScrollView",
+                              "child": {
+                                "type": "RichText",
+                                "text": {
+                                  "type": "TextSpan",
+                                  "text": "indented code\n",
+                                  "style": {
+                                    "fontFamily": "monospace",
+                                    "fontWeight": "FontWeight.w400",
+                                    "fontSize": 11.9,
+                                    "color": "Color(0xdd000000)"
+                                  }
                                 }
                               }
                             }
-                          ]
-                        }
-                      ]
+                          }
+                        ]
+                      }
                     },
                     {
                       "type": "SizedBox",
@@ -453,27 +461,31 @@
         "height": 8.0
       },
       {
-        "type": "Column",
-        "children": [
-          {
-            "type": "Wrap",
-            "children": [
-              {
-                "type": "RichText",
-                "text": {
-                  "type": "TextSpan",
-                  "text": " two ",
-                  "style": {
-                    "fontFamily": "monospace",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 11.9,
-                    "color": "Color(0xdd000000)"
+        "type": "DecoratedBox",
+        "child": {
+          "type": "Column",
+          "children": [
+            {
+              "type": "Scrollbar",
+              "child": {
+                "type": "SingleChildScrollView",
+                "child": {
+                  "type": "RichText",
+                  "text": {
+                    "type": "TextSpan",
+                    "text": " two\n",
+                    "style": {
+                      "fontFamily": "monospace",
+                      "fontWeight": "FontWeight.w400",
+                      "fontSize": 11.9,
+                      "color": "Color(0xdd000000)"
+                    }
                   }
                 }
               }
-            ]
-          }
-        ]
+            }
+          ]
+        }
       }
     ]
   },
@@ -986,27 +998,31 @@
                       "height": 8.0
                     },
                     {
-                      "type": "Column",
-                      "children": [
-                        {
-                          "type": "Wrap",
-                          "children": [
-                            {
-                              "type": "RichText",
-                              "text": {
-                                "type": "TextSpan",
-                                "text": "bar ",
-                                "style": {
-                                  "fontFamily": "monospace",
-                                  "fontWeight": "FontWeight.w400",
-                                  "fontSize": 11.9,
-                                  "color": "Color(0xdd000000)"
+                      "type": "DecoratedBox",
+                      "child": {
+                        "type": "Column",
+                        "children": [
+                          {
+                            "type": "Scrollbar",
+                            "child": {
+                              "type": "SingleChildScrollView",
+                              "child": {
+                                "type": "RichText",
+                                "text": {
+                                  "type": "TextSpan",
+                                  "text": "bar\n",
+                                  "style": {
+                                    "fontFamily": "monospace",
+                                    "fontWeight": "FontWeight.w400",
+                                    "fontSize": 11.9,
+                                    "color": "Color(0xdd000000)"
+                                  }
                                 }
                               }
                             }
-                          ]
-                        }
-                      ]
+                          }
+                        ]
+                      }
                     },
                     {
                       "type": "SizedBox",
@@ -1140,27 +1156,88 @@
                       "height": 8.0
                     },
                     {
-                      "type": "Column",
-                      "children": [
-                        {
-                          "type": "Wrap",
-                          "children": [
-                            {
-                              "type": "RichText",
-                              "text": {
-                                "type": "TextSpan",
-                                "text": "bar   baz ",
-                                "style": {
-                                  "fontFamily": "monospace",
-                                  "fontWeight": "FontWeight.w400",
-                                  "fontSize": 11.9,
-                                  "color": "Color(0xdd000000)"
+                      "type": "DecoratedBox",
+                      "child": {
+                        "type": "Column",
+                        "children": [
+                          {
+                            "type": "Scrollbar",
+                            "child": {
+                              "type": "SingleChildScrollView",
+                              "child": {
+                                "type": "RichText",
+                                "text": {
+                                  "type": "TextSpan",
+                                  "text": "bar\n",
+                                  "style": {
+                                    "fontFamily": "monospace",
+                                    "fontWeight": "FontWeight.w400",
+                                    "fontSize": 11.9,
+                                    "color": "Color(0xdd000000)"
+                                  }
                                 }
                               }
                             }
-                          ]
-                        }
-                      ]
+                          },
+                          {
+                            "type": "Scrollbar",
+                            "child": {
+                              "type": "SingleChildScrollView",
+                              "child": {
+                                "type": "RichText",
+                                "text": {
+                                  "type": "TextSpan",
+                                  "text": "\n",
+                                  "style": {
+                                    "fontFamily": "monospace",
+                                    "fontWeight": "FontWeight.w400",
+                                    "fontSize": 11.9,
+                                    "color": "Color(0xdd000000)"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "type": "Scrollbar",
+                            "child": {
+                              "type": "SingleChildScrollView",
+                              "child": {
+                                "type": "RichText",
+                                "text": {
+                                  "type": "TextSpan",
+                                  "text": "\n",
+                                  "style": {
+                                    "fontFamily": "monospace",
+                                    "fontWeight": "FontWeight.w400",
+                                    "fontSize": 11.9,
+                                    "color": "Color(0xdd000000)"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "type": "Scrollbar",
+                            "child": {
+                              "type": "SingleChildScrollView",
+                              "child": {
+                                "type": "RichText",
+                                "text": {
+                                  "type": "TextSpan",
+                                  "text": "baz\n",
+                                  "style": {
+                                    "fontFamily": "monospace",
+                                    "fontWeight": "FontWeight.w400",
+                                    "fontSize": 11.9,
+                                    "color": "Color(0xdd000000)"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
                     }
                   ]
                 }
@@ -1458,27 +1535,31 @@
                       "height": 8.0
                     },
                     {
-                      "type": "Column",
-                      "children": [
-                        {
-                          "type": "Wrap",
-                          "children": [
-                            {
-                              "type": "RichText",
-                              "text": {
-                                "type": "TextSpan",
-                                "text": "bar ",
-                                "style": {
-                                  "fontFamily": "monospace",
-                                  "fontWeight": "FontWeight.w400",
-                                  "fontSize": 11.9,
-                                  "color": "Color(0xdd000000)"
+                      "type": "DecoratedBox",
+                      "child": {
+                        "type": "Column",
+                        "children": [
+                          {
+                            "type": "Scrollbar",
+                            "child": {
+                              "type": "SingleChildScrollView",
+                              "child": {
+                                "type": "RichText",
+                                "text": {
+                                  "type": "TextSpan",
+                                  "text": "bar\n",
+                                  "style": {
+                                    "fontFamily": "monospace",
+                                    "fontWeight": "FontWeight.w400",
+                                    "fontSize": 11.9,
+                                    "color": "Color(0xdd000000)"
+                                  }
                                 }
                               }
                             }
-                          ]
-                        }
-                      ]
+                          }
+                        ]
+                      }
                     }
                   ]
                 }
@@ -1547,27 +1628,31 @@
                       "height": 8.0
                     },
                     {
-                      "type": "Column",
-                      "children": [
-                        {
-                          "type": "Wrap",
-                          "children": [
-                            {
-                              "type": "RichText",
-                              "text": {
-                                "type": "TextSpan",
-                                "text": "bar ",
-                                "style": {
-                                  "fontFamily": "monospace",
-                                  "fontWeight": "FontWeight.w400",
-                                  "fontSize": 11.9,
-                                  "color": "Color(0xdd000000)"
+                      "type": "DecoratedBox",
+                      "child": {
+                        "type": "Column",
+                        "children": [
+                          {
+                            "type": "Scrollbar",
+                            "child": {
+                              "type": "SingleChildScrollView",
+                              "child": {
+                                "type": "RichText",
+                                "text": {
+                                  "type": "TextSpan",
+                                  "text": "bar\n",
+                                  "style": {
+                                    "fontFamily": "monospace",
+                                    "fontWeight": "FontWeight.w400",
+                                    "fontSize": 11.9,
+                                    "color": "Color(0xdd000000)"
+                                  }
                                 }
                               }
                             }
-                          ]
-                        }
-                      ]
+                          }
+                        ]
+                      }
                     }
                   ]
                 }
@@ -1583,27 +1668,31 @@
     "markdown": "    indented code\n\nparagraph\n\n    more code\n",
     "expected": [
       {
-        "type": "Column",
-        "children": [
-          {
-            "type": "Wrap",
-            "children": [
-              {
-                "type": "RichText",
-                "text": {
-                  "type": "TextSpan",
-                  "text": "indented code ",
-                  "style": {
-                    "fontFamily": "monospace",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 11.9,
-                    "color": "Color(0xdd000000)"
+        "type": "DecoratedBox",
+        "child": {
+          "type": "Column",
+          "children": [
+            {
+              "type": "Scrollbar",
+              "child": {
+                "type": "SingleChildScrollView",
+                "child": {
+                  "type": "RichText",
+                  "text": {
+                    "type": "TextSpan",
+                    "text": "indented code\n",
+                    "style": {
+                      "fontFamily": "monospace",
+                      "fontWeight": "FontWeight.w400",
+                      "fontSize": 11.9,
+                      "color": "Color(0xdd000000)"
+                    }
                   }
                 }
               }
-            ]
-          }
-        ]
+            }
+          ]
+        }
       },
       {
         "type": "SizedBox",
@@ -1637,27 +1726,31 @@
         "height": 8.0
       },
       {
-        "type": "Column",
-        "children": [
-          {
-            "type": "Wrap",
-            "children": [
-              {
-                "type": "RichText",
-                "text": {
-                  "type": "TextSpan",
-                  "text": "more code ",
-                  "style": {
-                    "fontFamily": "monospace",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 11.9,
-                    "color": "Color(0xdd000000)"
+        "type": "DecoratedBox",
+        "child": {
+          "type": "Column",
+          "children": [
+            {
+              "type": "Scrollbar",
+              "child": {
+                "type": "SingleChildScrollView",
+                "child": {
+                  "type": "RichText",
+                  "text": {
+                    "type": "TextSpan",
+                    "text": "more code\n",
+                    "style": {
+                      "fontFamily": "monospace",
+                      "fontWeight": "FontWeight.w400",
+                      "fontSize": 11.9,
+                      "color": "Color(0xdd000000)"
+                    }
                   }
                 }
               }
-            ]
-          }
-        ]
+            }
+          ]
+        }
       }
     ]
   },
@@ -1692,27 +1785,31 @@
                   "type": "Column",
                   "children": [
                     {
-                      "type": "Column",
-                      "children": [
-                        {
-                          "type": "Wrap",
-                          "children": [
-                            {
-                              "type": "RichText",
-                              "text": {
-                                "type": "TextSpan",
-                                "text": "indented code ",
-                                "style": {
-                                  "fontFamily": "monospace",
-                                  "fontWeight": "FontWeight.w400",
-                                  "fontSize": 11.9,
-                                  "color": "Color(0xdd000000)"
+                      "type": "DecoratedBox",
+                      "child": {
+                        "type": "Column",
+                        "children": [
+                          {
+                            "type": "Scrollbar",
+                            "child": {
+                              "type": "SingleChildScrollView",
+                              "child": {
+                                "type": "RichText",
+                                "text": {
+                                  "type": "TextSpan",
+                                  "text": "indented code\n",
+                                  "style": {
+                                    "fontFamily": "monospace",
+                                    "fontWeight": "FontWeight.w400",
+                                    "fontSize": 11.9,
+                                    "color": "Color(0xdd000000)"
+                                  }
                                 }
                               }
                             }
-                          ]
-                        }
-                      ]
+                          }
+                        ]
+                      }
                     },
                     {
                       "type": "SizedBox",
@@ -1746,27 +1843,31 @@
                       "height": 8.0
                     },
                     {
-                      "type": "Column",
-                      "children": [
-                        {
-                          "type": "Wrap",
-                          "children": [
-                            {
-                              "type": "RichText",
-                              "text": {
-                                "type": "TextSpan",
-                                "text": "more code ",
-                                "style": {
-                                  "fontFamily": "monospace",
-                                  "fontWeight": "FontWeight.w400",
-                                  "fontSize": 11.9,
-                                  "color": "Color(0xdd000000)"
+                      "type": "DecoratedBox",
+                      "child": {
+                        "type": "Column",
+                        "children": [
+                          {
+                            "type": "Scrollbar",
+                            "child": {
+                              "type": "SingleChildScrollView",
+                              "child": {
+                                "type": "RichText",
+                                "text": {
+                                  "type": "TextSpan",
+                                  "text": "more code\n",
+                                  "style": {
+                                    "fontFamily": "monospace",
+                                    "fontWeight": "FontWeight.w400",
+                                    "fontSize": 11.9,
+                                    "color": "Color(0xdd000000)"
+                                  }
                                 }
                               }
                             }
-                          ]
-                        }
-                      ]
+                          }
+                        ]
+                      }
                     }
                   ]
                 }
@@ -1808,27 +1909,31 @@
                   "type": "Column",
                   "children": [
                     {
-                      "type": "Column",
-                      "children": [
-                        {
-                          "type": "Wrap",
-                          "children": [
-                            {
-                              "type": "RichText",
-                              "text": {
-                                "type": "TextSpan",
-                                "text": " indented code ",
-                                "style": {
-                                  "fontFamily": "monospace",
-                                  "fontWeight": "FontWeight.w400",
-                                  "fontSize": 11.9,
-                                  "color": "Color(0xdd000000)"
+                      "type": "DecoratedBox",
+                      "child": {
+                        "type": "Column",
+                        "children": [
+                          {
+                            "type": "Scrollbar",
+                            "child": {
+                              "type": "SingleChildScrollView",
+                              "child": {
+                                "type": "RichText",
+                                "text": {
+                                  "type": "TextSpan",
+                                  "text": " indented code\n",
+                                  "style": {
+                                    "fontFamily": "monospace",
+                                    "fontWeight": "FontWeight.w400",
+                                    "fontSize": 11.9,
+                                    "color": "Color(0xdd000000)"
+                                  }
                                 }
                               }
                             }
-                          ]
-                        }
-                      ]
+                          }
+                        ]
+                      }
                     },
                     {
                       "type": "SizedBox",
@@ -1862,27 +1967,31 @@
                       "height": 8.0
                     },
                     {
-                      "type": "Column",
-                      "children": [
-                        {
-                          "type": "Wrap",
-                          "children": [
-                            {
-                              "type": "RichText",
-                              "text": {
-                                "type": "TextSpan",
-                                "text": "more code ",
-                                "style": {
-                                  "fontFamily": "monospace",
-                                  "fontWeight": "FontWeight.w400",
-                                  "fontSize": 11.9,
-                                  "color": "Color(0xdd000000)"
+                      "type": "DecoratedBox",
+                      "child": {
+                        "type": "Column",
+                        "children": [
+                          {
+                            "type": "Scrollbar",
+                            "child": {
+                              "type": "SingleChildScrollView",
+                              "child": {
+                                "type": "RichText",
+                                "text": {
+                                  "type": "TextSpan",
+                                  "text": "more code\n",
+                                  "style": {
+                                    "fontFamily": "monospace",
+                                    "fontWeight": "FontWeight.w400",
+                                    "fontSize": 11.9,
+                                    "color": "Color(0xdd000000)"
+                                  }
                                 }
                               }
                             }
-                          ]
-                        }
-                      ]
+                          }
+                        ]
+                      }
                     }
                   ]
                 }
@@ -2203,27 +2312,31 @@
                   "type": "Column",
                   "children": [
                     {
-                      "type": "Column",
-                      "children": [
-                        {
-                          "type": "Wrap",
-                          "children": [
-                            {
-                              "type": "RichText",
-                              "text": {
-                                "type": "TextSpan",
-                                "text": "bar ",
-                                "style": {
-                                  "fontFamily": "monospace",
-                                  "fontWeight": "FontWeight.w400",
-                                  "fontSize": 11.9,
-                                  "color": "Color(0xdd000000)"
+                      "type": "DecoratedBox",
+                      "child": {
+                        "type": "Column",
+                        "children": [
+                          {
+                            "type": "Scrollbar",
+                            "child": {
+                              "type": "SingleChildScrollView",
+                              "child": {
+                                "type": "RichText",
+                                "text": {
+                                  "type": "TextSpan",
+                                  "text": "bar\n",
+                                  "style": {
+                                    "fontFamily": "monospace",
+                                    "fontWeight": "FontWeight.w400",
+                                    "fontSize": 11.9,
+                                    "color": "Color(0xdd000000)"
+                                  }
                                 }
                               }
                             }
-                          ]
-                        }
-                      ]
+                          }
+                        ]
+                      }
                     }
                   ]
                 }
@@ -2258,27 +2371,31 @@
                   "type": "Column",
                   "children": [
                     {
-                      "type": "Column",
-                      "children": [
-                        {
-                          "type": "Wrap",
-                          "children": [
-                            {
-                              "type": "RichText",
-                              "text": {
-                                "type": "TextSpan",
-                                "text": "baz ",
-                                "style": {
-                                  "fontFamily": "monospace",
-                                  "fontWeight": "FontWeight.w400",
-                                  "fontSize": 11.9,
-                                  "color": "Color(0xdd000000)"
+                      "type": "DecoratedBox",
+                      "child": {
+                        "type": "Column",
+                        "children": [
+                          {
+                            "type": "Scrollbar",
+                            "child": {
+                              "type": "SingleChildScrollView",
+                              "child": {
+                                "type": "RichText",
+                                "text": {
+                                  "type": "TextSpan",
+                                  "text": "baz\n",
+                                  "style": {
+                                    "fontFamily": "monospace",
+                                    "fontWeight": "FontWeight.w400",
+                                    "fontSize": 11.9,
+                                    "color": "Color(0xdd000000)"
+                                  }
                                 }
                               }
                             }
-                          ]
-                        }
-                      ]
+                          }
+                        ]
+                      }
                     }
                   ]
                 }
@@ -2982,27 +3099,31 @@
                       "height": 8.0
                     },
                     {
-                      "type": "Column",
-                      "children": [
-                        {
-                          "type": "Wrap",
-                          "children": [
-                            {
-                              "type": "RichText",
-                              "text": {
-                                "type": "TextSpan",
-                                "text": "indented code ",
-                                "style": {
-                                  "fontFamily": "monospace",
-                                  "fontWeight": "FontWeight.w400",
-                                  "fontSize": 11.9,
-                                  "color": "Color(0xdd000000)"
+                      "type": "DecoratedBox",
+                      "child": {
+                        "type": "Column",
+                        "children": [
+                          {
+                            "type": "Scrollbar",
+                            "child": {
+                              "type": "SingleChildScrollView",
+                              "child": {
+                                "type": "RichText",
+                                "text": {
+                                  "type": "TextSpan",
+                                  "text": "indented code\n",
+                                  "style": {
+                                    "fontFamily": "monospace",
+                                    "fontWeight": "FontWeight.w400",
+                                    "fontSize": 11.9,
+                                    "color": "Color(0xdd000000)"
+                                  }
                                 }
                               }
                             }
-                          ]
-                        }
-                      ]
+                          }
+                        ]
+                      }
                     },
                     {
                       "type": "SizedBox",
@@ -3109,27 +3230,31 @@
                       "height": 8.0
                     },
                     {
-                      "type": "Column",
-                      "children": [
-                        {
-                          "type": "Wrap",
-                          "children": [
-                            {
-                              "type": "RichText",
-                              "text": {
-                                "type": "TextSpan",
-                                "text": "indented code ",
-                                "style": {
-                                  "fontFamily": "monospace",
-                                  "fontWeight": "FontWeight.w400",
-                                  "fontSize": 11.9,
-                                  "color": "Color(0xdd000000)"
+                      "type": "DecoratedBox",
+                      "child": {
+                        "type": "Column",
+                        "children": [
+                          {
+                            "type": "Scrollbar",
+                            "child": {
+                              "type": "SingleChildScrollView",
+                              "child": {
+                                "type": "RichText",
+                                "text": {
+                                  "type": "TextSpan",
+                                  "text": "indented code\n",
+                                  "style": {
+                                    "fontFamily": "monospace",
+                                    "fontWeight": "FontWeight.w400",
+                                    "fontSize": 11.9,
+                                    "color": "Color(0xdd000000)"
+                                  }
                                 }
                               }
                             }
-                          ]
-                        }
-                      ]
+                          }
+                        ]
+                      }
                     },
                     {
                       "type": "SizedBox",
@@ -3236,27 +3361,31 @@
                       "height": 8.0
                     },
                     {
-                      "type": "Column",
-                      "children": [
-                        {
-                          "type": "Wrap",
-                          "children": [
-                            {
-                              "type": "RichText",
-                              "text": {
-                                "type": "TextSpan",
-                                "text": "indented code ",
-                                "style": {
-                                  "fontFamily": "monospace",
-                                  "fontWeight": "FontWeight.w400",
-                                  "fontSize": 11.9,
-                                  "color": "Color(0xdd000000)"
+                      "type": "DecoratedBox",
+                      "child": {
+                        "type": "Column",
+                        "children": [
+                          {
+                            "type": "Scrollbar",
+                            "child": {
+                              "type": "SingleChildScrollView",
+                              "child": {
+                                "type": "RichText",
+                                "text": {
+                                  "type": "TextSpan",
+                                  "text": "indented code\n",
+                                  "style": {
+                                    "fontFamily": "monospace",
+                                    "fontWeight": "FontWeight.w400",
+                                    "fontSize": 11.9,
+                                    "color": "Color(0xdd000000)"
+                                  }
                                 }
                               }
                             }
-                          ]
-                        }
-                      ]
+                          }
+                        ]
+                      }
                     },
                     {
                       "type": "SizedBox",
@@ -3310,27 +3439,126 @@
     "markdown": "    1.  A paragraph\n        with two lines.\n\n            indented code\n\n        > A block quote.\n",
     "expected": [
       {
-        "type": "Column",
-        "children": [
-          {
-            "type": "Wrap",
-            "children": [
-              {
-                "type": "RichText",
-                "text": {
-                  "type": "TextSpan",
-                  "text": "1.  A paragraph     with two lines.          indented code      > A block quote. ",
-                  "style": {
-                    "fontFamily": "monospace",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 11.9,
-                    "color": "Color(0xdd000000)"
+        "type": "DecoratedBox",
+        "child": {
+          "type": "Column",
+          "children": [
+            {
+              "type": "Scrollbar",
+              "child": {
+                "type": "SingleChildScrollView",
+                "child": {
+                  "type": "RichText",
+                  "text": {
+                    "type": "TextSpan",
+                    "text": "1.  A paragraph\n",
+                    "style": {
+                      "fontFamily": "monospace",
+                      "fontWeight": "FontWeight.w400",
+                      "fontSize": 11.9,
+                      "color": "Color(0xdd000000)"
+                    }
                   }
                 }
               }
-            ]
-          }
-        ]
+            },
+            {
+              "type": "Scrollbar",
+              "child": {
+                "type": "SingleChildScrollView",
+                "child": {
+                  "type": "RichText",
+                  "text": {
+                    "type": "TextSpan",
+                    "text": "    with two lines.\n",
+                    "style": {
+                      "fontFamily": "monospace",
+                      "fontWeight": "FontWeight.w400",
+                      "fontSize": 11.9,
+                      "color": "Color(0xdd000000)"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "Scrollbar",
+              "child": {
+                "type": "SingleChildScrollView",
+                "child": {
+                  "type": "RichText",
+                  "text": {
+                    "type": "TextSpan",
+                    "text": "\n",
+                    "style": {
+                      "fontFamily": "monospace",
+                      "fontWeight": "FontWeight.w400",
+                      "fontSize": 11.9,
+                      "color": "Color(0xdd000000)"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "Scrollbar",
+              "child": {
+                "type": "SingleChildScrollView",
+                "child": {
+                  "type": "RichText",
+                  "text": {
+                    "type": "TextSpan",
+                    "text": "        indented code\n",
+                    "style": {
+                      "fontFamily": "monospace",
+                      "fontWeight": "FontWeight.w400",
+                      "fontSize": 11.9,
+                      "color": "Color(0xdd000000)"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "Scrollbar",
+              "child": {
+                "type": "SingleChildScrollView",
+                "child": {
+                  "type": "RichText",
+                  "text": {
+                    "type": "TextSpan",
+                    "text": "\n",
+                    "style": {
+                      "fontFamily": "monospace",
+                      "fontWeight": "FontWeight.w400",
+                      "fontSize": 11.9,
+                      "color": "Color(0xdd000000)"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "Scrollbar",
+              "child": {
+                "type": "SingleChildScrollView",
+                "child": {
+                  "type": "RichText",
+                  "text": {
+                    "type": "TextSpan",
+                    "text": "    > A block quote.\n",
+                    "style": {
+                      "fontFamily": "monospace",
+                      "fontWeight": "FontWeight.w400",
+                      "fontSize": 11.9,
+                      "color": "Color(0xdd000000)"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
       }
     ]
   },
@@ -3392,27 +3620,31 @@
                       "height": 8.0
                     },
                     {
-                      "type": "Column",
-                      "children": [
-                        {
-                          "type": "Wrap",
-                          "children": [
-                            {
-                              "type": "RichText",
-                              "text": {
-                                "type": "TextSpan",
-                                "text": "indented code ",
-                                "style": {
-                                  "fontFamily": "monospace",
-                                  "fontWeight": "FontWeight.w400",
-                                  "fontSize": 11.9,
-                                  "color": "Color(0xdd000000)"
+                      "type": "DecoratedBox",
+                      "child": {
+                        "type": "Column",
+                        "children": [
+                          {
+                            "type": "Scrollbar",
+                            "child": {
+                              "type": "SingleChildScrollView",
+                              "child": {
+                                "type": "RichText",
+                                "text": {
+                                  "type": "TextSpan",
+                                  "text": "indented code\n",
+                                  "style": {
+                                    "fontFamily": "monospace",
+                                    "fontWeight": "FontWeight.w400",
+                                    "fontSize": 11.9,
+                                    "color": "Color(0xdd000000)"
+                                  }
                                 }
                               }
                             }
-                          ]
-                        }
-                      ]
+                          }
+                        ]
+                      }
                     },
                     {
                       "type": "SizedBox",

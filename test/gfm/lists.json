@@ -1354,27 +1354,31 @@
         "height": 8.0
       },
       {
-        "type": "Column",
-        "children": [
-          {
-            "type": "Wrap",
-            "children": [
-              {
-                "type": "RichText",
-                "text": {
-                  "type": "TextSpan",
-                  "text": "code ",
-                  "style": {
-                    "fontFamily": "monospace",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 11.9,
-                    "color": "Color(0xdd000000)"
+        "type": "DecoratedBox",
+        "child": {
+          "type": "Column",
+          "children": [
+            {
+              "type": "Scrollbar",
+              "child": {
+                "type": "SingleChildScrollView",
+                "child": {
+                  "type": "RichText",
+                  "text": {
+                    "type": "TextSpan",
+                    "text": "code\n",
+                    "style": {
+                      "fontFamily": "monospace",
+                      "fontWeight": "FontWeight.w400",
+                      "fontSize": 11.9,
+                      "color": "Color(0xdd000000)"
+                    }
                   }
                 }
               }
-            ]
-          }
-        ]
+            }
+          ]
+        }
       }
     ]
   },
@@ -2234,27 +2238,31 @@
         "height": 8.0
       },
       {
-        "type": "Column",
-        "children": [
-          {
-            "type": "Wrap",
-            "children": [
-              {
-                "type": "RichText",
-                "text": {
-                  "type": "TextSpan",
-                  "text": "3. c ",
-                  "style": {
-                    "fontFamily": "monospace",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 11.9,
-                    "color": "Color(0xdd000000)"
+        "type": "DecoratedBox",
+        "child": {
+          "type": "Column",
+          "children": [
+            {
+              "type": "Scrollbar",
+              "child": {
+                "type": "SingleChildScrollView",
+                "child": {
+                  "type": "RichText",
+                  "text": {
+                    "type": "TextSpan",
+                    "text": "3. c\n",
+                    "style": {
+                      "fontFamily": "monospace",
+                      "fontWeight": "FontWeight.w400",
+                      "fontSize": 11.9,
+                      "color": "Color(0xdd000000)"
+                    }
                   }
                 }
               }
-            ]
-          }
-        ]
+            }
+          ]
+        }
       }
     ]
   },
@@ -3031,27 +3039,31 @@
                   "type": "Column",
                   "children": [
                     {
-                      "type": "Column",
-                      "children": [
-                        {
-                          "type": "Wrap",
-                          "children": [
-                            {
-                              "type": "RichText",
-                              "text": {
-                                "type": "TextSpan",
-                                "text": "b   ",
-                                "style": {
-                                  "fontFamily": "monospace",
-                                  "fontWeight": "FontWeight.w400",
-                                  "fontSize": 11.9,
-                                  "color": "Color(0xdd000000)"
+                      "type": "DecoratedBox",
+                      "child": {
+                        "type": "Column",
+                        "children": [
+                          {
+                            "type": "Scrollbar",
+                            "child": {
+                              "type": "SingleChildScrollView",
+                              "child": {
+                                "type": "RichText",
+                                "text": {
+                                  "type": "TextSpan",
+                                  "text": "b\n\n\n",
+                                  "style": {
+                                    "fontFamily": "monospace",
+                                    "fontWeight": "FontWeight.w400",
+                                    "fontSize": 11.9,
+                                    "color": "Color(0xdd000000)"
+                                  }
                                 }
                               }
                             }
-                          ]
-                        }
-                      ]
+                          }
+                        ]
+                      }
                     }
                   ]
                 }
@@ -3542,27 +3554,31 @@
                       "height": 8.0
                     },
                     {
-                      "type": "Column",
-                      "children": [
-                        {
-                          "type": "Wrap",
-                          "children": [
-                            {
-                              "type": "RichText",
-                              "text": {
-                                "type": "TextSpan",
-                                "text": "c ",
-                                "style": {
-                                  "fontFamily": "monospace",
-                                  "fontWeight": "FontWeight.w400",
-                                  "fontSize": 11.9,
-                                  "color": "Color(0xdd000000)"
+                      "type": "DecoratedBox",
+                      "child": {
+                        "type": "Column",
+                        "children": [
+                          {
+                            "type": "Scrollbar",
+                            "child": {
+                              "type": "SingleChildScrollView",
+                              "child": {
+                                "type": "RichText",
+                                "text": {
+                                  "type": "TextSpan",
+                                  "text": "c\n",
+                                  "style": {
+                                    "fontFamily": "monospace",
+                                    "fontWeight": "FontWeight.w400",
+                                    "fontSize": 11.9,
+                                    "color": "Color(0xdd000000)"
+                                  }
                                 }
                               }
                             }
-                          ]
-                        }
-                      ]
+                          }
+                        ]
+                      }
                     }
                   ]
                 }
@@ -3823,27 +3839,31 @@
                   "type": "Column",
                   "children": [
                     {
-                      "type": "Column",
-                      "children": [
-                        {
-                          "type": "Wrap",
-                          "children": [
-                            {
-                              "type": "RichText",
-                              "text": {
-                                "type": "TextSpan",
-                                "text": "foo ",
-                                "style": {
-                                  "fontFamily": "monospace",
-                                  "fontWeight": "FontWeight.w400",
-                                  "fontSize": 11.9,
-                                  "color": "Color(0xdd000000)"
+                      "type": "DecoratedBox",
+                      "child": {
+                        "type": "Column",
+                        "children": [
+                          {
+                            "type": "Scrollbar",
+                            "child": {
+                              "type": "SingleChildScrollView",
+                              "child": {
+                                "type": "RichText",
+                                "text": {
+                                  "type": "TextSpan",
+                                  "text": "foo\n",
+                                  "style": {
+                                    "fontFamily": "monospace",
+                                    "fontWeight": "FontWeight.w400",
+                                    "fontSize": 11.9,
+                                    "color": "Color(0xdd000000)"
+                                  }
                                 }
                               }
                             }
-                          ]
-                        }
-                      ]
+                          }
+                        ]
+                      }
                     },
                     {
                       "type": "SizedBox",
