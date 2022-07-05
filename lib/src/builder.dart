@@ -92,6 +92,7 @@ class MarkdownBuilder implements md.NodeVisitor {
   @override
   void visitElementAfter(md.Element element) {
     final current = _tree.removeLast();
+    final type = current.type;
     final parent = _tree.last;
 
     if (current.isBlock) {
@@ -110,7 +111,11 @@ class MarkdownBuilder implements md.NodeVisitor {
         blockChild = const SizedBox.shrink();
       }
 
-      if (current.type == 'blockquote') {
+      if (type == 'thematicBreak') {
+        blockChild = Container(
+          decoration: _styleSheet.horizontalRuleDecoration,
+        );
+      } else if (type == 'blockquote') {
         _isInBlockquote = false;
 
         blockChild = DecoratedBox(
@@ -120,7 +125,7 @@ class MarkdownBuilder implements md.NodeVisitor {
             child: blockChild,
           ),
         );
-      } else if (isLinkElement(current.type)) {
+      } else if (isLinkElement(type)) {
         _linkHandlers.removeLast();
       }
 

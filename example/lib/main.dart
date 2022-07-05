@@ -29,12 +29,13 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const markdown = r'''
-[foo\_bar](/url)
+---
 ''';
 
     // TODO: Fix the colors for codes
     const code = TextStyle(fontFamily: 'monospace', fontSize: 12);
 
+    final theme = Theme.of(context);
     return Scaffold(
       appBar: AppBar(title: const Text('MarkdownViewer Demo')),
       body: Padding(
@@ -51,6 +52,11 @@ class MyHomePage extends StatelessWidget {
             link: const TextStyle(color: Color(0xff2196f3)),
             blockquote: const TextStyle(color: Color(0xff666666)),
             inlineHtml: code.copyWith(),
+            horizontalRuleDecoration: BoxDecoration(
+              border: Border(
+                top: BorderSide(width: 5.0, color: theme.dividerColor),
+              ),
+            ),
           ),
         ),
       ),

@@ -24,12 +24,19 @@ class MarkdownStyle {
     this.inlineCode,
     this.codeBlock,
     BoxDecoration? blockquoteDecoration,
+    BoxDecoration? horizontalRuleDecoration,
     EdgeInsets? blockquotePadding,
     double? blockSpacing,
   })  : blockSpacing = blockSpacing ?? 8.0,
         blockquotePadding = blockquotePadding ?? const EdgeInsets.all(8),
         blockquoteDecoration = blockquoteDecoration ??
-            const BoxDecoration(color: Color(0xffeeeeee));
+            const BoxDecoration(color: Color(0xffeeeeee)),
+        horizontalRuleDecoration = horizontalRuleDecoration ??
+            const BoxDecoration(
+              border: Border(
+                top: BorderSide(width: 5.0, color: Color(0xffcccccc)),
+              ),
+            );
 
   /// Creates a [MarkdownStyle] from the [TextStyle]s in the provided [theme].
   /// Also it allows to set individual [TextStyle]s which will be merged into
@@ -57,6 +64,7 @@ class MarkdownStyle {
     TextStyle? inlineCode,
     TextStyle? codeBlock,
     BoxDecoration? blockquoteDecoration,
+    BoxDecoration? horizontalRuleDecoration,
     EdgeInsets? blockquotePadding,
     double? blockSpacing,
   }) {
@@ -81,6 +89,7 @@ class MarkdownStyle {
       inlineCode: _generateCodeStyle(theme, true)?.merge(inlineCode),
       codeBlock: _generateCodeStyle(theme, false)?.merge(codeBlock),
       blockquoteDecoration: blockquoteDecoration,
+      horizontalRuleDecoration: horizontalRuleDecoration,
       blockquotePadding: blockquotePadding,
       blockSpacing: blockSpacing,
     );
@@ -107,6 +116,7 @@ class MarkdownStyle {
   final TextStyle? inlineCode;
   final TextStyle? codeBlock;
   final BoxDecoration blockquoteDecoration;
+  final BoxDecoration horizontalRuleDecoration;
   final EdgeInsets blockquotePadding;
 
   /// The vertical space between two block elements.

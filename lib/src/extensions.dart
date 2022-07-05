@@ -29,6 +29,11 @@ extension WidgetExtensions on Widget {
         if (self.height != null) 'height': self.height,
         if (self.width != null) 'width': self.width,
       });
+    } else if (self is Container) {
+      map.addAll({
+        if (self.child != null) 'child': self.child?.toMap(),
+        if (self.decoration != null) 'decoration': self.decoration!.toMap(),
+      });
     } else if (self is SingleChildRenderObjectWidget) {
       map.addAll({
         if (self.child != null) 'child': self.child?.toMap(),
@@ -57,6 +62,49 @@ extension TextSpanExtensions on TextSpan {
       if (children != null && children!.isNotEmpty)
         'children': children!.map((e) => (e as TextSpan).toMap()).toList(),
       if (recognizer != null) 'recognizer': recognizer.runtimeType.toString(),
+    };
+  }
+
+  String toPrettyString() => toMap().toPrettyString();
+}
+
+extension DecorationExtensions on Decoration {
+  Map<String, dynamic> toMap() {
+    Map<String, dynamic>? borderMap;
+    if (this is BoxDecoration) {
+      final border = (this as BoxDecoration).border;
+      if (border != null) {
+        borderMap = border.toMap();
+      }
+    }
+
+    return {
+      'type': runtimeType.toString(),
+      if (borderMap != null) 'border': borderMap,
+    };
+  }
+
+  String toPrettyString() => toMap().toPrettyString();
+}
+
+extension BorderExtensions on BoxBorder {
+  Map<String, dynamic> toMap() {
+    return {
+      'type': runtimeType.toString(),
+      if (top.width > 0) 'top': top.toMap(),
+      if (bottom.width > 0) 'bottom': bottom.toMap(),
+    };
+  }
+
+  String toPrettyString() => toMap().toPrettyString();
+}
+
+extension BorderSideExtensions on BorderSide {
+  Map<String, dynamic> toMap() {
+    return {
+      'type': runtimeType.toString(),
+      'width': width,
+      'color': color.toString(),
     };
   }
 
