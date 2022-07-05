@@ -27,13 +27,18 @@ class MarkdownStyle {
     BoxDecoration? blockquoteDecoration,
     BoxDecoration? horizontalRuleDecoration,
     EdgeInsets? blockquotePadding,
+    EdgeInsets? codeblockPadding,
     double? blockSpacing,
     EdgeInsets? listItemMarkerPadding,
     double? listItemMinIndent,
     TextStyle? checkbox,
+    BoxDecoration? codeblockDecoration,
   })  : blockSpacing = blockSpacing ?? 8.0,
         blockquotePadding = blockquotePadding ?? const EdgeInsets.all(8),
+        codeblockPadding = codeblockPadding ?? const EdgeInsets.all(8),
         blockquoteDecoration = blockquoteDecoration ??
+            const BoxDecoration(color: Color(0xffeeeeee)),
+        codeblockDecoration = codeblockDecoration ??
             const BoxDecoration(color: Color(0xffeeeeee)),
         horizontalRuleDecoration = horizontalRuleDecoration ??
             const BoxDecoration(
@@ -72,8 +77,10 @@ class MarkdownStyle {
     TextStyle? codeBlock,
     TextStyle? listItemMarker,
     BoxDecoration? blockquoteDecoration,
+    BoxDecoration? codeblockDecoration,
     BoxDecoration? horizontalRuleDecoration,
     EdgeInsets? blockquotePadding,
+    EdgeInsets? codeblockPadding,
     double? blockSpacing,
     EdgeInsets? listItemMarkerPadding,
     double? listItemMinIndent,
@@ -101,8 +108,10 @@ class MarkdownStyle {
       codeBlock: _generateCodeStyle(theme, false)?.merge(codeBlock),
       listItemMarker: listItemMarker,
       blockquoteDecoration: blockquoteDecoration,
+      codeblockDecoration: codeblockDecoration,
       horizontalRuleDecoration: horizontalRuleDecoration,
       blockquotePadding: blockquotePadding,
+      codeblockPadding: codeblockPadding,
       blockSpacing: blockSpacing,
       listItemMarkerPadding: listItemMarkerPadding,
       listItemMinIndent: listItemMinIndent,
@@ -133,8 +142,10 @@ class MarkdownStyle {
   final TextStyle? codeBlock;
   final TextStyle? listItemMarker;
   final BoxDecoration blockquoteDecoration;
+  final BoxDecoration codeblockDecoration;
   final BoxDecoration horizontalRuleDecoration;
   final EdgeInsets blockquotePadding;
+  final EdgeInsets codeblockPadding;
   final EdgeInsets listItemMarkerPadding;
   final TextStyle checkbox;
 

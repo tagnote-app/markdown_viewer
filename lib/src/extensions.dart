@@ -29,6 +29,14 @@ extension WidgetExtensions on Widget {
         if (self.height != null) 'height': self.height,
         if (self.width != null) 'width': self.width,
       });
+    } else if (self is Scrollbar) {
+      map.addAll({
+        'child': self.child.toMap(),
+      });
+    } else if (self is SingleChildScrollView) {
+      map.addAll({
+        if (self.child != null) 'child': self.child?.toMap(),
+      });
     } else if (self is ConstrainedBox) {
       map.addAll({
         'constraints': self.constraints.toMap(),
