@@ -18,8 +18,9 @@
                     "fontFamily": ".SF UI Text",
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
-                  }
+                    "color": "Color(0xff2196f3)"
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -42,13 +43,40 @@
                 "type": "RichText",
                 "text": {
                   "type": "TextSpan",
-                  "text": "Visit www.commonmark.org/help for more information.",
-                  "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
-                  }
+                  "children": [
+                    {
+                      "type": "TextSpan",
+                      "text": "Visit ",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": "www.commonmark.org/help",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xff2196f3)"
+                      },
+                      "recognizer": "TapGestureRecognizer"
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": " for more information.",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      },
+                      "recognizer": "TapGestureRecognizer"
+                    }
+                  ]
                 }
               }
             ]
@@ -71,13 +99,40 @@
                 "type": "RichText",
                 "text": {
                   "type": "TextSpan",
-                  "text": "Visit www.commonmark.org.",
-                  "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
-                  }
+                  "children": [
+                    {
+                      "type": "TextSpan",
+                      "text": "Visit ",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": "www.commonmark.org",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xff2196f3)"
+                      },
+                      "recognizer": "TapGestureRecognizer"
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": ".",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      },
+                      "recognizer": "TapGestureRecognizer"
+                    }
+                  ]
                 }
               }
             ]
@@ -98,13 +153,41 @@
                 "type": "RichText",
                 "text": {
                   "type": "TextSpan",
-                  "text": "Visit www.commonmark.org/a.b.",
-                  "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
-                  }
+                  "children": [
+                    {
+                      "type": "TextSpan",
+                      "text": "Visit ",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      },
+                      "recognizer": "TapGestureRecognizer"
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": "www.commonmark.org/a.b",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xff2196f3)"
+                      },
+                      "recognizer": "TapGestureRecognizer"
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": ".",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      },
+                      "recognizer": "TapGestureRecognizer"
+                    }
+                  ]
                 }
               }
             ]
@@ -132,8 +215,9 @@
                     "fontFamily": ".SF UI Text",
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
-                  }
+                    "color": "Color(0xff2196f3)"
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -154,13 +238,30 @@
                 "type": "RichText",
                 "text": {
                   "type": "TextSpan",
-                  "text": "www.google.com/search?q=Markup+(business)))",
-                  "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
-                  }
+                  "children": [
+                    {
+                      "type": "TextSpan",
+                      "text": "www.google.com/search?q=Markup+(business)",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xff2196f3)"
+                      },
+                      "recognizer": "TapGestureRecognizer"
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": "))",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      },
+                      "recognizer": "TapGestureRecognizer"
+                    }
+                  ]
                 }
               }
             ]
@@ -181,13 +282,41 @@
                 "type": "RichText",
                 "text": {
                   "type": "TextSpan",
-                  "text": "(www.google.com/search?q=Markup+(business))",
-                  "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
-                  }
+                  "children": [
+                    {
+                      "type": "TextSpan",
+                      "text": "(",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      },
+                      "recognizer": "TapGestureRecognizer"
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": "www.google.com/search?q=Markup+(business)",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xff2196f3)"
+                      },
+                      "recognizer": "TapGestureRecognizer"
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": ")",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      },
+                      "recognizer": "TapGestureRecognizer"
+                    }
+                  ]
                 }
               }
             ]
@@ -208,13 +337,30 @@
                 "type": "RichText",
                 "text": {
                   "type": "TextSpan",
-                  "text": "(www.google.com/search?q=Markup+(business)",
-                  "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
-                  }
+                  "children": [
+                    {
+                      "type": "TextSpan",
+                      "text": "(",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      },
+                      "recognizer": "TapGestureRecognizer"
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": "www.google.com/search?q=Markup+(business)",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xff2196f3)"
+                      },
+                      "recognizer": "TapGestureRecognizer"
+                    }
+                  ]
                 }
               }
             ]
@@ -242,8 +388,9 @@
                     "fontFamily": ".SF UI Text",
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
-                  }
+                    "color": "Color(0xff2196f3)"
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -271,8 +418,9 @@
                     "fontFamily": ".SF UI Text",
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
-                  }
+                    "color": "Color(0xff2196f3)"
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -293,13 +441,30 @@
                 "type": "RichText",
                 "text": {
                   "type": "TextSpan",
-                  "text": "www.google.com/search?q=commonmark&hl;",
-                  "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
-                  }
+                  "children": [
+                    {
+                      "type": "TextSpan",
+                      "text": "www.google.com/search?q=commonmark",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xff2196f3)"
+                      },
+                      "recognizer": "TapGestureRecognizer"
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": "&hl;",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      },
+                      "recognizer": "TapGestureRecognizer"
+                    }
+                  ]
                 }
               }
             ]
@@ -322,13 +487,30 @@
                 "type": "RichText",
                 "text": {
                   "type": "TextSpan",
-                  "text": "www.commonmark.org/he<lp",
-                  "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
-                  }
+                  "children": [
+                    {
+                      "type": "TextSpan",
+                      "text": "www.commonmark.org/he",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xff2196f3)"
+                      },
+                      "recognizer": "TapGestureRecognizer"
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": "<lp",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      },
+                      "recognizer": "TapGestureRecognizer"
+                    }
+                  ]
                 }
               }
             ]
@@ -356,8 +538,9 @@
                     "fontFamily": ".SF UI Text",
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
-                  }
+                    "color": "Color(0xff2196f3)"
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -378,13 +561,41 @@
                 "type": "RichText",
                 "text": {
                   "type": "TextSpan",
-                  "text": "(Visit https://encrypted.google.com/search?q=Markup+(business))",
-                  "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
-                  }
+                  "children": [
+                    {
+                      "type": "TextSpan",
+                      "text": "(Visit ",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      },
+                      "recognizer": "TapGestureRecognizer"
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": "https://encrypted.google.com/search?q=Markup+(business)",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xff2196f3)"
+                      },
+                      "recognizer": "TapGestureRecognizer"
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": ")",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      },
+                      "recognizer": "TapGestureRecognizer"
+                    }
+                  ]
                 }
               }
             ]
@@ -405,13 +616,41 @@
                 "type": "RichText",
                 "text": {
                   "type": "TextSpan",
-                  "text": "Anonymous FTP is available at ftp://foo.bar.baz.",
-                  "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
-                  }
+                  "children": [
+                    {
+                      "type": "TextSpan",
+                      "text": "Anonymous FTP is available at ",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      },
+                      "recognizer": "TapGestureRecognizer"
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": "ftp://foo.bar.baz",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xff2196f3)"
+                      },
+                      "recognizer": "TapGestureRecognizer"
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": ".",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      },
+                      "recognizer": "TapGestureRecognizer"
+                    }
+                  ]
                 }
               }
             ]
@@ -439,8 +678,9 @@
                     "fontFamily": ".SF UI Text",
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
-                  }
+                    "color": "Color(0xff2196f3)"
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -463,13 +703,40 @@
                 "type": "RichText",
                 "text": {
                   "type": "TextSpan",
-                  "text": "hello@mail+xyz.example isn't valid, but hello+xyz@mail.example is.",
-                  "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
-                  }
+                  "children": [
+                    {
+                      "type": "TextSpan",
+                      "text": "hello@mail+xyz.example isn't valid, but ",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": "hello+xyz@mail.example",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xff2196f3)"
+                      },
+                      "recognizer": "TapGestureRecognizer"
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": " is.",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      },
+                      "recognizer": "TapGestureRecognizer"
+                    }
+                  ]
                 }
               }
             ]
@@ -497,8 +764,9 @@
                     "fontFamily": ".SF UI Text",
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
-                  }
+                    "color": "Color(0xff2196f3)"
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -519,13 +787,30 @@
                 "type": "RichText",
                 "text": {
                   "type": "TextSpan",
-                  "text": "a.b-c_d@a.b.",
-                  "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
-                  }
+                  "children": [
+                    {
+                      "type": "TextSpan",
+                      "text": "a.b-c_d@a.b",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xff2196f3)"
+                      },
+                      "recognizer": "TapGestureRecognizer"
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": ".",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      },
+                      "recognizer": "TapGestureRecognizer"
+                    }
+                  ]
                 }
               }
             ]
@@ -552,7 +837,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Color(0xdd000000)"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -579,7 +865,8 @@
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
                     "color": "Color(0xdd000000)"
-                  }
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]

@@ -4,21 +4,121 @@
     "markdown": "| foo | bar |\n| --- | --- |\n| baz | bim |\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "Table",
         "children": [
           {
-            "type": "Wrap",
+            "type": "TableRow",
             "children": [
               {
-                "type": "RichText",
-                "text": {
-                  "type": "TextSpan",
-                  "text": "| foo | bar | | --- | --- | | baz | bim |",
-                  "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
+                "type": "TableCell",
+                "child": {
+                  "type": "Padding",
+                  "child": {
+                    "type": "DefaultTextStyle",
+                    "child": {
+                      "type": "Wrap",
+                      "children": [
+                        {
+                          "type": "RichText",
+                          "text": {
+                            "type": "TextSpan",
+                            "text": "foo",
+                            "style": {
+                              "fontFamily": ".SF UI Text",
+                              "fontWeight": "FontWeight.w600",
+                              "fontSize": 14.0,
+                              "color": "Color(0xdd000000)"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              {
+                "type": "TableCell",
+                "child": {
+                  "type": "Padding",
+                  "child": {
+                    "type": "DefaultTextStyle",
+                    "child": {
+                      "type": "Wrap",
+                      "children": [
+                        {
+                          "type": "RichText",
+                          "text": {
+                            "type": "TextSpan",
+                            "text": "bar",
+                            "style": {
+                              "fontFamily": ".SF UI Text",
+                              "fontWeight": "FontWeight.w600",
+                              "fontSize": 14.0,
+                              "color": "Color(0xdd000000)"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "TableRow",
+            "children": [
+              {
+                "type": "TableCell",
+                "child": {
+                  "type": "Padding",
+                  "child": {
+                    "type": "DefaultTextStyle",
+                    "child": {
+                      "type": "Wrap",
+                      "children": [
+                        {
+                          "type": "RichText",
+                          "text": {
+                            "type": "TextSpan",
+                            "text": "baz",
+                            "style": {
+                              "fontFamily": ".SF UI Text",
+                              "fontWeight": "FontWeight.w400",
+                              "fontSize": 14.0,
+                              "color": "Color(0xdd000000)"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              {
+                "type": "TableCell",
+                "child": {
+                  "type": "Padding",
+                  "child": {
+                    "type": "DefaultTextStyle",
+                    "child": {
+                      "type": "Wrap",
+                      "children": [
+                        {
+                          "type": "RichText",
+                          "text": {
+                            "type": "TextSpan",
+                            "text": "bim",
+                            "style": {
+                              "fontFamily": ".SF UI Text",
+                              "fontWeight": "FontWeight.w400",
+                              "fontSize": 14.0,
+                              "color": "Color(0xdd000000)"
+                            }
+                          }
+                        }
+                      ]
+                    }
                   }
                 }
               }
@@ -33,21 +133,121 @@
     "markdown": "| abc | defghi |\n:-: | -----------:\nbar | baz\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "Table",
         "children": [
           {
-            "type": "Wrap",
+            "type": "TableRow",
             "children": [
               {
-                "type": "RichText",
-                "text": {
-                  "type": "TextSpan",
-                  "text": "| abc | defghi | :-: | -----------: bar | baz",
-                  "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
+                "type": "TableCell",
+                "child": {
+                  "type": "Padding",
+                  "child": {
+                    "type": "DefaultTextStyle",
+                    "child": {
+                      "type": "Wrap",
+                      "children": [
+                        {
+                          "type": "RichText",
+                          "text": {
+                            "type": "TextSpan",
+                            "text": "abc",
+                            "style": {
+                              "fontFamily": ".SF UI Text",
+                              "fontWeight": "FontWeight.w600",
+                              "fontSize": 14.0,
+                              "color": "Color(0xdd000000)"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              {
+                "type": "TableCell",
+                "child": {
+                  "type": "Padding",
+                  "child": {
+                    "type": "DefaultTextStyle",
+                    "child": {
+                      "type": "Wrap",
+                      "children": [
+                        {
+                          "type": "RichText",
+                          "text": {
+                            "type": "TextSpan",
+                            "text": "defghi",
+                            "style": {
+                              "fontFamily": ".SF UI Text",
+                              "fontWeight": "FontWeight.w600",
+                              "fontSize": 14.0,
+                              "color": "Color(0xdd000000)"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "TableRow",
+            "children": [
+              {
+                "type": "TableCell",
+                "child": {
+                  "type": "Padding",
+                  "child": {
+                    "type": "DefaultTextStyle",
+                    "child": {
+                      "type": "Wrap",
+                      "children": [
+                        {
+                          "type": "RichText",
+                          "text": {
+                            "type": "TextSpan",
+                            "text": "bar",
+                            "style": {
+                              "fontFamily": ".SF UI Text",
+                              "fontWeight": "FontWeight.w400",
+                              "fontSize": 14.0,
+                              "color": "Color(0xdd000000)"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              {
+                "type": "TableCell",
+                "child": {
+                  "type": "Padding",
+                  "child": {
+                    "type": "DefaultTextStyle",
+                    "child": {
+                      "type": "Wrap",
+                      "children": [
+                        {
+                          "type": "RichText",
+                          "text": {
+                            "type": "TextSpan",
+                            "text": "baz",
+                            "style": {
+                              "fontFamily": ".SF UI Text",
+                              "fontWeight": "FontWeight.w400",
+                              "fontSize": 14.0,
+                              "color": "Color(0xdd000000)"
+                            }
+                          }
+                        }
+                      ]
+                    }
                   }
                 }
               }
@@ -62,68 +262,151 @@
     "markdown": "| f\\|oo  |\n| ------ |\n| b `\\|` az |\n| b **\\|** im |\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "Table",
         "children": [
           {
-            "type": "Wrap",
+            "type": "TableRow",
             "children": [
               {
-                "type": "RichText",
-                "text": {
-                  "type": "TextSpan",
-                  "children": [
-                    {
-                      "type": "TextSpan",
-                      "text": "| f|oo  | | ------ | | b ",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
-                      }
-                    },
-                    {
-                      "type": "TextSpan",
-                      "text": "\\|",
-                      "style": {
-                        "fontFamily": "monospace",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 11.9,
-                        "color": "Color(0xdd000000)",
-                        "backgroundColor": "Color(0xfff8f09e)"
-                      }
-                    },
-                    {
-                      "type": "TextSpan",
-                      "text": " az | | b ",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
-                      }
-                    },
-                    {
-                      "type": "TextSpan",
-                      "text": "|",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w700",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
-                      }
-                    },
-                    {
-                      "type": "TextSpan",
-                      "text": " im |",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
-                      }
+                "type": "TableCell",
+                "child": {
+                  "type": "Padding",
+                  "child": {
+                    "type": "DefaultTextStyle",
+                    "child": {
+                      "type": "Wrap",
+                      "children": [
+                        {
+                          "type": "RichText",
+                          "text": {
+                            "type": "TextSpan",
+                            "text": "f|oo",
+                            "style": {
+                              "fontFamily": ".SF UI Text",
+                              "fontWeight": "FontWeight.w600",
+                              "fontSize": 14.0,
+                              "color": "Color(0xdd000000)"
+                            }
+                          }
+                        }
+                      ]
                     }
-                  ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "TableRow",
+            "children": [
+              {
+                "type": "TableCell",
+                "child": {
+                  "type": "Padding",
+                  "child": {
+                    "type": "DefaultTextStyle",
+                    "child": {
+                      "type": "Wrap",
+                      "children": [
+                        {
+                          "type": "RichText",
+                          "text": {
+                            "type": "TextSpan",
+                            "children": [
+                              {
+                                "type": "TextSpan",
+                                "text": "b ",
+                                "style": {
+                                  "fontFamily": ".SF UI Text",
+                                  "fontWeight": "FontWeight.w400",
+                                  "fontSize": 14.0,
+                                  "color": "Color(0xdd000000)"
+                                }
+                              },
+                              {
+                                "type": "TextSpan",
+                                "text": "|",
+                                "style": {
+                                  "fontFamily": "monospace",
+                                  "fontWeight": "FontWeight.w400",
+                                  "fontSize": 11.9,
+                                  "color": "Color(0xdd000000)",
+                                  "backgroundColor": "Color(0xfff8f09e)"
+                                }
+                              },
+                              {
+                                "type": "TextSpan",
+                                "text": " az",
+                                "style": {
+                                  "fontFamily": ".SF UI Text",
+                                  "fontWeight": "FontWeight.w400",
+                                  "fontSize": 14.0,
+                                  "color": "Color(0xdd000000)"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "TableRow",
+            "children": [
+              {
+                "type": "TableCell",
+                "child": {
+                  "type": "Padding",
+                  "child": {
+                    "type": "DefaultTextStyle",
+                    "child": {
+                      "type": "Wrap",
+                      "children": [
+                        {
+                          "type": "RichText",
+                          "text": {
+                            "type": "TextSpan",
+                            "children": [
+                              {
+                                "type": "TextSpan",
+                                "text": "b ",
+                                "style": {
+                                  "fontFamily": ".SF UI Text",
+                                  "fontWeight": "FontWeight.w400",
+                                  "fontSize": 14.0,
+                                  "color": "Color(0xdd000000)"
+                                }
+                              },
+                              {
+                                "type": "TextSpan",
+                                "text": "|",
+                                "style": {
+                                  "fontFamily": ".SF UI Text",
+                                  "fontWeight": "FontWeight.w700",
+                                  "fontSize": 14.0,
+                                  "color": "Color(0xdd000000)"
+                                }
+                              },
+                              {
+                                "type": "TextSpan",
+                                "text": " im",
+                                "style": {
+                                  "fontFamily": ".SF UI Text",
+                                  "fontWeight": "FontWeight.w400",
+                                  "fontSize": 14.0,
+                                  "color": "Color(0xdd000000)"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
                 }
               }
             ]
@@ -137,21 +420,121 @@
     "markdown": "| abc | def |\n| --- | --- |\n| bar | baz |\n> bar\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "Table",
         "children": [
           {
-            "type": "Wrap",
+            "type": "TableRow",
             "children": [
               {
-                "type": "RichText",
-                "text": {
-                  "type": "TextSpan",
-                  "text": "| abc | def | | --- | --- | | bar | baz |",
-                  "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
+                "type": "TableCell",
+                "child": {
+                  "type": "Padding",
+                  "child": {
+                    "type": "DefaultTextStyle",
+                    "child": {
+                      "type": "Wrap",
+                      "children": [
+                        {
+                          "type": "RichText",
+                          "text": {
+                            "type": "TextSpan",
+                            "text": "abc",
+                            "style": {
+                              "fontFamily": ".SF UI Text",
+                              "fontWeight": "FontWeight.w600",
+                              "fontSize": 14.0,
+                              "color": "Color(0xdd000000)"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              {
+                "type": "TableCell",
+                "child": {
+                  "type": "Padding",
+                  "child": {
+                    "type": "DefaultTextStyle",
+                    "child": {
+                      "type": "Wrap",
+                      "children": [
+                        {
+                          "type": "RichText",
+                          "text": {
+                            "type": "TextSpan",
+                            "text": "def",
+                            "style": {
+                              "fontFamily": ".SF UI Text",
+                              "fontWeight": "FontWeight.w600",
+                              "fontSize": 14.0,
+                              "color": "Color(0xdd000000)"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "TableRow",
+            "children": [
+              {
+                "type": "TableCell",
+                "child": {
+                  "type": "Padding",
+                  "child": {
+                    "type": "DefaultTextStyle",
+                    "child": {
+                      "type": "Wrap",
+                      "children": [
+                        {
+                          "type": "RichText",
+                          "text": {
+                            "type": "TextSpan",
+                            "text": "bar",
+                            "style": {
+                              "fontFamily": ".SF UI Text",
+                              "fontWeight": "FontWeight.w400",
+                              "fontSize": 14.0,
+                              "color": "Color(0xdd000000)"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              {
+                "type": "TableCell",
+                "child": {
+                  "type": "Padding",
+                  "child": {
+                    "type": "DefaultTextStyle",
+                    "child": {
+                      "type": "Wrap",
+                      "children": [
+                        {
+                          "type": "RichText",
+                          "text": {
+                            "type": "TextSpan",
+                            "text": "baz",
+                            "style": {
+                              "fontFamily": ".SF UI Text",
+                              "fontWeight": "FontWeight.w400",
+                              "fontSize": 14.0,
+                              "color": "Color(0xdd000000)"
+                            }
+                          }
+                        }
+                      ]
+                    }
                   }
                 }
               }
@@ -204,21 +587,165 @@
     "markdown": "| abc | def |\n| --- | --- |\n| bar | baz |\nbar\n\nbar\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "Table",
         "children": [
           {
-            "type": "Wrap",
+            "type": "TableRow",
             "children": [
               {
-                "type": "RichText",
-                "text": {
-                  "type": "TextSpan",
-                  "text": "| abc | def | | --- | --- | | bar | baz | bar",
-                  "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
+                "type": "TableCell",
+                "child": {
+                  "type": "Padding",
+                  "child": {
+                    "type": "DefaultTextStyle",
+                    "child": {
+                      "type": "Wrap",
+                      "children": [
+                        {
+                          "type": "RichText",
+                          "text": {
+                            "type": "TextSpan",
+                            "text": "abc",
+                            "style": {
+                              "fontFamily": ".SF UI Text",
+                              "fontWeight": "FontWeight.w600",
+                              "fontSize": 14.0,
+                              "color": "Color(0xdd000000)"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              {
+                "type": "TableCell",
+                "child": {
+                  "type": "Padding",
+                  "child": {
+                    "type": "DefaultTextStyle",
+                    "child": {
+                      "type": "Wrap",
+                      "children": [
+                        {
+                          "type": "RichText",
+                          "text": {
+                            "type": "TextSpan",
+                            "text": "def",
+                            "style": {
+                              "fontFamily": ".SF UI Text",
+                              "fontWeight": "FontWeight.w600",
+                              "fontSize": 14.0,
+                              "color": "Color(0xdd000000)"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "TableRow",
+            "children": [
+              {
+                "type": "TableCell",
+                "child": {
+                  "type": "Padding",
+                  "child": {
+                    "type": "DefaultTextStyle",
+                    "child": {
+                      "type": "Wrap",
+                      "children": [
+                        {
+                          "type": "RichText",
+                          "text": {
+                            "type": "TextSpan",
+                            "text": "bar",
+                            "style": {
+                              "fontFamily": ".SF UI Text",
+                              "fontWeight": "FontWeight.w400",
+                              "fontSize": 14.0,
+                              "color": "Color(0xdd000000)"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              {
+                "type": "TableCell",
+                "child": {
+                  "type": "Padding",
+                  "child": {
+                    "type": "DefaultTextStyle",
+                    "child": {
+                      "type": "Wrap",
+                      "children": [
+                        {
+                          "type": "RichText",
+                          "text": {
+                            "type": "TextSpan",
+                            "text": "baz",
+                            "style": {
+                              "fontFamily": ".SF UI Text",
+                              "fontWeight": "FontWeight.w400",
+                              "fontSize": 14.0,
+                              "color": "Color(0xdd000000)"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "TableRow",
+            "children": [
+              {
+                "type": "TableCell",
+                "child": {
+                  "type": "Padding",
+                  "child": {
+                    "type": "DefaultTextStyle",
+                    "child": {
+                      "type": "Wrap",
+                      "children": [
+                        {
+                          "type": "RichText",
+                          "text": {
+                            "type": "TextSpan",
+                            "text": "bar",
+                            "style": {
+                              "fontFamily": ".SF UI Text",
+                              "fontWeight": "FontWeight.w400",
+                              "fontSize": 14.0,
+                              "color": "Color(0xdd000000)"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              {
+                "type": "TableCell",
+                "child": {
+                  "type": "Padding",
+                  "child": {
+                    "type": "DefaultTextStyle",
+                    "child": {
+                      "type": "Wrap"
+                    }
                   }
                 }
               }
@@ -289,21 +816,192 @@
     "markdown": "| abc | def |\n| --- | --- |\n| bar |\n| bar | baz | boo |\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "Table",
         "children": [
           {
-            "type": "Wrap",
+            "type": "TableRow",
             "children": [
               {
-                "type": "RichText",
-                "text": {
-                  "type": "TextSpan",
-                  "text": "| abc | def | | --- | --- | | bar | | bar | baz | boo |",
-                  "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
+                "type": "TableCell",
+                "child": {
+                  "type": "Padding",
+                  "child": {
+                    "type": "DefaultTextStyle",
+                    "child": {
+                      "type": "Wrap",
+                      "children": [
+                        {
+                          "type": "RichText",
+                          "text": {
+                            "type": "TextSpan",
+                            "text": "abc",
+                            "style": {
+                              "fontFamily": ".SF UI Text",
+                              "fontWeight": "FontWeight.w600",
+                              "fontSize": 14.0,
+                              "color": "Color(0xdd000000)"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              {
+                "type": "TableCell",
+                "child": {
+                  "type": "Padding",
+                  "child": {
+                    "type": "DefaultTextStyle",
+                    "child": {
+                      "type": "Wrap",
+                      "children": [
+                        {
+                          "type": "RichText",
+                          "text": {
+                            "type": "TextSpan",
+                            "text": "def",
+                            "style": {
+                              "fontFamily": ".SF UI Text",
+                              "fontWeight": "FontWeight.w600",
+                              "fontSize": 14.0,
+                              "color": "Color(0xdd000000)"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "TableRow",
+            "children": [
+              {
+                "type": "TableCell",
+                "child": {
+                  "type": "Padding",
+                  "child": {
+                    "type": "DefaultTextStyle",
+                    "child": {
+                      "type": "Wrap",
+                      "children": [
+                        {
+                          "type": "RichText",
+                          "text": {
+                            "type": "TextSpan",
+                            "text": "bar",
+                            "style": {
+                              "fontFamily": ".SF UI Text",
+                              "fontWeight": "FontWeight.w400",
+                              "fontSize": 14.0,
+                              "color": "Color(0xdd000000)"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              {
+                "type": "TableCell",
+                "child": {
+                  "type": "Padding",
+                  "child": {
+                    "type": "DefaultTextStyle",
+                    "child": {
+                      "type": "Wrap"
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "TableRow",
+            "children": [
+              {
+                "type": "TableCell",
+                "child": {
+                  "type": "Padding",
+                  "child": {
+                    "type": "DefaultTextStyle",
+                    "child": {
+                      "type": "Wrap",
+                      "children": [
+                        {
+                          "type": "RichText",
+                          "text": {
+                            "type": "TextSpan",
+                            "text": "bar",
+                            "style": {
+                              "fontFamily": ".SF UI Text",
+                              "fontWeight": "FontWeight.w400",
+                              "fontSize": 14.0,
+                              "color": "Color(0xdd000000)"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              {
+                "type": "TableCell",
+                "child": {
+                  "type": "Padding",
+                  "child": {
+                    "type": "DefaultTextStyle",
+                    "child": {
+                      "type": "Wrap",
+                      "children": [
+                        {
+                          "type": "RichText",
+                          "text": {
+                            "type": "TextSpan",
+                            "text": "baz",
+                            "style": {
+                              "fontFamily": ".SF UI Text",
+                              "fontWeight": "FontWeight.w400",
+                              "fontSize": 14.0,
+                              "color": "Color(0xdd000000)"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              {
+                "type": "TableCell",
+                "child": {
+                  "type": "Padding",
+                  "child": {
+                    "type": "DefaultTextStyle",
+                    "child": {
+                      "type": "Wrap",
+                      "children": [
+                        {
+                          "type": "RichText",
+                          "text": {
+                            "type": "TextSpan",
+                            "text": "boo",
+                            "style": {
+                              "fontFamily": ".SF UI Text",
+                              "fontWeight": "FontWeight.w400",
+                              "fontSize": 14.0,
+                              "color": "Color(0xdd000000)"
+                            }
+                          }
+                        }
+                      ]
+                    }
                   }
                 }
               }
@@ -318,21 +1016,62 @@
     "markdown": "| abc | def |\n| --- | --- |\n",
     "expected": [
       {
-        "type": "Column",
+        "type": "Table",
         "children": [
           {
-            "type": "Wrap",
+            "type": "TableRow",
             "children": [
               {
-                "type": "RichText",
-                "text": {
-                  "type": "TextSpan",
-                  "text": "| abc | def | | --- | --- |",
-                  "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
+                "type": "TableCell",
+                "child": {
+                  "type": "Padding",
+                  "child": {
+                    "type": "DefaultTextStyle",
+                    "child": {
+                      "type": "Wrap",
+                      "children": [
+                        {
+                          "type": "RichText",
+                          "text": {
+                            "type": "TextSpan",
+                            "text": "abc",
+                            "style": {
+                              "fontFamily": ".SF UI Text",
+                              "fontWeight": "FontWeight.w600",
+                              "fontSize": 14.0,
+                              "color": "Color(0xdd000000)"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              {
+                "type": "TableCell",
+                "child": {
+                  "type": "Padding",
+                  "child": {
+                    "type": "DefaultTextStyle",
+                    "child": {
+                      "type": "Wrap",
+                      "children": [
+                        {
+                          "type": "RichText",
+                          "text": {
+                            "type": "TextSpan",
+                            "text": "def",
+                            "style": {
+                              "fontFamily": ".SF UI Text",
+                              "fontWeight": "FontWeight.w600",
+                              "fontSize": 14.0,
+                              "color": "Color(0xdd000000)"
+                            }
+                          }
+                        }
+                      ]
+                    }
                   }
                 }
               }

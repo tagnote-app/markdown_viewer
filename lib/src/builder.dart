@@ -102,6 +102,7 @@ class MarkdownBuilder implements md.NodeVisitor {
 
       _tableStack.single.rows.add(TableRow(
         decoration: decoration,
+        // TODO(Zhiguang) Fix it.
         children: [],
       ));
     } else if (isLinkElement(type) && _onTapLink != null) {
