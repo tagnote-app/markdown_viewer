@@ -1,6 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:markdown/markdown.dart' as md;
 
+const _tableBorderSide = BorderSide(color: Color(0xffcccccc));
+const _tableBorder = TableBorder(
+  top: _tableBorderSide,
+  left: _tableBorderSide,
+  right: _tableBorderSide,
+  bottom: _tableBorderSide,
+  horizontalInside: _tableBorderSide,
+  verticalInside: _tableBorderSide,
+);
+
 class MarkdownStyle {
   MarkdownStyle({
     this.paragraph,
@@ -9,7 +19,7 @@ class MarkdownStyle {
     this.listItem,
     this.table,
     this.tableHead,
-    this.tableBody,
+    TextStyle? tableBody,
     this.headline1,
     this.headline2,
     this.headline3,
@@ -24,6 +34,10 @@ class MarkdownStyle {
     this.inlineCode,
     this.codeBlock,
     this.listItemMarker,
+    this.tableHeadCellAlign,
+    this.tableRowDecorationAlternating,
+    this.tableRowDecoration,
+    this.tableBorder = _tableBorder,
     BoxDecoration? blockquoteDecoration,
     BoxDecoration? horizontalRuleDecoration,
     EdgeInsets? blockquotePadding,
@@ -33,7 +47,11 @@ class MarkdownStyle {
     double? listItemMinIndent,
     TextStyle? checkbox,
     BoxDecoration? codeblockDecoration,
-  })  : blockSpacing = blockSpacing ?? 8.0,
+    EdgeInsets? tableCellPadding,
+    TableColumnWidth? tableColumnWidth,
+  })  : tableBody = tableBody ?? const TextStyle(),
+        tableColumnWidth = tableColumnWidth ?? const FlexColumnWidth(),
+        blockSpacing = blockSpacing ?? 8.0,
         blockquotePadding = blockquotePadding ?? const EdgeInsets.all(8),
         codeblockPadding = codeblockPadding ?? const EdgeInsets.all(8),
         blockquoteDecoration = blockquoteDecoration ??
@@ -48,7 +66,9 @@ class MarkdownStyle {
             ),
         listItemMarkerPadding = const EdgeInsets.only(right: 12.0),
         listItemMinIndent = listItemMinIndent ?? 20.0,
-        checkbox = checkbox ?? const TextStyle(fontSize: 18.0);
+        checkbox = checkbox ?? const TextStyle(fontSize: 18.0),
+        tableCellPadding =
+            tableCellPadding ?? const EdgeInsets.fromLTRB(16, 8, 16, 8);
 
   /// Creates a [MarkdownStyle] from the [TextStyle]s in the provided [theme].
   /// Also it allows to set individual [TextStyle]s which will be merged into
@@ -76,21 +96,29 @@ class MarkdownStyle {
     TextStyle? inlineCode,
     TextStyle? codeBlock,
     TextStyle? listItemMarker,
+    TextAlign? tableHeadCellAlign,
     BoxDecoration? blockquoteDecoration,
     BoxDecoration? codeblockDecoration,
     BoxDecoration? horizontalRuleDecoration,
     EdgeInsets? blockquotePadding,
     EdgeInsets? codeblockPadding,
+    EdgeInsets? tableCellPadding,
+    TableColumnWidth? tableColumnWidth,
     double? blockSpacing,
     EdgeInsets? listItemMarkerPadding,
     double? listItemMinIndent,
     TextStyle? checkbox,
+    TableBorder? tableBorder = _tableBorder,
+    BoxDecoration? tableRowDecoration,
+    TableRowDecorationAlternating? tableRowDecorationAlternating,
   }) {
     return MarkdownStyle(
       paragraph: theme.textTheme.bodyText2?.merge(paragraph),
       blockquote: theme.textTheme.bodyText2?.merge(blockquote),
       list: theme.textTheme.bodyText2?.merge(list),
-      tableHead: const TextStyle(fontWeight: FontWeight.w600).merge(tableHead),
+      tableHead: theme.textTheme.bodyText2
+          ?.copyWith(fontWeight: FontWeight.w600)
+          .merge(tableHead),
       tableBody: theme.textTheme.bodyText2?.merge(tableBody),
       headline1: theme.textTheme.headline5?.merge(headline1),
       headline2: theme.textTheme.headline6?.merge(headline2),
@@ -107,12 +135,18 @@ class MarkdownStyle {
       inlineCode: _generateCodeStyle(theme, true)?.merge(inlineCode),
       codeBlock: _generateCodeStyle(theme, false)?.merge(codeBlock),
       listItemMarker: listItemMarker,
+      tableHeadCellAlign: tableHeadCellAlign,
       blockquoteDecoration: blockquoteDecoration,
       codeblockDecoration: codeblockDecoration,
       horizontalRuleDecoration: horizontalRuleDecoration,
       blockquotePadding: blockquotePadding,
       codeblockPadding: codeblockPadding,
+      tableCellPadding: tableCellPadding,
+      tableColumnWidth: tableColumnWidth,
+      tableRowDecorationAlternating: tableRowDecorationAlternating,
       blockSpacing: blockSpacing,
+      tableBorder: tableBorder,
+      tableRowDecoration: tableRowDecoration,
       listItemMarkerPadding: listItemMarkerPadding,
       listItemMinIndent: listItemMinIndent,
       checkbox: const TextStyle(fontSize: 18.0, color: Color(0xff2196f3))
@@ -126,7 +160,7 @@ class MarkdownStyle {
   final TextStyle? listItem;
   final TextStyle? table;
   final TextStyle? tableHead;
-  final TextStyle? tableBody;
+  final TextStyle tableBody;
   final TextStyle? headline1;
   final TextStyle? headline2;
   final TextStyle? headline3;
@@ -147,7 +181,13 @@ class MarkdownStyle {
   final EdgeInsets blockquotePadding;
   final EdgeInsets codeblockPadding;
   final EdgeInsets listItemMarkerPadding;
+  final EdgeInsets tableCellPadding;
+  final TableBorder? tableBorder;
+  final TableColumnWidth tableColumnWidth;
   final TextStyle checkbox;
+  final TextAlign? tableHeadCellAlign;
+  final BoxDecoration? tableRowDecoration;
+  final TableRowDecorationAlternating? tableRowDecorationAlternating;
 
   /// The vertical space between two block elements.
   final double blockSpacing;
@@ -257,3 +297,5 @@ TextStyle? _generateCodeStyle(ThemeData theme, bool withBackground) {
     backgroundColor: const Color(0xfff8f09e),
   );
 }
+
+enum TableRowDecorationAlternating { odd, even }

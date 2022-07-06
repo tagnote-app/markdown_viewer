@@ -11,6 +11,7 @@ List<Widget> mergeInlineChildren(
   final mergedWidgets = <Widget>[];
   var mergedTexts = <Widget>[];
 
+  // TODO(Zhiguang): Why? Try to remove the Wrap.
   // Enclose all text widgets in a `Wrap` widget.
   void addWithWrap() {
     if (mergedTexts.isEmpty) {
