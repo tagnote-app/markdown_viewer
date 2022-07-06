@@ -1642,7 +1642,7 @@
                   "type": "RichText",
                   "text": {
                     "type": "TextSpan",
-                    "text": "<!-- foo -->\n",
+                    "text": "<!-- foo -->",
                     "style": {
                       "fontFamily": "monospace",
                       "fontWeight": "FontWeight.w400",
@@ -1702,7 +1702,7 @@
                   "type": "RichText",
                   "text": {
                     "type": "TextSpan",
-                    "text": "<div>\n",
+                    "text": "<div>",
                     "style": {
                       "fontFamily": "monospace",
                       "fontWeight": "FontWeight.w400",
@@ -2059,7 +2059,7 @@
                   "type": "RichText",
                   "text": {
                     "type": "TextSpan",
-                    "text": "<td>\n",
+                    "text": "<td>",
                     "style": {
                       "fontFamily": "monospace",
                       "fontWeight": "FontWeight.w400",
@@ -2078,7 +2078,7 @@
                   "type": "RichText",
                   "text": {
                     "type": "TextSpan",
-                    "text": "  Hi\n",
+                    "text": "  Hi",
                     "style": {
                       "fontFamily": "monospace",
                       "fontWeight": "FontWeight.w400",
@@ -2097,7 +2097,7 @@
                   "type": "RichText",
                   "text": {
                     "type": "TextSpan",
-                    "text": "</td>\n",
+                    "text": "</td>",
                     "style": {
                       "fontFamily": "monospace",
                       "fontWeight": "FontWeight.w400",

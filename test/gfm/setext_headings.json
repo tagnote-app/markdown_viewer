@@ -333,7 +333,7 @@
                   "type": "RichText",
                   "text": {
                     "type": "TextSpan",
-                    "text": "Foo\n",
+                    "text": "Foo",
                     "style": {
                       "fontFamily": "monospace",
                       "fontWeight": "FontWeight.w400",
@@ -352,7 +352,7 @@
                   "type": "RichText",
                   "text": {
                     "type": "TextSpan",
-                    "text": "---\n",
+                    "text": "---",
                     "style": {
                       "fontFamily": "monospace",
                       "fontWeight": "FontWeight.w400",
@@ -371,7 +371,7 @@
                   "type": "RichText",
                   "text": {
                     "type": "TextSpan",
-                    "text": "\n",
+                    "text": "",
                     "style": {
                       "fontFamily": "monospace",
                       "fontWeight": "FontWeight.w400",
@@ -390,7 +390,7 @@
                   "type": "RichText",
                   "text": {
                     "type": "TextSpan",
-                    "text": "Foo\n",
+                    "text": "Foo",
                     "style": {
                       "fontFamily": "monospace",
                       "fontWeight": "FontWeight.w400",
@@ -1186,7 +1186,7 @@
                   "type": "RichText",
                   "text": {
                     "type": "TextSpan",
-                    "text": "foo\n",
+                    "text": "foo",
                     "style": {
                       "fontFamily": "monospace",
                       "fontWeight": "FontWeight.w400",

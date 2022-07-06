@@ -105,7 +105,7 @@ class MarkdownBuilder implements md.NodeVisitor {
           child: _buildRichText(
             _highlightBuilder == null
                 ? TextSpan(
-                    text: text.text,
+                    text: text.text.trimRight(),
                     style: parent.style,
                   )
                 : _highlightBuilder!(text.text, parent.attributes['language'],

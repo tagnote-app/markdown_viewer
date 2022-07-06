@@ -1366,7 +1366,7 @@
                   "type": "RichText",
                   "text": {
                     "type": "TextSpan",
-                    "text": "code\n",
+                    "text": "code",
                     "style": {
                       "fontFamily": "monospace",
                       "fontWeight": "FontWeight.w400",
@@ -2250,7 +2250,7 @@
                   "type": "RichText",
                   "text": {
                     "type": "TextSpan",
-                    "text": "3. c\n",
+                    "text": "3. c",
                     "style": {
                       "fontFamily": "monospace",
                       "fontWeight": "FontWeight.w400",
@@ -3051,7 +3051,7 @@
                                 "type": "RichText",
                                 "text": {
                                   "type": "TextSpan",
-                                  "text": "b\n\n\n",
+                                  "text": "b",
                                   "style": {
                                     "fontFamily": "monospace",
                                     "fontWeight": "FontWeight.w400",
@@ -3566,7 +3566,7 @@
                                 "type": "RichText",
                                 "text": {
                                   "type": "TextSpan",
-                                  "text": "c\n",
+                                  "text": "c",
                                   "style": {
                                     "fontFamily": "monospace",
                                     "fontWeight": "FontWeight.w400",
@@ -3851,7 +3851,7 @@
                                 "type": "RichText",
                                 "text": {
                                   "type": "TextSpan",
-                                  "text": "foo\n",
+                                  "text": "foo",
                                   "style": {
                                     "fontFamily": "monospace",
                                     "fontWeight": "FontWeight.w400",

@@ -215,7 +215,7 @@
                   "type": "RichText",
                   "text": {
                     "type": "TextSpan",
-                    "text": "***\n",
+                    "text": "***",
                     "style": {
                       "fontFamily": "monospace",
                       "fontWeight": "FontWeight.w400",

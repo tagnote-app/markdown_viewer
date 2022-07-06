@@ -461,7 +461,7 @@
                   "type": "RichText",
                   "text": {
                     "type": "TextSpan",
-                    "text": "# foo\n",
+                    "text": "# foo",
                     "style": {
                       "fontFamily": "monospace",
                       "fontWeight": "FontWeight.w400",

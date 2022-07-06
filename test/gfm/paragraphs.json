@@ -271,7 +271,7 @@
                   "type": "RichText",
                   "text": {
                     "type": "TextSpan",
-                    "text": "aaa\n",
+                    "text": "aaa",
                     "style": {
                       "fontFamily": "monospace",
                       "fontWeight": "FontWeight.w400",

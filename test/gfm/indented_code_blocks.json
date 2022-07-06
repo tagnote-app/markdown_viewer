@@ -16,7 +16,7 @@
                   "type": "RichText",
                   "text": {
                     "type": "TextSpan",
-                    "text": "a simple\n",
+                    "text": "a simple",
                     "style": {
                       "fontFamily": "monospace",
                       "fontWeight": "FontWeight.w400",
@@ -35,7 +35,7 @@
                   "type": "RichText",
                   "text": {
                     "type": "TextSpan",
-                    "text": "  indented code block\n",
+                    "text": "  indented code block",
                     "style": {
                       "fontFamily": "monospace",
                       "fontWeight": "FontWeight.w400",
@@ -274,7 +274,7 @@
                   "type": "RichText",
                   "text": {
                     "type": "TextSpan",
-                    "text": "<a/>\n",
+                    "text": "<a/>",
                     "style": {
                       "fontFamily": "monospace",
                       "fontWeight": "FontWeight.w400",
@@ -293,7 +293,7 @@
                   "type": "RichText",
                   "text": {
                     "type": "TextSpan",
-                    "text": "*hi*\n",
+                    "text": "*hi*",
                     "style": {
                       "fontFamily": "monospace",
                       "fontWeight": "FontWeight.w400",
@@ -312,7 +312,7 @@
                   "type": "RichText",
                   "text": {
                     "type": "TextSpan",
-                    "text": "\n",
+                    "text": "",
                     "style": {
                       "fontFamily": "monospace",
                       "fontWeight": "FontWeight.w400",
@@ -331,7 +331,7 @@
                   "type": "RichText",
                   "text": {
                     "type": "TextSpan",
-                    "text": "- one\n",
+                    "text": "- one",
                     "style": {
                       "fontFamily": "monospace",
                       "fontWeight": "FontWeight.w400",
@@ -364,7 +364,7 @@
                   "type": "RichText",
                   "text": {
                     "type": "TextSpan",
-                    "text": "chunk1\n",
+                    "text": "chunk1",
                     "style": {
                       "fontFamily": "monospace",
                       "fontWeight": "FontWeight.w400",
@@ -383,7 +383,7 @@
                   "type": "RichText",
                   "text": {
                     "type": "TextSpan",
-                    "text": "\n",
+                    "text": "",
                     "style": {
                       "fontFamily": "monospace",
                       "fontWeight": "FontWeight.w400",
@@ -402,7 +402,7 @@
                   "type": "RichText",
                   "text": {
                     "type": "TextSpan",
-                    "text": "chunk2\n",
+                    "text": "chunk2",
                     "style": {
                       "fontFamily": "monospace",
                       "fontWeight": "FontWeight.w400",
@@ -421,7 +421,7 @@
                   "type": "RichText",
                   "text": {
                     "type": "TextSpan",
-                    "text": "\n",
+                    "text": "",
                     "style": {
                       "fontFamily": "monospace",
                       "fontWeight": "FontWeight.w400",
@@ -440,7 +440,7 @@
                   "type": "RichText",
                   "text": {
                     "type": "TextSpan",
-                    "text": "\n",
+                    "text": "",
                     "style": {
                       "fontFamily": "monospace",
                       "fontWeight": "FontWeight.w400",
@@ -459,7 +459,7 @@
                   "type": "RichText",
                   "text": {
                     "type": "TextSpan",
-                    "text": "\n",
+                    "text": "",
                     "style": {
                       "fontFamily": "monospace",
                       "fontWeight": "FontWeight.w400",
@@ -478,7 +478,7 @@
                   "type": "RichText",
                   "text": {
                     "type": "TextSpan",
-                    "text": "chunk3\n",
+                    "text": "chunk3",
                     "style": {
                       "fontFamily": "monospace",
                       "fontWeight": "FontWeight.w400",
@@ -511,7 +511,7 @@
                   "type": "RichText",
                   "text": {
                     "type": "TextSpan",
-                    "text": "chunk1\n",
+                    "text": "chunk1",
                     "style": {
                       "fontFamily": "monospace",
                       "fontWeight": "FontWeight.w400",
@@ -530,7 +530,7 @@
                   "type": "RichText",
                   "text": {
                     "type": "TextSpan",
-                    "text": "  \n",
+                    "text": "",
                     "style": {
                       "fontFamily": "monospace",
                       "fontWeight": "FontWeight.w400",
@@ -549,7 +549,7 @@
                   "type": "RichText",
                   "text": {
                     "type": "TextSpan",
-                    "text": "  chunk2\n",
+                    "text": "  chunk2",
                     "style": {
                       "fontFamily": "monospace",
                       "fontWeight": "FontWeight.w400",
@@ -611,7 +611,7 @@
                   "type": "RichText",
                   "text": {
                     "type": "TextSpan",
-                    "text": "foo\n",
+                    "text": "foo",
                     "style": {
                       "fontFamily": "monospace",
                       "fontWeight": "FontWeight.w400",
@@ -698,7 +698,7 @@
                   "type": "RichText",
                   "text": {
                     "type": "TextSpan",
-                    "text": "foo\n",
+                    "text": "foo",
                     "style": {
                       "fontFamily": "monospace",
                       "fontWeight": "FontWeight.w400",
@@ -756,7 +756,7 @@
                   "type": "RichText",
                   "text": {
                     "type": "TextSpan",
-                    "text": "foo\n",
+                    "text": "foo",
                     "style": {
                       "fontFamily": "monospace",
                       "fontWeight": "FontWeight.w400",
@@ -807,7 +807,7 @@
                   "type": "RichText",
                   "text": {
                     "type": "TextSpan",
-                    "text": "    foo\n",
+                    "text": "    foo",
                     "style": {
                       "fontFamily": "monospace",
                       "fontWeight": "FontWeight.w400",
@@ -826,7 +826,7 @@
                   "type": "RichText",
                   "text": {
                     "type": "TextSpan",
-                    "text": "bar\n",
+                    "text": "bar",
                     "style": {
                       "fontFamily": "monospace",
                       "fontWeight": "FontWeight.w400",
@@ -859,7 +859,7 @@
                   "type": "RichText",
                   "text": {
                     "type": "TextSpan",
-                    "text": "foo\n",
+                    "text": "foo",
                     "style": {
                       "fontFamily": "monospace",
                       "fontWeight": "FontWeight.w400",
@@ -892,7 +892,7 @@
                   "type": "RichText",
                   "text": {
                     "type": "TextSpan",
-                    "text": "foo  \n",
+                    "text": "foo",
                     "style": {
                       "fontFamily": "monospace",
                       "fontWeight": "FontWeight.w400",

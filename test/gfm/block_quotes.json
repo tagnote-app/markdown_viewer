@@ -217,7 +217,7 @@
                   "type": "RichText",
                   "text": {
                     "type": "TextSpan",
-                    "text": "> # Foo\n",
+                    "text": "> # Foo",
                     "style": {
                       "fontFamily": "monospace",
                       "fontWeight": "FontWeight.w400",
@@ -236,7 +236,7 @@
                   "type": "RichText",
                   "text": {
                     "type": "TextSpan",
-                    "text": "> bar\n",
+                    "text": "> bar",
                     "style": {
                       "fontFamily": "monospace",
                       "fontWeight": "FontWeight.w400",
@@ -255,7 +255,7 @@
                   "type": "RichText",
                   "text": {
                     "type": "TextSpan",
-                    "text": "> baz\n",
+                    "text": "> baz",
                     "style": {
                       "fontFamily": "monospace",
                       "fontWeight": "FontWeight.w400",
@@ -583,7 +583,7 @@
                           "type": "RichText",
                           "text": {
                             "type": "TextSpan",
-                            "text": "foo\n",
+                            "text": "foo",
                             "style": {
                               "fontFamily": "monospace",
                               "fontWeight": "FontWeight.w400",
@@ -618,7 +618,7 @@
                   "type": "RichText",
                   "text": {
                     "type": "TextSpan",
-                    "text": "bar\n",
+                    "text": "bar",
                     "style": {
                       "fontFamily": "monospace",
                       "fontWeight": "FontWeight.w400",
@@ -1482,7 +1482,7 @@
                           "type": "RichText",
                           "text": {
                             "type": "TextSpan",
-                            "text": "code\n",
+                            "text": "code",
                             "style": {
                               "fontFamily": "monospace",
                               "fontWeight": "FontWeight.w400",

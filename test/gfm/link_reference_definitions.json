@@ -689,7 +689,7 @@
                   "type": "RichText",
                   "text": {
                     "type": "TextSpan",
-                    "text": "[foo]: /url \"title\"\n",
+                    "text": "[foo]: /url \"title\"",
                     "style": {
                       "fontFamily": "monospace",
                       "fontWeight": "FontWeight.w400",
@@ -749,7 +749,7 @@
                   "type": "RichText",
                   "text": {
                     "type": "TextSpan",
-                    "text": "[foo]: /url\n",
+                    "text": "[foo]: /url",
                     "style": {
                       "fontFamily": "monospace",
                       "fontWeight": "FontWeight.w400",
