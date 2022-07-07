@@ -26,6 +26,8 @@ class MarkdownBuilder implements md.NodeVisitor {
 
   final _listStrack = <String>[];
 
+  final _tableStack = <_TableElement>[];
+
   bool _isInBlockquote = false;
 
   /// Called when the user taps a link.
@@ -44,6 +46,7 @@ class MarkdownBuilder implements md.NodeVisitor {
   List<Widget> build(List<md.Node> nodes) {
     _tree.clear();
     _listStrack.clear();
+    _tableStack.clear();
     _linkHandlers.clear();
 
     _tree.add(TreeElement.root());
@@ -54,6 +57,10 @@ class MarkdownBuilder implements md.NodeVisitor {
       node.accept(this);
     }
 
+    assert(_tableStack.isEmpty);
+    assert(_listStrack.isEmpty);
+    // TODO(Zhiguang): enable it
+    // assert(_linkHandlers.isEmpty);
     assert(!_isInBlockquote);
     return _tree.single.children;
   }
@@ -65,11 +72,7 @@ class MarkdownBuilder implements md.NodeVisitor {
     if ([
       'blankLine',
       'linkReferenceDefinition',
-      'backslashEscape',
     ].contains(type)) {
-      if (type == 'backslashEscape') {
-        visitText(element.children.first as md.Text);
-      }
       return false;
     }
 
@@ -79,7 +82,26 @@ class MarkdownBuilder implements md.NodeVisitor {
       _listStrack.add(type);
     } else if (type == 'blockquote') {
       _isInBlockquote = true;
-    } else if (isLinkElement(type) && _onTapLink != null) {
+    } else if (type == 'table') {
+      _tableStack.add(_TableElement());
+    } else if (type == 'tableRow') {
+      var decoration = _styleSheet.tableRowDecoration;
+      final alternating = _styleSheet.tableRowDecorationAlternating;
+      if (alternating != null) {
+        final length = _tableStack.single.rows.length;
+        if (alternating == TableRowDecorationAlternating.odd) {
+          decoration = length.isOdd ? null : decoration;
+        } else {
+          decoration = length.isOdd ? decoration : null;
+        }
+      }
+
+      _tableStack.single.rows.add(TableRow(
+        decoration: decoration,
+        // TODO(Zhiguang) Fix it.
+        children: [],
+      ));
+    } else if (type == 'link' && _onTapLink != null) {
       _addLinkHandler(element);
     }
 
@@ -97,7 +119,7 @@ class MarkdownBuilder implements md.NodeVisitor {
     var textContent = text.textContent;
 
     Widget child;
-    if (isCodeBlockElement(parent.type)) {
+    if (parent.type == 'codeBlock') {
       child = Scrollbar(
         child: SingleChildScrollView(
           scrollDirection: Axis.horizontal,
@@ -144,10 +166,7 @@ class MarkdownBuilder implements md.NodeVisitor {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
-          children: mergeInlineChildren(
-            current.children,
-            richTextBuilder: (span) => _buildRichText(span),
-          ),
+          children: _mergeInlineChildren(current.children),
         );
       } else {
         blockChild = const SizedBox.shrink();
@@ -192,12 +211,19 @@ class MarkdownBuilder implements md.NodeVisitor {
             child: blockChild,
           ),
         );
-      } else if (isCodeBlockElement(type)) {
+      } else if (type == 'table') {
+        blockChild = Table(
+          defaultColumnWidth: _styleSheet.tableColumnWidth,
+          defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+          border: _styleSheet.tableBorder,
+          children: _tableStack.removeLast().rows,
+        );
+      } else if (type == 'codeBlock') {
         blockChild = DecoratedBox(
           decoration: _styleSheet.codeblockDecoration,
           child: blockChild,
         );
-      } else if (isLinkElement(type)) {
+      } else if (type == 'link') {
         _linkHandlers.removeLast();
       }
 
@@ -211,6 +237,21 @@ class MarkdownBuilder implements md.NodeVisitor {
           text: '\n',
           style: parent.style,
         )));
+      } else if (type == 'tableHeadCell' || type == 'tableBodyCell') {
+        TextAlign? textAlign;
+        if (type == 'tableHeadCell') {
+          textAlign = _styleSheet.tableHeadCellAlign;
+        }
+
+        textAlign ??= {
+          'left': TextAlign.left,
+          'right': TextAlign.right,
+          'center': TextAlign.center,
+        }[current.attributes['textAlign']];
+
+        _tableStack.single.rows.last.children!.add(
+          _buildTableCell(current.children, textAlign: textAlign),
+        );
       }
 
       parent.children.addAll(current.children);
@@ -279,6 +320,35 @@ class MarkdownBuilder implements md.NodeVisitor {
       ),
     );
   }
+
+  Widget _buildTableCell(List<Widget> children, {TextAlign? textAlign}) {
+    children = _mergeInlineChildren(children, textAlign);
+
+    return TableCell(
+      child: Padding(
+        padding: _styleSheet.tableCellPadding,
+        child: DefaultTextStyle(
+          style: _styleSheet.tableBody,
+          // TODO(Zhiguang): the textAlign does not work, it works if remove
+          // Wrap
+          textAlign: textAlign,
+          // TODO(Zhiguang): It is fine to only remove Wrap here, but try to
+          // remove all the Wraps on top of RichText.
+          child:
+              children.length == 1 ? children.single : Wrap(children: children),
+        ),
+      ),
+    );
+  }
+
+  List<Widget> _mergeInlineChildren(
+    List<Widget> children, [
+    TextAlign? textAlign,
+  ]) =>
+      mergeInlineChildren(
+        children,
+        richTextBuilder: (span) => _buildRichText(span, textAlign: textAlign),
+      );
 }
 
 /// Callback when the user taps a link.
@@ -294,3 +364,7 @@ typedef MarkdownHighlightBuilder = TextSpan Function(
     String text, String? language, String? infoString);
 
 enum ListType { ordered, unordered }
+
+class _TableElement {
+  final List<TableRow> rows = <TableRow>[];
+}

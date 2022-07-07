@@ -24,6 +24,10 @@ extension WidgetExtensions on Widget {
         if (children.isNotEmpty) 'children': children,
         if (text != null) 'text': text,
       });
+    } else if (self is Table) {
+      map.addAll({
+        'children': self.children.map((e) => e.toMap()).toList(),
+      });
     } else if (self is SizedBox) {
       map.addAll({
         if (self.height != null) 'height': self.height,
@@ -59,6 +63,14 @@ extension WidgetExtensions on Widget {
       map.addAll({
         'child': self.child.toMap(),
       });
+    } else if (self is TableCell) {
+      map.addAll({
+        'child': self.child.toMap(),
+      });
+    } else if (self is DefaultTextStyle) {
+      map.addAll({
+        'child': self.child.toMap(),
+      });
     }
     return map;
   }
@@ -79,6 +91,34 @@ extension TextSpanExtensions on TextSpan {
   }
 
   String toPrettyString() => toMap().toPrettyString();
+}
+
+extension TableRowExtensions on TableRow {
+  Map<String, dynamic> toMap() {
+    return {
+      'type': runtimeType.toString(),
+      if (children != null && children!.isNotEmpty)
+        'children': children!.map((e) => e.toMap()).toList(),
+    };
+  }
+}
+
+extension TableCellExtensions on TableCell {
+  Map<String, dynamic> toMap() {
+    return {
+      'type': runtimeType.toString(),
+      'child': child.toMap(),
+    };
+  }
+}
+
+extension DefaultTextStyleExtensions on DefaultTextStyle {
+  Map<String, dynamic> toMap() {
+    return {
+      'type': runtimeType.toString(),
+      'child': child.toMap(),
+    };
+  }
 }
 
 extension DecorationExtensions on Decoration {

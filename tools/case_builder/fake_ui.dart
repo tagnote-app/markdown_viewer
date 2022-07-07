@@ -4,7 +4,34 @@ abstract class Widget {
   const Widget();
 }
 
-abstract class MultiChildRenderObjectWidget extends Widget {
+abstract class StatefulWidget extends Widget {
+  const StatefulWidget();
+}
+
+abstract class ProxyWidget extends Widget {
+  const ProxyWidget({
+    required this.child,
+  });
+  final Widget child;
+}
+
+abstract class InheritedWidget extends ProxyWidget {
+  const InheritedWidget({
+    required Widget child,
+  }) : super(child: child);
+}
+
+abstract class InheritedTheme extends InheritedWidget {
+  const InheritedTheme({
+    required Widget child,
+  }) : super(child: child);
+}
+
+abstract class RenderObjectWidget extends Widget {
+  const RenderObjectWidget();
+}
+
+abstract class MultiChildRenderObjectWidget extends RenderObjectWidget {
   const MultiChildRenderObjectWidget({
     this.children = const <Widget>[],
   });
@@ -16,7 +43,13 @@ abstract class SingleChildRenderObjectWidget extends Widget {
   final Widget? child;
 }
 
-class Column extends MultiChildRenderObjectWidget {
+class Flex extends MultiChildRenderObjectWidget {
+  const Flex({
+    List<Widget> children = const <Widget>[],
+  }) : super(children: children);
+}
+
+class Column extends Flex {
   Column({
     this.mainAxisAlignment = MainAxisAlignment.start,
     this.crossAxisAlignment = CrossAxisAlignment.center,
@@ -29,7 +62,7 @@ class Column extends MultiChildRenderObjectWidget {
   final MainAxisSize mainAxisSize;
 }
 
-class Row extends MultiChildRenderObjectWidget {
+class Row extends Flex {
   Row({
     this.mainAxisAlignment = MainAxisAlignment.start,
     this.crossAxisAlignment = CrossAxisAlignment.center,
@@ -55,7 +88,7 @@ class RichText extends MultiChildRenderObjectWidget {
   final TextAlign? textAlign;
 }
 
-class SelectableText extends Widget {
+class SelectableText extends StatefulWidget {
   const SelectableText.rich(
     this.textSpan, {
     this.textAlign,
@@ -77,6 +110,73 @@ class Text extends Widget {
   final String? data;
   final TextAlign? textAlign;
   final TextStyle? style;
+}
+
+class TableRow {
+  const TableRow({this.children, this.decoration});
+
+  final Decoration? decoration;
+  final List<Widget>? children;
+}
+
+class Table extends Widget {
+  Table({
+    this.border,
+    this.children = const <TableRow>[],
+    this.defaultColumnWidth = const FlexColumnWidth(),
+    this.defaultVerticalAlignment = TableCellVerticalAlignment.top,
+  });
+
+  final List<TableRow> children;
+  final TableBorder? border;
+  final TableColumnWidth defaultColumnWidth;
+  final TableCellVerticalAlignment defaultVerticalAlignment;
+}
+
+class TableBorder {
+  const TableBorder({
+    this.top = BorderSide.none,
+    this.right = BorderSide.none,
+    this.bottom = BorderSide.none,
+    this.left = BorderSide.none,
+    this.horizontalInside = BorderSide.none,
+    this.verticalInside = BorderSide.none,
+  });
+
+  final BorderSide top;
+  final BorderSide right;
+  final BorderSide bottom;
+  final BorderSide left;
+  final BorderSide horizontalInside;
+  final BorderSide verticalInside;
+}
+
+abstract class TableColumnWidth {
+  const TableColumnWidth();
+}
+
+class FlexColumnWidth extends TableColumnWidth {
+  const FlexColumnWidth([this.value = 1.0]);
+  final double value;
+}
+
+class TableCell extends Widget {
+  const TableCell({
+    required this.child,
+  });
+
+  final Widget child;
+}
+
+class DefaultTextStyle extends InheritedTheme {
+  const DefaultTextStyle({
+    required this.style,
+    this.textAlign,
+    required Widget child,
+  }) : super(child: child);
+
+  final TextStyle style;
+  final TextAlign? textAlign;
 }
 
 class Padding extends SingleChildRenderObjectWidget {
@@ -111,6 +211,8 @@ class EdgeInsets extends EdgeInsetsGeometry {
     this.right = 0.0,
     this.bottom = 0.0,
   });
+
+  const EdgeInsets.fromLTRB(this.left, this.top, this.right, this.bottom);
 
   final double left;
   final double top;
@@ -447,3 +549,5 @@ enum BorderStyle { none, solid }
 enum MainAxisSize { min, max }
 
 enum Axis { horizontal, vertical }
+
+enum TableCellVerticalAlignment { top, middle, bottom, baseline, fill }

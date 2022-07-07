@@ -13,7 +13,7 @@
                 "type": "RichText",
                 "text": {
                   "type": "TextSpan",
-                  "text": "~~Hi~~ Hello, world!",
+                  "text": "Hi Hello, world!",
                   "style": {
                     "fontFamily": ".SF UI Text",
                     "fontWeight": "FontWeight.w400",

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:markdown/markdown.dart' as md;
 
 import 'builder.dart';
+import 'extensions.dart';
 import 'style.dart';
 
 class MarkdownViewer extends StatefulWidget {
@@ -52,8 +53,9 @@ class _MarkdownViewerState extends State<MarkdownViewer> {
   }
 
   void _parseMarkdown() {
-    final md.Document document =
-        md.Document(enableTaskList: widget.enableTaskList);
+    final md.Document document = md.Document(
+      enableTaskList: widget.enableTaskList,
+    );
     final theme = Theme.of(context);
     final astNodes = document.parseLines(widget.data);
 

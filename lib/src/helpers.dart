@@ -11,6 +11,7 @@ List<Widget> mergeInlineChildren(
   final mergedWidgets = <Widget>[];
   var mergedTexts = <Widget>[];
 
+  // TODO(Zhiguang): Why? Try to remove the Wrap.
   // Enclose all text widgets in a `Wrap` widget.
   void addWithWrap() {
     if (mergedTexts.isEmpty) {
@@ -93,17 +94,14 @@ String trimText(String text) {
 
 bool isBlockElement(String type) => [
       'paragraph',
-      'atxHeading',
-      'setextHeading',
+      'headline',
       'htmlBlock',
+      'codeBlock',
       'bulletList',
       'orderedList',
       'listItem',
       'thematicBreak',
       'blockquote',
-      'fencedBlockquote',
-      'indentedCodeBlock',
-      'fencedCodeBlock',
       'table',
       'tableRow',
       'tableHead',
@@ -113,15 +111,13 @@ bool isBlockElement(String type) => [
 // == INLINE TYPES ==
 // link
 // image
-// autolink
 // hardLineBreak
+// highlight
 // emphasis
 // strongEmphasis
 // emoji
-// codeSpan
-// backslashEscape
-// extendedAutolink
-// rawHtml
+// inlineCode
+// inlineHtml
 // tableBodyCell
 // tableHeadCell
 
@@ -130,10 +126,4 @@ bool isBlockElement(String type) => [
 // linkReferenceDefinitionDestination
 // linkReferenceDefinitionTitle
 
-bool isLinkElement(String type) =>
-    ['link', 'autolink', 'extendedAutolink'].contains(type);
-
 bool isListElement(String type) => ['bulletList', 'orderedList'].contains(type);
-
-bool isCodeBlockElement(String type) =>
-    ['indentedCodeBlock', 'fencedCodeBlock'].contains(type);

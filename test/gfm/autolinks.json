@@ -430,13 +430,40 @@
                 "type": "RichText",
                 "text": {
                   "type": "TextSpan",
-                  "text": "< http://foo.bar >",
-                  "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
-                  }
+                  "children": [
+                    {
+                      "type": "TextSpan",
+                      "text": "< ",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": "http://foo.bar",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xff2196f3)"
+                      },
+                      "recognizer": "TapGestureRecognizer"
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": " >",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      },
+                      "recognizer": "TapGestureRecognizer"
+                    }
+                  ]
                 }
               }
             ]
@@ -522,8 +549,9 @@
                     "fontFamily": ".SF UI Text",
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
-                  }
+                    "color": "Color(0xff2196f3)"
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
@@ -551,8 +579,9 @@
                     "fontFamily": ".SF UI Text",
                     "fontWeight": "FontWeight.w400",
                     "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
-                  }
+                    "color": "Color(0xff2196f3)"
+                  },
+                  "recognizer": "TapGestureRecognizer"
                 }
               }
             ]
