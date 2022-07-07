@@ -200,7 +200,6 @@ class MarkdownStyle {
 
     switch (type) {
       case 'blockquote':
-      case 'fencedBlockquote':
         style = blockquote;
         break;
 
@@ -229,8 +228,7 @@ class MarkdownStyle {
         style = tableBody;
         break;
 
-      case 'atxHeading':
-      case 'setextHeading':
+      case 'headline':
         style = {
           "1": headline1,
           "2": headline2,
@@ -250,21 +248,18 @@ class MarkdownStyle {
         break;
 
       case 'link':
-      case 'autolink':
-      case 'extendedAutolink':
         style = link;
         break;
 
-      case 'indentedCodeBlock':
-      case 'fencedCodeBlock':
+      case 'codeBlock':
         style = codeBlock;
         break;
 
-      case 'codeSpan':
+      case 'inlineCode':
         style = inlineCode;
         break;
 
-      case 'rawHtml':
+      case 'inlineHtml':
         style = inlineHtml;
         break;
     }

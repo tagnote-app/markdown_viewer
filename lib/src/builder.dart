@@ -72,11 +72,7 @@ class MarkdownBuilder implements md.NodeVisitor {
     if ([
       'blankLine',
       'linkReferenceDefinition',
-      'backslashEscape',
     ].contains(type)) {
-      if (type == 'backslashEscape') {
-        visitText(element.children.first as md.Text);
-      }
       return false;
     }
 
@@ -105,7 +101,7 @@ class MarkdownBuilder implements md.NodeVisitor {
         // TODO(Zhiguang) Fix it.
         children: [],
       ));
-    } else if (isLinkElement(type) && _onTapLink != null) {
+    } else if (type == 'link' && _onTapLink != null) {
       _addLinkHandler(element);
     }
 
@@ -123,7 +119,7 @@ class MarkdownBuilder implements md.NodeVisitor {
     var textContent = text.textContent;
 
     Widget child;
-    if (isCodeBlockElement(parent.type)) {
+    if (parent.type == 'codeBlock') {
       child = Scrollbar(
         child: SingleChildScrollView(
           scrollDirection: Axis.horizontal,
@@ -222,12 +218,12 @@ class MarkdownBuilder implements md.NodeVisitor {
           border: _styleSheet.tableBorder,
           children: _tableStack.removeLast().rows,
         );
-      } else if (isCodeBlockElement(type)) {
+      } else if (type == 'codeBlock') {
         blockChild = DecoratedBox(
           decoration: _styleSheet.codeblockDecoration,
           child: blockChild,
         );
-      } else if (isLinkElement(type)) {
+      } else if (type == 'link') {
         _linkHandlers.removeLast();
       }
 

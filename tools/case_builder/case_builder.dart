@@ -56,9 +56,7 @@ String _fileNameFromSection(String section) =>
 
 /// Renders Markdown String to expected data.
 List<Map<String, dynamic>> _renderTestCase(String markdown) {
-  final nodes = Document(
-    extensionSet: ExtensionSet.gitHubFlavored,
-  ).parseLines(markdown);
+  final nodes = Document().parseLines(markdown);
   return MarkdownBuilder(
     styleSheet: MarkdownStyle.fromTheme(themeData),
     onTapLink: (_, __, ___) {},

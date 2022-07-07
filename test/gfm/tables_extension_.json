@@ -977,33 +977,6 @@
                     }
                   }
                 }
-              },
-              {
-                "type": "TableCell",
-                "child": {
-                  "type": "Padding",
-                  "child": {
-                    "type": "DefaultTextStyle",
-                    "child": {
-                      "type": "Wrap",
-                      "children": [
-                        {
-                          "type": "RichText",
-                          "text": {
-                            "type": "TextSpan",
-                            "text": "boo",
-                            "style": {
-                              "fontFamily": ".SF UI Text",
-                              "fontWeight": "FontWeight.w400",
-                              "fontSize": 14.0,
-                              "color": "Color(0xdd000000)"
-                            }
-                          }
-                        }
-                      ]
-                    }
-                  }
-                }
               }
             ]
           }

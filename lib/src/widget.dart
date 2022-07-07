@@ -55,7 +55,6 @@ class _MarkdownViewerState extends State<MarkdownViewer> {
   void _parseMarkdown() {
     final md.Document document = md.Document(
       enableTaskList: widget.enableTaskList,
-      extensionSet: md.ExtensionSet.gitHubFlavored,
     );
     final theme = Theme.of(context);
     final astNodes = document.parseLines(widget.data);
