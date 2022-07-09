@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:markdown/markdown.dart' as md;
 
+import 'definition.dart';
+
 const _tableBorderSide = BorderSide(color: Color(0xffcccccc));
 const _tableBorder = TableBorder(
   top: _tableBorderSide,
@@ -11,6 +13,7 @@ const _tableBorder = TableBorder(
   verticalInside: _tableBorderSide,
 );
 
+// TODO(Zhiguang): maybe set the default values inside each builder?
 class MarkdownStyle {
   MarkdownStyle({
     this.paragraph,
@@ -38,14 +41,18 @@ class MarkdownStyle {
     this.tableRowDecorationAlternating,
     this.tableRowDecoration,
     this.tableBorder = _tableBorder,
+    this.checkbox,
+    this.dividerColor,
+    this.dividerHeight,
+    this.dividerThickness,
+    this.strikethrough,
+    this.highlight,
     BoxDecoration? blockquoteDecoration,
-    BoxDecoration? horizontalRuleDecoration,
     EdgeInsets? blockquotePadding,
     EdgeInsets? codeblockPadding,
     double? blockSpacing,
     EdgeInsets? listItemMarkerPadding,
     double? listItemMinIndent,
-    TextStyle? checkbox,
     BoxDecoration? codeblockDecoration,
     EdgeInsets? tableCellPadding,
     TableColumnWidth? tableColumnWidth,
@@ -58,15 +65,8 @@ class MarkdownStyle {
             const BoxDecoration(color: Color(0xffeeeeee)),
         codeblockDecoration = codeblockDecoration ??
             const BoxDecoration(color: Color(0xffeeeeee)),
-        horizontalRuleDecoration = horizontalRuleDecoration ??
-            const BoxDecoration(
-              border: Border(
-                top: BorderSide(width: 5.0, color: Color(0xffcccccc)),
-              ),
-            ),
         listItemMarkerPadding = const EdgeInsets.only(right: 12.0),
         listItemMinIndent = listItemMinIndent ?? 20.0,
-        checkbox = checkbox ?? const TextStyle(fontSize: 18.0),
         tableCellPadding =
             tableCellPadding ?? const EdgeInsets.fromLTRB(16, 8, 16, 8);
 
@@ -99,7 +99,9 @@ class MarkdownStyle {
     TextAlign? tableHeadCellAlign,
     BoxDecoration? blockquoteDecoration,
     BoxDecoration? codeblockDecoration,
-    BoxDecoration? horizontalRuleDecoration,
+    double? dividerThickness,
+    Color? dividerColor,
+    double? dividerHeight,
     EdgeInsets? blockquotePadding,
     EdgeInsets? codeblockPadding,
     EdgeInsets? tableCellPadding,
@@ -111,11 +113,17 @@ class MarkdownStyle {
     TableBorder? tableBorder = _tableBorder,
     BoxDecoration? tableRowDecoration,
     TableRowDecorationAlternating? tableRowDecorationAlternating,
+    TextStyle? strikethrough,
+    TextStyle? highlight,
   }) {
     return MarkdownStyle(
       paragraph: theme.textTheme.bodyText2?.merge(paragraph),
       blockquote: theme.textTheme.bodyText2?.merge(blockquote),
       list: theme.textTheme.bodyText2?.merge(list),
+      strikethrough: const TextStyle(decoration: TextDecoration.lineThrough)
+          .merge(strikethrough),
+      highlight:
+          const TextStyle(backgroundColor: Color(0xffffcc00)).merge(highlight),
       tableHead: theme.textTheme.bodyText2
           ?.copyWith(fontWeight: FontWeight.w600)
           .merge(tableHead),
@@ -138,7 +146,9 @@ class MarkdownStyle {
       tableHeadCellAlign: tableHeadCellAlign,
       blockquoteDecoration: blockquoteDecoration,
       codeblockDecoration: codeblockDecoration,
-      horizontalRuleDecoration: horizontalRuleDecoration,
+      dividerColor: dividerColor,
+      dividerThickness: dividerThickness,
+      dividerHeight: dividerHeight,
       blockquotePadding: blockquotePadding,
       codeblockPadding: codeblockPadding,
       tableCellPadding: tableCellPadding,
@@ -175,16 +185,20 @@ class MarkdownStyle {
   final TextStyle? inlineCode;
   final TextStyle? codeBlock;
   final TextStyle? listItemMarker;
+  final TextStyle? highlight;
+  final TextStyle? strikethrough;
   final BoxDecoration blockquoteDecoration;
   final BoxDecoration codeblockDecoration;
-  final BoxDecoration horizontalRuleDecoration;
+  final double? dividerHeight;
+  final double? dividerThickness;
+  final Color? dividerColor;
   final EdgeInsets blockquotePadding;
   final EdgeInsets codeblockPadding;
   final EdgeInsets listItemMarkerPadding;
   final EdgeInsets tableCellPadding;
   final TableBorder? tableBorder;
   final TableColumnWidth tableColumnWidth;
-  final TextStyle checkbox;
+  final TextStyle? checkbox;
   final TextAlign? tableHeadCellAlign;
   final BoxDecoration? tableRowDecoration;
   final TableRowDecorationAlternating? tableRowDecorationAlternating;
@@ -194,6 +208,7 @@ class MarkdownStyle {
   final double listItemMinIndent;
 
   /// Generates a [TextStyle].
+  // TODO: Delete it
   TextStyle style(md.Element element, TextStyle? parentStyle) {
     final type = element.type;
     TextStyle? style;
@@ -292,5 +307,3 @@ TextStyle? _generateCodeStyle(ThemeData theme, bool withBackground) {
     backgroundColor: const Color(0xfff8f09e),
   );
 }
-
-enum TableRowDecorationAlternating { odd, even }

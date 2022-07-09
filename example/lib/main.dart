@@ -42,21 +42,20 @@ class MyHomePage extends StatelessWidget {
         padding: const EdgeInsets.all(20),
         child: MarkdownViewer(
           markdown,
-          onTapLink: (text, href, title) {
-            print({text, href, title});
+          enableTaskList: true,
+          onTapLink: (href, title) {
+            print({href, title});
           },
           styleSheet: MarkdownStyle.fromTheme(
             Theme.of(context),
             // blockquoteDecoration: BoxDecoration(color: Colors.blue),
             //blockquotePadding: EdgeInsets.all(20),
             link: const TextStyle(color: Color(0xff2196f3)),
+            // listItemMarker: TextStyle(color: Colors.red),
             blockquote: const TextStyle(color: Color(0xff666666)),
+            tableHeadCellAlign: TextAlign.right,
             inlineHtml: code.copyWith(),
-            horizontalRuleDecoration: BoxDecoration(
-              border: Border(
-                top: BorderSide(width: 5.0, color: theme.dividerColor),
-              ),
-            ),
+            dividerThickness: 5.0,
           ),
         ),
       ),

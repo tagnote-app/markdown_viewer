@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 
+// TODO(Zhiguang): Optimise it.
 extension WidgetExtensions on Widget {
   Map<String, dynamic> toMap() {
     final type = runtimeType;
@@ -192,6 +193,20 @@ extension TextStyleExtensions on TextStyle {
   String toPrettyString() => toMap().toPrettyString();
 }
 
+extension ListExtensions on List<dynamic> {
+  void addIfAbsent(other) {
+    if (!contains(other)) {
+      add(other);
+    }
+  }
+
+  void addIfNotNull<T>(T item) {
+    if (item != null) {
+      add(item);
+    }
+  }
+}
+
 extension WidgetsExtensions on List<Widget> {
   List<Map<String, dynamic>> toMap() => map((e) => e.toMap()).toList();
 
@@ -201,6 +216,12 @@ extension WidgetsExtensions on List<Widget> {
 extension MapExtensions on Map {
   String toPrettyString() {
     return _toPrettyString(this);
+  }
+
+  void addIfNotNull<T>(String key, T value) {
+    if (value != null) {
+      this[key] = value;
+    }
   }
 }
 
