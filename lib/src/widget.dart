@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:markdown/markdown.dart' as md;
 
-import 'renderer.dart';
+import 'builders/builder.dart';
 import 'definition.dart';
 import 'extensions.dart';
+import 'renderer.dart';
 import 'style.dart';
 
 class MarkdownViewer extends StatefulWidget {
@@ -15,6 +16,7 @@ class MarkdownViewer extends StatefulWidget {
     this.highlightBuilder,
     this.checkboxBuilder,
     this.enableTaskList = false,
+    this.elementBuilders = const [],
     Key? key,
   }) : super(key: key);
 
@@ -25,6 +27,7 @@ class MarkdownViewer extends StatefulWidget {
   final MarkdownListItemMarkerBuilder? listItemMarkerBuilder;
   final MarkdownCheckboxBuilder? checkboxBuilder;
   final MarkdownHighlightBuilder? highlightBuilder;
+  final List<MarkdownElementBuilder> elementBuilders;
 
   @override
   State<MarkdownViewer> createState() => _MarkdownViewerState();
@@ -54,6 +57,7 @@ class _MarkdownViewerState extends State<MarkdownViewer> {
   }
 
   void _parseMarkdown() {
+    final theme = Theme.of(context);
     final md.Document document = md.Document(
       enableHtmlBlock: false,
       enableRawHtml: false,
@@ -61,19 +65,15 @@ class _MarkdownViewerState extends State<MarkdownViewer> {
       enableStrikethrough: true,
       enableTaskList: widget.enableTaskList,
     );
-    final theme = Theme.of(context);
-    final astNodes = document.parseLines(widget.data);
-
-    // TODO(Zhiguang): merge custom stylesheet with the default.
-    final styleSheet = widget.styleSheet ?? MarkdownStyle.fromTheme(theme);
-
     final renderer = MarkdownRenderer(
-      styleSheet: styleSheet,
+      styleSheet: widget.styleSheet ?? MarkdownStyle.fromTheme(theme),
       onTapLink: widget.onTapLink,
       listItemMarkerBuilder: widget.listItemMarkerBuilder,
       checkboxBuilder: widget.checkboxBuilder,
       highlightBuilder: widget.highlightBuilder,
+      elementBuilders: widget.elementBuilders,
     );
+    final astNodes = document.parseLines(widget.data);
 
     _children = renderer.render(astNodes);
   }

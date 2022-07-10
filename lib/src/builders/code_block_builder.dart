@@ -6,13 +6,13 @@ import 'builder.dart';
 class CodeBlockBuilder extends MarkdownElementBuilder {
   CodeBlockBuilder({
     TextStyle? textStyle,
+    this.codeblockPadding,
+    this.codeblockDecoration,
     this.highlightBuilder,
-    required this.codeblockPadding,
-    required this.codeblockDecoration,
   }) : super(textStyle: textStyle);
 
-  final EdgeInsets codeblockPadding;
-  final BoxDecoration codeblockDecoration;
+  final EdgeInsets? codeblockPadding;
+  final BoxDecoration? codeblockDecoration;
   final MarkdownHighlightBuilder? highlightBuilder;
 
   @override
@@ -20,6 +20,9 @@ class CodeBlockBuilder extends MarkdownElementBuilder {
 
   @override
   bool replaceLineEndings(String type) => false;
+
+  @override
+  TextAlign textAlign(MarkdownTreeElement parent) => TextAlign.start;
 
   @override
   TextSpan buildText(text, parent) {
@@ -38,7 +41,8 @@ class CodeBlockBuilder extends MarkdownElementBuilder {
         ? element.children.single
         : const SizedBox.shrink();
 
-    renderer.write(DecoratedBox(
+    renderer.writeBlock(Container(
+      width: double.infinity,
       decoration: codeblockDecoration,
       child: Scrollbar(
         child: SingleChildScrollView(

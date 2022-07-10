@@ -4,29 +4,31 @@ import 'builder.dart';
 
 class SimpleBlocksBuilder extends MarkdownElementBuilder {
   SimpleBlocksBuilder({
-    TextStyle? blockquote,
     TextStyle? paragraph,
+    TextStyle? blockquote,
+    this.pPadding,
+    this.blockquoteDecoration,
+    required this.blockquotePadding,
     this.dividerColor,
     this.dividerHeight,
     this.dividerThickness,
-    required this.blockquoteDecoration,
-    required this.blockquotePadding,
   }) : super(textStyleMap: {
-          'blockquote': blockquote,
           'paragraph': paragraph,
+          'blockquote': blockquote,
         });
 
-  final Decoration blockquoteDecoration;
+  final Decoration? blockquoteDecoration;
   final EdgeInsets blockquotePadding;
+  final EdgeInsets? pPadding;
+  final Color? dividerColor;
   final double? dividerHeight;
   final double? dividerThickness;
-  final Color? dividerColor;
 
   @override
   bool replaceLineEndings(type) => type != 'blockquote';
 
   @override
-  final matchTypes = ['blockquote', 'paragraph', 'thematicBreak'];
+  final matchTypes = ['paragraph', 'blockquote', 'thematicBreak'];
 
   @override
   void after(renderer, element) {
@@ -35,14 +37,16 @@ class SimpleBlocksBuilder extends MarkdownElementBuilder {
     Widget blockChild;
     if (type == 'thematicBreak') {
       blockChild = Divider(
-        thickness: dividerThickness,
         color: dividerColor,
         height: dividerHeight,
+        thickness: dividerThickness,
       );
     } else {
-      blockChild = renderer.convertToBlock(element.children);
+      final padding = type == 'paragraph' ? pPadding : null;
+      blockChild = renderer.convertToBlock(element.children, padding: padding);
       if (type == 'blockquote') {
-        blockChild = DecoratedBox(
+        blockChild = Container(
+          width: double.infinity,
           decoration: blockquoteDecoration,
           child: Padding(
             padding: blockquotePadding,
@@ -52,6 +56,6 @@ class SimpleBlocksBuilder extends MarkdownElementBuilder {
       }
     }
 
-    renderer.write(blockChild);
+    renderer.writeBlock(blockChild);
   }
 }

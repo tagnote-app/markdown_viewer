@@ -6,21 +6,21 @@ import 'builder.dart';
 
 class SimpleInlinesBuilder extends MarkdownElementBuilder {
   SimpleInlinesBuilder({
-    TextStyle? link,
     TextStyle? emphasis,
     TextStyle? strongEmphasis,
-    TextStyle? inlineCode,
     TextStyle? highlight,
     TextStyle? strikethrough,
+    TextStyle? link,
+    TextStyle? inlineCode,
     MarkdownTapLinkCallback? onTapLink,
   })  : _onTapLink = onTapLink,
         super(textStyleMap: {
-          'link': link,
           'emphasis': emphasis,
           'strongEmphasis': strongEmphasis,
           'inlineCode': inlineCode,
           'highlight': highlight,
           'strikethrough': strikethrough,
+          'link': link,
         });
   final MarkdownTapLinkCallback? _onTapLink;
 
@@ -57,10 +57,11 @@ class SimpleInlinesBuilder extends MarkdownElementBuilder {
     'inlineCode',
     'highlight',
     'strikethrough',
+    'emoji',
   ];
 
   @override
   void after(renderer, element) {
-    renderer.writeAll(element.children);
+    renderer.writeInline(element.children);
   }
 }

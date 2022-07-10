@@ -7,12 +7,12 @@ class ListBuilder extends MarkdownElementBuilder {
   ListBuilder({
     TextStyle? list,
     TextStyle? listItem,
-    this.checkbox = const TextStyle(fontSize: 18.0),
     this.listItemMarker,
-    this.listItemMarkerBuilder,
-    this.checkboxBuilder,
     required this.listItemMarkerPadding,
     required this.listItemMinIndent,
+    this.checkbox,
+    this.listItemMarkerBuilder,
+    this.checkboxBuilder,
   }) : super(textStyleMap: {
           'orderedList': list,
           'bulletList': list,
@@ -20,7 +20,7 @@ class ListBuilder extends MarkdownElementBuilder {
         });
 
   final TextStyle? listItemMarker;
-  final TextStyle checkbox;
+  final TextStyle? checkbox;
   final EdgeInsets listItemMarkerPadding;
   final double listItemMinIndent;
   final MarkdownListItemMarkerBuilder? listItemMarkerBuilder;
@@ -45,7 +45,7 @@ class ListBuilder extends MarkdownElementBuilder {
     final child = renderer.convertToBlock(element.children);
     if (_isList(type)) {
       _listStrack.removeLast();
-      renderer.write(child);
+      renderer.writeBlock(child);
       return;
     }
 
@@ -58,7 +58,7 @@ class ListBuilder extends MarkdownElementBuilder {
             element.attributes['taskListItem'] == 'checked',
           );
 
-    renderer.write(Row(
+    renderer.writeBlock(Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         ConstrainedBox(
@@ -73,8 +73,9 @@ class ListBuilder extends MarkdownElementBuilder {
   }
 
   Widget _buildListItemMarker(String type, String? number) {
-    final listType =
-        type == 'bulletList' ? ListType.unordered : ListType.ordered;
+    final listType = type == 'bulletList'
+        ? MarkdownListType.unordered
+        : MarkdownListType.ordered;
 
     final padding = listItemMarkerPadding;
     if (listItemMarkerBuilder != null) {
@@ -87,7 +88,7 @@ class ListBuilder extends MarkdownElementBuilder {
     return Padding(
       padding: padding,
       child: Text(
-        listType == ListType.unordered ? '•' : '$number.',
+        listType == MarkdownListType.unordered ? '•' : '$number.',
         textAlign: TextAlign.right,
         style: listItemMarker,
       ),
@@ -103,8 +104,8 @@ class ListBuilder extends MarkdownElementBuilder {
       padding: listItemMarkerPadding,
       child: Icon(
         checked ? Icons.check_box : Icons.check_box_outline_blank,
-        size: checkbox.fontSize,
-        color: checkbox.color,
+        size: checkbox?.fontSize,
+        color: checkbox?.color,
       ),
     );
   }

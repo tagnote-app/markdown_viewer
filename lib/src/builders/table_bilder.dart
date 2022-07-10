@@ -7,25 +7,23 @@ class TableBuilder extends MarkdownElementBuilder {
   TableBuilder({
     TextStyle? table,
     TextStyle? tableHead,
-    required this.tableBody,
-    required this.tableCellPadding,
-    required this.tableColumnWidth,
+    TextStyle? tableBody,
     this.tableBorder,
-    this.tableHeadCellAlign,
     this.tableRowDecoration,
     this.tableRowDecorationAlternating,
+    required this.tableCellPadding,
+    required this.tableColumnWidth,
   }) : super(textStyleMap: {
           'table': table,
           'tableHead': tableHead,
+          'tableBody': tableBody,
         });
 
-  final TextStyle tableBody;
   final EdgeInsets tableCellPadding;
   final TableBorder? tableBorder;
   final TableColumnWidth tableColumnWidth;
-  final TextAlign? tableHeadCellAlign;
   final BoxDecoration? tableRowDecoration;
-  final TableRowDecorationAlternating? tableRowDecorationAlternating;
+  final MarkdownAlternating? tableRowDecorationAlternating;
 
   final _tableStack = <_TableElement>[];
 
@@ -48,7 +46,7 @@ class TableBuilder extends MarkdownElementBuilder {
       final alternating = tableRowDecorationAlternating;
       if (alternating != null) {
         final length = _tableStack.single.rows.length;
-        if (alternating == TableRowDecorationAlternating.odd) {
+        if (alternating == MarkdownAlternating.odd) {
           decoration = length.isOdd ? null : decoration;
         } else {
           decoration = length.isOdd ? decoration : null;
@@ -64,41 +62,37 @@ class TableBuilder extends MarkdownElementBuilder {
   }
 
   @override
+  TextAlign? textAlign(MarkdownTreeElement parent) {
+    TextAlign? textAlign;
+    if (parent.type == 'tableHeadCell' || parent.type == 'tableBodyCell') {
+      textAlign = {
+        'left': TextAlign.left,
+        'right': TextAlign.right,
+        'center': TextAlign.center,
+      }[parent.attributes['textAlign']];
+    }
+    return textAlign;
+  }
+
+  @override
   void after(renderer, element) {
     final type = element.type;
 
     if (type == 'table') {
-      renderer.write(Table(
+      renderer.writeBlock(Table(
         defaultColumnWidth: tableColumnWidth,
         defaultVerticalAlignment: TableCellVerticalAlignment.middle,
         border: tableBorder,
         children: _tableStack.removeLast().rows,
       ));
-      return;
-    }
-
-    if (type == 'tableHeadCell' || type == 'tableBodyCell') {
+    } else if (type == 'tableHeadCell' || type == 'tableBodyCell') {
       final children = element.children;
-      TextAlign? textAlign;
-      if (type == 'tableHeadCell') {
-        textAlign = tableHeadCellAlign;
-      }
-
-      textAlign ??= {
-        'left': TextAlign.left,
-        'right': TextAlign.right,
-        'center': TextAlign.center,
-      }[element.attributes['textAlign']];
 
       _tableStack.single.rows.last.children!.add(
         TableCell(
           child: Padding(
             padding: tableCellPadding,
-            child: DefaultTextStyle(
-              style: tableBody,
-              textAlign: textAlign,
-              child: children.single,
-            ),
+            child: children.single,
           ),
         ),
       );
