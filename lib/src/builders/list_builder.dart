@@ -73,8 +73,9 @@ class ListBuilder extends MarkdownElementBuilder {
   }
 
   Widget _buildListItemMarker(String type, String? number) {
-    final listType =
-        type == 'bulletList' ? ListType.unordered : ListType.ordered;
+    final listType = type == 'bulletList'
+        ? MarkdownListType.unordered
+        : MarkdownListType.ordered;
 
     final padding = listItemMarkerPadding;
     if (listItemMarkerBuilder != null) {
@@ -87,7 +88,7 @@ class ListBuilder extends MarkdownElementBuilder {
     return Padding(
       padding: padding,
       child: Text(
-        listType == ListType.unordered ? '•' : '$number.',
+        listType == MarkdownListType.unordered ? '•' : '$number.',
         textAlign: TextAlign.right,
         style: listItemMarker,
       ),

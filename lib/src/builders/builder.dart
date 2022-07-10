@@ -1,8 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
+import '../definition.dart';
 import '../renderer.dart';
-import '../tree_element.dart';
 
 abstract class MarkdownElementBuilder {
   MarkdownElementBuilder({
@@ -59,7 +59,7 @@ abstract class MarkdownElementBuilder {
   /// Runs when current element contains md.Text child.
   ///
   /// The [style] is from [buildTextStyle].
-  TextSpan buildText(String text, TreeElement parent) => TextSpan(
+  TextSpan buildText(String text, MarkdownTreeElement parent) => TextSpan(
         text: text,
         style: parent.style,
       );
@@ -68,7 +68,7 @@ abstract class MarkdownElementBuilder {
   TextSpan? createText(String type, TextStyle? style) => null;
 
   /// Called after current element has been built.
-  void after(MarkdownRenderer renderer, TreeElement element);
+  void after(MarkdownRenderer renderer, MarkdownTreeElement element);
 }
 
 typedef Attributes = Map<String, String>;

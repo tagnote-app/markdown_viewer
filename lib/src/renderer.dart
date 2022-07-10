@@ -13,7 +13,6 @@ import 'definition.dart';
 import 'extensions.dart';
 import 'helpers.dart';
 import 'style.dart';
-import 'tree_element.dart';
 
 class MarkdownRenderer implements md.NodeVisitor {
   MarkdownRenderer({
@@ -90,7 +89,7 @@ class MarkdownRenderer implements md.NodeVisitor {
   String? _keepLineEndingsWhen;
   final _gestureRecognizers = <String, GestureRecognizer>{};
 
-  final _tree = <TreeElement>[];
+  final _tree = <_TreeElement>[];
   final _builders = <String, MarkdownElementBuilder>{};
 
   List<Widget> render(List<md.Node> nodes) {
@@ -98,7 +97,7 @@ class MarkdownRenderer implements md.NodeVisitor {
     _keepLineEndingsWhen = null;
     _gestureRecognizers.clear();
 
-    _tree.add(TreeElement.root());
+    _tree.add(_TreeElement.root());
 
     for (final md.Node node in nodes) {
       assert(_tree.length == 1);
@@ -129,7 +128,7 @@ class MarkdownRenderer implements md.NodeVisitor {
       builder.gestureRecognizer(type, attributes),
     );
 
-    _tree.add(TreeElement.fromAstElement(
+    _tree.add(_TreeElement.fromAstElement(
       element,
       style: builder.buildTextStyle(type, attributes),
     ));
@@ -232,33 +231,9 @@ class MarkdownRenderer implements md.NodeVisitor {
       );
 }
 
+class _TreeElement extends MarkdownTreeElement {
+  _TreeElement.root() : super(type: '', style: null, attributes: const {});
 
-// 'paragraph',
-// 'headline',
-// 'htmlBlock',
-// 'codeBlock',
-// 'bulletList',
-// 'orderedList',
-// 'listItem',
-// 'thematicBreak',
-// 'blockquote',
-// 'table',
-// 'tableRow',
-// 'tableHead',
-// 'tableBody',
-// link
-// image
-// hardLineBreak
-// highlight
-// emphasis
-// strongEmphasis
-// emoji
-// inlineCode
-// inlineHtml
-// tableBodyCell
-// tableHeadCell
-
-// linkReferenceDefinition
-// linkReferenceDefinitionLabel
-// linkReferenceDefinitionDestination
-// linkReferenceDefinitionTitle
+  _TreeElement.fromAstElement(md.Element element, {TextStyle? style})
+      : super(type: element.type, attributes: element.attributes, style: style);
+}

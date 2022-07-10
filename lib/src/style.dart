@@ -112,7 +112,7 @@ class MarkdownStyle {
     TextStyle? checkbox,
     TableBorder? tableBorder = _tableBorder,
     BoxDecoration? tableRowDecoration,
-    TableRowDecorationAlternating? tableRowDecorationAlternating,
+    MarkdownAlternating? tableRowDecorationAlternating,
     TextStyle? strikethrough,
     TextStyle? highlight,
   }) {
@@ -201,7 +201,7 @@ class MarkdownStyle {
   final TextStyle? checkbox;
   final TextAlign? tableHeadCellAlign;
   final BoxDecoration? tableRowDecoration;
-  final TableRowDecorationAlternating? tableRowDecorationAlternating;
+  final MarkdownAlternating? tableRowDecorationAlternating;
 
   /// The vertical space between two block elements.
   final double blockSpacing;

@@ -25,7 +25,7 @@ class TableBuilder extends MarkdownElementBuilder {
   final TableColumnWidth tableColumnWidth;
   final TextAlign? tableHeadCellAlign;
   final BoxDecoration? tableRowDecoration;
-  final TableRowDecorationAlternating? tableRowDecorationAlternating;
+  final MarkdownAlternating? tableRowDecorationAlternating;
 
   final _tableStack = <_TableElement>[];
 
@@ -48,7 +48,7 @@ class TableBuilder extends MarkdownElementBuilder {
       final alternating = tableRowDecorationAlternating;
       if (alternating != null) {
         final length = _tableStack.single.rows.length;
-        if (alternating == TableRowDecorationAlternating.odd) {
+        if (alternating == MarkdownAlternating.odd) {
           decoration = length.isOdd ? null : decoration;
         } else {
           decoration = length.isOdd ? decoration : null;
