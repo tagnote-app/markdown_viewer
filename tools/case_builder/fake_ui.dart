@@ -467,12 +467,14 @@ class TextStyle {
     double? fontSize,
     Color? color,
     Color? backgroundColor,
+    TextDecoration? decoration,
   }) {
     return TextStyle(
       fontFamily: fontFamily ?? this.fontFamily,
       fontWeight: fontWeight ?? this.fontWeight,
       fontSize: fontSize ?? this.fontSize,
       fontStyle: fontStyle ?? this.fontStyle,
+      decoration: decoration ?? this.decoration,
       backgroundColor: backgroundColor ?? this.backgroundColor,
       color: color ?? this.color,
     );
@@ -484,6 +486,7 @@ class TextStyle {
         fontStyle: other?.fontStyle,
         fontWeight: other?.fontWeight,
         color: other?.color,
+        decoration: other?.decoration,
         backgroundColor: other?.backgroundColor,
       );
 
@@ -503,6 +506,7 @@ class TextStyle {
         other.color == color &&
         other.backgroundColor == backgroundColor &&
         other.fontSize == fontSize &&
+        other.decoration == decoration &&
         other.fontWeight == fontWeight &&
         other.fontStyle == fontStyle &&
         other.fontFamily == fontFamily;
@@ -555,7 +559,10 @@ class ThemeData {
 
 class TextDecoration {
   const TextDecoration._(this._mask);
+  static const TextDecoration none = TextDecoration._(0x0);
   static const TextDecoration lineThrough = TextDecoration._(0x4);
+  static const TextDecoration underline = TextDecoration._(0x1);
+  static const TextDecoration overline = TextDecoration._(0x2);
   final int _mask;
 
   @override
@@ -565,6 +572,17 @@ class TextDecoration {
 
   @override
   int get hashCode => _mask.hashCode;
+
+  @override
+  String toString() {
+    if (_mask == 0) return 'TextDecoration.none';
+    final List<String> values = <String>[];
+    if (_mask & underline._mask != 0) values.add('underline');
+    if (_mask & overline._mask != 0) values.add('overline');
+    if (_mask & lineThrough._mask != 0) values.add('lineThrough');
+    if (values.length == 1) return 'TextDecoration.${values[0]}';
+    return 'TextDecoration.combine([${values.join(", ")}])';
+  }
 }
 
 enum MainAxisAlignment {

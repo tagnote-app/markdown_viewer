@@ -187,6 +187,8 @@ extension TextStyleExtensions on TextStyle {
         if (fontSize != null) 'fontSize': fontSize,
         if (fontStyle != null) 'fontStyle': fontStyle.toString(),
         if (color != null) 'color': color.toString(),
+        if (decoration != null && decoration != TextDecoration.none)
+          'decoration': decoration.toString(),
         if (backgroundColor != null)
           'backgroundColor': backgroundColor.toString(),
       };

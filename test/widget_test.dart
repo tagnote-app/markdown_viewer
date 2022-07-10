@@ -35,7 +35,7 @@ void main() {
 
     // This column is from MarkdownBuilder.
     expect(allWidgets.elementAt(2).runtimeType, Column);
-    expect(allWidgets.elementAt(3).runtimeType, Wrap);
+    expect(allWidgets.elementAt(3).runtimeType, RichText);
   }));
 
   testWidgets('when has multiple block child', ((tester) async {
