@@ -7,23 +7,18 @@
         "type": "Column",
         "children": [
           {
-            "type": "Wrap",
-            "children": [
-              {
-                "type": "RichText",
-                "text": {
-                  "type": "TextSpan",
-                  "text": "<a><bab><c2c>",
-                  "style": {
-                    "fontFamily": "monospace",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 11.9,
-                    "color": "Color(0xdd000000)",
-                    "backgroundColor": "Color(0xfff8f09e)"
-                  }
-                }
+            "type": "RichText",
+            "textAlign": "TextAlign.start",
+            "text": {
+              "type": "TextSpan",
+              "text": "<a><bab><c2c>",
+              "style": {
+                "fontFamily": ".SF UI Text",
+                "fontWeight": "FontWeight.w400",
+                "fontSize": 14.0,
+                "color": "Color(0xdd000000)"
               }
-            ]
+            }
           }
         ]
       }
@@ -37,23 +32,18 @@
         "type": "Column",
         "children": [
           {
-            "type": "Wrap",
-            "children": [
-              {
-                "type": "RichText",
-                "text": {
-                  "type": "TextSpan",
-                  "text": "<a/><b2/>",
-                  "style": {
-                    "fontFamily": "monospace",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 11.9,
-                    "color": "Color(0xdd000000)",
-                    "backgroundColor": "Color(0xfff8f09e)"
-                  }
-                }
+            "type": "RichText",
+            "textAlign": "TextAlign.start",
+            "text": {
+              "type": "TextSpan",
+              "text": "<a/><b2/>",
+              "style": {
+                "fontFamily": ".SF UI Text",
+                "fontWeight": "FontWeight.w400",
+                "fontSize": 14.0,
+                "color": "Color(0xdd000000)"
               }
-            ]
+            }
           }
         ]
       }
@@ -67,23 +57,18 @@
         "type": "Column",
         "children": [
           {
-            "type": "Wrap",
-            "children": [
-              {
-                "type": "RichText",
-                "text": {
-                  "type": "TextSpan",
-                  "text": "<a  /><b2 data=\"foo\" >",
-                  "style": {
-                    "fontFamily": "monospace",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 11.9,
-                    "color": "Color(0xdd000000)",
-                    "backgroundColor": "Color(0xfff8f09e)"
-                  }
-                }
+            "type": "RichText",
+            "textAlign": "TextAlign.start",
+            "text": {
+              "type": "TextSpan",
+              "text": "<a  /><b2 data=\"foo\" >",
+              "style": {
+                "fontFamily": ".SF UI Text",
+                "fontWeight": "FontWeight.w400",
+                "fontSize": 14.0,
+                "color": "Color(0xdd000000)"
               }
-            ]
+            }
           }
         ]
       }
@@ -97,23 +82,18 @@
         "type": "Column",
         "children": [
           {
-            "type": "Wrap",
-            "children": [
-              {
-                "type": "RichText",
-                "text": {
-                  "type": "TextSpan",
-                  "text": "<a foo=\"bar\" bam = 'baz <em>\"</em>' _boolean zoop:33=zoop:33 />",
-                  "style": {
-                    "fontFamily": "monospace",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 11.9,
-                    "color": "Color(0xdd000000)",
-                    "backgroundColor": "Color(0xfff8f09e)"
-                  }
-                }
+            "type": "RichText",
+            "textAlign": "TextAlign.start",
+            "text": {
+              "type": "TextSpan",
+              "text": "<a foo=\"bar\" bam = 'baz <em>\"</em>' _boolean zoop:33=zoop:33 />",
+              "style": {
+                "fontFamily": ".SF UI Text",
+                "fontWeight": "FontWeight.w400",
+                "fontSize": 14.0,
+                "color": "Color(0xdd000000)"
               }
-            ]
+            }
           }
         ]
       }
@@ -127,38 +107,18 @@
         "type": "Column",
         "children": [
           {
-            "type": "Wrap",
-            "children": [
-              {
-                "type": "RichText",
-                "text": {
-                  "type": "TextSpan",
-                  "children": [
-                    {
-                      "type": "TextSpan",
-                      "text": "Foo ",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
-                      }
-                    },
-                    {
-                      "type": "TextSpan",
-                      "text": "<responsive-image src=\"foo.jpg\" />",
-                      "style": {
-                        "fontFamily": "monospace",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 11.9,
-                        "color": "Color(0xdd000000)",
-                        "backgroundColor": "Color(0xfff8f09e)"
-                      }
-                    }
-                  ]
-                }
+            "type": "RichText",
+            "textAlign": "TextAlign.start",
+            "text": {
+              "type": "TextSpan",
+              "text": "Foo <responsive-image src=\"foo.jpg\" />",
+              "style": {
+                "fontFamily": ".SF UI Text",
+                "fontWeight": "FontWeight.w400",
+                "fontSize": 14.0,
+                "color": "Color(0xdd000000)"
               }
-            ]
+            }
           }
         ]
       }
@@ -172,22 +132,18 @@
         "type": "Column",
         "children": [
           {
-            "type": "Wrap",
-            "children": [
-              {
-                "type": "RichText",
-                "text": {
-                  "type": "TextSpan",
-                  "text": "<33> <__>",
-                  "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
-                  }
-                }
+            "type": "RichText",
+            "textAlign": "TextAlign.start",
+            "text": {
+              "type": "TextSpan",
+              "text": "<33> <__>",
+              "style": {
+                "fontFamily": ".SF UI Text",
+                "fontWeight": "FontWeight.w400",
+                "fontSize": 14.0,
+                "color": "Color(0xdd000000)"
               }
-            ]
+            }
           }
         ]
       }
@@ -201,22 +157,18 @@
         "type": "Column",
         "children": [
           {
-            "type": "Wrap",
-            "children": [
-              {
-                "type": "RichText",
-                "text": {
-                  "type": "TextSpan",
-                  "text": "<a h*#ref=\"hi\">",
-                  "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
-                  }
-                }
+            "type": "RichText",
+            "textAlign": "TextAlign.start",
+            "text": {
+              "type": "TextSpan",
+              "text": "<a h*#ref=\"hi\">",
+              "style": {
+                "fontFamily": ".SF UI Text",
+                "fontWeight": "FontWeight.w400",
+                "fontSize": 14.0,
+                "color": "Color(0xdd000000)"
               }
-            ]
+            }
           }
         ]
       }
@@ -230,22 +182,18 @@
         "type": "Column",
         "children": [
           {
-            "type": "Wrap",
-            "children": [
-              {
-                "type": "RichText",
-                "text": {
-                  "type": "TextSpan",
-                  "text": "<a href=\"hi'> <a href=hi'>",
-                  "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
-                  }
-                }
+            "type": "RichText",
+            "textAlign": "TextAlign.start",
+            "text": {
+              "type": "TextSpan",
+              "text": "<a href=\"hi'> <a href=hi'>",
+              "style": {
+                "fontFamily": ".SF UI Text",
+                "fontWeight": "FontWeight.w400",
+                "fontSize": 14.0,
+                "color": "Color(0xdd000000)"
               }
-            ]
+            }
           }
         ]
       }
@@ -259,22 +207,18 @@
         "type": "Column",
         "children": [
           {
-            "type": "Wrap",
-            "children": [
-              {
-                "type": "RichText",
-                "text": {
-                  "type": "TextSpan",
-                  "text": "< a>< foo><bar/ > <foo bar=baz bim!bop />",
-                  "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
-                  }
-                }
+            "type": "RichText",
+            "textAlign": "TextAlign.start",
+            "text": {
+              "type": "TextSpan",
+              "text": "< a>< foo><bar/ > <foo bar=baz bim!bop />",
+              "style": {
+                "fontFamily": ".SF UI Text",
+                "fontWeight": "FontWeight.w400",
+                "fontSize": 14.0,
+                "color": "Color(0xdd000000)"
               }
-            ]
+            }
           }
         ]
       }
@@ -288,22 +232,18 @@
         "type": "Column",
         "children": [
           {
-            "type": "Wrap",
-            "children": [
-              {
-                "type": "RichText",
-                "text": {
-                  "type": "TextSpan",
-                  "text": "<a href='bar'title=title>",
-                  "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
-                  }
-                }
+            "type": "RichText",
+            "textAlign": "TextAlign.start",
+            "text": {
+              "type": "TextSpan",
+              "text": "<a href='bar'title=title>",
+              "style": {
+                "fontFamily": ".SF UI Text",
+                "fontWeight": "FontWeight.w400",
+                "fontSize": 14.0,
+                "color": "Color(0xdd000000)"
               }
-            ]
+            }
           }
         ]
       }
@@ -317,23 +257,18 @@
         "type": "Column",
         "children": [
           {
-            "type": "Wrap",
-            "children": [
-              {
-                "type": "RichText",
-                "text": {
-                  "type": "TextSpan",
-                  "text": "</a></foo >",
-                  "style": {
-                    "fontFamily": "monospace",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 11.9,
-                    "color": "Color(0xdd000000)",
-                    "backgroundColor": "Color(0xfff8f09e)"
-                  }
-                }
+            "type": "RichText",
+            "textAlign": "TextAlign.start",
+            "text": {
+              "type": "TextSpan",
+              "text": "</a></foo >",
+              "style": {
+                "fontFamily": ".SF UI Text",
+                "fontWeight": "FontWeight.w400",
+                "fontSize": 14.0,
+                "color": "Color(0xdd000000)"
               }
-            ]
+            }
           }
         ]
       }
@@ -347,22 +282,18 @@
         "type": "Column",
         "children": [
           {
-            "type": "Wrap",
-            "children": [
-              {
-                "type": "RichText",
-                "text": {
-                  "type": "TextSpan",
-                  "text": "</a href=\"foo\">",
-                  "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
-                  }
-                }
+            "type": "RichText",
+            "textAlign": "TextAlign.start",
+            "text": {
+              "type": "TextSpan",
+              "text": "</a href=\"foo\">",
+              "style": {
+                "fontFamily": ".SF UI Text",
+                "fontWeight": "FontWeight.w400",
+                "fontSize": 14.0,
+                "color": "Color(0xdd000000)"
               }
-            ]
+            }
           }
         ]
       }
@@ -376,38 +307,18 @@
         "type": "Column",
         "children": [
           {
-            "type": "Wrap",
-            "children": [
-              {
-                "type": "RichText",
-                "text": {
-                  "type": "TextSpan",
-                  "children": [
-                    {
-                      "type": "TextSpan",
-                      "text": "foo ",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
-                      }
-                    },
-                    {
-                      "type": "TextSpan",
-                      "text": "<!-- this is a comment - with hyphen -->",
-                      "style": {
-                        "fontFamily": "monospace",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 11.9,
-                        "color": "Color(0xdd000000)",
-                        "backgroundColor": "Color(0xfff8f09e)"
-                      }
-                    }
-                  ]
-                }
+            "type": "RichText",
+            "textAlign": "TextAlign.start",
+            "text": {
+              "type": "TextSpan",
+              "text": "foo <!-- this is a comment - with hyphen -->",
+              "style": {
+                "fontFamily": ".SF UI Text",
+                "fontWeight": "FontWeight.w400",
+                "fontSize": 14.0,
+                "color": "Color(0xdd000000)"
               }
-            ]
+            }
           }
         ]
       }
@@ -421,22 +332,18 @@
         "type": "Column",
         "children": [
           {
-            "type": "Wrap",
-            "children": [
-              {
-                "type": "RichText",
-                "text": {
-                  "type": "TextSpan",
-                  "text": "foo <!-- not a comment -- two hyphens -->",
-                  "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
-                  }
-                }
+            "type": "RichText",
+            "textAlign": "TextAlign.start",
+            "text": {
+              "type": "TextSpan",
+              "text": "foo <!-- not a comment -- two hyphens -->",
+              "style": {
+                "fontFamily": ".SF UI Text",
+                "fontWeight": "FontWeight.w400",
+                "fontSize": 14.0,
+                "color": "Color(0xdd000000)"
               }
-            ]
+            }
           }
         ]
       }
@@ -450,22 +357,18 @@
         "type": "Column",
         "children": [
           {
-            "type": "Wrap",
-            "children": [
-              {
-                "type": "RichText",
-                "text": {
-                  "type": "TextSpan",
-                  "text": "foo <!--> foo -->",
-                  "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
-                  }
-                }
+            "type": "RichText",
+            "textAlign": "TextAlign.start",
+            "text": {
+              "type": "TextSpan",
+              "text": "foo <!--> foo -->",
+              "style": {
+                "fontFamily": ".SF UI Text",
+                "fontWeight": "FontWeight.w400",
+                "fontSize": 14.0,
+                "color": "Color(0xdd000000)"
               }
-            ]
+            }
           }
         ]
       },
@@ -477,22 +380,18 @@
         "type": "Column",
         "children": [
           {
-            "type": "Wrap",
-            "children": [
-              {
-                "type": "RichText",
-                "text": {
-                  "type": "TextSpan",
-                  "text": "foo <!-- foo--->",
-                  "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
-                  }
-                }
+            "type": "RichText",
+            "textAlign": "TextAlign.start",
+            "text": {
+              "type": "TextSpan",
+              "text": "foo <!-- foo--->",
+              "style": {
+                "fontFamily": ".SF UI Text",
+                "fontWeight": "FontWeight.w400",
+                "fontSize": 14.0,
+                "color": "Color(0xdd000000)"
               }
-            ]
+            }
           }
         ]
       }
@@ -506,38 +405,18 @@
         "type": "Column",
         "children": [
           {
-            "type": "Wrap",
-            "children": [
-              {
-                "type": "RichText",
-                "text": {
-                  "type": "TextSpan",
-                  "children": [
-                    {
-                      "type": "TextSpan",
-                      "text": "foo ",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
-                      }
-                    },
-                    {
-                      "type": "TextSpan",
-                      "text": "<?php echo $a; ?>",
-                      "style": {
-                        "fontFamily": "monospace",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 11.9,
-                        "color": "Color(0xdd000000)",
-                        "backgroundColor": "Color(0xfff8f09e)"
-                      }
-                    }
-                  ]
-                }
+            "type": "RichText",
+            "textAlign": "TextAlign.start",
+            "text": {
+              "type": "TextSpan",
+              "text": "foo <?php echo $a; ?>",
+              "style": {
+                "fontFamily": ".SF UI Text",
+                "fontWeight": "FontWeight.w400",
+                "fontSize": 14.0,
+                "color": "Color(0xdd000000)"
               }
-            ]
+            }
           }
         ]
       }
@@ -551,38 +430,18 @@
         "type": "Column",
         "children": [
           {
-            "type": "Wrap",
-            "children": [
-              {
-                "type": "RichText",
-                "text": {
-                  "type": "TextSpan",
-                  "children": [
-                    {
-                      "type": "TextSpan",
-                      "text": "foo ",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
-                      }
-                    },
-                    {
-                      "type": "TextSpan",
-                      "text": "<!ELEMENT br EMPTY>",
-                      "style": {
-                        "fontFamily": "monospace",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 11.9,
-                        "color": "Color(0xdd000000)",
-                        "backgroundColor": "Color(0xfff8f09e)"
-                      }
-                    }
-                  ]
-                }
+            "type": "RichText",
+            "textAlign": "TextAlign.start",
+            "text": {
+              "type": "TextSpan",
+              "text": "foo <!ELEMENT br EMPTY>",
+              "style": {
+                "fontFamily": ".SF UI Text",
+                "fontWeight": "FontWeight.w400",
+                "fontSize": 14.0,
+                "color": "Color(0xdd000000)"
               }
-            ]
+            }
           }
         ]
       }
@@ -596,38 +455,18 @@
         "type": "Column",
         "children": [
           {
-            "type": "Wrap",
-            "children": [
-              {
-                "type": "RichText",
-                "text": {
-                  "type": "TextSpan",
-                  "children": [
-                    {
-                      "type": "TextSpan",
-                      "text": "foo ",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
-                      }
-                    },
-                    {
-                      "type": "TextSpan",
-                      "text": "<![CDATA[>&<]]>",
-                      "style": {
-                        "fontFamily": "monospace",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 11.9,
-                        "color": "Color(0xdd000000)",
-                        "backgroundColor": "Color(0xfff8f09e)"
-                      }
-                    }
-                  ]
-                }
+            "type": "RichText",
+            "textAlign": "TextAlign.start",
+            "text": {
+              "type": "TextSpan",
+              "text": "foo <![CDATA[>&<]]>",
+              "style": {
+                "fontFamily": ".SF UI Text",
+                "fontWeight": "FontWeight.w400",
+                "fontSize": 14.0,
+                "color": "Color(0xdd000000)"
               }
-            ]
+            }
           }
         ]
       }
@@ -641,38 +480,18 @@
         "type": "Column",
         "children": [
           {
-            "type": "Wrap",
-            "children": [
-              {
-                "type": "RichText",
-                "text": {
-                  "type": "TextSpan",
-                  "children": [
-                    {
-                      "type": "TextSpan",
-                      "text": "foo ",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
-                      }
-                    },
-                    {
-                      "type": "TextSpan",
-                      "text": "<a href=\"&ouml;\">",
-                      "style": {
-                        "fontFamily": "monospace",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 11.9,
-                        "color": "Color(0xdd000000)",
-                        "backgroundColor": "Color(0xfff8f09e)"
-                      }
-                    }
-                  ]
-                }
+            "type": "RichText",
+            "textAlign": "TextAlign.start",
+            "text": {
+              "type": "TextSpan",
+              "text": "foo <a href=\"&ouml;\">",
+              "style": {
+                "fontFamily": ".SF UI Text",
+                "fontWeight": "FontWeight.w400",
+                "fontSize": 14.0,
+                "color": "Color(0xdd000000)"
               }
-            ]
+            }
           }
         ]
       }
@@ -686,38 +505,18 @@
         "type": "Column",
         "children": [
           {
-            "type": "Wrap",
-            "children": [
-              {
-                "type": "RichText",
-                "text": {
-                  "type": "TextSpan",
-                  "children": [
-                    {
-                      "type": "TextSpan",
-                      "text": "foo ",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
-                      }
-                    },
-                    {
-                      "type": "TextSpan",
-                      "text": "<a href=\"\\*\">",
-                      "style": {
-                        "fontFamily": "monospace",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 11.9,
-                        "color": "Color(0xdd000000)",
-                        "backgroundColor": "Color(0xfff8f09e)"
-                      }
-                    }
-                  ]
-                }
+            "type": "RichText",
+            "textAlign": "TextAlign.start",
+            "text": {
+              "type": "TextSpan",
+              "text": "foo <a href=\"*\">",
+              "style": {
+                "fontFamily": ".SF UI Text",
+                "fontWeight": "FontWeight.w400",
+                "fontSize": 14.0,
+                "color": "Color(0xdd000000)"
               }
-            ]
+            }
           }
         ]
       }
@@ -731,22 +530,18 @@
         "type": "Column",
         "children": [
           {
-            "type": "Wrap",
-            "children": [
-              {
-                "type": "RichText",
-                "text": {
-                  "type": "TextSpan",
-                  "text": "<a href=\"\"\">",
-                  "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
-                  }
-                }
+            "type": "RichText",
+            "textAlign": "TextAlign.start",
+            "text": {
+              "type": "TextSpan",
+              "text": "<a href=\"\"\">",
+              "style": {
+                "fontFamily": ".SF UI Text",
+                "fontWeight": "FontWeight.w400",
+                "fontSize": 14.0,
+                "color": "Color(0xdd000000)"
               }
-            ]
+            }
           }
         ]
       }

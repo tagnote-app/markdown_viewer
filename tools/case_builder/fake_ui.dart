@@ -8,6 +8,10 @@ abstract class StatefulWidget extends Widget {
   const StatefulWidget();
 }
 
+abstract class StatelessWidget extends Widget {
+  const StatelessWidget();
+}
+
 abstract class ProxyWidget extends Widget {
   const ProxyWidget({
     required this.child,
@@ -214,6 +218,8 @@ class EdgeInsets extends EdgeInsetsGeometry {
 
   const EdgeInsets.fromLTRB(this.left, this.top, this.right, this.bottom);
 
+  static const EdgeInsets zero = EdgeInsets.only();
+
   final double left;
   final double top;
   final double right;
@@ -378,11 +384,29 @@ class Container extends Widget {
     this.child,
     this.decoration,
     this.border,
+    this.width,
   });
 
-  final BoxDecoration? decoration;
+  final Decoration? decoration;
   final Widget? child;
   final BoxBorder? border;
+  final double? width;
+}
+
+class Divider extends StatelessWidget {
+  const Divider({
+    this.height,
+    this.thickness,
+    this.indent,
+    this.endIndent,
+    this.color,
+  });
+
+  final double? height;
+  final double? thickness;
+  final double? indent;
+  final double? endIndent;
+  final Color? color;
 }
 
 class DecoratedBox extends SingleChildRenderObjectWidget {
@@ -434,6 +458,7 @@ class TextStyle {
     this.fontWeight,
     this.color,
     this.backgroundColor,
+    this.decoration,
   });
   TextStyle copyWith({
     String? fontFamily,
@@ -468,6 +493,7 @@ class TextStyle {
   final double? fontSize;
   final Color? color;
   final Color? backgroundColor;
+  final TextDecoration? decoration;
 
   @override
   bool operator ==(Object other) {
@@ -525,6 +551,20 @@ class ThemeData {
   });
 
   final TextTheme textTheme;
+}
+
+class TextDecoration {
+  const TextDecoration._(this._mask);
+  static const TextDecoration lineThrough = TextDecoration._(0x4);
+  final int _mask;
+
+  @override
+  bool operator ==(Object other) {
+    return other is TextDecoration && other._mask == _mask;
+  }
+
+  @override
+  int get hashCode => _mask.hashCode;
 }
 
 enum MainAxisAlignment {

@@ -1,14 +1,14 @@
 import 'package:markdown/markdown.dart';
 
-class MarkdownBuilder {
-  MarkdownBuilder({
+class MarkdownRenderer {
+  MarkdownRenderer({
     required this.styleSheet,
     MarkdownTapLinkCallback? onTapLink,
   });
 
   final MarkdownStyle styleSheet;
 
-  List<Widget> build(List<Node> nodes) {
+  List<Widget> render(List<Node> nodes) {
     return [];
   }
 }
@@ -25,5 +25,4 @@ class ThemeData {}
 
 final themeData = ThemeData();
 
-typedef MarkdownTapLinkCallback = void Function(
-    String text, String? href, String? title);
+typedef MarkdownTapLinkCallback = void Function(String? href, String? title);
