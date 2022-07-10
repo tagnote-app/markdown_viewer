@@ -64,6 +64,11 @@ abstract class MarkdownElementBuilder {
         style: parent.style,
       );
 
+  /// Sets a new [TextAlign] instead of using the default one.
+  ///
+  /// Returns `null` to use the default [TextAlign].
+  TextAlign? textAlign(MarkdownTreeElement parent) => null;
+
   /// Runs when current element does not have md.Text, such as hardBreak.
   TextSpan? createText(String type, TextStyle? style) => null;
 

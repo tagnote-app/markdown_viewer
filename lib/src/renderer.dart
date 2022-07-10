@@ -24,8 +24,11 @@ class MarkdownRenderer implements NodeVisitor {
     MarkdownCheckboxBuilder? checkboxBuilder,
     MarkdownHighlightBuilder? highlightBuilder,
     List<MarkdownElementBuilder> elementBuilders = const [],
-    this.selectable = false,
-  }) : _blockSpacing = styleSheet.blockSpacing {
+    bool selectable = false,
+    TextAlign? textAlign,
+  })  : _selectable = selectable,
+        _blockSpacing = styleSheet.blockSpacing,
+        _textAlign = textAlign ?? TextAlign.start {
     final defaultBuilders = [
       HeadlineBuilder(
         headline1: styleSheet.headline1,
@@ -60,7 +63,6 @@ class MarkdownRenderer implements NodeVisitor {
         tableCellPadding: styleSheet.tableCellPadding,
         tableColumnWidth: styleSheet.tableColumnWidth,
         tableBorder: styleSheet.tableBorder,
-        tableHeadCellAlign: styleSheet.tableHeadCellAlign,
         tableRowDecoration: styleSheet.tableRowDecoration,
         tableRowDecorationAlternating: styleSheet.tableRowDecorationAlternating,
       ),
@@ -86,7 +88,8 @@ class MarkdownRenderer implements NodeVisitor {
     }
   }
 
-  final bool selectable;
+  final bool _selectable;
+  final TextAlign _textAlign;
   final double _blockSpacing;
 
   String? _keepLineEndingsWhen;
@@ -146,6 +149,7 @@ class MarkdownRenderer implements NodeVisitor {
         ? text.text.replaceAll('\n', ' ')
         : text.text;
     var textSpan = builder.buildText(textContent, parent);
+    final textAlign = builder.textAlign(parent) ?? _textAlign;
 
     if (_gestureRecognizers.isNotEmpty) {
       textSpan = TextSpan(
@@ -157,7 +161,7 @@ class MarkdownRenderer implements NodeVisitor {
       );
     }
 
-    parent.children.add(buildRichText(textSpan));
+    parent.children.add(buildRichText(textSpan, textAlign));
   }
 
   @override
@@ -169,7 +173,7 @@ class MarkdownRenderer implements NodeVisitor {
 
     final textSpan = builder.createText(type, parent.style);
     if (textSpan != null) {
-      current.children.add(buildRichText(textSpan));
+      current.children.add(buildRichText(textSpan, _textAlign));
     }
 
     current.children.replaceRange(
@@ -204,7 +208,7 @@ class MarkdownRenderer implements NodeVisitor {
 
   /// Merges the [RichText] elements of [children] and returns a [Column] if the
   /// [children] is not empty, otherwise returns a shrinked [SizedBox].
-  Widget convertToBlock(List<Widget> children, {TextAlign? textAlign}) {
+  Widget convertToBlock(List<Widget> children) {
     if (children.isEmpty) {
       return const SizedBox.shrink();
     }
@@ -218,18 +222,18 @@ class MarkdownRenderer implements NodeVisitor {
   }
 
   /// Builds a [RichText] widget. It will build a [SelectableText] rich text if
-  /// [selectable] is true.
-  Widget buildRichText(TextSpan text, {TextAlign? textAlign}) {
-    if (selectable) {
+  /// [_selectable] is true.
+  Widget buildRichText(TextSpan text, TextAlign textAlign) {
+    if (_selectable) {
       return SelectableText.rich(
         text,
-        textAlign: textAlign ?? TextAlign.start,
+        textAlign: textAlign,
         onTap: () {},
       );
     } else {
       return RichText(
         text: text,
-        textAlign: textAlign ?? TextAlign.start,
+        textAlign: textAlign,
       );
     }
   }
@@ -237,8 +241,10 @@ class MarkdownRenderer implements NodeVisitor {
   /// Merges the [RichText] elements of [widgets] while it is possible.
   List<Widget> compressWidgets(List<Widget> widgets) => mergeRichText(
         widgets,
-        richTextBuilder: (span, textAlign) =>
-            buildRichText(span, textAlign: textAlign),
+        richTextBuilder: (span, textAlign) => buildRichText(
+          span,
+          textAlign ?? _textAlign,
+        ),
       );
 }
 

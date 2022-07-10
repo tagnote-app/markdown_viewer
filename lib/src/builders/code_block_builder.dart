@@ -22,6 +22,9 @@ class CodeBlockBuilder extends MarkdownElementBuilder {
   bool replaceLineEndings(String type) => false;
 
   @override
+  TextAlign textAlign(MarkdownTreeElement parent) => TextAlign.start;
+
+  @override
   TextSpan buildText(text, parent) {
     return highlightBuilder == null
         ? TextSpan(

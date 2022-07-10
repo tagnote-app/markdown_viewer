@@ -22,8 +22,9 @@ extension WidgetExtensions on Widget {
 
       final children = self.children.map((e) => e.toMap()).toList();
       map.addAll({
-        if (children.isNotEmpty) 'children': children,
+        'textAlign': self.textAlign.toString(),
         if (text != null) 'text': text,
+        if (children.isNotEmpty) 'children': children,
       });
     } else if (self is Table) {
       map.addAll({

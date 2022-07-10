@@ -9,14 +9,14 @@ class SimpleBlocksBuilder extends MarkdownElementBuilder {
     this.dividerColor,
     this.dividerHeight,
     this.dividerThickness,
-    required this.blockquoteDecoration,
+    this.blockquoteDecoration,
     required this.blockquotePadding,
   }) : super(textStyleMap: {
           'blockquote': blockquote,
           'paragraph': paragraph,
         });
 
-  final Decoration blockquoteDecoration;
+  final Decoration? blockquoteDecoration;
   final EdgeInsets blockquotePadding;
   final double? dividerHeight;
   final double? dividerThickness;
