@@ -34,6 +34,6 @@ class HeadlineBuilder extends MarkdownElementBuilder {
 
   @override
   void after(renderer, element) {
-    renderer.write(renderer.convertToBlock(element.children));
+    renderer.writeBlock(renderer.convertToBlock(element.children));
   }
 }

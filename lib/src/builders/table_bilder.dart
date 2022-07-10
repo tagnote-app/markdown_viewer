@@ -68,16 +68,13 @@ class TableBuilder extends MarkdownElementBuilder {
     final type = element.type;
 
     if (type == 'table') {
-      renderer.write(Table(
+      renderer.writeBlock(Table(
         defaultColumnWidth: tableColumnWidth,
         defaultVerticalAlignment: TableCellVerticalAlignment.middle,
         border: tableBorder,
         children: _tableStack.removeLast().rows,
       ));
-      return;
-    }
-
-    if (type == 'tableHeadCell' || type == 'tableBodyCell') {
+    } else if (type == 'tableHeadCell' || type == 'tableBodyCell') {
       final children = element.children;
       TextAlign? textAlign;
       if (type == 'tableHeadCell') {

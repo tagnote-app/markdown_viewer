@@ -53,6 +53,6 @@ class SimpleBlocksBuilder extends MarkdownElementBuilder {
       }
     }
 
-    renderer.write(blockChild);
+    renderer.writeBlock(blockChild);
   }
 }

@@ -45,7 +45,7 @@ class ListBuilder extends MarkdownElementBuilder {
     final child = renderer.convertToBlock(element.children);
     if (_isList(type)) {
       _listStrack.removeLast();
-      renderer.write(child);
+      renderer.writeBlock(child);
       return;
     }
 
@@ -58,7 +58,7 @@ class ListBuilder extends MarkdownElementBuilder {
             element.attributes['taskListItem'] == 'checked',
           );
 
-    renderer.write(Row(
+    renderer.writeBlock(Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         ConstrainedBox(

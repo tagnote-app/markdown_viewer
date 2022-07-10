@@ -61,6 +61,6 @@ class SimpleInlinesBuilder extends MarkdownElementBuilder {
 
   @override
   void after(renderer, element) {
-    renderer.writeAll(element.children);
+    renderer.writeInline(element.children);
   }
 }

@@ -23,7 +23,7 @@ class MarkdownRenderer implements md.NodeVisitor {
     MarkdownHighlightBuilder? highlightBuilder,
     List<MarkdownElementBuilder> elementBuilders = const [],
     this.selectable = false,
-  }) {
+  }) : _blockSpacing = styleSheet.blockSpacing {
     final defaultBuilders = [
       HeadlineBuilder(
         headline1: styleSheet.headline1,
@@ -85,6 +85,7 @@ class MarkdownRenderer implements md.NodeVisitor {
   }
 
   final bool selectable;
+  final double _blockSpacing;
 
   String? _keepLineEndingsWhen;
   final _gestureRecognizers = <String, GestureRecognizer>{};
@@ -183,13 +184,19 @@ class MarkdownRenderer implements md.NodeVisitor {
     _gestureRecognizers.remove(type);
   }
 
-  // Adds [child] to the the children of the parent element.
-  void write(Widget child) {
-    _tree.last.children.add(child);
+  /// Adds [child] to the the children of the parent element as a block element.
+  ///
+  /// It will and a spacing between block elements.
+  void writeBlock(Widget child) {
+    _tree.last.children.addAll([
+      if (_tree.last.children.isNotEmpty) SizedBox(height: _blockSpacing),
+      child,
+    ]);
   }
 
-  // Adds [children] to the the children of the parent element.
-  void writeAll(List<Widget> children) {
+  /// Adds [children] of current inline element as the children of the parent
+  /// element.
+  void writeInline(List<Widget> children) {
     _tree.last.children.addAll(children);
   }
 
@@ -208,6 +215,8 @@ class MarkdownRenderer implements md.NodeVisitor {
     );
   }
 
+  /// Builds a [RichText] widget. It will build a [SelectableText] rich text if
+  /// [selectable] is true.
   Widget buildRichText(TextSpan text, {TextAlign? textAlign}) {
     if (selectable) {
       return SelectableText.rich(
