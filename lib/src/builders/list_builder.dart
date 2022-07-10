@@ -7,12 +7,12 @@ class ListBuilder extends MarkdownElementBuilder {
   ListBuilder({
     TextStyle? list,
     TextStyle? listItem,
-    this.checkbox = const TextStyle(fontSize: 18.0),
     this.listItemMarker,
-    this.listItemMarkerBuilder,
-    this.checkboxBuilder,
     required this.listItemMarkerPadding,
     required this.listItemMinIndent,
+    this.checkbox,
+    this.listItemMarkerBuilder,
+    this.checkboxBuilder,
   }) : super(textStyleMap: {
           'orderedList': list,
           'bulletList': list,
@@ -20,7 +20,7 @@ class ListBuilder extends MarkdownElementBuilder {
         });
 
   final TextStyle? listItemMarker;
-  final TextStyle checkbox;
+  final TextStyle? checkbox;
   final EdgeInsets listItemMarkerPadding;
   final double listItemMinIndent;
   final MarkdownListItemMarkerBuilder? listItemMarkerBuilder;
@@ -104,8 +104,8 @@ class ListBuilder extends MarkdownElementBuilder {
       padding: listItemMarkerPadding,
       child: Icon(
         checked ? Icons.check_box : Icons.check_box_outline_blank,
-        size: checkbox.fontSize,
-        color: checkbox.color,
+        size: checkbox?.fontSize,
+        color: checkbox?.color,
       ),
     );
   }

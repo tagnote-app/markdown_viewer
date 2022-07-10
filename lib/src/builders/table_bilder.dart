@@ -8,11 +8,11 @@ class TableBuilder extends MarkdownElementBuilder {
     TextStyle? table,
     TextStyle? tableHead,
     TextStyle? tableBody,
-    required this.tableCellPadding,
-    required this.tableColumnWidth,
     this.tableBorder,
     this.tableRowDecoration,
     this.tableRowDecorationAlternating,
+    required this.tableCellPadding,
+    required this.tableColumnWidth,
   }) : super(textStyleMap: {
           'table': table,
           'tableHead': tableHead,

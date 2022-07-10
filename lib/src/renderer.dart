@@ -41,10 +41,10 @@ class MarkdownRenderer implements NodeVisitor {
       SimpleInlinesBuilder(
         emphasis: styleSheet.emphasis,
         strongEmphasis: styleSheet.strongEmphasis,
-        inlineCode: styleSheet.inlineCode,
         highlight: styleSheet.highlight,
         strikethrough: styleSheet.strikethrough,
         link: styleSheet.link,
+        inlineCode: styleSheet.inlineCode,
         onTapLink: onTapLink,
       ),
       SimpleBlocksBuilder(
@@ -60,11 +60,11 @@ class MarkdownRenderer implements NodeVisitor {
         table: styleSheet.table,
         tableHead: styleSheet.tableHead,
         tableBody: styleSheet.tableBody,
-        tableCellPadding: styleSheet.tableCellPadding,
-        tableColumnWidth: styleSheet.tableColumnWidth,
         tableBorder: styleSheet.tableBorder,
         tableRowDecoration: styleSheet.tableRowDecoration,
         tableRowDecorationAlternating: styleSheet.tableRowDecorationAlternating,
+        tableCellPadding: styleSheet.tableCellPadding,
+        tableColumnWidth: styleSheet.tableColumnWidth,
       ),
       CodeBlockBuilder(
         textStyle: styleSheet.codeBlock,
@@ -78,6 +78,9 @@ class MarkdownRenderer implements NodeVisitor {
         listItemMarker: styleSheet.listItemMarker,
         listItemMarkerPadding: styleSheet.listItemMarkerPadding,
         listItemMinIndent: styleSheet.listItemMinIndent,
+        checkbox: styleSheet.checkbox,
+        listItemMarkerBuilder: listItemMarkerBuilder,
+        checkboxBuilder: checkboxBuilder,
       ),
     ];
 

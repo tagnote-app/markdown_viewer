@@ -6,13 +6,13 @@ import 'builder.dart';
 class CodeBlockBuilder extends MarkdownElementBuilder {
   CodeBlockBuilder({
     TextStyle? textStyle,
+    this.codeblockPadding,
+    this.codeblockDecoration,
     this.highlightBuilder,
-    required this.codeblockPadding,
-    required this.codeblockDecoration,
   }) : super(textStyle: textStyle);
 
-  final EdgeInsets codeblockPadding;
-  final BoxDecoration codeblockDecoration;
+  final EdgeInsets? codeblockPadding;
+  final BoxDecoration? codeblockDecoration;
   final MarkdownHighlightBuilder? highlightBuilder;
 
   @override
