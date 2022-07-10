@@ -1,34 +1,32 @@
 import 'package:flutter/material.dart';
 
-List<Widget> mergeInlineChildren(
+List<Widget> mergeRichText(
   List<Widget> children, {
-  required Widget Function(TextSpan span) richTextBuilder,
+  required Widget Function(TextSpan span, TextAlign? textAlign) richTextBuilder,
 }) {
   if (children.isEmpty) {
     return children;
   }
 
   final mergedWidgets = <Widget>[];
-  var mergedTexts = <Widget>[];
+  var textStack = <Widget>[];
 
-  // TODO(Zhiguang): Why? Try to remove the Wrap.
-  // Enclose all text widgets in a `Wrap` widget.
-  void addWithWrap() {
-    if (mergedTexts.isEmpty) {
+  void writeWidget() {
+    if (textStack.isEmpty) {
       return;
     }
 
-    mergedWidgets.add(Wrap(children: mergedTexts));
-    mergedTexts = <Widget>[];
+    mergedWidgets.addAll(textStack);
+    textStack = <Widget>[];
   }
 
   for (final child in children) {
     if (child is RichText || child is SelectableText) {
-      if (mergedTexts.isEmpty) {
-        mergedTexts.add(child);
+      if (textStack.isEmpty) {
+        textStack.add(child);
         continue;
       }
-      final previous = mergedTexts.removeLast();
+      final previous = textStack.removeLast();
 
       final previousTextSpan = previous is SelectableText
           ? previous.textSpan!
@@ -37,21 +35,24 @@ List<Widget> mergeInlineChildren(
           ? List<TextSpan>.from(previousTextSpan.children!)
           : [previousTextSpan];
 
+      TextAlign? textAlign;
       if (child is RichText) {
         children.add(child.text as TextSpan);
+        textAlign = child.textAlign;
       } else if (child is SelectableText && child.textSpan != null) {
         children.add(child.textSpan!);
+        textAlign = child.textAlign;
       }
 
       final mergedSpan = _mergeSimilarTextSpans(children);
-      mergedTexts.add(richTextBuilder(mergedSpan));
+      textStack.add(richTextBuilder(mergedSpan, textAlign));
     } else {
-      addWithWrap();
+      writeWidget();
       mergedWidgets.add(child);
     }
   }
 
-  addWithWrap();
+  writeWidget();
 
   return mergedWidgets;
 }
@@ -87,43 +88,3 @@ TextSpan _mergeSimilarTextSpans(List<TextSpan>? textSpans) {
       ? mergedSpans.first
       : TextSpan(children: mergedSpans);
 }
-
-String trimText(String text) {
-  return text.replaceAll('\n', ' ');
-}
-
-bool isBlockElement(String type) => [
-      'paragraph',
-      'headline',
-      'htmlBlock',
-      'codeBlock',
-      'bulletList',
-      'orderedList',
-      'listItem',
-      'thematicBreak',
-      'blockquote',
-      'table',
-      'tableRow',
-      'tableHead',
-      'tableBody',
-    ].contains(type);
-
-// == INLINE TYPES ==
-// link
-// image
-// hardLineBreak
-// highlight
-// emphasis
-// strongEmphasis
-// emoji
-// inlineCode
-// inlineHtml
-// tableBodyCell
-// tableHeadCell
-
-// linkReferenceDefinition
-// linkReferenceDefinitionLabel
-// linkReferenceDefinitionDestination
-// linkReferenceDefinitionTitle
-
-bool isListElement(String type) => ['bulletList', 'orderedList'].contains(type);

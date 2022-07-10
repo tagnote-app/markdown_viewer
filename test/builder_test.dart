@@ -81,10 +81,10 @@ void _testFile(String path) {
 
     test(description, () {
       final nodes = Document().parseLines(data);
-      final actual = MarkdownBuilder(
+      final actual = MarkdownRenderer(
         styleSheet: MarkdownStyle.fromTheme(themeData),
-        onTapLink: (_, __, ___) {},
-      ).build(nodes).map((e) => e.toMap()).toList();
+        onTapLink: (_, __) {},
+      ).render(nodes).map((e) => e.toMap()).toList();
 
       expect(actual, expected);
     });

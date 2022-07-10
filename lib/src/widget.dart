@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:markdown/markdown.dart' as md;
 
-import 'builder.dart';
+import 'renderer.dart';
+import 'definition.dart';
 import 'extensions.dart';
 import 'style.dart';
 
@@ -54,29 +55,26 @@ class _MarkdownViewerState extends State<MarkdownViewer> {
 
   void _parseMarkdown() {
     final md.Document document = md.Document(
+      enableHtmlBlock: false,
+      enableRawHtml: false,
+      enableHighlight: true,
+      enableStrikethrough: true,
       enableTaskList: widget.enableTaskList,
     );
     final theme = Theme.of(context);
     final astNodes = document.parseLines(widget.data);
 
     // TODO(Zhiguang): merge custom stylesheet with the default.
-    final styleSheet = widget.styleSheet ??
-        MarkdownStyle.fromTheme(
-          theme,
-          horizontalRuleDecoration: BoxDecoration(
-            border: Border(
-              top: BorderSide(width: 5.0, color: theme.dividerColor),
-            ),
-          ),
-        );
+    final styleSheet = widget.styleSheet ?? MarkdownStyle.fromTheme(theme);
 
-    final builder = MarkdownBuilder(
+    final renderer = MarkdownRenderer(
       styleSheet: styleSheet,
       onTapLink: widget.onTapLink,
       listItemMarkerBuilder: widget.listItemMarkerBuilder,
       checkboxBuilder: widget.checkboxBuilder,
       highlightBuilder: widget.highlightBuilder,
     );
-    _children = builder.build(astNodes);
+
+    _children = renderer.render(astNodes);
   }
 }

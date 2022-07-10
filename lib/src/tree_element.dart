@@ -2,23 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:markdown/markdown.dart' as md;
 
 import 'extensions.dart';
-import 'helpers.dart';
 
 class TreeElement {
   TreeElement.root()
       : type = '',
         style = null,
-        attributes = const {},
-        isBlock = false;
+        attributes = const {};
 
   TreeElement.fromAstElement(md.Element element, {this.style})
       : type = element.type,
-        isBlock = isBlockElement(element.type),
         attributes = element.attributes;
 
   bool get isRoot => type.isEmpty;
   final String type;
-  final bool isBlock;
   final TextStyle? style;
 
   final Map<String, String> attributes;
