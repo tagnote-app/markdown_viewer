@@ -20,7 +20,14 @@ class MarkdownStyle {
     this.headline4,
     this.headline5,
     this.headline6,
+    this.h1Padding,
+    this.h2Padding,
+    this.h3Padding,
+    this.h4Padding,
+    this.h5Padding,
+    this.h6Padding,
     this.paragraph,
+    this.pPadding,
     this.blockquote,
     this.blockquoteDecoration,
     this.blockquotePadding = const EdgeInsets.all(8.0),
@@ -29,7 +36,7 @@ class MarkdownStyle {
     this.dividerThickness,
     this.emphasis = const TextStyle(fontStyle: FontStyle.italic),
     this.strongEmphasis = const TextStyle(fontWeight: FontWeight.w700),
-    this.highlight = const TextStyle(backgroundColor: Color(0xffffcc00)),
+    this.highlight = const TextStyle(backgroundColor: Color(0xffffee00)),
     this.strikethrough =
         const TextStyle(decoration: TextDecoration.lineThrough),
     this.link = const TextStyle(color: Color(0xff2196f3)),
@@ -38,7 +45,7 @@ class MarkdownStyle {
     this.listItem,
     this.listItemMarker,
     this.listItemMarkerPadding = const EdgeInsets.only(right: 12.0),
-    this.listItemMinIndent = 20.0,
+    this.listItemMinIndent = 30.0,
     this.checkbox = const TextStyle(fontSize: 18.0),
     this.table,
     this.tableHead = const TextStyle(fontWeight: FontWeight.w600),
@@ -50,7 +57,7 @@ class MarkdownStyle {
     this.tableColumnWidth = const FlexColumnWidth(),
     this.codeBlock = const TextStyle(fontFamily: 'monospace'),
     this.codeblockPadding = const EdgeInsets.all(8.0),
-    this.codeblockDecoration = const BoxDecoration(color: Color(0xffeeeeee)),
+    this.codeblockDecoration,
     this.blockSpacing = 8.0,
   });
 
@@ -65,7 +72,14 @@ class MarkdownStyle {
     TextStyle? headline4,
     TextStyle? headline5,
     TextStyle? headline6,
+    EdgeInsets? h1Padding,
+    EdgeInsets? h2Padding,
+    EdgeInsets? h3Padding,
+    EdgeInsets? h4Padding,
+    EdgeInsets? h5Padding,
+    EdgeInsets? h6Padding,
     TextStyle? paragraph,
+    EdgeInsets? pPadding,
     TextStyle? blockquote,
     BoxDecoration? blockquoteDecoration,
     EdgeInsets? blockquotePadding,
@@ -112,7 +126,14 @@ class MarkdownStyle {
       headline4: bodyText1.merge(headline4),
       headline5: bodyText1.merge(headline5),
       headline6: bodyText1.merge(headline6),
+      h1Padding: h1Padding,
+      h2Padding: h2Padding,
+      h3Padding: h3Padding,
+      h4Padding: h4Padding,
+      h5Padding: h5Padding,
+      h6Padding: h6Padding,
       paragraph: bodyText2.merge(paragraph),
+      pPadding: pPadding,
       blockquote: bodyText2.merge(blockquote),
       blockquoteDecoration: blockquoteDecoration,
       blockquotePadding: blockquotePadding ?? style.blockquotePadding,
@@ -142,7 +163,7 @@ class MarkdownStyle {
       tableColumnWidth: tableColumnWidth ?? style.tableColumnWidth,
       codeBlock: codeStyle.merge(style.codeBlock).merge(codeBlock),
       codeblockPadding: codeblockPadding ?? style.codeblockPadding,
-      codeblockDecoration: codeblockDecoration ?? style.codeblockDecoration,
+      codeblockDecoration: codeblockDecoration,
       blockSpacing: blockSpacing ?? style.blockSpacing,
     );
   }
@@ -153,7 +174,14 @@ class MarkdownStyle {
   final TextStyle? headline4;
   final TextStyle? headline5;
   final TextStyle? headline6;
+  final EdgeInsets? h1Padding;
+  final EdgeInsets? h2Padding;
+  final EdgeInsets? h3Padding;
+  final EdgeInsets? h4Padding;
+  final EdgeInsets? h5Padding;
+  final EdgeInsets? h6Padding;
   final TextStyle? paragraph;
+  final EdgeInsets? pPadding;
   final TextStyle? blockquote;
   final BoxDecoration? blockquoteDecoration;
   final EdgeInsets blockquotePadding;

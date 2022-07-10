@@ -10,6 +10,12 @@ class HeadlineBuilder extends MarkdownElementBuilder {
     this.headline4,
     this.headline5,
     this.headline6,
+    this.h1Padding,
+    this.h2Padding,
+    this.h3Padding,
+    this.h4Padding,
+    this.h5Padding,
+    this.h6Padding,
   });
 
   TextStyle? headline1;
@@ -18,6 +24,12 @@ class HeadlineBuilder extends MarkdownElementBuilder {
   TextStyle? headline4;
   TextStyle? headline5;
   TextStyle? headline6;
+  EdgeInsets? h1Padding;
+  EdgeInsets? h2Padding;
+  EdgeInsets? h3Padding;
+  EdgeInsets? h4Padding;
+  EdgeInsets? h5Padding;
+  EdgeInsets? h6Padding;
 
   @override
   TextStyle? buildTextStyle(type, attributes) => {
@@ -34,6 +46,16 @@ class HeadlineBuilder extends MarkdownElementBuilder {
 
   @override
   void after(renderer, element) {
-    renderer.writeBlock(renderer.convertToBlock(element.children));
+    renderer.writeBlock(renderer.convertToBlock(
+      element.children,
+      padding: {
+        "1": h1Padding,
+        "2": h2Padding,
+        "3": h3Padding,
+        "4": h4Padding,
+        "5": h5Padding,
+        "6": h6Padding,
+      }[element.attributes['level']],
+    ));
   }
 }

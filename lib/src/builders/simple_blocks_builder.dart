@@ -6,6 +6,7 @@ class SimpleBlocksBuilder extends MarkdownElementBuilder {
   SimpleBlocksBuilder({
     TextStyle? paragraph,
     TextStyle? blockquote,
+    this.pPadding,
     this.blockquoteDecoration,
     required this.blockquotePadding,
     this.dividerColor,
@@ -18,6 +19,7 @@ class SimpleBlocksBuilder extends MarkdownElementBuilder {
 
   final Decoration? blockquoteDecoration;
   final EdgeInsets blockquotePadding;
+  final EdgeInsets? pPadding;
   final Color? dividerColor;
   final double? dividerHeight;
   final double? dividerThickness;
@@ -40,7 +42,8 @@ class SimpleBlocksBuilder extends MarkdownElementBuilder {
         thickness: dividerThickness,
       );
     } else {
-      blockChild = renderer.convertToBlock(element.children);
+      final padding = type == 'paragraph' ? pPadding : null;
+      blockChild = renderer.convertToBlock(element.children, padding: padding);
       if (type == 'blockquote') {
         blockChild = Container(
           width: double.infinity,

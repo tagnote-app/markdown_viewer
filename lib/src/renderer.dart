@@ -37,6 +37,12 @@ class MarkdownRenderer implements NodeVisitor {
         headline4: styleSheet.headline4,
         headline5: styleSheet.headline5,
         headline6: styleSheet.headline6,
+        h1Padding: styleSheet.h1Padding,
+        h2Padding: styleSheet.h2Padding,
+        h3Padding: styleSheet.h3Padding,
+        h4Padding: styleSheet.h4Padding,
+        h5Padding: styleSheet.h5Padding,
+        h6Padding: styleSheet.h6Padding,
       ),
       SimpleInlinesBuilder(
         emphasis: styleSheet.emphasis,
@@ -49,6 +55,7 @@ class MarkdownRenderer implements NodeVisitor {
       ),
       SimpleBlocksBuilder(
         paragraph: styleSheet.paragraph,
+        pPadding: styleSheet.pPadding,
         blockquote: styleSheet.blockquote,
         blockquoteDecoration: styleSheet.blockquoteDecoration,
         blockquotePadding: styleSheet.blockquotePadding,
@@ -211,9 +218,19 @@ class MarkdownRenderer implements NodeVisitor {
 
   /// Merges the [RichText] elements of [children] and returns a [Column] if the
   /// [children] is not empty, otherwise returns a shrinked [SizedBox].
-  Widget convertToBlock(List<Widget> children) {
+  Widget convertToBlock(List<Widget> children, {EdgeInsets? padding}) {
     if (children.isEmpty) {
       return const SizedBox.shrink();
+    }
+
+    if (padding != null && padding != EdgeInsets.zero) {
+      children = [
+        Padding(
+          padding: padding,
+          child:
+              children.length == 1 ? children.single : Wrap(children: children),
+        )
+      ];
     }
 
     return Column(
