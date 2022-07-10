@@ -42,7 +42,8 @@ class SimpleBlocksBuilder extends MarkdownElementBuilder {
     } else {
       blockChild = renderer.convertToBlock(element.children);
       if (type == 'blockquote') {
-        blockChild = DecoratedBox(
+        blockChild = Container(
+          width: double.infinity,
           decoration: blockquoteDecoration,
           child: Padding(
             padding: blockquotePadding,

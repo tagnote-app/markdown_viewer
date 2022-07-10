@@ -38,7 +38,8 @@ class CodeBlockBuilder extends MarkdownElementBuilder {
         ? element.children.single
         : const SizedBox.shrink();
 
-    renderer.write(DecoratedBox(
+    renderer.write(Container(
+      width: double.infinity,
       decoration: codeblockDecoration,
       child: Scrollbar(
         child: SingleChildScrollView(
