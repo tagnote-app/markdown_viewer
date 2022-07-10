@@ -56,9 +56,14 @@ String _fileNameFromSection(String section) =>
 
 /// Renders Markdown String to expected data.
 List<Map<String, dynamic>> _renderTestCase(String markdown) {
-  final nodes = Document().parseLines(markdown);
-  return MarkdownBuilder(
+  final nodes = Document(
+    enableHtmlBlock: false,
+    enableRawHtml: false,
+    enableHighlight: true,
+    enableStrikethrough: true,
+  ).parseLines(markdown);
+  return MarkdownRenderer(
     styleSheet: MarkdownStyle.fromTheme(themeData),
-    onTapLink: (_, __, ___) {},
-  ).build(nodes).map((e) => e.toMap()).toList();
+    onTapLink: (_, __) {},
+  ).render(nodes).map((e) => e.toMap()).toList();
 }

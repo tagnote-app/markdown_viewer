@@ -92,7 +92,7 @@ class TableBuilder extends MarkdownElementBuilder {
         TableCell(
           child: Padding(
             padding: tableCellPadding,
-            child: children.single,
+            child: children.isEmpty ? const SizedBox.shrink() : children.single,
           ),
         ),
       );
