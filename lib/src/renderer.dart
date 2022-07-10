@@ -21,7 +21,7 @@ class MarkdownRenderer implements md.NodeVisitor {
     MarkdownListItemMarkerBuilder? listItemMarkerBuilder,
     MarkdownCheckboxBuilder? checkboxBuilder,
     MarkdownHighlightBuilder? highlightBuilder,
-    List<MarkdownElementBuilder> builders = const [],
+    List<MarkdownElementBuilder> elementBuilders = const [],
     this.selectable = false,
   }) {
     final defaultBuilders = [
@@ -77,7 +77,7 @@ class MarkdownRenderer implements md.NodeVisitor {
       ),
     ];
 
-    for (final builder in [...defaultBuilders, ...builders]) {
+    for (final builder in [...defaultBuilders, ...elementBuilders]) {
       for (final type in builder.matchTypes) {
         _builders[type] = builder;
       }

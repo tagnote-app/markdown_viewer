@@ -28,7 +28,7 @@ typedef MarkdownHighlightBuilder = TextSpan Function(
   String? infoString,
 );
 
-/// An class for for the tree element produced by [MarkdownRenderer].
+/// A class for for the tree element produced by [MarkdownRenderer].
 abstract class MarkdownTreeElement {
   MarkdownTreeElement({
     required this.type,
