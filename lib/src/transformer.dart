@@ -23,6 +23,11 @@ List<MarkdownNode> transformAst(List<md.Node> nodes) {
         continue;
       }
 
+      if (node.type == 'emoji') {
+        stringBuffer.write(node.attributes['emoji']);
+        continue;
+      }
+
       popBuffer();
       result.add(MarkdownElement(
         node.type,

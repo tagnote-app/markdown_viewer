@@ -57,6 +57,7 @@ class SimpleInlinesBuilder extends MarkdownElementBuilder {
     'inlineCode',
     'highlight',
     'strikethrough',
+    'emoji',
   ];
 
   @override
