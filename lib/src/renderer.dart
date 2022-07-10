@@ -2,6 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:markdown/markdown.dart' as md;
 
+import 'ast.dart';
 import 'builders/builder.dart';
 import 'builders/code_block_builder.dart';
 import 'builders/headline_builder.dart';
@@ -13,8 +14,9 @@ import 'definition.dart';
 import 'extensions.dart';
 import 'helpers.dart';
 import 'style.dart';
+import 'transformer.dart';
 
-class MarkdownRenderer implements md.NodeVisitor {
+class MarkdownRenderer implements NodeVisitor {
   MarkdownRenderer({
     required MarkdownStyle styleSheet,
     MarkdownTapLinkCallback? onTapLink,
@@ -100,7 +102,7 @@ class MarkdownRenderer implements md.NodeVisitor {
 
     _tree.add(_TreeElement.root());
 
-    for (final md.Node node in nodes) {
+    for (final MarkdownNode node in transformAst(nodes)) {
       assert(_tree.length == 1);
       node.accept(this);
     }
@@ -111,7 +113,7 @@ class MarkdownRenderer implements md.NodeVisitor {
   }
 
   @override
-  bool visitElementBefore(md.Element element) {
+  bool visitElementBefore(MarkdownElement element) {
     final type = element.type;
     final attributes = element.attributes;
     assert(_builders[type] != null, "No $type builder found");
@@ -137,12 +139,12 @@ class MarkdownRenderer implements md.NodeVisitor {
   }
 
   @override
-  void visitText(md.Text text) {
+  void visitText(MarkdownText text) {
     final parent = _tree.last;
     final builder = _builders[parent.type]!;
     final textContent = _keepLineEndingsWhen == null
-        ? text.textContent.replaceAll('\n', ' ')
-        : text.textContent;
+        ? text.text.replaceAll('\n', ' ')
+        : text.text;
     var textSpan = builder.buildText(textContent, parent);
 
     if (_gestureRecognizers.isNotEmpty) {
@@ -159,7 +161,7 @@ class MarkdownRenderer implements md.NodeVisitor {
   }
 
   @override
-  void visitElementAfter(md.Element element) {
+  void visitElementAfter(MarkdownElement element) {
     final current = _tree.removeLast();
     final type = current.type;
     final parent = _tree.last;
@@ -243,6 +245,6 @@ class MarkdownRenderer implements md.NodeVisitor {
 class _TreeElement extends MarkdownTreeElement {
   _TreeElement.root() : super(type: '', style: null, attributes: const {});
 
-  _TreeElement.fromAstElement(md.Element element, {TextStyle? style})
+  _TreeElement.fromAstElement(MarkdownElement element, {TextStyle? style})
       : super(type: element.type, attributes: element.attributes, style: style);
 }
