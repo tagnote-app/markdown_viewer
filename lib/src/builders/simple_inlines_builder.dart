@@ -53,7 +53,6 @@ class SimpleInlinesBuilder extends MarkdownElementBuilder {
     'emphasis',
     'strongEmphasis',
     'link',
-    'image',
     'hardLineBreak',
     'inlineCode',
     'highlight',

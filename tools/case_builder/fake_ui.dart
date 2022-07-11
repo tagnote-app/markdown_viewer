@@ -1,5 +1,8 @@
 // ignore_for_file: constant_identifier_names
 
+import 'dart:io';
+import 'dart:typed_data';
+
 abstract class Widget {
   const Widget();
 }
@@ -190,6 +193,66 @@ class Padding extends SingleChildRenderObjectWidget {
   }) : super(child: child);
 
   final EdgeInsetsGeometry padding;
+}
+
+class Align extends SingleChildRenderObjectWidget {
+  const Align({
+    this.alignment = Alignment.center,
+    Widget? child,
+  }) : super(child: child);
+  final AlignmentGeometry alignment;
+}
+
+abstract class FileSystemEntity {}
+
+class Image extends StatefulWidget {
+  const Image({
+    this.width,
+    this.height,
+    this.alignment = Alignment.center,
+  });
+  Image.network(String src,
+      {this.width, this.height, this.alignment = Alignment.center});
+  Image.file(File file,
+      {this.width, this.height, this.alignment = Alignment.center});
+  Image.memory(Uint8List bytes,
+      {this.width, this.height, this.alignment = Alignment.center});
+  Image.asset(String name,
+      {this.width, this.height, this.alignment = Alignment.center});
+
+  final double? width;
+  final double? height;
+  final AlignmentGeometry alignment;
+}
+
+abstract class AlignmentGeometry {
+  const AlignmentGeometry();
+}
+
+class Alignment extends AlignmentGeometry {
+  const Alignment(this.x, this.y);
+  final double x;
+  final double y;
+  static const Alignment center = Alignment(0.0, 0.0);
+  static const Alignment topLeft = Alignment(-1.0, -1.0);
+  static const Alignment topCenter = Alignment(0.0, -1.0);
+  static const Alignment topRight = Alignment(1.0, -1.0);
+  static String _stringify(double start, double y) {
+    if (start == -1.0 && y == -1.0) return 'Alignment.topStart';
+    if (start == 0.0 && y == -1.0) return 'Alignment.topCenter';
+    if (start == 1.0 && y == -1.0) return 'Alignment.topEnd';
+    if (start == -1.0 && y == 0.0) return 'Alignment.centerStart';
+    if (start == 0.0 && y == 0.0) return 'Alignment.center';
+    if (start == 1.0 && y == 0.0) return 'Alignment.centerEnd';
+    if (start == -1.0 && y == 1.0) return 'Alignment.bottomStart';
+    if (start == 0.0 && y == 1.0) return 'Alignment.bottomCenter';
+    if (start == 1.0 && y == 1.0) return 'Alignment.bottomEnd';
+    return 'Alignment(${start.toStringAsFixed(1)}, '
+        '${y.toStringAsFixed(1)})';
+  }
+
+  @override
+  String toString() => _stringify(x, y);
 }
 
 typedef GestureTapCallback = void Function();

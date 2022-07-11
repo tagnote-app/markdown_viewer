@@ -15,13 +15,17 @@ class MarkdownViewer extends StatefulWidget {
     this.listItemMarkerBuilder,
     this.highlightBuilder,
     this.checkboxBuilder,
+    this.imageBuilder,
     this.enableTaskList = false,
+    this.enableImageSize = false,
     this.elementBuilders = const [],
     Key? key,
   }) : super(key: key);
 
   final String data;
   final bool enableTaskList;
+  final bool enableImageSize;
+  final MarkdownImageBuilder? imageBuilder;
   final MarkdownStyle? styleSheet;
   final MarkdownTapLinkCallback? onTapLink;
   final MarkdownListItemMarkerBuilder? listItemMarkerBuilder;
@@ -68,6 +72,8 @@ class _MarkdownViewerState extends State<MarkdownViewer> {
     final renderer = MarkdownRenderer(
       styleSheet: widget.styleSheet ?? MarkdownStyle.fromTheme(theme),
       onTapLink: widget.onTapLink,
+      enableImageSize: widget.enableImageSize,
+      imageBuilder: widget.imageBuilder,
       listItemMarkerBuilder: widget.listItemMarkerBuilder,
       checkboxBuilder: widget.checkboxBuilder,
       highlightBuilder: widget.highlightBuilder,

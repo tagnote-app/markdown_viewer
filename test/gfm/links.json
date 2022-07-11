@@ -996,9 +996,17 @@
     "markdown": "[![moon](moon.jpg)](/uri)\n",
     "expected": [
       {
-        "type": "SizedBox",
-        "height": 0.0,
-        "width": 0.0
+        "type": "Column",
+        "children": [
+          {
+            "type": "Align",
+            "alignment": "Alignment.center",
+            "child": {
+              "type": "Image",
+              "alignment": "Alignment.center"
+            }
+          }
+        ]
       }
     ]
   },
@@ -1137,9 +1145,17 @@
     "markdown": "![[[foo](uri1)](uri2)](uri3)\n",
     "expected": [
       {
-        "type": "SizedBox",
-        "height": 0.0,
-        "width": 0.0
+        "type": "Column",
+        "children": [
+          {
+            "type": "Align",
+            "alignment": "Alignment.center",
+            "child": {
+              "type": "Image",
+              "alignment": "Alignment.center"
+            }
+          }
+        ]
       }
     ]
   },
@@ -1540,9 +1556,17 @@
     "markdown": "[![moon](moon.jpg)][ref]\n\n[ref]: /uri\n",
     "expected": [
       {
-        "type": "SizedBox",
-        "height": 0.0,
-        "width": 0.0
+        "type": "Column",
+        "children": [
+          {
+            "type": "Align",
+            "alignment": "Alignment.center",
+            "child": {
+              "type": "Image",
+              "alignment": "Alignment.center"
+            }
+          }
+        ]
       }
     ]
   },

@@ -6,6 +6,7 @@ import 'ast.dart';
 import 'builders/builder.dart';
 import 'builders/code_block_builder.dart';
 import 'builders/headline_builder.dart';
+import 'builders/image_builder.dart';
 import 'builders/list_builder.dart';
 import 'builders/simple_blocks_builder.dart';
 import 'builders/simple_inlines_builder.dart';
@@ -23,6 +24,9 @@ class MarkdownRenderer implements NodeVisitor {
     MarkdownListItemMarkerBuilder? listItemMarkerBuilder,
     MarkdownCheckboxBuilder? checkboxBuilder,
     MarkdownHighlightBuilder? highlightBuilder,
+    MarkdownImageBuilder? imageBuilder,
+    MarkdownImageAlignment? imageAlignment,
+    bool enableImageSize = false,
     List<MarkdownElementBuilder> elementBuilders = const [],
     bool selectable = false,
     TextAlign? textAlign,
@@ -72,6 +76,11 @@ class MarkdownRenderer implements NodeVisitor {
         tableRowDecorationAlternating: styleSheet.tableRowDecorationAlternating,
         tableCellPadding: styleSheet.tableCellPadding,
         tableColumnWidth: styleSheet.tableColumnWidth,
+      ),
+      ImageBuilder(
+        imageBuilder: imageBuilder,
+        enableImageSize: enableImageSize,
+        imageAlignment: imageAlignment,
       ),
       CodeBlockBuilder(
         textStyle: styleSheet.codeBlock,

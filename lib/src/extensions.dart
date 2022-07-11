@@ -26,6 +26,11 @@ extension WidgetExtensions on Widget {
         if (text != null) 'text': text,
         if (children.isNotEmpty) 'children': children,
       });
+    } else if (self is Align) {
+      map.addAll({
+        'alignment': self.alignment.toString(),
+        if (self.child != null) 'child': self.child!.toMap(),
+      });
     } else if (self is Table) {
       map.addAll({
         'children': self.children.map((e) => e.toMap()).toList(),
@@ -72,6 +77,10 @@ extension WidgetExtensions on Widget {
     } else if (self is DefaultTextStyle) {
       map.addAll({
         'child': self.child.toMap(),
+      });
+    } else if (self is Image) {
+      map.addAll({
+        'alignment': self.alignment.toString(),
       });
     }
     return map;
