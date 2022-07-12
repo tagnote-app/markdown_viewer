@@ -2,7 +2,6 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 
-// TODO(Zhiguang): Optimise it.
 extension WidgetExtensions on Widget {
   Map<String, dynamic> toMap() {
     final type = runtimeType;
@@ -11,34 +10,52 @@ extension WidgetExtensions on Widget {
       'type': type.toString(),
     };
 
-    if (self is Column || self is Row || self is Wrap) {
+    if (self is MultiChildRenderObjectWidget) {
       map.addAll({
-        if ((self as MultiChildRenderObjectWidget).children.isNotEmpty)
+        if (self.children.isNotEmpty)
           'children': self.children.map((e) => e.toMap()).toList(),
       });
-    } else if (self is RichText) {
-      final text =
-          (self.text is TextSpan) ? (self.text as TextSpan).toMap() : null;
 
-      final children = self.children.map((e) => e.toMap()).toList();
+      if (self is RichText) {
+        final text =
+            (self.text is TextSpan) ? (self.text as TextSpan).toMap() : null;
+
+        map.addAll({
+          'textAlign': self.textAlign.toString(),
+          if (text != null) 'text': text,
+        });
+      }
+    } else if (self is SingleChildRenderObjectWidget) {
       map.addAll({
-        'textAlign': self.textAlign.toString(),
-        if (text != null) 'text': text,
-        if (children.isNotEmpty) 'children': children,
+        if (self.child != null) 'child': self.child?.toMap(),
       });
-    } else if (self is Align) {
+
+      if (self is Align) {
+        map.addAll({
+          'alignment': self.alignment.toString(),
+        });
+      } else if (self is SizedBox) {
+        map.addAll({
+          if (self.height != null) 'height': self.height,
+          if (self.width != null) 'width': self.width,
+        });
+      } else if (self is ConstrainedBox) {
+        map.addAll({
+          'constraints': self.constraints.toMap(),
+          if (self.child != null) 'child': self.child?.toMap(),
+        });
+      }
+    } else if (self is Flexible) {
       map.addAll({
-        'alignment': self.alignment.toString(),
-        if (self.child != null) 'child': self.child!.toMap(),
+        'child': self.child.toMap(),
       });
     } else if (self is Table) {
       map.addAll({
         'children': self.children.map((e) => e.toMap()).toList(),
       });
-    } else if (self is SizedBox) {
+    } else if (self is TableCell) {
       map.addAll({
-        if (self.height != null) 'height': self.height,
-        if (self.width != null) 'width': self.width,
+        'child': self.child.toMap(),
       });
     } else if (self is Scrollbar) {
       map.addAll({
@@ -48,31 +65,14 @@ extension WidgetExtensions on Widget {
       map.addAll({
         if (self.child != null) 'child': self.child?.toMap(),
       });
-    } else if (self is ConstrainedBox) {
-      map.addAll({
-        'constraints': self.constraints.toMap(),
-        if (self.child != null) 'child': self.child?.toMap(),
-      });
     } else if (self is Container) {
       map.addAll({
         if (self.child != null) 'child': self.child?.toMap(),
         if (self.decoration != null) 'decoration': self.decoration!.toMap(),
       });
-    } else if (self is SingleChildRenderObjectWidget) {
-      map.addAll({
-        if (self.child != null) 'child': self.child?.toMap(),
-      });
     } else if (self is Text) {
       map.addAll({
         'data': self.data,
-      });
-    } else if (self is Expanded) {
-      map.addAll({
-        'child': self.child.toMap(),
-      });
-    } else if (self is TableCell) {
-      map.addAll({
-        'child': self.child.toMap(),
       });
     } else if (self is DefaultTextStyle) {
       map.addAll({
@@ -110,24 +110,6 @@ extension TableRowExtensions on TableRow {
       'type': runtimeType.toString(),
       if (children != null && children!.isNotEmpty)
         'children': children!.map((e) => e.toMap()).toList(),
-    };
-  }
-}
-
-extension TableCellExtensions on TableCell {
-  Map<String, dynamic> toMap() {
-    return {
-      'type': runtimeType.toString(),
-      'child': child.toMap(),
-    };
-  }
-}
-
-extension DefaultTextStyleExtensions on DefaultTextStyle {
-  Map<String, dynamic> toMap() {
-    return {
-      'type': runtimeType.toString(),
-      'child': child.toMap(),
     };
   }
 }
