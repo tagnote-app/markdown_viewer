@@ -1,5 +1,5 @@
+import 'package:dart_markdown/dart_markdown.dart' as md;
 import 'package:flutter/material.dart';
-import 'package:markdown/markdown.dart' as md;
 
 import 'builders/builder.dart';
 import 'definition.dart';

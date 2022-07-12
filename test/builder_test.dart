@@ -1,10 +1,11 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:dart_markdown/dart_markdown.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:markdown/markdown.dart';
 import 'package:markdown_viewer/markdown_viewer.dart';
 import 'package:markdown_viewer/src/extensions.dart';
+
 import 'theme_data.dart';
 
 void main() {

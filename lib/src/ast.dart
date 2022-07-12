@@ -1,4 +1,4 @@
-import 'package:markdown/markdown.dart' as md;
+import 'package:dart_markdown/dart_markdown.dart' as md;
 
 import 'extensions.dart';
 

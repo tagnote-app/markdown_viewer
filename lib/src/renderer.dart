@@ -1,6 +1,6 @@
+import 'package:dart_markdown/dart_markdown.dart' as md;
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:markdown/markdown.dart' as md;
 
 import 'ast.dart';
 import 'builders/builder.dart';

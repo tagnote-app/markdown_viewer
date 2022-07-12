@@ -1,4 +1,4 @@
-import 'package:markdown/markdown.dart';
+import 'package:dart_markdown/dart_markdown.dart';
 
 class MarkdownRenderer {
   MarkdownRenderer({
