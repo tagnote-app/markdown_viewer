@@ -999,12 +999,8 @@
         "type": "Column",
         "children": [
           {
-            "type": "Align",
-            "alignment": "Alignment.center",
-            "child": {
-              "type": "Image",
-              "alignment": "Alignment.center"
-            }
+            "type": "Image",
+            "alignment": "Alignment.center"
           }
         ]
       }
@@ -1148,12 +1144,8 @@
         "type": "Column",
         "children": [
           {
-            "type": "Align",
-            "alignment": "Alignment.center",
-            "child": {
-              "type": "Image",
-              "alignment": "Alignment.center"
-            }
+            "type": "Image",
+            "alignment": "Alignment.center"
           }
         ]
       }
@@ -1559,12 +1551,8 @@
         "type": "Column",
         "children": [
           {
-            "type": "Align",
-            "alignment": "Alignment.center",
-            "child": {
-              "type": "Image",
-              "alignment": "Alignment.center"
-            }
+            "type": "Image",
+            "alignment": "Alignment.center"
           }
         ]
       }

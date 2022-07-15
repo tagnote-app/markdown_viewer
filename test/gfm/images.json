@@ -7,12 +7,8 @@
         "type": "Column",
         "children": [
           {
-            "type": "Align",
-            "alignment": "Alignment.center",
-            "child": {
-              "type": "Image",
-              "alignment": "Alignment.center"
-            }
+            "type": "Image",
+            "alignment": "Alignment.center"
           }
         ]
       }
@@ -26,12 +22,8 @@
         "type": "Column",
         "children": [
           {
-            "type": "Align",
-            "alignment": "Alignment.center",
-            "child": {
-              "type": "Image",
-              "alignment": "Alignment.center"
-            }
+            "type": "Image",
+            "alignment": "Alignment.center"
           }
         ]
       }
@@ -45,12 +37,8 @@
         "type": "Column",
         "children": [
           {
-            "type": "Align",
-            "alignment": "Alignment.center",
-            "child": {
-              "type": "Image",
-              "alignment": "Alignment.center"
-            }
+            "type": "Image",
+            "alignment": "Alignment.center"
           }
         ]
       }
@@ -64,12 +52,8 @@
         "type": "Column",
         "children": [
           {
-            "type": "Align",
-            "alignment": "Alignment.center",
-            "child": {
-              "type": "Image",
-              "alignment": "Alignment.center"
-            }
+            "type": "Image",
+            "alignment": "Alignment.center"
           }
         ]
       }
@@ -83,12 +67,8 @@
         "type": "Column",
         "children": [
           {
-            "type": "Align",
-            "alignment": "Alignment.center",
-            "child": {
-              "type": "Image",
-              "alignment": "Alignment.center"
-            }
+            "type": "Image",
+            "alignment": "Alignment.center"
           }
         ]
       }
@@ -102,12 +82,8 @@
         "type": "Column",
         "children": [
           {
-            "type": "Align",
-            "alignment": "Alignment.center",
-            "child": {
-              "type": "Image",
-              "alignment": "Alignment.center"
-            }
+            "type": "Image",
+            "alignment": "Alignment.center"
           }
         ]
       }
@@ -121,12 +97,8 @@
         "type": "Column",
         "children": [
           {
-            "type": "Align",
-            "alignment": "Alignment.center",
-            "child": {
-              "type": "Image",
-              "alignment": "Alignment.center"
-            }
+            "type": "Image",
+            "alignment": "Alignment.center"
           }
         ]
       }
@@ -158,12 +130,8 @@
             "height": 8.0
           },
           {
-            "type": "Align",
-            "alignment": "Alignment.center",
-            "child": {
-              "type": "Image",
-              "alignment": "Alignment.center"
-            }
+            "type": "Image",
+            "alignment": "Alignment.center"
           }
         ]
       }
@@ -177,12 +145,8 @@
         "type": "Column",
         "children": [
           {
-            "type": "Align",
-            "alignment": "Alignment.center",
-            "child": {
-              "type": "Image",
-              "alignment": "Alignment.center"
-            }
+            "type": "Image",
+            "alignment": "Alignment.center"
           }
         ]
       }
@@ -196,12 +160,8 @@
         "type": "Column",
         "children": [
           {
-            "type": "Align",
-            "alignment": "Alignment.center",
-            "child": {
-              "type": "Image",
-              "alignment": "Alignment.center"
-            }
+            "type": "Image",
+            "alignment": "Alignment.center"
           }
         ]
       }
@@ -215,12 +175,8 @@
         "type": "Column",
         "children": [
           {
-            "type": "Align",
-            "alignment": "Alignment.center",
-            "child": {
-              "type": "Image",
-              "alignment": "Alignment.center"
-            }
+            "type": "Image",
+            "alignment": "Alignment.center"
           }
         ]
       }
@@ -234,12 +190,8 @@
         "type": "Column",
         "children": [
           {
-            "type": "Align",
-            "alignment": "Alignment.center",
-            "child": {
-              "type": "Image",
-              "alignment": "Alignment.center"
-            }
+            "type": "Image",
+            "alignment": "Alignment.center"
           }
         ]
       }
@@ -253,12 +205,8 @@
         "type": "Column",
         "children": [
           {
-            "type": "Align",
-            "alignment": "Alignment.center",
-            "child": {
-              "type": "Image",
-              "alignment": "Alignment.center"
-            }
+            "type": "Image",
+            "alignment": "Alignment.center"
           }
         ]
       }
@@ -272,12 +220,8 @@
         "type": "Column",
         "children": [
           {
-            "type": "Align",
-            "alignment": "Alignment.center",
-            "child": {
-              "type": "Image",
-              "alignment": "Alignment.center"
-            }
+            "type": "Image",
+            "alignment": "Alignment.center"
           }
         ]
       }
@@ -291,12 +235,8 @@
         "type": "Column",
         "children": [
           {
-            "type": "Align",
-            "alignment": "Alignment.center",
-            "child": {
-              "type": "Image",
-              "alignment": "Alignment.center"
-            }
+            "type": "Image",
+            "alignment": "Alignment.center"
           }
         ]
       }
@@ -310,12 +250,8 @@
         "type": "Column",
         "children": [
           {
-            "type": "Align",
-            "alignment": "Alignment.center",
-            "child": {
-              "type": "Image",
-              "alignment": "Alignment.center"
-            }
+            "type": "Image",
+            "alignment": "Alignment.center"
           },
           {
             "type": "RichText",
@@ -343,12 +279,8 @@
         "type": "Column",
         "children": [
           {
-            "type": "Align",
-            "alignment": "Alignment.center",
-            "child": {
-              "type": "Image",
-              "alignment": "Alignment.center"
-            }
+            "type": "Image",
+            "alignment": "Alignment.center"
           }
         ]
       }
@@ -362,12 +294,8 @@
         "type": "Column",
         "children": [
           {
-            "type": "Align",
-            "alignment": "Alignment.center",
-            "child": {
-              "type": "Image",
-              "alignment": "Alignment.center"
-            }
+            "type": "Image",
+            "alignment": "Alignment.center"
           }
         ]
       }
@@ -429,12 +357,8 @@
         "type": "Column",
         "children": [
           {
-            "type": "Align",
-            "alignment": "Alignment.center",
-            "child": {
-              "type": "Image",
-              "alignment": "Alignment.center"
-            }
+            "type": "Image",
+            "alignment": "Alignment.center"
           }
         ]
       }

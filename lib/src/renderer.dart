@@ -26,7 +26,6 @@ class MarkdownRenderer implements NodeVisitor {
     MarkdownCheckboxBuilder? checkboxBuilder,
     MarkdownHighlightBuilder? highlightBuilder,
     MarkdownImageBuilder? imageBuilder,
-    MarkdownImageAlignment? imageAlignment,
     bool enableImageSize = false,
     List<MarkdownElementBuilder> elementBuilders = const [],
     bool selectable = false,
@@ -84,7 +83,6 @@ class MarkdownRenderer implements NodeVisitor {
       ImageBuilder(
         imageBuilder: imageBuilder,
         enableImageSize: enableImageSize,
-        imageAlignment: imageAlignment,
       ),
       CodeBlockBuilder(
         textStyle: styleSheet.codeBlock,

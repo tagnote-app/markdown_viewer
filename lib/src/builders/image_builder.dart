@@ -10,11 +10,9 @@ class ImageBuilder extends MarkdownElementBuilder {
   ImageBuilder({
     this.imageBuilder,
     this.enableImageSize = false,
-    this.imageAlignment,
   });
 
   final MarkdownImageBuilder? imageBuilder;
-  final MarkdownImageAlignment? imageAlignment;
   final bool enableImageSize;
 
   @override
@@ -61,16 +59,7 @@ class ImageBuilder extends MarkdownElementBuilder {
       return;
     }
 
-    final alignment = {
-      MarkdownImageAlignment.left: Alignment.topLeft,
-      MarkdownImageAlignment.center: Alignment.topCenter,
-      MarkdownImageAlignment.right: Alignment.topRight,
-    }[imageAlignment];
-
-    renderer.writeBlock(Align(
-      alignment: alignment ?? Alignment.center,
-      child: child,
-    ));
+    renderer.writeBlock(child);
   }
 
   _ParseDestination _parseDestination(String destination) {
