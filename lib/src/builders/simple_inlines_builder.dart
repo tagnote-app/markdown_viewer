@@ -46,12 +46,12 @@ class SimpleInlinesBuilder extends MarkdownElementBuilder {
   }
 
   @override
-  TextSpan? createText(String type, TextStyle? style) {
-    if (type != 'hardLineBreak') {
+  TextSpan? createText(element, parentStyle) {
+    if (element.type != 'hardLineBreak') {
       return null;
     }
 
-    return TextSpan(text: '\n', style: style);
+    return TextSpan(text: '\n', style: parentStyle);
   }
 
   @override

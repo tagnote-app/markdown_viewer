@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'ast.dart';
 import 'builders/builder.dart';
 import 'builders/code_block_builder.dart';
+import 'builders/footnote_builder.dart';
 import 'builders/headline_builder.dart';
 import 'builders/image_builder.dart';
 import 'builders/list_builder.dart';
@@ -101,6 +102,10 @@ class MarkdownRenderer implements NodeVisitor {
         listItemMarkerBuilder: listItemMarkerBuilder,
         checkboxBuilder: checkboxBuilder,
       ),
+      FootnoteBuilder(
+        footnote: styleSheet.footnote,
+        footnoteReference: styleSheet.footnoteReference,
+      ),
     ];
 
     for (final builder in [...defaultBuilders, ...elementBuilders]) {
@@ -127,7 +132,7 @@ class MarkdownRenderer implements NodeVisitor {
 
     _tree.add(_TreeElement.root());
 
-    for (final MarkdownNode node in transformAst(nodes)) {
+    for (final MarkdownNode node in AstTransformer().transform(nodes)) {
       assert(_tree.length == 1);
       node.accept(this);
     }
@@ -193,7 +198,7 @@ class MarkdownRenderer implements NodeVisitor {
     final parent = _tree.last;
     final builder = _builders[type]!;
 
-    final textSpan = builder.createText(type, parent.style);
+    final textSpan = builder.createText(current, parent.style);
     if (textSpan != null) {
       current.children.add(buildRichText(textSpan, _textAlign));
     }

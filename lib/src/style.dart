@@ -44,6 +44,10 @@ class MarkdownStyle {
     this.superscript =
         const TextStyle(fontFeatures: [FontFeature.superscripts()]),
     this.kbd,
+    this.footnote = const TextStyle(
+      fontFeatures: [FontFeature.superscripts()],
+    ),
+    this.footnoteReference,
     this.link = const TextStyle(color: Color(0xff2196f3)),
     this.inlineCode = const TextStyle(fontFamily: 'monospace'),
     this.list,
@@ -98,6 +102,8 @@ class MarkdownStyle {
     TextStyle? subscript,
     TextStyle? superscript,
     TextStyle? kbd,
+    TextStyle? footnote,
+    TextStyle? footnoteReference,
     TextStyle? link,
     TextStyle? inlineCode,
     TextStyle? list,
@@ -155,6 +161,8 @@ class MarkdownStyle {
       subscript: style.subscript?.merge(subscript),
       superscript: style.superscript?.merge(superscript),
       kbd: style.kbd?.merge(kbd),
+      footnote: style.footnote?.merge(footnote),
+      footnoteReference: style.footnoteReference?.merge(footnoteReference),
       link: style.link?.merge(link),
       inlineCode: codeStyle.merge(style.inlineCode).merge(inlineCode),
       list: bodyText2.merge(list),
@@ -206,6 +214,8 @@ class MarkdownStyle {
   final TextStyle? subscript;
   final TextStyle? superscript;
   final TextStyle? kbd;
+  final TextStyle? footnote;
+  final TextStyle? footnoteReference;
   final TextStyle? link;
   final TextStyle? inlineCode;
   final TextStyle? list;

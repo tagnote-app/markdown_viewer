@@ -70,7 +70,8 @@ abstract class MarkdownElementBuilder {
   TextAlign? textAlign(MarkdownTreeElement parent) => null;
 
   /// Runs when current element does not have md.Text, such as hardBreak.
-  TextSpan? createText(String type, TextStyle? style) => null;
+  TextSpan? createText(MarkdownTreeElement element, TextStyle? parentStyle) =>
+      null;
 
   /// Called after current element has been built.
   void after(MarkdownRenderer renderer, MarkdownTreeElement element) {}

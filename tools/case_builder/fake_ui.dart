@@ -537,6 +537,7 @@ class TextStyle {
     Color? color,
     Color? backgroundColor,
     TextDecoration? decoration,
+    List<FontFeature>? fontFeatures,
   }) {
     return TextStyle(
       fontFamily: fontFamily ?? this.fontFamily,
@@ -545,6 +546,7 @@ class TextStyle {
       fontStyle: fontStyle ?? this.fontStyle,
       decoration: decoration ?? this.decoration,
       backgroundColor: backgroundColor ?? this.backgroundColor,
+      fontFeatures: fontFeatures ?? this.fontFeatures,
       color: color ?? this.color,
     );
   }
@@ -557,6 +559,7 @@ class TextStyle {
         color: other?.color,
         decoration: other?.decoration,
         backgroundColor: other?.backgroundColor,
+        fontFeatures: other?.fontFeatures,
       );
 
   final String? fontFamily;
@@ -578,6 +581,7 @@ class TextStyle {
         other.fontSize == fontSize &&
         other.decoration == decoration &&
         other.fontWeight == fontWeight &&
+        listEquals(other.fontFeatures, fontFeatures) &&
         other.fontStyle == fontStyle &&
         other.fontFamily == fontFamily;
   }
@@ -591,6 +595,16 @@ class TextStyle {
         fontStyle,
         fontFamily,
       );
+}
+
+bool listEquals<T>(List<T>? a, List<T>? b) {
+  if (a == null) return b == null;
+  if (b == null || a.length != b.length) return false;
+  if (identical(a, b)) return true;
+  for (int index = 0; index < a.length; index += 1) {
+    if (a[index] != b[index]) return false;
+  }
+  return true;
 }
 
 class BlockWidget implements Widget {}
