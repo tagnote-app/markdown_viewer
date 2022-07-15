@@ -10,7 +10,10 @@ class SimpleInlinesBuilder extends MarkdownElementBuilder {
     TextStyle? strongEmphasis,
     TextStyle? highlight,
     TextStyle? strikethrough,
+    TextStyle? subscript,
+    TextStyle? superscript,
     TextStyle? link,
+    TextStyle? kbd,
     TextStyle? inlineCode,
     MarkdownTapLinkCallback? onTapLink,
   })  : _onTapLink = onTapLink,
@@ -20,7 +23,10 @@ class SimpleInlinesBuilder extends MarkdownElementBuilder {
           'inlineCode': inlineCode,
           'highlight': highlight,
           'strikethrough': strikethrough,
+          'subscript': subscript,
+          'superscript': superscript,
           'link': link,
+          'kbd': kbd,
         });
   final MarkdownTapLinkCallback? _onTapLink;
 
@@ -58,6 +64,9 @@ class SimpleInlinesBuilder extends MarkdownElementBuilder {
     'highlight',
     'strikethrough',
     'emoji',
+    'superscript',
+    'subscript',
+    'kbd',
   ];
 
   @override

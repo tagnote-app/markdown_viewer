@@ -26,10 +26,6 @@ extension WidgetExtensions on Widget {
         });
       }
     } else if (self is SingleChildRenderObjectWidget) {
-      map.addAll({
-        if (self.child != null) 'child': self.child?.toMap(),
-      });
-
       if (self is Align) {
         map.addAll({
           'alignment': self.alignment.toString(),
@@ -45,6 +41,10 @@ extension WidgetExtensions on Widget {
           if (self.child != null) 'child': self.child?.toMap(),
         });
       }
+
+      map.addAll({
+        if (self.child != null) 'child': self.child?.toMap(),
+      });
     } else if (self is Flexible) {
       map.addAll({
         'child': self.child.toMap(),
@@ -182,6 +182,8 @@ extension TextStyleExtensions on TextStyle {
           'decoration': decoration.toString(),
         if (backgroundColor != null)
           'backgroundColor': backgroundColor.toString(),
+        if (fontFeatures != null)
+          'fontFeatures': fontFeatures!.map((e) => e.toString()).toList(),
       };
 
   String toPrettyString() => toMap().toPrettyString();

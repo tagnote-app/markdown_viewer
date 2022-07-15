@@ -1,3 +1,4 @@
+import 'dart:ui';
 import 'package:flutter/material.dart';
 
 import 'definition.dart';
@@ -39,6 +40,10 @@ class MarkdownStyle {
     this.highlight = const TextStyle(backgroundColor: Color(0xffffee00)),
     this.strikethrough =
         const TextStyle(decoration: TextDecoration.lineThrough),
+    this.subscript = const TextStyle(fontFeatures: [FontFeature.subscripts()]),
+    this.superscript =
+        const TextStyle(fontFeatures: [FontFeature.superscripts()]),
+    this.kbd,
     this.link = const TextStyle(color: Color(0xff2196f3)),
     this.inlineCode = const TextStyle(fontFamily: 'monospace'),
     this.list,
@@ -90,6 +95,9 @@ class MarkdownStyle {
     TextStyle? strongEmphasis,
     TextStyle? highlight,
     TextStyle? strikethrough,
+    TextStyle? subscript,
+    TextStyle? superscript,
+    TextStyle? kbd,
     TextStyle? link,
     TextStyle? inlineCode,
     TextStyle? list,
@@ -144,6 +152,9 @@ class MarkdownStyle {
       strongEmphasis: style.strongEmphasis?.merge(strongEmphasis),
       highlight: style.highlight?.merge(highlight),
       strikethrough: style.strikethrough?.merge(strikethrough),
+      subscript: style.subscript?.merge(subscript),
+      superscript: style.superscript?.merge(superscript),
+      kbd: style.kbd?.merge(kbd),
       link: style.link?.merge(link),
       inlineCode: codeStyle.merge(style.inlineCode).merge(inlineCode),
       list: bodyText2.merge(list),
@@ -192,6 +203,9 @@ class MarkdownStyle {
   final TextStyle? strongEmphasis;
   final TextStyle? highlight;
   final TextStyle? strikethrough;
+  final TextStyle? subscript;
+  final TextStyle? superscript;
+  final TextStyle? kbd;
   final TextStyle? link;
   final TextStyle? inlineCode;
   final TextStyle? list;

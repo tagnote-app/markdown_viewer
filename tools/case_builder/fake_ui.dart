@@ -56,6 +56,13 @@ class Flex extends MultiChildRenderObjectWidget {
   }) : super(children: children);
 }
 
+class Flexible extends Widget {
+  const Flexible({
+    required this.child,
+  });
+  final Widget child;
+}
+
 class Column extends Flex {
   Column({
     this.mainAxisAlignment = MainAxisAlignment.start,
@@ -391,12 +398,10 @@ class BoxConstraints extends Constraints {
   final double maxHeight;
 }
 
-class Expanded extends Widget {
+class Expanded extends Flexible {
   const Expanded({
-    required this.child,
-  });
-
-  final Widget child;
+    required Widget child,
+  }) : super(child: child);
 }
 
 class Scrollbar extends Widget {
@@ -522,6 +527,7 @@ class TextStyle {
     this.color,
     this.backgroundColor,
     this.decoration,
+    this.fontFeatures,
   });
   TextStyle copyWith({
     String? fontFamily,
@@ -560,6 +566,7 @@ class TextStyle {
   final Color? color;
   final Color? backgroundColor;
   final TextDecoration? decoration;
+  final List<FontFeature>? fontFeatures;
 
   @override
   bool operator ==(Object other) {
@@ -646,6 +653,20 @@ class TextDecoration {
     if (values.length == 1) return 'TextDecoration.${values[0]}';
     return 'TextDecoration.combine([${values.join(", ")}])';
   }
+}
+
+class FontFeature {
+  const FontFeature.subscripts()
+      : feature = 'subs',
+        value = 1;
+  const FontFeature.superscripts()
+      : feature = 'sups',
+        value = 1;
+  final String feature;
+  final int value;
+
+  @override
+  String toString() => "FontFeature('$feature', $value)";
 }
 
 enum MainAxisAlignment {

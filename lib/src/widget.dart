@@ -17,6 +17,10 @@ class MarkdownViewer extends StatefulWidget {
     this.checkboxBuilder,
     this.imageBuilder,
     this.enableTaskList = false,
+    this.enableSubscript = false,
+    this.enableSuperscript = false,
+    this.enableKbd = false,
+    this.enableFootnote = false,
     this.enableImageSize = false,
     this.elementBuilders = const [],
     Key? key,
@@ -25,6 +29,10 @@ class MarkdownViewer extends StatefulWidget {
   final String data;
   final bool enableTaskList;
   final bool enableImageSize;
+  final bool enableSubscript;
+  final bool enableSuperscript;
+  final bool enableKbd;
+  final bool enableFootnote;
   final MarkdownImageBuilder? imageBuilder;
   final MarkdownStyle? styleSheet;
   final MarkdownTapLinkCallback? onTapLink;
@@ -68,6 +76,10 @@ class _MarkdownViewerState extends State<MarkdownViewer> {
       enableHighlight: true,
       enableStrikethrough: true,
       enableTaskList: widget.enableTaskList,
+      enableSubscript: widget.enableSubscript,
+      enableSuperscript: widget.enableSuperscript,
+      enableKbd: widget.enableKbd,
+      enableFootnote: widget.enableFootnote,
     );
     final renderer = MarkdownRenderer(
       styleSheet: widget.styleSheet ?? MarkdownStyle.fromTheme(theme),

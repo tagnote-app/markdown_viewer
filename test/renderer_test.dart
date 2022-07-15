@@ -12,6 +12,11 @@ void main() {
   // _testDirectory('common_mark');
   _testDirectory('original');
   _testDirectory('gfm');
+  _testFile(
+    'extensions/subscript_superscript.json',
+    enableSubscript: true,
+    enableSuperscript: true,
+  );
 }
 
 // TODO(Zhiguang): compare the built result with the html result to verify.
@@ -24,11 +29,18 @@ void _testDirectory(String name) {
   );
 
   for (final entry in entries) {
-    _testFile(entry.path);
+    _testFile(entry.path, isFullPath: true);
   }
 }
 
-void _testFile(String path) {
+void _testFile(
+  String path, {
+  bool enableSuperscript = false,
+  bool enableSubscript = false,
+  bool enableKbd = false,
+  bool isFullPath = false,
+}) {
+  path = isFullPath ? path : '${_getRoot()}/$path';
   final json = File(path).readAsStringSync();
   final mapList = List<Map<String, dynamic>>.from(jsonDecode(json));
   for (final testCase in mapList) {
@@ -46,6 +58,9 @@ void _testFile(String path) {
         enableRawHtml: false,
         enableHighlight: true,
         enableStrikethrough: true,
+        enableSuperscript: enableSuperscript,
+        enableSubscript: enableSubscript,
+        enableKbd: enableKbd,
       ).parseLines(data);
       final actual = MarkdownRenderer(
         styleSheet: MarkdownStyle.fromTheme(themeData),
