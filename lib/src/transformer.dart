@@ -1,14 +1,13 @@
-import 'package:dart_markdown/dart_markdown.dart' as md;
-
 import 'ast.dart';
+import 'definition.dart';
 
 /// Transform the Markdown AST to the AST fits for Flutter usage.
 class AstTransformer {
   AstTransformer();
 
-  final _footnoteReferences = <md.Element>[];
+  final _footnoteReferences = <MdElement>[];
 
-  List<MarkdownNode> transform(List<md.Node> nodes) {
+  List<MarkdownNode> transform(List<MdNode> nodes) {
     final result = _iterateNodes(nodes);
 
     if (_footnoteReferences.isNotEmpty) {
@@ -18,7 +17,7 @@ class AstTransformer {
     return result;
   }
 
-  List<MarkdownNode> _iterateNodes(List<md.Node> nodes) {
+  List<MarkdownNode> _iterateNodes(List<MdNode> nodes) {
     final result = <MarkdownNode>[];
 
     // Merge the adjacent Text nodes into one.
@@ -32,9 +31,9 @@ class AstTransformer {
     }
 
     for (final node in nodes) {
-      if (node is md.Text) {
+      if (node is MdText) {
         stringBuffer.write(node.textContent);
-      } else if (node is md.Element) {
+      } else if (node is MdElement) {
         if ([
           'blankLine',
           'linkReferenceDefinition',
