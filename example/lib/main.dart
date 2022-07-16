@@ -40,7 +40,12 @@ Hello **Markdown**!
         padding: const EdgeInsets.all(20),
         child: MarkdownViewer(
           markdown,
-          enableSubscript: true,
+          enableTaskList: true,
+          enableSuperscript: false,
+          enableSubscript: false,
+          enableFootnote: false,
+          enableImageSize: false,
+          enableKbd: false,
           syntaxExtensions: [ExampleSyntax()],
           onTapLink: (href, title) {
             print({href, title});
