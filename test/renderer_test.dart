@@ -17,6 +17,10 @@ void main() {
     enableSubscript: true,
     enableSuperscript: true,
   );
+  _testFile(
+    'extensions/footnotes.json',
+    enableFootnote: true,
+  );
 }
 
 // TODO(Zhiguang): compare the built result with the html result to verify.
@@ -38,6 +42,7 @@ void _testFile(
   bool enableSuperscript = false,
   bool enableSubscript = false,
   bool enableKbd = false,
+  bool enableFootnote = false,
   bool isFullPath = false,
 }) {
   final rootPath = _getRoot();
@@ -64,6 +69,7 @@ void _testFile(
         enableSuperscript: enableSuperscript,
         enableSubscript: enableSubscript,
         enableKbd: enableKbd,
+        enableFootnote: enableFootnote,
       ).parseLines(data);
       final actual = MarkdownRenderer(
         styleSheet: MarkdownStyle.fromTheme(themeData),

@@ -4,7 +4,9 @@ import 'dart:io';
 import 'dart:typed_data';
 
 abstract class Widget {
-  const Widget();
+  const Widget({this.key});
+
+  final Key? key;
 }
 
 abstract class StatefulWidget extends Widget {
@@ -451,6 +453,7 @@ class Container extends Widget {
   const Container({
     this.child,
     this.decoration,
+    this.padding,
     this.border,
     this.width,
   });
@@ -459,6 +462,7 @@ class Container extends Widget {
   final Widget? child;
   final BoxBorder? border;
   final double? width;
+  final EdgeInsets? padding;
 }
 
 class Divider extends StatelessWidget {
@@ -607,9 +611,9 @@ bool listEquals<T>(List<T>? a, List<T>? b) {
   return true;
 }
 
-class BlockWidget implements Widget {}
+class BlockWidget extends Widget {}
 
-class TextWidget implements Widget {}
+class TextWidget extends Widget {}
 
 class TextTheme {
   const TextTheme({
@@ -682,6 +686,13 @@ class FontFeature {
   @override
   String toString() => "FontFeature('$feature', $value)";
 }
+
+abstract class Element {
+  const Element(this.widget);
+  final Widget widget;
+}
+
+abstract class Key {}
 
 enum MainAxisAlignment {
   start,

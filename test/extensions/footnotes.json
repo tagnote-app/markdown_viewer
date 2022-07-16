@@ -1,0 +1,112 @@
+[
+  {
+    "description": "A simple one",
+    "markdown": "Hello **Markdown**![^note]\n\n[^note]: This is a note.\n",
+    "expected": [
+      {
+        "type": "Column",
+        "children": [
+          {
+            "type": "Wrap",
+            "children": [
+              {
+                "type": "RichText",
+                "textAlign": "TextAlign.start",
+                "text": {
+                  "type": "TextSpan",
+                  "children": [
+                    {
+                      "type": "TextSpan",
+                      "text": "Hello ",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": "Markdown",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w700",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    },
+                    {
+                      "type": "TextSpan",
+                      "text": "!",
+                      "style": {
+                        "fontFamily": ".SF UI Text",
+                        "fontWeight": "FontWeight.w400",
+                        "fontSize": 14.0,
+                        "color": "Color(0xdd000000)"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "Text",
+                "data": "1"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "SizedBox",
+        "height": 8.0
+      },
+      {
+        "type": "Column",
+        "children": [
+          {
+            "type": "Row",
+            "children": [
+              {
+                "type": "ConstrainedBox",
+                "constraints": {
+                  "type": "BoxConstraints",
+                  "minWidth": 30.0,
+                  "minHeight": 0.0
+                },
+                "child": {
+                  "type": "Padding",
+                  "child": {
+                    "type": "Text",
+                    "data": "1."
+                  }
+                }
+              },
+              {
+                "type": "Expanded",
+                "child": {
+                  "type": "Column",
+                  "children": [
+                    {
+                      "type": "RichText",
+                      "textAlign": "TextAlign.start",
+                      "text": {
+                        "type": "TextSpan",
+                        "text": "This is a note.",
+                        "style": {
+                          "fontFamily": ".SF UI Text",
+                          "fontWeight": "FontWeight.w400",
+                          "fontSize": 14.0,
+                          "color": "Color(0xdd000000)"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
