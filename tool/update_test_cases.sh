@@ -3,7 +3,7 @@
 BUILDER_DIR=".test_case_builder"
 SRC_DIR="lib/src"
 TEST_DIR="test"
-TOOLS_DIR="tools/case_builder"
+TOOLS_DIR="tool/case_builder"
 
 
 mkdir -p $BUILDER_DIR

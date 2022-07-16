@@ -1,3 +1,22 @@
-A Markdown renderer for Flutter. It renders Markdown string to rich text output.
+A Markdown viewer widget for Flutter. It renders Markdown string to rich text
+output.
 
-This project is inspired by [flutter_markdown](https://github.com/flutter/packages/tree/main/packages/flutter_markdown).
+### Dependency
+
+[dart_markdown](https://github.com/chenzhiguang/dart_markdown)
+
+### Usage
+
+```dart
+MarkdownViewer(
+  'Hello **Markdown**!',
+  enableTaskList: true,
+  enableSuperscript: false,
+  enableSubscript: false,
+  enableFootnote: false,
+  enableImageSize: false,
+  enableKbd: false,
+  syntaxExtensions: const [],
+  elementBuilders: const [],
+);
+```
