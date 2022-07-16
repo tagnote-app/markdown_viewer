@@ -793,30 +793,6 @@
   {
     "description": "ATX headings, https://github.github.com/gfm/#example-49",
     "markdown": "## \n#\n### ###\n",
-    "expected": [
-      {
-        "type": "SizedBox",
-        "height": 0.0,
-        "width": 0.0
-      },
-      {
-        "type": "SizedBox",
-        "height": 8.0
-      },
-      {
-        "type": "SizedBox",
-        "height": 0.0,
-        "width": 0.0
-      },
-      {
-        "type": "SizedBox",
-        "height": 8.0
-      },
-      {
-        "type": "SizedBox",
-        "height": 0.0,
-        "width": 0.0
-      }
-    ]
+    "expected": []
   }
 ]

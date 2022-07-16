@@ -6,10 +6,19 @@ class FootnoteBuilder extends MarkdownElementBuilder {
   FootnoteBuilder({
     TextStyle? footnote,
     TextStyle? footnoteReference,
-  }) : super(textStyleMap: {
-          'footnote': footnote,
+    this.footnoteReferenceDecoration,
+    this.footnoteReferencePadding,
+  })  : _footnoteStyle = footnote,
+        super(textStyleMap: {
           'footnoteReference': footnoteReference,
         });
+
+  final TextStyle? _footnoteStyle;
+  BoxDecoration? footnoteReferenceDecoration;
+  EdgeInsets? footnoteReferencePadding;
+
+  @override
+  bool isBlock(element) => element.type == 'footnoteReference';
 
   @override
   final matchTypes = [
@@ -18,22 +27,23 @@ class FootnoteBuilder extends MarkdownElementBuilder {
   ];
 
   @override
-  TextSpan? createText(element, parentStyle) {
+  Widget? buildWidget(element) {
     if (element.type == 'footnote') {
-      return TextSpan(
-        text: element.attributes['number'],
-        style: element.style,
+      return Text(
+        element.attributes['number']!,
+        style: _footnoteStyle,
       );
     }
-    return null;
-  }
-
-  @override
-  void after(renderer, element) {
-    if (element.type == 'footnote') {
-      renderer.writeInline(element.children);
-    } else if (element.type == 'footnoteReference') {
-      renderer.writeBlock(element.children.single);
+    final child = element.children.single;
+    if (footnoteReferenceDecoration == null &&
+        footnoteReferencePadding == null) {
+      return child;
     }
+
+    return Container(
+      decoration: footnoteReferenceDecoration,
+      padding: footnoteReferencePadding,
+      child: child,
+    );
   }
 }

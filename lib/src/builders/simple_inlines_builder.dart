@@ -31,6 +31,9 @@ class SimpleInlinesBuilder extends MarkdownElementBuilder {
   final MarkdownTapLinkCallback? _onTapLink;
 
   @override
+  bool isBlock(element) => false;
+
+  @override
   GestureRecognizer? gestureRecognizer(type, attributes) {
     if (type != 'link' || _onTapLink == null) {
       return null;
@@ -68,9 +71,4 @@ class SimpleInlinesBuilder extends MarkdownElementBuilder {
     'subscript',
     'kbd',
   ];
-
-  @override
-  void after(renderer, element) {
-    renderer.writeInline(element.children);
-  }
 }

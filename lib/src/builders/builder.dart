@@ -2,7 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 import '../definition.dart';
-import '../renderer.dart';
+import '../helpers.dart';
 
 abstract class MarkdownElementBuilder {
   MarkdownElementBuilder({
@@ -40,7 +40,7 @@ abstract class MarkdownElementBuilder {
 
   /// Called when an Element has been reached, before it's children have been
   /// built.
-  void before(String type, Attributes attributes) {}
+  void init(String type, Attributes attributes) {}
 
   /// Creates a [GestureRecognizer] for the current element and it's
   /// descendants.
@@ -69,12 +69,55 @@ abstract class MarkdownElementBuilder {
   /// Returns `null` to use the default [TextAlign].
   TextAlign? textAlign(MarkdownTreeElement parent) => null;
 
-  /// Runs when current element does not have md.Text, such as hardBreak.
+  /// To create a TextSpan the same as [buildText] when an element does not have
+  /// a md.Text child.
+  ///
+  /// The [TextSpan] returns from this method will be converted to a [RichText]
+  /// widget and merged with other [RichText] widgets if it is possible.
   TextSpan? createText(MarkdownTreeElement element, TextStyle? parentStyle) =>
       null;
 
-  /// Called after current element has been built.
-  void after(MarkdownRenderer renderer, MarkdownTreeElement element) {}
+  bool isBlock(MarkdownTreeElement element);
+
+  EdgeInsets? blockPadding(MarkdownTreeElement element) => EdgeInsets.zero;
+
+  /// Builds a widget of current element and adds to the element tree.
+  ///
+  /// Nothing will be added to the element tree if returns `null`.
+  ///
+  /// NOTE: The [RichText] added to [element.children] at this step will not be
+  /// merged with other [RichText] widgets. Use [createText] instead if you want
+  /// to create a text widget and merge it with other adjacent [RichText]
+  /// widgets.
+  Widget? buildWidget(
+    MarkdownTreeElement element,
+  ) {
+    final children = element.children;
+    if (children.isEmpty) {
+      return null;
+    }
+
+    if (!isBlock(element)) {
+      return InlineWraper(element.children);
+    }
+
+    final widget = Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisSize: MainAxisSize.min,
+      children: children,
+    );
+
+    final padding = blockPadding(element);
+    if (padding == null || padding == EdgeInsets.zero) {
+      return widget;
+    }
+
+    return Padding(
+      padding: padding,
+      child: widget,
+    );
+  }
 }
 
 typedef Attributes = Map<String, String>;

@@ -32,6 +32,8 @@ class MarkdownStyle {
     this.blockquote,
     this.blockquoteDecoration,
     this.blockquotePadding = const EdgeInsets.all(8.0),
+    this.footnoteReferenceDecoration,
+    this.footnoteReferencePadding,
     this.dividerColor,
     this.dividerHeight,
     this.dividerThickness,
@@ -92,6 +94,8 @@ class MarkdownStyle {
     TextStyle? blockquote,
     BoxDecoration? blockquoteDecoration,
     EdgeInsets? blockquotePadding,
+    BoxDecoration? footnoteReferenceDecoration,
+    EdgeInsets? footnoteReferencePadding,
     Color? dividerColor,
     double? dividerHeight,
     double? dividerThickness,
@@ -151,6 +155,8 @@ class MarkdownStyle {
       blockquote: bodyText2.merge(blockquote),
       blockquoteDecoration: blockquoteDecoration,
       blockquotePadding: blockquotePadding ?? style.blockquotePadding,
+      footnoteReferenceDecoration: footnoteReferenceDecoration,
+      footnoteReferencePadding: footnoteReferencePadding,
       dividerColor: dividerColor,
       dividerHeight: dividerHeight,
       dividerThickness: dividerThickness,
@@ -204,6 +210,8 @@ class MarkdownStyle {
   final TextStyle? blockquote;
   final BoxDecoration? blockquoteDecoration;
   final EdgeInsets blockquotePadding;
+  final BoxDecoration? footnoteReferenceDecoration;
+  final EdgeInsets? footnoteReferencePadding;
   final Color? dividerColor;
   final double? dividerHeight;
   final double? dividerThickness;

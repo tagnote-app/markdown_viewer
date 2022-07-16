@@ -3,7 +3,6 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 
 import '../definition.dart';
-import '../renderer.dart';
 import 'builder.dart';
 
 class ImageBuilder extends MarkdownElementBuilder {
@@ -16,13 +15,16 @@ class ImageBuilder extends MarkdownElementBuilder {
   final bool enableImageSize;
 
   @override
+  bool isBlock(element) => true;
+
+  @override
   final matchTypes = ['image'];
 
   @override
-  void after(MarkdownRenderer renderer, MarkdownTreeElement element) {
+  Widget? buildWidget(element) {
     final destination = element.attributes['destination']!;
     if (destination.isEmpty) {
-      return;
+      return null;
     }
     final description = element.attributes['description'];
     final title = element.attributes['title'];
@@ -56,10 +58,10 @@ class ImageBuilder extends MarkdownElementBuilder {
       child = _buildImage(uri, width, height);
     }
     if (child == null) {
-      return;
+      return null;
     }
 
-    renderer.writeBlock(child);
+    return child;
   }
 
   _ParseDestination _parseDestination(String destination) {

@@ -2317,14 +2317,6 @@
                     "data": "•"
                   }
                 }
-              },
-              {
-                "type": "Expanded",
-                "child": {
-                  "type": "SizedBox",
-                  "height": 0.0,
-                  "width": 0.0
-                }
               }
             ]
           },

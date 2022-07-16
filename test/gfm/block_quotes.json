@@ -640,12 +640,7 @@
       {
         "type": "Container",
         "child": {
-          "type": "Padding",
-          "child": {
-            "type": "SizedBox",
-            "height": 0.0,
-            "width": 0.0
-          }
+          "type": "Padding"
         }
       }
     ]
@@ -657,12 +652,7 @@
       {
         "type": "Container",
         "child": {
-          "type": "Padding",
-          "child": {
-            "type": "SizedBox",
-            "height": 0.0,
-            "width": 0.0
-          }
+          "type": "Padding"
         }
       }
     ]

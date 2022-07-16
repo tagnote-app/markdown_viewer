@@ -201,6 +201,12 @@ extension ListExtensions on List<dynamic> {
       add(item);
     }
   }
+
+  void addIfTrue<T>(T item, bool isTrue) {
+    if (isTrue) {
+      add(item);
+    }
+  }
 }
 
 extension WidgetsExtensions on List<Widget> {

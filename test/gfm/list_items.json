@@ -2206,14 +2206,6 @@
                     "data": "•"
                   }
                 }
-              },
-              {
-                "type": "Expanded",
-                "child": {
-                  "type": "SizedBox",
-                  "height": 0.0,
-                  "width": 0.0
-                }
               }
             ]
           }
@@ -2313,14 +2305,6 @@
                     "type": "Text",
                     "data": "•"
                   }
-                }
-              },
-              {
-                "type": "Expanded",
-                "child": {
-                  "type": "SizedBox",
-                  "height": 0.0,
-                  "width": 0.0
                 }
               }
             ]
@@ -2445,14 +2429,6 @@
                     "data": "•"
                   }
                 }
-              },
-              {
-                "type": "Expanded",
-                "child": {
-                  "type": "SizedBox",
-                  "height": 0.0,
-                  "width": 0.0
-                }
               }
             ]
           },
@@ -2576,14 +2552,6 @@
                     "data": "2."
                   }
                 }
-              },
-              {
-                "type": "Expanded",
-                "child": {
-                  "type": "SizedBox",
-                  "height": 0.0,
-                  "width": 0.0
-                }
               }
             ]
           },
@@ -2660,14 +2628,6 @@
                     "type": "Text",
                     "data": "•"
                   }
-                }
-              },
-              {
-                "type": "Expanded",
-                "child": {
-                  "type": "SizedBox",
-                  "height": 0.0,
-                  "width": 0.0
                 }
               }
             ]

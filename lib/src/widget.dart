@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:dart_markdown/dart_markdown.dart' as md;
 import 'package:flutter/material.dart';
 
@@ -65,6 +67,7 @@ class _MarkdownViewerState extends State<MarkdownViewer> {
       widget = const SizedBox.shrink();
     }
 
+    log(widget.toPrettyString());
     return widget;
   }
 

@@ -40,7 +40,8 @@ void _testFile(
   bool enableKbd = false,
   bool isFullPath = false,
 }) {
-  path = isFullPath ? path : '${_getRoot()}/$path';
+  final rootPath = _getRoot();
+  path = isFullPath ? path : '$rootPath/$path';
   final json = File(path).readAsStringSync();
   final mapList = List<Map<String, dynamic>>.from(jsonDecode(json));
   for (final testCase in mapList) {
@@ -52,7 +53,9 @@ void _testFile(
       continue;
     }
 
-    test(description, () {
+    final shortPath = path.replaceFirst('$rootPath/', '');
+
+    test('file: $shortPath, $description', () {
       final nodes = Document(
         enableHtmlBlock: false,
         enableRawHtml: false,
