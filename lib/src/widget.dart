@@ -1,11 +1,8 @@
-import 'dart:developer';
-
 import 'package:dart_markdown/dart_markdown.dart' as md;
 import 'package:flutter/material.dart';
 
 import 'builders/builder.dart';
 import 'definition.dart';
-import 'extensions.dart';
 import 'renderer.dart';
 import 'style.dart';
 
@@ -25,6 +22,7 @@ class MarkdownViewer extends StatefulWidget {
     this.enableFootnote = false,
     this.enableImageSize = false,
     this.elementBuilders = const [],
+    this.syntaxExtensions = const [],
     Key? key,
   }) : super(key: key);
 
@@ -42,6 +40,7 @@ class MarkdownViewer extends StatefulWidget {
   final MarkdownCheckboxBuilder? checkboxBuilder;
   final MarkdownHighlightBuilder? highlightBuilder;
   final List<MarkdownElementBuilder> elementBuilders;
+  final List<md.Syntax> syntaxExtensions;
 
   @override
   State<MarkdownViewer> createState() => _MarkdownViewerState();
@@ -67,7 +66,6 @@ class _MarkdownViewerState extends State<MarkdownViewer> {
       widget = const SizedBox.shrink();
     }
 
-    log(widget.toPrettyString());
     return widget;
   }
 
@@ -83,6 +81,7 @@ class _MarkdownViewerState extends State<MarkdownViewer> {
       enableSuperscript: widget.enableSuperscript,
       enableKbd: widget.enableKbd,
       enableFootnote: widget.enableFootnote,
+      extensions: widget.syntaxExtensions,
     );
     final renderer = MarkdownRenderer(
       styleSheet: widget.styleSheet ?? MarkdownStyle.fromTheme(theme),

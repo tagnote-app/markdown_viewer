@@ -1,4 +1,3 @@
-import 'package:dart_markdown/dart_markdown.dart' as md;
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
@@ -125,7 +124,7 @@ class MarkdownRenderer implements NodeVisitor {
   final _tree = <_TreeElement>[];
   final _builders = <String, MarkdownElementBuilder>{};
 
-  List<Widget> render(List<md.Node> nodes) {
+  List<Widget> render(List<MdNode> nodes) {
     _tree.clear();
     _keepLineEndingsWhen = null;
     _gestureRecognizers.clear();

@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:markdown_viewer/markdown_viewer.dart';
 
+import 'extension.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -27,6 +29,9 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     const markdown = r'''
 Hello **Markdown**!
+
+---
+#example
 ''';
 
     return Scaffold(
@@ -35,9 +40,14 @@ Hello **Markdown**!
         padding: const EdgeInsets.all(20),
         child: MarkdownViewer(
           markdown,
+          enableSubscript: true,
+          syntaxExtensions: [ExampleSyntax()],
           onTapLink: (href, title) {
             print({href, title});
           },
+          elementBuilders: [
+            ExampleBuilder(),
+          ],
         ),
       ),
     );
