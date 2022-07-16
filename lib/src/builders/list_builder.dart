@@ -33,20 +33,22 @@ class ListBuilder extends MarkdownElementBuilder {
   bool _isList(String type) => type == 'orderedList' || type == 'bulletList';
 
   @override
-  void before(type, attributes) {
+  bool isBlock(element) => true;
+
+  @override
+  void init(type, attributes) {
     if (_isList(type)) {
       _listStrack.add(type);
     }
   }
 
   @override
-  void after(renderer, element) {
+  Widget? buildWidget(element) {
     final type = element.type;
-    final child = renderer.convertToBlock(element.children);
+    final child = super.buildWidget(element);
     if (_isList(type)) {
       _listStrack.removeLast();
-      renderer.writeBlock(child);
-      return;
+      return child;
     }
 
     final itemMarker = element.attributes['taskListItem'] == null
@@ -58,7 +60,7 @@ class ListBuilder extends MarkdownElementBuilder {
             element.attributes['taskListItem'] == 'checked',
           );
 
-    renderer.writeBlock(Row(
+    return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         ConstrainedBox(
@@ -67,9 +69,9 @@ class ListBuilder extends MarkdownElementBuilder {
           ),
           child: itemMarker,
         ),
-        Expanded(child: child),
+        if (child != null) Expanded(child: child),
       ],
-    ));
+    );
   }
 
   Widget _buildListItemMarker(String type, String? number) {

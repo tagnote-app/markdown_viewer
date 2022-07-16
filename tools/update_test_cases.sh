@@ -34,6 +34,7 @@ perl -pi -w -e "s/import 'package:flutter\/gestures\.dart';\n//g;" ./$BUILDER_DI
 
 perl -pi -w -e 's/package:flutter\/material\.dart/\.\.\/fake_ui\.dart/g;' ./$BUILDER_DIR/builders/*.dart
 perl -pi -w -e "s/import 'package:flutter\/gestures\.dart';\n//g;" ./$BUILDER_DIR/builders/*.dart
+perl -pi -w -e "s/import 'dart:ui';\n//g;" ./$BUILDER_DIR/style.dart
 perl -pi -w -e "s/import 'dummy_builder\.dart';/$FILES/g;" ./$BUILDER_DIR/case_builder.dart
 perl -pi -w -e "s/const caseBuilderDisabled = true;/const caseBuilderDisabled = false;/g;" ./$BUILDER_DIR/case_builder.dart
 

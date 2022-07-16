@@ -1,5 +1,7 @@
+import 'dart:developer';
+
+import 'package:dart_markdown/dart_markdown.dart' as md;
 import 'package:flutter/material.dart';
-import 'package:markdown/markdown.dart' as md;
 
 import 'builders/builder.dart';
 import 'definition.dart';
@@ -15,13 +17,25 @@ class MarkdownViewer extends StatefulWidget {
     this.listItemMarkerBuilder,
     this.highlightBuilder,
     this.checkboxBuilder,
+    this.imageBuilder,
     this.enableTaskList = false,
+    this.enableSubscript = false,
+    this.enableSuperscript = false,
+    this.enableKbd = false,
+    this.enableFootnote = false,
+    this.enableImageSize = false,
     this.elementBuilders = const [],
     Key? key,
   }) : super(key: key);
 
   final String data;
   final bool enableTaskList;
+  final bool enableImageSize;
+  final bool enableSubscript;
+  final bool enableSuperscript;
+  final bool enableKbd;
+  final bool enableFootnote;
+  final MarkdownImageBuilder? imageBuilder;
   final MarkdownStyle? styleSheet;
   final MarkdownTapLinkCallback? onTapLink;
   final MarkdownListItemMarkerBuilder? listItemMarkerBuilder;
@@ -53,6 +67,7 @@ class _MarkdownViewerState extends State<MarkdownViewer> {
       widget = const SizedBox.shrink();
     }
 
+    log(widget.toPrettyString());
     return widget;
   }
 
@@ -64,10 +79,16 @@ class _MarkdownViewerState extends State<MarkdownViewer> {
       enableHighlight: true,
       enableStrikethrough: true,
       enableTaskList: widget.enableTaskList,
+      enableSubscript: widget.enableSubscript,
+      enableSuperscript: widget.enableSuperscript,
+      enableKbd: widget.enableKbd,
+      enableFootnote: widget.enableFootnote,
     );
     final renderer = MarkdownRenderer(
       styleSheet: widget.styleSheet ?? MarkdownStyle.fromTheme(theme),
       onTapLink: widget.onTapLink,
+      enableImageSize: widget.enableImageSize,
+      imageBuilder: widget.imageBuilder,
       listItemMarkerBuilder: widget.listItemMarkerBuilder,
       checkboxBuilder: widget.checkboxBuilder,
       highlightBuilder: widget.highlightBuilder,

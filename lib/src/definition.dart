@@ -21,6 +21,9 @@ typedef MarkdownListItemMarkerBuilder = Widget Function(
 /// Signature for custom checkbox widget.
 typedef MarkdownCheckboxBuilder = Widget Function(bool checked);
 
+/// Signature for custom image widget.
+typedef MarkdownImageBuilder = Widget Function(Uri uri, MarkdownImageInfo info);
+
 /// Syntax highlights [text] for codeBlock element.
 typedef MarkdownHighlightBuilder = TextSpan Function(
   String text,
@@ -40,4 +43,18 @@ abstract class MarkdownTreeElement {
   final TextStyle? style;
   final Map<String, String> attributes;
   final List<Widget> children = <Widget>[];
+}
+
+abstract class MarkdownImageInfo {
+  MarkdownImageInfo({
+    this.title,
+    this.description,
+    this.width,
+    this.height,
+  });
+
+  final String? title;
+  final String? description;
+  final double? width;
+  final double? height;
 }

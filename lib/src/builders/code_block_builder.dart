@@ -22,7 +22,10 @@ class CodeBlockBuilder extends MarkdownElementBuilder {
   bool replaceLineEndings(String type) => false;
 
   @override
-  TextAlign textAlign(MarkdownTreeElement parent) => TextAlign.start;
+  TextAlign textAlign(parent) => TextAlign.start;
+
+  @override
+  bool isBlock(element) => true;
 
   @override
   TextSpan buildText(text, parent) {
@@ -36,12 +39,12 @@ class CodeBlockBuilder extends MarkdownElementBuilder {
   }
 
   @override
-  void after(renderer, element) {
+  Widget buildWidget(element) {
     final child = element.children.isNotEmpty
         ? element.children.single
         : const SizedBox.shrink();
 
-    renderer.writeBlock(Container(
+    return Container(
       width: double.infinity,
       decoration: codeblockDecoration,
       child: Scrollbar(
@@ -51,6 +54,6 @@ class CodeBlockBuilder extends MarkdownElementBuilder {
           child: child,
         ),
       ),
-    ));
+    );
   }
 }

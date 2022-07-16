@@ -38,7 +38,10 @@ class TableBuilder extends MarkdownElementBuilder {
   ];
 
   @override
-  void before(type, attributes) {
+  bool isBlock(element) => element.type == 'table';
+
+  @override
+  void init(type, attributes) {
     if (type == 'table') {
       _tableStack.add(_TableElement());
     } else if (type == 'tableRow') {
@@ -62,7 +65,7 @@ class TableBuilder extends MarkdownElementBuilder {
   }
 
   @override
-  TextAlign? textAlign(MarkdownTreeElement parent) {
+  TextAlign? textAlign(parent) {
     TextAlign? textAlign;
     if (parent.type == 'tableHeadCell' || parent.type == 'tableBodyCell') {
       textAlign = {
@@ -75,16 +78,16 @@ class TableBuilder extends MarkdownElementBuilder {
   }
 
   @override
-  void after(renderer, element) {
+  Widget? buildWidget(element) {
     final type = element.type;
 
     if (type == 'table') {
-      renderer.writeBlock(Table(
+      return Table(
         defaultColumnWidth: tableColumnWidth,
         defaultVerticalAlignment: TableCellVerticalAlignment.middle,
         border: tableBorder,
         children: _tableStack.removeLast().rows,
-      ));
+      );
     } else if (type == 'tableHeadCell' || type == 'tableBodyCell') {
       final children = element.children;
 
@@ -97,6 +100,8 @@ class TableBuilder extends MarkdownElementBuilder {
         ),
       );
     }
+
+    return null;
   }
 }
 

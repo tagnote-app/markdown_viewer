@@ -31,31 +31,38 @@ class SimpleBlocksBuilder extends MarkdownElementBuilder {
   final matchTypes = ['paragraph', 'blockquote', 'thematicBreak'];
 
   @override
-  void after(renderer, element) {
+  bool isBlock(element) => true;
+
+  @override
+  EdgeInsets? blockPadding(element) {
+    return element.type == 'paragraph' ? pPadding : null;
+  }
+
+  @override
+  Widget? buildWidget(element) {
     final type = element.type;
 
-    Widget blockChild;
     if (type == 'thematicBreak') {
-      blockChild = Divider(
+      return Divider(
         color: dividerColor,
         height: dividerHeight,
         thickness: dividerThickness,
       );
-    } else {
-      final padding = type == 'paragraph' ? pPadding : null;
-      blockChild = renderer.convertToBlock(element.children, padding: padding);
-      if (type == 'blockquote') {
-        blockChild = Container(
-          width: double.infinity,
-          decoration: blockquoteDecoration,
-          child: Padding(
-            padding: blockquotePadding,
-            child: blockChild,
-          ),
-        );
-      }
     }
 
-    renderer.writeBlock(blockChild);
+    final blockChild = super.buildWidget(element);
+
+    if (type == 'blockquote') {
+      return Container(
+        width: double.infinity,
+        decoration: blockquoteDecoration,
+        child: Padding(
+          padding: blockquotePadding,
+          child: blockChild,
+        ),
+      );
+    }
+
+    return blockChild;
   }
 }

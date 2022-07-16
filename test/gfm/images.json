@@ -4,9 +4,13 @@
     "markdown": "![foo](/url \"title\")\n",
     "expected": [
       {
-        "type": "SizedBox",
-        "height": 0.0,
-        "width": 0.0
+        "type": "Column",
+        "children": [
+          {
+            "type": "Image",
+            "alignment": "Alignment.center"
+          }
+        ]
       }
     ]
   },
@@ -15,9 +19,13 @@
     "markdown": "![foo *bar*]\n\n[foo *bar*]: train.jpg \"train & tracks\"\n",
     "expected": [
       {
-        "type": "SizedBox",
-        "height": 0.0,
-        "width": 0.0
+        "type": "Column",
+        "children": [
+          {
+            "type": "Image",
+            "alignment": "Alignment.center"
+          }
+        ]
       }
     ]
   },
@@ -26,9 +34,13 @@
     "markdown": "![foo ![bar](/url)](/url2)\n",
     "expected": [
       {
-        "type": "SizedBox",
-        "height": 0.0,
-        "width": 0.0
+        "type": "Column",
+        "children": [
+          {
+            "type": "Image",
+            "alignment": "Alignment.center"
+          }
+        ]
       }
     ]
   },
@@ -37,9 +49,13 @@
     "markdown": "![foo [bar](/url)](/url2)\n",
     "expected": [
       {
-        "type": "SizedBox",
-        "height": 0.0,
-        "width": 0.0
+        "type": "Column",
+        "children": [
+          {
+            "type": "Image",
+            "alignment": "Alignment.center"
+          }
+        ]
       }
     ]
   },
@@ -48,9 +64,13 @@
     "markdown": "![foo *bar*][]\n\n[foo *bar*]: train.jpg \"train & tracks\"\n",
     "expected": [
       {
-        "type": "SizedBox",
-        "height": 0.0,
-        "width": 0.0
+        "type": "Column",
+        "children": [
+          {
+            "type": "Image",
+            "alignment": "Alignment.center"
+          }
+        ]
       }
     ]
   },
@@ -59,9 +79,13 @@
     "markdown": "![foo *bar*][foobar]\n\n[FOOBAR]: train.jpg \"train & tracks\"\n",
     "expected": [
       {
-        "type": "SizedBox",
-        "height": 0.0,
-        "width": 0.0
+        "type": "Column",
+        "children": [
+          {
+            "type": "Image",
+            "alignment": "Alignment.center"
+          }
+        ]
       }
     ]
   },
@@ -70,9 +94,13 @@
     "markdown": "![foo](train.jpg)\n",
     "expected": [
       {
-        "type": "SizedBox",
-        "height": 0.0,
-        "width": 0.0
+        "type": "Column",
+        "children": [
+          {
+            "type": "Image",
+            "alignment": "Alignment.center"
+          }
+        ]
       }
     ]
   },
@@ -96,6 +124,14 @@
                 "color": "Color(0xdd000000)"
               }
             }
+          },
+          {
+            "type": "SizedBox",
+            "height": 8.0
+          },
+          {
+            "type": "Image",
+            "alignment": "Alignment.center"
           }
         ]
       }
@@ -106,9 +142,13 @@
     "markdown": "![foo](<url>)\n",
     "expected": [
       {
-        "type": "SizedBox",
-        "height": 0.0,
-        "width": 0.0
+        "type": "Column",
+        "children": [
+          {
+            "type": "Image",
+            "alignment": "Alignment.center"
+          }
+        ]
       }
     ]
   },
@@ -117,9 +157,13 @@
     "markdown": "![](/url)\n",
     "expected": [
       {
-        "type": "SizedBox",
-        "height": 0.0,
-        "width": 0.0
+        "type": "Column",
+        "children": [
+          {
+            "type": "Image",
+            "alignment": "Alignment.center"
+          }
+        ]
       }
     ]
   },
@@ -128,9 +172,13 @@
     "markdown": "![foo][bar]\n\n[bar]: /url\n",
     "expected": [
       {
-        "type": "SizedBox",
-        "height": 0.0,
-        "width": 0.0
+        "type": "Column",
+        "children": [
+          {
+            "type": "Image",
+            "alignment": "Alignment.center"
+          }
+        ]
       }
     ]
   },
@@ -139,9 +187,13 @@
     "markdown": "![foo][bar]\n\n[BAR]: /url\n",
     "expected": [
       {
-        "type": "SizedBox",
-        "height": 0.0,
-        "width": 0.0
+        "type": "Column",
+        "children": [
+          {
+            "type": "Image",
+            "alignment": "Alignment.center"
+          }
+        ]
       }
     ]
   },
@@ -150,9 +202,13 @@
     "markdown": "![foo][]\n\n[foo]: /url \"title\"\n",
     "expected": [
       {
-        "type": "SizedBox",
-        "height": 0.0,
-        "width": 0.0
+        "type": "Column",
+        "children": [
+          {
+            "type": "Image",
+            "alignment": "Alignment.center"
+          }
+        ]
       }
     ]
   },
@@ -161,9 +217,13 @@
     "markdown": "![*foo* bar][]\n\n[*foo* bar]: /url \"title\"\n",
     "expected": [
       {
-        "type": "SizedBox",
-        "height": 0.0,
-        "width": 0.0
+        "type": "Column",
+        "children": [
+          {
+            "type": "Image",
+            "alignment": "Alignment.center"
+          }
+        ]
       }
     ]
   },
@@ -172,9 +232,13 @@
     "markdown": "![Foo][]\n\n[foo]: /url \"title\"\n",
     "expected": [
       {
-        "type": "SizedBox",
-        "height": 0.0,
-        "width": 0.0
+        "type": "Column",
+        "children": [
+          {
+            "type": "Image",
+            "alignment": "Alignment.center"
+          }
+        ]
       }
     ]
   },
@@ -185,6 +249,10 @@
       {
         "type": "Column",
         "children": [
+          {
+            "type": "Image",
+            "alignment": "Alignment.center"
+          },
           {
             "type": "RichText",
             "textAlign": "TextAlign.start",
@@ -208,9 +276,13 @@
     "markdown": "![foo]\n\n[foo]: /url \"title\"\n",
     "expected": [
       {
-        "type": "SizedBox",
-        "height": 0.0,
-        "width": 0.0
+        "type": "Column",
+        "children": [
+          {
+            "type": "Image",
+            "alignment": "Alignment.center"
+          }
+        ]
       }
     ]
   },
@@ -219,9 +291,13 @@
     "markdown": "![*foo* bar]\n\n[*foo* bar]: /url \"title\"\n",
     "expected": [
       {
-        "type": "SizedBox",
-        "height": 0.0,
-        "width": 0.0
+        "type": "Column",
+        "children": [
+          {
+            "type": "Image",
+            "alignment": "Alignment.center"
+          }
+        ]
       }
     ]
   },
@@ -278,9 +354,13 @@
     "markdown": "![Foo]\n\n[foo]: /url \"title\"\n",
     "expected": [
       {
-        "type": "SizedBox",
-        "height": 0.0,
-        "width": 0.0
+        "type": "Column",
+        "children": [
+          {
+            "type": "Image",
+            "alignment": "Alignment.center"
+          }
+        ]
       }
     ]
   },

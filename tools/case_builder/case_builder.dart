@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'dart:io';
-import 'package:markdown/markdown.dart';
+import 'package:dart_markdown/dart_markdown.dart';
 
 import 'dummy_builder.dart';
 

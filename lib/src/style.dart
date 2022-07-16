@@ -1,3 +1,4 @@
+import 'dart:ui';
 import 'package:flutter/material.dart';
 
 import 'definition.dart';
@@ -31,6 +32,8 @@ class MarkdownStyle {
     this.blockquote,
     this.blockquoteDecoration,
     this.blockquotePadding = const EdgeInsets.all(8.0),
+    this.footnoteReferenceDecoration,
+    this.footnoteReferencePadding,
     this.dividerColor,
     this.dividerHeight,
     this.dividerThickness,
@@ -39,6 +42,14 @@ class MarkdownStyle {
     this.highlight = const TextStyle(backgroundColor: Color(0xffffee00)),
     this.strikethrough =
         const TextStyle(decoration: TextDecoration.lineThrough),
+    this.subscript = const TextStyle(fontFeatures: [FontFeature.subscripts()]),
+    this.superscript =
+        const TextStyle(fontFeatures: [FontFeature.superscripts()]),
+    this.kbd,
+    this.footnote = const TextStyle(
+      fontFeatures: [FontFeature.superscripts()],
+    ),
+    this.footnoteReference,
     this.link = const TextStyle(color: Color(0xff2196f3)),
     this.inlineCode = const TextStyle(fontFamily: 'monospace'),
     this.list,
@@ -83,6 +94,8 @@ class MarkdownStyle {
     TextStyle? blockquote,
     BoxDecoration? blockquoteDecoration,
     EdgeInsets? blockquotePadding,
+    BoxDecoration? footnoteReferenceDecoration,
+    EdgeInsets? footnoteReferencePadding,
     Color? dividerColor,
     double? dividerHeight,
     double? dividerThickness,
@@ -90,6 +103,11 @@ class MarkdownStyle {
     TextStyle? strongEmphasis,
     TextStyle? highlight,
     TextStyle? strikethrough,
+    TextStyle? subscript,
+    TextStyle? superscript,
+    TextStyle? kbd,
+    TextStyle? footnote,
+    TextStyle? footnoteReference,
     TextStyle? link,
     TextStyle? inlineCode,
     TextStyle? list,
@@ -137,6 +155,8 @@ class MarkdownStyle {
       blockquote: bodyText2.merge(blockquote),
       blockquoteDecoration: blockquoteDecoration,
       blockquotePadding: blockquotePadding ?? style.blockquotePadding,
+      footnoteReferenceDecoration: footnoteReferenceDecoration,
+      footnoteReferencePadding: footnoteReferencePadding,
       dividerColor: dividerColor,
       dividerHeight: dividerHeight,
       dividerThickness: dividerThickness,
@@ -144,6 +164,11 @@ class MarkdownStyle {
       strongEmphasis: style.strongEmphasis?.merge(strongEmphasis),
       highlight: style.highlight?.merge(highlight),
       strikethrough: style.strikethrough?.merge(strikethrough),
+      subscript: style.subscript?.merge(subscript),
+      superscript: style.superscript?.merge(superscript),
+      kbd: style.kbd?.merge(kbd),
+      footnote: style.footnote?.merge(footnote),
+      footnoteReference: style.footnoteReference?.merge(footnoteReference),
       link: style.link?.merge(link),
       inlineCode: codeStyle.merge(style.inlineCode).merge(inlineCode),
       list: bodyText2.merge(list),
@@ -185,6 +210,8 @@ class MarkdownStyle {
   final TextStyle? blockquote;
   final BoxDecoration? blockquoteDecoration;
   final EdgeInsets blockquotePadding;
+  final BoxDecoration? footnoteReferenceDecoration;
+  final EdgeInsets? footnoteReferencePadding;
   final Color? dividerColor;
   final double? dividerHeight;
   final double? dividerThickness;
@@ -192,6 +219,11 @@ class MarkdownStyle {
   final TextStyle? strongEmphasis;
   final TextStyle? highlight;
   final TextStyle? strikethrough;
+  final TextStyle? subscript;
+  final TextStyle? superscript;
+  final TextStyle? kbd;
+  final TextStyle? footnote;
+  final TextStyle? footnoteReference;
   final TextStyle? link;
   final TextStyle? inlineCode;
   final TextStyle? list;

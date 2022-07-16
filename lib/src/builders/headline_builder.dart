@@ -45,17 +45,15 @@ class HeadlineBuilder extends MarkdownElementBuilder {
   final matchTypes = ['headline'];
 
   @override
-  void after(renderer, element) {
-    renderer.writeBlock(renderer.convertToBlock(
-      element.children,
-      padding: {
+  bool isBlock(element) => true;
+
+  @override
+  EdgeInsets? blockPadding(element) => {
         "1": h1Padding,
         "2": h2Padding,
         "3": h3Padding,
         "4": h4Padding,
         "5": h5Padding,
         "6": h6Padding,
-      }[element.attributes['level']],
-    ));
-  }
+      }[element.attributes['level']];
 }

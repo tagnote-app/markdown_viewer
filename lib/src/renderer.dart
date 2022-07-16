@@ -1,11 +1,13 @@
+import 'package:dart_markdown/dart_markdown.dart' as md;
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:markdown/markdown.dart' as md;
 
 import 'ast.dart';
 import 'builders/builder.dart';
 import 'builders/code_block_builder.dart';
+import 'builders/footnote_builder.dart';
 import 'builders/headline_builder.dart';
+import 'builders/image_builder.dart';
 import 'builders/list_builder.dart';
 import 'builders/simple_blocks_builder.dart';
 import 'builders/simple_inlines_builder.dart';
@@ -23,6 +25,8 @@ class MarkdownRenderer implements NodeVisitor {
     MarkdownListItemMarkerBuilder? listItemMarkerBuilder,
     MarkdownCheckboxBuilder? checkboxBuilder,
     MarkdownHighlightBuilder? highlightBuilder,
+    MarkdownImageBuilder? imageBuilder,
+    bool enableImageSize = false,
     List<MarkdownElementBuilder> elementBuilders = const [],
     bool selectable = false,
     TextAlign? textAlign,
@@ -49,6 +53,9 @@ class MarkdownRenderer implements NodeVisitor {
         strongEmphasis: styleSheet.strongEmphasis,
         highlight: styleSheet.highlight,
         strikethrough: styleSheet.strikethrough,
+        subscript: styleSheet.subscript,
+        superscript: styleSheet.superscript,
+        kbd: styleSheet.kbd,
         link: styleSheet.link,
         inlineCode: styleSheet.inlineCode,
         onTapLink: onTapLink,
@@ -73,6 +80,10 @@ class MarkdownRenderer implements NodeVisitor {
         tableCellPadding: styleSheet.tableCellPadding,
         tableColumnWidth: styleSheet.tableColumnWidth,
       ),
+      ImageBuilder(
+        imageBuilder: imageBuilder,
+        enableImageSize: enableImageSize,
+      ),
       CodeBlockBuilder(
         textStyle: styleSheet.codeBlock,
         codeblockPadding: styleSheet.codeblockPadding,
@@ -88,6 +99,12 @@ class MarkdownRenderer implements NodeVisitor {
         checkbox: styleSheet.checkbox,
         listItemMarkerBuilder: listItemMarkerBuilder,
         checkboxBuilder: checkboxBuilder,
+      ),
+      FootnoteBuilder(
+        footnote: styleSheet.footnote,
+        footnoteReference: styleSheet.footnoteReference,
+        footnoteReferenceDecoration: styleSheet.footnoteReferenceDecoration,
+        footnoteReferencePadding: styleSheet.footnoteReferencePadding,
       ),
     ];
 
@@ -115,7 +132,7 @@ class MarkdownRenderer implements NodeVisitor {
 
     _tree.add(_TreeElement.root());
 
-    for (final MarkdownNode node in transformAst(nodes)) {
+    for (final MarkdownNode node in AstTransformer().transform(nodes)) {
       assert(_tree.length == 1);
       node.accept(this);
     }
@@ -133,7 +150,7 @@ class MarkdownRenderer implements NodeVisitor {
 
     final parent = _tree.last;
     final builder = _builders[type]!;
-    builder.before(type, attributes);
+    builder.init(type, attributes);
 
     builder.parentStyle = parent.style;
     if (builder.replaceLineEndings(type) == false) {
@@ -181,7 +198,7 @@ class MarkdownRenderer implements NodeVisitor {
     final parent = _tree.last;
     final builder = _builders[type]!;
 
-    final textSpan = builder.createText(type, parent.style);
+    final textSpan = builder.createText(current, parent.style);
     if (textSpan != null) {
       current.children.add(buildRichText(textSpan, _textAlign));
     }
@@ -192,53 +209,31 @@ class MarkdownRenderer implements NodeVisitor {
       compressWidgets(current.children),
     );
 
-    builder.after(this, current);
+    final widget = builder.buildWidget(current);
+    final isBlock = builder.isBlock(current);
+    if (widget != null) {
+      // Add spacing between block elements
+      _tree.last.children.addIfTrue(
+        SizedBox(height: _blockSpacing),
+        isBlock && _tree.last.children.isNotEmpty,
+      );
+
+      if (widget is InlineWraper) {
+        parent.children.addAll(widget.children);
+      } else {
+        if (!isBlock) {
+          _checkInlineWidget(widget);
+        }
+
+        parent.children.add(widget);
+      }
+    }
 
     if (_keepLineEndingsWhen == type) {
       _keepLineEndingsWhen = null;
     }
+
     _gestureRecognizers.remove(type);
-  }
-
-  /// Adds [child] to the the children of the parent element as a block element.
-  ///
-  /// It will and a spacing between block elements.
-  void writeBlock(Widget child) {
-    _tree.last.children.addAll([
-      if (_tree.last.children.isNotEmpty) SizedBox(height: _blockSpacing),
-      child,
-    ]);
-  }
-
-  /// Adds [children] of current inline element as the children of the parent
-  /// element.
-  void writeInline(List<Widget> children) {
-    _tree.last.children.addAll(children);
-  }
-
-  /// Merges the [RichText] elements of [children] and returns a [Column] if the
-  /// [children] is not empty, otherwise returns a shrinked [SizedBox].
-  Widget convertToBlock(List<Widget> children, {EdgeInsets? padding}) {
-    if (children.isEmpty) {
-      return const SizedBox.shrink();
-    }
-
-    if (padding != null && padding != EdgeInsets.zero) {
-      children = [
-        Padding(
-          padding: padding,
-          child:
-              children.length == 1 ? children.single : Wrap(children: children),
-        )
-      ];
-    }
-
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisSize: MainAxisSize.min,
-      children: children,
-    );
   }
 
   /// Builds a [RichText] widget. It will build a [SelectableText] rich text if
@@ -273,4 +268,20 @@ class _TreeElement extends MarkdownTreeElement {
 
   _TreeElement.fromAstElement(MarkdownElement element, {TextStyle? style})
       : super(type: element.type, attributes: element.attributes, style: style);
+}
+
+void _checkInlineWidget(Widget widget) {
+  final allowedInlineWidgets = [
+    RichText,
+    SelectableText,
+    Text,
+    DefaultTextStyle,
+  ];
+
+  assert(
+    allowedInlineWidgets.contains(widget.runtimeType),
+    'It is not allowed to return ${widget.runtimeType} from BuildWidget'
+    ' when it is not a block widget. The allowed types:'
+    '$allowedInlineWidgets',
+  );
 }

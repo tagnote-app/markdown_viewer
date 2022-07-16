@@ -7,23 +7,19 @@
         "type": "Column",
         "children": [
           {
-            "type": "Wrap",
-            "children": [
-              {
-                "type": "RichText",
-                "text": {
-                  "type": "TextSpan",
-                  "text": "foo_bar",
-                  "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xff2196f3)"
-                  },
-                  "recognizer": "TapGestureRecognizer"
-                }
-              }
-            ]
+            "type": "RichText",
+            "textAlign": "TextAlign.start",
+            "text": {
+              "type": "TextSpan",
+              "text": "foo_bar",
+              "style": {
+                "fontFamily": ".SF UI Text",
+                "fontWeight": "FontWeight.w400",
+                "fontSize": 14.0,
+                "color": "Color(0xff2196f3)"
+              },
+              "recognizer": "TapGestureRecognizer"
+            }
           }
         ]
       }

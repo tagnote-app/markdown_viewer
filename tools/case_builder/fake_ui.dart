@@ -1,7 +1,12 @@
 // ignore_for_file: constant_identifier_names
 
+import 'dart:io';
+import 'dart:typed_data';
+
 abstract class Widget {
-  const Widget();
+  const Widget({this.key});
+
+  final Key? key;
 }
 
 abstract class StatefulWidget extends Widget {
@@ -51,6 +56,13 @@ class Flex extends MultiChildRenderObjectWidget {
   const Flex({
     List<Widget> children = const <Widget>[],
   }) : super(children: children);
+}
+
+class Flexible extends Widget {
+  const Flexible({
+    required this.child,
+  });
+  final Widget child;
 }
 
 class Column extends Flex {
@@ -192,6 +204,66 @@ class Padding extends SingleChildRenderObjectWidget {
   final EdgeInsetsGeometry padding;
 }
 
+class Align extends SingleChildRenderObjectWidget {
+  const Align({
+    this.alignment = Alignment.center,
+    Widget? child,
+  }) : super(child: child);
+  final AlignmentGeometry alignment;
+}
+
+abstract class FileSystemEntity {}
+
+class Image extends StatefulWidget {
+  const Image({
+    this.width,
+    this.height,
+    this.alignment = Alignment.center,
+  });
+  Image.network(String src,
+      {this.width, this.height, this.alignment = Alignment.center});
+  Image.file(File file,
+      {this.width, this.height, this.alignment = Alignment.center});
+  Image.memory(Uint8List bytes,
+      {this.width, this.height, this.alignment = Alignment.center});
+  Image.asset(String name,
+      {this.width, this.height, this.alignment = Alignment.center});
+
+  final double? width;
+  final double? height;
+  final AlignmentGeometry alignment;
+}
+
+abstract class AlignmentGeometry {
+  const AlignmentGeometry();
+}
+
+class Alignment extends AlignmentGeometry {
+  const Alignment(this.x, this.y);
+  final double x;
+  final double y;
+  static const Alignment center = Alignment(0.0, 0.0);
+  static const Alignment topLeft = Alignment(-1.0, -1.0);
+  static const Alignment topCenter = Alignment(0.0, -1.0);
+  static const Alignment topRight = Alignment(1.0, -1.0);
+  static String _stringify(double start, double y) {
+    if (start == -1.0 && y == -1.0) return 'Alignment.topStart';
+    if (start == 0.0 && y == -1.0) return 'Alignment.topCenter';
+    if (start == 1.0 && y == -1.0) return 'Alignment.topEnd';
+    if (start == -1.0 && y == 0.0) return 'Alignment.centerStart';
+    if (start == 0.0 && y == 0.0) return 'Alignment.center';
+    if (start == 1.0 && y == 0.0) return 'Alignment.centerEnd';
+    if (start == -1.0 && y == 1.0) return 'Alignment.bottomStart';
+    if (start == 0.0 && y == 1.0) return 'Alignment.bottomCenter';
+    if (start == 1.0 && y == 1.0) return 'Alignment.bottomEnd';
+    return 'Alignment(${start.toStringAsFixed(1)}, '
+        '${y.toStringAsFixed(1)})';
+  }
+
+  @override
+  String toString() => _stringify(x, y);
+}
+
 typedef GestureTapCallback = void Function();
 
 class TapGestureRecognizer extends GestureRecognizer {
@@ -328,12 +400,10 @@ class BoxConstraints extends Constraints {
   final double maxHeight;
 }
 
-class Expanded extends Widget {
+class Expanded extends Flexible {
   const Expanded({
-    required this.child,
-  });
-
-  final Widget child;
+    required Widget child,
+  }) : super(child: child);
 }
 
 class Scrollbar extends Widget {
@@ -383,6 +453,7 @@ class Container extends Widget {
   const Container({
     this.child,
     this.decoration,
+    this.padding,
     this.border,
     this.width,
   });
@@ -391,6 +462,7 @@ class Container extends Widget {
   final Widget? child;
   final BoxBorder? border;
   final double? width;
+  final EdgeInsets? padding;
 }
 
 class Divider extends StatelessWidget {
@@ -459,6 +531,7 @@ class TextStyle {
     this.color,
     this.backgroundColor,
     this.decoration,
+    this.fontFeatures,
   });
   TextStyle copyWith({
     String? fontFamily,
@@ -467,13 +540,17 @@ class TextStyle {
     double? fontSize,
     Color? color,
     Color? backgroundColor,
+    TextDecoration? decoration,
+    List<FontFeature>? fontFeatures,
   }) {
     return TextStyle(
       fontFamily: fontFamily ?? this.fontFamily,
       fontWeight: fontWeight ?? this.fontWeight,
       fontSize: fontSize ?? this.fontSize,
       fontStyle: fontStyle ?? this.fontStyle,
+      decoration: decoration ?? this.decoration,
       backgroundColor: backgroundColor ?? this.backgroundColor,
+      fontFeatures: fontFeatures ?? this.fontFeatures,
       color: color ?? this.color,
     );
   }
@@ -484,7 +561,9 @@ class TextStyle {
         fontStyle: other?.fontStyle,
         fontWeight: other?.fontWeight,
         color: other?.color,
+        decoration: other?.decoration,
         backgroundColor: other?.backgroundColor,
+        fontFeatures: other?.fontFeatures,
       );
 
   final String? fontFamily;
@@ -494,6 +573,7 @@ class TextStyle {
   final Color? color;
   final Color? backgroundColor;
   final TextDecoration? decoration;
+  final List<FontFeature>? fontFeatures;
 
   @override
   bool operator ==(Object other) {
@@ -503,7 +583,9 @@ class TextStyle {
         other.color == color &&
         other.backgroundColor == backgroundColor &&
         other.fontSize == fontSize &&
+        other.decoration == decoration &&
         other.fontWeight == fontWeight &&
+        listEquals(other.fontFeatures, fontFeatures) &&
         other.fontStyle == fontStyle &&
         other.fontFamily == fontFamily;
   }
@@ -519,9 +601,19 @@ class TextStyle {
       );
 }
 
-class BlockWidget implements Widget {}
+bool listEquals<T>(List<T>? a, List<T>? b) {
+  if (a == null) return b == null;
+  if (b == null || a.length != b.length) return false;
+  if (identical(a, b)) return true;
+  for (int index = 0; index < a.length; index += 1) {
+    if (a[index] != b[index]) return false;
+  }
+  return true;
+}
 
-class TextWidget implements Widget {}
+class BlockWidget extends Widget {}
+
+class TextWidget extends Widget {}
 
 class TextTheme {
   const TextTheme({
@@ -555,7 +647,10 @@ class ThemeData {
 
 class TextDecoration {
   const TextDecoration._(this._mask);
+  static const TextDecoration none = TextDecoration._(0x0);
   static const TextDecoration lineThrough = TextDecoration._(0x4);
+  static const TextDecoration underline = TextDecoration._(0x1);
+  static const TextDecoration overline = TextDecoration._(0x2);
   final int _mask;
 
   @override
@@ -565,7 +660,39 @@ class TextDecoration {
 
   @override
   int get hashCode => _mask.hashCode;
+
+  @override
+  String toString() {
+    if (_mask == 0) return 'TextDecoration.none';
+    final List<String> values = <String>[];
+    if (_mask & underline._mask != 0) values.add('underline');
+    if (_mask & overline._mask != 0) values.add('overline');
+    if (_mask & lineThrough._mask != 0) values.add('lineThrough');
+    if (values.length == 1) return 'TextDecoration.${values[0]}';
+    return 'TextDecoration.combine([${values.join(", ")}])';
+  }
 }
+
+class FontFeature {
+  const FontFeature.subscripts()
+      : feature = 'subs',
+        value = 1;
+  const FontFeature.superscripts()
+      : feature = 'sups',
+        value = 1;
+  final String feature;
+  final int value;
+
+  @override
+  String toString() => "FontFeature('$feature', $value)";
+}
+
+abstract class Element {
+  const Element(this.widget);
+  final Widget widget;
+}
+
+abstract class Key {}
 
 enum MainAxisAlignment {
   start,

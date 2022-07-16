@@ -8,26 +8,37 @@ List<Widget> mergeRichText(
     return children;
   }
 
-  final mergedWidgets = <Widget>[];
-  var textStack = <Widget>[];
+  final result = <Widget>[];
+  var inlineStack = <Widget>[];
 
-  void writeWidget() {
-    if (textStack.isEmpty) {
+  void popInlineWidgets() {
+    if (inlineStack.isEmpty) {
       return;
     }
 
-    mergedWidgets.addAll(textStack);
-    textStack = <Widget>[];
+    if (inlineStack.length == 1) {
+      result.add(inlineStack.single);
+    } else {
+      result.add(Wrap(
+        children: inlineStack,
+      ));
+    }
+
+    inlineStack = <Widget>[];
   }
 
   for (final child in children) {
     if (child is RichText || child is SelectableText) {
-      if (textStack.isEmpty) {
-        textStack.add(child);
+      if (inlineStack.isEmpty ||
+          (inlineStack.last is! RichText &&
+              inlineStack.last is! SelectableText) ||
+          _hasFontFeatures(child) ||
+          _hasFontFeatures(inlineStack.last)) {
+        inlineStack.add(child);
         continue;
       }
-      final previous = textStack.removeLast();
 
+      final previous = inlineStack.removeLast();
       final previousTextSpan = previous is SelectableText
           ? previous.textSpan!
           : (previous as RichText).text as TextSpan;
@@ -45,16 +56,36 @@ List<Widget> mergeRichText(
       }
 
       final mergedSpan = _mergeSimilarTextSpans(children);
-      textStack.add(richTextBuilder(mergedSpan, textAlign));
+      inlineStack.add(richTextBuilder(mergedSpan, textAlign));
+    } else if (child is Text || child is DefaultTextStyle) {
+      inlineStack.add(child);
     } else {
-      writeWidget();
-      mergedWidgets.add(child);
+      popInlineWidgets();
+      result.add(child);
     }
   }
 
-  writeWidget();
+  popInlineWidgets();
 
-  return mergedWidgets;
+  return result;
+}
+
+bool _hasFontFeatures(Widget widget) {
+  if (widget is! RichText && widget is! SelectableText) {
+    return false;
+  }
+
+  final textSpan = widget is SelectableText
+      ? widget.textSpan!
+      : (widget as RichText).text as TextSpan;
+
+  final children = textSpan.children != null
+      ? List<TextSpan>.from(textSpan.children!)
+      : [textSpan];
+
+  return children.any(
+    (element) => element.style?.fontFeatures?.isNotEmpty ?? false,
+  );
 }
 
 /// Combine text spans with equivalent properties into a single span.
@@ -87,4 +118,25 @@ TextSpan _mergeSimilarTextSpans(List<TextSpan>? textSpans) {
   return mergedSpans.length == 1
       ? mergedSpans.first
       : TextSpan(children: mergedSpans);
+}
+
+/// A fake widget in order to return a list of widget from
+/// [MarkdownElementBuilder.buildWidget] when it is an inline element.
+class InlineWraper extends Widget {
+  const InlineWraper(this.children, {Key? key}) : super(key: key);
+  final List<Widget> children;
+
+  @override
+  InlineWraperElement createElement() =>
+      InlineWraperElement(const SizedBox.shrink());
+}
+
+class InlineWraperElement extends Element {
+  InlineWraperElement(super.widget);
+
+  @override
+  bool get debugDoingBuild => false;
+
+  @override
+  void performRebuild() {}
 }

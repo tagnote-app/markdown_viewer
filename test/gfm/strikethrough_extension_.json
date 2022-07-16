@@ -11,13 +11,29 @@
             "textAlign": "TextAlign.start",
             "text": {
               "type": "TextSpan",
-              "text": "Hi Hello, world!",
-              "style": {
-                "fontFamily": ".SF UI Text",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
-              }
+              "children": [
+                {
+                  "type": "TextSpan",
+                  "text": "Hi",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)",
+                    "decoration": "TextDecoration.lineThrough"
+                  }
+                },
+                {
+                  "type": "TextSpan",
+                  "text": " Hello, world!",
+                  "style": {
+                    "fontFamily": ".SF UI Text",
+                    "fontWeight": "FontWeight.w400",
+                    "fontSize": 14.0,
+                    "color": "Color(0xdd000000)"
+                  }
+                }
+              ]
             }
           }
         ]

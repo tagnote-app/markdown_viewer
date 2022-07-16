@@ -10,7 +10,10 @@ class SimpleInlinesBuilder extends MarkdownElementBuilder {
     TextStyle? strongEmphasis,
     TextStyle? highlight,
     TextStyle? strikethrough,
+    TextStyle? subscript,
+    TextStyle? superscript,
     TextStyle? link,
+    TextStyle? kbd,
     TextStyle? inlineCode,
     MarkdownTapLinkCallback? onTapLink,
   })  : _onTapLink = onTapLink,
@@ -20,9 +23,15 @@ class SimpleInlinesBuilder extends MarkdownElementBuilder {
           'inlineCode': inlineCode,
           'highlight': highlight,
           'strikethrough': strikethrough,
+          'subscript': subscript,
+          'superscript': superscript,
           'link': link,
+          'kbd': kbd,
         });
   final MarkdownTapLinkCallback? _onTapLink;
+
+  @override
+  bool isBlock(element) => false;
 
   @override
   GestureRecognizer? gestureRecognizer(type, attributes) {
@@ -40,12 +49,12 @@ class SimpleInlinesBuilder extends MarkdownElementBuilder {
   }
 
   @override
-  TextSpan? createText(String type, TextStyle? style) {
-    if (type != 'hardLineBreak') {
+  TextSpan? createText(element, parentStyle) {
+    if (element.type != 'hardLineBreak') {
       return null;
     }
 
-    return TextSpan(text: '\n', style: style);
+    return TextSpan(text: '\n', style: parentStyle);
   }
 
   @override
@@ -53,16 +62,13 @@ class SimpleInlinesBuilder extends MarkdownElementBuilder {
     'emphasis',
     'strongEmphasis',
     'link',
-    'image',
     'hardLineBreak',
     'inlineCode',
     'highlight',
     'strikethrough',
     'emoji',
+    'superscript',
+    'subscript',
+    'kbd',
   ];
-
-  @override
-  void after(renderer, element) {
-    renderer.writeInline(element.children);
-  }
 }
