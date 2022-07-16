@@ -17,8 +17,8 @@ void main() {
 
 void generateTestCases(String flavorName) {
   final fileName = {
-    'common_mark': 'tools/assets/common_mark_tests.json',
-    'gfm': 'tools/assets/gfm_tests.json'
+    'common_mark': 'tool/assets/common_mark_tests.json',
+    'gfm': 'tool/assets/gfm_tests.json'
   }[flavorName];
 
   final url = {
