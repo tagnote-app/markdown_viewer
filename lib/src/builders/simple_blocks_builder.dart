@@ -31,9 +31,6 @@ class SimpleBlocksBuilder extends MarkdownElementBuilder {
   final matchTypes = ['paragraph', 'blockquote', 'thematicBreak'];
 
   @override
-  bool isBlock(element) => true;
-
-  @override
   EdgeInsets? blockPadding(element) {
     return element.type == 'paragraph' ? pPadding : null;
   }

@@ -263,10 +263,21 @@ class MarkdownRenderer implements NodeVisitor {
 }
 
 class _TreeElement extends MarkdownTreeElement {
-  _TreeElement.root() : super(type: '', style: null, attributes: const {});
+  _TreeElement.root()
+      : super(
+          type: '',
+          style: null,
+          attributes: const {},
+          isBlock: true,
+        );
 
   _TreeElement.fromAstElement(MarkdownElement element, {TextStyle? style})
-      : super(type: element.type, attributes: element.attributes, style: style);
+      : super(
+          type: element.type,
+          attributes: element.attributes,
+          style: style,
+          isBlock: element.isBlock,
+        );
 }
 
 void _checkInlineWidget(Widget widget) {

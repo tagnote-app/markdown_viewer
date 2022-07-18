@@ -56,7 +56,7 @@ packages:
       name: dart_markdown
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.5"
+    version: "2.0.0"
   fake_async:
     dependency: transitive
     description:
@@ -94,7 +94,7 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "0.1.0"
+    version: "0.2.0-dev"
   matcher:
     dependency: transitive
     description:

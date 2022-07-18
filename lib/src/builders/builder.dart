@@ -77,7 +77,8 @@ abstract class MarkdownElementBuilder {
   TextSpan? createText(MarkdownTreeElement element, TextStyle? parentStyle) =>
       null;
 
-  bool isBlock(MarkdownTreeElement element);
+  /// If it is a block element, it uses the value from [element] by default.
+  bool isBlock(MarkdownTreeElement element) => element.isBlock;
 
   EdgeInsets? blockPadding(MarkdownTreeElement element) => EdgeInsets.zero;
 
