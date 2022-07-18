@@ -1,4 +1,4 @@
-## 0.2.0-dev
+## 0.2.0
 
 - Update `dart_markdown` dependency to 2.0.0.
 - Set default value for `MarkdownElementBuilder.isBlock`.
