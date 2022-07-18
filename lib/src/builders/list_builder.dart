@@ -33,9 +33,6 @@ class ListBuilder extends MarkdownElementBuilder {
   bool _isList(String type) => type == 'orderedList' || type == 'bulletList';
 
   @override
-  bool isBlock(element) => true;
-
-  @override
   void init(type, attributes) {
     if (_isList(type)) {
       _listStrack.add(type);

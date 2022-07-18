@@ -6,11 +6,11 @@ class ExampleSyntax extends MdInlineSyntax {
   ExampleSyntax() : super(RegExp(r'#[^#]+?(?=\s+|$)'));
 
   @override
-  MdNode? parse(MdInlineParser parser, Match match) {
+  MdInlineObject? parse(MdInlineParser parser, Match match) {
     final markers = [parser.consume()];
     final content = parser.consumeBy(match[0]!.length - 1);
 
-    return MdElement(
+    return MdInlineElement(
       'example',
       markers: markers,
       children: content.map((e) => MdText.fromSpan(e)).toList(),

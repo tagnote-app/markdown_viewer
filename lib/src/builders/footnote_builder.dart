@@ -18,9 +18,6 @@ class FootnoteBuilder extends MarkdownElementBuilder {
   EdgeInsets? footnoteReferencePadding;
 
   @override
-  bool isBlock(element) => element.type == 'footnoteReference';
-
-  @override
   final matchTypes = [
     'footnote',
     'footnoteReference',

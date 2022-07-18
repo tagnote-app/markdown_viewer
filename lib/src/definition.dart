@@ -31,8 +31,17 @@ typedef MdInlineSyntax = md.InlineSyntax;
 /// Alias name of Node from dart_markdown package.
 typedef MdNode = md.Node;
 
+/// Alias name of InlineObject from dart_markdown package.
+typedef MdInlineObject = md.InlineObject;
+
+/// Alias name of InlineElement from dart_markdown package.
+typedef MdInlineElement = md.InlineElement;
+
 /// Alias name of Element from dart_markdown package.
 typedef MdElement = md.Element;
+
+/// Alias name of BlockElement from dart_markdown package.
+typedef MdBlockElement = md.BlockElement;
 
 /// Alias name of Text from dart_markdown package.
 typedef MdText = md.Text;
@@ -58,10 +67,12 @@ abstract class MarkdownTreeElement {
   MarkdownTreeElement({
     required this.type,
     required this.attributes,
+    required this.isBlock,
     this.style,
   });
 
   final String type;
+  final bool isBlock;
   final TextStyle? style;
   final Map<String, String> attributes;
   final List<Widget> children = <Widget>[];

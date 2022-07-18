@@ -45,9 +45,6 @@ class HeadlineBuilder extends MarkdownElementBuilder {
   final matchTypes = ['headline'];
 
   @override
-  bool isBlock(element) => true;
-
-  @override
   EdgeInsets? blockPadding(element) => {
         "1": h1Padding,
         "2": h2Padding,

@@ -25,9 +25,6 @@ class CodeBlockBuilder extends MarkdownElementBuilder {
   TextAlign textAlign(parent) => TextAlign.start;
 
   @override
-  bool isBlock(element) => true;
-
-  @override
   TextSpan buildText(text, parent) {
     return highlightBuilder == null
         ? TextSpan(

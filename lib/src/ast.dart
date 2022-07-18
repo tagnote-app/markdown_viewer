@@ -13,11 +13,13 @@ abstract class MarkdownNode {
 class MarkdownElement extends MarkdownNode {
   const MarkdownElement(
     this.type, {
+    required this.isBlock,
     this.children = const [],
     this.attributes = const {},
   });
 
   final String type;
+  final bool isBlock;
   final List<MarkdownNode> children;
   final Map<String, String> attributes;
 

@@ -54,6 +54,7 @@ class AstTransformer {
         popBuffer();
         result.add(MarkdownElement(
           node.type,
+          isBlock: node.isBlock,
           attributes: node.attributes,
           children: _iterateNodes(node.children),
         ));
@@ -76,16 +77,22 @@ class AstTransformer {
     final listItem = _footnoteReferences
         .map((e) => MarkdownElement(
               'listItem',
+              isBlock: e.isBlock,
               attributes: {'number': e.attributes['number']!},
               children: _iterateNodes(e.children),
             ))
         .toList();
 
-    return MarkdownElement('footnoteReference', children: [
-      MarkdownElement(
-        'orderedList',
-        children: listItem,
-      )
-    ]);
+    return MarkdownElement(
+      'footnoteReference',
+      children: [
+        MarkdownElement(
+          'orderedList',
+          isBlock: true,
+          children: listItem,
+        )
+      ],
+      isBlock: true,
+    );
   }
 }
