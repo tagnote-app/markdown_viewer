@@ -1,3 +1,8 @@
+## 0.2.0+1
+
+- Update README.
+- Fix a minor mistake.
+
 ## 0.2.0
 
 - Update `dart_markdown` dependency to 2.0.0.
