@@ -1,10 +1,6 @@
 A Markdown viewer widget for Flutter. It renders Markdown string to rich text
 output.
 
-### Dependency
-
-[dart_markdown](https://github.com/chenzhiguang/dart_markdown)
-
 ### Usage
 
 ```dart
@@ -19,4 +15,45 @@ MarkdownViewer(
   syntaxExtensions: const [],
   elementBuilders: const [],
 );
+```
+
+### How to create a syntax extension
+
+```dart
+class ExampleSyntax extends MdInlineSyntax {
+  ExampleSyntax() : super(RegExp(r'#[^#]+?(?=\s+|$)'));
+
+  @override
+  MdInlineObject? parse(MdInlineParser parser, Match match) {
+    final markers = [parser.consume()];
+    final content = parser.consumeBy(match[0]!.length - 1);
+
+    return MdInlineElement(
+      'example',
+      markers: markers,
+      children: content.map((e) => MdText.fromSpan(e)).toList(),
+    );
+  }
+}
+
+```
+
+### How to create a element builder
+
+```dart
+class ExampleBuilder extends MarkdownElementBuilder {
+  ExampleBuilder()
+      : super(
+          textStyle: const TextStyle(
+            color: Colors.green,
+            decoration: TextDecoration.underline,
+          ),
+        );
+
+  @override
+  bool isBlock(element) => false;
+
+  @override
+  List<String> matchTypes = <String>['example'];
+}
 ```
