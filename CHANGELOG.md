@@ -1,3 +1,8 @@
+## 0.2.0+2
+
+- Fix an issue on `highlightBuilder`
+  [PR 22](https://github.com/chenzhiguang/markdown_viewer/pull/22)
+
 ## 0.2.0+1
 
 - Update README.
