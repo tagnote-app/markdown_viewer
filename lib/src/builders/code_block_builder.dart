@@ -26,13 +26,18 @@ class CodeBlockBuilder extends MarkdownElementBuilder {
 
   @override
   TextSpan buildText(text, parent) {
+    final textContent = text.trimRight();
+
     return highlightBuilder == null
         ? TextSpan(
-            text: text.trimRight(),
+            text: textContent,
             style: parent.style,
           )
-        : highlightBuilder!(text, parent.attributes['language'],
-            parent.attributes['infoString']);
+        : highlightBuilder!(
+            textContent,
+            parent.attributes['language'],
+            parent.attributes['infoString'],
+          );
   }
 
   @override
