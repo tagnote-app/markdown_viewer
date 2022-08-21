@@ -23,6 +23,7 @@ class MarkdownViewer extends StatefulWidget {
     this.enableImageSize = false,
     this.elementBuilders = const [],
     this.syntaxExtensions = const [],
+    this.selectable = false,
     Key? key,
   }) : super(key: key);
 
@@ -41,6 +42,7 @@ class MarkdownViewer extends StatefulWidget {
   final MarkdownHighlightBuilder? highlightBuilder;
   final List<MarkdownElementBuilder> elementBuilders;
   final List<md.Syntax> syntaxExtensions;
+  final bool selectable;
 
   @override
   State<MarkdownViewer> createState() => _MarkdownViewerState();
@@ -92,6 +94,7 @@ class _MarkdownViewerState extends State<MarkdownViewer> {
       checkboxBuilder: widget.checkboxBuilder,
       highlightBuilder: widget.highlightBuilder,
       elementBuilders: widget.elementBuilders,
+      selectable: widget.selectable,
     );
     final astNodes = document.parseLines(widget.data);
 
