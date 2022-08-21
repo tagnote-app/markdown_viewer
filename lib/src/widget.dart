@@ -20,6 +20,7 @@ class MarkdownViewer extends StatefulWidget {
     this.enableSuperscript = false,
     this.enableKbd = false,
     this.enableFootnote = false,
+    this.enableAutolinkExtension = true,
     this.enableImageSize = false,
     this.elementBuilders = const [],
     this.syntaxExtensions = const [],
@@ -34,6 +35,7 @@ class MarkdownViewer extends StatefulWidget {
   final bool enableSuperscript;
   final bool enableKbd;
   final bool enableFootnote;
+  final bool enableAutolinkExtension;
   final MarkdownImageBuilder? imageBuilder;
   final MarkdownStyle? styleSheet;
   final MarkdownTapLinkCallback? onTapLink;
@@ -83,6 +85,7 @@ class _MarkdownViewerState extends State<MarkdownViewer> {
       enableSuperscript: widget.enableSuperscript,
       enableKbd: widget.enableKbd,
       enableFootnote: widget.enableFootnote,
+      enableAutolinkExtension: widget.enableAutolinkExtension,
       extensions: widget.syntaxExtensions,
     );
     final renderer = MarkdownRenderer(
