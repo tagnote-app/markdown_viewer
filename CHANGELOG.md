@@ -1,3 +1,10 @@
+## 0.2.1
+
+- Add `enableAutolinkExtension` option to widget
+- Add `nodesFilter` option to widget
+- Add `selectable` option to widget
+- Update to `dart_markdown` 2.1.0
+
 ## 0.2.0+2
 
 - Fix an issue on `highlightBuilder`
