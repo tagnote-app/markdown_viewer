@@ -20,9 +20,12 @@ class MarkdownViewer extends StatefulWidget {
     this.enableSuperscript = false,
     this.enableKbd = false,
     this.enableFootnote = false,
+    this.enableAutolinkExtension = true,
     this.enableImageSize = false,
     this.elementBuilders = const [],
     this.syntaxExtensions = const [],
+    this.selectable = false,
+    this.nodesFilter,
     Key? key,
   }) : super(key: key);
 
@@ -33,6 +36,7 @@ class MarkdownViewer extends StatefulWidget {
   final bool enableSuperscript;
   final bool enableKbd;
   final bool enableFootnote;
+  final bool enableAutolinkExtension;
   final MarkdownImageBuilder? imageBuilder;
   final MarkdownStyle? styleSheet;
   final MarkdownTapLinkCallback? onTapLink;
@@ -41,6 +45,27 @@ class MarkdownViewer extends StatefulWidget {
   final MarkdownHighlightBuilder? highlightBuilder;
   final List<MarkdownElementBuilder> elementBuilders;
   final List<md.Syntax> syntaxExtensions;
+  final bool selectable;
+
+  /// A function used to modify the parsed AST nodes.
+  ///
+  /// It is useful for example when need to check if the parsed result contains
+  /// any text content:
+  ///
+  /// ```dart
+  /// nodesFilter: (nodes) {
+  ///   if (nodes.map((e) => e.textContent).join().isNotEmpty) {
+  ///     return nodes;
+  ///   }
+  ///   return [
+  ///     md.BlockElement(
+  ///       'paragraph',
+  ///       children: [md.Text.fromString('empty')],
+  ///     )
+  ///   ];
+  /// }
+  /// ```
+  final List<md.Node> Function(List<md.Node> nodes)? nodesFilter;
 
   @override
   State<MarkdownViewer> createState() => _MarkdownViewerState();
@@ -81,6 +106,7 @@ class _MarkdownViewerState extends State<MarkdownViewer> {
       enableSuperscript: widget.enableSuperscript,
       enableKbd: widget.enableKbd,
       enableFootnote: widget.enableFootnote,
+      enableAutolinkExtension: widget.enableAutolinkExtension,
       extensions: widget.syntaxExtensions,
     );
     final renderer = MarkdownRenderer(
@@ -92,8 +118,13 @@ class _MarkdownViewerState extends State<MarkdownViewer> {
       checkboxBuilder: widget.checkboxBuilder,
       highlightBuilder: widget.highlightBuilder,
       elementBuilders: widget.elementBuilders,
+      selectable: widget.selectable,
     );
-    final astNodes = document.parseLines(widget.data);
+
+    var astNodes = document.parseLines(widget.data);
+    if (widget.nodesFilter != null) {
+      astNodes = widget.nodesFilter!(astNodes);
+    }
 
     _children = renderer.render(astNodes);
   }

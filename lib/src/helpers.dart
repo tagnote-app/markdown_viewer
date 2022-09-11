@@ -32,6 +32,8 @@ List<Widget> mergeRichText(
       if (inlineStack.isEmpty ||
           (inlineStack.last is! RichText &&
               inlineStack.last is! SelectableText) ||
+          _hasWidgetSpanText(child) ||
+          _hasWidgetSpanText(inlineStack.last) ||
           _hasFontFeatures(child) ||
           _hasFontFeatures(inlineStack.last)) {
         inlineStack.add(child);
@@ -69,6 +71,9 @@ List<Widget> mergeRichText(
 
   return result;
 }
+
+bool _hasWidgetSpanText(Widget widget) =>
+    widget is RichText && widget.text is WidgetSpan;
 
 bool _hasFontFeatures(Widget widget) {
   if (widget is! RichText && widget is! SelectableText) {
