@@ -49,7 +49,7 @@ packages:
       name: dart_markdown
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.1.0"
+    version: "2.1.1"
   fake_async:
     dependency: transitive
     description:
