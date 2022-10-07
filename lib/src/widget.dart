@@ -1,9 +1,11 @@
 import 'package:dart_markdown/dart_markdown.dart' as md;
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 import 'builders/builder.dart';
 import 'definition.dart';
 import 'renderer.dart';
+import 'selection/markdown_selection_controls.dart';
 import 'style.dart';
 
 class MarkdownViewer extends StatefulWidget {
@@ -26,6 +28,7 @@ class MarkdownViewer extends StatefulWidget {
     this.elementBuilders = const [],
     this.syntaxExtensions = const [],
     this.nodesFilter,
+    this.selectionColor,
     Key? key,
   }) : super(key: key);
 
@@ -46,6 +49,7 @@ class MarkdownViewer extends StatefulWidget {
   final MarkdownHighlightBuilder? highlightBuilder;
   final List<MarkdownElementBuilder> elementBuilders;
   final List<md.Syntax> syntaxExtensions;
+  final Color? selectionColor;
 
   /// A function used to modify the parsed AST nodes.
   ///
@@ -72,29 +76,24 @@ class MarkdownViewer extends StatefulWidget {
 }
 
 class _MarkdownViewerState extends State<MarkdownViewer> {
-  List<Widget> _children = [];
-
   @override
   Widget build(BuildContext context) {
-    _parseMarkdown();
-
-    Widget widget;
-    if (_children.length > 1) {
-      widget = Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: _children,
-      );
-    } else if (_children.length == 1) {
-      widget = _children.single;
+    if (widget.selectionColor == null) {
+      return _buildMarkdown();
     } else {
-      widget = const SizedBox.shrink();
+      return SelectableRegion(
+        selectionControls: MarkdownSelectionControls(),
+        focusNode: FocusNode(),
+        child: Builder(
+          builder: (context) => _buildMarkdown(
+            selectionRegistrar: SelectionContainer.maybeOf(context),
+          ),
+        ),
+      );
     }
-
-    return widget;
   }
 
-  void _parseMarkdown() {
+  Widget _buildMarkdown({SelectionRegistrar? selectionRegistrar}) {
     final theme = Theme.of(context);
     final md.Document document = md.Document(
       enableHtmlBlock: false,
@@ -110,6 +109,7 @@ class _MarkdownViewerState extends State<MarkdownViewer> {
       forceTightList: widget.forceTightList,
       extensions: widget.syntaxExtensions,
     );
+
     final renderer = MarkdownRenderer(
       styleSheet: widget.styleSheet ?? MarkdownStyle.fromTheme(theme),
       onTapLink: widget.onTapLink,
@@ -119,6 +119,8 @@ class _MarkdownViewerState extends State<MarkdownViewer> {
       checkboxBuilder: widget.checkboxBuilder,
       highlightBuilder: widget.highlightBuilder,
       elementBuilders: widget.elementBuilders,
+      selectionColor: widget.selectionColor,
+      selectionRegistrar: selectionRegistrar,
     );
 
     var astNodes = document.parseLines(widget.data);
@@ -126,6 +128,21 @@ class _MarkdownViewerState extends State<MarkdownViewer> {
       astNodes = widget.nodesFilter!(astNodes);
     }
 
-    _children = renderer.render(astNodes);
+    final children = renderer.render(astNodes);
+
+    Widget markdown;
+    if (children.length > 1) {
+      markdown = Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: children,
+      );
+    } else if (children.length == 1) {
+      markdown = children.single;
+    } else {
+      markdown = const SizedBox.shrink();
+    }
+
+    return markdown;
   }
 }

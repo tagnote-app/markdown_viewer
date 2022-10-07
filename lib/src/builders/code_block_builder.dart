@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../definition.dart';
+import '../helpers.dart';
 import 'builder.dart';
 
 class CodeBlockBuilder extends MarkdownElementBuilder {
@@ -25,19 +26,32 @@ class CodeBlockBuilder extends MarkdownElementBuilder {
   TextAlign textAlign(parent) => TextAlign.start;
 
   @override
-  TextSpan buildText(text, parent) {
+  TextSpan buildText(text, parent, selectable) {
     final textContent = text.trimRight();
 
-    return highlightBuilder == null
-        ? TextSpan(
-            text: textContent,
-            style: parent.style,
-          )
-        : highlightBuilder!(
-            textContent,
-            parent.attributes['language'],
-            parent.attributes['infoString'],
-          );
+    if (highlightBuilder == null) {
+      return TextSpan(
+        text: textContent,
+        style: parent.style,
+        mouseCursor: mouseCursor(selectable),
+      );
+    }
+
+    final spans = highlightBuilder!(
+      textContent,
+      parent.attributes['language'],
+      parent.attributes['infoString'],
+    );
+
+    if (spans.isEmpty) {
+      return const TextSpan(text: '');
+    }
+
+    return TextSpan(
+      children: spans,
+      style: parent.style,
+      mouseCursor: mouseCursor(selectable),
+    );
   }
 
   @override
