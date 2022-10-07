@@ -4,11 +4,13 @@
   `TextSpan` to `List<TextSpan>`.
 - **Breaking chang**: Remove `selectable` option from `MarkdownViewer` and
   `MarkdownRenderer`.
+- **Breaking chang**: Remove `MarkdownStyle.fromTheme`.
 - Add a new optional parameter `selectionColor` to `MarkdownViewer`, with a
   default value `Color(0x4a006ff8)`, the text will become unselectable when the
   value is `null`.
 - Add optional parameters `selectionRegistrar` and `selectionColor` to
   `MarkdownRenderer`.
+- Add a _copy to clipboard_ button for code block.
 
 ## 0.2.1
 

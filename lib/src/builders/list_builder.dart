@@ -99,12 +99,16 @@ class ListBuilder extends MarkdownElementBuilder {
       return checkboxBuilder!(checked);
     }
 
+    final checkboxStyle = const TextStyle(
+      fontSize: 18.0,
+    ).merge(checkbox);
+
     return Padding(
       padding: listItemMarkerPadding,
       child: Icon(
         checked ? Icons.check_box : Icons.check_box_outline_blank,
-        size: checkbox?.fontSize,
-        color: checkbox?.color,
+        size: checkboxStyle.fontSize,
+        color: checkboxStyle.color,
       ),
     );
   }

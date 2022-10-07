@@ -1,9 +1,22 @@
 // ignore_for_file: avoid_print
 
 import 'package:flutter/material.dart';
+import 'package:flutter_prism/flutter_prism.dart';
 import 'package:markdown_viewer/markdown_viewer.dart';
 
 import 'extension.dart';
+
+const markdown = r'''
+## Markdown Viewer
+
+```dart
+// Dart language.
+void main() {
+  print('Hello, World!');
+}
+```
+>>>
+''';
 
 void main() {
   runApp(const MyApp());
@@ -27,13 +40,6 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const markdown = r'''
-Hello **Markdown**!
-
----
-#example
-''';
-
     return Scaffold(
       appBar: AppBar(title: const Text('MarkdownViewer Demo')),
       body: Padding(
@@ -47,12 +53,23 @@ Hello **Markdown**!
           enableImageSize: false,
           enableKbd: false,
           syntaxExtensions: [ExampleSyntax()],
+          highlightBuilder: (text, language, infoString) {
+            final prism = Prism(style: PrismStyle());
+            return prism.render(text, language ?? 'plain');
+          },
           onTapLink: (href, title) {
             print({href, title});
           },
           elementBuilders: [
             ExampleBuilder(),
           ],
+          styleSheet: const MarkdownStyle(
+            codeBlock: TextStyle(
+              letterSpacing: -0.3,
+              fontSize: 14,
+              fontFamily: 'RobotoMono',
+            ),
+          ),
         ),
       ),
     );

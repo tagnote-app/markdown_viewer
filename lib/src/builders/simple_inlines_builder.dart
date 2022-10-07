@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
@@ -18,14 +20,29 @@ class SimpleInlinesBuilder extends MarkdownElementBuilder {
     MarkdownTapLinkCallback? onTapLink,
   })  : _onTapLink = onTapLink,
         super(textStyleMap: {
-          'emphasis': emphasis,
-          'strongEmphasis': strongEmphasis,
-          'inlineCode': inlineCode,
-          'highlight': highlight,
-          'strikethrough': strikethrough,
-          'subscript': subscript,
-          'superscript': superscript,
-          'link': link,
+          'emphasis': const TextStyle(
+            fontStyle: FontStyle.italic,
+          ).merge(emphasis),
+          'strongEmphasis': const TextStyle(
+            fontWeight: FontWeight.w700,
+          ).merge(strongEmphasis),
+          'inlineCode': const TextStyle(
+            fontFamily: 'monospace',
+          ).merge(inlineCode),
+          'highlight': const TextStyle(
+            backgroundColor: Color(0xffffee00),
+          ).merge(highlight),
+          'strikethrough': const TextStyle(
+            color: Color(0xffff6666),
+            decoration: TextDecoration.lineThrough,
+          ).merge(strikethrough),
+          'subscript': const TextStyle(
+            fontFeatures: [FontFeature.subscripts()],
+          ).merge(subscript),
+          'superscript': const TextStyle(
+            fontFeatures: [FontFeature.superscripts()],
+          ).merge(superscript),
+          'link': const TextStyle(color: Color(0xff2196f3)).merge(link),
           'kbd': kbd,
         });
   final MarkdownTapLinkCallback? _onTapLink;

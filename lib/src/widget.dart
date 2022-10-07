@@ -94,7 +94,6 @@ class _MarkdownViewerState extends State<MarkdownViewer> {
   }
 
   Widget _buildMarkdown({SelectionRegistrar? selectionRegistrar}) {
-    final theme = Theme.of(context);
     final md.Document document = md.Document(
       enableHtmlBlock: false,
       enableRawHtml: false,
@@ -111,7 +110,7 @@ class _MarkdownViewerState extends State<MarkdownViewer> {
     );
 
     final renderer = MarkdownRenderer(
-      styleSheet: widget.styleSheet ?? MarkdownStyle.fromTheme(theme),
+      styleSheet: widget.styleSheet ?? const MarkdownStyle(),
       onTapLink: widget.onTapLink,
       enableImageSize: widget.enableImageSize,
       imageBuilder: widget.imageBuilder,

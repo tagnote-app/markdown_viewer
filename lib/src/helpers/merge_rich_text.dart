@@ -135,6 +135,3 @@ class InlineWraperElement extends Element {
   @override
   void performRebuild() {}
 }
-
-MouseCursor? mouseCursor(bool selectable) =>
-    selectable ? SystemMouseCursors.text : null;

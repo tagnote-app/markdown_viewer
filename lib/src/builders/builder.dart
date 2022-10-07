@@ -2,7 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 import '../definition.dart';
-import '../helpers.dart';
+import '../helpers/inline_wraper.dart';
 
 abstract class MarkdownElementBuilder {
   MarkdownElementBuilder({
@@ -50,10 +50,13 @@ abstract class MarkdownElementBuilder {
   /// Builds a [TextStyle] for the current element. It merges the [textStyle]
   /// of current matched element into [parentStyle] and returns the result by
   /// default.
-  TextStyle? buildTextStyle(String type, Attributes attributes) {
+  TextStyle? buildTextStyle(
+    TextStyle defaultStyle,
+    String type,
+    Attributes attributes,
+  ) {
     final currentStyle = textStyle ?? textStyleMap?[type];
-
-    return parentStyle?.merge(currentStyle) ?? currentStyle;
+    return defaultStyle.merge(parentStyle).merge(currentStyle);
   }
 
   /// Runs when current element contains md.Text child.

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 import 'ast.dart';
+import 'builders/blockquote_builder.dart';
 import 'builders/builder.dart';
 import 'builders/code_block_builder.dart';
 import 'builders/footnote_builder.dart';
@@ -14,7 +15,8 @@ import 'builders/simple_inlines_builder.dart';
 import 'builders/table_bilder.dart';
 import 'definition.dart';
 import 'extensions.dart';
-import 'helpers.dart';
+import 'helpers/merge_rich_text.dart';
+import 'helpers/utils.dart';
 import 'style.dart';
 import 'transformer.dart';
 
@@ -34,6 +36,7 @@ class MarkdownRenderer implements NodeVisitor {
   })  : _selectionColor = selectionColor,
         _selectionRegistrar = selectionRegistrar,
         _blockSpacing = styleSheet.blockSpacing,
+        _styleSheet = styleSheet,
         _textAlign = textAlign ?? TextAlign.start {
     final defaultBuilders = [
       HeadlineBuilder(
@@ -64,10 +67,7 @@ class MarkdownRenderer implements NodeVisitor {
       ),
       SimpleBlocksBuilder(
         paragraph: styleSheet.paragraph,
-        pPadding: styleSheet.pPadding,
-        blockquote: styleSheet.blockquote,
-        blockquoteDecoration: styleSheet.blockquoteDecoration,
-        blockquotePadding: styleSheet.blockquotePadding,
+        paragraphPadding: styleSheet.paragraphPadding,
         dividerColor: styleSheet.dividerColor,
         dividerHeight: styleSheet.dividerHeight,
         dividerThickness: styleSheet.dividerThickness,
@@ -88,9 +88,14 @@ class MarkdownRenderer implements NodeVisitor {
       ),
       CodeBlockBuilder(
         textStyle: styleSheet.codeBlock,
-        codeblockPadding: styleSheet.codeblockPadding,
-        codeblockDecoration: styleSheet.codeblockDecoration,
+        padding: styleSheet.codeblockPadding,
+        decoration: styleSheet.codeblockDecoration,
         highlightBuilder: highlightBuilder,
+      ),
+      BlockquoteBuilder(
+        textStyle: styleSheet.blockquote,
+        decoration: styleSheet.blockquoteDecoration,
+        padding: styleSheet.blockquotePadding,
       ),
       ListBuilder(
         list: styleSheet.list,
@@ -123,6 +128,7 @@ class MarkdownRenderer implements NodeVisitor {
   final SelectionRegistrar? _selectionRegistrar;
   bool get _selectable =>
       _selectionColor != null && _selectionRegistrar != null;
+  final MarkdownStyle _styleSheet;
 
   String? _keepLineEndingsWhen;
   final _gestureRecognizers = <String, GestureRecognizer>{};
@@ -166,9 +172,15 @@ class MarkdownRenderer implements NodeVisitor {
       builder.gestureRecognizer(type, attributes),
     );
 
+    final defaultTextStyle = const TextStyle(
+      fontSize: 16,
+      height: 1.5,
+      color: Color(0xff333333),
+    ).merge(_styleSheet.textStyle);
+
     _tree.add(_TreeElement.fromAstElement(
       element,
-      style: builder.buildTextStyle(type, attributes),
+      style: builder.buildTextStyle(defaultTextStyle, type, attributes),
     ));
     return true;
   }

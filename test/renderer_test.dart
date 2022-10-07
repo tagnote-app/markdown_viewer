@@ -6,8 +6,6 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:markdown_viewer/markdown_viewer.dart';
 import 'package:markdown_viewer/src/extensions.dart';
 
-import 'theme_data.dart';
-
 void main() {
   // _testDirectory('common_mark');
   _testDirectory('original');
@@ -72,7 +70,7 @@ void _testFile(
         enableFootnote: enableFootnote,
       ).parseLines(data);
       final actual = MarkdownRenderer(
-        styleSheet: MarkdownStyle.fromTheme(themeData),
+        styleSheet: const MarkdownStyle(),
         onTapLink: (_, __) {},
       ).render(nodes).map((e) => e.toMap()).toList();
 

@@ -3,6 +3,16 @@ import 'package:flutter/material.dart';
 import '../definition.dart';
 import 'builder.dart';
 
+const _tableBorderSide = BorderSide(color: Color(0xffcccccc));
+const _tableBorder = TableBorder(
+  top: _tableBorderSide,
+  left: _tableBorderSide,
+  right: _tableBorderSide,
+  bottom: _tableBorderSide,
+  horizontalInside: _tableBorderSide,
+  verticalInside: _tableBorderSide,
+);
+
 class TableBuilder extends MarkdownElementBuilder {
   TableBuilder({
     TextStyle? table,
@@ -15,7 +25,9 @@ class TableBuilder extends MarkdownElementBuilder {
     required this.tableColumnWidth,
   }) : super(textStyleMap: {
           'table': table,
-          'tableHead': tableHead,
+          'tableHead': const TextStyle(
+            fontWeight: FontWeight.w600,
+          ).merge(tableHead),
           'tableBody': tableBody,
         });
 
@@ -85,7 +97,7 @@ class TableBuilder extends MarkdownElementBuilder {
       return Table(
         defaultColumnWidth: tableColumnWidth,
         defaultVerticalAlignment: TableCellVerticalAlignment.middle,
-        border: tableBorder,
+        border: tableBorder ?? _tableBorder,
         children: _tableStack.removeLast().rows,
       );
     } else if (type == 'tableHeadCell' || type == 'tableBodyCell') {
