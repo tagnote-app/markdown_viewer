@@ -27,10 +27,8 @@ class MarkdownRenderer implements NodeVisitor {
     MarkdownImageBuilder? imageBuilder,
     bool enableImageSize = false,
     List<MarkdownElementBuilder> elementBuilders = const [],
-    bool selectable = false,
     TextAlign? textAlign,
-  })  : _selectable = selectable,
-        _blockSpacing = styleSheet.blockSpacing,
+  })  : _blockSpacing = styleSheet.blockSpacing,
         _textAlign = textAlign ?? TextAlign.start {
     final defaultBuilders = [
       HeadlineBuilder(
@@ -114,7 +112,6 @@ class MarkdownRenderer implements NodeVisitor {
     }
   }
 
-  final bool _selectable;
   final TextAlign _textAlign;
   final double _blockSpacing;
 
@@ -235,21 +232,12 @@ class MarkdownRenderer implements NodeVisitor {
     _gestureRecognizers.remove(type);
   }
 
-  /// Builds a [RichText] widget. It will build a [SelectableText] rich text if
-  /// [_selectable] is true.
+  /// Builds a [RichText] widget.
   Widget buildRichText(TextSpan text, TextAlign textAlign) {
-    if (_selectable) {
-      return SelectableText.rich(
-        text,
-        textAlign: textAlign,
-        onTap: () {},
-      );
-    } else {
-      return RichText(
-        text: text,
-        textAlign: textAlign,
-      );
-    }
+    return RichText(
+      text: text,
+      textAlign: textAlign,
+    );
   }
 
   /// Merges the [RichText] elements of [widgets] while it is possible.

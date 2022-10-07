@@ -25,7 +25,6 @@ class MarkdownViewer extends StatefulWidget {
     this.enableImageSize = false,
     this.elementBuilders = const [],
     this.syntaxExtensions = const [],
-    this.selectable = false,
     this.nodesFilter,
     Key? key,
   }) : super(key: key);
@@ -47,7 +46,6 @@ class MarkdownViewer extends StatefulWidget {
   final MarkdownHighlightBuilder? highlightBuilder;
   final List<MarkdownElementBuilder> elementBuilders;
   final List<md.Syntax> syntaxExtensions;
-  final bool selectable;
 
   /// A function used to modify the parsed AST nodes.
   ///
@@ -121,7 +119,6 @@ class _MarkdownViewerState extends State<MarkdownViewer> {
       checkboxBuilder: widget.checkboxBuilder,
       highlightBuilder: widget.highlightBuilder,
       elementBuilders: widget.elementBuilders,
-      selectable: widget.selectable,
     );
 
     var astNodes = document.parseLines(widget.data);
