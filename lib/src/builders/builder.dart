@@ -59,9 +59,15 @@ abstract class MarkdownElementBuilder {
   /// Runs when current element contains md.Text child.
   ///
   /// The [style] is from [buildTextStyle].
-  TextSpan buildText(String text, MarkdownTreeElement parent) => TextSpan(
+  TextSpan buildText(
+    String text,
+    MarkdownTreeElement parent,
+    bool selectable,
+  ) =>
+      TextSpan(
         text: text,
         style: parent.style,
+        mouseCursor: selectable ? SystemMouseCursors.text : null,
       );
 
   /// Sets a new [TextAlign] instead of using the default one.

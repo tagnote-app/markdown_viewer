@@ -56,7 +56,7 @@ typedef MdBlockParser = md.BlockParser;
 typedef MarkdownImageBuilder = Widget Function(Uri uri, MarkdownImageInfo info);
 
 /// Syntax highlights [text] for codeBlock element.
-typedef MarkdownHighlightBuilder = TextSpan Function(
+typedef MarkdownHighlightBuilder = List<TextSpan> Function(
   String text,
   String? language,
   String? infoString,

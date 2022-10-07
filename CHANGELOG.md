@@ -1,3 +1,15 @@
+## 0.3.0-dev
+
+- **Breaking chang**: Change return type of `MarkdownHighlightBuilder` from
+  `TextSpan` to `List<TextSpan>`.
+- **Breaking chang**: Remove `selectable` option from `MarkdownViewer` and
+  `MarkdownRenderer`.
+- Add a new optional parameter `selectionColor` to `MarkdownViewer`, with a
+  default value `Color(0x4a006ff8)`, the text will become unselectable when the
+  value is `null`.
+- Add optional parameters `selectionRegistrar` and `selectionColor` to
+  `MarkdownRenderer`.
+
 ## 0.2.1
 
 - Add `enableAutolinkExtension` option to widget

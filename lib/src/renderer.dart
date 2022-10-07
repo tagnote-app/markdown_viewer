@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 import 'ast.dart';
 import 'builders/builder.dart';
@@ -28,7 +29,11 @@ class MarkdownRenderer implements NodeVisitor {
     bool enableImageSize = false,
     List<MarkdownElementBuilder> elementBuilders = const [],
     TextAlign? textAlign,
-  })  : _blockSpacing = styleSheet.blockSpacing,
+    Color? selectionColor,
+    SelectionRegistrar? selectionRegistrar,
+  })  : _selectionColor = selectionColor,
+        _selectionRegistrar = selectionRegistrar,
+        _blockSpacing = styleSheet.blockSpacing,
         _textAlign = textAlign ?? TextAlign.start {
     final defaultBuilders = [
       HeadlineBuilder(
@@ -114,6 +119,10 @@ class MarkdownRenderer implements NodeVisitor {
 
   final TextAlign _textAlign;
   final double _blockSpacing;
+  final Color? _selectionColor;
+  final SelectionRegistrar? _selectionRegistrar;
+  bool get _selectable =>
+      _selectionColor != null && _selectionRegistrar != null;
 
   String? _keepLineEndingsWhen;
   final _gestureRecognizers = <String, GestureRecognizer>{};
@@ -171,7 +180,7 @@ class MarkdownRenderer implements NodeVisitor {
     final textContent = _keepLineEndingsWhen == null
         ? text.text.replaceAll('\n', ' ')
         : text.text;
-    var textSpan = builder.buildText(textContent, parent);
+    var textSpan = builder.buildText(textContent, parent, _selectable);
     final textAlign = builder.textAlign(parent) ?? _textAlign;
 
     if (_gestureRecognizers.isNotEmpty) {
@@ -180,6 +189,7 @@ class MarkdownRenderer implements NodeVisitor {
         children: textSpan.children,
         semanticsLabel: textSpan.semanticsLabel,
         style: textSpan.style,
+        mouseCursor: mouseCursor(_selectable),
         recognizer: _gestureRecognizers.entries.last.value,
       );
     }
@@ -210,7 +220,14 @@ class MarkdownRenderer implements NodeVisitor {
     if (widget != null) {
       // Add spacing between block elements
       _tree.last.children.addIfTrue(
-        SizedBox(height: _blockSpacing),
+        SizedBox(
+          height: _blockSpacing,
+          // TODO(Zhiguang): Remove it when this issue is fixed:
+          // https://github.com/flutter/flutter/issues/104548
+          child: _selectable
+              ? const Text(' \n', selectionColor: Colors.transparent)
+              : null,
+        ),
         isBlock && _tree.last.children.isNotEmpty,
       );
 
@@ -237,6 +254,8 @@ class MarkdownRenderer implements NodeVisitor {
     return RichText(
       text: text,
       textAlign: textAlign,
+      selectionColor: _selectionColor,
+      selectionRegistrar: _selectionRegistrar,
     );
   }
 
