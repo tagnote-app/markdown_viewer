@@ -28,10 +28,9 @@ List<Widget> mergeRichText(
   }
 
   for (final child in children) {
-    if (child is RichText || child is SelectableText) {
+    if (child is RichText) {
       if (inlineStack.isEmpty ||
-          (inlineStack.last is! RichText &&
-              inlineStack.last is! SelectableText) ||
+          inlineStack.last is! RichText ||
           _hasWidgetSpanText(child) ||
           _hasWidgetSpanText(inlineStack.last) ||
           _hasFontFeatures(child) ||
@@ -41,21 +40,14 @@ List<Widget> mergeRichText(
       }
 
       final previous = inlineStack.removeLast();
-      final previousTextSpan = previous is SelectableText
-          ? previous.textSpan!
-          : (previous as RichText).text as TextSpan;
+      final previousTextSpan = (previous as RichText).text as TextSpan;
       final children = previousTextSpan.children != null
           ? List<TextSpan>.from(previousTextSpan.children!)
           : [previousTextSpan];
 
       TextAlign? textAlign;
-      if (child is RichText) {
-        children.add(child.text as TextSpan);
-        textAlign = child.textAlign;
-      } else if (child is SelectableText && child.textSpan != null) {
-        children.add(child.textSpan!);
-        textAlign = child.textAlign;
-      }
+      children.add(child.text as TextSpan);
+      textAlign = child.textAlign;
 
       final mergedSpan = _mergeSimilarTextSpans(children);
       inlineStack.add(richTextBuilder(mergedSpan, textAlign));
@@ -76,13 +68,11 @@ bool _hasWidgetSpanText(Widget widget) =>
     widget is RichText && widget.text is WidgetSpan;
 
 bool _hasFontFeatures(Widget widget) {
-  if (widget is! RichText && widget is! SelectableText) {
+  if (widget is! RichText) {
     return false;
   }
 
-  final textSpan = widget is SelectableText
-      ? widget.textSpan!
-      : (widget as RichText).text as TextSpan;
+  final textSpan = widget.text as TextSpan;
 
   final children = textSpan.children != null
       ? List<TextSpan>.from(textSpan.children!)
