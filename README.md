@@ -6,7 +6,6 @@ output.
 ```dart
 MarkdownViewer(
   'Hello **Markdown**!',
-  selectionColor: Colors.blue.withAlpha(80),
   enableTaskList: true,
   enableSuperscript: false,
   enableSubscript: false,

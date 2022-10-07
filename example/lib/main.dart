@@ -46,7 +46,6 @@ Hello **Markdown**!
           enableFootnote: false,
           enableImageSize: false,
           enableKbd: false,
-          selectionColor: Colors.blue.withAlpha(80),
           syntaxExtensions: [ExampleSyntax()],
           onTapLink: (href, title) {
             print({href, title});

@@ -28,7 +28,7 @@ class MarkdownViewer extends StatefulWidget {
     this.elementBuilders = const [],
     this.syntaxExtensions = const [],
     this.nodesFilter,
-    this.selectionColor,
+    this.selectionColor = const Color(0x4a006ff8),
     Key? key,
   }) : super(key: key);
 

@@ -4,8 +4,9 @@
   `TextSpan` to `List<TextSpan>`.
 - **Breaking chang**: Remove `selectable` option from `MarkdownViewer` and
   `MarkdownRenderer`.
-- Add a new optional parameter `selectionColor` to `MarkdownViewer`, the text
-  will become selectable when the value is not `null`.
+- Add a new optional parameter `selectionColor` to `MarkdownViewer`, with a
+  default value `Color(0x4a006ff8)`, the text will become unselectable when the
+  value is `null`.
 - Add optional parameters `selectionRegistrar` and `selectionColor` to
   `MarkdownRenderer`.
 
