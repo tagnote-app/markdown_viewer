@@ -49,7 +49,7 @@ packages:
       name: dart_markdown
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.1.1"
+    version: "2.1.3"
   dart_prism:
     dependency: transitive
     description:
@@ -101,7 +101,7 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "0.3.0+1"
+    version: "0.3.0+2"
   matcher:
     dependency: transitive
     description:

@@ -1,3 +1,7 @@
+## 0.3.0+2
+
+- Update to `dart_markdown` 2.1.3.
+
 ## 0.3.0+1
 
 - Fix README.md screenshot url.
