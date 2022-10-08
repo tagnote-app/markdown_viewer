@@ -10,6 +10,7 @@ import 'builders/footnote_builder.dart';
 import 'builders/headline_builder.dart';
 import 'builders/image_builder.dart';
 import 'builders/inline_code_builder.dart';
+import 'builders/link_builder.dart';
 import 'builders/list_builder.dart';
 import 'builders/simple_blocks_builder.dart';
 import 'builders/simple_inlines_builder.dart';
@@ -62,8 +63,6 @@ class MarkdownRenderer implements NodeVisitor {
         subscript: styleSheet.subscript,
         superscript: styleSheet.superscript,
         kbd: styleSheet.kbd,
-        link: styleSheet.link,
-        onTapLink: onTapLink,
       ),
       SimpleBlocksBuilder(
         paragraph: styleSheet.paragraph,
@@ -73,6 +72,7 @@ class MarkdownRenderer implements NodeVisitor {
         dividerThickness: styleSheet.dividerThickness,
       ),
       InlineCodeBuilder(textStyle: styleSheet.inlineCode),
+      LinkBuilder(textStyle: styleSheet.link, onTap: onTapLink),
       TableBuilder(
         table: styleSheet.table,
         tableHead: styleSheet.tableHead,

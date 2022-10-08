@@ -1,9 +1,6 @@
 import 'dart:ui';
-
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-import '../definition.dart';
 import 'builder.dart';
 
 class SimpleInlinesBuilder extends MarkdownElementBuilder {
@@ -14,11 +11,8 @@ class SimpleInlinesBuilder extends MarkdownElementBuilder {
     TextStyle? strikethrough,
     TextStyle? subscript,
     TextStyle? superscript,
-    TextStyle? link,
     TextStyle? kbd,
-    MarkdownTapLinkCallback? onTapLink,
-  })  : _onTapLink = onTapLink,
-        super(textStyleMap: {
+  }) : super(textStyleMap: {
           'emphasis': const TextStyle(
             fontStyle: FontStyle.italic,
           ).merge(emphasis),
@@ -38,25 +32,8 @@ class SimpleInlinesBuilder extends MarkdownElementBuilder {
           'superscript': const TextStyle(
             fontFeatures: [FontFeature.superscripts()],
           ).merge(superscript),
-          'link': const TextStyle(color: Color(0xff2196f3)).merge(link),
           'kbd': kbd,
         });
-  final MarkdownTapLinkCallback? _onTapLink;
-
-  @override
-  GestureRecognizer? gestureRecognizer(type, attributes) {
-    if (type != 'link' || _onTapLink == null) {
-      return null;
-    }
-
-    return TapGestureRecognizer()
-      ..onTap = () {
-        _onTapLink!(
-          attributes['destination'],
-          attributes['title'],
-        );
-      };
-  }
 
   @override
   TextSpan? createText(element, parentStyle) {
