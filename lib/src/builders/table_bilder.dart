@@ -4,6 +4,7 @@ import '../definition.dart';
 import 'builder.dart';
 
 const _tableBorderSide = BorderSide(color: Color(0xffcccccc));
+
 const _tableBorder = TableBorder(
   top: _tableBorderSide,
   left: _tableBorderSide,
@@ -13,6 +14,8 @@ const _tableBorder = TableBorder(
   verticalInside: _tableBorderSide,
 );
 
+const _tableCellPadding = EdgeInsets.fromLTRB(16.0, 8.0, 16.0, 8.0);
+
 class TableBuilder extends MarkdownElementBuilder {
   TableBuilder({
     TextStyle? table,
@@ -21,7 +24,7 @@ class TableBuilder extends MarkdownElementBuilder {
     this.tableBorder,
     this.tableRowDecoration,
     this.tableRowDecorationAlternating,
-    required this.tableCellPadding,
+    this.tableCellPadding,
     required this.tableColumnWidth,
   }) : super(textStyleMap: {
           'table': table,
@@ -31,7 +34,7 @@ class TableBuilder extends MarkdownElementBuilder {
           'tableBody': tableBody,
         });
 
-  final EdgeInsets tableCellPadding;
+  final EdgeInsets? tableCellPadding;
   final TableBorder? tableBorder;
   final TableColumnWidth tableColumnWidth;
   final BoxDecoration? tableRowDecoration;
@@ -106,7 +109,7 @@ class TableBuilder extends MarkdownElementBuilder {
       _tableStack.single.rows.last.children!.add(
         TableCell(
           child: Padding(
-            padding: tableCellPadding,
+            padding: tableCellPadding ?? _tableCellPadding,
             child: children.isEmpty ? const SizedBox.shrink() : children.single,
           ),
         ),

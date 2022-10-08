@@ -41,8 +41,7 @@ class MarkdownStyle {
     this.list,
     this.listItem,
     this.listItemMarker,
-    // TODO: move default style to builder
-    this.listItemMarkerPadding = const EdgeInsets.only(right: 12.0),
+    this.listItemMarkerPadding,
     this.listItemMinIndent = 30.0,
     this.checkbox,
     this.table,
@@ -51,8 +50,7 @@ class MarkdownStyle {
     this.tableBorder,
     this.tableRowDecoration,
     this.tableRowDecorationAlternating,
-    // TODO: move default style to builder
-    this.tableCellPadding = const EdgeInsets.fromLTRB(16.0, 8.0, 16.0, 8.0),
+    this.tableCellPadding,
     this.tableColumnWidth = const FlexColumnWidth(),
     this.codeBlock,
     this.codeblockPadding,
@@ -97,7 +95,7 @@ class MarkdownStyle {
   final TextStyle? list;
   final TextStyle? listItem;
   final TextStyle? listItemMarker;
-  final EdgeInsets listItemMarkerPadding;
+  final EdgeInsets? listItemMarkerPadding;
   final double listItemMinIndent;
   final TextStyle? checkbox;
   final TextStyle? table;
@@ -106,7 +104,7 @@ class MarkdownStyle {
   final TableBorder? tableBorder;
   final BoxDecoration? tableRowDecoration;
   final MarkdownAlternating? tableRowDecorationAlternating;
-  final EdgeInsets tableCellPadding;
+  final EdgeInsets? tableCellPadding;
   final TableColumnWidth tableColumnWidth;
   final TextStyle? codeBlock;
   final EdgeInsets? codeblockPadding;

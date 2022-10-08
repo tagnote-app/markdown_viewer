@@ -3,12 +3,14 @@ import 'package:flutter/material.dart';
 import '../definition.dart';
 import 'builder.dart';
 
+const _listItemMarkerPadding = EdgeInsets.only(right: 12.0);
+
 class ListBuilder extends MarkdownElementBuilder {
   ListBuilder({
     TextStyle? list,
     TextStyle? listItem,
     this.listItemMarker,
-    required this.listItemMarkerPadding,
+    this.listItemMarkerPadding,
     required this.listItemMinIndent,
     this.checkbox,
     this.listItemMarkerBuilder,
@@ -21,7 +23,7 @@ class ListBuilder extends MarkdownElementBuilder {
 
   final TextStyle? listItemMarker;
   final TextStyle? checkbox;
-  final EdgeInsets listItemMarkerPadding;
+  final EdgeInsets? listItemMarkerPadding;
   final double listItemMinIndent;
   final MarkdownListItemMarkerBuilder? listItemMarkerBuilder;
   final MarkdownCheckboxBuilder? checkboxBuilder;
@@ -76,7 +78,7 @@ class ListBuilder extends MarkdownElementBuilder {
         ? MarkdownListType.unordered
         : MarkdownListType.ordered;
 
-    final padding = listItemMarkerPadding;
+    final padding = listItemMarkerPadding ?? _listItemMarkerPadding;
     if (listItemMarkerBuilder != null) {
       return Padding(
         padding: padding,
@@ -104,7 +106,7 @@ class ListBuilder extends MarkdownElementBuilder {
     ).merge(checkbox);
 
     return Padding(
-      padding: listItemMarkerPadding,
+      padding: listItemMarkerPadding ?? _listItemMarkerPadding,
       child: Icon(
         checked ? Icons.check_box : Icons.check_box_outline_blank,
         size: checkboxStyle.fontSize,
