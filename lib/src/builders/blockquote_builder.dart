@@ -4,10 +4,14 @@ import 'builder.dart';
 
 class BlockquoteBuilder extends MarkdownElementBuilder {
   BlockquoteBuilder({
-    super.textStyle,
+    TextStyle? textStyle,
     this.padding,
     this.decoration,
-  });
+  }) : super(
+          textStyle: const TextStyle(
+            color: Color(0xff666666),
+          ).merge(textStyle),
+        );
 
   final EdgeInsets? padding;
   final BoxDecoration? decoration;
