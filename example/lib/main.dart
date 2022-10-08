@@ -54,7 +54,7 @@ class MyHomePage extends StatelessWidget {
           enableKbd: false,
           syntaxExtensions: [ExampleSyntax()],
           highlightBuilder: (text, language, infoString) {
-            final prism = Prism(style: PrismStyle());
+            final prism = Prism(mouseCursor: SystemMouseCursors.text);
             return prism.render(text, language ?? 'plain');
           },
           onTapLink: (href, title) {
