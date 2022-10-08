@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../definition.dart';
 import '../helpers/inline_wraper.dart';
+import '../renderer.dart';
 
 abstract class MarkdownElementBuilder {
   MarkdownElementBuilder({
@@ -19,6 +20,13 @@ abstract class MarkdownElementBuilder {
       "You should set textStyleMap when matches more than one element."
       "The matchTypes is $matchTypes",
     );
+  }
+
+  late MarkdownRenderer renderer;
+
+  /// Initilizes [renderer] instance.
+  void register(MarkdownRenderer renderer) {
+    this.renderer = renderer;
   }
 
   /// Which element types should it match.

@@ -9,6 +9,7 @@ import 'builders/code_block_builder.dart';
 import 'builders/footnote_builder.dart';
 import 'builders/headline_builder.dart';
 import 'builders/image_builder.dart';
+import 'builders/inline_code_builder.dart';
 import 'builders/list_builder.dart';
 import 'builders/simple_blocks_builder.dart';
 import 'builders/simple_inlines_builder.dart';
@@ -63,7 +64,6 @@ class MarkdownRenderer implements NodeVisitor {
         superscript: styleSheet.superscript,
         kbd: styleSheet.kbd,
         link: styleSheet.link,
-        inlineCode: styleSheet.inlineCode,
         onTapLink: onTapLink,
       ),
       SimpleBlocksBuilder(
@@ -73,6 +73,7 @@ class MarkdownRenderer implements NodeVisitor {
         dividerHeight: styleSheet.dividerHeight,
         dividerThickness: styleSheet.dividerThickness,
       ),
+      InlineCodeBuilder(textStyle: styleSheet.inlineCode),
       TableBuilder(
         table: styleSheet.table,
         tableHead: styleSheet.tableHead,
@@ -118,7 +119,7 @@ class MarkdownRenderer implements NodeVisitor {
 
     for (final builder in [...defaultBuilders, ...elementBuilders]) {
       for (final type in builder.matchTypes) {
-        _builders[type] = builder;
+        _builders[type] = builder..register(this);
       }
     }
   }
@@ -194,7 +195,6 @@ class MarkdownRenderer implements NodeVisitor {
         ? text.text.replaceAll('\n', ' ')
         : text.text;
     var textSpan = builder.buildText(textContent, parent, _selectable);
-    final textAlign = builder.textAlign(parent) ?? _textAlign;
 
     if (_gestureRecognizers.isNotEmpty) {
       textSpan = TextSpan(
@@ -207,7 +207,10 @@ class MarkdownRenderer implements NodeVisitor {
       );
     }
 
-    parent.children.add(buildRichText(textSpan, textAlign));
+    parent.children.add(buildRichText(
+      textSpan,
+      textAlign: builder.textAlign(parent),
+    ));
   }
 
   @override
@@ -219,7 +222,7 @@ class MarkdownRenderer implements NodeVisitor {
 
     final textSpan = builder.createText(current, parent.style);
     if (textSpan != null) {
-      current.children.add(buildRichText(textSpan, _textAlign));
+      current.children.add(buildRichText(textSpan));
     }
 
     current.children.replaceRange(
@@ -263,10 +266,10 @@ class MarkdownRenderer implements NodeVisitor {
   }
 
   /// Builds a [RichText] widget.
-  Widget buildRichText(TextSpan text, TextAlign textAlign) {
+  Widget buildRichText(TextSpan text, {TextAlign? textAlign}) {
     return RichText(
       text: text,
-      textAlign: textAlign,
+      textAlign: textAlign ?? _textAlign,
       selectionColor: _selectionColor,
       selectionRegistrar: _selectionRegistrar,
     );
@@ -277,7 +280,7 @@ class MarkdownRenderer implements NodeVisitor {
         widgets,
         richTextBuilder: (span, textAlign) => buildRichText(
           span,
-          textAlign ?? _textAlign,
+          textAlign: textAlign,
         ),
       );
 }
@@ -303,7 +306,6 @@ class _TreeElement extends MarkdownTreeElement {
 void _checkInlineWidget(Widget widget) {
   final allowedInlineWidgets = [
     RichText,
-    SelectableText,
     Text,
     DefaultTextStyle,
   ];
