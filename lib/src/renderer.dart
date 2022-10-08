@@ -15,6 +15,7 @@ import 'builders/simple_inlines_builder.dart';
 import 'builders/table_bilder.dart';
 import 'definition.dart';
 import 'extensions.dart';
+import 'helpers/inline_wraper.dart';
 import 'helpers/merge_rich_text.dart';
 import 'helpers/utils.dart';
 import 'style.dart';
