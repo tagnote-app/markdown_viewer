@@ -11,6 +11,7 @@
 - Add optional parameters `selectionRegistrar` and `selectionColor` to
   `MarkdownRenderer`.
 - Add a _copy to clipboard_ button for code block.
+- Big improvement on default style.
 
 ## 0.2.1
 
