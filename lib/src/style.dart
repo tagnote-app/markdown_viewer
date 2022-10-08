@@ -51,7 +51,7 @@ class MarkdownStyle {
     this.tableRowDecoration,
     this.tableRowDecorationAlternating,
     this.tableCellPadding,
-    this.tableColumnWidth = const FlexColumnWidth(),
+    this.tableColumnWidth,
     this.codeBlock,
     this.codeblockPadding,
     this.codeblockDecoration,
@@ -105,7 +105,7 @@ class MarkdownStyle {
   final BoxDecoration? tableRowDecoration;
   final MarkdownAlternating? tableRowDecorationAlternating;
   final EdgeInsets? tableCellPadding;
-  final TableColumnWidth tableColumnWidth;
+  final TableColumnWidth? tableColumnWidth;
   final TextStyle? codeBlock;
   final EdgeInsets? codeblockPadding;
   final BoxDecoration? codeblockDecoration;

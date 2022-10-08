@@ -25,7 +25,7 @@ class TableBuilder extends MarkdownElementBuilder {
     this.tableRowDecoration,
     this.tableRowDecorationAlternating,
     this.tableCellPadding,
-    required this.tableColumnWidth,
+    this.tableColumnWidth,
   }) : super(textStyleMap: {
           'table': table,
           'tableHead': const TextStyle(
@@ -36,7 +36,7 @@ class TableBuilder extends MarkdownElementBuilder {
 
   final EdgeInsets? tableCellPadding;
   final TableBorder? tableBorder;
-  final TableColumnWidth tableColumnWidth;
+  final TableColumnWidth? tableColumnWidth;
   final BoxDecoration? tableRowDecoration;
   final MarkdownAlternating? tableRowDecorationAlternating;
 
@@ -98,7 +98,7 @@ class TableBuilder extends MarkdownElementBuilder {
 
     if (type == 'table') {
       return Table(
-        defaultColumnWidth: tableColumnWidth,
+        defaultColumnWidth: tableColumnWidth ?? const IntrinsicColumnWidth(),
         defaultVerticalAlignment: TableCellVerticalAlignment.middle,
         border: tableBorder ?? _tableBorder,
         children: _tableStack.removeLast().rows,
@@ -108,6 +108,7 @@ class TableBuilder extends MarkdownElementBuilder {
 
       _tableStack.single.rows.last.children!.add(
         TableCell(
+          verticalAlignment: TableCellVerticalAlignment.top,
           child: Padding(
             padding: tableCellPadding ?? _tableCellPadding,
             child: children.isEmpty ? const SizedBox.shrink() : children.single,
