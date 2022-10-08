@@ -265,8 +265,13 @@ class MarkdownRenderer implements NodeVisitor {
   }
 
   /// Creates a [RichText] widget.
-  Widget createRichText(TextSpan text, {TextAlign? textAlign}) {
+  Widget createRichText(
+    TextSpan text, {
+    TextAlign? textAlign,
+    StrutStyle? strutStyle,
+  }) {
     return RichText(
+      strutStyle: strutStyle,
       text: text,
       textAlign: textAlign ?? _textAlign,
       selectionColor: _selectionColor,
