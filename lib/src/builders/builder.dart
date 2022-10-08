@@ -73,12 +73,11 @@ abstract class MarkdownElementBuilder {
   TextSpan buildText(
     String text,
     MarkdownTreeElement parent,
-    bool selectable,
   ) =>
       TextSpan(
         text: text,
         style: parent.style,
-        mouseCursor: selectable ? SystemMouseCursors.text : null,
+        mouseCursor: renderer.selectable ? SystemMouseCursors.text : null,
       );
 
   /// Sets a new [TextAlign] instead of using the default one.

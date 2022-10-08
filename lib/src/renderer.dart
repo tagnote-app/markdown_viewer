@@ -18,7 +18,6 @@ import 'definition.dart';
 import 'extensions.dart';
 import 'helpers/inline_wraper.dart';
 import 'helpers/merge_rich_text.dart';
-import 'helpers/utils.dart';
 import 'style.dart';
 import 'transformer.dart';
 
@@ -128,8 +127,10 @@ class MarkdownRenderer implements NodeVisitor {
   final double? _blockSpacing;
   final Color? _selectionColor;
   final SelectionRegistrar? _selectionRegistrar;
-  bool get selectable => _selectionColor != null && _selectionRegistrar != null;
   final MarkdownStyle _styleSheet;
+
+  bool get selectable => _selectionColor != null && _selectionRegistrar != null;
+  MouseCursor? get mouseCursor => selectable ? SystemMouseCursors.text : null;
 
   String? _keepLineEndingsWhen;
   final _gestureRecognizers = <String, GestureRecognizer>{};
@@ -193,7 +194,7 @@ class MarkdownRenderer implements NodeVisitor {
     final textContent = _keepLineEndingsWhen == null
         ? text.text.replaceAll('\n', ' ')
         : text.text;
-    var textSpan = builder.buildText(textContent, parent, selectable);
+    var textSpan = builder.buildText(textContent, parent);
 
     if (_gestureRecognizers.isNotEmpty) {
       textSpan = TextSpan(
@@ -201,7 +202,7 @@ class MarkdownRenderer implements NodeVisitor {
         children: textSpan.children,
         semanticsLabel: textSpan.semanticsLabel,
         style: textSpan.style,
-        mouseCursor: mouseCursor(selectable),
+        mouseCursor: mouseCursor,
         recognizer: _gestureRecognizers.entries.last.value,
       );
     }

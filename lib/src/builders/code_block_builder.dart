@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../definition.dart';
-import '../helpers/utils.dart';
 import '../widgets/copy_button.dart';
 import 'builder.dart';
 
@@ -27,7 +26,7 @@ class CodeBlockBuilder extends MarkdownElementBuilder {
   TextAlign textAlign(parent) => TextAlign.start;
 
   @override
-  TextSpan buildText(text, parent, selectable) {
+  TextSpan buildText(text, parent) {
     final textContent = text.trimRight();
     final style = const TextStyle(fontFamily: 'monospace').merge(parent.style);
 
@@ -35,7 +34,7 @@ class CodeBlockBuilder extends MarkdownElementBuilder {
       return TextSpan(
         text: textContent,
         style: style,
-        mouseCursor: mouseCursor(selectable),
+        mouseCursor: renderer.mouseCursor,
       );
     }
 
@@ -50,10 +49,7 @@ class CodeBlockBuilder extends MarkdownElementBuilder {
     }
 
     return TextSpan(
-      children: spans,
-      style: style,
-      mouseCursor: mouseCursor(selectable),
-    );
+        children: spans, style: style, mouseCursor: renderer.mouseCursor);
   }
 
   @override
