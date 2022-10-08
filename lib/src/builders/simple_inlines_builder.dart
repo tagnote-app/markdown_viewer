@@ -16,7 +16,6 @@ class SimpleInlinesBuilder extends MarkdownElementBuilder {
     TextStyle? superscript,
     TextStyle? link,
     TextStyle? kbd,
-    TextStyle? inlineCode,
     MarkdownTapLinkCallback? onTapLink,
   })  : _onTapLink = onTapLink,
         super(textStyleMap: {
@@ -26,9 +25,6 @@ class SimpleInlinesBuilder extends MarkdownElementBuilder {
           'strongEmphasis': const TextStyle(
             fontWeight: FontWeight.w700,
           ).merge(strongEmphasis),
-          'inlineCode': const TextStyle(
-            fontFamily: 'monospace',
-          ).merge(inlineCode),
           'highlight': const TextStyle(
             backgroundColor: Color(0xffffee00),
           ).merge(highlight),
@@ -77,7 +73,6 @@ class SimpleInlinesBuilder extends MarkdownElementBuilder {
     'strongEmphasis',
     'link',
     'hardLineBreak',
-    'inlineCode',
     'highlight',
     'strikethrough',
     'emoji',
