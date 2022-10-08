@@ -1,4 +1,4 @@
-## 0.3.0-dev
+## 0.3.0
 
 - **Breaking chang**: Change return type of `MarkdownHighlightBuilder` from
   `TextSpan` to `List<TextSpan>`.
