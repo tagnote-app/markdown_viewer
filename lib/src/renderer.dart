@@ -207,7 +207,7 @@ class MarkdownRenderer implements NodeVisitor {
       );
     }
 
-    parent.children.add(buildRichText(
+    parent.children.add(createRichText(
       textSpan,
       textAlign: builder.textAlign(parent),
     ));
@@ -222,7 +222,7 @@ class MarkdownRenderer implements NodeVisitor {
 
     final textSpan = builder.createText(current, parent.style);
     if (textSpan != null) {
-      current.children.add(buildRichText(textSpan));
+      current.children.add(createRichText(textSpan));
     }
 
     current.children.replaceRange(
@@ -266,7 +266,7 @@ class MarkdownRenderer implements NodeVisitor {
   }
 
   /// Builds a [RichText] widget.
-  Widget buildRichText(TextSpan text, {TextAlign? textAlign}) {
+  Widget createRichText(TextSpan text, {TextAlign? textAlign}) {
     return RichText(
       text: text,
       textAlign: textAlign ?? _textAlign,
@@ -278,7 +278,7 @@ class MarkdownRenderer implements NodeVisitor {
   /// Merges the [RichText] elements of [widgets] while it is possible.
   List<Widget> compressWidgets(List<Widget> widgets) => mergeRichText(
         widgets,
-        richTextBuilder: (span, textAlign) => buildRichText(
+        richTextBuilder: (span, textAlign) => createRichText(
           span,
           textAlign: textAlign,
         ),
