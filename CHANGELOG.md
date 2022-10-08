@@ -1,3 +1,7 @@
+## 0.3.0+1
+
+- Fix README.md screenshot url.
+
 ## 0.3.0
 
 - **Breaking chang**: Change return type of `MarkdownHighlightBuilder` from
