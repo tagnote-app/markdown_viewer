@@ -1,7 +1,6 @@
-import 'package:flutter/gestures.dart';
+import 'dart:ui';
 import 'package:flutter/material.dart';
 
-import '../definition.dart';
 import 'builder.dart';
 
 class SimpleInlinesBuilder extends MarkdownElementBuilder {
@@ -12,38 +11,29 @@ class SimpleInlinesBuilder extends MarkdownElementBuilder {
     TextStyle? strikethrough,
     TextStyle? subscript,
     TextStyle? superscript,
-    TextStyle? link,
     TextStyle? kbd,
-    TextStyle? inlineCode,
-    MarkdownTapLinkCallback? onTapLink,
-  })  : _onTapLink = onTapLink,
-        super(textStyleMap: {
-          'emphasis': emphasis,
-          'strongEmphasis': strongEmphasis,
-          'inlineCode': inlineCode,
-          'highlight': highlight,
-          'strikethrough': strikethrough,
-          'subscript': subscript,
-          'superscript': superscript,
-          'link': link,
+  }) : super(textStyleMap: {
+          'emphasis': const TextStyle(
+            fontStyle: FontStyle.italic,
+          ).merge(emphasis),
+          'strongEmphasis': const TextStyle(
+            fontWeight: FontWeight.w700,
+          ).merge(strongEmphasis),
+          'highlight': const TextStyle(
+            backgroundColor: Color(0xffffee00),
+          ).merge(highlight),
+          'strikethrough': const TextStyle(
+            color: Color(0xffff6666),
+            decoration: TextDecoration.lineThrough,
+          ).merge(strikethrough),
+          'subscript': const TextStyle(
+            fontFeatures: [FontFeature.subscripts()],
+          ).merge(subscript),
+          'superscript': const TextStyle(
+            fontFeatures: [FontFeature.superscripts()],
+          ).merge(superscript),
           'kbd': kbd,
         });
-  final MarkdownTapLinkCallback? _onTapLink;
-
-  @override
-  GestureRecognizer? gestureRecognizer(type, attributes) {
-    if (type != 'link' || _onTapLink == null) {
-      return null;
-    }
-
-    return TapGestureRecognizer()
-      ..onTap = () {
-        _onTapLink!(
-          attributes['destination'],
-          attributes['title'],
-        );
-      };
-  }
 
   @override
   TextSpan? createText(element, parentStyle) {
@@ -60,7 +50,6 @@ class SimpleInlinesBuilder extends MarkdownElementBuilder {
     'strongEmphasis',
     'link',
     'hardLineBreak',
-    'inlineCode',
     'highlight',
     'strikethrough',
     'emoji',

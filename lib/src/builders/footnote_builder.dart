@@ -1,3 +1,4 @@
+import 'dart:ui';
 import 'package:flutter/material.dart';
 
 import 'builder.dart';
@@ -28,7 +29,9 @@ class FootnoteBuilder extends MarkdownElementBuilder {
     if (element.type == 'footnote') {
       return Text(
         element.attributes['number']!,
-        style: _footnoteStyle,
+        style: const TextStyle(
+          fontFeatures: [FontFeature.superscripts()],
+        ).merge(_footnoteStyle),
       );
     }
     final child = element.children.single;

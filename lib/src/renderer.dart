@@ -3,18 +3,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 import 'ast.dart';
+import 'builders/blockquote_builder.dart';
 import 'builders/builder.dart';
 import 'builders/code_block_builder.dart';
 import 'builders/footnote_builder.dart';
 import 'builders/headline_builder.dart';
 import 'builders/image_builder.dart';
+import 'builders/inline_code_builder.dart';
+import 'builders/link_builder.dart';
 import 'builders/list_builder.dart';
 import 'builders/simple_blocks_builder.dart';
 import 'builders/simple_inlines_builder.dart';
 import 'builders/table_bilder.dart';
 import 'definition.dart';
 import 'extensions.dart';
-import 'helpers.dart';
+import 'helpers/inline_wraper.dart';
+import 'helpers/merge_rich_text.dart';
 import 'style.dart';
 import 'transformer.dart';
 
@@ -34,6 +38,7 @@ class MarkdownRenderer implements NodeVisitor {
   })  : _selectionColor = selectionColor,
         _selectionRegistrar = selectionRegistrar,
         _blockSpacing = styleSheet.blockSpacing,
+        _styleSheet = styleSheet,
         _textAlign = textAlign ?? TextAlign.start {
     final defaultBuilders = [
       HeadlineBuilder(
@@ -58,20 +63,16 @@ class MarkdownRenderer implements NodeVisitor {
         subscript: styleSheet.subscript,
         superscript: styleSheet.superscript,
         kbd: styleSheet.kbd,
-        link: styleSheet.link,
-        inlineCode: styleSheet.inlineCode,
-        onTapLink: onTapLink,
       ),
       SimpleBlocksBuilder(
         paragraph: styleSheet.paragraph,
-        pPadding: styleSheet.pPadding,
-        blockquote: styleSheet.blockquote,
-        blockquoteDecoration: styleSheet.blockquoteDecoration,
-        blockquotePadding: styleSheet.blockquotePadding,
+        paragraphPadding: styleSheet.paragraphPadding,
         dividerColor: styleSheet.dividerColor,
         dividerHeight: styleSheet.dividerHeight,
         dividerThickness: styleSheet.dividerThickness,
       ),
+      InlineCodeBuilder(textStyle: styleSheet.inlineCode),
+      LinkBuilder(textStyle: styleSheet.link, onTap: onTapLink),
       TableBuilder(
         table: styleSheet.table,
         tableHead: styleSheet.tableHead,
@@ -88,15 +89,20 @@ class MarkdownRenderer implements NodeVisitor {
       ),
       CodeBlockBuilder(
         textStyle: styleSheet.codeBlock,
-        codeblockPadding: styleSheet.codeblockPadding,
-        codeblockDecoration: styleSheet.codeblockDecoration,
+        padding: styleSheet.codeblockPadding,
+        decoration: styleSheet.codeblockDecoration,
         highlightBuilder: highlightBuilder,
+      ),
+      BlockquoteBuilder(
+        textStyle: styleSheet.blockquote,
+        decoration: styleSheet.blockquoteDecoration,
+        padding: styleSheet.blockquotePadding,
       ),
       ListBuilder(
         list: styleSheet.list,
         listItem: styleSheet.listItem,
         listItemMarker: styleSheet.listItemMarker,
-        listItemMarkerPadding: styleSheet.listItemMarkerPadding,
+        listItemMarkerTrailingSpace: styleSheet.listItemMarkerTrailingSpace,
         listItemMinIndent: styleSheet.listItemMinIndent,
         checkbox: styleSheet.checkbox,
         listItemMarkerBuilder: listItemMarkerBuilder,
@@ -112,17 +118,19 @@ class MarkdownRenderer implements NodeVisitor {
 
     for (final builder in [...defaultBuilders, ...elementBuilders]) {
       for (final type in builder.matchTypes) {
-        _builders[type] = builder;
+        _builders[type] = builder..register(this);
       }
     }
   }
 
   final TextAlign _textAlign;
-  final double _blockSpacing;
+  final double? _blockSpacing;
   final Color? _selectionColor;
   final SelectionRegistrar? _selectionRegistrar;
-  bool get _selectable =>
-      _selectionColor != null && _selectionRegistrar != null;
+  final MarkdownStyle _styleSheet;
+
+  bool get selectable => _selectionColor != null && _selectionRegistrar != null;
+  MouseCursor? get mouseCursor => selectable ? SystemMouseCursors.text : null;
 
   String? _keepLineEndingsWhen;
   final _gestureRecognizers = <String, GestureRecognizer>{};
@@ -166,9 +174,15 @@ class MarkdownRenderer implements NodeVisitor {
       builder.gestureRecognizer(type, attributes),
     );
 
+    final defaultTextStyle = const TextStyle(
+      fontSize: 16,
+      height: 1.5,
+      color: Color(0xff333333),
+    ).merge(_styleSheet.textStyle);
+
     _tree.add(_TreeElement.fromAstElement(
       element,
-      style: builder.buildTextStyle(type, attributes),
+      style: builder.buildTextStyle(defaultTextStyle, type, attributes),
     ));
     return true;
   }
@@ -180,8 +194,7 @@ class MarkdownRenderer implements NodeVisitor {
     final textContent = _keepLineEndingsWhen == null
         ? text.text.replaceAll('\n', ' ')
         : text.text;
-    var textSpan = builder.buildText(textContent, parent, _selectable);
-    final textAlign = builder.textAlign(parent) ?? _textAlign;
+    var textSpan = builder.buildText(textContent, parent);
 
     if (_gestureRecognizers.isNotEmpty) {
       textSpan = TextSpan(
@@ -189,12 +202,15 @@ class MarkdownRenderer implements NodeVisitor {
         children: textSpan.children,
         semanticsLabel: textSpan.semanticsLabel,
         style: textSpan.style,
-        mouseCursor: mouseCursor(_selectable),
+        mouseCursor: SystemMouseCursors.click,
         recognizer: _gestureRecognizers.entries.last.value,
       );
     }
 
-    parent.children.add(buildRichText(textSpan, textAlign));
+    parent.children.add(createRichText(
+      textSpan,
+      textAlign: builder.textAlign(parent),
+    ));
   }
 
   @override
@@ -206,7 +222,7 @@ class MarkdownRenderer implements NodeVisitor {
 
     final textSpan = builder.createText(current, parent.style);
     if (textSpan != null) {
-      current.children.add(buildRichText(textSpan, _textAlign));
+      current.children.add(createRichText(textSpan));
     }
 
     current.children.replaceRange(
@@ -221,10 +237,10 @@ class MarkdownRenderer implements NodeVisitor {
       // Add spacing between block elements
       _tree.last.children.addIfTrue(
         SizedBox(
-          height: _blockSpacing,
+          height: _blockSpacing ?? 8.0,
           // TODO(Zhiguang): Remove it when this issue is fixed:
           // https://github.com/flutter/flutter/issues/104548
-          child: _selectable
+          child: selectable
               ? const Text(' \n', selectionColor: Colors.transparent)
               : null,
         ),
@@ -249,11 +265,16 @@ class MarkdownRenderer implements NodeVisitor {
     _gestureRecognizers.remove(type);
   }
 
-  /// Builds a [RichText] widget.
-  Widget buildRichText(TextSpan text, TextAlign textAlign) {
+  /// Creates a [RichText] widget.
+  Widget createRichText(
+    TextSpan text, {
+    TextAlign? textAlign,
+    StrutStyle? strutStyle,
+  }) {
     return RichText(
+      strutStyle: strutStyle,
       text: text,
-      textAlign: textAlign,
+      textAlign: textAlign ?? _textAlign,
       selectionColor: _selectionColor,
       selectionRegistrar: _selectionRegistrar,
     );
@@ -262,9 +283,9 @@ class MarkdownRenderer implements NodeVisitor {
   /// Merges the [RichText] elements of [widgets] while it is possible.
   List<Widget> compressWidgets(List<Widget> widgets) => mergeRichText(
         widgets,
-        richTextBuilder: (span, textAlign) => buildRichText(
+        richTextBuilder: (span, textAlign) => createRichText(
           span,
-          textAlign ?? _textAlign,
+          textAlign: textAlign,
         ),
       );
 }
@@ -290,7 +311,6 @@ class _TreeElement extends MarkdownTreeElement {
 void _checkInlineWidget(Widget widget) {
   final allowedInlineWidgets = [
     RichText,
-    SelectableText,
     Text,
     DefaultTextStyle,
   ];

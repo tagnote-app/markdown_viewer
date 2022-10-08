@@ -3,6 +3,19 @@ import 'package:flutter/material.dart';
 import '../definition.dart';
 import 'builder.dart';
 
+const _tableBorderSide = BorderSide(color: Color(0xffcccccc));
+
+const _tableBorder = TableBorder(
+  top: _tableBorderSide,
+  left: _tableBorderSide,
+  right: _tableBorderSide,
+  bottom: _tableBorderSide,
+  horizontalInside: _tableBorderSide,
+  verticalInside: _tableBorderSide,
+);
+
+const _tableCellPadding = EdgeInsets.fromLTRB(16.0, 8.0, 16.0, 8.0);
+
 class TableBuilder extends MarkdownElementBuilder {
   TableBuilder({
     TextStyle? table,
@@ -11,17 +24,19 @@ class TableBuilder extends MarkdownElementBuilder {
     this.tableBorder,
     this.tableRowDecoration,
     this.tableRowDecorationAlternating,
-    required this.tableCellPadding,
-    required this.tableColumnWidth,
+    this.tableCellPadding,
+    this.tableColumnWidth,
   }) : super(textStyleMap: {
           'table': table,
-          'tableHead': tableHead,
+          'tableHead': const TextStyle(
+            fontWeight: FontWeight.w600,
+          ).merge(tableHead),
           'tableBody': tableBody,
         });
 
-  final EdgeInsets tableCellPadding;
+  final EdgeInsets? tableCellPadding;
   final TableBorder? tableBorder;
-  final TableColumnWidth tableColumnWidth;
+  final TableColumnWidth? tableColumnWidth;
   final BoxDecoration? tableRowDecoration;
   final MarkdownAlternating? tableRowDecorationAlternating;
 
@@ -83,9 +98,9 @@ class TableBuilder extends MarkdownElementBuilder {
 
     if (type == 'table') {
       return Table(
-        defaultColumnWidth: tableColumnWidth,
+        defaultColumnWidth: tableColumnWidth ?? const IntrinsicColumnWidth(),
         defaultVerticalAlignment: TableCellVerticalAlignment.middle,
-        border: tableBorder,
+        border: tableBorder ?? _tableBorder,
         children: _tableStack.removeLast().rows,
       );
     } else if (type == 'tableHeadCell' || type == 'tableBodyCell') {
@@ -93,8 +108,9 @@ class TableBuilder extends MarkdownElementBuilder {
 
       _tableStack.single.rows.last.children!.add(
         TableCell(
+          verticalAlignment: TableCellVerticalAlignment.top,
           child: Padding(
-            padding: tableCellPadding,
+            padding: tableCellPadding ?? _tableCellPadding,
             child: children.isEmpty ? const SizedBox.shrink() : children.single,
           ),
         ),

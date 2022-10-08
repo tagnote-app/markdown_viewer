@@ -5,34 +5,25 @@ import 'builder.dart';
 class SimpleBlocksBuilder extends MarkdownElementBuilder {
   SimpleBlocksBuilder({
     TextStyle? paragraph,
-    TextStyle? blockquote,
-    this.pPadding,
-    this.blockquoteDecoration,
-    required this.blockquotePadding,
+    this.paragraphPadding,
     this.dividerColor,
     this.dividerHeight,
     this.dividerThickness,
   }) : super(textStyleMap: {
           'paragraph': paragraph,
-          'blockquote': blockquote,
         });
 
-  final Decoration? blockquoteDecoration;
-  final EdgeInsets blockquotePadding;
-  final EdgeInsets? pPadding;
+  final EdgeInsets? paragraphPadding;
   final Color? dividerColor;
   final double? dividerHeight;
   final double? dividerThickness;
 
   @override
-  bool replaceLineEndings(type) => type != 'blockquote';
-
-  @override
-  final matchTypes = ['paragraph', 'blockquote', 'thematicBreak'];
+  final matchTypes = ['paragraph', 'thematicBreak'];
 
   @override
   EdgeInsets? blockPadding(element) {
-    return element.type == 'paragraph' ? pPadding : null;
+    return element.type == 'paragraph' ? paragraphPadding : null;
   }
 
   @override
@@ -47,19 +38,6 @@ class SimpleBlocksBuilder extends MarkdownElementBuilder {
       );
     }
 
-    final blockChild = super.buildWidget(element);
-
-    if (type == 'blockquote') {
-      return Container(
-        width: double.infinity,
-        decoration: blockquoteDecoration,
-        child: Padding(
-          padding: blockquotePadding,
-          child: blockChild,
-        ),
-      );
-    }
-
-    return blockChild;
+    return super.buildWidget(element);
   }
 }

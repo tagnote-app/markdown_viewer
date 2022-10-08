@@ -3,12 +3,13 @@ import 'package:flutter/material.dart';
 import '../definition.dart';
 import 'builder.dart';
 
+/// A builder to create list.
 class ListBuilder extends MarkdownElementBuilder {
   ListBuilder({
     TextStyle? list,
     TextStyle? listItem,
     this.listItemMarker,
-    required this.listItemMarkerPadding,
+    this.listItemMarkerTrailingSpace,
     required this.listItemMinIndent,
     this.checkbox,
     this.listItemMarkerBuilder,
@@ -21,10 +22,13 @@ class ListBuilder extends MarkdownElementBuilder {
 
   final TextStyle? listItemMarker;
   final TextStyle? checkbox;
-  final EdgeInsets listItemMarkerPadding;
-  final double listItemMinIndent;
+  final double? listItemMarkerTrailingSpace;
+  final double? listItemMinIndent;
   final MarkdownListItemMarkerBuilder? listItemMarkerBuilder;
   final MarkdownCheckboxBuilder? checkboxBuilder;
+
+  @override
+  final matchTypes = ['orderedList', 'bulletList', 'listItem'];
 
   final listStack = <Widget>[];
 
@@ -52,63 +56,91 @@ class ListBuilder extends MarkdownElementBuilder {
         ? _buildListItemMarker(
             _listStrack.last,
             element.attributes['number'],
+            element.style,
           )
         : _buildCheckbox(
             element.attributes['taskListItem'] == 'checked',
+            element.style,
           );
+
+    final markerContainerHeight = _getLineHeight(element.style);
 
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         ConstrainedBox(
           constraints: BoxConstraints(
-            minWidth: listItemMinIndent,
+            minHeight: markerContainerHeight ?? 0.0,
+            maxHeight: markerContainerHeight ?? double.infinity,
+            minWidth: listItemMinIndent ?? 30.0,
           ),
-          child: itemMarker,
+          child: Align(
+            child: Padding(
+              padding: EdgeInsets.only(
+                right: listItemMarkerTrailingSpace ?? 12.0,
+              ),
+              child: itemMarker,
+            ),
+          ),
         ),
         if (child != null) Expanded(child: child),
       ],
     );
   }
 
-  Widget _buildListItemMarker(String type, String? number) {
+  Widget _buildListItemMarker(
+    String type,
+    String? number,
+    TextStyle? listItemStyle,
+  ) {
     final listType = type == 'bulletList'
         ? MarkdownListType.unordered
         : MarkdownListType.ordered;
 
-    final padding = listItemMarkerPadding;
     if (listItemMarkerBuilder != null) {
-      return Padding(
-        padding: padding,
-        child: listItemMarkerBuilder!(listType, number),
-      );
+      return listItemMarkerBuilder!(listType, number);
     }
 
-    return Padding(
-      padding: padding,
-      child: Text(
-        listType == MarkdownListType.unordered ? '•' : '$number.',
-        textAlign: TextAlign.right,
-        style: listItemMarker,
+    // Return a `RichText` to make the makers unselectable.
+    return RichText(
+      text: TextSpan(
+        text: listType == MarkdownListType.unordered ? '\u2022' : '$number.',
+        style: TextStyle(
+          color: listItemStyle?.color?.withOpacity(0.75) ?? Colors.black,
+          fontSize: listType == MarkdownListType.unordered
+              ? (listItemStyle?.fontSize ?? 16) * 1.4
+              : (listItemStyle?.fontSize ?? 16) * 0.96,
+        ).merge(listItemMarker),
       ),
+      strutStyle: StrutStyle(
+        height: listItemStyle?.height,
+        forceStrutHeight: true,
+      ),
+      textAlign: TextAlign.right,
     );
   }
 
-  Widget _buildCheckbox(bool checked) {
+  Widget _buildCheckbox(bool checked, TextStyle? listItemStyle) {
     if (checkboxBuilder != null) {
       return checkboxBuilder!(checked);
     }
 
-    return Padding(
-      padding: listItemMarkerPadding,
-      child: Icon(
-        checked ? Icons.check_box : Icons.check_box_outline_blank,
-        size: checkbox?.fontSize,
-        color: checkbox?.color,
-      ),
+    final checkboxStyle = TextStyle(
+      fontSize: (listItemStyle?.fontSize ?? 16.0) * 1.2,
+    ).merge(checkbox);
+
+    return Icon(
+      checked ? Icons.check_box_outlined : Icons.check_box_outline_blank,
+      size: checkboxStyle.fontSize,
+      color: checkboxStyle.color,
     );
   }
 
-  @override
-  final matchTypes = ['orderedList', 'bulletList', 'listItem'];
+  double? _getLineHeight(TextStyle? style) {
+    if (style == null || style.fontSize == null) {
+      return null;
+    }
+
+    return style.fontSize! * (style.height ?? 1);
+  }
 }

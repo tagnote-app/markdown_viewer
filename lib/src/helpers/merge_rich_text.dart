@@ -94,6 +94,7 @@ TextSpan _mergeSimilarTextSpans(List<TextSpan>? textSpans) {
   for (var index = 1; index < textSpans.length; index++) {
     final nextChild = textSpans[index];
     if (nextChild.recognizer == mergedSpans.last.recognizer &&
+        nextChild.mouseCursor == mergedSpans.last.mouseCursor &&
         nextChild.semanticsLabel == mergedSpans.last.semanticsLabel &&
         nextChild.style == mergedSpans.last.style) {
       final previous = mergedSpans.removeLast();
@@ -114,27 +115,3 @@ TextSpan _mergeSimilarTextSpans(List<TextSpan>? textSpans) {
       ? mergedSpans.first
       : TextSpan(children: mergedSpans);
 }
-
-/// A fake widget in order to return a list of widget from
-/// [MarkdownElementBuilder.buildWidget] when it is an inline element.
-class InlineWraper extends Widget {
-  const InlineWraper(this.children, {Key? key}) : super(key: key);
-  final List<Widget> children;
-
-  @override
-  InlineWraperElement createElement() =>
-      InlineWraperElement(const SizedBox.shrink());
-}
-
-class InlineWraperElement extends Element {
-  InlineWraperElement(super.widget);
-
-  @override
-  bool get debugDoingBuild => false;
-
-  @override
-  void performRebuild() {}
-}
-
-MouseCursor? mouseCursor(bool selectable) =>
-    selectable ? SystemMouseCursors.text : null;

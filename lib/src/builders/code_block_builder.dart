@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 
 import '../definition.dart';
-import '../helpers.dart';
+import '../widgets/copy_button.dart';
 import 'builder.dart';
 
 class CodeBlockBuilder extends MarkdownElementBuilder {
   CodeBlockBuilder({
     TextStyle? textStyle,
-    this.codeblockPadding,
-    this.codeblockDecoration,
+    this.padding,
+    this.decoration,
     this.highlightBuilder,
   }) : super(textStyle: textStyle);
 
-  final EdgeInsets? codeblockPadding;
-  final BoxDecoration? codeblockDecoration;
+  final EdgeInsets? padding;
+  final BoxDecoration? decoration;
   final MarkdownHighlightBuilder? highlightBuilder;
 
   @override
@@ -26,14 +26,15 @@ class CodeBlockBuilder extends MarkdownElementBuilder {
   TextAlign textAlign(parent) => TextAlign.start;
 
   @override
-  TextSpan buildText(text, parent, selectable) {
+  TextSpan buildText(text, parent) {
     final textContent = text.trimRight();
+    final style = const TextStyle(fontFamily: 'monospace').merge(parent.style);
 
     if (highlightBuilder == null) {
       return TextSpan(
         text: textContent,
-        style: parent.style,
-        mouseCursor: mouseCursor(selectable),
+        style: style,
+        mouseCursor: renderer.mouseCursor,
       );
     }
 
@@ -48,28 +49,40 @@ class CodeBlockBuilder extends MarkdownElementBuilder {
     }
 
     return TextSpan(
-      children: spans,
-      style: parent.style,
-      mouseCursor: mouseCursor(selectable),
-    );
+        children: spans, style: style, mouseCursor: renderer.mouseCursor);
   }
 
   @override
   Widget buildWidget(element) {
-    final child = element.children.isNotEmpty
-        ? element.children.single
-        : const SizedBox.shrink();
+    const defaultPadding = EdgeInsets.all(8.0);
+    final defaultDecoration = BoxDecoration(
+      color: const Color(0xfff0f0f0),
+      borderRadius: BorderRadius.circular(5),
+    );
+
+    Widget child;
+    if (element.children.isNotEmpty) {
+      final textWidget = element.children.single;
+      child = Stack(
+        children: [
+          Scrollbar(
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              padding: padding ?? defaultPadding,
+              child: textWidget,
+            ),
+          ),
+          Positioned(right: 0, top: 0, child: CopyButton(textWidget)),
+        ],
+      );
+    } else {
+      child = const SizedBox(height: 15);
+    }
 
     return Container(
       width: double.infinity,
-      decoration: codeblockDecoration,
-      child: Scrollbar(
-        child: SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          padding: codeblockPadding,
-          child: child,
-        ),
-      ),
+      decoration: decoration ?? defaultDecoration,
+      child: child,
     );
   }
 }
