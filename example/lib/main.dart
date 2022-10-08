@@ -7,15 +7,35 @@ import 'package:markdown_viewer/markdown_viewer.dart';
 import 'extension.dart';
 
 const markdown = r'''
-## Markdown Viewer
+## Markdown example
 
-```dart
-// Dart language.
-void main() {
-  print('Hello, World!');
-}
-```
->>>
+Hello **Markdown**!
+
+### Highlights
+
+- [x] ==100%== conform to CommonMark.
+- [x] ==100%== conform to GFM.
+- [x] Easy to implement syntax **highlighting**, for example `flutter_prism`:
+   ```dart
+   // Dart language.
+   void main() {
+     print('Hello, World!');
+   }
+   ```
+- [x] Easy to custom, for example:
+  > This is a #custom_extension
+
+- [x] Correct copy action.\
+      Flutter itself does not add line breaks between widgets, this library has
+      solved this problem except copying a table.
+
+---
+### Dependencies
+| Name | Required|
+|--|--:|
+|`dart_markdown`|Yes|
+|`flutter_prism`|No|
+
 ''';
 
 void main() {
@@ -42,7 +62,7 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('MarkdownViewer Demo')),
-      body: Padding(
+      body: SingleChildScrollView(
         padding: const EdgeInsets.all(20),
         child: MarkdownViewer(
           markdown,
@@ -64,9 +84,13 @@ class MyHomePage extends StatelessWidget {
             ExampleBuilder(),
           ],
           styleSheet: const MarkdownStyle(
+            listItemMarkerTrailingSpace: 12,
+            inlineCode: TextStyle(
+              fontFamily: 'RobotoMono',
+            ),
             codeBlock: TextStyle(
-              letterSpacing: -0.3,
               fontSize: 14,
+              letterSpacing: -0.3,
               fontFamily: 'RobotoMono',
             ),
           ),
