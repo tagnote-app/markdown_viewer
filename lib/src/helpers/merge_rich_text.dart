@@ -94,6 +94,7 @@ TextSpan _mergeSimilarTextSpans(List<TextSpan>? textSpans) {
   for (var index = 1; index < textSpans.length; index++) {
     final nextChild = textSpans[index];
     if (nextChild.recognizer == mergedSpans.last.recognizer &&
+        nextChild.mouseCursor == mergedSpans.last.mouseCursor &&
         nextChild.semanticsLabel == mergedSpans.last.semanticsLabel &&
         nextChild.style == mergedSpans.last.style) {
       final previous = mergedSpans.removeLast();

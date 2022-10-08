@@ -202,7 +202,7 @@ class MarkdownRenderer implements NodeVisitor {
         children: textSpan.children,
         semanticsLabel: textSpan.semanticsLabel,
         style: textSpan.style,
-        mouseCursor: mouseCursor,
+        mouseCursor: SystemMouseCursors.click,
         recognizer: _gestureRecognizers.entries.last.value,
       );
     }

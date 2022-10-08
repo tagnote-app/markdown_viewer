@@ -77,7 +77,7 @@ abstract class MarkdownElementBuilder {
       TextSpan(
         text: text,
         style: parent.style,
-        mouseCursor: renderer.selectable ? SystemMouseCursors.text : null,
+        mouseCursor: renderer.mouseCursor,
       );
 
   /// Sets a new [TextAlign] instead of using the default one.
