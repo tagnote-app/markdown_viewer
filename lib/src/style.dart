@@ -41,8 +41,8 @@ class MarkdownStyle {
     this.list,
     this.listItem,
     this.listItemMarker,
-    this.listItemMarkerPadding,
-    this.listItemMinIndent = 30.0,
+    this.listItemMarkerTrailingSpace,
+    this.listItemMinIndent,
     this.checkbox,
     this.table,
     this.tableHead,
@@ -95,8 +95,8 @@ class MarkdownStyle {
   final TextStyle? list;
   final TextStyle? listItem;
   final TextStyle? listItemMarker;
-  final EdgeInsets? listItemMarkerPadding;
-  final double listItemMinIndent;
+  final double? listItemMarkerTrailingSpace;
+  final double? listItemMinIndent;
   final TextStyle? checkbox;
   final TextStyle? table;
   final TextStyle? tableHead;

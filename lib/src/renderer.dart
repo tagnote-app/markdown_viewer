@@ -102,7 +102,7 @@ class MarkdownRenderer implements NodeVisitor {
         list: styleSheet.list,
         listItem: styleSheet.listItem,
         listItemMarker: styleSheet.listItemMarker,
-        listItemMarkerPadding: styleSheet.listItemMarkerPadding,
+        listItemMarkerTrailingSpace: styleSheet.listItemMarkerTrailingSpace,
         listItemMinIndent: styleSheet.listItemMinIndent,
         checkbox: styleSheet.checkbox,
         listItemMarkerBuilder: listItemMarkerBuilder,
