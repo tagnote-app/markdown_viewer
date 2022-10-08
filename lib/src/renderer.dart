@@ -128,8 +128,7 @@ class MarkdownRenderer implements NodeVisitor {
   final double? _blockSpacing;
   final Color? _selectionColor;
   final SelectionRegistrar? _selectionRegistrar;
-  bool get _selectable =>
-      _selectionColor != null && _selectionRegistrar != null;
+  bool get selectable => _selectionColor != null && _selectionRegistrar != null;
   final MarkdownStyle _styleSheet;
 
   String? _keepLineEndingsWhen;
@@ -194,7 +193,7 @@ class MarkdownRenderer implements NodeVisitor {
     final textContent = _keepLineEndingsWhen == null
         ? text.text.replaceAll('\n', ' ')
         : text.text;
-    var textSpan = builder.buildText(textContent, parent, _selectable);
+    var textSpan = builder.buildText(textContent, parent, selectable);
 
     if (_gestureRecognizers.isNotEmpty) {
       textSpan = TextSpan(
@@ -202,7 +201,7 @@ class MarkdownRenderer implements NodeVisitor {
         children: textSpan.children,
         semanticsLabel: textSpan.semanticsLabel,
         style: textSpan.style,
-        mouseCursor: mouseCursor(_selectable),
+        mouseCursor: mouseCursor(selectable),
         recognizer: _gestureRecognizers.entries.last.value,
       );
     }
@@ -240,7 +239,7 @@ class MarkdownRenderer implements NodeVisitor {
           height: _blockSpacing ?? 8.0,
           // TODO(Zhiguang): Remove it when this issue is fixed:
           // https://github.com/flutter/flutter/issues/104548
-          child: _selectable
+          child: selectable
               ? const Text(' \n', selectionColor: Colors.transparent)
               : null,
         ),
@@ -265,7 +264,7 @@ class MarkdownRenderer implements NodeVisitor {
     _gestureRecognizers.remove(type);
   }
 
-  /// Builds a [RichText] widget.
+  /// Creates a [RichText] widget.
   Widget createRichText(TextSpan text, {TextAlign? textAlign}) {
     return RichText(
       text: text,
