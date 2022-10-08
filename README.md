@@ -1,6 +1,8 @@
 A Markdown viewer widget for Flutter. It renders Markdown string to rich text
 output.
 
+![example](doc/screenshot.png)
+
 ### Usage
 
 ```dart
