@@ -55,7 +55,7 @@ class MarkdownStyle {
     this.codeBlock,
     this.codeblockPadding,
     this.codeblockDecoration,
-    this.blockSpacing = 8.0,
+    this.blockSpacing,
   });
 
   final TextStyle? textStyle;
@@ -111,5 +111,5 @@ class MarkdownStyle {
   final BoxDecoration? codeblockDecoration;
 
   /// The vertical space between two block elements.
-  final double blockSpacing;
+  final double? blockSpacing;
 }
