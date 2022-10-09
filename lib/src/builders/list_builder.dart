@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../ast.dart';
 import '../definition.dart';
 import 'builder.dart';
 
@@ -14,6 +15,7 @@ class ListBuilder extends MarkdownElementBuilder {
     this.checkbox,
     this.listItemMarkerBuilder,
     this.checkboxBuilder,
+    this.paragraphPadding,
   }) : super(textStyleMap: {
           'orderedList': list,
           'bulletList': list,
@@ -26,27 +28,27 @@ class ListBuilder extends MarkdownElementBuilder {
   final double? listItemMinIndent;
   final MarkdownListItemMarkerBuilder? listItemMarkerBuilder;
   final MarkdownCheckboxBuilder? checkboxBuilder;
+  final EdgeInsets? paragraphPadding;
 
   @override
   final matchTypes = ['orderedList', 'bulletList', 'listItem'];
 
-  final listStack = <Widget>[];
-
-  final _listStrack = <String>[];
+  final _listStrack = <MarkdownElement>[];
 
   bool _isList(String type) => type == 'orderedList' || type == 'bulletList';
 
   @override
-  void init(type, attributes) {
+  void init(element) {
+    final type = element.type;
     if (_isList(type)) {
-      _listStrack.add(type);
+      _listStrack.add(element);
     }
   }
 
   @override
-  Widget? buildWidget(element) {
+  Widget? buildWidget(element, parent) {
     final type = element.type;
-    final child = super.buildWidget(element);
+    final child = super.buildWidget(element, parent);
     if (_isList(type)) {
       _listStrack.removeLast();
       return child;
@@ -54,7 +56,7 @@ class ListBuilder extends MarkdownElementBuilder {
 
     final itemMarker = element.attributes['taskListItem'] == null
         ? _buildListItemMarker(
-            _listStrack.last,
+            _listStrack.last.type,
             element.attributes['number'],
             element.style,
           )
@@ -65,7 +67,7 @@ class ListBuilder extends MarkdownElementBuilder {
 
     final markerContainerHeight = _getLineHeight(element.style);
 
-    return Row(
+    final listItem = Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         ConstrainedBox(
@@ -85,6 +87,19 @@ class ListBuilder extends MarkdownElementBuilder {
         ),
         if (child != null) Expanded(child: child),
       ],
+    );
+
+    final hasParagraphPadding =
+        paragraphPadding != null && paragraphPadding != EdgeInsets.zero;
+
+    if (_listStrack.last.attributes['isTight'] == 'true' ||
+        !hasParagraphPadding) {
+      return listItem;
+    }
+
+    return Padding(
+      padding: paragraphPadding!,
+      child: listItem,
     );
   }
 

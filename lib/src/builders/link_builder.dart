@@ -21,10 +21,11 @@ class LinkBuilder extends MarkdownElementBuilder {
   final MarkdownTapLinkCallback? _onTap;
 
   @override
-  GestureRecognizer? gestureRecognizer(type, attributes) {
+  GestureRecognizer? gestureRecognizer(element) {
     if (_onTap == null) {
       return null;
     }
+    final attributes = element.attributes;
 
     return TapGestureRecognizer()
       ..onTap = () {

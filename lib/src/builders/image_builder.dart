@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 
 import '../definition.dart';
+import '../models/markdown_tree_element.dart';
 import 'builder.dart';
 
 class ImageBuilder extends MarkdownElementBuilder {
@@ -21,7 +22,7 @@ class ImageBuilder extends MarkdownElementBuilder {
   final matchTypes = ['image'];
 
   @override
-  Widget? buildWidget(element) {
+  Widget? buildWidget(element, parent) {
     final destination = element.attributes['destination']!;
     if (destination.isEmpty) {
       return null;

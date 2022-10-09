@@ -32,7 +32,7 @@ class HeadlineBuilder extends MarkdownElementBuilder {
   EdgeInsets? h6Padding;
 
   @override
-  TextStyle? buildTextStyle(defaultStyle, type, attributes) {
+  TextStyle? buildTextStyle(element, defaultStyle) {
     final baseFontSize = defaultStyle.fontSize ?? 16;
 
     return defaultStyle.merge({
@@ -42,14 +42,14 @@ class HeadlineBuilder extends MarkdownElementBuilder {
       "4": TextStyle(fontSize: baseFontSize * 1.1).merge(headline4),
       "5": TextStyle(fontSize: baseFontSize).merge(headline5),
       "6": TextStyle(fontSize: baseFontSize).merge(headline6),
-    }[attributes['level']]);
+    }[element.attributes['level']]);
   }
 
   @override
   final matchTypes = ['headline'];
 
   @override
-  EdgeInsets? blockPadding(element) => {
+  EdgeInsets? blockPadding(element, parent) => {
         "1": h1Padding,
         "2": h2Padding,
         "3": h3Padding,

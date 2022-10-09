@@ -20,6 +20,7 @@ import 'definition.dart';
 import 'extensions.dart';
 import 'helpers/inline_wraper.dart';
 import 'helpers/merge_rich_text.dart';
+import 'models/markdown_tree_element.dart';
 import 'style.dart';
 import 'transformer.dart';
 
@@ -109,6 +110,7 @@ class MarkdownRenderer implements NodeVisitor {
         listItemMinIndent: styleSheet.listItemMinIndent,
         checkbox: styleSheet.checkbox,
         listItemMarkerBuilder: listItemMarkerBuilder,
+        paragraphPadding: styleSheet.paragraphPadding,
         checkboxBuilder: checkboxBuilder,
       ),
       FootnoteBuilder(
@@ -146,10 +148,12 @@ class MarkdownRenderer implements NodeVisitor {
     _keepLineEndingsWhen = null;
     _gestureRecognizers.clear();
 
-    _tree.add(_TreeElement.root());
+    final rootChildren = <MarkdownNode>[];
+    _tree.add(_TreeElement.root(rootChildren));
 
     for (final MarkdownNode node in AstTransformer().transform(nodes)) {
       assert(_tree.length == 1);
+      rootChildren.add(node);
       node.accept(this);
     }
 
@@ -161,20 +165,19 @@ class MarkdownRenderer implements NodeVisitor {
   @override
   bool visitElementBefore(MarkdownElement element) {
     final type = element.type;
-    final attributes = element.attributes;
     assert(_builders[type] != null, "No $type builder found");
 
-    final parent = _tree.last;
+    final parentTreeElement = _tree.last;
     final builder = _builders[type]!;
-    builder.init(type, attributes);
+    builder.init(element);
 
-    builder.parentStyle = parent.style;
+    builder.parentStyle = parentTreeElement.style;
     if (builder.replaceLineEndings(type) == false) {
       _keepLineEndingsWhen = type;
     }
     _gestureRecognizers.addIfNotNull(
       type,
-      builder.gestureRecognizer(type, attributes),
+      builder.gestureRecognizer(element),
     );
 
     final defaultTextStyle = const TextStyle(
@@ -185,7 +188,7 @@ class MarkdownRenderer implements NodeVisitor {
 
     _tree.add(_TreeElement.fromAstElement(
       element,
-      style: builder.buildTextStyle(defaultTextStyle, type, attributes),
+      style: builder.buildTextStyle(element, defaultTextStyle),
     ));
     return true;
   }
@@ -234,7 +237,7 @@ class MarkdownRenderer implements NodeVisitor {
       compressWidgets(current.children),
     );
 
-    final widget = builder.buildWidget(current);
+    final widget = builder.buildWidget(current, parent);
     final isBlock = builder.isBlock(current);
     if (widget != null) {
       // Add spacing between block elements
@@ -294,20 +297,16 @@ class MarkdownRenderer implements NodeVisitor {
 }
 
 class _TreeElement extends MarkdownTreeElement {
-  _TreeElement.root()
+  _TreeElement.root(List<MarkdownNode> children)
       : super(
-          type: '',
+          element: MarkdownElement.root(children),
           style: null,
-          attributes: const {},
-          isBlock: true,
         );
 
   _TreeElement.fromAstElement(MarkdownElement element, {TextStyle? style})
       : super(
-          type: element.type,
-          attributes: element.attributes,
+          element: element,
           style: style,
-          isBlock: element.isBlock,
         );
 }
 

@@ -17,7 +17,7 @@ class ThematicBreakBuilder extends MarkdownElementBuilder {
   final matchTypes = ['thematicBreak'];
 
   @override
-  Widget? buildWidget(element) {
+  Widget? buildWidget(element, parent) {
     return Divider(
       color: color,
       height: height,

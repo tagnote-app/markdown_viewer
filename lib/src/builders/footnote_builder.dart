@@ -25,7 +25,7 @@ class FootnoteBuilder extends MarkdownElementBuilder {
   ];
 
   @override
-  Widget? buildWidget(element) {
+  Widget? buildWidget(element, parent) {
     if (element.type == 'footnote') {
       return Text(
         element.attributes['number']!,

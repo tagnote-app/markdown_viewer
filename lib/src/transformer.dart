@@ -7,12 +7,21 @@ class AstTransformer {
 
   final _footnoteReferences = <MdElement>[];
 
+  void _updatePosition(List<MarkdownNode> nodes) {
+    for (var i = 0; i < nodes.length; i++) {
+      nodes[i].position.index = i;
+      nodes[i].position.total = nodes.length;
+    }
+  }
+
   List<MarkdownNode> transform(List<MdNode> nodes) {
     final result = _iterateNodes(nodes);
 
     if (_footnoteReferences.isNotEmpty) {
       result.add(_buildFootnoteReference());
     }
+
+    _updatePosition(result);
 
     return result;
   }
@@ -25,7 +34,7 @@ class AstTransformer {
 
     void popBuffer() {
       if (stringBuffer.isNotEmpty) {
-        result.add(MarkdownText(stringBuffer.toString()));
+        result.add(MarkdownText(stringBuffer.toString(), SiblingPosition()));
         stringBuffer.clear();
       }
     }
@@ -52,11 +61,14 @@ class AstTransformer {
         }
 
         popBuffer();
+        final children = _iterateNodes(node.children);
+        _updatePosition(children);
         result.add(MarkdownElement(
           node.type,
+          SiblingPosition(),
           isBlock: node.isBlock,
           attributes: node.attributes,
-          children: _iterateNodes(node.children),
+          children: children,
         ));
       } else {
         throw ArgumentError(
@@ -74,20 +86,25 @@ class AstTransformer {
       (a, b) => a.attributes['number']!.compareTo(b.attributes['number']!),
     );
 
-    final listItem = _footnoteReferences
-        .map((e) => MarkdownElement(
-              'listItem',
-              isBlock: e.isBlock,
-              attributes: {'number': e.attributes['number']!},
-              children: _iterateNodes(e.children),
-            ))
-        .toList();
+    final listItem = _footnoteReferences.map((e) {
+      final children = _iterateNodes(e.children);
+      _updatePosition(children);
+      return MarkdownElement(
+        'listItem',
+        SiblingPosition(),
+        isBlock: e.isBlock,
+        attributes: {'number': e.attributes['number']!},
+        children: children,
+      );
+    }).toList();
 
     return MarkdownElement(
       'footnoteReference',
+      SiblingPosition(),
       children: [
         MarkdownElement(
           'orderedList',
+          SiblingPosition(),
           isBlock: true,
           children: listItem,
         )

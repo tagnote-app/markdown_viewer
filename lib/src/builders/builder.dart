@@ -1,8 +1,9 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-import '../definition.dart';
+import '../ast.dart';
 import '../helpers/inline_wraper.dart';
+import '../models/markdown_tree_element.dart';
 import '../renderer.dart';
 
 abstract class MarkdownElementBuilder {
@@ -48,22 +49,17 @@ abstract class MarkdownElementBuilder {
 
   /// Called when an Element has been reached, before it's children have been
   /// built.
-  void init(String type, Attributes attributes) {}
+  void init(MarkdownElement element) {}
 
   /// Creates a [GestureRecognizer] for the current element and it's
   /// descendants.
-  GestureRecognizer? gestureRecognizer(String type, Attributes attributes) =>
-      null;
+  GestureRecognizer? gestureRecognizer(MarkdownElement element) => null;
 
   /// Builds a [TextStyle] for the current element. It merges the [textStyle]
   /// of current matched element into [parentStyle] and returns the result by
   /// default.
-  TextStyle? buildTextStyle(
-    TextStyle defaultStyle,
-    String type,
-    Attributes attributes,
-  ) {
-    final currentStyle = textStyle ?? textStyleMap?[type];
+  TextStyle? buildTextStyle(MarkdownElement element, TextStyle defaultStyle) {
+    final currentStyle = textStyle ?? textStyleMap?[element.type];
     return defaultStyle.merge(parentStyle).merge(currentStyle);
   }
 
@@ -96,7 +92,11 @@ abstract class MarkdownElementBuilder {
   /// If it is a block element, it uses the value from [element] by default.
   bool isBlock(MarkdownTreeElement element) => element.isBlock;
 
-  EdgeInsets? blockPadding(MarkdownTreeElement element) => EdgeInsets.zero;
+  EdgeInsets? blockPadding(
+    MarkdownTreeElement element,
+    MarkdownTreeElement parent,
+  ) =>
+      EdgeInsets.zero;
 
   /// Builds a widget of current element and adds to the element tree.
   ///
@@ -106,9 +106,7 @@ abstract class MarkdownElementBuilder {
   /// merged with other [RichText] widgets. Use [createText] instead if you want
   /// to create a text widget and merge it with other adjacent [RichText]
   /// widgets.
-  Widget? buildWidget(
-    MarkdownTreeElement element,
-  ) {
+  Widget? buildWidget(MarkdownTreeElement element, MarkdownTreeElement parent) {
     final children = element.children;
     if (children.isEmpty) {
       return null;
@@ -125,7 +123,7 @@ abstract class MarkdownElementBuilder {
       children: children,
     );
 
-    final padding = blockPadding(element);
+    final padding = blockPadding(element, parent);
     if (padding == null || padding == EdgeInsets.zero) {
       return widget;
     }

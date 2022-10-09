@@ -56,7 +56,8 @@ class TableBuilder extends MarkdownElementBuilder {
   bool isBlock(element) => element.type == 'table';
 
   @override
-  void init(type, attributes) {
+  void init(element) {
+    final type = element.type;
     if (type == 'table') {
       _tableStack.add(_TableElement());
     } else if (type == 'tableRow') {
@@ -93,7 +94,7 @@ class TableBuilder extends MarkdownElementBuilder {
   }
 
   @override
-  Widget? buildWidget(element) {
+  Widget? buildWidget(element, parent) {
     final type = element.type;
 
     if (type == 'table') {

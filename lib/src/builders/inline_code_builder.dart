@@ -18,15 +18,15 @@ class InlineCodeBuilder extends MarkdownElementBuilder {
   double? _lineHeight;
 
   @override
-  TextStyle? buildTextStyle(defaultStyle, type, attributes) {
-    final style = super.buildTextStyle(defaultStyle, type, attributes);
+  TextStyle? buildTextStyle(element, defaultStyle) {
+    final style = super.buildTextStyle(element, defaultStyle);
     _lineHeight = style?.height;
 
     return style?.copyWith(height: 1);
   }
 
   @override
-  Widget? buildWidget(element) {
+  Widget? buildWidget(element, parent) {
     final richText = element.children.single as RichText;
 
     // The purpose of this is to make the RichText has the same line height as
