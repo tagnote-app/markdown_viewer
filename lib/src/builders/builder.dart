@@ -23,6 +23,7 @@ abstract class MarkdownElementBuilder {
     );
   }
 
+  /// The reference of current [MarkdownRenderer] instance.
   late MarkdownRenderer renderer;
 
   /// Initilizes [renderer] instance.
@@ -98,6 +99,47 @@ abstract class MarkdownElementBuilder {
   ) =>
       EdgeInsets.zero;
 
+  /// Updates padding, including:
+  ///
+  /// Sets `top` to `0` if it is the first element of a block list.\
+  /// Sets `bottom` to `0` if it is the last element of a block list.
+  EdgeInsets? updatePadding(
+    MarkdownTreeElement element,
+    MarkdownTreeElement parent,
+    EdgeInsets? padding,
+  ) {
+    if (padding == null || padding == EdgeInsets.zero) {
+      return null;
+    }
+
+    final position = element.element.position;
+    final isLast = position.index + 1 == position.total;
+    final isFirst = position.index == 0;
+
+    if (!isLast && !isFirst) {
+      return padding;
+    }
+
+    var top = padding!.top;
+    var bottom = padding.bottom;
+
+    if (isFirst && isLast) {
+      top = 0;
+      bottom = 0;
+    } else if (isFirst) {
+      top = 0;
+    } else if (isLast) {
+      bottom = 0;
+    }
+
+    return padding.copyWith(
+      top: top,
+      bottom: bottom,
+      left: padding.left,
+      right: padding.right,
+    );
+  }
+
   /// Builds a widget of current element and adds to the element tree.
   ///
   /// Nothing will be added to the element tree if returns `null`.
@@ -123,7 +165,12 @@ abstract class MarkdownElementBuilder {
       children: children,
     );
 
-    final padding = blockPadding(element, parent);
+    final padding = updatePadding(
+      element,
+      parent,
+      blockPadding(element, parent),
+    );
+
     if (padding == null || padding == EdgeInsets.zero) {
       return widget;
     }
