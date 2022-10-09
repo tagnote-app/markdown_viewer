@@ -18,7 +18,7 @@ class MarkdownStyle {
     this.h5Padding,
     this.h6Padding,
     this.paragraph,
-    this.paragraphPadding,
+    this.paragraphPadding = const EdgeInsets.only(bottom: 12.0),
     this.blockquote,
     this.blockquoteDecoration,
     this.blockquotePadding,
