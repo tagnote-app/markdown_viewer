@@ -92,7 +92,11 @@ abstract class MarkdownElementBuilder {
   /// If it is a block element, it uses the value from [element] by default.
   bool isBlock(MarkdownTreeElement element) => element.isBlock;
 
-  EdgeInsets? blockPadding(MarkdownTreeElement element) => EdgeInsets.zero;
+  EdgeInsets? blockPadding(
+    MarkdownTreeElement element,
+    MarkdownTreeElement parent,
+  ) =>
+      EdgeInsets.zero;
 
   /// Builds a widget of current element and adds to the element tree.
   ///
@@ -119,7 +123,7 @@ abstract class MarkdownElementBuilder {
       children: children,
     );
 
-    final padding = blockPadding(element);
+    final padding = blockPadding(element, parent);
     if (padding == null || padding == EdgeInsets.zero) {
       return widget;
     }

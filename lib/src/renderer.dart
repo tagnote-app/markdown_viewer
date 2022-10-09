@@ -110,6 +110,7 @@ class MarkdownRenderer implements NodeVisitor {
         listItemMinIndent: styleSheet.listItemMinIndent,
         checkbox: styleSheet.checkbox,
         listItemMarkerBuilder: listItemMarkerBuilder,
+        paragraphPadding: styleSheet.paragraphPadding,
         checkboxBuilder: checkboxBuilder,
       ),
       FootnoteBuilder(

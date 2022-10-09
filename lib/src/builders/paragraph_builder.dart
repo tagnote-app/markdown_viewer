@@ -14,8 +14,9 @@ class ParagraphBuilder extends MarkdownElementBuilder {
   final matchTypes = ['paragraph'];
 
   @override
-  EdgeInsets? blockPadding(element) {
-    if (padding == null) {
+  EdgeInsets? blockPadding(element, parent) {
+    // When a list is not tight, add padding to list item
+    if (padding == null || parent.type == 'listItem') {
       return null;
     }
 

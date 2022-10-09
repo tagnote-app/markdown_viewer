@@ -49,7 +49,7 @@ class HeadlineBuilder extends MarkdownElementBuilder {
   final matchTypes = ['headline'];
 
   @override
-  EdgeInsets? blockPadding(element) => {
+  EdgeInsets? blockPadding(element, parent) => {
         "1": h1Padding,
         "2": h2Padding,
         "3": h3Padding,
