@@ -26,7 +26,7 @@ class InlineCodeBuilder extends MarkdownElementBuilder {
   }
 
   @override
-  Widget? buildWidget(element) {
+  Widget? buildWidget(element, parent) {
     final richText = element.children.single as RichText;
 
     // The purpose of this is to make the RichText has the same line height as

@@ -94,7 +94,7 @@ class TableBuilder extends MarkdownElementBuilder {
   }
 
   @override
-  Widget? buildWidget(element) {
+  Widget? buildWidget(element, parent) {
     final type = element.type;
 
     if (type == 'table') {

@@ -20,7 +20,7 @@ class BlockquoteBuilder extends MarkdownElementBuilder {
   final matchTypes = ['blockquote'];
 
   @override
-  Widget? buildWidget(element) {
+  Widget? buildWidget(element, parent) {
     return Container(
       width: double.infinity,
       decoration: decoration ??
@@ -34,7 +34,7 @@ class BlockquoteBuilder extends MarkdownElementBuilder {
           ),
       child: Padding(
         padding: padding ?? const EdgeInsets.only(left: 20),
-        child: super.buildWidget(element),
+        child: super.buildWidget(element, parent),
       ),
     );
   }

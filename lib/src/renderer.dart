@@ -236,7 +236,7 @@ class MarkdownRenderer implements NodeVisitor {
       compressWidgets(current.children),
     );
 
-    final widget = builder.buildWidget(current);
+    final widget = builder.buildWidget(current, parent);
     final isBlock = builder.isBlock(current);
     if (widget != null) {
       // Add spacing between block elements

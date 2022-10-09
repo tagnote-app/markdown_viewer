@@ -45,9 +45,9 @@ class ListBuilder extends MarkdownElementBuilder {
   }
 
   @override
-  Widget? buildWidget(element) {
+  Widget? buildWidget(element, parent) {
     final type = element.type;
-    final child = super.buildWidget(element);
+    final child = super.buildWidget(element, parent);
     if (_isList(type)) {
       _listStrack.removeLast();
       return child;

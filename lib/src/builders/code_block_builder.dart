@@ -53,7 +53,7 @@ class CodeBlockBuilder extends MarkdownElementBuilder {
   }
 
   @override
-  Widget buildWidget(element) {
+  Widget buildWidget(element, parent) {
     const defaultPadding = EdgeInsets.all(8.0);
     final defaultDecoration = BoxDecoration(
       color: const Color(0xfff0f0f0),

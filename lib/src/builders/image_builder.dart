@@ -22,7 +22,7 @@ class ImageBuilder extends MarkdownElementBuilder {
   final matchTypes = ['image'];
 
   @override
-  Widget? buildWidget(element) {
+  Widget? buildWidget(element, parent) {
     final destination = element.attributes['destination']!;
     if (destination.isEmpty) {
       return null;

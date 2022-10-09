@@ -102,7 +102,7 @@ abstract class MarkdownElementBuilder {
   /// merged with other [RichText] widgets. Use [createText] instead if you want
   /// to create a text widget and merge it with other adjacent [RichText]
   /// widgets.
-  Widget? buildWidget(MarkdownTreeElement element) {
+  Widget? buildWidget(MarkdownTreeElement element, MarkdownTreeElement parent) {
     final children = element.children;
     if (children.isEmpty) {
       return null;
