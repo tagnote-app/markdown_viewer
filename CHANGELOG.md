@@ -1,8 +1,9 @@
-## 0.4.0-dev
+## 0.4.0
 
 - Add a `position` attribute to `MarkdownNode`.
 - **Breaking change** Change the parameters of some `Builder` methods.
 - Improve the paddings of paragraph, blockquote and list blocks.
+- Improve some default styles.
 
 ## 0.3.0+2
 
