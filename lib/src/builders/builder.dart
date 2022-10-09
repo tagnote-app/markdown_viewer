@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../definition.dart';
 import '../helpers/inline_wraper.dart';
+import '../models/markdown_tree_element.dart';
 import '../renderer.dart';
 
 abstract class MarkdownElementBuilder {

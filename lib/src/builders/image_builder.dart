@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 
 import '../definition.dart';
+import '../models/markdown_tree_element.dart';
 import 'builder.dart';
 
 class ImageBuilder extends MarkdownElementBuilder {

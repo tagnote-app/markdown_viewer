@@ -20,6 +20,7 @@ import 'definition.dart';
 import 'extensions.dart';
 import 'helpers/inline_wraper.dart';
 import 'helpers/merge_rich_text.dart';
+import 'models/markdown_tree_element.dart';
 import 'style.dart';
 import 'transformer.dart';
 
