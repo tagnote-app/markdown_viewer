@@ -1,3 +1,9 @@
+## 0.4.0-dev
+
+- Add a `position` attribute to `MarkdownNode`.
+- **Breaking change** Change the parameters of some `Builder` methods.
+- Improve the paddings of paragraph, blockquote and list blocks.
+
 ## 0.3.0+2
 
 - Update to `dart_markdown` 2.1.3.
