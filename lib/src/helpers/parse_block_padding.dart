@@ -33,7 +33,7 @@ EdgeInsets? parseBlockPadding(EdgeInsets? padding, SiblingPosition position) {
   return padding.copyWith(
     top: top,
     bottom: bottom,
-    left: padding!.left,
-    right: padding!.right,
+    left: padding.left,
+    right: padding.right,
   );
 }

@@ -3,7 +3,7 @@ output.
 
 <img src="https://raw.githubusercontent.com/chenzhiguang/markdown_viewer/master/doc/screenshot.png" alt="example" width="425">
 
-Check the source code of this screenshot [here](example/lib/main.dart)
+Check the source code of this screenshot [here](https://github.com/chenzhiguang/markdown_viewer/blob/master/example/lib/main.dart)
 
 ### Usage
 
