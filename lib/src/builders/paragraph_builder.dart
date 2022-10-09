@@ -27,24 +27,23 @@ class ParagraphBuilder extends MarkdownElementBuilder {
       return padding;
     }
 
-    if (isFirst) {
-      return padding!.copyWith(
-        top: 0,
-        bottom: padding!.bottom,
-        left: padding!.left,
-        right: padding!.right,
-      );
+    var top = padding!.top;
+    var bottom = padding!.bottom;
+
+    if (isFirst && isLast) {
+      top = 0;
+      bottom = 0;
+    } else if (isFirst) {
+      top = 0;
+    } else if (isLast) {
+      bottom = 0;
     }
 
-    if (isLast) {
-      return padding!.copyWith(
-        top: padding!.top,
-        bottom: 0,
-        left: padding!.left,
-        right: padding!.right,
-      );
-    }
-
-    return padding;
+    return padding!.copyWith(
+      top: top,
+      bottom: bottom,
+      left: padding!.left,
+      right: padding!.right,
+    );
   }
 }
