@@ -11,12 +11,12 @@ class MarkdownStyle {
     this.headline4,
     this.headline5,
     this.headline6,
-    this.h1Padding,
-    this.h2Padding,
-    this.h3Padding,
-    this.h4Padding,
-    this.h5Padding,
-    this.h6Padding,
+    this.h1Padding = const EdgeInsets.only(bottom: 12),
+    this.h2Padding = const EdgeInsets.only(bottom: 9),
+    this.h3Padding = const EdgeInsets.only(bottom: 6),
+    this.h4Padding = const EdgeInsets.only(bottom: 4),
+    this.h5Padding = const EdgeInsets.only(bottom: 3),
+    this.h6Padding = const EdgeInsets.only(bottom: 3),
     this.paragraph,
     this.paragraphPadding = const EdgeInsets.only(bottom: 12.0),
     this.blockquote,
@@ -56,7 +56,7 @@ class MarkdownStyle {
     this.codeBlock,
     this.codeblockPadding,
     this.codeblockDecoration,
-    this.blockSpacing,
+    this.blockSpacing = 8.0,
   });
 
   final TextStyle? textStyle;
@@ -113,5 +113,5 @@ class MarkdownStyle {
   final BoxDecoration? codeblockDecoration;
 
   /// The vertical space between two block elements.
-  final double? blockSpacing;
+  final double blockSpacing;
 }

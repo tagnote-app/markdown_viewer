@@ -130,7 +130,7 @@ class MarkdownRenderer implements NodeVisitor {
   }
 
   final TextAlign _textAlign;
-  final double? _blockSpacing;
+  final double _blockSpacing;
   final Color? _selectionColor;
   final SelectionRegistrar? _selectionRegistrar;
   final MarkdownStyle _styleSheet;
@@ -244,7 +244,7 @@ class MarkdownRenderer implements NodeVisitor {
       // Add spacing between block elements
       _tree.last.children.addIfTrue(
         SizedBox(
-          height: _blockSpacing ?? 8.0,
+          height: _blockSpacing,
           // TODO(Zhiguang): Remove it when this issue is fixed:
           // https://github.com/flutter/flutter/issues/104548
           child: selectable
