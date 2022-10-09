@@ -1,19 +1,24 @@
 import 'package:flutter/widgets.dart';
 
+import '../ast.dart';
+
 /// A class for for the tree element produced by [MarkdownRenderer].
 abstract class MarkdownTreeElement {
   MarkdownTreeElement({
-    required this.type,
-    required this.attributes,
-    required this.isBlock,
+    required this.element,
     this.style,
   });
 
-  final String type;
-  final bool isBlock;
   final TextStyle? style;
-  final Map<String, String> attributes;
+
+  /// The original [MarkdownElement].
+  final MarkdownElement element;
+
   final List<Widget> children = <Widget>[];
+
+  String get type => element.type;
+  bool get isBlock => element.isBlock;
+  Map<String, String> get attributes => element.attributes;
 }
 
 abstract class MarkdownImageInfo {

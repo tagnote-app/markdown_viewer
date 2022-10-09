@@ -56,7 +56,8 @@ class TableBuilder extends MarkdownElementBuilder {
   bool isBlock(element) => element.type == 'table';
 
   @override
-  void init(type, attributes) {
+  void init(element) {
+    final type = element.type;
     if (type == 'table') {
       _tableStack.add(_TableElement());
     } else if (type == 'tableRow') {

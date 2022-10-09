@@ -24,10 +24,17 @@ class MarkdownElement extends MarkdownNode {
     this.attributes = const {},
   });
 
+  MarkdownElement.root(this.children)
+      : type = '',
+        attributes = const {},
+        position = SiblingPosition(index: 0, total: 1),
+        isBlock = true;
+
   final String type;
   final bool isBlock;
   final List<MarkdownNode> children;
   final Map<String, String> attributes;
+  bool get isRoot => type.isEmpty;
 
   @override
   final SiblingPosition position;

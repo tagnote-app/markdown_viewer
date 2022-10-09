@@ -18,8 +18,8 @@ class InlineCodeBuilder extends MarkdownElementBuilder {
   double? _lineHeight;
 
   @override
-  TextStyle? buildTextStyle(defaultStyle, type, attributes) {
-    final style = super.buildTextStyle(defaultStyle, type, attributes);
+  TextStyle? buildTextStyle(element, defaultStyle) {
+    final style = super.buildTextStyle(element, defaultStyle);
     _lineHeight = style?.height;
 
     return style?.copyWith(height: 1);
