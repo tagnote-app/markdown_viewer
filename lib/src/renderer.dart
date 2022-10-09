@@ -12,9 +12,10 @@ import 'builders/image_builder.dart';
 import 'builders/inline_code_builder.dart';
 import 'builders/link_builder.dart';
 import 'builders/list_builder.dart';
-import 'builders/simple_blocks_builder.dart';
+import 'builders/paragraph_builder.dart';
 import 'builders/simple_inlines_builder.dart';
 import 'builders/table_bilder.dart';
+import 'builders/thematic_break_builder.dart';
 import 'definition.dart';
 import 'extensions.dart';
 import 'helpers/inline_wraper.dart';
@@ -64,12 +65,14 @@ class MarkdownRenderer implements NodeVisitor {
         superscript: styleSheet.superscript,
         kbd: styleSheet.kbd,
       ),
-      SimpleBlocksBuilder(
-        paragraph: styleSheet.paragraph,
-        paragraphPadding: styleSheet.paragraphPadding,
-        dividerColor: styleSheet.dividerColor,
-        dividerHeight: styleSheet.dividerHeight,
-        dividerThickness: styleSheet.dividerThickness,
+      ThematicBreakBuilder(
+        color: styleSheet.dividerColor,
+        height: styleSheet.dividerHeight,
+        thickness: styleSheet.dividerThickness,
+      ),
+      ParagraphBuilder(
+        textStyle: styleSheet.paragraph,
+        padding: styleSheet.paragraphPadding,
       ),
       InlineCodeBuilder(textStyle: styleSheet.inlineCode),
       LinkBuilder(textStyle: styleSheet.link, onTap: onTapLink),
