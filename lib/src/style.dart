@@ -22,6 +22,7 @@ class MarkdownStyle {
     this.blockquote,
     this.blockquoteDecoration,
     this.blockquotePadding,
+    this.blockquoteContentPadding,
     this.footnoteReferenceDecoration,
     this.footnoteReferencePadding,
     this.dividerColor,
@@ -76,6 +77,7 @@ class MarkdownStyle {
   final TextStyle? blockquote;
   final BoxDecoration? blockquoteDecoration;
   final EdgeInsets? blockquotePadding;
+  final EdgeInsets? blockquoteContentPadding;
   final BoxDecoration? footnoteReferenceDecoration;
   final EdgeInsets? footnoteReferencePadding;
   final Color? dividerColor;

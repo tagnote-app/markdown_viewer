@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
+import '../helpers/parse_block_padding.dart';
 import 'builder.dart';
 
 class BlockquoteBuilder extends MarkdownElementBuilder {
   BlockquoteBuilder({
     TextStyle? textStyle,
     this.padding,
+    this.contentPadding,
     this.decoration,
   }) : super(
           textStyle: const TextStyle(
@@ -14,6 +16,7 @@ class BlockquoteBuilder extends MarkdownElementBuilder {
         );
 
   final EdgeInsets? padding;
+  final EdgeInsets? contentPadding;
   final BoxDecoration? decoration;
 
   @override
@@ -21,7 +24,7 @@ class BlockquoteBuilder extends MarkdownElementBuilder {
 
   @override
   Widget? buildWidget(element, parent) {
-    return Container(
+    final widget = Container(
       width: double.infinity,
       decoration: decoration ??
           const BoxDecoration(
@@ -32,10 +35,16 @@ class BlockquoteBuilder extends MarkdownElementBuilder {
               ),
             ),
           ),
-      child: Padding(
-        padding: padding ?? const EdgeInsets.only(left: 20),
-        child: super.buildWidget(element, parent),
-      ),
+      padding: contentPadding ?? const EdgeInsets.only(left: 20),
+      child: super.buildWidget(element, parent),
     );
+
+    final parsedPadding = parseBlockPadding(padding, element.element.position);
+
+    if (parsedPadding == null) {
+      return widget;
+    }
+
+    return Padding(padding: parsedPadding, child: widget);
   }
 }

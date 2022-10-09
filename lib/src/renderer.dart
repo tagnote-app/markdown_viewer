@@ -101,6 +101,7 @@ class MarkdownRenderer implements NodeVisitor {
         textStyle: styleSheet.blockquote,
         decoration: styleSheet.blockquoteDecoration,
         padding: styleSheet.blockquotePadding,
+        contentPadding: styleSheet.blockquoteContentPadding,
       ),
       ListBuilder(
         list: styleSheet.list,
