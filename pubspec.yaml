@@ -12,7 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  dart_markdown: 3.0.0
+  dart_markdown: ^3.0.0
 
 dev_dependencies:
   flutter_test:
