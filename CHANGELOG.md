@@ -1,4 +1,4 @@
-## 0.4.1-dev
+## 0.4.1
 
 - Update to `dart_markdown` 3.0.0.
 
