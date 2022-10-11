@@ -1,7 +1,7 @@
 name: markdown_viewer
 description: A Markdown renderer for Flutter. Render Markdown String to rich
   text output.
-version: 0.4.1-dev
+version: 0.4.1
 repository: https://github.com/chenzhiguang/markdown_viewer
 
 environment:
