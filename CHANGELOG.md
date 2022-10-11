@@ -1,3 +1,7 @@
+## 0.4.1-dev
+
+- Update to `dart_markdown` 3.0.0.
+
 ## 0.4.0
 
 - Add a `position` attribute to `MarkdownNode`.

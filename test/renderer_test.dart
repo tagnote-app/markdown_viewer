@@ -59,7 +59,7 @@ void _testFile(
     final shortPath = path.replaceFirst('$rootPath/', '');
 
     test('file: $shortPath, $description', () {
-      final nodes = Document(
+      final nodes = Markdown(
         enableHtmlBlock: false,
         enableRawHtml: false,
         enableHighlight: true,
@@ -68,7 +68,7 @@ void _testFile(
         enableSubscript: enableSubscript,
         enableKbd: enableKbd,
         enableFootnote: enableFootnote,
-      ).parseLines(data);
+      ).parse(data);
       final actual = MarkdownRenderer(
         styleSheet: const MarkdownStyle(),
         onTapLink: (_, __) {},
