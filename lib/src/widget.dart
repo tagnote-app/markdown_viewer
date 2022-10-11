@@ -94,7 +94,7 @@ class _MarkdownViewerState extends State<MarkdownViewer> {
   }
 
   Widget _buildMarkdown({SelectionRegistrar? selectionRegistrar}) {
-    final md.Document document = md.Document(
+    final markdown = md.Markdown(
       enableHtmlBlock: false,
       enableRawHtml: false,
       enableHighlight: true,
@@ -122,26 +122,26 @@ class _MarkdownViewerState extends State<MarkdownViewer> {
       selectionRegistrar: selectionRegistrar,
     );
 
-    var astNodes = document.parseLines(widget.data);
+    var astNodes = markdown.parse(widget.data);
     if (widget.nodesFilter != null) {
       astNodes = widget.nodesFilter!(astNodes);
     }
 
     final children = renderer.render(astNodes);
 
-    Widget markdown;
+    Widget markdownWidget;
     if (children.length > 1) {
-      markdown = Column(
+      markdownWidget = Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: children,
       );
     } else if (children.length == 1) {
-      markdown = children.single;
+      markdownWidget = children.single;
     } else {
-      markdown = const SizedBox.shrink();
+      markdownWidget = const SizedBox.shrink();
     }
 
-    return markdown;
+    return markdownWidget;
   }
 }
