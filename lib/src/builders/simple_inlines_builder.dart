@@ -56,5 +56,6 @@ class SimpleInlinesBuilder extends MarkdownElementBuilder {
     'superscript',
     'subscript',
     'kbd',
+    'rawHtml',
   ];
 }

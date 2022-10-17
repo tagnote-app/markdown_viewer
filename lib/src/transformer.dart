@@ -5,6 +5,16 @@ import 'definition.dart';
 class AstTransformer {
   AstTransformer();
 
+  final _typeMap = {
+    'atxHeading': 'headline',
+    'setextHeading': 'headline',
+    'fencedCodeBlock': 'codeBlock',
+    'indentedCodeBlock': 'codeBlock',
+    'fencedBlockquote': 'blockquote',
+    'autolinkExtension': 'link',
+    'autolink': 'autolink',
+  };
+
   final _footnoteReferences = <MdElement>[];
 
   void _updatePosition(List<MarkdownNode> nodes) {
@@ -64,7 +74,7 @@ class AstTransformer {
         final children = _iterateNodes(node.children);
         _updatePosition(children);
         result.add(MarkdownElement(
-          node.type,
+          _typeMap[node.type] ?? node.type,
           SiblingPosition(),
           isBlock: node.isBlock,
           attributes: node.attributes,

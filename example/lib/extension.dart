@@ -9,11 +9,14 @@ class ExampleSyntax extends MdInlineSyntax {
   MdInlineObject? parse(MdInlineParser parser, Match match) {
     final markers = [parser.consume()];
     final content = parser.consumeBy(match[0]!.length - 1);
+    final children = content.map((e) => MdText.fromSpan(e)).toList();
 
     return MdInlineElement(
       'example',
       markers: markers,
-      children: content.map((e) => MdText.fromSpan(e)).toList(),
+      children: children,
+      start: markers.first.start,
+      end: children.last.end,
     );
   }
 }

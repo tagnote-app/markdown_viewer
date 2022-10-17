@@ -85,7 +85,7 @@ class MyHomePage extends StatelessWidget {
           ],
           styleSheet: const MarkdownStyle(
             listItemMarkerTrailingSpace: 12,
-            inlineCode: TextStyle(
+            codeSpan: TextStyle(
               fontFamily: 'RobotoMono',
             ),
             codeBlock: TextStyle(
