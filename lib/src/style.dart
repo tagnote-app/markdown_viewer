@@ -38,7 +38,7 @@ class MarkdownStyle {
     this.footnote,
     this.footnoteReference,
     this.link,
-    this.inlineCode,
+    this.codeSpan,
     this.list,
     this.listItem,
     this.listItemMarker,
@@ -93,7 +93,7 @@ class MarkdownStyle {
   final TextStyle? footnote;
   final TextStyle? footnoteReference;
   final TextStyle? link;
-  final TextStyle? inlineCode;
+  final TextStyle? codeSpan;
   final TextStyle? list;
   final TextStyle? listItem;
   final TextStyle? listItemMarker;

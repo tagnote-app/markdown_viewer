@@ -6,10 +6,10 @@ import 'ast.dart';
 import 'builders/blockquote_builder.dart';
 import 'builders/builder.dart';
 import 'builders/code_block_builder.dart';
+import 'builders/code_span_builder.dart';
 import 'builders/footnote_builder.dart';
 import 'builders/headline_builder.dart';
 import 'builders/image_builder.dart';
-import 'builders/inline_code_builder.dart';
 import 'builders/link_builder.dart';
 import 'builders/list_builder.dart';
 import 'builders/paragraph_builder.dart';
@@ -75,7 +75,7 @@ class MarkdownRenderer implements NodeVisitor {
         textStyle: styleSheet.paragraph,
         padding: styleSheet.paragraphPadding,
       ),
-      InlineCodeBuilder(textStyle: styleSheet.inlineCode),
+      CodeSpanBuilder(textStyle: styleSheet.codeSpan),
       LinkBuilder(textStyle: styleSheet.link, onTap: onTapLink),
       TableBuilder(
         table: styleSheet.table,

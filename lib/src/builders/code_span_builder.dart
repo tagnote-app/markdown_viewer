@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'builder.dart';
 
-class InlineCodeBuilder extends MarkdownElementBuilder {
-  InlineCodeBuilder({
+class CodeSpanBuilder extends MarkdownElementBuilder {
+  CodeSpanBuilder({
     TextStyle? textStyle,
   }) : super(
           textStyle: const TextStyle(
@@ -13,7 +13,7 @@ class InlineCodeBuilder extends MarkdownElementBuilder {
         );
 
   @override
-  final matchTypes = ['inlineCode'];
+  final matchTypes = ['codeSpan'];
 
   double? _lineHeight;
 
