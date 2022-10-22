@@ -17,19 +17,17 @@
                   "text": "hi",
                   "style": {
                     "fontFamily": "monospace",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 11.9,
-                    "color": "Color(0xdd000000)"
+                    "fontSize": 16.0,
+                    "color": "Color(0xff8b1c1c)",
+                    "backgroundColor": "Color(0x10000000)"
                   }
                 },
                 {
                   "type": "TextSpan",
                   "text": "lo`",
                   "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
+                    "fontSize": 16.0,
+                    "color": "Color(0xff333333)"
                   }
                 }
               ]

@@ -6,11 +6,11 @@
       {
         "type": "Container",
         "child": {
-          "type": "Padding",
-          "child": {
-            "type": "Column",
-            "children": [
-              {
+          "type": "Column",
+          "children": [
+            {
+              "type": "Padding",
+              "child": {
                 "type": "Column",
                 "children": [
                   {
@@ -20,39 +20,41 @@
                       "type": "TextSpan",
                       "text": "Foo",
                       "style": {
-                        "fontFamily": ".SF UI Display",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 24.0,
-                        "color": "Color(0xdd000000)"
-                      }
-                    }
-                  }
-                ]
-              },
-              {
-                "type": "SizedBox",
-                "height": 8.0
-              },
-              {
-                "type": "Column",
-                "children": [
-                  {
-                    "type": "RichText",
-                    "textAlign": "TextAlign.start",
-                    "text": {
-                      "type": "TextSpan",
-                      "text": "bar\nbaz",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
+                        "fontSize": 25.6,
+                        "color": "Color(0xff333333)"
                       }
                     }
                   }
                 ]
               }
-            ]
+            },
+            {
+              "type": "SizedBox",
+              "height": 8.0
+            },
+            {
+              "type": "Column",
+              "children": [
+                {
+                  "type": "RichText",
+                  "textAlign": "TextAlign.start",
+                  "text": {
+                    "type": "TextSpan",
+                    "text": "bar baz",
+                    "style": {
+                      "fontSize": 16.0,
+                      "color": "Color(0xff666666)"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "decoration": {
+          "type": "BoxDecoration",
+          "border": {
+            "type": "Border"
           }
         }
       }
@@ -65,11 +67,11 @@
       {
         "type": "Container",
         "child": {
-          "type": "Padding",
-          "child": {
-            "type": "Column",
-            "children": [
-              {
+          "type": "Column",
+          "children": [
+            {
+              "type": "Padding",
+              "child": {
                 "type": "Column",
                 "children": [
                   {
@@ -79,39 +81,41 @@
                       "type": "TextSpan",
                       "text": "Foo",
                       "style": {
-                        "fontFamily": ".SF UI Display",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 24.0,
-                        "color": "Color(0xdd000000)"
-                      }
-                    }
-                  }
-                ]
-              },
-              {
-                "type": "SizedBox",
-                "height": 8.0
-              },
-              {
-                "type": "Column",
-                "children": [
-                  {
-                    "type": "RichText",
-                    "textAlign": "TextAlign.start",
-                    "text": {
-                      "type": "TextSpan",
-                      "text": "bar\nbaz",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
+                        "fontSize": 25.6,
+                        "color": "Color(0xff333333)"
                       }
                     }
                   }
                 ]
               }
-            ]
+            },
+            {
+              "type": "SizedBox",
+              "height": 8.0
+            },
+            {
+              "type": "Column",
+              "children": [
+                {
+                  "type": "RichText",
+                  "textAlign": "TextAlign.start",
+                  "text": {
+                    "type": "TextSpan",
+                    "text": "bar baz",
+                    "style": {
+                      "fontSize": 16.0,
+                      "color": "Color(0xff666666)"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "decoration": {
+          "type": "BoxDecoration",
+          "border": {
+            "type": "Border"
           }
         }
       }
@@ -124,11 +128,11 @@
       {
         "type": "Container",
         "child": {
-          "type": "Padding",
-          "child": {
-            "type": "Column",
-            "children": [
-              {
+          "type": "Column",
+          "children": [
+            {
+              "type": "Padding",
+              "child": {
                 "type": "Column",
                 "children": [
                   {
@@ -138,39 +142,41 @@
                       "type": "TextSpan",
                       "text": "Foo",
                       "style": {
-                        "fontFamily": ".SF UI Display",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 24.0,
-                        "color": "Color(0xdd000000)"
-                      }
-                    }
-                  }
-                ]
-              },
-              {
-                "type": "SizedBox",
-                "height": 8.0
-              },
-              {
-                "type": "Column",
-                "children": [
-                  {
-                    "type": "RichText",
-                    "textAlign": "TextAlign.start",
-                    "text": {
-                      "type": "TextSpan",
-                      "text": "bar\nbaz",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
+                        "fontSize": 25.6,
+                        "color": "Color(0xff333333)"
                       }
                     }
                   }
                 ]
               }
-            ]
+            },
+            {
+              "type": "SizedBox",
+              "height": 8.0
+            },
+            {
+              "type": "Column",
+              "children": [
+                {
+                  "type": "RichText",
+                  "textAlign": "TextAlign.start",
+                  "text": {
+                    "type": "TextSpan",
+                    "text": "bar baz",
+                    "style": {
+                      "fontSize": 16.0,
+                      "color": "Color(0xff666666)"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "decoration": {
+          "type": "BoxDecoration",
+          "border": {
+            "type": "Border"
           }
         }
       }
@@ -183,24 +189,34 @@
       {
         "type": "Container",
         "child": {
-          "type": "Scrollbar",
-          "child": {
-            "type": "SingleChildScrollView",
-            "child": {
-              "type": "RichText",
-              "textAlign": "TextAlign.start",
-              "text": {
-                "type": "TextSpan",
-                "text": "> # Foo\n> bar\n> baz",
-                "style": {
-                  "fontFamily": "monospace",
-                  "fontWeight": "FontWeight.w400",
-                  "fontSize": 11.9,
-                  "color": "Color(0xdd000000)"
+          "type": "Stack",
+          "children": [
+            {
+              "type": "Scrollbar",
+              "child": {
+                "type": "SingleChildScrollView",
+                "child": {
+                  "type": "RichText",
+                  "textAlign": "TextAlign.start",
+                  "text": {
+                    "type": "TextSpan",
+                    "text": "> # Foo\n> bar\n> baz",
+                    "style": {
+                      "fontFamily": "monospace",
+                      "fontSize": 16.0,
+                      "color": "Color(0xff333333)"
+                    }
+                  }
                 }
               }
+            },
+            {
+              "type": "Positioned"
             }
-          }
+          ]
+        },
+        "decoration": {
+          "type": "BoxDecoration"
         }
       }
     ]
@@ -212,11 +228,11 @@
       {
         "type": "Container",
         "child": {
-          "type": "Padding",
-          "child": {
-            "type": "Column",
-            "children": [
-              {
+          "type": "Column",
+          "children": [
+            {
+              "type": "Padding",
+              "child": {
                 "type": "Column",
                 "children": [
                   {
@@ -226,39 +242,41 @@
                       "type": "TextSpan",
                       "text": "Foo",
                       "style": {
-                        "fontFamily": ".SF UI Display",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 24.0,
-                        "color": "Color(0xdd000000)"
-                      }
-                    }
-                  }
-                ]
-              },
-              {
-                "type": "SizedBox",
-                "height": 8.0
-              },
-              {
-                "type": "Column",
-                "children": [
-                  {
-                    "type": "RichText",
-                    "textAlign": "TextAlign.start",
-                    "text": {
-                      "type": "TextSpan",
-                      "text": "bar\nbaz",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
+                        "fontSize": 25.6,
+                        "color": "Color(0xff333333)"
                       }
                     }
                   }
                 ]
               }
-            ]
+            },
+            {
+              "type": "SizedBox",
+              "height": 8.0
+            },
+            {
+              "type": "Column",
+              "children": [
+                {
+                  "type": "RichText",
+                  "textAlign": "TextAlign.start",
+                  "text": {
+                    "type": "TextSpan",
+                    "text": "bar baz",
+                    "style": {
+                      "fontSize": 16.0,
+                      "color": "Color(0xff666666)"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "decoration": {
+          "type": "BoxDecoration",
+          "border": {
+            "type": "Border"
           }
         }
       }
@@ -271,30 +289,31 @@
       {
         "type": "Container",
         "child": {
-          "type": "Padding",
-          "child": {
-            "type": "Column",
-            "children": [
-              {
-                "type": "Column",
-                "children": [
-                  {
-                    "type": "RichText",
-                    "textAlign": "TextAlign.start",
-                    "text": {
-                      "type": "TextSpan",
-                      "text": "bar\nbaz\nfoo",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
-                      }
+          "type": "Column",
+          "children": [
+            {
+              "type": "Column",
+              "children": [
+                {
+                  "type": "RichText",
+                  "textAlign": "TextAlign.start",
+                  "text": {
+                    "type": "TextSpan",
+                    "text": "bar baz foo",
+                    "style": {
+                      "fontSize": 16.0,
+                      "color": "Color(0xff666666)"
                     }
                   }
-                ]
-              }
-            ]
+                }
+              ]
+            }
+          ]
+        },
+        "decoration": {
+          "type": "BoxDecoration",
+          "border": {
+            "type": "Border"
           }
         }
       }
@@ -307,30 +326,31 @@
       {
         "type": "Container",
         "child": {
-          "type": "Padding",
-          "child": {
-            "type": "Column",
-            "children": [
-              {
-                "type": "Column",
-                "children": [
-                  {
-                    "type": "RichText",
-                    "textAlign": "TextAlign.start",
-                    "text": {
-                      "type": "TextSpan",
-                      "text": "foo",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
-                      }
+          "type": "Column",
+          "children": [
+            {
+              "type": "Column",
+              "children": [
+                {
+                  "type": "RichText",
+                  "textAlign": "TextAlign.start",
+                  "text": {
+                    "type": "TextSpan",
+                    "text": "foo",
+                    "style": {
+                      "fontSize": 16.0,
+                      "color": "Color(0xff666666)"
                     }
                   }
-                ]
-              }
-            ]
+                }
+              ]
+            }
+          ]
+        },
+        "decoration": {
+          "type": "BoxDecoration",
+          "border": {
+            "type": "Border"
           }
         }
       },
@@ -350,58 +370,72 @@
       {
         "type": "Container",
         "child": {
-          "type": "Padding",
-          "child": {
-            "type": "Column",
-            "children": [
-              {
-                "type": "Column",
-                "children": [
-                  {
-                    "type": "Row",
-                    "children": [
-                      {
-                        "type": "ConstrainedBox",
-                        "constraints": {
-                          "type": "BoxConstraints",
-                          "minWidth": 30.0,
-                          "minHeight": 0.0
-                        },
+          "type": "Column",
+          "children": [
+            {
+              "type": "Column",
+              "children": [
+                {
+                  "type": "Row",
+                  "children": [
+                    {
+                      "type": "ConstrainedBox",
+                      "constraints": {
+                        "type": "BoxConstraints",
+                        "minWidth": 30.0,
+                        "minHeight": 24.0,
+                        "maxWidth": 24.0
+                      },
+                      "child": {
+                        "type": "Align",
+                        "alignment": "Alignment.center",
                         "child": {
                           "type": "Padding",
                           "child": {
-                            "type": "Text",
-                            "data": "•"
-                          }
-                        }
-                      },
-                      {
-                        "type": "Expanded",
-                        "child": {
-                          "type": "Column",
-                          "children": [
-                            {
-                              "type": "RichText",
-                              "textAlign": "TextAlign.start",
-                              "text": {
-                                "type": "TextSpan",
-                                "text": "foo",
-                                "style": {
-                                  "fontFamily": ".SF UI Text",
-                                  "fontWeight": "FontWeight.w400",
-                                  "fontSize": 14.0,
-                                  "color": "Color(0xdd000000)"
-                                }
+                            "type": "RichText",
+                            "textAlign": "TextAlign.right",
+                            "text": {
+                              "type": "TextSpan",
+                              "text": "•",
+                              "style": {
+                                "fontSize": 22.4,
+                                "color": "Color(0xbf666666)"
                               }
                             }
-                          ]
+                          }
                         }
                       }
-                    ]
-                  }
-                ]
-              }
-            ]
+                    },
+                    {
+                      "type": "Expanded",
+                      "child": {
+                        "type": "Column",
+                        "children": [
+                          {
+                            "type": "RichText",
+                            "textAlign": "TextAlign.start",
+                            "text": {
+                              "type": "TextSpan",
+                              "text": "foo",
+                              "style": {
+                                "fontSize": 16.0,
+                                "color": "Color(0xff666666)"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "decoration": {
+          "type": "BoxDecoration",
+          "border": {
+            "type": "Border"
           }
         }
       },
@@ -420,13 +454,26 @@
                 "constraints": {
                   "type": "BoxConstraints",
                   "minWidth": 30.0,
-                  "minHeight": 0.0
+                  "minHeight": 24.0,
+                  "maxWidth": 24.0
                 },
                 "child": {
-                  "type": "Padding",
+                  "type": "Align",
+                  "alignment": "Alignment.center",
                   "child": {
-                    "type": "Text",
-                    "data": "•"
+                    "type": "Padding",
+                    "child": {
+                      "type": "RichText",
+                      "textAlign": "TextAlign.right",
+                      "text": {
+                        "type": "TextSpan",
+                        "text": "•",
+                        "style": {
+                          "fontSize": 22.4,
+                          "color": "Color(0xbf333333)"
+                        }
+                      }
+                    }
                   }
                 }
               },
@@ -442,10 +489,8 @@
                         "type": "TextSpan",
                         "text": "bar",
                         "style": {
-                          "fontFamily": ".SF UI Text",
-                          "fontWeight": "FontWeight.w400",
-                          "fontSize": 14.0,
-                          "color": "Color(0xdd000000)"
+                          "fontSize": 16.0,
+                          "color": "Color(0xff333333)"
                         }
                       }
                     }
@@ -465,34 +510,47 @@
       {
         "type": "Container",
         "child": {
-          "type": "Padding",
-          "child": {
-            "type": "Column",
-            "children": [
-              {
-                "type": "Container",
-                "child": {
-                  "type": "Scrollbar",
-                  "child": {
-                    "type": "SingleChildScrollView",
+          "type": "Column",
+          "children": [
+            {
+              "type": "Container",
+              "child": {
+                "type": "Stack",
+                "children": [
+                  {
+                    "type": "Scrollbar",
                     "child": {
-                      "type": "RichText",
-                      "textAlign": "TextAlign.start",
-                      "text": {
-                        "type": "TextSpan",
-                        "text": "foo",
-                        "style": {
-                          "fontFamily": "monospace",
-                          "fontWeight": "FontWeight.w400",
-                          "fontSize": 11.9,
-                          "color": "Color(0xdd000000)"
+                      "type": "SingleChildScrollView",
+                      "child": {
+                        "type": "RichText",
+                        "textAlign": "TextAlign.start",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "foo",
+                          "style": {
+                            "fontFamily": "monospace",
+                            "fontSize": 16.0,
+                            "color": "Color(0xff666666)"
+                          }
                         }
                       }
                     }
+                  },
+                  {
+                    "type": "Positioned"
                   }
-                }
+                ]
+              },
+              "decoration": {
+                "type": "BoxDecoration"
               }
-            ]
+            }
+          ]
+        },
+        "decoration": {
+          "type": "BoxDecoration",
+          "border": {
+            "type": "Border"
           }
         }
       },
@@ -503,24 +561,34 @@
       {
         "type": "Container",
         "child": {
-          "type": "Scrollbar",
-          "child": {
-            "type": "SingleChildScrollView",
-            "child": {
-              "type": "RichText",
-              "textAlign": "TextAlign.start",
-              "text": {
-                "type": "TextSpan",
-                "text": "bar",
-                "style": {
-                  "fontFamily": "monospace",
-                  "fontWeight": "FontWeight.w400",
-                  "fontSize": 11.9,
-                  "color": "Color(0xdd000000)"
+          "type": "Stack",
+          "children": [
+            {
+              "type": "Scrollbar",
+              "child": {
+                "type": "SingleChildScrollView",
+                "child": {
+                  "type": "RichText",
+                  "textAlign": "TextAlign.start",
+                  "text": {
+                    "type": "TextSpan",
+                    "text": "bar",
+                    "style": {
+                      "fontFamily": "monospace",
+                      "fontSize": 16.0,
+                      "color": "Color(0xff333333)"
+                    }
+                  }
                 }
               }
+            },
+            {
+              "type": "Positioned"
             }
-          }
+          ]
+        },
+        "decoration": {
+          "type": "BoxDecoration"
         }
       }
     ]
@@ -532,25 +600,24 @@
       {
         "type": "Container",
         "child": {
-          "type": "Padding",
-          "child": {
-            "type": "Column",
-            "children": [
-              {
-                "type": "Container",
-                "child": {
-                  "type": "Scrollbar",
-                  "child": {
-                    "type": "SingleChildScrollView",
-                    "child": {
-                      "type": "SizedBox",
-                      "height": 0.0,
-                      "width": 0.0
-                    }
-                  }
-                }
+          "type": "Column",
+          "children": [
+            {
+              "type": "Container",
+              "child": {
+                "type": "SizedBox",
+                "height": 15.0
+              },
+              "decoration": {
+                "type": "BoxDecoration"
               }
-            ]
+            }
+          ]
+        },
+        "decoration": {
+          "type": "BoxDecoration",
+          "border": {
+            "type": "Border"
           }
         }
       },
@@ -559,23 +626,24 @@
         "height": 8.0
       },
       {
-        "type": "Column",
-        "children": [
-          {
-            "type": "RichText",
-            "textAlign": "TextAlign.start",
-            "text": {
-              "type": "TextSpan",
-              "text": "foo",
-              "style": {
-                "fontFamily": ".SF UI Text",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+        "type": "Padding",
+        "child": {
+          "type": "Column",
+          "children": [
+            {
+              "type": "RichText",
+              "textAlign": "TextAlign.start",
+              "text": {
+                "type": "TextSpan",
+                "text": "foo",
+                "style": {
+                  "fontSize": 16.0,
+                  "color": "Color(0xff333333)"
+                }
               }
             }
-          }
-        ]
+          ]
+        }
       },
       {
         "type": "SizedBox",
@@ -584,15 +652,11 @@
       {
         "type": "Container",
         "child": {
-          "type": "Scrollbar",
-          "child": {
-            "type": "SingleChildScrollView",
-            "child": {
-              "type": "SizedBox",
-              "height": 0.0,
-              "width": 0.0
-            }
-          }
+          "type": "SizedBox",
+          "height": 15.0
+        },
+        "decoration": {
+          "type": "BoxDecoration"
         }
       }
     ]
@@ -604,30 +668,31 @@
       {
         "type": "Container",
         "child": {
-          "type": "Padding",
-          "child": {
-            "type": "Column",
-            "children": [
-              {
-                "type": "Column",
-                "children": [
-                  {
-                    "type": "RichText",
-                    "textAlign": "TextAlign.start",
-                    "text": {
-                      "type": "TextSpan",
-                      "text": "foo\n- bar",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
-                      }
+          "type": "Column",
+          "children": [
+            {
+              "type": "Column",
+              "children": [
+                {
+                  "type": "RichText",
+                  "textAlign": "TextAlign.start",
+                  "text": {
+                    "type": "TextSpan",
+                    "text": "foo - bar",
+                    "style": {
+                      "fontSize": 16.0,
+                      "color": "Color(0xff666666)"
                     }
                   }
-                ]
-              }
-            ]
+                }
+              ]
+            }
+          ]
+        },
+        "decoration": {
+          "type": "BoxDecoration",
+          "border": {
+            "type": "Border"
           }
         }
       }
@@ -639,8 +704,11 @@
     "expected": [
       {
         "type": "Container",
-        "child": {
-          "type": "Padding"
+        "decoration": {
+          "type": "BoxDecoration",
+          "border": {
+            "type": "Border"
+          }
         }
       }
     ]
@@ -651,8 +719,11 @@
     "expected": [
       {
         "type": "Container",
-        "child": {
-          "type": "Padding"
+        "decoration": {
+          "type": "BoxDecoration",
+          "border": {
+            "type": "Border"
+          }
         }
       }
     ]
@@ -664,30 +735,31 @@
       {
         "type": "Container",
         "child": {
-          "type": "Padding",
-          "child": {
-            "type": "Column",
-            "children": [
-              {
-                "type": "Column",
-                "children": [
-                  {
-                    "type": "RichText",
-                    "textAlign": "TextAlign.start",
-                    "text": {
-                      "type": "TextSpan",
-                      "text": "foo",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
-                      }
+          "type": "Column",
+          "children": [
+            {
+              "type": "Column",
+              "children": [
+                {
+                  "type": "RichText",
+                  "textAlign": "TextAlign.start",
+                  "text": {
+                    "type": "TextSpan",
+                    "text": "foo",
+                    "style": {
+                      "fontSize": 16.0,
+                      "color": "Color(0xff666666)"
                     }
                   }
-                ]
-              }
-            ]
+                }
+              ]
+            }
+          ]
+        },
+        "decoration": {
+          "type": "BoxDecoration",
+          "border": {
+            "type": "Border"
           }
         }
       }
@@ -700,30 +772,31 @@
       {
         "type": "Container",
         "child": {
-          "type": "Padding",
-          "child": {
-            "type": "Column",
-            "children": [
-              {
-                "type": "Column",
-                "children": [
-                  {
-                    "type": "RichText",
-                    "textAlign": "TextAlign.start",
-                    "text": {
-                      "type": "TextSpan",
-                      "text": "foo",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
-                      }
+          "type": "Column",
+          "children": [
+            {
+              "type": "Column",
+              "children": [
+                {
+                  "type": "RichText",
+                  "textAlign": "TextAlign.start",
+                  "text": {
+                    "type": "TextSpan",
+                    "text": "foo",
+                    "style": {
+                      "fontSize": 16.0,
+                      "color": "Color(0xff666666)"
                     }
                   }
-                ]
-              }
-            ]
+                }
+              ]
+            }
+          ]
+        },
+        "decoration": {
+          "type": "BoxDecoration",
+          "border": {
+            "type": "Border"
           }
         }
       },
@@ -734,30 +807,31 @@
       {
         "type": "Container",
         "child": {
-          "type": "Padding",
-          "child": {
-            "type": "Column",
-            "children": [
-              {
-                "type": "Column",
-                "children": [
-                  {
-                    "type": "RichText",
-                    "textAlign": "TextAlign.start",
-                    "text": {
-                      "type": "TextSpan",
-                      "text": "bar",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
-                      }
+          "type": "Column",
+          "children": [
+            {
+              "type": "Column",
+              "children": [
+                {
+                  "type": "RichText",
+                  "textAlign": "TextAlign.start",
+                  "text": {
+                    "type": "TextSpan",
+                    "text": "bar",
+                    "style": {
+                      "fontSize": 16.0,
+                      "color": "Color(0xff666666)"
                     }
                   }
-                ]
-              }
-            ]
+                }
+              ]
+            }
+          ]
+        },
+        "decoration": {
+          "type": "BoxDecoration",
+          "border": {
+            "type": "Border"
           }
         }
       }
@@ -770,30 +844,31 @@
       {
         "type": "Container",
         "child": {
-          "type": "Padding",
-          "child": {
-            "type": "Column",
-            "children": [
-              {
-                "type": "Column",
-                "children": [
-                  {
-                    "type": "RichText",
-                    "textAlign": "TextAlign.start",
-                    "text": {
-                      "type": "TextSpan",
-                      "text": "foo\nbar",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
-                      }
+          "type": "Column",
+          "children": [
+            {
+              "type": "Column",
+              "children": [
+                {
+                  "type": "RichText",
+                  "textAlign": "TextAlign.start",
+                  "text": {
+                    "type": "TextSpan",
+                    "text": "foo bar",
+                    "style": {
+                      "fontSize": 16.0,
+                      "color": "Color(0xff666666)"
                     }
                   }
-                ]
-              }
-            ]
+                }
+              ]
+            }
+          ]
+        },
+        "decoration": {
+          "type": "BoxDecoration",
+          "border": {
+            "type": "Border"
           }
         }
       }
@@ -806,11 +881,11 @@
       {
         "type": "Container",
         "child": {
-          "type": "Padding",
-          "child": {
-            "type": "Column",
-            "children": [
-              {
+          "type": "Column",
+          "children": [
+            {
+              "type": "Padding",
+              "child": {
                 "type": "Column",
                 "children": [
                   {
@@ -820,39 +895,41 @@
                       "type": "TextSpan",
                       "text": "foo",
                       "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
-                      }
-                    }
-                  }
-                ]
-              },
-              {
-                "type": "SizedBox",
-                "height": 8.0
-              },
-              {
-                "type": "Column",
-                "children": [
-                  {
-                    "type": "RichText",
-                    "textAlign": "TextAlign.start",
-                    "text": {
-                      "type": "TextSpan",
-                      "text": "bar",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
+                        "fontSize": 16.0,
+                        "color": "Color(0xff666666)"
                       }
                     }
                   }
                 ]
               }
-            ]
+            },
+            {
+              "type": "SizedBox",
+              "height": 8.0
+            },
+            {
+              "type": "Column",
+              "children": [
+                {
+                  "type": "RichText",
+                  "textAlign": "TextAlign.start",
+                  "text": {
+                    "type": "TextSpan",
+                    "text": "bar",
+                    "style": {
+                      "fontSize": 16.0,
+                      "color": "Color(0xff666666)"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "decoration": {
+          "type": "BoxDecoration",
+          "border": {
+            "type": "Border"
           }
         }
       }
@@ -863,23 +940,24 @@
     "markdown": "foo\n> bar\n",
     "expected": [
       {
-        "type": "Column",
-        "children": [
-          {
-            "type": "RichText",
-            "textAlign": "TextAlign.start",
-            "text": {
-              "type": "TextSpan",
-              "text": "foo",
-              "style": {
-                "fontFamily": ".SF UI Text",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+        "type": "Padding",
+        "child": {
+          "type": "Column",
+          "children": [
+            {
+              "type": "RichText",
+              "textAlign": "TextAlign.start",
+              "text": {
+                "type": "TextSpan",
+                "text": "foo",
+                "style": {
+                  "fontSize": 16.0,
+                  "color": "Color(0xff333333)"
+                }
               }
             }
-          }
-        ]
+          ]
+        }
       },
       {
         "type": "SizedBox",
@@ -888,30 +966,31 @@
       {
         "type": "Container",
         "child": {
-          "type": "Padding",
-          "child": {
-            "type": "Column",
-            "children": [
-              {
-                "type": "Column",
-                "children": [
-                  {
-                    "type": "RichText",
-                    "textAlign": "TextAlign.start",
-                    "text": {
-                      "type": "TextSpan",
-                      "text": "bar",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
-                      }
+          "type": "Column",
+          "children": [
+            {
+              "type": "Column",
+              "children": [
+                {
+                  "type": "RichText",
+                  "textAlign": "TextAlign.start",
+                  "text": {
+                    "type": "TextSpan",
+                    "text": "bar",
+                    "style": {
+                      "fontSize": 16.0,
+                      "color": "Color(0xff666666)"
                     }
                   }
-                ]
-              }
-            ]
+                }
+              ]
+            }
+          ]
+        },
+        "decoration": {
+          "type": "BoxDecoration",
+          "border": {
+            "type": "Border"
           }
         }
       }
@@ -924,30 +1003,31 @@
       {
         "type": "Container",
         "child": {
-          "type": "Padding",
-          "child": {
-            "type": "Column",
-            "children": [
-              {
-                "type": "Column",
-                "children": [
-                  {
-                    "type": "RichText",
-                    "textAlign": "TextAlign.start",
-                    "text": {
-                      "type": "TextSpan",
-                      "text": "aaa",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
-                      }
+          "type": "Column",
+          "children": [
+            {
+              "type": "Column",
+              "children": [
+                {
+                  "type": "RichText",
+                  "textAlign": "TextAlign.start",
+                  "text": {
+                    "type": "TextSpan",
+                    "text": "aaa",
+                    "style": {
+                      "fontSize": 16.0,
+                      "color": "Color(0xff666666)"
                     }
                   }
-                ]
-              }
-            ]
+                }
+              ]
+            }
+          ]
+        },
+        "decoration": {
+          "type": "BoxDecoration",
+          "border": {
+            "type": "Border"
           }
         }
       },
@@ -965,30 +1045,31 @@
       {
         "type": "Container",
         "child": {
-          "type": "Padding",
-          "child": {
-            "type": "Column",
-            "children": [
-              {
-                "type": "Column",
-                "children": [
-                  {
-                    "type": "RichText",
-                    "textAlign": "TextAlign.start",
-                    "text": {
-                      "type": "TextSpan",
-                      "text": "bbb",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
-                      }
+          "type": "Column",
+          "children": [
+            {
+              "type": "Column",
+              "children": [
+                {
+                  "type": "RichText",
+                  "textAlign": "TextAlign.start",
+                  "text": {
+                    "type": "TextSpan",
+                    "text": "bbb",
+                    "style": {
+                      "fontSize": 16.0,
+                      "color": "Color(0xff666666)"
                     }
                   }
-                ]
-              }
-            ]
+                }
+              ]
+            }
+          ]
+        },
+        "decoration": {
+          "type": "BoxDecoration",
+          "border": {
+            "type": "Border"
           }
         }
       }
@@ -1001,30 +1082,31 @@
       {
         "type": "Container",
         "child": {
-          "type": "Padding",
-          "child": {
-            "type": "Column",
-            "children": [
-              {
-                "type": "Column",
-                "children": [
-                  {
-                    "type": "RichText",
-                    "textAlign": "TextAlign.start",
-                    "text": {
-                      "type": "TextSpan",
-                      "text": "bar\nbaz",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
-                      }
+          "type": "Column",
+          "children": [
+            {
+              "type": "Column",
+              "children": [
+                {
+                  "type": "RichText",
+                  "textAlign": "TextAlign.start",
+                  "text": {
+                    "type": "TextSpan",
+                    "text": "bar baz",
+                    "style": {
+                      "fontSize": 16.0,
+                      "color": "Color(0xff666666)"
                     }
                   }
-                ]
-              }
-            ]
+                }
+              ]
+            }
+          ]
+        },
+        "decoration": {
+          "type": "BoxDecoration",
+          "border": {
+            "type": "Border"
           }
         }
       }
@@ -1037,30 +1119,31 @@
       {
         "type": "Container",
         "child": {
-          "type": "Padding",
-          "child": {
-            "type": "Column",
-            "children": [
-              {
-                "type": "Column",
-                "children": [
-                  {
-                    "type": "RichText",
-                    "textAlign": "TextAlign.start",
-                    "text": {
-                      "type": "TextSpan",
-                      "text": "bar",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
-                      }
+          "type": "Column",
+          "children": [
+            {
+              "type": "Column",
+              "children": [
+                {
+                  "type": "RichText",
+                  "textAlign": "TextAlign.start",
+                  "text": {
+                    "type": "TextSpan",
+                    "text": "bar",
+                    "style": {
+                      "fontSize": 16.0,
+                      "color": "Color(0xff666666)"
                     }
                   }
-                ]
-              }
-            ]
+                }
+              ]
+            }
+          ]
+        },
+        "decoration": {
+          "type": "BoxDecoration",
+          "border": {
+            "type": "Border"
           }
         }
       },
@@ -1078,10 +1161,8 @@
               "type": "TextSpan",
               "text": "baz",
               "style": {
-                "fontFamily": ".SF UI Text",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "fontSize": 16.0,
+                "color": "Color(0xff333333)"
               }
             }
           }
@@ -1096,30 +1177,31 @@
       {
         "type": "Container",
         "child": {
-          "type": "Padding",
-          "child": {
-            "type": "Column",
-            "children": [
-              {
-                "type": "Column",
-                "children": [
-                  {
-                    "type": "RichText",
-                    "textAlign": "TextAlign.start",
-                    "text": {
-                      "type": "TextSpan",
-                      "text": "bar",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
-                      }
+          "type": "Column",
+          "children": [
+            {
+              "type": "Column",
+              "children": [
+                {
+                  "type": "RichText",
+                  "textAlign": "TextAlign.start",
+                  "text": {
+                    "type": "TextSpan",
+                    "text": "bar",
+                    "style": {
+                      "fontSize": 16.0,
+                      "color": "Color(0xff666666)"
                     }
                   }
-                ]
-              }
-            ]
+                }
+              ]
+            }
+          ]
+        },
+        "decoration": {
+          "type": "BoxDecoration",
+          "border": {
+            "type": "Border"
           }
         }
       },
@@ -1137,10 +1219,8 @@
               "type": "TextSpan",
               "text": "baz",
               "style": {
-                "fontFamily": ".SF UI Text",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "fontSize": 16.0,
+                "color": "Color(0xff333333)"
               }
             }
           }
@@ -1155,52 +1235,59 @@
       {
         "type": "Container",
         "child": {
-          "type": "Padding",
-          "child": {
-            "type": "Column",
-            "children": [
-              {
-                "type": "Container",
-                "child": {
-                  "type": "Padding",
-                  "child": {
-                    "type": "Column",
-                    "children": [
-                      {
-                        "type": "Container",
-                        "child": {
-                          "type": "Padding",
-                          "child": {
-                            "type": "Column",
-                            "children": [
-                              {
-                                "type": "Column",
-                                "children": [
-                                  {
-                                    "type": "RichText",
-                                    "textAlign": "TextAlign.start",
-                                    "text": {
-                                      "type": "TextSpan",
-                                      "text": "foo\nbar",
-                                      "style": {
-                                        "fontFamily": ".SF UI Text",
-                                        "fontWeight": "FontWeight.w400",
-                                        "fontSize": 14.0,
-                                        "color": "Color(0xdd000000)"
-                                      }
-                                    }
-                                  }
-                                ]
+          "type": "Column",
+          "children": [
+            {
+              "type": "Container",
+              "child": {
+                "type": "Column",
+                "children": [
+                  {
+                    "type": "Container",
+                    "child": {
+                      "type": "Column",
+                      "children": [
+                        {
+                          "type": "Column",
+                          "children": [
+                            {
+                              "type": "RichText",
+                              "textAlign": "TextAlign.start",
+                              "text": {
+                                "type": "TextSpan",
+                                "text": "foo bar",
+                                "style": {
+                                  "fontSize": 16.0,
+                                  "color": "Color(0xff666666)"
+                                }
                               }
-                            ]
-                          }
+                            }
+                          ]
                         }
+                      ]
+                    },
+                    "decoration": {
+                      "type": "BoxDecoration",
+                      "border": {
+                        "type": "Border"
                       }
-                    ]
+                    }
                   }
+                ]
+              },
+              "decoration": {
+                "type": "BoxDecoration",
+                "border": {
+                  "type": "Border"
                 }
               }
-            ]
+            }
+          ]
+        },
+        "decoration": {
+          "type": "BoxDecoration",
+          "border": {
+            "type": "Border"
           }
         }
       }
@@ -1213,52 +1300,59 @@
       {
         "type": "Container",
         "child": {
-          "type": "Padding",
-          "child": {
-            "type": "Column",
-            "children": [
-              {
-                "type": "Container",
-                "child": {
-                  "type": "Padding",
-                  "child": {
-                    "type": "Column",
-                    "children": [
-                      {
-                        "type": "Container",
-                        "child": {
-                          "type": "Padding",
-                          "child": {
-                            "type": "Column",
-                            "children": [
-                              {
-                                "type": "Column",
-                                "children": [
-                                  {
-                                    "type": "RichText",
-                                    "textAlign": "TextAlign.start",
-                                    "text": {
-                                      "type": "TextSpan",
-                                      "text": "foo\nbar\nbaz",
-                                      "style": {
-                                        "fontFamily": ".SF UI Text",
-                                        "fontWeight": "FontWeight.w400",
-                                        "fontSize": 14.0,
-                                        "color": "Color(0xdd000000)"
-                                      }
-                                    }
-                                  }
-                                ]
+          "type": "Column",
+          "children": [
+            {
+              "type": "Container",
+              "child": {
+                "type": "Column",
+                "children": [
+                  {
+                    "type": "Container",
+                    "child": {
+                      "type": "Column",
+                      "children": [
+                        {
+                          "type": "Column",
+                          "children": [
+                            {
+                              "type": "RichText",
+                              "textAlign": "TextAlign.start",
+                              "text": {
+                                "type": "TextSpan",
+                                "text": "foo bar baz",
+                                "style": {
+                                  "fontSize": 16.0,
+                                  "color": "Color(0xff666666)"
+                                }
                               }
-                            ]
-                          }
+                            }
+                          ]
                         }
+                      ]
+                    },
+                    "decoration": {
+                      "type": "BoxDecoration",
+                      "border": {
+                        "type": "Border"
                       }
-                    ]
+                    }
                   }
+                ]
+              },
+              "decoration": {
+                "type": "BoxDecoration",
+                "border": {
+                  "type": "Border"
                 }
               }
-            ]
+            }
+          ]
+        },
+        "decoration": {
+          "type": "BoxDecoration",
+          "border": {
+            "type": "Border"
           }
         }
       }
@@ -1271,34 +1365,47 @@
       {
         "type": "Container",
         "child": {
-          "type": "Padding",
-          "child": {
-            "type": "Column",
-            "children": [
-              {
-                "type": "Container",
-                "child": {
-                  "type": "Scrollbar",
-                  "child": {
-                    "type": "SingleChildScrollView",
+          "type": "Column",
+          "children": [
+            {
+              "type": "Container",
+              "child": {
+                "type": "Stack",
+                "children": [
+                  {
+                    "type": "Scrollbar",
                     "child": {
-                      "type": "RichText",
-                      "textAlign": "TextAlign.start",
-                      "text": {
-                        "type": "TextSpan",
-                        "text": "code",
-                        "style": {
-                          "fontFamily": "monospace",
-                          "fontWeight": "FontWeight.w400",
-                          "fontSize": 11.9,
-                          "color": "Color(0xdd000000)"
+                      "type": "SingleChildScrollView",
+                      "child": {
+                        "type": "RichText",
+                        "textAlign": "TextAlign.start",
+                        "text": {
+                          "type": "TextSpan",
+                          "text": "code",
+                          "style": {
+                            "fontFamily": "monospace",
+                            "fontSize": 16.0,
+                            "color": "Color(0xff666666)"
+                          }
                         }
                       }
                     }
+                  },
+                  {
+                    "type": "Positioned"
                   }
-                }
+                ]
+              },
+              "decoration": {
+                "type": "BoxDecoration"
               }
-            ]
+            }
+          ]
+        },
+        "decoration": {
+          "type": "BoxDecoration",
+          "border": {
+            "type": "Border"
           }
         }
       },
@@ -1309,30 +1416,31 @@
       {
         "type": "Container",
         "child": {
-          "type": "Padding",
-          "child": {
-            "type": "Column",
-            "children": [
-              {
-                "type": "Column",
-                "children": [
-                  {
-                    "type": "RichText",
-                    "textAlign": "TextAlign.start",
-                    "text": {
-                      "type": "TextSpan",
-                      "text": "not code",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
-                      }
+          "type": "Column",
+          "children": [
+            {
+              "type": "Column",
+              "children": [
+                {
+                  "type": "RichText",
+                  "textAlign": "TextAlign.start",
+                  "text": {
+                    "type": "TextSpan",
+                    "text": "not code",
+                    "style": {
+                      "fontSize": 16.0,
+                      "color": "Color(0xff666666)"
                     }
                   }
-                ]
-              }
-            ]
+                }
+              ]
+            }
+          ]
+        },
+        "decoration": {
+          "type": "BoxDecoration",
+          "border": {
+            "type": "Border"
           }
         }
       }

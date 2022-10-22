@@ -14,13 +14,26 @@
                 "constraints": {
                   "type": "BoxConstraints",
                   "minWidth": 30.0,
-                  "minHeight": 0.0
+                  "minHeight": 24.0,
+                  "maxWidth": 24.0
                 },
                 "child": {
-                  "type": "Padding",
+                  "type": "Align",
+                  "alignment": "Alignment.center",
                   "child": {
-                    "type": "Text",
-                    "data": "•"
+                    "type": "Padding",
+                    "child": {
+                      "type": "RichText",
+                      "textAlign": "TextAlign.right",
+                      "text": {
+                        "type": "TextSpan",
+                        "text": "•",
+                        "style": {
+                          "fontSize": 22.4,
+                          "color": "Color(0xbf333333)"
+                        }
+                      }
+                    }
                   }
                 }
               },
@@ -36,10 +49,8 @@
                         "type": "TextSpan",
                         "text": "`one",
                         "style": {
-                          "fontFamily": ".SF UI Text",
-                          "fontWeight": "FontWeight.w400",
-                          "fontSize": 14.0,
-                          "color": "Color(0xdd000000)"
+                          "fontSize": 16.0,
+                          "color": "Color(0xff333333)"
                         }
                       }
                     }
@@ -60,13 +71,26 @@
                 "constraints": {
                   "type": "BoxConstraints",
                   "minWidth": 30.0,
-                  "minHeight": 0.0
+                  "minHeight": 24.0,
+                  "maxWidth": 24.0
                 },
                 "child": {
-                  "type": "Padding",
+                  "type": "Align",
+                  "alignment": "Alignment.center",
                   "child": {
-                    "type": "Text",
-                    "data": "•"
+                    "type": "Padding",
+                    "child": {
+                      "type": "RichText",
+                      "textAlign": "TextAlign.right",
+                      "text": {
+                        "type": "TextSpan",
+                        "text": "•",
+                        "style": {
+                          "fontSize": 22.4,
+                          "color": "Color(0xbf333333)"
+                        }
+                      }
+                    }
                   }
                 }
               },
@@ -82,10 +106,8 @@
                         "type": "TextSpan",
                         "text": "two`",
                         "style": {
-                          "fontFamily": ".SF UI Text",
-                          "fontWeight": "FontWeight.w400",
-                          "fontSize": 14.0,
-                          "color": "Color(0xdd000000)"
+                          "fontSize": 16.0,
+                          "color": "Color(0xff333333)"
                         }
                       }
                     }

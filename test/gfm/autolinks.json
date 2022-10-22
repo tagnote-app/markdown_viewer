@@ -13,9 +13,7 @@
               "type": "TextSpan",
               "text": "http://foo.bar.baz",
               "style": {
-                "fontFamily": ".SF UI Text",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 14.0,
+                "fontSize": 16.0,
                 "color": "Color(0xff2196f3)"
               },
               "recognizer": "TapGestureRecognizer"
@@ -39,9 +37,7 @@
               "type": "TextSpan",
               "text": "http://foo.bar.baz/test?q=hello&id=22&boolean",
               "style": {
-                "fontFamily": ".SF UI Text",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 14.0,
+                "fontSize": 16.0,
                 "color": "Color(0xff2196f3)"
               },
               "recognizer": "TapGestureRecognizer"
@@ -65,9 +61,7 @@
               "type": "TextSpan",
               "text": "irc://foo.bar:2233/baz",
               "style": {
-                "fontFamily": ".SF UI Text",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 14.0,
+                "fontSize": 16.0,
                 "color": "Color(0xff2196f3)"
               },
               "recognizer": "TapGestureRecognizer"
@@ -91,9 +85,7 @@
               "type": "TextSpan",
               "text": "MAILTO:FOO@BAR.BAZ",
               "style": {
-                "fontFamily": ".SF UI Text",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 14.0,
+                "fontSize": 16.0,
                 "color": "Color(0xff2196f3)"
               },
               "recognizer": "TapGestureRecognizer"
@@ -117,9 +109,7 @@
               "type": "TextSpan",
               "text": "a+b+c:d",
               "style": {
-                "fontFamily": ".SF UI Text",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 14.0,
+                "fontSize": 16.0,
                 "color": "Color(0xff2196f3)"
               },
               "recognizer": "TapGestureRecognizer"
@@ -143,9 +133,7 @@
               "type": "TextSpan",
               "text": "made-up-scheme://foo,bar",
               "style": {
-                "fontFamily": ".SF UI Text",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 14.0,
+                "fontSize": 16.0,
                 "color": "Color(0xff2196f3)"
               },
               "recognizer": "TapGestureRecognizer"
@@ -169,9 +157,7 @@
               "type": "TextSpan",
               "text": "http://../",
               "style": {
-                "fontFamily": ".SF UI Text",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 14.0,
+                "fontSize": 16.0,
                 "color": "Color(0xff2196f3)"
               },
               "recognizer": "TapGestureRecognizer"
@@ -195,9 +181,7 @@
               "type": "TextSpan",
               "text": "localhost:5001/foo",
               "style": {
-                "fontFamily": ".SF UI Text",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 14.0,
+                "fontSize": 16.0,
                 "color": "Color(0xff2196f3)"
               },
               "recognizer": "TapGestureRecognizer"
@@ -221,10 +205,8 @@
               "type": "TextSpan",
               "text": "<http://foo.bar/baz bim>",
               "style": {
-                "fontFamily": ".SF UI Text",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "fontSize": 16.0,
+                "color": "Color(0xff333333)"
               }
             }
           }
@@ -246,9 +228,7 @@
               "type": "TextSpan",
               "text": "http://example.com/\\[\\",
               "style": {
-                "fontFamily": ".SF UI Text",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 14.0,
+                "fontSize": 16.0,
                 "color": "Color(0xff2196f3)"
               },
               "recognizer": "TapGestureRecognizer"
@@ -272,9 +252,7 @@
               "type": "TextSpan",
               "text": "foo@bar.example.com",
               "style": {
-                "fontFamily": ".SF UI Text",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 14.0,
+                "fontSize": 16.0,
                 "color": "Color(0xff2196f3)"
               },
               "recognizer": "TapGestureRecognizer"
@@ -298,9 +276,7 @@
               "type": "TextSpan",
               "text": "foo+special@Bar.baz-bar0.com",
               "style": {
-                "fontFamily": ".SF UI Text",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 14.0,
+                "fontSize": 16.0,
                 "color": "Color(0xff2196f3)"
               },
               "recognizer": "TapGestureRecognizer"
@@ -324,10 +300,8 @@
               "type": "TextSpan",
               "text": "<foo+@bar.example.com>",
               "style": {
-                "fontFamily": ".SF UI Text",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "fontSize": 16.0,
+                "color": "Color(0xff333333)"
               }
             }
           }
@@ -349,10 +323,8 @@
               "type": "TextSpan",
               "text": "<>",
               "style": {
-                "fontFamily": ".SF UI Text",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "fontSize": 16.0,
+                "color": "Color(0xff333333)"
               }
             }
           }
@@ -377,19 +349,15 @@
                   "type": "TextSpan",
                   "text": "< ",
                   "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
+                    "fontSize": 16.0,
+                    "color": "Color(0xff333333)"
                   }
                 },
                 {
                   "type": "TextSpan",
                   "text": "http://foo.bar",
                   "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
+                    "fontSize": 16.0,
                     "color": "Color(0xff2196f3)"
                   },
                   "recognizer": "TapGestureRecognizer"
@@ -398,10 +366,8 @@
                   "type": "TextSpan",
                   "text": " >",
                   "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
+                    "fontSize": 16.0,
+                    "color": "Color(0xff333333)"
                   }
                 }
               ]
@@ -425,10 +391,8 @@
               "type": "TextSpan",
               "text": "<m:abc>",
               "style": {
-                "fontFamily": ".SF UI Text",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "fontSize": 16.0,
+                "color": "Color(0xff333333)"
               }
             }
           }
@@ -450,10 +414,8 @@
               "type": "TextSpan",
               "text": "<foo.bar.baz>",
               "style": {
-                "fontFamily": ".SF UI Text",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "fontSize": 16.0,
+                "color": "Color(0xff333333)"
               }
             }
           }
@@ -475,9 +437,7 @@
               "type": "TextSpan",
               "text": "http://example.com",
               "style": {
-                "fontFamily": ".SF UI Text",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 14.0,
+                "fontSize": 16.0,
                 "color": "Color(0xff2196f3)"
               },
               "recognizer": "TapGestureRecognizer"
@@ -501,9 +461,7 @@
               "type": "TextSpan",
               "text": "foo@bar.example.com",
               "style": {
-                "fontFamily": ".SF UI Text",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 14.0,
+                "fontSize": 16.0,
                 "color": "Color(0xff2196f3)"
               },
               "recognizer": "TapGestureRecognizer"

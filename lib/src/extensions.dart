@@ -151,8 +151,8 @@ extension BoxConstraintsExtensions on BoxConstraints {
       'type': runtimeType.toString(),
       if (minWidth != double.infinity) 'minWidth': minWidth,
       if (minHeight != double.infinity) 'minHeight': minHeight,
-      if (maxHeight != double.infinity) 'maxWidth': maxWidth,
-      if (maxWidth != double.infinity) 'maxHeight': maxHeight,
+      if (maxHeight != double.infinity) 'maxWidth': maxHeight,
+      if (maxWidth != double.infinity) 'maxHeight': maxWidth,
     };
   }
 
