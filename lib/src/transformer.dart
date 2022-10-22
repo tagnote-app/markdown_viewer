@@ -12,7 +12,7 @@ class AstTransformer {
     'indentedCodeBlock': 'codeBlock',
     'fencedBlockquote': 'blockquote',
     'autolinkExtension': 'link',
-    'autolink': 'autolink',
+    'autolink': 'link',
   };
 
   final _footnoteReferences = <MdElement>[];
