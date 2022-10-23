@@ -13,10 +13,8 @@
               "type": "TextSpan",
               "text": "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~",
               "style": {
-                "fontFamily": ".SF UI Text",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "fontSize": 16.0,
+                "color": "Color(0xff333333)"
               }
             }
           }
@@ -38,10 +36,8 @@
               "type": "TextSpan",
               "text": "\\\t\\A\\a\\ \\3\\φ\\«",
               "style": {
-                "fontFamily": ".SF UI Text",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "fontSize": 16.0,
+                "color": "Color(0xff333333)"
               }
             }
           }
@@ -63,10 +59,8 @@
               "type": "TextSpan",
               "text": "*not emphasized* <br/> not a tag [not a link](/foo) `not code` 1. not a list * not a list # not a heading [foo]: /url \"not a reference\" &ouml; not a character entity",
               "style": {
-                "fontFamily": ".SF UI Text",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "fontSize": 16.0,
+                "color": "Color(0xff333333)"
               }
             }
           }
@@ -91,21 +85,17 @@
                   "type": "TextSpan",
                   "text": "\\",
                   "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
+                    "fontSize": 16.0,
+                    "color": "Color(0xff333333)"
                   }
                 },
                 {
                   "type": "TextSpan",
                   "text": "emphasis",
                   "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
+                    "fontSize": 16.0,
                     "fontStyle": "FontStyle.italic",
-                    "color": "Color(0xdd000000)"
+                    "color": "Color(0xff333333)"
                   }
                 }
               ]
@@ -129,10 +119,8 @@
               "type": "TextSpan",
               "text": "foo\nbar",
               "style": {
-                "fontFamily": ".SF UI Text",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "fontSize": 16.0,
+                "color": "Color(0xff333333)"
               }
             }
           }
@@ -155,9 +143,9 @@
               "text": "\\[\\`",
               "style": {
                 "fontFamily": "monospace",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 11.9,
-                "color": "Color(0xdd000000)"
+                "fontSize": 16.0,
+                "color": "Color(0xff8b1c1c)",
+                "backgroundColor": "Color(0x10000000)"
               }
             }
           }
@@ -172,24 +160,34 @@
       {
         "type": "Container",
         "child": {
-          "type": "Scrollbar",
-          "child": {
-            "type": "SingleChildScrollView",
-            "child": {
-              "type": "RichText",
-              "textAlign": "TextAlign.start",
-              "text": {
-                "type": "TextSpan",
-                "text": "\\[\\]",
-                "style": {
-                  "fontFamily": "monospace",
-                  "fontWeight": "FontWeight.w400",
-                  "fontSize": 11.9,
-                  "color": "Color(0xdd000000)"
+          "type": "Stack",
+          "children": [
+            {
+              "type": "Scrollbar",
+              "child": {
+                "type": "SingleChildScrollView",
+                "child": {
+                  "type": "RichText",
+                  "textAlign": "TextAlign.start",
+                  "text": {
+                    "type": "TextSpan",
+                    "text": "\\[\\]",
+                    "style": {
+                      "fontFamily": "monospace",
+                      "fontSize": 16.0,
+                      "color": "Color(0xff333333)"
+                    }
+                  }
                 }
               }
+            },
+            {
+              "type": "Positioned"
             }
-          }
+          ]
+        },
+        "decoration": {
+          "type": "BoxDecoration"
         }
       }
     ]
@@ -201,24 +199,34 @@
       {
         "type": "Container",
         "child": {
-          "type": "Scrollbar",
-          "child": {
-            "type": "SingleChildScrollView",
-            "child": {
-              "type": "RichText",
-              "textAlign": "TextAlign.start",
-              "text": {
-                "type": "TextSpan",
-                "text": "\\[\\]",
-                "style": {
-                  "fontFamily": "monospace",
-                  "fontWeight": "FontWeight.w400",
-                  "fontSize": 11.9,
-                  "color": "Color(0xdd000000)"
+          "type": "Stack",
+          "children": [
+            {
+              "type": "Scrollbar",
+              "child": {
+                "type": "SingleChildScrollView",
+                "child": {
+                  "type": "RichText",
+                  "textAlign": "TextAlign.start",
+                  "text": {
+                    "type": "TextSpan",
+                    "text": "\\[\\]",
+                    "style": {
+                      "fontFamily": "monospace",
+                      "fontSize": 16.0,
+                      "color": "Color(0xff333333)"
+                    }
+                  }
                 }
               }
+            },
+            {
+              "type": "Positioned"
             }
-          }
+          ]
+        },
+        "decoration": {
+          "type": "BoxDecoration"
         }
       }
     ]
@@ -237,9 +245,7 @@
               "type": "TextSpan",
               "text": "http://example.com?find=\\*",
               "style": {
-                "fontFamily": ".SF UI Text",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 14.0,
+                "fontSize": 16.0,
                 "color": "Color(0xff2196f3)"
               },
               "recognizer": "TapGestureRecognizer"
@@ -263,10 +269,8 @@
               "type": "TextSpan",
               "text": "<a href=\"/bar/)\">",
               "style": {
-                "fontFamily": ".SF UI Text",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "fontSize": 16.0,
+                "color": "Color(0xff333333)"
               }
             }
           }
@@ -288,9 +292,7 @@
               "type": "TextSpan",
               "text": "foo",
               "style": {
-                "fontFamily": ".SF UI Text",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 14.0,
+                "fontSize": 16.0,
                 "color": "Color(0xff2196f3)"
               },
               "recognizer": "TapGestureRecognizer"
@@ -314,9 +316,7 @@
               "type": "TextSpan",
               "text": "foo",
               "style": {
-                "fontFamily": ".SF UI Text",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 14.0,
+                "fontSize": 16.0,
                 "color": "Color(0xff2196f3)"
               },
               "recognizer": "TapGestureRecognizer"
@@ -333,24 +333,34 @@
       {
         "type": "Container",
         "child": {
-          "type": "Scrollbar",
-          "child": {
-            "type": "SingleChildScrollView",
-            "child": {
-              "type": "RichText",
-              "textAlign": "TextAlign.start",
-              "text": {
-                "type": "TextSpan",
-                "text": "foo",
-                "style": {
-                  "fontFamily": "monospace",
-                  "fontWeight": "FontWeight.w400",
-                  "fontSize": 11.9,
-                  "color": "Color(0xdd000000)"
+          "type": "Stack",
+          "children": [
+            {
+              "type": "Scrollbar",
+              "child": {
+                "type": "SingleChildScrollView",
+                "child": {
+                  "type": "RichText",
+                  "textAlign": "TextAlign.start",
+                  "text": {
+                    "type": "TextSpan",
+                    "text": "foo",
+                    "style": {
+                      "fontFamily": "monospace",
+                      "fontSize": 16.0,
+                      "color": "Color(0xff333333)"
+                    }
+                  }
                 }
               }
+            },
+            {
+              "type": "Positioned"
             }
-          }
+          ]
+        },
+        "decoration": {
+          "type": "BoxDecoration"
         }
       }
     ]

@@ -20,10 +20,9 @@
                       "type": "TextSpan",
                       "text": "foo",
                       "style": {
-                        "fontFamily": ".SF UI Text",
                         "fontWeight": "FontWeight.w600",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
+                        "fontSize": 16.0,
+                        "color": "Color(0xff333333)"
                       }
                     }
                   }
@@ -40,10 +39,9 @@
                       "type": "TextSpan",
                       "text": "bar",
                       "style": {
-                        "fontFamily": ".SF UI Text",
                         "fontWeight": "FontWeight.w600",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
+                        "fontSize": 16.0,
+                        "color": "Color(0xff333333)"
                       }
                     }
                   }
@@ -65,10 +63,8 @@
                       "type": "TextSpan",
                       "text": "baz",
                       "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
+                        "fontSize": 16.0,
+                        "color": "Color(0xff333333)"
                       }
                     }
                   }
@@ -85,10 +81,8 @@
                       "type": "TextSpan",
                       "text": "bim",
                       "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
+                        "fontSize": 16.0,
+                        "color": "Color(0xff333333)"
                       }
                     }
                   }
@@ -121,10 +115,9 @@
                       "type": "TextSpan",
                       "text": "abc",
                       "style": {
-                        "fontFamily": ".SF UI Text",
                         "fontWeight": "FontWeight.w600",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
+                        "fontSize": 16.0,
+                        "color": "Color(0xff333333)"
                       }
                     }
                   }
@@ -141,10 +134,9 @@
                       "type": "TextSpan",
                       "text": "defghi",
                       "style": {
-                        "fontFamily": ".SF UI Text",
                         "fontWeight": "FontWeight.w600",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
+                        "fontSize": 16.0,
+                        "color": "Color(0xff333333)"
                       }
                     }
                   }
@@ -166,10 +158,8 @@
                       "type": "TextSpan",
                       "text": "bar",
                       "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
+                        "fontSize": 16.0,
+                        "color": "Color(0xff333333)"
                       }
                     }
                   }
@@ -186,10 +176,8 @@
                       "type": "TextSpan",
                       "text": "baz",
                       "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
+                        "fontSize": 16.0,
+                        "color": "Color(0xff333333)"
                       }
                     }
                   }
@@ -222,10 +210,9 @@
                       "type": "TextSpan",
                       "text": "f|oo",
                       "style": {
-                        "fontFamily": ".SF UI Text",
                         "fontWeight": "FontWeight.w600",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
+                        "fontSize": 16.0,
+                        "color": "Color(0xff333333)"
                       }
                     }
                   }
@@ -250,10 +237,8 @@
                           "type": "TextSpan",
                           "text": "b ",
                           "style": {
-                            "fontFamily": ".SF UI Text",
-                            "fontWeight": "FontWeight.w400",
-                            "fontSize": 14.0,
-                            "color": "Color(0xdd000000)"
+                            "fontSize": 16.0,
+                            "color": "Color(0xff333333)"
                           }
                         },
                         {
@@ -261,19 +246,17 @@
                           "text": "|",
                           "style": {
                             "fontFamily": "monospace",
-                            "fontWeight": "FontWeight.w400",
-                            "fontSize": 11.9,
-                            "color": "Color(0xdd000000)"
+                            "fontSize": 16.0,
+                            "color": "Color(0xff8b1c1c)",
+                            "backgroundColor": "Color(0x10000000)"
                           }
                         },
                         {
                           "type": "TextSpan",
                           "text": " az",
                           "style": {
-                            "fontFamily": ".SF UI Text",
-                            "fontWeight": "FontWeight.w400",
-                            "fontSize": 14.0,
-                            "color": "Color(0xdd000000)"
+                            "fontSize": 16.0,
+                            "color": "Color(0xff333333)"
                           }
                         }
                       ]
@@ -300,30 +283,25 @@
                           "type": "TextSpan",
                           "text": "b ",
                           "style": {
-                            "fontFamily": ".SF UI Text",
-                            "fontWeight": "FontWeight.w400",
-                            "fontSize": 14.0,
-                            "color": "Color(0xdd000000)"
+                            "fontSize": 16.0,
+                            "color": "Color(0xff333333)"
                           }
                         },
                         {
                           "type": "TextSpan",
                           "text": "|",
                           "style": {
-                            "fontFamily": ".SF UI Text",
                             "fontWeight": "FontWeight.w700",
-                            "fontSize": 14.0,
-                            "color": "Color(0xdd000000)"
+                            "fontSize": 16.0,
+                            "color": "Color(0xff333333)"
                           }
                         },
                         {
                           "type": "TextSpan",
                           "text": " im",
                           "style": {
-                            "fontFamily": ".SF UI Text",
-                            "fontWeight": "FontWeight.w400",
-                            "fontSize": 14.0,
-                            "color": "Color(0xdd000000)"
+                            "fontSize": 16.0,
+                            "color": "Color(0xff333333)"
                           }
                         }
                       ]
@@ -358,10 +336,9 @@
                       "type": "TextSpan",
                       "text": "abc",
                       "style": {
-                        "fontFamily": ".SF UI Text",
                         "fontWeight": "FontWeight.w600",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
+                        "fontSize": 16.0,
+                        "color": "Color(0xff333333)"
                       }
                     }
                   }
@@ -378,10 +355,9 @@
                       "type": "TextSpan",
                       "text": "def",
                       "style": {
-                        "fontFamily": ".SF UI Text",
                         "fontWeight": "FontWeight.w600",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
+                        "fontSize": 16.0,
+                        "color": "Color(0xff333333)"
                       }
                     }
                   }
@@ -403,10 +379,8 @@
                       "type": "TextSpan",
                       "text": "bar",
                       "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
+                        "fontSize": 16.0,
+                        "color": "Color(0xff333333)"
                       }
                     }
                   }
@@ -423,10 +397,8 @@
                       "type": "TextSpan",
                       "text": "baz",
                       "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
+                        "fontSize": 16.0,
+                        "color": "Color(0xff333333)"
                       }
                     }
                   }
@@ -443,30 +415,31 @@
       {
         "type": "Container",
         "child": {
-          "type": "Padding",
-          "child": {
-            "type": "Column",
-            "children": [
-              {
-                "type": "Column",
-                "children": [
-                  {
-                    "type": "RichText",
-                    "textAlign": "TextAlign.start",
-                    "text": {
-                      "type": "TextSpan",
-                      "text": "bar",
-                      "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
-                      }
+          "type": "Column",
+          "children": [
+            {
+              "type": "Column",
+              "children": [
+                {
+                  "type": "RichText",
+                  "textAlign": "TextAlign.start",
+                  "text": {
+                    "type": "TextSpan",
+                    "text": "bar",
+                    "style": {
+                      "fontSize": 16.0,
+                      "color": "Color(0xff666666)"
                     }
                   }
-                ]
-              }
-            ]
+                }
+              ]
+            }
+          ]
+        },
+        "decoration": {
+          "type": "BoxDecoration",
+          "border": {
+            "type": "Border"
           }
         }
       }
@@ -493,10 +466,9 @@
                       "type": "TextSpan",
                       "text": "abc",
                       "style": {
-                        "fontFamily": ".SF UI Text",
                         "fontWeight": "FontWeight.w600",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
+                        "fontSize": 16.0,
+                        "color": "Color(0xff333333)"
                       }
                     }
                   }
@@ -513,10 +485,9 @@
                       "type": "TextSpan",
                       "text": "def",
                       "style": {
-                        "fontFamily": ".SF UI Text",
                         "fontWeight": "FontWeight.w600",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
+                        "fontSize": 16.0,
+                        "color": "Color(0xff333333)"
                       }
                     }
                   }
@@ -538,10 +509,8 @@
                       "type": "TextSpan",
                       "text": "bar",
                       "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
+                        "fontSize": 16.0,
+                        "color": "Color(0xff333333)"
                       }
                     }
                   }
@@ -558,10 +527,8 @@
                       "type": "TextSpan",
                       "text": "baz",
                       "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
+                        "fontSize": 16.0,
+                        "color": "Color(0xff333333)"
                       }
                     }
                   }
@@ -583,10 +550,8 @@
                       "type": "TextSpan",
                       "text": "bar",
                       "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
+                        "fontSize": 16.0,
+                        "color": "Color(0xff333333)"
                       }
                     }
                   }
@@ -621,10 +586,8 @@
               "type": "TextSpan",
               "text": "bar",
               "style": {
-                "fontFamily": ".SF UI Text",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "fontSize": 16.0,
+                "color": "Color(0xff333333)"
               }
             }
           }
@@ -646,10 +609,8 @@
               "type": "TextSpan",
               "text": "| abc | def | | --- | | bar |",
               "style": {
-                "fontFamily": ".SF UI Text",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "fontSize": 16.0,
+                "color": "Color(0xff333333)"
               }
             }
           }
@@ -678,10 +639,9 @@
                       "type": "TextSpan",
                       "text": "abc",
                       "style": {
-                        "fontFamily": ".SF UI Text",
                         "fontWeight": "FontWeight.w600",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
+                        "fontSize": 16.0,
+                        "color": "Color(0xff333333)"
                       }
                     }
                   }
@@ -698,10 +658,9 @@
                       "type": "TextSpan",
                       "text": "def",
                       "style": {
-                        "fontFamily": ".SF UI Text",
                         "fontWeight": "FontWeight.w600",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
+                        "fontSize": 16.0,
+                        "color": "Color(0xff333333)"
                       }
                     }
                   }
@@ -723,10 +682,8 @@
                       "type": "TextSpan",
                       "text": "bar",
                       "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
+                        "fontSize": 16.0,
+                        "color": "Color(0xff333333)"
                       }
                     }
                   }
@@ -759,10 +716,8 @@
                       "type": "TextSpan",
                       "text": "bar",
                       "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
+                        "fontSize": 16.0,
+                        "color": "Color(0xff333333)"
                       }
                     }
                   }
@@ -779,10 +734,8 @@
                       "type": "TextSpan",
                       "text": "baz",
                       "style": {
-                        "fontFamily": ".SF UI Text",
-                        "fontWeight": "FontWeight.w400",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
+                        "fontSize": 16.0,
+                        "color": "Color(0xff333333)"
                       }
                     }
                   }
@@ -815,10 +768,9 @@
                       "type": "TextSpan",
                       "text": "abc",
                       "style": {
-                        "fontFamily": ".SF UI Text",
                         "fontWeight": "FontWeight.w600",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
+                        "fontSize": 16.0,
+                        "color": "Color(0xff333333)"
                       }
                     }
                   }
@@ -835,10 +787,9 @@
                       "type": "TextSpan",
                       "text": "def",
                       "style": {
-                        "fontFamily": ".SF UI Text",
                         "fontWeight": "FontWeight.w600",
-                        "fontSize": 14.0,
-                        "color": "Color(0xdd000000)"
+                        "fontSize": 16.0,
+                        "color": "Color(0xff333333)"
                       }
                     }
                   }

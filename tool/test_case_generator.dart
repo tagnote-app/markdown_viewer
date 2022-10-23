@@ -1,16 +1,10 @@
 import 'dart:convert';
 import 'dart:io';
-import 'package:dart_markdown/dart_markdown.dart';
-
-import 'dummy_builder.dart';
-
-const caseBuilderDisabled = true;
+import 'package:dart_markdown/dart_markdown.dart' as md;
+import 'package:markdown_viewer/markdown_viewer.dart';
+import 'package:markdown_viewer/src/extensions.dart';
 
 void main() {
-  if (caseBuilderDisabled) {
-    return;
-  }
-
   // generateTestCases('common_mark');
   generateTestCases('gfm');
 }
@@ -26,7 +20,7 @@ void generateTestCases(String flavorName) {
     'gfm': 'https://github.github.com/gfm'
   }[flavorName];
 
-  final root = File(Platform.script.path).parent.parent.path;
+  final root = File(Platform.script.path).parent.path;
   final file = File('$root/$fileName');
   final json = file.readAsStringSync();
   final list = List<Map<String, dynamic>>.from(jsonDecode(json));
@@ -56,14 +50,15 @@ String _fileNameFromSection(String section) =>
 
 /// Renders Markdown String to expected data.
 List<Map<String, dynamic>> _renderTestCase(String markdown) {
-  final nodes = Markdown(
+  final nodes = md.Markdown(
     enableHtmlBlock: false,
     enableRawHtml: false,
     enableHighlight: true,
     enableStrikethrough: true,
   ).parse(markdown);
+
   return MarkdownRenderer(
-    styleSheet: MarkdownStyle.fromTheme(themeData),
+    styleSheet: const MarkdownStyle(),
     onTapLink: (_, __) {},
   ).render(nodes).map((e) => e.toMap()).toList();
 }

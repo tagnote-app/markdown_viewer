@@ -15,12 +15,7 @@
                 "text": {
                   "type": "TextSpan",
                   "text": "foo",
-                  "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
-                  }
+                  "style": { "fontSize": 16.0, "color": "Color(0xff333333)" }
                 }
               },
               {
@@ -30,10 +25,8 @@
                   "type": "TextSpan",
                   "text": "sup",
                   "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)",
+                    "fontSize": 16.0,
+                    "color": "Color(0xff333333)",
                     "fontFeatures": ["FontFeature('sups', 1)"]
                   }
                 }
@@ -44,12 +37,7 @@
                 "text": {
                   "type": "TextSpan",
                   "text": " bar",
-                  "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
-                  }
+                  "style": { "fontSize": 16.0, "color": "Color(0xff333333)" }
                 }
               },
               {
@@ -59,10 +47,8 @@
                   "type": "TextSpan",
                   "text": "sub",
                   "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)",
+                    "fontSize": 16.0,
+                    "color": "Color(0xff333333)",
                     "fontFeatures": ["FontFeature('subs', 1)"]
                   }
                 }

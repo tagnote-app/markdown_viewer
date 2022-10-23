@@ -14,9 +14,9 @@
               "text": "foo",
               "style": {
                 "fontFamily": "monospace",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 11.9,
-                "color": "Color(0xdd000000)"
+                "fontSize": 16.0,
+                "color": "Color(0xff8b1c1c)",
+                "backgroundColor": "Color(0x10000000)"
               }
             }
           }
@@ -39,9 +39,9 @@
               "text": "foo ` bar",
               "style": {
                 "fontFamily": "monospace",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 11.9,
-                "color": "Color(0xdd000000)"
+                "fontSize": 16.0,
+                "color": "Color(0xff8b1c1c)",
+                "backgroundColor": "Color(0x10000000)"
               }
             }
           }
@@ -64,9 +64,9 @@
               "text": "``",
               "style": {
                 "fontFamily": "monospace",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 11.9,
-                "color": "Color(0xdd000000)"
+                "fontSize": 16.0,
+                "color": "Color(0xff8b1c1c)",
+                "backgroundColor": "Color(0x10000000)"
               }
             }
           }
@@ -89,9 +89,9 @@
               "text": " `` ",
               "style": {
                 "fontFamily": "monospace",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 11.9,
-                "color": "Color(0xdd000000)"
+                "fontSize": 16.0,
+                "color": "Color(0xff8b1c1c)",
+                "backgroundColor": "Color(0x10000000)"
               }
             }
           }
@@ -114,9 +114,9 @@
               "text": " a",
               "style": {
                 "fontFamily": "monospace",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 11.9,
-                "color": "Color(0xdd000000)"
+                "fontSize": 16.0,
+                "color": "Color(0xff8b1c1c)",
+                "backgroundColor": "Color(0x10000000)"
               }
             }
           }
@@ -139,9 +139,9 @@
               "text": " b ",
               "style": {
                 "fontFamily": "monospace",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 11.9,
-                "color": "Color(0xdd000000)"
+                "fontSize": 16.0,
+                "color": "Color(0xff8b1c1c)",
+                "backgroundColor": "Color(0x10000000)"
               }
             }
           }
@@ -167,19 +167,17 @@
                   "text": " ",
                   "style": {
                     "fontFamily": "monospace",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 11.9,
-                    "color": "Color(0xdd000000)"
+                    "fontSize": 16.0,
+                    "color": "Color(0xff8b1c1c)",
+                    "backgroundColor": "Color(0x10000000)"
                   }
                 },
                 {
                   "type": "TextSpan",
                   "text": " ",
                   "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
+                    "fontSize": 16.0,
+                    "color": "Color(0xff333333)"
                   }
                 },
                 {
@@ -187,9 +185,9 @@
                   "text": "  ",
                   "style": {
                     "fontFamily": "monospace",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 11.9,
-                    "color": "Color(0xdd000000)"
+                    "fontSize": 16.0,
+                    "color": "Color(0xff8b1c1c)",
+                    "backgroundColor": "Color(0x10000000)"
                   }
                 }
               ]
@@ -214,9 +212,9 @@
               "text": "foo bar   baz",
               "style": {
                 "fontFamily": "monospace",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 11.9,
-                "color": "Color(0xdd000000)"
+                "fontSize": 16.0,
+                "color": "Color(0xff8b1c1c)",
+                "backgroundColor": "Color(0x10000000)"
               }
             }
           }
@@ -239,9 +237,9 @@
               "text": "foo ",
               "style": {
                 "fontFamily": "monospace",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 11.9,
-                "color": "Color(0xdd000000)"
+                "fontSize": 16.0,
+                "color": "Color(0xff8b1c1c)",
+                "backgroundColor": "Color(0x10000000)"
               }
             }
           }
@@ -264,9 +262,9 @@
               "text": "foo   bar  baz",
               "style": {
                 "fontFamily": "monospace",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 11.9,
-                "color": "Color(0xdd000000)"
+                "fontSize": 16.0,
+                "color": "Color(0xff8b1c1c)",
+                "backgroundColor": "Color(0x10000000)"
               }
             }
           }
@@ -292,19 +290,17 @@
                   "text": "foo\\",
                   "style": {
                     "fontFamily": "monospace",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 11.9,
-                    "color": "Color(0xdd000000)"
+                    "fontSize": 16.0,
+                    "color": "Color(0xff8b1c1c)",
+                    "backgroundColor": "Color(0x10000000)"
                   }
                 },
                 {
                   "type": "TextSpan",
                   "text": "bar`",
                   "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
+                    "fontSize": 16.0,
+                    "color": "Color(0xff333333)"
                   }
                 }
               ]
@@ -329,9 +325,9 @@
               "text": "foo`bar",
               "style": {
                 "fontFamily": "monospace",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 11.9,
-                "color": "Color(0xdd000000)"
+                "fontSize": 16.0,
+                "color": "Color(0xff8b1c1c)",
+                "backgroundColor": "Color(0x10000000)"
               }
             }
           }
@@ -354,9 +350,9 @@
               "text": "foo `` bar",
               "style": {
                 "fontFamily": "monospace",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 11.9,
-                "color": "Color(0xdd000000)"
+                "fontSize": 16.0,
+                "color": "Color(0xff8b1c1c)",
+                "backgroundColor": "Color(0x10000000)"
               }
             }
           }
@@ -381,10 +377,8 @@
                   "type": "TextSpan",
                   "text": "*foo",
                   "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
+                    "fontSize": 16.0,
+                    "color": "Color(0xff333333)"
                   }
                 },
                 {
@@ -392,9 +386,9 @@
                   "text": "*",
                   "style": {
                     "fontFamily": "monospace",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 11.9,
-                    "color": "Color(0xdd000000)"
+                    "fontSize": 16.0,
+                    "color": "Color(0xff8b1c1c)",
+                    "backgroundColor": "Color(0x10000000)"
                   }
                 }
               ]
@@ -421,10 +415,8 @@
                   "type": "TextSpan",
                   "text": "[not a ",
                   "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
+                    "fontSize": 16.0,
+                    "color": "Color(0xff333333)"
                   }
                 },
                 {
@@ -432,19 +424,17 @@
                   "text": "link](/foo",
                   "style": {
                     "fontFamily": "monospace",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 11.9,
-                    "color": "Color(0xdd000000)"
+                    "fontSize": 16.0,
+                    "color": "Color(0xff8b1c1c)",
+                    "backgroundColor": "Color(0x10000000)"
                   }
                 },
                 {
                   "type": "TextSpan",
                   "text": ")",
                   "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
+                    "fontSize": 16.0,
+                    "color": "Color(0xff333333)"
                   }
                 }
               ]
@@ -472,19 +462,17 @@
                   "text": "<a href=\"",
                   "style": {
                     "fontFamily": "monospace",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 11.9,
-                    "color": "Color(0xdd000000)"
+                    "fontSize": 16.0,
+                    "color": "Color(0xff8b1c1c)",
+                    "backgroundColor": "Color(0x10000000)"
                   }
                 },
                 {
                   "type": "TextSpan",
                   "text": "\">`",
                   "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
+                    "fontSize": 16.0,
+                    "color": "Color(0xff333333)"
                   }
                 }
               ]
@@ -511,10 +499,8 @@
                   "type": "TextSpan",
                   "text": "<a href=\"",
                   "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
+                    "fontSize": 16.0,
+                    "color": "Color(0xff333333)"
                   }
                 },
                 {
@@ -522,9 +508,9 @@
                   "text": "\">",
                   "style": {
                     "fontFamily": "monospace",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 11.9,
-                    "color": "Color(0xdd000000)"
+                    "fontSize": 16.0,
+                    "color": "Color(0xff8b1c1c)",
+                    "backgroundColor": "Color(0x10000000)"
                   }
                 }
               ]
@@ -552,19 +538,17 @@
                   "text": "<http://foo.bar.",
                   "style": {
                     "fontFamily": "monospace",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 11.9,
-                    "color": "Color(0xdd000000)"
+                    "fontSize": 16.0,
+                    "color": "Color(0xff8b1c1c)",
+                    "backgroundColor": "Color(0x10000000)"
                   }
                 },
                 {
                   "type": "TextSpan",
                   "text": "baz>`",
                   "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
+                    "fontSize": 16.0,
+                    "color": "Color(0xff333333)"
                   }
                 }
               ]
@@ -591,9 +575,7 @@
                   "type": "TextSpan",
                   "text": "http://foo.bar.`baz",
                   "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
+                    "fontSize": 16.0,
                     "color": "Color(0xff2196f3)"
                   },
                   "recognizer": "TapGestureRecognizer"
@@ -602,10 +584,8 @@
                   "type": "TextSpan",
                   "text": "`",
                   "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
+                    "fontSize": 16.0,
+                    "color": "Color(0xff333333)"
                   }
                 }
               ]
@@ -629,10 +609,8 @@
               "type": "TextSpan",
               "text": "```foo``",
               "style": {
-                "fontFamily": ".SF UI Text",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "fontSize": 16.0,
+                "color": "Color(0xff333333)"
               }
             }
           }
@@ -654,10 +632,8 @@
               "type": "TextSpan",
               "text": "`foo",
               "style": {
-                "fontFamily": ".SF UI Text",
-                "fontWeight": "FontWeight.w400",
-                "fontSize": 14.0,
-                "color": "Color(0xdd000000)"
+                "fontSize": 16.0,
+                "color": "Color(0xff333333)"
               }
             }
           }
@@ -682,10 +658,8 @@
                   "type": "TextSpan",
                   "text": "`foo",
                   "style": {
-                    "fontFamily": ".SF UI Text",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 14.0,
-                    "color": "Color(0xdd000000)"
+                    "fontSize": 16.0,
+                    "color": "Color(0xff333333)"
                   }
                 },
                 {
@@ -693,9 +667,9 @@
                   "text": "bar",
                   "style": {
                     "fontFamily": "monospace",
-                    "fontWeight": "FontWeight.w400",
-                    "fontSize": 11.9,
-                    "color": "Color(0xdd000000)"
+                    "fontSize": 16.0,
+                    "color": "Color(0xff8b1c1c)",
+                    "backgroundColor": "Color(0x10000000)"
                   }
                 }
               ]
