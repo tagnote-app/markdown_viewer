@@ -1,3 +1,7 @@
+## 0.4.3
+
+- Update to `dart_markdown` 3.1.1.
+
 ## 0.4.2
 
 - Update to `dart_markdown` 3.1.0.
