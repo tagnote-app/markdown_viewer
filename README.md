@@ -1,3 +1,7 @@
+[![Flutter CI](https://github.com/tagnote-app/markdown_viewer/actions/workflows/flutter-ci.yml/badge.svg)](https://github.com/tagnote-app/markdown_viewer/actions/workflows/flutter-ci.yml)
+
+## Markdown Viewer
+
 A Markdown viewer widget for Flutter. It renders Markdown string to rich text
 output.
 
