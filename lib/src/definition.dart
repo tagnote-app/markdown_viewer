@@ -63,3 +63,5 @@ typedef MarkdownHighlightBuilder = List<TextSpan> Function(
   String? language,
   String? infoString,
 );
+
+typedef CopyIconBuilder = Widget Function(bool copied);
