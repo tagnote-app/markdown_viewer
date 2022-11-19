@@ -29,6 +29,7 @@ class MarkdownViewer extends StatefulWidget {
     this.syntaxExtensions = const [],
     this.nodesFilter,
     this.selectionColor = const Color(0x4a006ff8),
+    this.copyIconBuilder,
     Key? key,
   }) : super(key: key);
 
@@ -50,6 +51,7 @@ class MarkdownViewer extends StatefulWidget {
   final List<MarkdownElementBuilder> elementBuilders;
   final List<md.Syntax> syntaxExtensions;
   final Color? selectionColor;
+  final CopyIconBuilder? copyIconBuilder;
 
   /// A function used to modify the parsed AST nodes.
   ///
@@ -120,6 +122,7 @@ class _MarkdownViewerState extends State<MarkdownViewer> {
       elementBuilders: widget.elementBuilders,
       selectionColor: widget.selectionColor,
       selectionRegistrar: selectionRegistrar,
+      copyIconBuilder: widget.copyIconBuilder,
     );
 
     var astNodes = markdown.parse(widget.data);

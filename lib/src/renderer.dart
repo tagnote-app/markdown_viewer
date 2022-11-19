@@ -37,6 +37,7 @@ class MarkdownRenderer implements NodeVisitor {
     TextAlign? textAlign,
     Color? selectionColor,
     SelectionRegistrar? selectionRegistrar,
+    CopyIconBuilder? copyIconBuilder,
   })  : _selectionColor = selectionColor,
         _selectionRegistrar = selectionRegistrar,
         _blockSpacing = styleSheet.blockSpacing,
@@ -96,6 +97,7 @@ class MarkdownRenderer implements NodeVisitor {
         padding: styleSheet.codeblockPadding,
         decoration: styleSheet.codeblockDecoration,
         highlightBuilder: highlightBuilder,
+        copyIconBuilder: copyIconBuilder,
       ),
       BlockquoteBuilder(
         textStyle: styleSheet.blockquote,

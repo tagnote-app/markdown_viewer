@@ -1,3 +1,8 @@
+## 0.4.6-dev
+
+- Add a `copyIconBuilder` option for `MarkdownViewer` and `MarkdownRenderer` to
+  customise the copy icon.
+
 ## 0.4.5
 
 - Update to `dart_markdown` 3.1.3.
