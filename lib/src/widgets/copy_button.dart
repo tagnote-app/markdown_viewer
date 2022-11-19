@@ -6,12 +6,12 @@ import '../definition.dart';
 class CopyButton extends StatefulWidget {
   const CopyButton(
     this.textWidget, {
-    this.copyIconBuilder,
+    this.iconBuilder,
     super.key,
   });
 
   final Widget textWidget;
-  final CopyIconBuilder? copyIconBuilder;
+  final CopyIconBuilder? iconBuilder;
 
   @override
   State<CopyButton> createState() => _CopyButtonState();
@@ -27,7 +27,7 @@ class _CopyButtonState extends State<CopyButton> {
       shape: const CircleBorder(),
       child: InkWell(
         borderRadius: BorderRadius.circular(30),
-        child: widget.copyIconBuilder == null
+        child: widget.iconBuilder == null
             ? SizedBox(
                 width: 36,
                 height: 36,
@@ -37,7 +37,7 @@ class _CopyButtonState extends State<CopyButton> {
                   color: _copied ? Colors.black : Colors.black54,
                 ),
               )
-            : widget.copyIconBuilder!(_copied),
+            : widget.iconBuilder!(_copied),
         onTap: () async {
           final textWidget = widget.textWidget;
           String? text;

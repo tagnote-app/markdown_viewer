@@ -79,7 +79,7 @@ class CodeBlockBuilder extends MarkdownElementBuilder {
             top: 0,
             child: CopyButton(
               textWidget,
-              copyIconBuilder: copyIconBuilder,
+              iconBuilder: copyIconBuilder,
             ),
           ),
         ],
