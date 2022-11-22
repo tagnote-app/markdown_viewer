@@ -1,4 +1,4 @@
-## 0.4.6-dev
+## 0.4.6
 
 - Add a `copyIconBuilder` option for `MarkdownViewer` and `MarkdownRenderer` to
   customise the copy icon.
