@@ -1,3 +1,7 @@
+## 0.4.7
+
+- Catch and handle Markdown parsing exception.
+
 ## 0.4.6
 
 - Add a `copyIconBuilder` option for `MarkdownViewer` and `MarkdownRenderer` to
