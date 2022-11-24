@@ -125,9 +125,23 @@ class _MarkdownViewerState extends State<MarkdownViewer> {
       copyIconBuilder: widget.copyIconBuilder,
     );
 
-    var astNodes = markdown.parse(widget.data);
-    if (widget.nodesFilter != null) {
-      astNodes = widget.nodesFilter!(astNodes);
+    List<md.Node> astNodes;
+    try {
+      astNodes = markdown.parse(widget.data);
+      if (widget.nodesFilter != null) {
+        astNodes = widget.nodesFilter!(astNodes);
+      }
+    } catch (_) {
+      // Render the entire text as a paragraph if parse fails.
+      final textNode = md.Text.fromString(widget.data);
+      astNodes = [
+        md.BlockElement(
+          'paragraph',
+          start: textNode.start,
+          end: textNode.end,
+          children: [textNode],
+        ),
+      ];
     }
 
     final children = renderer.render(astNodes);
