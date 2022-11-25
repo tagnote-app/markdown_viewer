@@ -1,3 +1,7 @@
+## 0.4.8
+
+- Improve the default style of code blocks.
+
 ## 0.4.7
 
 - Catch and handle Markdown parsing exception.
