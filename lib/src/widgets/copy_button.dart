@@ -29,8 +29,8 @@ class _CopyButtonState extends State<CopyButton> {
         borderRadius: BorderRadius.circular(30),
         child: widget.iconBuilder == null
             ? SizedBox(
-                width: 36,
-                height: 36,
+                width: 25,
+                height: 25,
                 child: Icon(
                   _copied ? Icons.check : Icons.copy_rounded,
                   size: 18,
