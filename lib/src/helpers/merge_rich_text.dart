@@ -73,10 +73,7 @@ bool _hasFontFeatures(Widget widget) {
   }
 
   final textSpan = widget.text as TextSpan;
-
-  final children = textSpan.children != null
-      ? List<TextSpan>.from(textSpan.children!)
-      : [textSpan];
+  final children = textSpan.children ?? [textSpan];
 
   return children.any(
     (element) => element.style?.fontFeatures?.isNotEmpty ?? false,
