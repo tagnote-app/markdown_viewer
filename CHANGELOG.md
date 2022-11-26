@@ -1,3 +1,7 @@
+## 0.4.9
+
+- Fix a `mergeRichText` issue.
+
 ## 0.4.8
 
 - Improve the default style of code blocks.
