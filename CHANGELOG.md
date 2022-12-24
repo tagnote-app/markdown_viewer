@@ -1,6 +1,8 @@
 ## 0.4.10-dev
 
 - Add `copyIconColor` to `MarkdownStyle`.
+- Add an optional parameter `context` to `MarkdownRenderer`.
+- Improve the default style in dark mode.
 
 ## 0.4.9
 

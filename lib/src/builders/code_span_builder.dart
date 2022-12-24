@@ -3,23 +3,33 @@ import 'builder.dart';
 
 class CodeSpanBuilder extends MarkdownElementBuilder {
   CodeSpanBuilder({
+    super.context,
     TextStyle? textStyle,
-  }) : super(
-          textStyle: const TextStyle(
-            color: Color(0xff8b1c1c),
-            fontFamily: 'monospace',
-            backgroundColor: Color(0x10000000),
-          ).merge(textStyle),
-        );
+  }) : _textStyle = textStyle;
 
   @override
   final matchTypes = ['codeSpan'];
 
   double? _lineHeight;
+  final TextStyle? _textStyle;
 
   @override
   TextStyle? buildTextStyle(element, defaultStyle) {
-    final style = super.buildTextStyle(element, defaultStyle);
+    Color color;
+    Color backgroundColor;
+    if (darkMode) {
+      color = const Color(0Xffca4219);
+      backgroundColor = const Color(0Xff424242);
+    } else {
+      color = const Color(0xff8b1c1c);
+      backgroundColor = const Color(0x10000000);
+    }
+
+    final style = super.buildTextStyle(element, defaultStyle)?.merge(TextStyle(
+          color: color,
+          fontFamily: 'monospace',
+          backgroundColor: backgroundColor,
+        ).merge(_textStyle));
     _lineHeight = style?.height;
 
     return style?.copyWith(height: 1);
