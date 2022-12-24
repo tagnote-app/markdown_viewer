@@ -1,3 +1,7 @@
+## 0.4.10-dev
+
+- Add `copyIconColor` to `MarkdownStyle`.
+
 ## 0.4.9
 
 - Fix a `mergeRichText` issue.
