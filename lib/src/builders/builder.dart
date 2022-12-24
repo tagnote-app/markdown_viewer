@@ -8,9 +8,12 @@ import '../renderer.dart';
 
 abstract class MarkdownElementBuilder {
   MarkdownElementBuilder({
+    this.context,
     this.textStyle,
     this.textStyleMap,
-  }) {
+  }) : isDarkMode = context == null
+            ? false
+            : Theme.of(context).brightness == Brightness.dark {
     assert(matchTypes.isNotEmpty);
     assert(
       textStyle == null || textStyleMap == null,
@@ -35,6 +38,10 @@ abstract class MarkdownElementBuilder {
 
   /// [TextStyle] of the current element.
   final TextStyle? textStyle;
+
+  final BuildContext? context;
+
+  final bool isDarkMode;
 
   /// If [matchTypes] matches more than one type, you need to use textStyleMap
   /// to set [TextStyle] for each type.
