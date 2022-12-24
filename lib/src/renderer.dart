@@ -102,6 +102,7 @@ class MarkdownRenderer implements NodeVisitor {
         enableImageSize: enableImageSize,
       ),
       CodeBlockBuilder(
+        context: context,
         textStyle: styleSheet.codeBlock,
         padding: styleSheet.codeblockPadding,
         decoration: styleSheet.codeblockDecoration,

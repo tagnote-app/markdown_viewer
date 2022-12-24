@@ -7,6 +7,7 @@ import 'builder.dart';
 class CodeBlockBuilder extends MarkdownElementBuilder {
   CodeBlockBuilder({
     TextStyle? textStyle,
+    super.context,
     this.padding,
     this.decoration,
     this.highlightBuilder,
@@ -58,9 +59,16 @@ class CodeBlockBuilder extends MarkdownElementBuilder {
 
   @override
   Widget buildWidget(element, parent) {
+    Color backgroundColor;
+    if (isDarkMode) {
+      backgroundColor = const Color(0xff101010);
+    } else {
+      backgroundColor = const Color(0xfff0f0f0);
+    }
+
     const defaultPadding = EdgeInsets.all(15.0);
     final defaultDecoration = BoxDecoration(
-      color: const Color(0xfff0f0f0),
+      color: backgroundColor,
       borderRadius: BorderRadius.circular(5),
     );
 
