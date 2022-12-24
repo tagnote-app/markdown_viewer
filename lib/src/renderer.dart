@@ -68,6 +68,7 @@ class MarkdownRenderer implements NodeVisitor {
         h6Padding: styleSheet.h6Padding,
       ),
       SimpleInlinesBuilder(
+        context: context,
         emphasis: styleSheet.emphasis,
         strongEmphasis: styleSheet.strongEmphasis,
         highlight: styleSheet.highlight,

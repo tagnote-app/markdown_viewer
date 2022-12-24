@@ -1,10 +1,12 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 
+import '../helpers/is_dark_mode.dart';
 import 'builder.dart';
 
 class SimpleInlinesBuilder extends MarkdownElementBuilder {
   SimpleInlinesBuilder({
+    super.context,
     TextStyle? emphasis,
     TextStyle? strongEmphasis,
     TextStyle? highlight,
@@ -19,8 +21,10 @@ class SimpleInlinesBuilder extends MarkdownElementBuilder {
           'strongEmphasis': const TextStyle(
             fontWeight: FontWeight.w700,
           ).merge(strongEmphasis),
-          'highlight': const TextStyle(
-            backgroundColor: Color(0xffffee00),
+          'highlight': TextStyle(
+            backgroundColor: isDarkMode(context)
+                ? const Color(0xffffbb00)
+                : const Color(0xffffee00),
           ).merge(highlight),
           'strikethrough': const TextStyle(
             color: Color(0xffff6666),

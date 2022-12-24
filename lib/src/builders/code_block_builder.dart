@@ -60,7 +60,7 @@ class CodeBlockBuilder extends MarkdownElementBuilder {
   @override
   Widget buildWidget(element, parent) {
     Color backgroundColor;
-    if (isDarkMode) {
+    if (darkMode) {
       backgroundColor = const Color(0xff101010);
     } else {
       backgroundColor = const Color(0xfff0f0f0);

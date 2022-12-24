@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../ast.dart';
 import '../helpers/inline_wraper.dart';
+import '../helpers/is_dark_mode.dart';
 import '../models/markdown_tree_element.dart';
 import '../renderer.dart';
 
@@ -11,9 +12,7 @@ abstract class MarkdownElementBuilder {
     this.context,
     this.textStyle,
     this.textStyleMap,
-  }) : isDarkMode = context == null
-            ? false
-            : Theme.of(context).brightness == Brightness.dark {
+  }) : darkMode = isDarkMode(context) {
     assert(matchTypes.isNotEmpty);
     assert(
       textStyle == null || textStyleMap == null,
@@ -41,7 +40,7 @@ abstract class MarkdownElementBuilder {
 
   final BuildContext? context;
 
-  final bool isDarkMode;
+  final bool darkMode;
 
   /// If [matchTypes] matches more than one type, you need to use textStyleMap
   /// to set [TextStyle] for each type.
