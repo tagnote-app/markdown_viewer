@@ -1,17 +1,21 @@
 import 'package:flutter/material.dart';
 
+import '../helpers/is_dark_mode.dart';
 import '../helpers/parse_block_padding.dart';
 import 'builder.dart';
 
 class BlockquoteBuilder extends MarkdownElementBuilder {
   BlockquoteBuilder({
+    super.context,
     TextStyle? textStyle,
     this.padding,
     this.contentPadding,
     this.decoration,
   }) : super(
-          textStyle: const TextStyle(
-            color: Color(0xff666666),
+          textStyle: TextStyle(
+            color: isDarkMode(context)
+                ? const Color(0xff999999)
+                : const Color(0xff666666),
           ).merge(textStyle),
         );
 
@@ -27,10 +31,12 @@ class BlockquoteBuilder extends MarkdownElementBuilder {
     final widget = Container(
       width: double.infinity,
       decoration: decoration ??
-          const BoxDecoration(
+          BoxDecoration(
             border: Border(
               left: BorderSide(
-                color: Color(0xffcccccc),
+                color: darkMode
+                    ? const Color(0xff777777)
+                    : const Color(0xffcccccc),
                 width: 5,
               ),
             ),

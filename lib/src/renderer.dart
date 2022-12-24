@@ -112,6 +112,7 @@ class MarkdownRenderer implements NodeVisitor {
         copyIconColor: styleSheet.copyIconColor,
       ),
       BlockquoteBuilder(
+        context: context,
         textStyle: styleSheet.blockquote,
         decoration: styleSheet.blockquoteDecoration,
         padding: styleSheet.blockquotePadding,
