@@ -1,4 +1,4 @@
-## 0.4.10-dev
+## 0.4.10
 
 - Add `copyIconColor` to `MarkdownStyle`.
 - Add an optional parameter `context` to `MarkdownRenderer`.
