@@ -11,12 +11,14 @@ class CodeBlockBuilder extends MarkdownElementBuilder {
     this.decoration,
     this.highlightBuilder,
     this.copyIconBuilder,
+    this.copyIconColor,
   }) : super(textStyle: textStyle);
 
   final EdgeInsets? padding;
   final BoxDecoration? decoration;
   final MarkdownHighlightBuilder? highlightBuilder;
   final CopyIconBuilder? copyIconBuilder;
+  final Color? copyIconColor;
 
   @override
   final matchTypes = ['codeBlock'];
@@ -79,6 +81,7 @@ class CodeBlockBuilder extends MarkdownElementBuilder {
             top: 0,
             child: CopyButton(
               textWidget,
+              iconColor: copyIconColor,
               iconBuilder: copyIconBuilder,
             ),
           ),

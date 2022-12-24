@@ -7,11 +7,13 @@ class CopyButton extends StatefulWidget {
   const CopyButton(
     this.textWidget, {
     this.iconBuilder,
+    this.iconColor,
     super.key,
   });
 
   final Widget textWidget;
   final CopyIconBuilder? iconBuilder;
+  final Color? iconColor;
 
   @override
   State<CopyButton> createState() => _CopyButtonState();
@@ -34,7 +36,7 @@ class _CopyButtonState extends State<CopyButton> {
                 child: Icon(
                   _copied ? Icons.check : Icons.copy_rounded,
                   size: 18,
-                  color: _copied ? Colors.black : Colors.black54,
+                  color: widget.iconColor ?? const Color(0xff999999),
                 ),
               )
             : widget.iconBuilder!(_copied),
