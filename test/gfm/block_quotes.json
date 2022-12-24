@@ -530,7 +530,7 @@
                           "style": {
                             "fontFamily": "monospace",
                             "fontSize": 16.0,
-                            "color": "Color(0xff666666)"
+                            "color": "Color(0xff333333)"
                           }
                         }
                       }
@@ -1385,7 +1385,7 @@
                           "style": {
                             "fontFamily": "monospace",
                             "fontSize": 16.0,
-                            "color": "Color(0xff666666)"
+                            "color": "Color(0xff333333)"
                           }
                         }
                       }
