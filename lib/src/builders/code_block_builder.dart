@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../definition.dart';
+import '../helpers/is_dark_mode.dart';
 import '../widgets/copy_button.dart';
 import 'builder.dart';
 
@@ -13,7 +14,12 @@ class CodeBlockBuilder extends MarkdownElementBuilder {
     this.highlightBuilder,
     this.copyIconBuilder,
     this.copyIconColor,
-  }) : super(textStyle: textStyle);
+  }) : super(
+            textStyle: TextStyle(
+          color: isDarkMode(context)
+              ? const Color(0xffcccccc)
+              : const Color(0xff333333),
+        ).merge(textStyle));
 
   final EdgeInsets? padding;
   final BoxDecoration? decoration;
