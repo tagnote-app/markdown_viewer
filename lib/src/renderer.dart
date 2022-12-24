@@ -26,6 +26,7 @@ import 'transformer.dart';
 
 class MarkdownRenderer implements NodeVisitor {
   MarkdownRenderer({
+    BuildContext? context,
     required MarkdownStyle styleSheet,
     MarkdownTapLinkCallback? onTapLink,
     MarkdownListItemMarkerBuilder? listItemMarkerBuilder,
@@ -42,6 +43,14 @@ class MarkdownRenderer implements NodeVisitor {
         _selectionRegistrar = selectionRegistrar,
         _blockSpacing = styleSheet.blockSpacing,
         _styleSheet = styleSheet,
+        _defaultTextStyle = TextStyle(
+          fontSize: 16,
+          height: 1.5,
+          color: (context != null
+                  ? Theme.of(context).textTheme.bodyText2?.color
+                  : null) ??
+              const Color(0xff333333),
+        ),
         _textAlign = textAlign ?? TextAlign.start {
     final defaultBuilders = [
       HeadlineBuilder(
@@ -137,6 +146,7 @@ class MarkdownRenderer implements NodeVisitor {
   final Color? _selectionColor;
   final SelectionRegistrar? _selectionRegistrar;
   final MarkdownStyle _styleSheet;
+  final TextStyle _defaultTextStyle;
 
   bool get selectable => _selectionColor != null && _selectionRegistrar != null;
   MouseCursor? get mouseCursor => selectable ? SystemMouseCursors.text : null;
@@ -184,11 +194,7 @@ class MarkdownRenderer implements NodeVisitor {
       builder.gestureRecognizer(element),
     );
 
-    final defaultTextStyle = const TextStyle(
-      fontSize: 16,
-      height: 1.5,
-      color: Color(0xff333333),
-    ).merge(_styleSheet.textStyle);
+    final defaultTextStyle = _defaultTextStyle.merge(_styleSheet.textStyle);
 
     _tree.add(_TreeElement.fromAstElement(
       element,

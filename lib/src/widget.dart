@@ -112,6 +112,7 @@ class _MarkdownViewerState extends State<MarkdownViewer> {
     );
 
     final renderer = MarkdownRenderer(
+      context: context,
       styleSheet: widget.styleSheet ?? const MarkdownStyle(),
       onTapLink: widget.onTapLink,
       enableImageSize: widget.enableImageSize,
