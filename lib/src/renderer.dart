@@ -86,7 +86,7 @@ class MarkdownRenderer implements NodeVisitor {
         textStyle: styleSheet.paragraph,
         padding: styleSheet.paragraphPadding,
       ),
-      CodeSpanBuilder(textStyle: styleSheet.codeSpan),
+      CodeSpanBuilder(context: context, textStyle: styleSheet.codeSpan),
       LinkBuilder(textStyle: styleSheet.link, onTap: onTapLink),
       TableBuilder(
         table: styleSheet.table,
