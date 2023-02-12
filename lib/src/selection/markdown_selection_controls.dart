@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 
 import 'desktop_text_selection_toolbar.dart';
@@ -30,7 +29,7 @@ class MarkdownSelectionControls extends MaterialTextSelectionControls {
     Offset? lastSecondaryTapDownPosition,
   ) {
     if (_isDesktop(context)) {
-      return DesktopTextSelectionToolbar(
+      return DesktopTextSelectionToolbarCustom(
         clipboardStatus: clipboardStatus,
         endpoints: endpoints,
         globalEditableRegion: globalEditableRegion,

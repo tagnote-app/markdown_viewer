@@ -1,6 +1,5 @@
 import 'package:flutter/foundation.dart' show clampDouble;
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 
 // See: /flutter/lib/src/material/desktop_text_selection.dart
 
@@ -15,8 +14,8 @@ const _kToolbarButtonFontStyle = TextStyle(
 
 const _kToolbarButtonPadding = EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 3.0);
 
-class DesktopTextSelectionToolbar extends StatelessWidget {
-  const DesktopTextSelectionToolbar({
+class DesktopTextSelectionToolbarCustom extends StatelessWidget {
+  const DesktopTextSelectionToolbarCustom({
     required this.clipboardStatus,
     required this.endpoints,
     required this.globalEditableRegion,
