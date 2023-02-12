@@ -1,3 +1,7 @@
+## 0.5.0
+
+- Fix an error in Flutter 3.7
+
 ## 0.4.10
 
 - Add `copyIconColor` to `MarkdownStyle`.
