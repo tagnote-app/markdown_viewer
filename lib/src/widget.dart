@@ -5,7 +5,6 @@ import 'package:flutter/rendering.dart';
 import 'builders/builder.dart';
 import 'definition.dart';
 import 'renderer.dart';
-import 'selection/markdown_selection_controls.dart';
 import 'style.dart';
 
 class MarkdownViewer extends StatefulWidget {
@@ -28,7 +27,8 @@ class MarkdownViewer extends StatefulWidget {
     this.elementBuilders = const [],
     this.syntaxExtensions = const [],
     this.nodesFilter,
-    this.selectionColor = const Color(0x4a006ff8),
+    this.selectable,
+    this.selectionColor,
     this.copyIconBuilder,
     Key? key,
   }) : super(key: key);
@@ -51,6 +51,7 @@ class MarkdownViewer extends StatefulWidget {
   final List<MarkdownElementBuilder> elementBuilders;
   final List<md.Syntax> syntaxExtensions;
   final Color? selectionColor;
+  final bool? selectable;
   final CopyIconBuilder? copyIconBuilder;
 
   /// A function used to modify the parsed AST nodes.
@@ -80,12 +81,10 @@ class MarkdownViewer extends StatefulWidget {
 class _MarkdownViewerState extends State<MarkdownViewer> {
   @override
   Widget build(BuildContext context) {
-    if (widget.selectionColor == null) {
+    if (widget.selectable == false) {
       return _buildMarkdown();
     } else {
-      return SelectableRegion(
-        selectionControls: MarkdownSelectionControls(),
-        focusNode: FocusNode(),
+      return SelectionArea(
         child: Builder(
           builder: (context) => _buildMarkdown(
             selectionRegistrar: SelectionContainer.maybeOf(context),
@@ -121,7 +120,7 @@ class _MarkdownViewerState extends State<MarkdownViewer> {
       checkboxBuilder: widget.checkboxBuilder,
       highlightBuilder: widget.highlightBuilder,
       elementBuilders: widget.elementBuilders,
-      selectionColor: widget.selectionColor,
+      selectionColor: widget.selectionColor ?? const Color(0x4a006ff8),
       selectionRegistrar: selectionRegistrar,
       copyIconBuilder: widget.copyIconBuilder,
     );
