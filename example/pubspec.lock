@@ -53,10 +53,10 @@ packages:
     dependency: transitive
     description:
       name: dart_markdown
-      sha256: a21cda21f88d82fe6e3bb386a067d36c802df822c2a0d60d48bdbcd620fd2003
+      sha256: c3f492e2dc1c43d0c2e4d0534fad2775d245f478c900c1c174c9f9af3f97462d
       url: "https://pub.dev"
     source: hosted
-    version: "3.1.4"
+    version: "3.1.6"
   dart_prism:
     dependency: transitive
     description:
@@ -121,7 +121,7 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "0.5.0"
+    version: "0.6.0-dev"
   matcher:
     dependency: transitive
     description:
@@ -216,5 +216,5 @@ packages:
     source: hosted
     version: "2.1.4"
 sdks:
-  dart: ">=2.18.0 <3.0.0"
+  dart: ">=2.19.4 <3.0.0"
   flutter: ">=1.17.0"

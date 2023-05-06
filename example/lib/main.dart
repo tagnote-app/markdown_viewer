@@ -1,5 +1,6 @@
 // ignore_for_file: avoid_print
 
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_prism/flutter_prism.dart';
 import 'package:markdown_viewer/markdown_viewer.dart';
@@ -25,10 +26,6 @@ Hello **Markdown**!
 - [x] Easy to custom, for example:
   > This is a #custom_extension
 
-- [x] Correct copy action.\
-      Flutter itself does not add line breaks between widgets, this library has
-      solved this problem except copying a table.
-
 ---
 ### Dependencies
 | Name | Required|
@@ -53,6 +50,7 @@ class MyApp extends StatelessWidget {
       title: 'MarkdownViewer Demo',
       debugShowCheckedModeBanner: false,
       home: const MyHomePage(),
+      scrollBehavior: CustomScrollBehavior(),
     );
   }
 }
@@ -105,4 +103,12 @@ class MyHomePage extends StatelessWidget {
       ),
     );
   }
+}
+
+class CustomScrollBehavior extends MaterialScrollBehavior {
+  @override
+  Set<PointerDeviceKind> get dragDevices => {
+        PointerDeviceKind.touch,
+        PointerDeviceKind.mouse,
+      };
 }

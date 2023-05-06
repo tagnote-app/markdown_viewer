@@ -7,7 +7,7 @@ void main() {
     await tester.pumpWidget(_createWidget(''));
 
     final childWidgets = _descendant();
-    expect(childWidgets.elementAt(0).runtimeType, SelectableRegion);
+    expect(childWidgets.elementAt(0).runtimeType, SelectionArea);
     expect(childWidgets.last.toString(), const SizedBox.shrink().toString());
   }));
 
@@ -48,7 +48,7 @@ Widget _createWidget(
         textDirection: TextDirection.ltr,
         child: MarkdownViewer(
           markdown,
-          selectionColor: selectable ? Colors.green : null,
+          selectable: selectable,
         ),
       ),
     );
