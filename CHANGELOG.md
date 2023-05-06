@@ -1,3 +1,9 @@
+## 0.6.0
+
+- Update `dart_markdown` dependency to 3.1.6.
+- Remove custom selection feature.
+- Add scrollable feature to table.
+
 ## 0.5.0
 
 - Fix an error in Flutter 3.7
