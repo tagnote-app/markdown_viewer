@@ -1,3 +1,6 @@
+## 0.6.2
+- Update `dart_markdown` dependency to 3.1.7.
+
 ## 0.6.1
 
 - Fix a CopyButton issue.
